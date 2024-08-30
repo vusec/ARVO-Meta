@@ -1,0 +1,20 @@
+INFO: Seed: 1622141527
+INFO: Loaded 1 modules   (41658 guards): 41658 [0xaada60, 0xad6548), 
+/out/client: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+ssl/t1_lib.c:485:18: runtime error: index 714 out of bounds for type 'const tls_curve_info [29]'
+    #0 0x4ba67a in tls1_set_ec_id /src/openssl/ssl/t1_lib.c:485:35
+    #1 0x4ba1c6 in tls12_check_peer_sigalg /src/openssl/ssl/t1_lib.c:979:18
+    #2 0x49d57e in tls_process_key_exchange /src/openssl/ssl/statem/statem_clnt.c:2205:18
+    #3 0x497775 in read_state_machine /src/openssl/ssl/statem/statem.c:589:19
+    #4 0x496c67 in state_machine /src/openssl/ssl/statem/statem.c:386:21
+    #5 0x42ec29 in FuzzerTestOneInput /src/openssl/fuzz/client.c:83:9
+    #6 0x43aebd in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:463:13
+    #7 0x42f16c in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:273:6
+    #8 0x433069 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:687:9
+    #9 0x42ee78 in main /src/libfuzzer/FuzzerMain.cpp:20:10
+    #10 0x78910f12883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x4082c8 in _start (/out/client+0x4082c8)
+
+DEDUP_TOKEN: tls1_set_ec_id--tls12_check_peer_sigalg--tls_process_key_exchange
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior ssl/t1_lib.c:485:18 in 

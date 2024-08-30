@@ -1,0 +1,96 @@
+Unable to find image 'n132/arvo:3331-vul' locally
+3331-vul: Pulling from n132/arvo
+60730f960363: Already exists
+f7d512d82502: Already exists
+a7cad26d0357: Already exists
+25bb6f291ceb: Already exists
+630ceed02486: Already exists
+1659d1574fce: Pulling fs layer
+5ff9045091cd: Pulling fs layer
+dfadb60a8cda: Pulling fs layer
+f4fa4aa976cc: Pulling fs layer
+8d6e11642663: Pulling fs layer
+5ff9045091cd: Waiting
+dfadb60a8cda: Waiting
+a58bc987207b: Pulling fs layer
+771d9c0d7f62: Pulling fs layer
+8d6e11642663: Waiting
+f4fa4aa976cc: Waiting
+1659d1574fce: Waiting
+86c482543b67: Pulling fs layer
+94e3a24becf5: Pulling fs layer
+771d9c0d7f62: Waiting
+cbd1f990b656: Pulling fs layer
+1e0f6184d7a7: Pulling fs layer
+94e3a24becf5: Waiting
+0e662fb58d71: Pulling fs layer
+a3cd479160fc: Pulling fs layer
+0e662fb58d71: Waiting
+dbebedb8ccbe: Pulling fs layer
+1e0f6184d7a7: Waiting
+2eb0179db2ca: Pulling fs layer
+5b92e7b40743: Pulling fs layer
+4d7a532bac0b: Pulling fs layer
+824726eb1742: Pulling fs layer
+250e8f6dc56e: Pulling fs layer
+2eb0179db2ca: Waiting
+5b92e7b40743: Waiting
+4f4fb700ef54: Pulling fs layer
+4d7a532bac0b: Waiting
+99674f6b3526: Pulling fs layer
+bebfc8f3439d: Pulling fs layer
+250e8f6dc56e: Waiting
+fbfe206d44f9: Pulling fs layer
+824726eb1742: Waiting
+4f4fb700ef54: Waiting
+99674f6b3526: Waiting
+bebfc8f3439d: Waiting
+fbfe206d44f9: Waiting
+1659d1574fce: Download complete
+1659d1574fce: Pull complete
+5ff9045091cd: Verifying Checksum
+5ff9045091cd: Pull complete
+dfadb60a8cda: Verifying Checksum
+dfadb60a8cda: Download complete
+f4fa4aa976cc: Verifying Checksum
+f4fa4aa976cc: Download complete
+dfadb60a8cda: Pull complete
+f4fa4aa976cc: Pull complete
+a58bc987207b: Download complete
+771d9c0d7f62: Verifying Checksum
+771d9c0d7f62: Download complete
+86c482543b67: Verifying Checksum
+86c482543b67: Download complete
+94e3a24becf5: Verifying Checksum
+94e3a24becf5: Download complete
+8d6e11642663: Verifying Checksum
+8d6e11642663: Download complete
+cbd1f990b656: Verifying Checksum
+cbd1f990b656: Download complete
+0e662fb58d71: Verifying Checksum
+0e662fb58d71: Download complete
+1e0f6184d7a7: Verifying Checksum
+1e0f6184d7a7: Download complete
+dbebedb8ccbe: Verifying Checksum
+dbebedb8ccbe: Download complete
+2eb0179db2ca: Verifying Checksum
+2eb0179db2ca: Download complete
+8d6e11642663: Pull complete
+a58bc987207b: Pull complete
+4d7a532bac0b: Verifying Checksum
+4d7a532bac0b: Download complete
+a3cd479160fc: Verifying Checksum
+a3cd479160fc: Download complete
+250e8f6dc56e: Verifying Checksum
+250e8f6dc56e: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+99674f6b3526: Download complete
+fbfe206d44f9: Verifying Checksum
+fbfe206d44f9: Download complete
+bebfc8f3439d: Verifying Checksum
+bebfc8f3439d: Download complete
+5b92e7b40743: Verifying Checksum
+5b92e7b40743: Download complete
+docker: write /var/lib/docker/tmp/GetImageBlob576464310: no space left on device.
+See 'docker run --help'.

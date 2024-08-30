@@ -1,0 +1,132 @@
+Unable to find image 'n132/arvo:30324-vul' locally
+30324-vul: Pulling from n132/arvo
+4007a89234b4: Pulling fs layer
+5dfa26c6b9c9: Pulling fs layer
+0ba7bf18aa40: Pulling fs layer
+4c6ec688ebe3: Pulling fs layer
+8402f6a128ab: Pulling fs layer
+4c6ec688ebe3: Waiting
+4007a89234b4: Waiting
+5dfa26c6b9c9: Waiting
+0ba7bf18aa40: Waiting
+a9844295fc02: Pulling fs layer
+8402f6a128ab: Waiting
+896d36fd4c48: Pulling fs layer
+a9844295fc02: Waiting
+7caeb050fbae: Pulling fs layer
+19c994299ca2: Pulling fs layer
+7caeb050fbae: Waiting
+896d36fd4c48: Waiting
+3af6636da2fc: Pulling fs layer
+f066005d6cfa: Pulling fs layer
+eb7a669b446d: Pulling fs layer
+db2d8166cb16: Pulling fs layer
+ce13daa0e1d4: Pulling fs layer
+3af6636da2fc: Waiting
+f066005d6cfa: Waiting
+eb7a669b446d: Waiting
+19c994299ca2: Waiting
+db2d8166cb16: Waiting
+49415db117de: Pulling fs layer
+ce13daa0e1d4: Waiting
+2a537e092603: Pulling fs layer
+49415db117de: Waiting
+9f8cbd34f314: Pulling fs layer
+2a537e092603: Waiting
+11795e809c12: Pulling fs layer
+60ad66e29b37: Pulling fs layer
+9f8cbd34f314: Waiting
+667a3fc11e31: Pulling fs layer
+7002e1675336: Pulling fs layer
+667a3fc11e31: Waiting
+60ad66e29b37: Waiting
+11795e809c12: Waiting
+99f1f9ab76c4: Pulling fs layer
+2e07133b3a8c: Pulling fs layer
+873c68cbb916: Pulling fs layer
+51404522b68c: Pulling fs layer
+905d55d9e7a6: Pulling fs layer
+342b5aeeb441: Pulling fs layer
+905d55d9e7a6: Waiting
+99f1f9ab76c4: Waiting
+2e07133b3a8c: Waiting
+873c68cbb916: Waiting
+51404522b68c: Waiting
+5736306b62a3: Pulling fs layer
+7002e1675336: Waiting
+299b4a4bfd17: Pulling fs layer
+469237590c93: Pulling fs layer
+eaf0e9d46ccc: Pulling fs layer
+5736306b62a3: Waiting
+8a9d99932e58: Pulling fs layer
+342b5aeeb441: Waiting
+4f4fb700ef54: Pulling fs layer
+eaf0e9d46ccc: Waiting
+8a9d99932e58: Waiting
+469237590c93: Waiting
+299b4a4bfd17: Waiting
+dfe85d1c905f: Pulling fs layer
+4f4fb700ef54: Waiting
+f0c5eecd58c4: Pulling fs layer
+dfe85d1c905f: Waiting
+21bde1c52cea: Pulling fs layer
+f0c5eecd58c4: Waiting
+7f3b599de345: Pulling fs layer
+21bde1c52cea: Waiting
+cf12a07a7c6a: Pulling fs layer
+3aff830bd244: Pulling fs layer
+cf12a07a7c6a: Waiting
+4007a89234b4: Download complete
+5dfa26c6b9c9: Verifying Checksum
+5dfa26c6b9c9: Download complete
+0ba7bf18aa40: Download complete
+4c6ec688ebe3: Download complete
+4007a89234b4: Pull complete
+5dfa26c6b9c9: Pull complete
+0ba7bf18aa40: Pull complete
+4c6ec688ebe3: Pull complete
+a9844295fc02: Verifying Checksum
+a9844295fc02: Download complete
+7caeb050fbae: Verifying Checksum
+7caeb050fbae: Download complete
+8402f6a128ab: Download complete
+896d36fd4c48: Verifying Checksum
+896d36fd4c48: Download complete
+3af6636da2fc: Download complete
+8402f6a128ab: Pull complete
+a9844295fc02: Pull complete
+eb7a669b446d: Verifying Checksum
+eb7a669b446d: Download complete
+db2d8166cb16: Verifying Checksum
+db2d8166cb16: Download complete
+f066005d6cfa: Verifying Checksum
+f066005d6cfa: Download complete
+896d36fd4c48: Pull complete
+7caeb050fbae: Pull complete
+ce13daa0e1d4: Download complete
+2a537e092603: Verifying Checksum
+2a537e092603: Download complete
+19c994299ca2: Verifying Checksum
+19c994299ca2: Download complete
+11795e809c12: Download complete
+9f8cbd34f314: Verifying Checksum
+9f8cbd34f314: Download complete
+60ad66e29b37: Download complete
+49415db117de: Verifying Checksum
+49415db117de: Download complete
+7002e1675336: Download complete
+667a3fc11e31: Download complete
+873c68cbb916: Verifying Checksum
+873c68cbb916: Download complete
+2e07133b3a8c: Verifying Checksum
+2e07133b3a8c: Download complete
+51404522b68c: Verifying Checksum
+51404522b68c: Download complete
+905d55d9e7a6: Download complete
+99f1f9ab76c4: Download complete
+342b5aeeb441: Verifying Checksum
+342b5aeeb441: Download complete
+7f3b599de345: Waiting
+3aff830bd244: Waiting
+docker: failed to register layer: write /usr/local/lib/clang/12.0.0/lib/linux/libclang_rt.asan-x86_64.so: no space left on device.
+See 'docker run --help'.

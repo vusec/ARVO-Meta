@@ -1,0 +1,35 @@
+INFO: Seed: 1622910031
+INFO: Loaded 1 modules (25116 guards): [0xa2e6f0, 0xa46f60), 
+/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/hevcdec.c:1005:42: runtime error: index 5 out of bounds for type 'int8_t const[5]'
+    #0 0x44788f in hls_transform_unit /src/ffmpeg/libavcodec/hevcdec.c:1005:42
+    #1 0x44222a in hls_transform_tree /src/ffmpeg/libavcodec/hevcdec.c:1269:15
+    #2 0x441f6b in hls_transform_tree /src/ffmpeg/libavcodec/hevcdec.c:1251:9
+    #3 0x43ef84 in hls_coding_unit /src/ffmpeg/libavcodec/hevcdec.c:2158:23
+    #4 0x43de04 in hls_coding_quadtree /src/ffmpeg/libavcodec/hevcdec.c:2255:15
+    #5 0x43dfac in hls_coding_quadtree /src/ffmpeg/libavcodec/hevcdec.c:2240:25
+    #6 0x43ddbf in hls_coding_quadtree /src/ffmpeg/libavcodec/hevcdec.c:2229:25
+    #7 0x43df01 in hls_coding_quadtree /src/ffmpeg/libavcodec/hevcdec.c:2234:25
+    #8 0x447db2 in hls_decode_entry /src/ffmpeg/libavcodec/hevcdec.c:2360:21
+    #9 0x4e14c0 in avcodec_default_execute /src/ffmpeg/libavcodec/utils.c:540:17
+    #10 0x439f03 in hls_slice_data /src/ffmpeg/libavcodec/hevcdec.c:2387:5
+    #11 0x4370e9 in decode_nal_unit /src/ffmpeg/libavcodec/hevcdec.c:2866:31
+    #12 0x43645f in decode_nal_units /src/ffmpeg/libavcodec/hevcdec.c:2931:15
+    #13 0x434d07 in hevc_decode_frame /src/ffmpeg/libavcodec/hevcdec.c:3067:14
+    #14 0x432bc7 in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:417:15
+    #15 0x43292e in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:620:15
+    #16 0x42eb23 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:638:15
+    #17 0x42e68f in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:678:15
+    #18 0x42f2ee in compat_decode /src/ffmpeg/libavcodec/decode.c:853:15
+    #19 0x42b46d in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:216:23
+    #20 0x654644 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:460:13
+    #21 0x65499e in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:399:3
+    #22 0x646ca0 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
+    #23 0x64ad4b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:683:9
+    #24 0x64699c in main /src/libfuzzer/FuzzerMain.cpp:20:10
+    #25 0x71e115f8483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #26 0x406c28 in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x406c28)
+
+DEDUP_TOKEN: hls_transform_unit--hls_transform_tree--hls_transform_tree
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/hevcdec.c:1005:42 in 

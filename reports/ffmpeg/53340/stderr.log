@@ -1,0 +1,24 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1600424365
+INFO: Loaded 1 modules   (85522 inline 8-bit counters): 85522 [0xb830d0, 0xb97ee2), 
+INFO: Loaded 1 PC tables (85522 PCs): 85522 [0x8fef98,0xa4d0b8), 
+/out/ffmpeg_AV_CODEC_ID_TRUEHD_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/mlpdec.c:1049:9: runtime error: index 8 out of bounds for type 'int32_t[8]' (aka 'int[8]')
+    #0 0x5022e1 in generate_2_noise_channels /src/ffmpeg/libavcodec/mlpdec.c:1049:40
+    #1 0x5022e1 in output_data /src/ffmpeg/libavcodec/mlpdec.c:1099:9
+    #2 0x50081b in read_access_unit /src/ffmpeg/libavcodec/mlpdec.c:1354:16
+    #3 0x4dceb0 in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:307:15
+    #4 0x4dceb0 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:563:15
+    #5 0x4dceb0 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:584:15
+    #6 0x4dcb36 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:665:15
+    #7 0x4d30ab in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:510:25
+    #8 0x4376c3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #9 0x422e22 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #10 0x4286cc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #11 0x451c02 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #12 0x7eb6ba013082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #13 0x418fed in _start (/out/ffmpeg_AV_CODEC_ID_TRUEHD_fuzzer+0x418fed)
+
+DEDUP_TOKEN: generate_2_noise_channels--output_data--read_access_unit
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/mlpdec.c:1049:9 in 

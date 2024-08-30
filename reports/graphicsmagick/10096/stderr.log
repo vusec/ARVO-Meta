@@ -1,0 +1,133 @@
+Unable to find image 'n132/arvo:10096-vul' locally
+10096-vul: Pulling from n132/arvo
+3620e2d282dc: Already exists
+ef22f5e4b3b2: Already exists
+99f229f854da: Already exists
+4fe433abe16a: Already exists
+c9b72a16d85e: Already exists
+de599d649ace: Already exists
+b095926b8e5d: Already exists
+2cb899c88361: Already exists
+e3e971831feb: Already exists
+2b6c6771b90f: Already exists
+7d225808fe07: Already exists
+9b379b826590: Already exists
+b2a75a6e4d30: Already exists
+3dd7d3726d39: Already exists
+e060c62c016e: Already exists
+0482579cc5a5: Already exists
+a8b80b720c7e: Pulling fs layer
+2ad30060ca4c: Pulling fs layer
+910b7d414c46: Pulling fs layer
+db496b6c5473: Pulling fs layer
+a8b80b720c7e: Waiting
+0e524b999c57: Pulling fs layer
+83fbf79581d1: Pulling fs layer
+910b7d414c46: Waiting
+9f95ce0472cd: Pulling fs layer
+2ad30060ca4c: Waiting
+db496b6c5473: Waiting
+0e524b999c57: Waiting
+b0ab21d88938: Pulling fs layer
+83fbf79581d1: Waiting
+9f95ce0472cd: Waiting
+86ef305d888b: Pulling fs layer
+6e7e964c8987: Pulling fs layer
+e6c93ca00ce5: Pulling fs layer
+b0ab21d88938: Waiting
+86ef305d888b: Waiting
+6e7e964c8987: Waiting
+81e9d5dd434a: Pulling fs layer
+e6c93ca00ce5: Waiting
+913458c68366: Pulling fs layer
+81e9d5dd434a: Waiting
+1295dd4d1b10: Pulling fs layer
+913458c68366: Waiting
+2c709a6dccd8: Pulling fs layer
+6c309fc2dcaf: Pulling fs layer
+9e4b3aacf863: Pulling fs layer
+102dd0a01e80: Pulling fs layer
+ec9d4f07fcd2: Pulling fs layer
+2c709a6dccd8: Waiting
+5270f7dd5494: Pulling fs layer
+1295dd4d1b10: Waiting
+9e4b3aacf863: Waiting
+102dd0a01e80: Waiting
+0c9e041e0c3b: Pulling fs layer
+6c309fc2dcaf: Waiting
+ec9d4f07fcd2: Waiting
+cf5337bb056a: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+5270f7dd5494: Waiting
+0c9e041e0c3b: Waiting
+43e1db233f68: Pulling fs layer
+cf5337bb056a: Waiting
+f6b9608e2240: Pulling fs layer
+58ce0106286c: Pulling fs layer
+4f4fb700ef54: Waiting
+43e1db233f68: Waiting
+a8b80b720c7e: Verifying Checksum
+a8b80b720c7e: Download complete
+2ad30060ca4c: Verifying Checksum
+2ad30060ca4c: Download complete
+910b7d414c46: Verifying Checksum
+910b7d414c46: Download complete
+0e524b999c57: Verifying Checksum
+0e524b999c57: Download complete
+a8b80b720c7e: Pull complePul83fbf79581d1: Verifying Checksum
+83fbf79581d1: Download complete
+2ad30060ca4c: Pull complete
+9f95ce0472cd: Verifying Checksum
+9f95ce0472cd: Download complete
+b0ab21d88938: Verifying Checksum
+b0ab21d88938: Download complete
+86ef305d88886eVerifying CVerifyin86ef305d888b: Download complete
+6e7e964c8986e7Verifying CVerifyin6e7e964c8986e7e964c8987: Downloae6c93ca00cee6cDownload complete
+db496b6c547db4Download coVerifyi81e9d5dd434a: Verifying Checksum
+81e9d5dd434a: Download complete
+913458c68366: Verifying Checksum
+913458c68366: Download complete
+1295dd4d1b10: Verifying Checksum
+1295dd4d1b10: Download complete
+2c709a6dccd8: Verifying Checksum
+6c309fc2dcaf: Verifying Checksum
+6c309fc2dca6c309fc2dcaf: Verifyi910b7d414c46: Pull complete
+9e4b3aacf863: Download complete
+ec9d4f07fcd2: Verifying Checksum
+ec9d4f07fcd2: Download complete
+102dd0a01e80: Verifying Checksum
+102dd0a01e8102dd0a01e80: Verifyi0c9e041e0c3b: Verifying Checksum
+0c9e041e0c3b: Download complete
+cf5337bb056a: Download complete
+4f4fb700ef54: Download complete
+43e1db233f68: Download complete
+5270f7dd5494: Verifying Checksum
+5270f7dd5494: Download complete
+58ce0106286c: Verifying Checksum
+58ce010628658ce0106286c: Verifyidb496b6c5473: Pull complete
+0e524b999c57: Pull complete
+83fbf79581d1: Pull complete
+9f95ce0472cd: Pull complete
+b0ab21d88938: Pull complete
+86ef305d888b: Pull complete
+6e7e964c8987: Pull complete
+e6c93ca00ce5: Pull complete
+81e9d5dd434a: Pull complete
+913458c68366: Pull complete
+1295dd4d1b10: Pull complete
+2c709a6dccd8: Pull complete
+6c309fc2dcaf: Pull complete
+9e4b3aacf863: Pull complete
+102dd0a01e80: Pull complete
+ec9d4f07fcd2: Pull complete
+5270f7dd5494: Pull complete
+0c9e041e0c3b: Pull complete
+cf5337bb056a: Pull complete
+4f4fb700ef54: Pull complete
+43e1db233f68: Pull complete
+f6b9608e2240: Verifying Checksum
+f6b9608e2240: Download complete
+docker: failed to register layer: write /out/coder_PNG_fuzzer: no space left on device.
+See 'docker run --help'.
+ce left on device.
+See 'docker run --help'.

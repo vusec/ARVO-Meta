@@ -1,0 +1,253 @@
+Unable to find image 'n132/arvo:42108-vul' locally
+42108-vul: Pulling from n132/arvo
+7b1a6ab2e44d: Already exists
+e8988ce07050: Pulling fs layer
+c15e81600c85: Pulling fs layer
+aaa6e4a79bef: Pulling fs layer
+343ffa945e39: Pulling fs layer
+c22027aad2ce: Pulling fs layer
+1755b1506906: Pulling fs layer
+e8988ce07050: Waiting
+0a9eebdf7511: Pulling fs layer
+d3d72b54773e: Pulling fs layer
+0d17693b6460: Pulling fs layer
+aaa6e4a79bef: Waiting
+c15e81600c85: Waiting
+f7e2048d0c19: Pulling fs layer
+579ec58ed1f9: Pulling fs layer
+c138039707e6: Pulling fs layer
+343ffa945e39: Waiting
+1755b1506906: Waiting
+c22027aad2ce: Waiting
+34993e4ab370: Pulling fs layer
+5a21a30e1177: Pulling fs layer
+d3d72b54773e: Waiting
+1426db53468f: Pulling fs layer
+0d17693b6460: Waiting
+c138039707e6: Waiting
+0a9eebdf7511: Waiting
+fac1ae3e8804: Pulling fs layer
+e2511d48d4f2: Pulling fs layer
+579ec58ed1f9: Waiting
+f7e2048d0c19: Waiting
+6b1b764b4895: Pulling fs layer
+5a21a30e1177: Waiting
+066a7b05e48e: Pulling fs layer
+34993e4ab370: Waiting
+9038f7911274: Pulling fs layer
+e2511d48d4f2: Waiting
+5e4e949f1cb5: Pulling fs layer
+066a7b05e48e: Waiting
+709234245839: Pulling fs layer
+9038f7911274: Waiting
+6b1b764b4895: Waiting
+2ff451f152f8: Pulling fs layer
+709234245839: Waiting
+73801cb6aed8: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+ccd221f84cb3: Pulling fs layer
+5e4e949f1cb5: Waiting
+73801cb6aed8: Waiting
+88ca55e2a5eb: Pulling fs layer
+f64a6032a8d8: Pulling fs layer
+2747ec4b9ff1: Pulling fs layer
+a289854391a9: Pulling fs layer
+f9c5c2effae9: Pulling fs layer
+f64a6032a8d8: Waiting
+ccd221f84cb3: Waiting
+2747ec4b9ff1: Waiting
+88ca55e2a5eb: Waiting
+f9c5c2effae9: Waiting
+a289854391a9: Waiting
+e8988ce07050: Verifying Checksum
+e8988ce07050: Download complete
+c15e81600c85: Verifying Checksum
+c15e81600c85: Download complete
+aaa6e4a79bef: Verifying Checksum
+aaa6e4a79bef: Download complete
+343ffa945e39: Download complete
+e8988ce07050: Pull complete
+c15e81600c85: Pull complete
+1755b1506906: Verifying Checksum
+1755b1506906: Download complete
+aaa6e4a79bef: Pull complete
+343ffa945e39: Pull complete
+c22027aad2ce: Verifying Checksum
+c22027aad2ce: Download complete
+0a9eebdf7511: Verifying Checksum
+0a9eebdf7511: Download complete
+d3d72b54773e: Verifying Checksum
+d3d72b54773e: Download complete
+f7e2048d0c19: Verifying Checksum
+f7e2048d0c19: Download complete
+0d17693b6460: Download complete
+c138039707e6: Verifying Checksum
+c138039707e6: Download complete
+579ec58ed1f9: Verifying Checksum
+579ec58ed1f9: Download complete
+5a21a30e1177: Verifying Checksum
+5a21a30e1177: Download complete
+34993e4ab370: Verifying Checksum
+34993e4ab370: Download complete
+1426db53468f: Verifying Checksum
+1426db53468f: Download complete
+fac1ae3e8804: Verifying Checksum
+fac1ae3e8804: Download complete
+e2511d48d4f2: Verifying Checksum
+e2511d48d4f2: Download complete
+6b1b764b4895: Verifying Checksum
+6b1b764b4895: Download complete
+066a7b05e48e: Verifying Checksum
+066a7b05e48e: Download complete
+c22027aad2ce: Pull complete
+1755b1506906: Pull complete
+5e4e949f1cb5: Verifying Checksum
+5e4e949f1cb5: Download complete
+709234245839: Verifying Checksum
+709234245839: Download complete
+2ff451f152f8: Download complete
+73801cb6aed8: Verifying Checksum
+73801cb6aed8: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+ccd221f84cb3: Verifying Checksum
+ccd221f84cb3: Download complete
+0a9eebdf7511: Pull complete
+88ca55e2a5eb: Verifying Checksum
+88ca55e2a5eb: Download complete
+9038f7911274: Verifying Checksum
+9038f7911274: Download complete
+2747ec4b9ff1: Download complete
+f64a6032a8d8: Verifying Checksum
+f64a6032a8d8: Download complete
+d3d72b54773e: Pull complete
+0d17693b6460: Pull complete
+f7e2048d0c19: Pull complete
+579ec58ed1f9: Pull complete
+c138039707e6: Pull complete
+34993e4ab370: Pull complete
+f9c5c2effae9: Download complete
+5a21a30e1177: Pull complete
+1426db53468f: Pull complete
+fac1ae3e8804: Pull complete
+e2511d48d4f2: Pull complete
+6b1b764b4895: Pull complete
+066a7b05e48e: Pull complete
+a289854391a9: Verifying Checksum
+a289854391a9: Download complete
+9038f7911274: Pull complete
+5e4e949f1cb5: Pull complete
+709234245839: Pull complete
+2ff451f152f8: Pull complete
+73801cb6aed8: Pull complete
+4f4fb700ef54: Pull complete
+ccd221f84cb3: Pull complete
+88ca55e2a5eb: Pull complete
+f64a6032a8d8: Pull complete
+2747ec4b9ff1: Pull complete
+a289854391a9: Pull complete
+f9c5c2effae9: Pull complete
+Digest: sha256:766bda3ff0b83abbad8f17b54ff1d32d7bc338168b2a062ad102d2d860355c63
+Status: Downloaded newer image for n132/arvo:42108-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3329027069
+INFO: Loaded 1 modules   (20570 inline 8-bit counters): 20570 [0x900b60, 0x905bba), 
+INFO: Loaded 1 PC tables (20570 PCs): 20570 [0x7e6148,0x8366e8), 
+/out/libraw_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ec3bb4c87e0 at pc 0x00000070fcc6 bp 0x7ffe0ac31550 sp 0x7ffe0ac31548
+WRITE of size 1 at 0x7ec3bb4c87e0 thread T0
+SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
+    #0 0x70fcc5 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:255:38
+    #1 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #2 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #3 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #4 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #5 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #6 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #7 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #8 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #9 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #10 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #11 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #12 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #13 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #14 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #15 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #16 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #17 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #18 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #19 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #20 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #21 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #22 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #23 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #24 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #25 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #26 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #27 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #28 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #29 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #30 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #31 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
+    #32 0x69303c in LibRaw::identify() /src/libraw/src/metadata/identify.cpp:708:11
+    #33 0x57f581 in LibRaw::open_datastream(LibRaw_abstract_datastream*) /src/libraw/src/utils/open.cpp:480:4
+    #34 0x57e5fd in LibRaw::open_buffer(void const*, unsigned long) /src/libraw/src/utils/open.cpp:240:13
+    #35 0x55e9ea in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:41:24
+    #36 0x456da3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) cxa_noexception.cpp
+    #37 0x4425f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #38 0x44816c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
+    #39 0x4711a2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #40 0x7ec3bb53c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #41 0x41f7ed in _start (/out/libraw_fuzzer+0x41f7ed)
+
+DEDUP_TOKEN: LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)--LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)--LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)
+Address 0x7ec3bb4c87e0 is located in stack of thread T0 at offset 12256 in frame
+    #0 0x68b20f in LibRaw::identify() /src/libraw/src/metadata/identify.cpp:181
+
+DEDUP_TOKEN: LibRaw::identify()
+  This frame has 8 object(s):
+    [32, 10952) 'table' (line 400)
+    [11216, 11280) 'head' (line 406)
+    [11312, 11952) 'jh' (line 409)
+    [12080, 12082) 'nesting' (line 701)
+    [12096, 12098) 'nTrack' (line 702)
+    [12112, 12114) 'TrackType' (line 703)
+    [12128, 12256) 'AtomNameStack' (line 704) <== Memory access at offset 12256 overflows this variable
+    [12288, 12320) 'cnorm' (line 1155)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/libraw/src/metadata/cr3_parser.cpp:255:38 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)
+Shadow bytes around the buggy address:
+  0x0fd8f76910a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd8f76910b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd8f76910c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd8f76910d0: 00 00 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x0fd8f76910e0: f2 f2 f2 f2 f2 f2 02 f2 02 f2 02 f2 00 00 00 00
+=>0x0fd8f76910f0: 00 00 00 00 00 00 00 00 00 00 00 00[f2]f2 f2 f2
+  0x0fd8f7691100: f8 f8 f8 f8 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x0fd8f7691110: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd8f7691120: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd8f7691130: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd8f7691140: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

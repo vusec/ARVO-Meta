@@ -1,0 +1,81 @@
+======================= INFO =========================
+This binary is built for AFL-fuzz.
+To run the target function on individual input(s) execute this:
+  /out/coder_MVG_fuzzer < INPUT_FILE
+or
+  /out/coder_MVG_fuzzer INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] /out/coder_MVG_fuzzer [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: 1000)
+======================================================
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000310 at pc 0x0000006de894 bp 0x7ffeae8596b0 sp 0x7ffeae8596a8
+READ of size 8 at 0x610000000310 thread T0
+SCARINESS: 33 (8-byte-read-heap-buffer-overflow-far-from-bounds)
+    #0 0x6de893 in TraceSquareLinecap /src/graphicsmagick/magick/render.c:6991:69
+    #1 0x6db644 in TraceStrokePolygon /src/graphicsmagick/magick/render.c:7165:5
+    #2 0x6d7765 in DrawStrokePolygon /src/graphicsmagick/magick/render.c:5743:20
+    #3 0x6d3abd in DrawPrimitive /src/graphicsmagick/magick/render.c:5612:19
+    #4 0x6c45dc in DrawImage /src/graphicsmagick/magick/render.c:4373:13
+    #5 0x7fcfc2 in ReadMVGImage /src/graphicsmagick/coders/mvg.c:224:10
+    #6 0x5ca17d in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #7 0x583445 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #8 0x5371de in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #9 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
+    #10 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
+    #11 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
+    #12 0x791fbd17883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
+
+DEDUP_TOKEN: TraceSquareLinecap--TraceStrokePolygon--DrawStrokePolygon
+0x610000000310 is located 48 bytes to the left of 192-byte region [0x610000000340,0x610000000400)
+allocated by thread T0 here:
+    #0 0x4ebc57 in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:121
+    #1 0x6dafd3 in TraceStrokePolygon /src/graphicsmagick/magick/render.c:7067:5
+    #2 0x6d7765 in DrawStrokePolygon /src/graphicsmagick/magick/render.c:5743:20
+    #3 0x6d3abd in DrawPrimitive /src/graphicsmagick/magick/render.c:5612:19
+    #4 0x6c45dc in DrawImage /src/graphicsmagick/magick/render.c:4373:13
+    #5 0x7fcfc2 in ReadMVGImage /src/graphicsmagick/coders/mvg.c:224:10
+    #6 0x5ca17d in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #7 0x583445 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #8 0x5371de in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #9 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
+    #10 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
+    #11 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
+    #12 0x791fbd17883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: malloc--TraceStrokePolygon--DrawStrokePolygon
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:6991:69 in TraceSquareLinecap
+Shadow bytes around the buggy address:
+  0x0c207fff8010: 00 00 00 00 00 00 00 00 fa fa fa fa fa fa fa fa
+  0x0c207fff8020: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c207fff8030: fd fd fd fd fd fd fd fd fa fa fa fa fa fa fa fa
+  0x0c207fff8040: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c207fff8050: 00 00 00 00 00 00 00 00 fa fa fa fa fa fa fa fa
+=>0x0c207fff8060: fa fa[fa]fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c207fff8070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c207fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

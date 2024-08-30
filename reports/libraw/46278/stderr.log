@@ -1,0 +1,22 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1621844209
+INFO: Loaded 1 modules   (66800 inline 8-bit counters): 66800 [0xc3e740, 0xc4ec30), 
+INFO: Loaded 1 PC tables (66800 PCs): 66800 [0x8e5408,0x9ea308), 
+/out/libraw_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+unknown file: data corrupted at 16384
+src/demosaic/ahd_demosaic.cpp:156:7: runtime error: index -1 out of bounds for type 'ushort [3]'
+    #0 0x5c992e in LibRaw::ahd_interpolate_r_and_b_in_rgb_and_convert_to_cielab(int, int, unsigned short (*) [512][3], short (*) [512][3]) /src/libraw/src/demosaic/ahd_demosaic.cpp:156:17
+    #1 0x5c9be8 in LibRaw::ahd_interpolate_r_and_b_and_convert_to_cielab(int, int, unsigned short (*) [512][512][3], short (*) [512][512][3]) /src/libraw/src/demosaic/ahd_demosaic.cpp:170:5
+    #2 0x5cb6b4 in LibRaw::ahd_interpolate() /src/libraw/src/demosaic/ahd_demosaic.cpp:345:13
+    #3 0x4bd058 in LibRaw::dcraw_process() /src/libraw/src/postprocessing/dcraw_process.cpp:177:9
+    #4 0x4b2026 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:57:22
+    #5 0x441293 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/out/libraw_fuzzer+0x441293)
+    #6 0x42ca02 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #7 0x4326ce in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/out/libraw_fuzzer+0x4326ce)
+    #8 0x45bfa2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #9 0x7904e73a9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #10 0x407cad in _start (/out/libraw_fuzzer+0x407cad)
+
+DEDUP_TOKEN: LibRaw::ahd_interpolate_r_and_b_in_rgb_and_convert_to_cielab(int, int, unsigned short (*) [512][3], short (*) [512][3])--LibRaw::ahd_interpolate_r_and_b_and_convert_to_cielab(int, int, unsigned short (*) [512][512][3], short (*) [512][512][3])--LibRaw::ahd_interpolate()
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior src/demosaic/ahd_demosaic.cpp:156:7 in 
