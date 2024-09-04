@@ -1,76 +1,5 @@
-Unable to find image 'n132/arvo:54167-vul' locally
-54167-vul: Pulling from n132/arvo
-eaead16dc43b: Already exists
-5cea12269187: Already exists
-c74dff381a18: Already exists
-ddd888aeaf50: Already exists
-9c8a04cd0a50: Already exists
-7fe854d7ac11: Already exists
-698b2df0eb53: Already exists
-052c09baea70: Already exists
-302afe1c086f: Already exists
-e82d801d36b8: Already exists
-efa227a4c828: Already exists
-a03cd22b49b1: Already exists
-03fdadf8f01b: Already exists
-abfa9032eac9: Already exists
-7c272852bdaf: Already exists
-9cc817ec5435: Already exists
-503eeea58dc9: Already exists
-ad30d29b6a5f: Already exists
-f40401b05f8c: Already exists
-f18a95b80c6d: Already exists
-300f6f311ac8: Already exists
-04babf913bcd: Already exists
-745e60163555: Already exists
-5b705ae780c9: Already exists
-0c06248784ce: Already exists
-e7d3eb8d0f5d: Already exists
-b876e0fd6602: Pulling fs layer
-dd294a6d19bd: Pulling fs layer
-0466a602943c: Pulling fs layer
-1ae40ff63658: Pulling fs layer
-de271e3da97c: Pulling fs layer
-106c631a988e: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-a8f7d98665ba: Pulling fs layer
-13937704bf71: Pulling fs layer
-106c631a988e: Waiting
-1ae40ff63658: Waiting
-4f4fb700ef54: Waiting
-de271e3da97c: Waiting
-a8f7d98665ba: Waiting
-13937704bf71: Waiting
-dd294a6d19bd: Download complete
-0466a602943c: Verifying Checksum
-0466a602943c: Download complete
-1ae40ff63658: Verifying Checksum
-1ae40ff63658: Download complete
-de271e3da97c: Verifying Checksum
-de271e3da97c: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-106c631a988e: Verifying Checksum
-106c631a988e: Download complete
-13937704bf71: Verifying Checksum
-13937704bf71: Download complete
-a8f7d98665ba: Verifying Checksum
-a8f7d98665ba: Download complete
-b876e0fd6602: Verifying Checksum
-b876e0fd6602: Download complete
-b876e0fd6602: Pull complete
-dd294a6d19bd: Pull complete
-0466a602943c: Pull complete
-1ae40ff63658: Pull complete
-de271e3da97c: Pull complete
-106c631a988e: Pull complete
-4f4fb700ef54: Pull complete
-a8f7d98665ba: Pull complete
-13937704bf71: Pull complete
-Digest: sha256:857ac5dd8abcbf4a43b5db3051489f822fadbbf8afa228f442462bbf8e94982d
-Status: Downloaded newer image for n132/arvo:54167-vul
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60600000011d at pc 0x00000049ee81 bp 0x7ffec7a85950 sp 0x7ffec7a85120
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60600000011d at pc 0x00000049ee81 bp 0x7fff50b2e850 sp 0x7fff50b2e020
 READ of size 40 at 0x60600000011d thread T0
 SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #0 0x49ee80 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -82,7 +11,7 @@ SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #6 0x4dd275 in LLVMFuzzerTestOneInput /src/pjsip/tests/fuzz/fuzz-stun.c:85:11
     #7 0x531b9a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #8 0x53196c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #9 0x7c384355a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x79f6e9024082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #10 0x41e6bd in _start (/out/fuzz-stun+0x41e6bd)
 
 DEDUP_TOKEN: __asan_memcpy--pj_memcpy--pj_strdup

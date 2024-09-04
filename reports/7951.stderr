@@ -1,64 +1,3 @@
-Unable to find image 'n132/arvo:7951-vul' locally
-7951-vul: Pulling from n132/arvo
-d3938036b19c: Already exists
-a9b30c108bda: Already exists
-67de21feec18: Already exists
-817da545be2b: Already exists
-d967c497ce23: Already exists
-cbdaba71e344: Already exists
-47b021e4bacd: Already exists
-b71d45c5d20a: Already exists
-ce93dce41dce: Already exists
-e820f2ae1cdd: Already exists
-890c17381927: Already exists
-5cdeac971ba3: Already exists
-b8217f1fb2af: Already exists
-da5c60927e66: Already exists
-626e55865748: Already exists
-d7dc654ed1a4: Already exists
-d91a512512c5: Pulling fs layer
-f4a40cd42f34: Pulling fs layer
-ba92a3e75e22: Pulling fs layer
-6c32d5e70dc1: Pulling fs layer
-be17ce69e2b4: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-807cf1738dba: Pulling fs layer
-f6bb2bd4e151: Pulling fs layer
-6f87d467f098: Pulling fs layer
-f6bb2bd4e151: Waiting
-4f4fb700ef54: Waiting
-807cf1738dba: Waiting
-6f87d467f098: Waiting
-6c32d5e70dc1: Waiting
-be17ce69e2b4: Waiting
-f4a40cd42f34: Verifying Checksum
-f4a40cd42f34: Download complete
-ba92a3e75e22: Verifying Checksum
-ba92a3e75e22: Download complete
-be17ce69e2b4: Verifying Checksum
-be17ce69e2b4: Download complete
-4f4fb700ef54: Download complete
-807cf1738dba: Verifying Checksum
-807cf1738dba: Download complete
-d91a512512c5: Verifying Checksum
-d91a512512c5: Download complete
-6f87d467f098: Verifying Checksum
-6f87d467f098: Download complete
-6c32d5e70dc1: Verifying Checksum
-6c32d5e70dc1: Download complete
-d91a512512c5: Pull complete
-f4a40cd42f34: Pull complete
-ba92a3e75e22: Pull complete
-6c32d5e70dc1: Pull complete
-be17ce69e2b4: Pull complete
-4f4fb700ef54: Pull complete
-807cf1738dba: Pull complete
-f6bb2bd4e151: Verifying Checksum
-f6bb2bd4e151: Download complete
-f6bb2bd4e151: Pull complete
-6f87d467f098: Pull complete
-Digest: sha256:1a6b8cd2ab6a29a3fab18676d3530319075b92cf14892575f59957b75d2ec320
-Status: Downloaded newer image for n132/arvo:7951-vul
 ======================= INFO =========================
 This binary is built for AFL-fuzz.
 To run the target function on individual input(s) execute this:
@@ -70,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000176 at pc 0x00000074c270 bp 0x7fff7ca4cbf0 sp 0x7fff7ca4cbe8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000176 at pc 0x00000074c270 bp 0x7ffe7af1b310 sp 0x7ffe7af1b308
 READ of size 2 at 0x602000000176 thread T0
 SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #0 0x74c26f in ReadDPXImage /src/graphicsmagick/coders/dpx.c:2791:37
@@ -80,7 +19,7 @@ SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #4 0x5285c3 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #5 0x528ecf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:290:5
     #6 0x52946f in main /src/libfuzzer/afl/afl_driver.cpp:327:12
-    #7 0x771e48e2f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x733d66d7383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41d638 in _start (/out/coder_DPX_fuzzer+0x41d638)
 
 DEDUP_TOKEN: ReadDPXImage--ReadImage--BlobToImage
@@ -95,7 +34,7 @@ allocated by thread T0 here:
     #6 0x5285c3 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x528ecf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:290:5
     #8 0x52946f in main /src/libfuzzer/afl/afl_driver.cpp:327:12
-    #9 0x771e48e2f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x733d66d7383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--AllocateThreadViewDataArray--ReadDPXImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/dpx.c:2791:37 in ReadDPXImage

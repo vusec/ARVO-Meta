@@ -1,233 +1,11 @@
-Unable to find image 'n132/arvo:17597-vul' locally
-17597-vul: Pulling from n132/arvo
-16c48d79e9cc: Already exists
-3c654ad3ed7d: Already exists
-6276f4f9c29d: Already exists
-a4bd43ad48ce: Already exists
-6d17867de201: Pulling fs layer
-bb83ca093632: Pulling fs layer
-bcc6602310b2: Pulling fs layer
-bde9ea9b6065: Pulling fs layer
-4d6b4194c499: Pulling fs layer
-c0dab1d1cb74: Pulling fs layer
-6744da06e878: Pulling fs layer
-a44887a6a733: Pulling fs layer
-66d4e2b8e5db: Pulling fs layer
-39b0f7b1cd86: Pulling fs layer
-3f13e7cf9cef: Pulling fs layer
-4d6b4194c499: Waiting
-9525169a6a4d: Pulling fs layer
-c0dab1d1cb74: Waiting
-e6faa9299f9b: Pulling fs layer
-23ec1a544472: Pulling fs layer
-dbd51b75e908: Pulling fs layer
-5f91d6ba4636: Pulling fs layer
-a2195bb969f6: Pulling fs layer
-0eb832b1e143: Pulling fs layer
-11f0ffbfb2c2: Pulling fs layer
-bd35aad09de7: Pulling fs layer
-729f9af118fd: Pulling fs layer
-ff18fa36b8c3: Pulling fs layer
-e014ce62df0f: Pulling fs layer
-9961bc76c468: Pulling fs layer
-685999595b95: Pulling fs layer
-2cc0832c5792: Pulling fs layer
-92b48e8c6ecf: Pulling fs layer
-6744da06e878: Waiting
-7b1747e0e8d5: Pulling fs layer
-829fb84eb701: Pulling fs layer
-a44887a6a733: Waiting
-eb57cdcad208: Pulling fs layer
-3b434e9459cb: Pulling fs layer
-e4e3208294dd: Pulling fs layer
-0ac96fa20507: Pulling fs layer
-0e6780e7493d: Pulling fs layer
-b8dcbfe39a5d: Pulling fs layer
-95936d43381b: Pulling fs layer
-e7693ba971be: Pulling fs layer
-66d4e2b8e5db: Waiting
-bd668b765259: Pulling fs layer
-91c72ca8aca4: Pulling fs layer
-466a58e9ce3b: Pulling fs layer
-f57e979746aa: Pulling fs layer
-bde9ea9b6065: Waiting
-4f4fb700ef54: Pulling fs layer
-a4e49598e4b4: Pulling fs layer
-dbd51b75e908: Waiting
-1c71001a1b5e: Pulling fs layer
-c1f55babdef1: Pulling fs layer
-bd35aad09de7: Waiting
-5f91d6ba4636: Waiting
-729f9af118fd: Waiting
-39b0f7b1cd86: Waiting
-9961bc76c468: Waiting
-685999595b95: Waiting
-e6faa9299f9b: Waiting
-3f13e7cf9cef: Waiting
-2cc0832c5792: Waiting
-23ec1a544472: Waiting
-92b48e8c6ecf: Waiting
-9525169a6a4d: Waiting
-7b1747e0e8d5: Waiting
-829fb84eb701: Waiting
-0eb832b1e143: Waiting
-a2195bb969f6: Waiting
-bd668b765259: Waiting
-eb57cdcad208: Waiting
-e014ce62df0f: Waiting
-11f0ffbfb2c2: Waiting
-3b434e9459cb: Waiting
-1c71001a1b5e: Waiting
-91c72ca8aca4: Waiting
-e4e3208294dd: Waiting
-95936d43381b: Waiting
-466a58e9ce3b: Waiting
-e7693ba971be: Waiting
-4f4fb700ef54: Waiting
-a4e49598e4b4: Waiting
-f57e979746aa: Waiting
-ff18fa36b8c3: Waiting
-c1f55babdef1: Waiting
-0ac96fa20507: Waiting
-0e6780e7493d: Waiting
-b8dcbfe39a5d: Waiting
-bcc6602310b2: Verifying Checksum
-bcc6602310b2: Download complete
-bb83ca093632: Verifying Checksum
-bb83ca093632: Download complete
-4d6b4194c499: Verifying Checksum
-4d6b4194c499: Download complete
-6d17867de201: Download complete
-6744da06e878: Verifying Checksum
-6744da06e878: Download complete
-6d17867de201: Pull complete
-bb83ca093632: Pull complete
-bcc6602310b2: Pull complete
-c0dab1d1cb74: Verifying Checksum
-c0dab1d1cb74: Download complete
-66d4e2b8e5db: Verifying Checksum
-66d4e2b8e5db: Download complete
-a44887a6a733: Verifying Checksum
-a44887a6a733: Download complete
-3f13e7cf9cef: Download complete
-39b0f7b1cd86: Verifying Checksum
-39b0f7b1cd86: Download complete
-e6faa9299f9b: Verifying Checksum
-e6faa9299f9b: Download complete
-23ec1a544472: Verifying Checksum
-23ec1a544472: Download complete
-9525169a6a4d: Verifying Checksum
-9525169a6a4d: Download complete
-5f91d6ba4636: Download complete
-bde9ea9b6065: Verifying Checksum
-bde9ea9b6065: Download complete
-a2195bb969f6: Verifying Checksum
-a2195bb969f6: Download complete
-dbd51b75e908: Verifying Checksum
-dbd51b75e908: Download complete
-11f0ffbfb2c2: Verifying Checksum
-11f0ffbfb2c2: Download complete
-bd35aad09de7: Verifying Checksum
-bd35aad09de7: Download complete
-729f9af118fd: Download complete
-ff18fa36b8c3: Verifying Checksum
-ff18fa36b8c3: Download complete
-e014ce62df0f: Verifying Checksum
-e014ce62df0f: Download complete
-9961bc76c468: Verifying Checksum
-9961bc76c468: Download complete
-685999595b95: Download complete
-92b48e8c6ecf: Verifying Checksum
-92b48e8c6ecf: Download complete
-0eb832b1e143: Verifying Checksum
-0eb832b1e143: Download complete
-2cc0832c5792: Verifying Checksum
-2cc0832c5792: Download complete
-bde9ea9b6065: Pull complete
-4d6b4194c499: Pull complete
-829fb84eb701: Verifying Checksum
-829fb84eb701: Download complete
-3b434e9459cb: Verifying Checksum
-3b434e9459cb: Download complete
-eb57cdcad208: Verifying Checksum
-eb57cdcad208: Download complete
-7b1747e0e8d5: Verifying Checksum
-7b1747e0e8d5: Download complete
-0ac96fa20507: Download complete
-e4e3208294dd: Verifying Checksum
-e4e3208294dd: Download complete
-c0dab1d1cb74: Pull complete
-6744da06e878: Pull complete
-b8dcbfe39a5d: Download complete
-0e6780e7493d: Verifying Checksum
-0e6780e7493d: Download complete
-e7693ba971be: Verifying Checksum
-e7693ba971be: Download complete
-91c72ca8aca4: Verifying Checksum
-91c72ca8aca4: Download complete
-466a58e9ce3b: Download complete
-a44887a6a733: Pull complete
-f57e979746aa: Verifying Checksum
-f57e979746aa: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-a4e49598e4b4: Verifying Checksum
-a4e49598e4b4: Download complete
-95936d43381b: Verifying Checksum
-95936d43381b: Download complete
-66d4e2b8e5db: Pull complete
-39b0f7b1cd86: Pull complete
-3f13e7cf9cef: Pull complete
-9525169a6a4d: Pull complete
-c1f55babdef1: Verifying Checksum
-c1f55babdef1: Download complete
-e6faa9299f9b: Pull complete
-23ec1a544472: Pull complete
-bd668b765259: Verifying Checksum
-bd668b765259: Download complete
-dbd51b75e908: Pull complete
-5f91d6ba4636: Pull complete
-a2195bb969f6: Pull complete
-0eb832b1e143: Pull complete
-11f0ffbfb2c2: Pull complete
-bd35aad09de7: Pull complete
-729f9af118fd: Pull complete
-ff18fa36b8c3: Pull complete
-e014ce62df0f: Pull complete
-9961bc76c468: Pull complete
-685999595b95: Pull complete
-2cc0832c5792: Pull complete
-92b48e8c6ecf: Pull complete
-7b1747e0e8d5: Pull complete
-829fb84eb701: Pull complete
-eb57cdcad208: Pull complete
-3b434e9459cb: Pull complete
-e4e3208294dd: Pull complete
-0ac96fa20507: Pull complete
-0e6780e7493d: Pull complete
-b8dcbfe39a5d: Pull complete
-95936d43381b: Pull complete
-e7693ba971be: Pull complete
-bd668b765259: Pull complete
-91c72ca8aca4: Pull complete
-466a58e9ce3b: Pull complete
-f57e979746aa: Pull complete
-4f4fb700ef54: Pull complete
-a4e49598e4b4: Pull complete
-1c71001a1b5e: Verifying Checksum
-1c71001a1b5e: Download complete
-1c71001a1b5e: Pull complete
-c1f55babdef1: Pull complete
-Digest: sha256:f93f9f3f6aea546fed10fbeeaa52631dff9c742064cbf3b0f2a51bf7798f33ef
-Status: Downloaded newer image for n132/arvo:17597-vul
-INFO: Seed: 4121959655
+INFO: Seed: 1902984778
 INFO: Loaded 1 modules   (120139 inline 8-bit counters): 120139 [0x92392d0, 0x925681b), 
 INFO: Loaded 1 PC tables (120139 PCs): 120139 [0x925681c,0x9341274), 
 /out/coder_SFW_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe97036ce at pc 0x0824a2b4 bp 0xffc2a588 sp 0xffc2a580
-READ of size 1 at 0xe97036ce thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xef4036ce at pc 0x0824a2b4 bp 0xff9a3608 sp 0xff9a3600
+READ of size 1 at 0xef4036ce thread T0
 SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x824a2b3 in GenerateEXIFAttribute /src/graphicsmagick/magick/attribute.c:2141:29
     #1 0x824626b in GetImageAttribute /src/graphicsmagick/magick/attribute.c:2399:11
@@ -242,24 +20,24 @@ SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #10 0x80d5d63 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #11 0x80db478 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
     #12 0x8100527 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #13 0xf0686646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #13 0xf62a7646 in __libc_start_main (/lib32/libc.so.6+0x18646)
     #14 0x80b0d84 in _start (/out/coder_SFW_fuzzer+0x80b0d84)
 
 DEDUP_TOKEN: GenerateEXIFAttribute--GetImageAttribute--ReadJPEGImage
-Address 0xe97036ce is a wild pointer.
+Address 0xef4036ce is a wild pointer.
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/attribute.c:2141:29 in GenerateEXIFAttribute
 Shadow bytes around the buggy address:
-  0x3d2e0680: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d2e0690: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d2e06a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d2e06b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d2e06c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x3d2e06d0: fa fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa
-  0x3d2e06e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d2e06f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d2e0700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d2e0710: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d2e0720: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3de80680: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3de80690: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3de806a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3de806b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3de806c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x3de806d0: fa fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa
+  0x3de806e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3de806f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3de80700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3de80710: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3de80720: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

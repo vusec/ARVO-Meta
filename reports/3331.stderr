@@ -1,125 +1,9 @@
-Unable to find image 'n132/arvo:3331-vul' locally
-3331-vul: Pulling from n132/arvo
-60730f960363: Already exists
-f7d512d82502: Already exists
-a7cad26d0357: Already exists
-25bb6f291ceb: Already exists
-630ceed02486: Already exists
-1659d1574fce: Pulling fs layer
-5ff9045091cd: Pulling fs layer
-dfadb60a8cda: Pulling fs layer
-f4fa4aa976cc: Pulling fs layer
-8d6e11642663: Pulling fs layer
-a58bc987207b: Pulling fs layer
-771d9c0d7f62: Pulling fs layer
-86c482543b67: Pulling fs layer
-94e3a24becf5: Pulling fs layer
-cbd1f990b656: Pulling fs layer
-1e0f6184d7a7: Pulling fs layer
-0e662fb58d71: Pulling fs layer
-a3cd479160fc: Pulling fs layer
-dbebedb8ccbe: Pulling fs layer
-2eb0179db2ca: Pulling fs layer
-5b92e7b40743: Pulling fs layer
-4d7a532bac0b: Pulling fs layer
-824726eb1742: Pulling fs layer
-250e8f6dc56e: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-99674f6b3526: Pulling fs layer
-bebfc8f3439d: Pulling fs layer
-fbfe206d44f9: Pulling fs layer
-f4fa4aa976cc: Waiting
-0e662fb58d71: Waiting
-8d6e11642663: Waiting
-a3cd479160fc: Waiting
-dbebedb8ccbe: Waiting
-2eb0179db2ca: Waiting
-5b92e7b40743: Waiting
-cbd1f990b656: Waiting
-94e3a24becf5: Waiting
-1e0f6184d7a7: Waiting
-4d7a532bac0b: Waiting
-a58bc987207b: Waiting
-771d9c0d7f62: Waiting
-86c482543b67: Waiting
-824726eb1742: Waiting
-fbfe206d44f9: Waiting
-250e8f6dc56e: Waiting
-4f4fb700ef54: Waiting
-bebfc8f3439d: Waiting
-99674f6b3526: Waiting
-5ff9045091cd: Download complete
-1659d1574fce: Verifying Checksum
-1659d1574fce: Download complete
-f4fa4aa976cc: Verifying Checksum
-f4fa4aa976cc: Download complete
-1659d1574fce: Pull complete
-5ff9045091cd: Pull complete
-a58bc987207b: Download complete
-dfadb60a8cda: Verifying Checksum
-dfadb60a8cda: Download complete
-86c482543b67: Verifying Checksum
-86c482543b67: Download complete
-dfadb60a8cda: Pull complete
-f4fa4aa976cc: Pull complete
-94e3a24becf5: Verifying Checksum
-94e3a24becf5: Download complete
-771d9c0d7f62: Verifying Checksum
-771d9c0d7f62: Download complete
-cbd1f990b656: Verifying Checksum
-cbd1f990b656: Download complete
-1e0f6184d7a7: Verifying Checksum
-1e0f6184d7a7: Download complete
-0e662fb58d71: Download complete
-dbebedb8ccbe: Verifying Checksum
-dbebedb8ccbe: Download complete
-2eb0179db2ca: Verifying Checksum
-2eb0179db2ca: Download complete
-a3cd479160fc: Verifying Checksum
-a3cd479160fc: Download complete
-8d6e11642663: Verifying Checksum
-8d6e11642663: Download complete
-4d7a532bac0b: Verifying Checksum
-4d7a532bac0b: Download complete
-250e8f6dc56e: Verifying Checksum
-250e8f6dc56e: Download complete
-4f4fb700ef54: Verifying Checksum
-99674f6b3526: Download complete
-bebfc8f3439d: Verifying Checksum
-bebfc8f3439d: Download complete
-8d6e11642663: Pull complete
-a58bc987207b: Pull complete
-fbfe206d44f9: Verifying Checksum
-fbfe206d44f9: Download complete
-771d9c0d7f62: Pull complete
-86c482543b67: Pull complete
-94e3a24becf5: Pull complete
-cbd1f990b656: Pull complete
-5b92e7b40743: Verifying Checksum
-5b92e7b40743: Download complete
-1e0f6184d7a7: Pull complete
-0e662fb58d71: Pull complete
-a3cd479160fc: Pull complete
-dbebedb8ccbe: Pull complete
-2eb0179db2ca: Pull complete
-5b92e7b40743: Pull complete
-4d7a532bac0b: Pull complete
-824726eb1742: Verifying Checksum
-824726eb1742: Download complete
-824726eb1742: Pull complete
-250e8f6dc56e: Pull complete
-4f4fb700ef54: Pull complete
-99674f6b3526: Pull complete
-bebfc8f3439d: Pull complete
-fbfe206d44f9: Pull complete
-Digest: sha256:62bca9692b5bd9747c4a7248e66c833c5cc64f06224c1aea5a96e00141686fc1
-Status: Downloaded newer image for n132/arvo:3331-vul
-INFO: Seed: 3775738468
+INFO: Seed: 1829911876
 INFO: Loaded 1 modules   (6960 guards): 6960 [0x98c040, 0x992d00), 
 /out/opj_decompress_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x613000001848 at pc 0x0000005fd775 bp 0x7ffd1c36aa90 sp 0x7ffd1c36aa88
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x613000001848 at pc 0x0000005fd775 bp 0x7ffd53cd35b0 sp 0x7ffd53cd35a8
 READ of size 4 at 0x613000001848 thread T0
 SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x5fd774 in opj_tcd_mct_decode /src/openjpeg/src/lib/openjp2/tcd.c:1988:45
@@ -133,7 +17,7 @@ SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #8 0x5199a5 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:273:6
     #9 0x524c3f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:689:9
     #10 0x519048 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #11 0x7695e192c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7f89634de83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41c298 in _start (/out/opj_decompress_fuzzer+0x41c298)
 
 DEDUP_TOKEN: opj_tcd_mct_decode--opj_tcd_decode_tile--opj_j2k_decode_tile

@@ -1,152 +1,12 @@
-Unable to find image 'n132/arvo:49271-vul' locally
-49271-vul: Pulling from n132/arvo
-d7bfe07ed847: Already exists
-3dd93ef8ffd9: Already exists
-790f9d0a0dce: Already exists
-11cd3f144815: Already exists
-aca768540b99: Already exists
-35b1312e159e: Already exists
-4d0ca8b7e228: Already exists
-414fd4239a5b: Already exists
-134292459dc2: Already exists
-3e879b680f74: Already exists
-4e3ee7259875: Already exists
-179bd47227be: Already exists
-662cb2cd82c8: Already exists
-2b2061b7cfc8: Already exists
-09a8db6460fc: Already exists
-35013daf344c: Already exists
-e30bb79aa736: Already exists
-a40f0e6334a1: Already exists
-2040f9a72d25: Already exists
-5b9b7d46044b: Already exists
-281dec0535bb: Already exists
-5da4306d17df: Already exists
-9b63b2d37aa2: Pulling fs layer
-970ba34f771e: Pulling fs layer
-74baffd4dbc1: Pulling fs layer
-d6e698060da1: Pulling fs layer
-4a7077bdffa1: Pulling fs layer
-dd7a2aca3e4d: Pulling fs layer
-3184fb8da752: Pulling fs layer
-507d0bae0b3e: Pulling fs layer
-b1de00312bef: Pulling fs layer
-2de1ac1c1dfb: Pulling fs layer
-fe62c3ad23c3: Pulling fs layer
-e06d6dd18df5: Pulling fs layer
-72cff7af0881: Pulling fs layer
-687931af1345: Pulling fs layer
-03a381ff81f2: Pulling fs layer
-7628c10b54a2: Pulling fs layer
-4e932498e990: Pulling fs layer
-ff5846a4c947: Pulling fs layer
-638eecc1d21a: Pulling fs layer
-9cc4bbcc0d43: Pulling fs layer
-2e7f2726ad5d: Pulling fs layer
-df84a71d14e1: Pulling fs layer
-b0bacf39f79d: Pulling fs layer
-58e84f91997f: Pulling fs layer
-03a381ff81f2: Waiting
-7628c10b54a2: Waiting
-2e7f2726ad5d: Waiting
-df84a71d14e1: Waiting
-4e932498e990: Waiting
-687931af1345: Waiting
-ff5846a4c947: Waiting
-638eecc1d21a: Waiting
-b0bacf39f79d: Waiting
-2de1ac1c1dfb: Waiting
-9cc4bbcc0d43: Waiting
-4a7077bdffa1: Waiting
-fe62c3ad23c3: Waiting
-58e84f91997f: Waiting
-dd7a2aca3e4d: Waiting
-3184fb8da752: Waiting
-e06d6dd18df5: Waiting
-d6e698060da1: Waiting
-72cff7af0881: Waiting
-507d0bae0b3e: Waiting
-b1de00312bef: Waiting
-970ba34f771e: Verifying Checksum
-970ba34f771e: Download complete
-74baffd4dbc1: Verifying Checksum
-74baffd4dbc1: Download complete
-9b63b2d37aa2: Verifying Checksum
-9b63b2d37aa2: Download complete
-dd7a2aca3e4d: Verifying Checksum
-dd7a2aca3e4d: Download complete
-4a7077bdffa1: Verifying Checksum
-4a7077bdffa1: Download complete
-3184fb8da752: Verifying Checksum
-3184fb8da752: Download complete
-507d0bae0b3e: Verifying Checksum
-507d0bae0b3e: Download complete
-b1de00312bef: Download complete
-2de1ac1c1dfb: Download complete
-e06d6dd18df5: Verifying Checksum
-e06d6dd18df5: Download complete
-fe62c3ad23c3: Verifying Checksum
-fe62c3ad23c3: Download complete
-72cff7af0881: Download complete
-d6e698060da1: Verifying Checksum
-d6e698060da1: Download complete
-03a381ff81f2: Verifying Checksum
-03a381ff81f2: Download complete
-9b63b2d37aa2: Pull complete
-970ba34f771e: Pull complete
-687931af1345: Verifying Checksum
-687931af1345: Download complete
-7628c10b54a2: Verifying Checksum
-7628c10b54a2: Download complete
-4e932498e990: Verifying Checksum
-4e932498e990: Download complete
-ff5846a4c947: Verifying Checksum
-ff5846a4c947: Download complete
-9cc4bbcc0d43: Verifying Checksum
-9cc4bbcc0d43: Download complete
-638eecc1d21a: Verifying Checksum
-638eecc1d21a: Download complete
-2e7f2726ad5d: Verifying Checksum
-2e7f2726ad5d: Download complete
-df84a71d14e1: Verifying Checksum
-df84a71d14e1: Download complete
-58e84f91997f: Verifying Checksum
-58e84f91997f: Download complete
-74baffd4dbc1: Pull complete
-d6e698060da1: Pull complete
-4a7077bdffa1: Pull complete
-dd7a2aca3e4d: Pull complete
-3184fb8da752: Pull complete
-507d0bae0b3e: Pull complete
-b1de00312bef: Pull complete
-2de1ac1c1dfb: Pull complete
-fe62c3ad23c3: Pull complete
-e06d6dd18df5: Pull complete
-72cff7af0881: Pull complete
-687931af1345: Pull complete
-03a381ff81f2: Pull complete
-7628c10b54a2: Pull complete
-4e932498e990: Pull complete
-ff5846a4c947: Pull complete
-638eecc1d21a: Pull complete
-9cc4bbcc0d43: Pull complete
-2e7f2726ad5d: Pull complete
-df84a71d14e1: Pull complete
-b0bacf39f79d: Verifying Checksum
-b0bacf39f79d: Download complete
-b0bacf39f79d: Pull complete
-58e84f91997f: Pull complete
-Digest: sha256:623ad0a0feb7b2037baff7b770e672d973947c455b2f135c548a1dea1c534e30
-Status: Downloaded newer image for n132/arvo:49271-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2872921366
+INFO: Seed: 2056595366
 INFO: Loaded 1 modules   (70134 inline 8-bit counters): 70134 [0x10d5c20, 0x10e6e16), 
 INFO: Loaded 1 PC tables (70134 PCs): 70134 [0xea7cb0,0xfb9c10), 
 /out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7162c9fff006 at pc 0x0000008ff2f0 bp 0x7ffdf75e6b70 sp 0x7ffdf75e6b68
-READ of size 8 at 0x7162c9fff006 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x70a808dff006 at pc 0x0000008ff2f0 bp 0x7ffc7a373c70 sp 0x7ffc7a373c68
+READ of size 8 at 0x70a808dff006 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x8ff2ef in copy_CTB /src/ffmpeg/libavcodec/hevc_filter.c:147:17
     #1 0x8ff2ef in sao_filter_CTB /src/ffmpeg/libavcodec/hevc_filter.c:427:13
@@ -166,11 +26,11 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #15 0x4640f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #16 0x46993c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #17 0x492532 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0x7162cb599082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #18 0x70a80a331082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #19 0x44291d in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x44291d)
 
 DEDUP_TOKEN: copy_CTB--sao_filter_CTB--ff_hevc_hls_filter
-0x7162c9fff006 is located 6 bytes to the right of 399360-byte region [0x7162c9f9d800,0x7162c9fff000)
+0x70a808dff006 is located 6 bytes to the right of 399360-byte region [0x70a808d9d800,0x70a808dff000)
 allocated by thread T0 here:
     #0 0x547777 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
     #1 0xcf53b0 in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -194,22 +54,22 @@ allocated by thread T0 here:
     #19 0x4640f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #20 0x46993c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #21 0x492532 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #22 0x7162cb599082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #22 0x70a80a331082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/hevc_filter.c:147:17 in copy_CTB
 Shadow bytes around the buggy address:
-  0x0e2cd93f7db0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e2cd93f7dc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e2cd93f7dd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e2cd93f7de0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e2cd93f7df0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0e2cd93f7e00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e2cd93f7e10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e2cd93f7e20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e2cd93f7e30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e2cd93f7e40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e2cd93f7e50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e15811b7db0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e15811b7dc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e15811b7dd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e15811b7de0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e15811b7df0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e15811b7e00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e15811b7e10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e15811b7e20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e15811b7e30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e15811b7e40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e15811b7e50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

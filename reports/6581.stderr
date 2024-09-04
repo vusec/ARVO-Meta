@@ -1,139 +1,10 @@
-Unable to find image 'n132/arvo:6581-vul' locally
-6581-vul: Pulling from n132/arvo
-1be7f2b886e8: Pulling fs layer
-6fbc4a21b806: Pulling fs layer
-c71a6f8e1378: Pulling fs layer
-4be3072e5a37: Pulling fs layer
-06c6d2f59700: Pulling fs layer
-789bf1f462cf: Pulling fs layer
-0b3f1f2cd1fc: Pulling fs layer
-db3d27292318: Pulling fs layer
-2e326c4f4062: Pulling fs layer
-fa1a78baaec5: Pulling fs layer
-039f7fd527f2: Pulling fs layer
-d536ad1ef6ed: Pulling fs layer
-035d32612949: Pulling fs layer
-08b3aa636711: Pulling fs layer
-c8ce61721f1b: Pulling fs layer
-32d45990243f: Pulling fs layer
-725134e6593c: Pulling fs layer
-94100c835905: Pulling fs layer
-48d82c8ccbeb: Pulling fs layer
-5ea7d855fb8c: Pulling fs layer
-1f76bf6abf1a: Pulling fs layer
-98e0e545d720: Pulling fs layer
-39549df109fd: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-3170343598d9: Pulling fs layer
-7dc0a96787d2: Pulling fs layer
-ac0bd54c411e: Pulling fs layer
-48d82c8ccbeb: Waiting
-035d32612949: Waiting
-5ea7d855fb8c: Waiting
-08b3aa636711: Waiting
-1f76bf6abf1a: Waiting
-c8ce61721f1b: Waiting
-98e0e545d720: Waiting
-39549df109fd: Waiting
-94100c835905: Waiting
-32d45990243f: Waiting
-725134e6593c: Waiting
-ac0bd54c411e: Waiting
-3170343598d9: Waiting
-4be3072e5a37: Waiting
-db3d27292318: Waiting
-06c6d2f59700: Waiting
-2e326c4f4062: Waiting
-789bf1f462cf: Waiting
-0b3f1f2cd1fc: Waiting
-4f4fb700ef54: Waiting
-fa1a78baaec5: Waiting
-039f7fd527f2: Waiting
-d536ad1ef6ed: Waiting
-7dc0a96787d2: Waiting
-c71a6f8e1378: Verifying Checksum
-c71a6f8e1378: Download complete
-6fbc4a21b806: Verifying Checksum
-6fbc4a21b806: Download complete
-4be3072e5a37: Verifying Checksum
-4be3072e5a37: Download complete
-1be7f2b886e8: Verifying Checksum
-1be7f2b886e8: Download complete
-06c6d2f59700: Download complete
-0b3f1f2cd1fc: Verifying Checksum
-0b3f1f2cd1fc: Download complete
-db3d27292318: Verifying Checksum
-db3d27292318: Download complete
-789bf1f462cf: Verifying Checksum
-789bf1f462cf: Download complete
-1be7f2b886e8: Pull complete
-6fbc4a21b806: Pull complete
-c71a6f8e1378: Pull complete
-4be3072e5a37: Pull complete
-06c6d2f59700: Pull complete
-fa1a78baaec5: Download complete
-d536ad1ef6ed: Verifying Checksum
-d536ad1ef6ed: Download complete
-789bf1f462cf: Pull complete
-0b3f1f2cd1fc: Pull complete
-db3d27292318: Pull complete
-039f7fd527f2: Download complete
-035d32612949: Verifying Checksum
-035d32612949: Download complete
-08b3aa636711: Verifying Checksum
-08b3aa636711: Download complete
-c8ce61721f1b: Verifying Checksum
-c8ce61721f1b: Download complete
-2e326c4f4062: Verifying Checksum
-2e326c4f4062: Download complete
-32d45990243f: Verifying Checksum
-32d45990243f: Download complete
-94100c835905: Verifying Checksum
-94100c835905: Download complete
-48d82c8ccbeb: Verifying Checksum
-48d82c8ccbeb: Download complete
-725134e6593c: Verifying Checksum
-725134e6593c: Download complete
-1f76bf6abf1a: Verifying Checksum
-1f76bf6abf1a: Download complete
-98e0e545d720: Verifying Checksum
-98e0e545d720: Download complete
-39549df109fd: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-3170343598d9: Download complete
-ac0bd54c411e: Download complete
-5ea7d855fb8c: Verifying Checksum
-5ea7d855fb8c: Download complete
-2e326c4f4062: Pull complete
-fa1a78baaec5: Pull complete
-039f7fd527f2: Pull complete
-d536ad1ef6ed: Pull complete
-035d32612949: Pull complete
-08b3aa636711: Pull complete
-7dc0a96787d2: Download complete
-c8ce61721f1b: Pull complete
-32d45990243f: Pull complete
-725134e6593c: Pull complete
-94100c835905: Pull complete
-48d82c8ccbeb: Pull complete
-5ea7d855fb8c: Pull complete
-1f76bf6abf1a: Pull complete
-98e0e545d720: Pull complete
-39549df109fd: Pull complete
-4f4fb700ef54: Pull complete
-3170343598d9: Pull complete
-7dc0a96787d2: Pull complete
-ac0bd54c411e: Pull complete
-Digest: sha256:79446003e3a0c3318588782c231fedf65b07ee1e77ddacf4de31c867ad116470
-Status: Downloaded newer image for n132/arvo:6581-vul
-INFO: Seed: 3876280379
+INFO: Seed: 1833678793
 INFO: Loaded 1 modules   (26379 inline 8-bit counters): 26379 [0xd9ede8, 0xda54f3), 
 INFO: Loaded 1 PC tables (26379 PCs): 26379 [0xa40b10,0xaa7bc0), 
 /out/pkcs8: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000008f98 at pc 0x00000084f4da bp 0x7ffcc53c6550 sp 0x7ffcc53c6548
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000008f98 at pc 0x00000084f4da bp 0x7ffe18ca8a50 sp 0x7ffe18ca8a48
 READ of size 8 at 0x603000008f98 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x84f4d9 in Botan::bigint_monty_redc(unsigned long*, unsigned long const*, unsigned long, unsigned long, unsigned long*, unsigned long) /src/botan/src/lib/math/mp/mp_monty.cpp:62:17
@@ -162,7 +33,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #23 0x859309 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #24 0x864b3a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:703:9
     #25 0x8589ac in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #26 0x7e5ee4ec483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #26 0x7b6fc3e2d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #27 0x426538 in _start (/out/pkcs8+0x426538)
 
 DEDUP_TOKEN: Botan::bigint_monty_redc(unsigned long*, unsigned long const*, unsigned long, unsigned long, unsigned long*, unsigned long)--Botan::(anonymous namespace)::CurveGFp_Montgomery::curve_mul(Botan::BigInt&, Botan::BigInt const&, Botan::BigInt const&, std::__1::vector<unsigned long, Botan::secure_allocator<unsigned long> >&) const--Botan::(anonymous namespace)::CurveGFp_Montgomery::to_curve_rep(Botan::BigInt&, std::__1::vector<unsigned long, Botan::secure_allocator<unsigned long> >&) const
@@ -198,7 +69,7 @@ allocated by thread T0 here:
     #27 0x859309 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #28 0x864b3a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:703:9
     #29 0x8589ac in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #30 0x7e5ee4ec483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #30 0x7b6fc3e2d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: calloc--Botan::allocate_memory(unsigned long, unsigned long)--allocate
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/botan/src/lib/math/mp/mp_monty.cpp:62:17 in Botan::bigint_monty_redc(unsigned long*, unsigned long const*, unsigned long, unsigned long, unsigned long*, unsigned long)

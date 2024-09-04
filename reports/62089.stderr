@@ -1,154 +1,8 @@
-Unable to find image 'n132/arvo:62089-vul' locally
-62089-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-ba0f7f6ad026: Already exists
-a89db50526df: Already exists
-42f603f935a1: Already exists
-d587c585871b: Already exists
-08355c5e2767: Already exists
-a0801aef7920: Already exists
-8f900e2c4044: Already exists
-8e4a42011416: Already exists
-a1149f3bab40: Already exists
-bc84adf33580: Already exists
-850a365f7921: Already exists
-8093912dbb6c: Already exists
-2a5b3093abdc: Already exists
-6762f9c71a4c: Already exists
-a5aec3331a67: Already exists
-f9207ad8acb7: Already exists
-9c16c3dee092: Already exists
-f1e681202b03: Already exists
-2bbaea9a8393: Already exists
-c3decf102b70: Already exists
-679b960f88fc: Already exists
-ba0dfdbb94e3: Already exists
-1b1dc1284c04: Already exists
-a86090835a3d: Already exists
-d65f83cdb8be: Already exists
-1224501fb55f: Already exists
-5ff638715f3c: Already exists
-dd414bda75c5: Already exists
-d652f906d4b8: Already exists
-88a5d0f047bb: Pulling fs layer
-ae7cca458106: Pulling fs layer
-b2566412f9c3: Pulling fs layer
-f0f893f0ccaf: Pulling fs layer
-7501c0aa4ac8: Pulling fs layer
-5513f7781d4e: Pulling fs layer
-d7e7536cda0d: Pulling fs layer
-4d554945ee4e: Pulling fs layer
-b73f9931522a: Pulling fs layer
-c6f372034734: Pulling fs layer
-13f295a4d0c4: Pulling fs layer
-64c3f4737259: Pulling fs layer
-c7c53990fc84: Pulling fs layer
-e2db186996d5: Pulling fs layer
-fc534724938e: Pulling fs layer
-c87d1e267636: Pulling fs layer
-0ab35a485865: Pulling fs layer
-51e213eae262: Pulling fs layer
-3bbb6c834f8d: Pulling fs layer
-76018539ee38: Pulling fs layer
-38042f04aeb3: Pulling fs layer
-f457bd1b758b: Pulling fs layer
-22fdd9634a46: Pulling fs layer
-64c3f4737259: Waiting
-c7c53990fc84: Waiting
-e2db186996d5: Waiting
-f0f893f0ccaf: Waiting
-7501c0aa4ac8: Waiting
-fc534724938e: Waiting
-5513f7781d4e: Waiting
-d7e7536cda0d: Waiting
-c87d1e267636: Waiting
-38042f04aeb3: Waiting
-f457bd1b758b: Waiting
-22fdd9634a46: Waiting
-b73f9931522a: Waiting
-13f295a4d0c4: Waiting
-c6f372034734: Waiting
-3bbb6c834f8d: Waiting
-76018539ee38: Waiting
-4d554945ee4e: Waiting
-0ab35a485865: Waiting
-51e213eae262: Waiting
-ae7cca458106: Verifying Checksum
-ae7cca458106: Download complete
-88a5d0f047bb: Verifying Checksum
-88a5d0f047bb: Download complete
-f0f893f0ccaf: Download complete
-5513f7781d4e: Verifying Checksum
-5513f7781d4e: Download complete
-d7e7536cda0d: Verifying Checksum
-d7e7536cda0d: Download complete
-88a5d0f047bb: Pull complete
-ae7cca458106: Pull complete
-4d554945ee4e: Download complete
-b2566412f9c3: Verifying Checksum
-b2566412f9c3: Download complete
-b73f9931522a: Verifying Checksum
-b73f9931522a: Download complete
-13f295a4d0c4: Download complete
-64c3f4737259: Verifying Checksum
-64c3f4737259: Download complete
-7501c0aa4ac8: Verifying Checksum
-7501c0aa4ac8: Download complete
-e2db186996d5: Verifying Checksum
-e2db186996d5: Download complete
-fc534724938e: Download complete
-c87d1e267636: Verifying Checksum
-c87d1e267636: Download complete
-c7c53990fc84: Verifying Checksum
-c7c53990fc84: Download complete
-c6f372034734: Retrying in 5 seconds
-c6f372034734: Retrying in 4 seconds
-0ab35a485865: Verifying Checksum
-0ab35a485865: Download complete
-c6f372034734: Retrying in 3 seconds
-b2566412f9c3: Pull complete
-f0f893f0ccaf: Pull complete
-3bbb6c834f8d: Verifying Checksum
-3bbb6c834f8d: Download complete
-c6f372034734: Retrying in 2 seconds
-51e213eae262: Verifying Checksum
-51e213eae262: Download complete
-38042f04aeb3: Download complete
-c6f372034734: Retrying in 1 second
-76018539ee38: Verifying Checksum
-76018539ee38: Download complete
-22fdd9634a46: Verifying Checksum
-22fdd9634a46: Download complete
-c6f372034734: Verifying Checksum
-c6f372034734: Download complete
-7501c0aa4ac8: Pull complete
-5513f7781d4e: Pull complete
-d7e7536cda0d: Pull complete
-4d554945ee4e: Pull complete
-b73f9931522a: Pull complete
-c6f372034734: Pull complete
-13f295a4d0c4: Pull complete
-64c3f4737259: Pull complete
-c7c53990fc84: Pull complete
-e2db186996d5: Pull complete
-fc534724938e: Pull complete
-c87d1e267636: Pull complete
-0ab35a485865: Pull complete
-51e213eae262: Pull complete
-3bbb6c834f8d: Pull complete
-76018539ee38: Pull complete
-38042f04aeb3: Pull complete
-f457bd1b758b: Verifying Checksum
-f457bd1b758b: Download complete
-f457bd1b758b: Pull complete
-22fdd9634a46: Pull complete
-Digest: sha256:8e1b67ec9828595174a30fa5ef9e45e16607dc1e06da888b4fefb54473d91708
-Status: Downloaded newer image for n132/arvo:62089-vul
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/ffmpeg_DEMUXER_fuzzer
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x72fce23fb804 at pc 0x000000d6496c bp 0x7ffce6e324b0 sp 0x7ffce6e324a8
-READ of size 4 at 0x72fce23fb804 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f41c9f4c804 at pc 0x000000d6496c bp 0x7ffc1a8c0630 sp 0x7ffc1a8c0628
+READ of size 4 at 0x7f41c9f4c804 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0xd6496b in read_vlc_prefix /src/ffmpeg/libavcodec/jpegxl_parser.c:784:30
     #1 0xd6496b in read_distribution_bundle /src/ffmpeg/libavcodec/jpegxl_parser.c:862:19
@@ -162,11 +16,11 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #9 0x527d2d in avformat_find_stream_info /src/ffmpeg/libavformat/demux.c:2635:15
     #10 0x5095bc in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:206:11
     #11 0x1373a0b in main (/out/ffmpeg_DEMUXER_fuzzer+0x1373a0b)
-    #12 0x72fce2ae0082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x7f41ca655082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #13 0x44a9cd in _start (/out/ffmpeg_DEMUXER_fuzzer+0x44a9cd)
 
 DEDUP_TOKEN: read_vlc_prefix--read_distribution_bundle--entropy_decoder_init
-0x72fce23fb804 is located 0 bytes to the right of 262148-byte region [0x72fce23bb800,0x72fce23fb804)
+0x7f41c9f4c804 is located 0 bytes to the right of 262148-byte region [0x7f41c9f0c800,0x7f41c9f4c804)
 allocated by thread T0 here:
     #0 0x4cc957 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0xfdb706 in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -188,17 +42,17 @@ allocated by thread T0 here:
 DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/jpegxl_parser.c:784:30 in read_vlc_prefix
 Shadow bytes around the buggy address:
-  0x0e601c4776b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e601c4776c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e601c4776d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e601c4776e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e601c4776f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0e601c477700:[04]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e601c477710: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e601c477720: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e601c477730: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e601c477740: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e601c477750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fe8b93e18b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8b93e18c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8b93e18d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8b93e18e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8b93e18f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0fe8b93e1900:[04]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fe8b93e1910: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fe8b93e1920: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fe8b93e1930: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fe8b93e1940: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fe8b93e1950: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

@@ -1,149 +1,10 @@
-Unable to find image 'n132/arvo:17069-vul' locally
-17069-vul: Pulling from n132/arvo
-f7277927d38a: Already exists
-8d3eac894db4: Already exists
-edf72af6d627: Already exists
-3e4f86211d23: Already exists
-ebcae0bef967: Pulling fs layer
-f91b169adebf: Pulling fs layer
-db73d341354a: Pulling fs layer
-0529c03266e7: Pulling fs layer
-97f29c1613c3: Pulling fs layer
-460f047d81dc: Pulling fs layer
-73b663b50989: Pulling fs layer
-07c964a28b59: Pulling fs layer
-6ca2d2e941dd: Pulling fs layer
-6e5c38932dc5: Pulling fs layer
-b265c75ea30e: Pulling fs layer
-64b88f0705bf: Pulling fs layer
-fd38a5921536: Pulling fs layer
-f0abf038c552: Pulling fs layer
-97f29c1613c3: Waiting
-460f047d81dc: Waiting
-b75f5b345b4d: Pulling fs layer
-7b3d8d3ce13e: Pulling fs layer
-73b663b50989: Waiting
-59fd0c4cc7af: Pulling fs layer
-a8c8373ddd4b: Pulling fs layer
-906da780a193: Pulling fs layer
-07c964a28b59: Waiting
-71c2e7001f15: Pulling fs layer
-6ca2d2e941dd: Waiting
-a754f41fd87d: Pulling fs layer
-6e5c38932dc5: Waiting
-18a85fa55861: Pulling fs layer
-b265c75ea30e: Waiting
-6ef928a3c696: Pulling fs layer
-64b88f0705bf: Waiting
-65f3e1439659: Pulling fs layer
-3e63d3e40d9c: Pulling fs layer
-e2cf156cecf0: Pulling fs layer
-fd38a5921536: Waiting
-629ef297bfbb: Pulling fs layer
-8d606b80e76d: Pulling fs layer
-f0abf038c552: Waiting
-b75f5b345b4d: Waiting
-59fd0c4cc7af: Waiting
-7b3d8d3ce13e: Waiting
-a8c8373ddd4b: Waiting
-906da780a193: Waiting
-71c2e7001f15: Waiting
-a754f41fd87d: Waiting
-18a85fa55861: Waiting
-6ef928a3c696: Waiting
-8d606b80e76d: Waiting
-3e63d3e40d9c: Waiting
-0529c03266e7: Waiting
-629ef297bfbb: Waiting
-e2cf156cecf0: Waiting
-db73d341354a: Verifying Checksum
-db73d341354a: Download complete
-f91b169adebf: Verifying Checksum
-f91b169adebf: Download complete
-97f29c1613c3: Verifying Checksum
-97f29c1613c3: Download complete
-ebcae0bef967: Verifying Checksum
-ebcae0bef967: Download complete
-73b663b50989: Verifying Checksum
-73b663b50989: Download complete
-ebcae0bef967: Pull complete
-f91b169adebf: Pull complete
-db73d341354a: Pull complete
-460f047d81dc: Verifying Checksum
-460f047d81dc: Download complete
-07c964a28b59: Verifying Checksum
-07c964a28b59: Download complete
-6ca2d2e941dd: Download complete
-6e5c38932dc5: Verifying Checksum
-6e5c38932dc5: Download complete
-b265c75ea30e: Download complete
-64b88f0705bf: Verifying Checksum
-64b88f0705bf: Download complete
-f0abf038c552: Verifying Checksum
-f0abf038c552: Download complete
-fd38a5921536: Verifying Checksum
-fd38a5921536: Download complete
-7b3d8d3ce13e: Verifying Checksum
-7b3d8d3ce13e: Download complete
-59fd0c4cc7af: Verifying Checksum
-59fd0c4cc7af: Download complete
-0529c03266e7: Verifying Checksum
-0529c03266e7: Download complete
-a8c8373ddd4b: Verifying Checksum
-a8c8373ddd4b: Download complete
-71c2e7001f15: Verifying Checksum
-71c2e7001f15: Download complete
-906da780a193: Download complete
-a754f41fd87d: Verifying Checksum
-a754f41fd87d: Download complete
-18a85fa55861: Download complete
-b75f5b345b4d: Verifying Checksum
-b75f5b345b4d: Download complete
-6ef928a3c696: Verifying Checksum
-6ef928a3c696: Download complete
-65f3e1439659: Verifying Checksum
-65f3e1439659: Download complete
-3e63d3e40d9c: Verifying Checksum
-3e63d3e40d9c: Download complete
-e2cf156cecf0: Download complete
-8d606b80e76d: Verifying Checksum
-8d606b80e76d: Download complete
-629ef297bfbb: Verifying Checksum
-629ef297bfbb: Download complete
-0529c03266e7: Pull complete
-97f29c1613c3: Pull complete
-460f047d81dc: Pull complete
-73b663b50989: Pull complete
-07c964a28b59: Pull complete
-6ca2d2e941dd: Pull complete
-6e5c38932dc5: Pull complete
-b265c75ea30e: Pull complete
-64b88f0705bf: Pull complete
-fd38a5921536: Pull complete
-f0abf038c552: Pull complete
-b75f5b345b4d: Pull complete
-7b3d8d3ce13e: Pull complete
-59fd0c4cc7af: Pull complete
-a8c8373ddd4b: Pull complete
-906da780a193: Pull complete
-71c2e7001f15: Pull complete
-a754f41fd87d: Pull complete
-18a85fa55861: Pull complete
-6ef928a3c696: Pull complete
-65f3e1439659: Pull complete
-3e63d3e40d9c: Pull complete
-e2cf156cecf0: Pull complete
-629ef297bfbb: Pull complete
-8d606b80e76d: Pull complete
-Digest: sha256:bb8563b80af780640a0f69a1efde8f6ccf76be77a304bc40ba66cc16f08ad3fb
-Status: Downloaded newer image for n132/arvo:17069-vul
-INFO: Seed: 3894244694
+INFO: Seed: 1897717847
 INFO: Loaded 1 modules   (2677 inline 8-bit counters): 2677 [0x83dca8, 0x83e71d), 
 INFO: Loaded 1 PC tables (2677 PCs): 2677 [0x83e720,0x848e70), 
 /out/fuzzer_decoder: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000002100 at pc 0x000000579a01 bp 0x7fffff835130 sp 0x7fffff835128
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000002100 at pc 0x000000579a01 bp 0x7ffd1c825110 sp 0x7ffd1c825108
 READ of size 4 at 0x625000002100 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x579a00 in FLAC__bitreader_read_rice_signed_block /src/flac/src/libFLAC/bitreader.c:867:8
@@ -158,7 +19,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #9 0x445e11 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #10 0x44bb1e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
     #11 0x4754a2 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #12 0x751c5eb9683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x7aaa7ba5083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41f2a8 in _start (/out/fuzzer_decoder+0x41f2a8)
 
 DEDUP_TOKEN: FLAC__bitreader_read_rice_signed_block--read_residual_partitioned_rice_--read_subframe_lpc_
@@ -174,7 +35,7 @@ allocated by thread T0 here:
     #7 0x445e11 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #8 0x44bb1e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
     #9 0x4754a2 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #10 0x751c5eb9683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7aaa7ba5083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--FLAC__bitreader_init--init_stream_internal_
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/flac/src/libFLAC/bitreader.c:867:8 in FLAC__bitreader_read_rice_signed_block

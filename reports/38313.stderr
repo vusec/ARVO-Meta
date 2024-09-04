@@ -1,147 +1,11 @@
-Unable to find image 'n132/arvo:38313-vul' locally
-38313-vul: Pulling from n132/arvo
-35807b77a593: Already exists
-ed0ded06ff29: Pulling fs layer
-d7a655269b43: Pulling fs layer
-93fd802127b8: Pulling fs layer
-71343c6489b2: Pulling fs layer
-7eb830369783: Pulling fs layer
-07f93b90bfaa: Pulling fs layer
-7dabb6ad4c37: Pulling fs layer
-9610b7a6124d: Pulling fs layer
-838d434a3e90: Pulling fs layer
-e9bfa955b5d0: Pulling fs layer
-324cfa50f33b: Pulling fs layer
-4cd91e864a5e: Pulling fs layer
-e952fc722287: Pulling fs layer
-581e90f407fb: Pulling fs layer
-ba04d1c299f9: Pulling fs layer
-678659f58a9e: Pulling fs layer
-50c3488adfd2: Pulling fs layer
-f1dcaee21068: Pulling fs layer
-c2bfef04fb38: Pulling fs layer
-dab2c26493ea: Pulling fs layer
-5d9a34e8a129: Pulling fs layer
-7dabb6ad4c37: Waiting
-673067662b13: Pulling fs layer
-e9bfa955b5d0: Waiting
-3776835f8e4a: Pulling fs layer
-c1c1809f9dc3: Pulling fs layer
-9610b7a6124d: Waiting
-4f4fb700ef54: Pulling fs layer
-24185e13f8e1: Pulling fs layer
-d39abda19a00: Pulling fs layer
-838d434a3e90: Waiting
-58e3e41211c3: Pulling fs layer
-324cfa50f33b: Waiting
-71343c6489b2: Waiting
-5d9a34e8a129: Waiting
-4cd91e864a5e: Waiting
-673067662b13: Waiting
-e952fc722287: Waiting
-3776835f8e4a: Waiting
-c1c1809f9dc3: Waiting
-581e90f407fb: Waiting
-4f4fb700ef54: Waiting
-24185e13f8e1: Waiting
-d39abda19a00: Waiting
-ba04d1c299f9: Waiting
-58e3e41211c3: Waiting
-07f93b90bfaa: Waiting
-678659f58a9e: Waiting
-c2bfef04fb38: Waiting
-50c3488adfd2: Waiting
-dab2c26493ea: Waiting
-f1dcaee21068: Waiting
-7eb830369783: Waiting
-d7a655269b43: Verifying Checksum
-d7a655269b43: Download complete
-71343c6489b2: Verifying Checksum
-71343c6489b2: Download complete
-93fd802127b8: Verifying Checksum
-93fd802127b8: Download complete
-07f93b90bfaa: Verifying Checksum
-07f93b90bfaa: Download complete
-ed0ded06ff29: Verifying Checksum
-ed0ded06ff29: Download complete
-ed0ded06ff29: Pull complete
-d7a655269b43: Pull complete
-9610b7a6124d: Verifying Checksum
-9610b7a6124d: Download complete
-93fd802127b8: Pull complete
-71343c6489b2: Pull complete
-7eb830369783: Download complete
-838d434a3e90: Verifying Checksum
-838d434a3e90: Download complete
-e9bfa955b5d0: Verifying Checksum
-e9bfa955b5d0: Download complete
-324cfa50f33b: Verifying Checksum
-324cfa50f33b: Download complete
-4cd91e864a5e: Verifying Checksum
-4cd91e864a5e: Download complete
-e952fc722287: Verifying Checksum
-e952fc722287: Download complete
-581e90f407fb: Verifying Checksum
-581e90f407fb: Download complete
-7dabb6ad4c37: Verifying Checksum
-7dabb6ad4c37: Download complete
-ba04d1c299f9: Download complete
-50c3488adfd2: Verifying Checksum
-50c3488adfd2: Download complete
-678659f58a9e: Verifying Checksum
-678659f58a9e: Download complete
-f1dcaee21068: Verifying Checksum
-f1dcaee21068: Download complete
-7eb830369783: Pull complete
-07f93b90bfaa: Pull complete
-c2bfef04fb38: Verifying Checksum
-c2bfef04fb38: Download complete
-5d9a34e8a129: Verifying Checksum
-5d9a34e8a129: Download complete
-673067662b13: Verifying Checksum
-673067662b13: Download complete
-c1c1809f9dc3: Verifying Checksum
-c1c1809f9dc3: Download complete
-3776835f8e4a: Verifying Checksum
-3776835f8e4a: Download complete
-24185e13f8e1: Verifying Checksum
-24185e13f8e1: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-d39abda19a00: Download complete
-7dabb6ad4c37: Pull complete
-9610b7a6124d: Pull complete
-838d434a3e90: Pull complete
-e9bfa955b5d0: Pull complete
-324cfa50f33b: Pull complete
-4cd91e864a5e: Pull complete
-e952fc722287: Pull complete
-581e90f407fb: Pull complete
-ba04d1c299f9: Pull complete
-678659f58a9e: Pull complete
-50c3488adfd2: Pull complete
-f1dcaee21068: Pull complete
-c2bfef04fb38: Pull complete
-dab2c26493ea: Download complete
-dab2c26493ea: Pull complete
-5d9a34e8a129: Pull complete
-673067662b13: Pull complete
-3776835f8e4a: Pull complete
-c1c1809f9dc3: Pull complete
-4f4fb700ef54: Pull complete
-24185e13f8e1: Pull complete
-d39abda19a00: Pull complete
-58e3e41211c3: Pull complete
-Digest: sha256:ca1bf3a1e2dc83806f170b645a180237c058a1246c49d8b792ea18d6003b38b0
-Status: Downloaded newer image for n132/arvo:38313-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2987421632
+INFO: Seed: 1986802890
 INFO: Loaded 1 modules   (38734 inline 8-bit counters): 38734 [0xaf66e0, 0xaffe2e), 
 INFO: Loaded 1 PC tables (38734 PCs): 38734 [0xa10428,0xaa7908), 
 /out/compress_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60d0000000c1 at pc 0x00000056879e bp 0x7ffec1bfc430 sp 0x7ffec1bfc428
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60d0000000c1 at pc 0x00000056879e bp 0x7ffddfd43d30 sp 0x7ffddfd43d28
 WRITE of size 1 at 0x60d0000000c1 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x56879d in blosclz_compress /src/c-blosc/blosc/blosclz.c:588:11
@@ -155,7 +19,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #8 0x44a342 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #9 0x45001e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/out/compress_fuzzer+0x45001e)
     #10 0x479712 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #11 0x742fff432082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #11 0x78d6b5259082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #12 0x42570d in _start (/out/compress_fuzzer+0x42570d)
 
 DEDUP_TOKEN: blosclz_compress--blosc_c--serial_blosc
@@ -167,7 +31,7 @@ allocated by thread T0 here:
     #3 0x44a342 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #4 0x45001e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/out/compress_fuzzer+0x45001e)
     #5 0x479712 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #6 0x742fff432082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #6 0x78d6b5259082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: malloc--LLVMFuzzerTestOneInput--fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/c-blosc/blosc/blosclz.c:588:11 in blosclz_compress

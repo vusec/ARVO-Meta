@@ -1,185 +1,3 @@
-Unable to find image 'n132/arvo:8600-vul' locally
-8600-vul: Pulling from n132/arvo
-297061f60c36: Already exists
-e9ccef17b516: Already exists
-dbc33716854d: Already exists
-8fe36b178d25: Already exists
-686596545a94: Already exists
-1524b83a9ffb: Pulling fs layer
-a57a1981f1c3: Pulling fs layer
-869af9d797ab: Pulling fs layer
-a5ca79036aa0: Pulling fs layer
-569aee00a013: Pulling fs layer
-62366290f4a0: Pulling fs layer
-9981975630fc: Pulling fs layer
-b0f8b1fd03a7: Pulling fs layer
-0347aff43da0: Pulling fs layer
-b8dc3dc7a501: Pulling fs layer
-7a52e4a0d59b: Pulling fs layer
-37d09d879ac6: Pulling fs layer
-7bc94e697a3a: Pulling fs layer
-983647b8c77d: Pulling fs layer
-577a5a46df11: Pulling fs layer
-0e5450910c1f: Pulling fs layer
-c0b1f912b91f: Pulling fs layer
-670251c281b2: Pulling fs layer
-a1163e253568: Pulling fs layer
-671f1abf7e3b: Pulling fs layer
-28e5513f6342: Pulling fs layer
-1933f62a2553: Pulling fs layer
-615063267319: Pulling fs layer
-a5ca79036aa0: Waiting
-a2025943a18b: Pulling fs layer
-77cd68d0a6e3: Pulling fs layer
-569aee00a013: Waiting
-62366290f4a0: Waiting
-eeab5e0c789d: Pulling fs layer
-dfbd9bfcb2bb: Pulling fs layer
-7a52e4a0d59b: Waiting
-37d09d879ac6: Waiting
-b8dc3dc7a501: Waiting
-9981975630fc: Waiting
-9890409797db: Pulling fs layer
-0347aff43da0: Waiting
-926d283bfb16: Pulling fs layer
-7bc94e697a3a: Waiting
-983647b8c77d: Waiting
-9688af93f973: Pulling fs layer
-b0f8b1fd03a7: Waiting
-b31b073c0edc: Pulling fs layer
-577a5a46df11: Waiting
-28e5513f6342: Waiting
-c4590f211b47: Pulling fs layer
-0e5450910c1f: Waiting
-c7843b3cb22c: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-2a5be30dd2fa: Pulling fs layer
-c0b1f912b91f: Waiting
-670251c281b2: Waiting
-1933f62a2553: Waiting
-fe88276b8e88: Pulling fs layer
-a1163e253568: Waiting
-671f1abf7e3b: Waiting
-572aedcdb30a: Pulling fs layer
-615063267319: Waiting
-77cd68d0a6e3: Waiting
-eeab5e0c789d: Waiting
-2a5be30dd2fa: Waiting
-dfbd9bfcb2bb: Waiting
-c4590f211b47: Waiting
-fe88276b8e88: Waiting
-572aedcdb30a: Waiting
-c7843b3cb22c: Waiting
-9890409797db: Waiting
-926d283bfb16: Waiting
-9688af93f973: Waiting
-4f4fb700ef54: Waiting
-b31b073c0edc: Waiting
-a57a1981f1c3: Verifying Checksum
-a57a1981f1c3: Download complete
-869af9d797ab: Download complete
-569aee00a013: Download complete
-1524b83a9ffb: Verifying Checksum
-1524b83a9ffb: Download complete
-9981975630fc: Verifying Checksum
-9981975630fc: Download complete
-1524b83a9ffb: Pull complete
-a57a1981f1c3: Pull complete
-869af9d797ab: Pull complete
-b0f8b1fd03a7: Download complete
-62366290f4a0: Verifying Checksum
-62366290f4a0: Download complete
-0347aff43da0: Verifying Checksum
-0347aff43da0: Download complete
-7a52e4a0d59b: Verifying Checksum
-7a52e4a0d59b: Download complete
-b8dc3dc7a501: Verifying Checksum
-b8dc3dc7a501: Download complete
-7bc94e697a3a: Verifying Checksum
-7bc94e697a3a: Download complete
-a5ca79036aa0: Verifying Checksum
-a5ca79036aa0: Download complete
-37d09d879ac6: Verifying Checksum
-37d09d879ac6: Download complete
-983647b8c77d: Verifying Checksum
-983647b8c77d: Download complete
-0e5450910c1f: Verifying Checksum
-0e5450910c1f: Download complete
-c0b1f912b91f: Verifying Checksum
-c0b1f912b91f: Download complete
-670251c281b2: Download complete
-a1163e253568: Verifying Checksum
-a1163e253568: Download complete
-671f1abf7e3b: Download complete
-28e5513f6342: Verifying Checksum
-28e5513f6342: Download complete
-615063267319: Verifying Checksum
-615063267319: Download complete
-1933f62a2553: Download complete
-a2025943a18b: Download complete
-eeab5e0c789d: Verifying Checksum
-eeab5e0c789d: Download complete
-a5ca79036aa0: Pull complete
-569aee00a013: Pull complete
-577a5a46df11: Verifying Checksum
-577a5a46df11: Download complete
-77cd68d0a6e3: Verifying Checksum
-77cd68d0a6e3: Download complete
-9890409797db: Verifying Checksum
-9890409797db: Download complete
-dfbd9bfcb2bb: Verifying Checksum
-dfbd9bfcb2bb: Download complete
-62366290f4a0: Pull complete
-9981975630fc: Pull complete
-b0f8b1fd03a7: Pull complete
-9688af93f973: Verifying Checksum
-9688af93f973: Download complete
-0347aff43da0: Pull complete
-926d283bfb16: Verifying Checksum
-926d283bfb16: Download complete
-c4590f211b47: Download complete
-c7843b3cb22c: Verifying Checksum
-c7843b3cb22c: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-2a5be30dd2fa: Verifying Checksum
-2a5be30dd2fa: Download complete
-b31b073c0edc: Verifying Checksum
-b31b073c0edc: Download complete
-572aedcdb30a: Verifying Checksum
-572aedcdb30a: Download complete
-b8dc3dc7a501: Pull complete
-7a52e4a0d59b: Pull complete
-37d09d879ac6: Pull complete
-7bc94e697a3a: Pull complete
-983647b8c77d: Pull complete
-577a5a46df11: Pull complete
-0e5450910c1f: Pull complete
-c0b1f912b91f: Pull complete
-670251c281b2: Pull complete
-a1163e253568: Pull complete
-671f1abf7e3b: Pull complete
-28e5513f6342: Pull complete
-1933f62a2553: Pull complete
-615063267319: Pull complete
-a2025943a18b: Pull complete
-77cd68d0a6e3: Pull complete
-eeab5e0c789d: Pull complete
-dfbd9bfcb2bb: Pull complete
-9890409797db: Pull complete
-926d283bfb16: Pull complete
-9688af93f973: Pull complete
-b31b073c0edc: Pull complete
-c4590f211b47: Pull complete
-c7843b3cb22c: Pull complete
-4f4fb700ef54: Pull complete
-2a5be30dd2fa: Pull complete
-fe88276b8e88: Verifying Checksum
-fe88276b8e88: Download complete
-fe88276b8e88: Pull complete
-572aedcdb30a: Pull complete
-Digest: sha256:0153a9559ad7ed59d664d13670edf64534ef70750480b1f60fca531b538c8c9e
-Status: Downloaded newer image for n132/arvo:8600-vul
 ======================= INFO =========================
 This binary is built for AFL-fuzz.
 To run the target function on individual input(s) execute this:
@@ -191,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x623000006e00 at pc 0x00000058ac3d bp 0x7fffa3709b70 sp 0x7fffa3709b68
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x623000006e00 at pc 0x00000058ac3d bp 0x7ffe87140230 sp 0x7ffe87140228
 READ of size 8 at 0x623000006e00 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x58ac3c in ReadBlobLSBDoubles /src/graphicsmagick/magick/blob.c:3532:9
@@ -204,7 +22,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #7 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #8 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #9 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #10 0x79b82c1ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x76b148e1e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41ddc8 in _start (/out/coder_MAT_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: ReadBlobLSBDoubles--MagickFindRawImageMinMax--ReadMATImageV4
@@ -219,7 +37,7 @@ allocated by thread T0 here:
     #6 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #8 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #9 0x79b82c1ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x76b148e1e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ReadMATImageV4--ReadMATImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/blob.c:3532:9 in ReadBlobLSBDoubles

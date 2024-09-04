@@ -1,182 +1,7 @@
-Unable to find image 'n132/arvo:56964-vul' locally
-56964-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-37859256c554: Pulling fs layer
-ac44f69c518a: Pulling fs layer
-46e089ed0018: Pulling fs layer
-839f8dd4c6f1: Pulling fs layer
-7ab9b62e1780: Pulling fs layer
-6cfff1776cb5: Pulling fs layer
-5f42a5bbce5d: Pulling fs layer
-6dbe9529d8a1: Pulling fs layer
-13ab6280f92e: Pulling fs layer
-8e453154ea59: Pulling fs layer
-42fef761eb03: Pulling fs layer
-cf7c8e91a2aa: Pulling fs layer
-54acb0ce9824: Pulling fs layer
-6ae0be8734fc: Pulling fs layer
-ada9b272b4e3: Pulling fs layer
-f072e4027a95: Pulling fs layer
-6504cf7513a3: Pulling fs layer
-7c32f18d2190: Pulling fs layer
-18b01b1d5691: Pulling fs layer
-09538079dffc: Pulling fs layer
-a40177993ca8: Pulling fs layer
-92abe533edfb: Pulling fs layer
-cc4a317b41a5: Pulling fs layer
-3e990afaa67f: Pulling fs layer
-f5bf32b45a9e: Pulling fs layer
-839f8dd4c6f1: Waiting
-2f7cec941482: Pulling fs layer
-7ab9b62e1780: Waiting
-6cfff1776cb5: Waiting
-5f42a5bbce5d: Waiting
-fb240cfa7534: Pulling fs layer
-6dbe9529d8a1: Waiting
-69c1d0f0029a: Pulling fs layer
-13ab6280f92e: Waiting
-a476d6b11339: Pulling fs layer
-8e453154ea59: Waiting
-1b32121bf717: Pulling fs layer
-54acb0ce9824: Waiting
-42fef761eb03: Waiting
-20504af551bb: Pulling fs layer
-cf7c8e91a2aa: Waiting
-ada43ebc8795: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-f072e4027a95: Waiting
-6ae0be8734fc: Waiting
-7c32f18d2190: Waiting
-6504cf7513a3: Waiting
-09dc9cb7befc: Pulling fs layer
-ada9b272b4e3: Waiting
-09538079dffc: Waiting
-18b01b1d5691: Waiting
-a7107cd7cfa6: Pulling fs layer
-a40177993ca8: Waiting
-92abe533edfb: Waiting
-fac7ff3ebcd7: Pulling fs layer
-cc4a317b41a5: Waiting
-3e990afaa67f: Waiting
-2f7cec941482: Waiting
-69c1d0f0029a: Waiting
-a476d6b11339: Waiting
-fb240cfa7534: Waiting
-1b32121bf717: Waiting
-20504af551bb: Waiting
-09dc9cb7befc: Waiting
-ada43ebc8795: Waiting
-4f4fb700ef54: Waiting
-a7107cd7cfa6: Waiting
-fac7ff3ebcd7: Waiting
-f5bf32b45a9e: Waiting
-ac44f69c518a: Download complete
-46e089ed0018: Verifying Checksum
-46e089ed0018: Download complete
-7ab9b62e1780: Download complete
-37859256c554: Verifying Checksum
-37859256c554: Download complete
-839f8dd4c6f1: Verifying Checksum
-839f8dd4c6f1: Download complete
-5f42a5bbce5d: Verifying Checksum
-5f42a5bbce5d: Download complete
-6dbe9529d8a1: Download complete
-37859256c554: Pull complete
-ac44f69c518a: Pull complete
-46e089ed0018: Pull complete
-839f8dd4c6f1: Pull complete
-7ab9b62e1780: Pull complete
-8e453154ea59: Verifying Checksum
-8e453154ea59: Download complete
-42fef761eb03: Verifying Checksum
-42fef761eb03: Download complete
-6cfff1776cb5: Verifying Checksum
-6cfff1776cb5: Download complete
-13ab6280f92e: Verifying Checksum
-13ab6280f92e: Download complete
-54acb0ce9824: Verifying Checksum
-54acb0ce9824: Download complete
-cf7c8e91a2aa: Verifying Checksum
-cf7c8e91a2aa: Download complete
-6ae0be8734fc: Download complete
-ada9b272b4e3: Verifying Checksum
-ada9b272b4e3: Download complete
-f072e4027a95: Verifying Checksum
-f072e4027a95: Download complete
-6504cf7513a3: Verifying Checksum
-6504cf7513a3: Download complete
-18b01b1d5691: Verifying Checksum
-18b01b1d5691: Download complete
-7c32f18d2190: Verifying Checksum
-7c32f18d2190: Download complete
-09538079dffc: Verifying Checksum
-09538079dffc: Download complete
-92abe533edfb: Verifying Checksum
-92abe533edfb: Download complete
-a40177993ca8: Verifying Checksum
-a40177993ca8: Download complete
-cc4a317b41a5: Download complete
-3e990afaa67f: Download complete
-2f7cec941482: Download complete
-f5bf32b45a9e: Verifying Checksum
-f5bf32b45a9e: Download complete
-a476d6b11339: Verifying Checksum
-a476d6b11339: Download complete
-69c1d0f0029a: Verifying Checksum
-69c1d0f0029a: Download complete
-6cfff1776cb5: Pull complete
-5f42a5bbce5d: Pull complete
-6dbe9529d8a1: Pull complete
-1b32121bf717: Verifying Checksum
-1b32121bf717: Download complete
-20504af551bb: Verifying Checksum
-20504af551bb: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-ada43ebc8795: Verifying Checksum
-ada43ebc8795: Download complete
-fb240cfa7534: Verifying Checksum
-fb240cfa7534: Download complete
-fac7ff3ebcd7: Verifying Checksum
-fac7ff3ebcd7: Download complete
-09dc9cb7befc: Verifying Checksum
-09dc9cb7befc: Download complete
-13ab6280f92e: Pull complete
-a7107cd7cfa6: Verifying Checksum
-a7107cd7cfa6: Download complete
-8e453154ea59: Pull complete
-42fef761eb03: Pull complete
-cf7c8e91a2aa: Pull complete
-54acb0ce9824: Pull complete
-6ae0be8734fc: Pull complete
-ada9b272b4e3: Pull complete
-f072e4027a95: Pull complete
-6504cf7513a3: Pull complete
-7c32f18d2190: Pull complete
-18b01b1d5691: Pull complete
-09538079dffc: Pull complete
-a40177993ca8: Pull complete
-92abe533edfb: Pull complete
-cc4a317b41a5: Pull complete
-3e990afaa67f: Pull complete
-f5bf32b45a9e: Pull complete
-2f7cec941482: Pull complete
-fb240cfa7534: Pull complete
-69c1d0f0029a: Pull complete
-a476d6b11339: Pull complete
-1b32121bf717: Pull complete
-20504af551bb: Pull complete
-ada43ebc8795: Pull complete
-4f4fb700ef54: Pull complete
-09dc9cb7befc: Pull complete
-a7107cd7cfa6: Pull complete
-fac7ff3ebcd7: Pull complete
-Digest: sha256:6f30c6f04d3f568ac5b4629f14eee9c6e2b53168c108e8bf1a62a6d37a63bb1d
-Status: Downloaded newer image for n132/arvo:56964-vul
 Running LLVMFuzzerInitialize ...
 continue...
 =================================================================
-==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000923d43 at pc 0x0000006802bd bp 0x7ffc81c06ad0 sp 0x7ffc81c06ac8
+==8==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000923d43 at pc 0x0000006802bd bp 0x7ffc9a2def50 sp 0x7ffc9a2def48
 READ of size 1 at 0x000000923d43 thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x6802bc in htmlCurrentChar /src/libxml2/HTMLparser.c:471:9
@@ -191,7 +16,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #9 0x4dcfc4 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/html.c:48:11
     #10 0x4df86a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #11 0x4df63c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #12 0x77862aa18082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x7b5ebe313082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #13 0x41e5dd in _start (/out/html+0x41e5dd)
 
 DEDUP_TOKEN: htmlCurrentChar--htmlParseNameComplex--htmlParseName
@@ -232,4 +57,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==7==ABORTING
+==8==ABORTING

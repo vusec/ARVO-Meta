@@ -1,88 +1,7 @@
-Unable to find image 'n132/arvo:56160-vul' locally
-56160-vul: Pulling from n132/arvo
-4d32b49e2995: Already exists
-0372169c5ac9: Already exists
-73292b01e9e9: Already exists
-fefb8adb747a: Already exists
-123384011ade: Already exists
-83444ef99d4f: Already exists
-fef2f2205eef: Already exists
-cf46b04c0b53: Already exists
-71e82bc675f2: Already exists
-98f7293828c8: Already exists
-3a9a5b9889c6: Already exists
-e750c7c89ba9: Already exists
-799bdcdc510f: Already exists
-a357eb7086b4: Already exists
-c3780f0d3345: Already exists
-c4ea1066d7b6: Already exists
-5faa531a7ac5: Already exists
-d72dd135bc2f: Already exists
-ad6acaf4f884: Already exists
-c42bf1879f69: Already exists
-a24973b7041b: Already exists
-411b8103c7c3: Already exists
-df9dbad3197a: Pulling fs layer
-427ab015b72e: Pulling fs layer
-3551b67f3a7c: Pulling fs layer
-6047348c0cc4: Pulling fs layer
-0ef9babc0b8e: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-ca43daf766bc: Pulling fs layer
-e8bb7dc56994: Pulling fs layer
-52d804bc2dc8: Pulling fs layer
-da6804744c73: Pulling fs layer
-1c32d8622263: Pulling fs layer
-a7359f1b5b73: Pulling fs layer
-6047348c0cc4: Waiting
-0ef9babc0b8e: Waiting
-4f4fb700ef54: Waiting
-ca43daf766bc: Waiting
-e8bb7dc56994: Waiting
-52d804bc2dc8: Waiting
-da6804744c73: Waiting
-1c32d8622263: Waiting
-a7359f1b5b73: Waiting
-427ab015b72e: Verifying Checksum
-427ab015b72e: Download complete
-3551b67f3a7c: Verifying Checksum
-3551b67f3a7c: Download complete
-0ef9babc0b8e: Verifying Checksum
-0ef9babc0b8e: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-6047348c0cc4: Verifying Checksum
-6047348c0cc4: Download complete
-e8bb7dc56994: Verifying Checksum
-e8bb7dc56994: Download complete
-ca43daf766bc: Verifying Checksum
-ca43daf766bc: Download complete
-df9dbad3197a: Verifying Checksum
-df9dbad3197a: Download complete
-da6804744c73: Download complete
-52d804bc2dc8: Verifying Checksum
-52d804bc2dc8: Download complete
-a7359f1b5b73: Download complete
-1c32d8622263: Verifying Checksum
-1c32d8622263: Download complete
-df9dbad3197a: Pull complete
-427ab015b72e: Pull complete
-3551b67f3a7c: Pull complete
-6047348c0cc4: Pull complete
-0ef9babc0b8e: Pull complete
-4f4fb700ef54: Pull complete
-ca43daf766bc: Pull complete
-e8bb7dc56994: Pull complete
-52d804bc2dc8: Pull complete
-da6804744c73: Pull complete
-1c32d8622263: Pull complete
-a7359f1b5b73: Pull complete
-Digest: sha256:f1f2e35be672af3505c0a48cf4642f37d5dfac6dc641e95b029b5dc33011bd0c
-Status: Downloaded newer image for n132/arvo:56160-vul
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/libraw_cr2_fuzzer
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x607000000067 at pc 0x000000525b5b bp 0x7ffca886d3f0 sp 0x7ffca886d3e8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x607000000067 at pc 0x000000525b5b bp 0x7ffc05289ef0 sp 0x7ffc05289ee8
 READ of size 1 at 0x607000000067 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x525b5a in LibRaw_buffer_datastream::scanf_one(char const*, void*) /src/libraw/src/libraw_datastream.cpp:467:11
@@ -94,7 +13,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #6 0x5043d6 in LibRaw::open_buffer(void const*, unsigned long) /src/libraw/src/utils/open.cpp:240:13
     #7 0x4d9021 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:61:24
     #8 0x4da4ab in main (/out/libraw_cr2_fuzzer+0x4da4ab)
-    #9 0x7392d3998082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #9 0x71219f4a3082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #10 0x41e78d in _start (/out/libraw_cr2_fuzzer+0x41e78d)
 
 DEDUP_TOKEN: LibRaw_buffer_datastream::scanf_one(char const*, void*)--LibRaw::parse_mos(long long)--LibRaw::parse_tiff_ifd(int)

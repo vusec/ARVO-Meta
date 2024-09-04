@@ -1,71 +1,10 @@
-Unable to find image 'n132/arvo:1947-vul' locally
-1947-vul: Pulling from n132/arvo
-594cf71eb8ba: Already exists
-3b5244e3179b: Already exists
-37a19d5c10ab: Already exists
-d9e6649d6df2: Already exists
-5d01611bd83b: Already exists
-930cabbe7110: Already exists
-796d468c634b: Already exists
-951984a1fdc7: Already exists
-b853ea7a7aeb: Already exists
-147c29d7d496: Already exists
-bd2fd9663328: Already exists
-e25b754f67ba: Already exists
-98fee31dcd62: Already exists
-ccdcb0b49633: Already exists
-ea1107c8a642: Already exists
-a83c25774e31: Already exists
-653710d8bd83: Already exists
-4c7cc9051254: Already exists
-4c37c6364b47: Already exists
-86b2b4facbe4: Already exists
-7473467e72d9: Already exists
-54987ad3036b: Already exists
-677077d576c4: Already exists
-e1738a589be4: Already exists
-5eb4c6b8ac6f: Already exists
-35f356d03ce0: Already exists
-90e8bde239e6: Already exists
-84a7a300cc5e: Already exists
-3cf12177fd21: Already exists
-758e3148cb96: Already exists
-f59384b35747: Already exists
-dd7074fbae70: Already exists
-c58c67db8173: Already exists
-fa269515a10d: Already exists
-cacf86634a73: Already exists
-7e11c6049596: Already exists
-3a7ea579cad1: Already exists
-f555d4f7dad9: Already exists
-f280266b4816: Already exists
-e7ce56da01c9: Already exists
-a92e68a0a908: Already exists
-ea193c2d6328: Already exists
-26310e0b65a4: Already exists
-64054ded7e7f: Already exists
-2c66111ffa05: Already exists
-86b4e0816290: Already exists
-41e2107de50e: Already exists
-643f0093873e: Already exists
-de9474c960fc: Already exists
-88dbcd845398: Already exists
-d7b841ee2afa: Pulling fs layer
-d5d7293444fe: Pulling fs layer
-d5d7293444fe: Download complete
-d7b841ee2afa: Verifying Checksum
-d7b841ee2afa: Download complete
-d7b841ee2afa: Pull complete
-d5d7293444fe: Pull complete
-Digest: sha256:55f6dd55ffc6391209b06b3da84a2329655ffdad8c6c708e19820fe2fb514610
-Status: Downloaded newer image for n132/arvo:1947-vul
-INFO: Seed: 3481709112
+INFO: Seed: 1825207049
 INFO: Loaded 1 modules (20156 guards): [0xd7a410, 0xd8df00), 
 /out/ffmpeg_AV_CODEC_ID_VP9_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7b41a10878a0 at pc 0x0000005bc6f5 bp 0x7ffeb23c8c70 sp 0x7ffeb23c8c68
-WRITE of size 2 at 0x7b41a10878a0 thread T0
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x78e4fa7a68a0 at pc 0x0000005bc6f5 bp 0x7ffd92a97610 sp 0x7ffd92a97608
+WRITE of size 2 at 0x78e4fa7a68a0 thread T0
 SCARINESS: 48 (2-byte-write-stack-buffer-overflow)
     #0 0x5bc6f4 in do_bilin_2d_c /src/ffmpeg/libavcodec/vp9dsp_template.c:2175:24
     #1 0x5bc6f4 in put_bilin_2d_hv_c /src/ffmpeg/libavcodec/vp9dsp_template.c:2205
@@ -89,11 +28,11 @@ SCARINESS: 48 (2-byte-write-stack-buffer-overflow)
     #19 0x8f2c46 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #20 0x8fe1d0 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:683:9
     #21 0x8f2258 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #22 0x7b41a10d283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #22 0x78e4fa7f183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #23 0x41d658 in _start (/out/ffmpeg_AV_CODEC_ID_VP9_fuzzer+0x41d658)
 
 DEDUP_TOKEN: do_bilin_2d_c--put_bilin_2d_hv_c--put_bilin_16hv_c
-Address 0x7b41a10878a0 is located in stack of thread T0 at offset 8352 in frame
+Address 0x78e4fa7a68a0 is located in stack of thread T0 at offset 8352 in frame
     #0 0x5bc2ff in put_bilin_2d_hv_c /src/ffmpeg/libavcodec/vp9dsp_template.c:2205
 
 DEDUP_TOKEN: put_bilin_2d_hv_c
@@ -103,17 +42,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/ffmpeg/libavcodec/vp9dsp_template.c:2175:24 in do_bilin_2d_c
 Shadow bytes around the buggy address:
-  0x0f68b4208ec0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f68b4208ed0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f68b4208ee0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f68b4208ef0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f68b4208f00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0f68b4208f10: 00 00 00 00[f3]f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
-  0x0f68b4208f20: f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
-  0x0f68b4208f30: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f68b4208f40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f68b4208f50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f68b4208f60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4eccc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4eccd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4ecce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4eccf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4ecd00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0f1d1f4ecd10: 00 00 00 00[f3]f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
+  0x0f1d1f4ecd20: f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
+  0x0f1d1f4ecd30: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4ecd40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4ecd50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1d1f4ecd60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

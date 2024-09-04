@@ -1,86 +1,11 @@
-Unable to find image 'n132/arvo:57080-vul' locally
-57080-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-ad2487796c1a: Already exists
-8b42b3b29679: Already exists
-c11d532e9648: Already exists
-5feaaee5aeff: Already exists
-4a38a10173f3: Already exists
-919a4cdf4d9f: Already exists
-c2a667788566: Already exists
-4fe386f7cf37: Already exists
-20ffdf26db1f: Already exists
-222ec402b722: Already exists
-6a648a51e2a5: Already exists
-ffcaadede07d: Already exists
-a3308a2d8c19: Already exists
-20985b6dccd0: Already exists
-b8dbcc6ed4e6: Already exists
-b944b42103d6: Already exists
-07e15d644013: Already exists
-8657451f905f: Already exists
-7e37b7cc9505: Already exists
-f683fbcb8391: Already exists
-0dc7969dcb89: Already exists
-264a7b84c179: Already exists
-1644aa8279ed: Already exists
-f53ed6c6da33: Already exists
-d42bafaa1433: Already exists
-a0d854db0901: Already exists
-3369d3a0cb64: Pulling fs layer
-7dacd22f13ee: Pulling fs layer
-7edfd6ead630: Pulling fs layer
-5ac5ae9ac223: Pulling fs layer
-1e0e65814a7f: Pulling fs layer
-b4a4621a6a30: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-12fb4fabf16c: Pulling fs layer
-6954766d2473: Pulling fs layer
-8e996ee88131: Pulling fs layer
-5ac5ae9ac223: Waiting
-1e0e65814a7f: Waiting
-b4a4621a6a30: Waiting
-4f4fb700ef54: Waiting
-12fb4fabf16c: Waiting
-6954766d2473: Waiting
-8e996ee88131: Waiting
-7dacd22f13ee: Download complete
-7edfd6ead630: Verifying Checksum
-7edfd6ead630: Download complete
-5ac5ae9ac223: Verifying Checksum
-5ac5ae9ac223: Download complete
-1e0e65814a7f: Verifying Checksum
-1e0e65814a7f: Download complete
-4f4fb700ef54: Download complete
-b4a4621a6a30: Verifying Checksum
-b4a4621a6a30: Download complete
-12fb4fabf16c: Verifying Checksum
-12fb4fabf16c: Download complete
-3369d3a0cb64: Verifying Checksum
-3369d3a0cb64: Download complete
-8e996ee88131: Download complete
-6954766d2473: Verifying Checksum
-6954766d2473: Download complete
-3369d3a0cb64: Pull complete
-7dacd22f13ee: Pull complete
-7edfd6ead630: Pull complete
-5ac5ae9ac223: Pull complete
-1e0e65814a7f: Pull complete
-b4a4621a6a30: Pull complete
-4f4fb700ef54: Pull complete
-12fb4fabf16c: Pull complete
-6954766d2473: Pull complete
-8e996ee88131: Pull complete
-Digest: sha256:98e0bbd388663d0218e6cfa963e589bff32dc934fccac72f9aaa1300145f1b28
-Status: Downloaded newer image for n132/arvo:57080-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 1961836577
+INFO: Seed: 2121562961
 INFO: Loaded 1 modules   (52512 inline 8-bit counters): 52512 [0xad7b30, 0xae4850), 
 INFO: Loaded 1 PC tables (52512 PCs): 52512 [0x960110,0xa2d310), 
 /out/xinclude: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000008fe25f at pc 0x0000005865cb bp 0x7ffc72b96720 sp 0x7ffc72b96718
+==8==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000008fe25f at pc 0x0000005865cb bp 0x7ffe53168d20 sp 0x7ffe53168d18
 READ of size 1 at 0x0000008fe25f thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x5865ca in xmlSkipBlankChars /src/libxml2/parser.c:2122:9
@@ -93,7 +18,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #7 0x429642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x42eeec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x458422 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x756313019082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #10 0x74e285e10082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #11 0x41f80d in _start (/out/xinclude+0x41f80d)
 
 DEDUP_TOKEN: xmlSkipBlankChars--xmlParseMisc--xmlParseDocument
@@ -136,4 +61,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==7==ABORTING
+==8==ABORTING

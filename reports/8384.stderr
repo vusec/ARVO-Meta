@@ -1,213 +1,10 @@
-Unable to find image 'n132/arvo:8384-vul' locally
-8384-vul: Pulling from n132/arvo
-297061f60c36: Pulling fs layer
-e9ccef17b516: Pulling fs layer
-dbc33716854d: Pulling fs layer
-8fe36b178d25: Pulling fs layer
-686596545a94: Pulling fs layer
-972ee6324645: Pulling fs layer
-f0afc270ead2: Pulling fs layer
-718f813aadd2: Pulling fs layer
-a1841e490cb8: Pulling fs layer
-88032168e6f9: Pulling fs layer
-fc387bfdbc63: Pulling fs layer
-feea3fcab3d3: Pulling fs layer
-38bbcf53d8d0: Pulling fs layer
-1b2ef6253c4f: Pulling fs layer
-8fe36b178d25: Waiting
-b0ac2a6d5b29: Pulling fs layer
-686596545a94: Waiting
-d6a93c1c9df5: Pulling fs layer
-972ee6324645: Waiting
-60083224e67c: Pulling fs layer
-2001c9500431: Pulling fs layer
-bebf217fd9a1: Pulling fs layer
-7838c74d687a: Pulling fs layer
-d2af8883bce5: Pulling fs layer
-761e80ae4d5c: Pulling fs layer
-f0afc270ead2: Waiting
-230098a3fde6: Pulling fs layer
-718f813aadd2: Waiting
-4efe62295dee: Pulling fs layer
-a1841e490cb8: Waiting
-d08d81418be8: Pulling fs layer
-88032168e6f9: Waiting
-fc387bfdbc63: Waiting
-72ebd5640081: Pulling fs layer
-e9550b9a2ac9: Pulling fs layer
-feea3fcab3d3: Waiting
-102cb354fc9d: Pulling fs layer
-38bbcf53d8d0: Waiting
-55b56b6520e4: Pulling fs layer
-97adb0efe487: Pulling fs layer
-186818bc7bb4: Pulling fs layer
-33ea0f07308a: Pulling fs layer
-1b2ef6253c4f: Waiting
-e30629af8e64: Pulling fs layer
-b0ac2a6d5b29: Waiting
-1a5fd7a4eff3: Pulling fs layer
-d6a93c1c9df5: Waiting
-a15256b9181b: Pulling fs layer
-25c7ac9bdd73: Pulling fs layer
-4c4e26b4251c: Pulling fs layer
-60083224e67c: Waiting
-603146437109: Pulling fs layer
-2001c9500431: Waiting
-4f4fb700ef54: Pulling fs layer
-857e8cef3544: Pulling fs layer
-f42568aa5142: Pulling fs layer
-55b56b6520e4: Waiting
-842ed80be512: Pulling fs layer
-bebf217fd9a1: Waiting
-33ea0f07308a: Waiting
-97adb0efe487: Waiting
-1a5fd7a4eff3: Waiting
-e30629af8e64: Waiting
-7838c74d687a: Waiting
-186818bc7bb4: Waiting
-d2af8883bce5: Waiting
-4f4fb700ef54: Waiting
-857e8cef3544: Waiting
-4c4e26b4251c: Waiting
-a15256b9181b: Waiting
-761e80ae4d5c: Waiting
-f42568aa5142: Waiting
-603146437109: Waiting
-842ed80be512: Waiting
-230098a3fde6: Waiting
-25c7ac9bdd73: Waiting
-4efe62295dee: Waiting
-102cb354fc9d: Waiting
-e9550b9a2ac9: Waiting
-d08d81418be8: Waiting
-72ebd5640081: Waiting
-e9ccef17b516: Verifying Checksum
-e9ccef17b516: Download complete
-dbc33716854d: Verifying Checksum
-dbc33716854d: Download complete
-8fe36b178d25: Verifying Checksum
-8fe36b178d25: Download complete
-686596545a94: Download complete
-297061f60c36: Verifying Checksum
-297061f60c36: Download complete
-f0afc270ead2: Download complete
-718f813aadd2: Download complete
-972ee6324645: Verifying Checksum
-972ee6324645: Download complete
-88032168e6f9: Verifying Checksum
-88032168e6f9: Download complete
-297061f60c36: Pull complete
-e9ccef17b516: Pull complete
-dbc33716854d: Pull complete
-8fe36b178d25: Pull complete
-686596545a94: Pull complete
-972ee6324645: Pull complete
-f0afc270ead2: Pull complete
-718f813aadd2: Pull complete
-fc387bfdbc63: Verifying Checksum
-fc387bfdbc63: Download complete
-feea3fcab3d3: Download complete
-38bbcf53d8d0: Verifying Checksum
-38bbcf53d8d0: Download complete
-b0ac2a6d5b29: Verifying Checksum
-b0ac2a6d5b29: Download complete
-1b2ef6253c4f: Verifying Checksum
-1b2ef6253c4f: Download complete
-d6a93c1c9df5: Verifying Checksum
-d6a93c1c9df5: Download complete
-a1841e490cb8: Verifying Checksum
-a1841e490cb8: Download complete
-2001c9500431: Download complete
-60083224e67c: Verifying Checksum
-60083224e67c: Download complete
-bebf217fd9a1: Verifying Checksum
-bebf217fd9a1: Download complete
-d2af8883bce5: Verifying Checksum
-d2af8883bce5: Download complete
-230098a3fde6: Download complete
-761e80ae4d5c: Download complete
-d08d81418be8: Verifying Checksum
-d08d81418be8: Download complete
-4efe62295dee: Verifying Checksum
-4efe62295dee: Download complete
-e9550b9a2ac9: Verifying Checksum
-e9550b9a2ac9: Download complete
-a1841e490cb8: Pull complete
-88032168e6f9: Pull complete
-72ebd5640081: Verifying Checksum
-72ebd5640081: Download complete
-55b56b6520e4: Verifying Checksum
-55b56b6520e4: Download complete
-102cb354fc9d: Verifying Checksum
-102cb354fc9d: Download complete
-7838c74d687a: Verifying Checksum
-7838c74d687a: Download complete
-fc387bfdbc63: Pull complete
-feea3fcab3d3: Pull complete
-38bbcf53d8d0: Pull complete
-97adb0efe487: Verifying Checksum
-97adb0efe487: Download complete
-186818bc7bb4: Verifying Checksum
-186818bc7bb4: Download complete
-33ea0f07308a: Verifying Checksum
-33ea0f07308a: Download complete
-1b2ef6253c4f: Pull complete
-a15256b9181b: Verifying Checksum
-a15256b9181b: Download complete
-e30629af8e64: Download complete
-4c4e26b4251c: Verifying Checksum
-4c4e26b4251c: Download complete
-1a5fd7a4eff3: Verifying Checksum
-1a5fd7a4eff3: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-603146437109: Verifying Checksum
-603146437109: Download complete
-857e8cef3544: Verifying Checksum
-857e8cef3544: Download complete
-842ed80be512: Verifying Checksum
-842ed80be512: Download complete
-25c7ac9bdd73: Verifying Checksum
-25c7ac9bdd73: Download complete
-b0ac2a6d5b29: Pull complete
-d6a93c1c9df5: Pull complete
-60083224e67c: Pull complete
-2001c9500431: Pull complete
-bebf217fd9a1: Pull complete
-7838c74d687a: Pull complete
-d2af8883bce5: Pull complete
-761e80ae4d5c: Pull complete
-230098a3fde6: Pull complete
-4efe62295dee: Pull complete
-d08d81418be8: Pull complete
-72ebd5640081: Pull complete
-e9550b9a2ac9: Pull complete
-102cb354fc9d: Pull complete
-55b56b6520e4: Pull complete
-97adb0efe487: Pull complete
-186818bc7bb4: Pull complete
-33ea0f07308a: Pull complete
-e30629af8e64: Pull complete
-1a5fd7a4eff3: Pull complete
-a15256b9181b: Pull complete
-25c7ac9bdd73: Pull complete
-4c4e26b4251c: Pull complete
-603146437109: Pull complete
-4f4fb700ef54: Pull complete
-857e8cef3544: Pull complete
-f42568aa5142: Verifying Checksum
-f42568aa5142: Download complete
-f42568aa5142: Pull complete
-842ed80be512: Pull complete
-Digest: sha256:cd1e1957c8ff74f3672bc08f8330f441c1b06f7063860076896f5b08121c5647
-Status: Downloaded newer image for n132/arvo:8384-vul
-INFO: Seed: 4149928043
+INFO: Seed: 1840585754
 INFO: Loaded 1 modules   (83953 inline 8-bit counters): 83953 [0x1509c88, 0x151e479), 
 INFO: Loaded 1 PC tables (83953 PCs): 83953 [0x151e480,0x1666390), 
 /out/coder_BIGTIFF_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000009d00 at pc 0x000000b05086 bp 0x7ffd4e47f490 sp 0x7ffd4e47f488
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000009d00 at pc 0x000000b05086 bp 0x7ffdd723e6d0 sp 0x7ffdd723e6c8
 WRITE of size 4 at 0x621000009d00 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0xb05085 in put1bitbwtile /src/libtiff/libtiff/tif_getimage.c:1377:2
@@ -222,7 +19,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #9 0x52b76a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #10 0x536fbb in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #11 0x52ae0c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #12 0x7bf69d33583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x7fc3ccd0b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41de18 in _start (/out/coder_BIGTIFF_fuzzer+0x41de18)
 
 DEDUP_TOKEN: put1bitbwtile--gtStripContig--TIFFReadRGBAImageOriented
@@ -238,7 +35,7 @@ allocated by thread T0 here:
     #7 0x52b76a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #8 0x536fbb in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #9 0x52ae0c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #10 0x7bf69d33583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7fc3ccd0b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ReadTIFFImage--ReadImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libtiff/libtiff/tif_getimage.c:1377:2 in put1bitbwtile

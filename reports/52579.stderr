@@ -1,196 +1,12 @@
-Unable to find image 'n132/arvo:52579-vul' locally
-52579-vul: Pulling from n132/arvo
-fb0b3276a519: Pulling fs layer
-8626f69058ba: Pulling fs layer
-7c4980aa6dd8: Pulling fs layer
-e19cd6adc750: Pulling fs layer
-dfe9723f4d4c: Pulling fs layer
-cd1de1f3c8c6: Pulling fs layer
-ecfcaed3e4dc: Pulling fs layer
-9508f5b01357: Pulling fs layer
-273f92edcfbc: Pulling fs layer
-0016acac5acb: Pulling fs layer
-3357648990a8: Pulling fs layer
-cf091c0fb2b5: Pulling fs layer
-d49b64536874: Pulling fs layer
-073c4f36516f: Pulling fs layer
-06d988a0a6f3: Pulling fs layer
-8402f7050a4e: Pulling fs layer
-ab5c756968a4: Pulling fs layer
-2c28b156673b: Pulling fs layer
-a4a776b7201b: Pulling fs layer
-25011671c43e: Pulling fs layer
-2226dbc1290d: Pulling fs layer
-a710ed2b1b23: Pulling fs layer
-4aefa62017f2: Pulling fs layer
-db8521e1e360: Pulling fs layer
-256336ffb999: Pulling fs layer
-2d2f8dd67899: Pulling fs layer
-84fc7422baeb: Pulling fs layer
-91b4f60ed97c: Pulling fs layer
-e19cd6adc750: Waiting
-a77a71352a74: Pulling fs layer
-cd1de1f3c8c6: Waiting
-dfe9723f4d4c: Waiting
-e417a1145094: Pulling fs layer
-ecfcaed3e4dc: Waiting
-d49b64536874: Waiting
-9508f5b01357: Waiting
-68f18a988869: Pulling fs layer
-073c4f36516f: Waiting
-4f4fb700ef54: Pulling fs layer
-0016acac5acb: Waiting
-8d9763ee91e2: Pulling fs layer
-273f92edcfbc: Waiting
-8402f7050a4e: Waiting
-fe860d595632: Pulling fs layer
-3357648990a8: Waiting
-cb8525b19b67: Pulling fs layer
-cf091c0fb2b5: Waiting
-06d988a0a6f3: Waiting
-df5dc3289777: Pulling fs layer
-2c28b156673b: Waiting
-ab5c756968a4: Waiting
-0f46953c4205: Pulling fs layer
-2d2f8dd67899: Waiting
-84fc7422baeb: Waiting
-91b4f60ed97c: Waiting
-256336ffb999: Waiting
-0a4275ffc7f7: Pulling fs layer
-db8521e1e360: Waiting
-68f18a988869: Waiting
-4f4fb700ef54: Waiting
-a77a71352a74: Waiting
-a4a776b7201b: Waiting
-25011671c43e: Waiting
-e417a1145094: Waiting
-8d9763ee91e2: Waiting
-2226dbc1290d: Waiting
-4aefa62017f2: Waiting
-a710ed2b1b23: Waiting
-0a4275ffc7f7: Waiting
-fe860d595632: Waiting
-df5dc3289777: Waiting
-cb8525b19b67: Waiting
-0f46953c4205: Waiting
-fb0b3276a519: Verifying Checksum
-fb0b3276a519: Download complete
-7c4980aa6dd8: Download complete
-8626f69058ba: Download complete
-fb0b3276a519: Pull complete
-e19cd6adc750: Verifying Checksum
-e19cd6adc750: Download complete
-cd1de1f3c8c6: Verifying Checksum
-cd1de1f3c8c6: Download complete
-dfe9723f4d4c: Verifying Checksum
-dfe9723f4d4c: Download complete
-9508f5b01357: Download complete
-273f92edcfbc: Download complete
-8626f69058ba: Pull complete
-7c4980aa6dd8: Pull complete
-e19cd6adc750: Pull complete
-3357648990a8: Verifying Checksum
-dfe9723f4d4c: Pull complete
-cd1de1f3c8c6: Pull complete
-cf091c0fb2b5: Verifying Checksum
-cf091c0fb2b5: Download complete
-d49b64536874: Verifying Checksum
-d49b64536874: Download complete
-ecfcaed3e4dc: Verifying Checksum
-ecfcaed3e4dc: Download complete
-06d988a0a6f3: Verifying Checksum
-06d988a0a6f3: Download complete
-0016acac5acb: Verifying Checksum
-0016acac5acb: Download complete
-073c4f36516f: Verifying Checksum
-073c4f36516f: Download complete
-ab5c756968a4: Verifying Checksum
-ab5c756968a4: Download complete
-8402f7050a4e: Verifying Checksum
-8402f7050a4e: Download complete
-2c28b156673b: Verifying Checksum
-2c28b156673b: Download complete
-a4a776b7201b: Verifying Checksum
-a4a776b7201b: Download complete
-2226dbc1290d: Verifying Checksum
-2226dbc1290d: Download complete
-25011671c43e: Verifying Checksum
-25011671c43e: Download complete
-4aefa62017f2: Verifying Checksum
-4aefa62017f2: Download complete
-db8521e1e360: Verifying Checksum
-db8521e1e360: Download complete
-256336ffb999: Download complete
-2d2f8dd67899: Download complete
-91b4f60ed97c: Verifying Checksum
-91b4f60ed97c: Download complete
-ecfcaed3e4dc: Pull complete
-9508f5b01357: Pull complete
-273f92edcfbc: Pull complete
-a710ed2b1b23: Verifying Checksum
-a710ed2b1b23: Download complete
-a77a71352a74: Verifying Checksum
-a77a71352a74: Download complete
-68f18a988869: Verifying Checksum
-68f18a988869: Download complete
-e417a1145094: Verifying Checksum
-e417a1145094: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-0016acac5acb: Pull complete
-fe860d595632: Verifying Checksum
-fe860d595632: Download complete
-84fc7422baeb: Verifying Checksum
-84fc7422baeb: Download complete
-8d9763ee91e2: Verifying Checksum
-8d9763ee91e2: Download complete
-df5dc3289777: Verifying Checksum
-df5dc3289777: Download complete
-3357648990a8: Pull complete
-cf091c0fb2b5: Pull complete
-d49b64536874: Pull complete
-cb8525b19b67: Verifying Checksum
-cb8525b19b67: Download complete
-0a4275ffc7f7: Verifying Checksum
-0a4275ffc7f7: Download complete
-073c4f36516f: Pull complete
-06d988a0a6f3: Pull complete
-8402f7050a4e: Pull complete
-ab5c756968a4: Pull complete
-2c28b156673b: Pull complete
-a4a776b7201b: Pull complete
-25011671c43e: Pull complete
-2226dbc1290d: Pull complete
-0f46953c4205: Verifying Checksum
-0f46953c4205: Download complete
-a710ed2b1b23: Pull complete
-4aefa62017f2: Pull complete
-db8521e1e360: Pull complete
-256336ffb999: Pull complete
-2d2f8dd67899: Pull complete
-84fc7422baeb: Pull complete
-91b4f60ed97c: Pull complete
-a77a71352a74: Pull complete
-e417a1145094: Pull complete
-68f18a988869: Pull complete
-4f4fb700ef54: Pull complete
-8d9763ee91e2: Pull complete
-fe860d595632: Pull complete
-cb8525b19b67: Pull complete
-df5dc3289777: Pull complete
-0f46953c4205: Pull complete
-0a4275ffc7f7: Pull complete
-Digest: sha256:e9c4009c6b5f4f7e3f517dcc96b3fe78ab8a0e46dcf3b8faf13bb14153b680a2
-Status: Downloaded newer image for n132/arvo:52579-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 366583936
+INFO: Seed: 2070786656
 INFO: Loaded 1 modules   (21783 inline 8-bit counters): 21783 [0x938cf0, 0x93e207), 
 INFO: Loaded 1 PC tables (21783 PCs): 21783 [0x818f20,0x86e090), 
 /out/libraw_cr2_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 unknown file: data corrupted at 38414
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000009e00 at pc 0x00000052e912 bp 0x7ffe3b183af0 sp 0x7ffe3b1832c0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000009e00 at pc 0x00000052e912 bp 0x7ffee49f9850 sp 0x7ffee49f9020
 WRITE of size 6 at 0x62d000009e00 thread T0
 SCARINESS: 39 (6-byte-write-heap-buffer-overflow)
     #0 0x52e911 in __asan_memmove /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3
@@ -204,7 +20,7 @@ SCARINESS: 39 (6-byte-write-heap-buffer-overflow)
     #8 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #9 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #10 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #11 0x778f43e38082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #11 0x777965f86082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #12 0x41f85d in _start (/out/libraw_cr2_fuzzer+0x41f85d)
 
 DEDUP_TOKEN: __asan_memmove--LibRaw_buffer_datastream::read(void*, unsigned long, unsigned long)--LibRaw::read_shorts(unsigned short*, unsigned int)
@@ -220,7 +36,7 @@ allocated by thread T0 here:
     #7 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x778f43e38082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #10 0x777965f86082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_calloc--calloc--LibRaw::calloc(unsigned long, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3 in __asan_memmove

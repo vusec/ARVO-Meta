@@ -1,138 +1,11 @@
-Unable to find image 'n132/arvo:42940-vul' locally
-42940-vul: Pulling from n132/arvo
-7b1a6ab2e44d: Already exists
-8881f6140900: Already exists
-c8beb2c50bd8: Already exists
-b34a1cd09240: Already exists
-213ec0ca34a3: Already exists
-bc47ca9c8b0b: Already exists
-e2dbe7c7eeb9: Already exists
-d65b913a4283: Already exists
-00d76864d0f2: Already exists
-38c82b79faaf: Already exists
-a5a5df1e66fa: Already exists
-b8936f3a6b76: Already exists
-a89e2c443787: Already exists
-a1eca5fe4e69: Already exists
-10f360e0ebd9: Already exists
-327580500485: Already exists
-ab4ff7c0acf8: Already exists
-51074a011940: Already exists
-185dd92dbcba: Already exists
-e12b10886cc3: Already exists
-91dae9ae977b: Pulling fs layer
-f52b6e96c57d: Pulling fs layer
-62bc68827793: Pulling fs layer
-ba68d3752fff: Pulling fs layer
-20ed0d279125: Pulling fs layer
-26111b31185d: Pulling fs layer
-ad7c4356c7c0: Pulling fs layer
-8099d836ffe7: Pulling fs layer
-ef70627a5788: Pulling fs layer
-7706b202cea3: Pulling fs layer
-da5887f5c725: Pulling fs layer
-f4a8610cad8b: Pulling fs layer
-1072ab371a26: Pulling fs layer
-d0a0be7397d2: Pulling fs layer
-47d92abbb2b2: Pulling fs layer
-f375b1a619c7: Pulling fs layer
-5dcac79176f2: Pulling fs layer
-2a3b53061e03: Pulling fs layer
-73457b34b06b: Pulling fs layer
-09ea6605fc99: Pulling fs layer
-ba68d3752fff: Waiting
-3d653677ae00: Pulling fs layer
-ac5b2156be54: Pulling fs layer
-20ed0d279125: Waiting
-da5887f5c725: Waiting
-f4a8610cad8b: Waiting
-26111b31185d: Waiting
-1072ab371a26: Waiting
-ad7c4356c7c0: Waiting
-d0a0be7397d2: Waiting
-8099d836ffe7: Waiting
-09ea6605fc99: Waiting
-3d653677ae00: Waiting
-ef70627a5788: Waiting
-73457b34b06b: Waiting
-ac5b2156be54: Waiting
-47d92abbb2b2: Waiting
-7706b202cea3: Waiting
-2a3b53061e03: Waiting
-f375b1a619c7: Waiting
-5dcac79176f2: Waiting
-f52b6e96c57d: Verifying Checksum
-f52b6e96c57d: Download complete
-62bc68827793: Verifying Checksum
-62bc68827793: Download complete
-91dae9ae977b: Verifying Checksum
-91dae9ae977b: Download complete
-ba68d3752fff: Verifying Checksum
-ba68d3752fff: Download complete
-26111b31185d: Download complete
-ad7c4356c7c0: Verifying Checksum
-ad7c4356c7c0: Download complete
-20ed0d279125: Verifying Checksum
-20ed0d279125: Download complete
-8099d836ffe7: Verifying Checksum
-8099d836ffe7: Download complete
-ef70627a5788: Download complete
-7706b202cea3: Verifying Checksum
-7706b202cea3: Download complete
-f4a8610cad8b: Verifying Checksum
-f4a8610cad8b: Download complete
-1072ab371a26: Verifying Checksum
-1072ab371a26: Download complete
-da5887f5c725: Verifying Checksum
-da5887f5c725: Download complete
-47d92abbb2b2: Download complete
-f375b1a619c7: Verifying Checksum
-f375b1a619c7: Download complete
-91dae9ae977b: Pull complete
-f52b6e96c57d: Pull complete
-2a3b53061e03: Download complete
-5dcac79176f2: Verifying Checksum
-5dcac79176f2: Download complete
-09ea6605fc99: Verifying Checksum
-09ea6605fc99: Download complete
-73457b34b06b: Verifying Checksum
-73457b34b06b: Download complete
-ac5b2156be54: Verifying Checksum
-ac5b2156be54: Download complete
-d0a0be7397d2: Verifying Checksum
-d0a0be7397d2: Download complete
-62bc68827793: Pull complete
-ba68d3752fff: Pull complete
-20ed0d279125: Pull complete
-26111b31185d: Pull complete
-ad7c4356c7c0: Pull complete
-8099d836ffe7: Pull complete
-ef70627a5788: Pull complete
-7706b202cea3: Pull complete
-da5887f5c725: Pull complete
-f4a8610cad8b: Pull complete
-1072ab371a26: Pull complete
-d0a0be7397d2: Pull complete
-47d92abbb2b2: Pull complete
-f375b1a619c7: Pull complete
-5dcac79176f2: Pull complete
-2a3b53061e03: Pull complete
-73457b34b06b: Pull complete
-09ea6605fc99: Pull complete
-3d653677ae00: Verifying Checksum
-3d653677ae00: Download complete
-3d653677ae00: Pull complete
-ac5b2156be54: Pull complete
-Digest: sha256:fbdc5967eb0f0cab91785fd2123f3fe7e488725cf303626268174745cebda3ec
-Status: Downloaded newer image for n132/arvo:42940-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3670145034
+INFO: Seed: 2015512732
 INFO: Loaded 1 modules   (57484 inline 8-bit counters): 57484 [0xf3ab00, 0xf48b8c), 
 INFO: Loaded 1 PC tables (57484 PCs): 57484 [0xd35210,0xe15ad0), 
 /out/ffmpeg_AV_CODEC_ID_TIFF_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62500000f000 at pc 0x000000972451 bp 0x7ffc3b7935c0 sp 0x7ffc3b7935b8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62500000f000 at pc 0x000000972451 bp 0x7fff8dcfaa20 sp 0x7fff8dcfaa18
 WRITE of size 1 at 0x62500000f000 thread T0
 SCARINESS: 41 (1-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x972450 in p8idct /src/ffmpeg/libavcodec/faanidct.c:116:31
@@ -154,7 +27,7 @@ SCARINESS: 41 (1-byte-write-heap-buffer-overflow-far-from-bounds)
     #16 0x4635d2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #17 0x468e2c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #18 0x491c32 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #19 0x774db38ce082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #19 0x730611e88082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #20 0x441d8d in _start (/out/ffmpeg_AV_CODEC_ID_TIFF_fuzzer+0x441d8d)
 
 DEDUP_TOKEN: p8idct--ff_faanidct_put--mjpeg_idct_scan_progressive_ac
@@ -186,7 +59,7 @@ allocated by thread T0 here:
     #23 0x4635d2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #24 0x468e2c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #25 0x491c32 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #26 0x774db38ce082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #26 0x730611e88082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/faanidct.c:116:31 in p8idct

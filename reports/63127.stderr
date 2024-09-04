@@ -1,86 +1,7 @@
-Unable to find image 'n132/arvo:63127-vul' locally
-63127-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-7a6fb64bbddc: Already exists
-40cb9ed18c8e: Already exists
-1e1f8e7cd29d: Already exists
-c6b815875d06: Already exists
-47159b548a93: Already exists
-037d1a3ff5d1: Already exists
-0e0bbcf6a384: Already exists
-0319480abea7: Already exists
-367068d13bc6: Already exists
-c8d7cfbaa190: Already exists
-c4d4823cab8a: Already exists
-60da9451a13c: Already exists
-d66a22fb8853: Already exists
-18588d234dd3: Already exists
-d66d47d04176: Already exists
-bdc278742aba: Already exists
-66c95331b0ec: Already exists
-ac59a9edd0e7: Already exists
-6343a3667c5d: Already exists
-3e572c4768ff: Already exists
-cd8af4ec1e16: Already exists
-108e28d2c1fb: Already exists
-09cdd25ca2bd: Already exists
-e2a1acfa12f8: Already exists
-a80b6ffa30b4: Already exists
-227a7ada6d70: Already exists
-60f79a13ad8e: Already exists
-97c538113066: Already exists
-8e13f51e6611: Already exists
-e57d38ccf598: Pulling fs layer
-74f0dcffc1e1: Pulling fs layer
-894460ec6b37: Pulling fs layer
-150b1e353c7d: Pulling fs layer
-7250815f1abe: Pulling fs layer
-831a857c3c02: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-f581800da757: Pulling fs layer
-5b3d312646b5: Pulling fs layer
-95efbe71b3e6: Pulling fs layer
-831a857c3c02: Waiting
-4f4fb700ef54: Waiting
-f581800da757: Waiting
-5b3d312646b5: Waiting
-95efbe71b3e6: Waiting
-7250815f1abe: Waiting
-150b1e353c7d: Waiting
-74f0dcffc1e1: Download complete
-150b1e353c7d: Verifying Checksum
-150b1e353c7d: Download complete
-e57d38ccf598: Verifying Checksum
-e57d38ccf598: Download complete
-894460ec6b37: Verifying Checksum
-894460ec6b37: Download complete
-4f4fb700ef54: Download complete
-831a857c3c02: Verifying Checksum
-831a857c3c02: Download complete
-f581800da757: Verifying Checksum
-f581800da757: Download complete
-95efbe71b3e6: Verifying Checksum
-95efbe71b3e6: Download complete
-5b3d312646b5: Verifying Checksum
-5b3d312646b5: Download complete
-e57d38ccf598: Pull complete
-74f0dcffc1e1: Pull complete
-894460ec6b37: Pull complete
-150b1e353c7d: Pull complete
-7250815f1abe: Verifying Checksum
-7250815f1abe: Download complete
-7250815f1abe: Pull complete
-831a857c3c02: Pull complete
-4f4fb700ef54: Pull complete
-f581800da757: Pull complete
-5b3d312646b5: Pull complete
-95efbe71b3e6: Pull complete
-Digest: sha256:fcb38043736adf6805ed5ae5c1aaafedae75b5c729fd61cff091602decbe4e1d
-Status: Downloaded newer image for n132/arvo:63127-vul
 Running LLVMFuzzerInitialize ...
 continue...
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000934 at pc 0x0000005110a8 bp 0x7ffedb30aa50 sp 0x7ffedb30aa48
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000934 at pc 0x0000005110a8 bp 0x7fff582aad30 sp 0x7fff582aad28
 WRITE of size 1 at 0x602000000934 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x5110a7 in xmlParseCommentComplex /src/libxml2/parser.c:4981:14
@@ -95,7 +16,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #9 0x4df26d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #10 0x4df078 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #11 0x4dec38 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #12 0x73d2879a9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x7427b3dd9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #13 0x41e5ad in _start (/out/schema+0x41e5ad)
 
 DEDUP_TOKEN: xmlParseCommentComplex--xmlParseComment--xmlParseMisc

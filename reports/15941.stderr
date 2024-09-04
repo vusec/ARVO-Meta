@@ -1,106 +1,3 @@
-Unable to find image 'n132/arvo:15941-vul' locally
-15941-vul: Pulling from n132/arvo
-35b42117c431: Pulling fs layer
-ad9c569a8d98: Pulling fs layer
-293b44f45162: Pulling fs layer
-0c175077525d: Pulling fs layer
-34c4f189a2b6: Pulling fs layer
-88022fd8baca: Pulling fs layer
-e7ee1843cd7a: Pulling fs layer
-ffa21e117e66: Pulling fs layer
-e39d93a7465c: Pulling fs layer
-3bd838cd468a: Pulling fs layer
-9a628d453f71: Pulling fs layer
-a6d0aaa48442: Pulling fs layer
-52f093cbd7ec: Pulling fs layer
-74fabadb298b: Pulling fs layer
-7d1f67d0e4aa: Pulling fs layer
-0837e8a2b01b: Pulling fs layer
-0f56cb8bc41b: Pulling fs layer
-bb653ddc858d: Pulling fs layer
-abc03553a764: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-ba14314aa368: Pulling fs layer
-dc21b8fe9c8e: Pulling fs layer
-2a29cda5ab2a: Pulling fs layer
-34c4f189a2b6: Waiting
-88022fd8baca: Waiting
-e7ee1843cd7a: Waiting
-ffa21e117e66: Waiting
-e39d93a7465c: Waiting
-3bd838cd468a: Waiting
-9a628d453f71: Waiting
-0c175077525d: Waiting
-74fabadb298b: Waiting
-a6d0aaa48442: Waiting
-0f56cb8bc41b: Waiting
-0837e8a2b01b: Waiting
-7d1f67d0e4aa: Waiting
-52f093cbd7ec: Waiting
-abc03553a764: Waiting
-4f4fb700ef54: Waiting
-bb653ddc858d: Waiting
-ba14314aa368: Waiting
-2a29cda5ab2a: Waiting
-293b44f45162: Verifying Checksum
-293b44f45162: Download complete
-ad9c569a8d98: Download complete
-0c175077525d: Download complete
-35b42117c431: Download complete
-88022fd8baca: Download complete
-e7ee1843cd7a: Verifying Checksum
-e7ee1843cd7a: Download complete
-34c4f189a2b6: Verifying Checksum
-34c4f189a2b6: Download complete
-35b42117c431: Pull complete
-ad9c569a8d98: Pull complete
-293b44f45162: Pull complete
-0c175077525d: Pull complete
-e39d93a7465c: Download complete
-34c4f189a2b6: Pull complete
-88022fd8baca: Pull complete
-e7ee1843cd7a: Pull complete
-9a628d453f71: Verifying Checksum
-9a628d453f71: Download complete
-a6d0aaa48442: Download complete
-3bd838cd468a: Verifying Checksum
-3bd838cd468a: Download complete
-74fabadb298b: Verifying Checksum
-74fabadb298b: Download complete
-52f093cbd7ec: Verifying Checksum
-52f093cbd7ec: Download complete
-7d1f67d0e4aa: Download complete
-0f56cb8bc41b: Verifying Checksum
-0f56cb8bc41b: Download complete
-bb653ddc858d: Download complete
-abc03553a764: Download complete
-0837e8a2b01b: Verifying Checksum
-0837e8a2b01b: Download complete
-4f4fb700ef54: Download complete
-ffa21e117e66: Verifying Checksum
-ffa21e117e66: Download complete
-ba14314aa368: Download complete
-2a29cda5ab2a: Download complete
-dc21b8fe9c8e: Verifying Checksum
-dc21b8fe9c8e: Download complete
-ffa21e117e66: Pull complete
-e39d93a7465c: Pull complete
-3bd838cd468a: Pull complete
-9a628d453f71: Pull complete
-a6d0aaa48442: Pull complete
-52f093cbd7ec: Pull complete
-74fabadb298b: Pull complete
-7d1f67d0e4aa: Pull complete
-0837e8a2b01b: Pull complete
-0f56cb8bc41b: Pull complete
-bb653ddc858d: Pull complete
-abc03553a764: Pull complete
-4f4fb700ef54: Pull complete
-ba14314aa368: Pull complete
-dc21b8fe9c8e: Pull complete
-2a29cda5ab2a: Pull complete
-Digest: sha256:fd02fcae5cbec4190b6662670e2bc9397e54676ce45f016557d5ada3df0c7a44
-Status: Downloaded newer image for n132/arvo:15941-vul
 ======================= INFO =========================
 This binary is built for AFL-fuzz.
 To run the target function on individual input(s) execute this:
@@ -112,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61c00000075b at pc 0x0000004f0b5e bp 0x7ffe11e50da0 sp 0x7ffe11e50d98
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61c00000075b at pc 0x0000004f0b5e bp 0x7fffdf158c60 sp 0x7fffdf158c58
 WRITE of size 4 at 0x61c00000075b thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x4f0b5d in LZ4_write32 /src/lz4/lib/lz4.c:250:76
@@ -122,7 +19,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #4 0x4c9963 in LLVMFuzzerTestOneInput /src/lz4/ossfuzz/compress_fuzzer.c:27:29
     #5 0x4c7eea in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #6 0x4c7eea in main /src/libfuzzer/afl/afl_driver.cpp:253
-    #7 0x74258ca1083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x7febdc4a283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41daa8 in _start (/out/compress_fuzzer+0x41daa8)
 
 DEDUP_TOKEN: LZ4_write32--LZ4_compress_generic--LZ4_compress_fast_extState
@@ -132,7 +29,7 @@ allocated by thread T0 here:
     #1 0x4c991d in LLVMFuzzerTestOneInput /src/lz4/ossfuzz/compress_fuzzer.c:19:30
     #2 0x4c7eea in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #3 0x4c7eea in main /src/libfuzzer/afl/afl_driver.cpp:253
-    #4 0x74258ca1083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #4 0x7febdc4a283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--LLVMFuzzerTestOneInput--ExecuteFilesOnyByOne
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/lz4/lib/lz4.c:250:76 in LZ4_write32

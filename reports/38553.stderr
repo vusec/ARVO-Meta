@@ -1,77 +1,11 @@
-Unable to find image 'n132/arvo:38553-vul' locally
-38553-vul: Pulling from n132/arvo
-35807b77a593: Already exists
-9d6d529f0569: Already exists
-2f17daf42909: Already exists
-90ca37a2acfb: Already exists
-f8f4d1165147: Already exists
-5518c00c675f: Already exists
-092cc7347e14: Already exists
-7a3de62c3161: Already exists
-c6175f8dcec0: Already exists
-7160e556b526: Already exists
-afe7b5796cd5: Already exists
-c7c199fd657c: Already exists
-b7b253fb6cd6: Already exists
-813f7c60eceb: Already exists
-43909b85497d: Already exists
-c29d49176c74: Already exists
-1bf55dcb5785: Already exists
-b3c03fcdbd73: Already exists
-d06a28d3e1b2: Already exists
-003523c575a5: Already exists
-37a670189aba: Pulling fs layer
-3e7d49c2641f: Pulling fs layer
-3da43d9571cc: Pulling fs layer
-bb23bd46f9bf: Pulling fs layer
-aa12d4e32959: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-5594c996776b: Pulling fs layer
-c9fa875dbdc5: Pulling fs layer
-f6fc617aa9fc: Pulling fs layer
-5594c996776b: Waiting
-bb23bd46f9bf: Waiting
-f6fc617aa9fc: Waiting
-aa12d4e32959: Waiting
-c9fa875dbdc5: Waiting
-4f4fb700ef54: Waiting
-3e7d49c2641f: Verifying Checksum
-3e7d49c2641f: Download complete
-3da43d9571cc: Verifying Checksum
-3da43d9571cc: Download complete
-aa12d4e32959: Verifying Checksum
-aa12d4e32959: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-bb23bd46f9bf: Verifying Checksum
-bb23bd46f9bf: Download complete
-5594c996776b: Verifying Checksum
-5594c996776b: Download complete
-f6fc617aa9fc: Verifying Checksum
-f6fc617aa9fc: Download complete
-37a670189aba: Verifying Checksum
-37a670189aba: Download complete
-37a670189aba: Pull complete
-3e7d49c2641f: Pull complete
-3da43d9571cc: Pull complete
-bb23bd46f9bf: Pull complete
-aa12d4e32959: Pull complete
-4f4fb700ef54: Pull complete
-5594c996776b: Pull complete
-c9fa875dbdc5: Verifying Checksum
-c9fa875dbdc5: Download complete
-c9fa875dbdc5: Pull complete
-f6fc617aa9fc: Pull complete
-Digest: sha256:9623e0c37480acade72ddd569681113259c952f153bfd449540ca421eaa80f88
-Status: Downloaded newer image for n132/arvo:38553-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3154302956
+INFO: Seed: 1994461261
 INFO: Loaded 1 modules   (58161 inline 8-bit counters): 58161 [0xbfbed0, 0xc0a201), 
 INFO: Loaded 1 PC tables (58161 PCs): 58161 [0xab47e0,0xb97af0), 
 /out/simple_compress: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61b00000061f at pc 0x0000009583ab bp 0x7ffca0b13ca0 sp 0x7ffca0b13c98
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61b00000061f at pc 0x0000009583ab bp 0x7ffcc82c6e40 sp 0x7ffcc82c6e38
 WRITE of size 1 at 0x61b00000061f thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x9583aa in FSE_writeNCount_generic /src/zstd/tests/fuzz/../../lib/compress/fse_compress.c:317:12
@@ -92,7 +26,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #15 0x4425f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #16 0x44801b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #17 0x46dec2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0x78327d79f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #18 0x7f397763d082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #19 0x41f70d in _start (/out/simple_compress+0x41f70d)
 
 DEDUP_TOKEN: FSE_writeNCount_generic--FSE_writeNCount--ZSTD_buildCTable
@@ -105,7 +39,7 @@ allocated by thread T0 here:
     #4 0x4425f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #5 0x44801b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #6 0x46dec2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x78327d79f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x7f397763d082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: __interceptor_malloc--FUZZ_malloc--LLVMFuzzerTestOneInput
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/zstd/tests/fuzz/../../lib/compress/fse_compress.c:317:12 in FSE_writeNCount_generic

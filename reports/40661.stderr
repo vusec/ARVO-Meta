@@ -1,174 +1,20 @@
-Unable to find image 'n132/arvo:40661-vul' locally
-40661-vul: Pulling from n132/arvo
-7b1a6ab2e44d: Already exists
-243a632192e9: Pulling fs layer
-805f3aaee5cc: Pulling fs layer
-611fe6de8219: Pulling fs layer
-24fbf59f4f59: Pulling fs layer
-7a2c1d62940b: Pulling fs layer
-3f7f27aaacd8: Pulling fs layer
-845524787b4a: Pulling fs layer
-9b54b16ce30a: Pulling fs layer
-24fbf59f4f59: Waiting
-bb5b1c6d6aa3: Pulling fs layer
-0aee14976bab: Pulling fs layer
-7a2c1d62940b: Waiting
-fb63a9db9ccc: Pulling fs layer
-3f7f27aaacd8: Waiting
-a9ac42b002d3: Pulling fs layer
-89a119d1a09a: Pulling fs layer
-6bfbcba12e39: Pulling fs layer
-a5dee0c11fd4: Pulling fs layer
-845524787b4a: Waiting
-0c7d5f6fdefb: Pulling fs layer
-efc8d7e0a298: Pulling fs layer
-9b54b16ce30a: Waiting
-e6c4398b7194: Pulling fs layer
-bb5b1c6d6aa3: Waiting
-0aee14976bab: Waiting
-0e7e061e7619: Pulling fs layer
-e73c291cb5f5: Pulling fs layer
-fb63a9db9ccc: Waiting
-a9ac42b002d3: Waiting
-adfafb83d923: Pulling fs layer
-a57d5ca795de: Pulling fs layer
-eede153ce419: Pulling fs layer
-89a119d1a09a: Waiting
-f97575bc5035: Pulling fs layer
-6bfbcba12e39: Waiting
-0e7e061e7619: Waiting
-c293ba84690b: Pulling fs layer
-a5dee0c11fd4: Waiting
-e73c291cb5f5: Waiting
-0c7d5f6fdefb: Waiting
-cf286d82ff39: Pulling fs layer
-adfafb83d923: Waiting
-efc8d7e0a298: Waiting
-e6c4398b7194: Waiting
-a57d5ca795de: Waiting
-4f4fb700ef54: Pulling fs layer
-37fc83d5d533: Pulling fs layer
-f97575bc5035: Waiting
-c293ba84690b: Waiting
-eede153ce419: Waiting
-873c0e8a557b: Pulling fs layer
-37dde2c7f2ec: Pulling fs layer
-cf286d82ff39: Waiting
-873c0e8a557b: Waiting
-50182d269272: Pulling fs layer
-37dde2c7f2ec: Waiting
-4f4fb700ef54: Waiting
-37fc83d5d533: Waiting
-805f3aaee5cc: Verifying Checksum
-805f3aaee5cc: Download complete
-24fbf59f4f59: Verifying Checksum
-24fbf59f4f59: Download complete
-243a632192e9: Verifying Checksum
-243a632192e9: Download complete
-611fe6de8219: Verifying Checksum
-611fe6de8219: Download complete
-3f7f27aaacd8: Verifying Checksum
-3f7f27aaacd8: Download complete
-243a632192e9: Pull complete
-805f3aaee5cc: Pull complete
-9b54b16ce30a: Verifying Checksum
-9b54b16ce30a: Download complete
-611fe6de8219: Pull complete
-24fbf59f4f59: Pull complete
-bb5b1c6d6aa3: Verifying Checksum
-bb5b1c6d6aa3: Download complete
-845524787b4a: Verifying Checksum
-845524787b4a: Download complete
-0aee14976bab: Verifying Checksum
-0aee14976bab: Download complete
-7a2c1d62940b: Verifying Checksum
-7a2c1d62940b: Download complete
-89a119d1a09a: Download complete
-fb63a9db9ccc: Verifying Checksum
-fb63a9db9ccc: Download complete
-a9ac42b002d3: Verifying Checksum
-a9ac42b002d3: Download complete
-a5dee0c11fd4: Verifying Checksum
-a5dee0c11fd4: Download complete
-6bfbcba12e39: Verifying Checksum
-6bfbcba12e39: Download complete
-0c7d5f6fdefb: Verifying Checksum
-0c7d5f6fdefb: Download complete
-efc8d7e0a298: Download complete
-0e7e061e7619: Verifying Checksum
-0e7e061e7619: Download complete
-e6c4398b7194: Verifying Checksum
-e6c4398b7194: Download complete
-adfafb83d923: Verifying Checksum
-adfafb83d923: Download complete
-a57d5ca795de: Verifying Checksum
-a57d5ca795de: Download complete
-f97575bc5035: Verifying Checksum
-f97575bc5035: Download complete
-eede153ce419: Verifying Checksum
-eede153ce419: Download complete
-7a2c1d62940b: Pull complete
-3f7f27aaacd8: Pull complete
-c293ba84690b: Verifying Checksum
-c293ba84690b: Download complete
-cf286d82ff39: Verifying Checksum
-cf286d82ff39: Download complete
-e73c291cb5f5: Verifying Checksum
-e73c291cb5f5: Download complete
-37fc83d5d533: Verifying Checksum
-37fc83d5d533: Download complete
-873c0e8a557b: Verifying Checksum
-873c0e8a557b: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-50182d269272: Verifying Checksum
-50182d269272: Download complete
-845524787b4a: Pull complete
-9b54b16ce30a: Pull complete
-bb5b1c6d6aa3: Pull complete
-0aee14976bab: Pull complete
-fb63a9db9ccc: Pull complete
-a9ac42b002d3: Pull complete
-89a119d1a09a: Pull complete
-6bfbcba12e39: Pull complete
-a5dee0c11fd4: Pull complete
-0c7d5f6fdefb: Pull complete
-efc8d7e0a298: Pull complete
-e6c4398b7194: Pull complete
-0e7e061e7619: Pull complete
-37dde2c7f2ec: Verifying Checksum
-37dde2c7f2ec: Download complete
-e73c291cb5f5: Pull complete
-adfafb83d923: Pull complete
-a57d5ca795de: Pull complete
-eede153ce419: Pull complete
-f97575bc5035: Pull complete
-c293ba84690b: Pull complete
-cf286d82ff39: Pull complete
-4f4fb700ef54: Pull complete
-37fc83d5d533: Pull complete
-873c0e8a557b: Pull complete
-37dde2c7f2ec: Pull complete
-50182d269272: Pull complete
-Digest: sha256:cc96e28ddb3da47f2bc81f95e27ee987334abfc6b867cdb7ec4a76428e781574
-Status: Downloaded newer image for n132/arvo:40661-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 1440707111
+INFO: Seed: 2003185547
 INFO: Loaded 1 modules   (12413 inline 8-bit counters): 12413 [0x832a60, 0x835add), 
 INFO: Loaded 1 PC tables (12413 PCs): 12413 [0x835ae0,0x8662b0), 
 /out/dav1d_fuzzer_mt: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000011540 at pc 0x00000053e1da bp 0x7a3fdd2f9870 sp 0x7a3fdd2f9038
-WRITE of size 768 at 0x625000011540 thread T4 (dav1d-worker)
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000011540 at pc 0x00000053e1da bp 0x72c8191fd870 sp 0x72c8191fd038
+WRITE of size 768 at 0x625000011540 thread T2 (dav1d-worker)
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x53e1d9 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
     #1 0x775c1f in backup2lines /work/build/../../src/dav1d/src/cdef_apply_tmpl.c:59:13
     #2 0x775c1f in dav1d_cdef_brow_8bpc /work/build/../../src/dav1d/src/cdef_apply_tmpl.c:138:13
-    #3 0x6484a4 in dav1d_filter_sbrow_cdef_8bpc /work/build/../../src/dav1d/src/recon_tmpl.c:2104:5
+    #3 0x6483b8 in dav1d_filter_sbrow_cdef_8bpc /work/build/../../src/dav1d/src/recon_tmpl.c:2100:9
     #4 0x583372 in dav1d_worker_task /work/build/../../src/dav1d/src/thread_task.c:610:21
-    #5 0x7a3fe0bc3608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
-    #6 0x7a3fe0ac3352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)
+    #5 0x72c81bea4608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
+    #6 0x72c81bda4352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)
 
 DEDUP_TOKEN: __asan_memcpy--backup2lines--dav1d_cdef_brow_8bpc
 0x625000011540 is located 0 bytes to the right of 9280-byte region [0x62500000f100,0x625000011540)
@@ -177,20 +23,9 @@ allocated by thread T2 (dav1d-worker) here:
     #1 0x594163 in dav1d_alloc_aligned /work/build/../../src/dav1d/src/mem.h:66:9
     #2 0x594163 in dav1d_decode_frame_init /work/build/../../src/dav1d/src/decode.c:3069:46
     #3 0x582f2c in dav1d_worker_task /work/build/../../src/dav1d/src/thread_task.c:469:23
-    #4 0x7a3fe0bc3608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
+    #4 0x72c81bea4608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
 
 DEDUP_TOKEN: posix_memalign--dav1d_alloc_aligned--dav1d_decode_frame_init
-Thread T4 (dav1d-worker) created by T0 here:
-    #0 0x5284ec in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:207:3
-    #1 0x41fb40 in dav1d_open /work/build/../../src/dav1d/src/lib.c:217:17
-    #2 0x5787b6 in LLVMFuzzerTestOneInput /work/build/../../src/dav1d/tests/libfuzzer/dav1d_fuzzer.c:131:11
-    #3 0x4709b3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) cxa_noexception.cpp
-    #4 0x45c2b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
-    #5 0x461d7a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
-    #6 0x48ac62 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x7a3fe09c8082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
-
-DEDUP_TOKEN: pthread_create--dav1d_open--LLVMFuzzerTestOneInput
 Thread T2 (dav1d-worker) created by T0 here:
     #0 0x5284ec in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:207:3
     #1 0x41fb40 in dav1d_open /work/build/../../src/dav1d/src/lib.c:217:17
@@ -199,7 +34,7 @@ Thread T2 (dav1d-worker) created by T0 here:
     #4 0x45c2b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #5 0x461d7a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #6 0x48ac62 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x7a3fe09c8082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x72c81bca9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: pthread_create--dav1d_open--LLVMFuzzerTestOneInput
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy

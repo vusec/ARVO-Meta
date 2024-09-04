@@ -1,208 +1,10 @@
-Unable to find image 'n132/arvo:14168-vul' locally
-14168-vul: Pulling from n132/arvo
-34667c7e4631: Already exists
-d18d76a881a4: Already exists
-119c7358fbfc: Already exists
-2aaf13f3eff0: Already exists
-84a711db8894: Already exists
-23315fc02683: Already exists
-5080dd9ffc88: Already exists
-570068fd49b1: Already exists
-31b1b68050d4: Already exists
-4eb0f7fd208c: Already exists
-ab308a8a16c5: Already exists
-11ce332484b2: Already exists
-22e8b7b4a014: Already exists
-a7dfd01bee3c: Already exists
-865d56f20bff: Already exists
-a23914a59c40: Pulling fs layer
-6582489e06cb: Pulling fs layer
-925211d48d9f: Pulling fs layer
-dad58d4ad8e3: Pulling fs layer
-f6a11eb09e43: Pulling fs layer
-c6f2fe243994: Pulling fs layer
-8d871efb029e: Pulling fs layer
-b77b4c8f7522: Pulling fs layer
-65049d307b8a: Pulling fs layer
-6396d81d3cd2: Pulling fs layer
-ee91c085d682: Pulling fs layer
-2dbc7ea55a48: Pulling fs layer
-f6a11eb09e43: Waiting
-ca9b939de07a: Pulling fs layer
-dad58d4ad8e3: Waiting
-c6f2fe243994: Waiting
-d827091cd9a9: Pulling fs layer
-ee91c085d682: Waiting
-b77b4c8f7522: Waiting
-0457b20b6f18: Pulling fs layer
-4176b60be977: Pulling fs layer
-65049d307b8a: Waiting
-8d871efb029e: Waiting
-6396d81d3cd2: Waiting
-91c2e2b31114: Pulling fs layer
-92ab6ddbc5e9: Pulling fs layer
-cfabbfd9fc0f: Pulling fs layer
-f8415d83311d: Pulling fs layer
-2dbc7ea55a48: Waiting
-ca9b939de07a: Waiting
-a64d5d9783fa: Pulling fs layer
-0457b20b6f18: Waiting
-d827091cd9a9: Waiting
-a5e24f510939: Pulling fs layer
-4176b60be977: Waiting
-cfabbfd9fc0f: Waiting
-91c2e2b31114: Waiting
-b0a80b90ffb1: Pulling fs layer
-aa810e3a67f0: Pulling fs layer
-08c72364895e: Pulling fs layer
-f8415d83311d: Waiting
-92ab6ddbc5e9: Waiting
-d23276c47804: Pulling fs layer
-a5e24f510939: Waiting
-b0a80b90ffb1: Waiting
-cae210642d67: Pulling fs layer
-4c7160c6a79c: Pulling fs layer
-a64d5d9783fa: Waiting
-5a1cbe6420c3: Pulling fs layer
-8cf9cb417b14: Pulling fs layer
-aa810e3a67f0: Waiting
-f6f19127e704: Pulling fs layer
-d23276c47804: Waiting
-08c72364895e: Waiting
-b8bc7dd8364b: Pulling fs layer
-cae210642d67: Waiting
-4c7160c6a79c: Waiting
-8cf9cb417b14: Waiting
-841ffce94827: Pulling fs layer
-f6f19127e704: Waiting
-1462ef3d00bf: Pulling fs layer
-5a1cbe6420c3: Waiting
-b8bc7dd8364b: Waiting
-78cdf7bbd181: Pulling fs layer
-49fa58c0ccbd: Pulling fs layer
-1462ef3d00bf: Waiting
-841ffce94827: Waiting
-78cdf7bbd181: Waiting
-04edeb53c679: Pulling fs layer
-133a2db3d16d: Pulling fs layer
-49fa58c0ccbd: Waiting
-133a2db3d16d: Waiting
-925211d48d9f: Verifying Checksum
-925211d48d9f: Download complete
-6582489e06cb: Verifying Checksum
-6582489e06cb: Download complete
-dad58d4ad8e3: Download complete
-a23914a59c40: Download complete
-8d871efb029e: Verifying Checksum
-8d871efb029e: Download complete
-b77b4c8f7522: Verifying Checksum
-b77b4c8f7522: Download complete
-f6a11eb09e43: Verifying Checksum
-f6a11eb09e43: Download complete
-6396d81d3cd2: Verifying Checksum
-6396d81d3cd2: Download complete
-65049d307b8a: Verifying Checksum
-65049d307b8a: Download complete
-a23914a59c40: Pull complete
-6582489e06cb: Pull complete
-925211d48d9f: Pull complete
-dad58d4ad8e3: Pull complete
-2dbc7ea55a48: Verifying Checksum
-2dbc7ea55a48: Download complete
-ee91c085d682: Verifying Checksum
-ee91c085d682: Download complete
-d827091cd9a9: Verifying Checksum
-d827091cd9a9: Download complete
-c6f2fe243994: Verifying Checksum
-c6f2fe243994: Download complete
-ca9b939de07a: Download complete
-0457b20b6f18: Verifying Checksum
-0457b20b6f18: Download complete
-4176b60be977: Verifying Checksum
-91c2e2b31114: Verifying Checksum
-91c2e2b31114: Download complete
-cfabbfd9fc0f: Verifying Checksum
-cfabbfd9fc0f: Download complete
-92ab6ddbc5e9: Download complete
-f8415d83311d: Verifying Checksum
-f8415d83311d: Download complete
-a64d5d9783fa: Verifying Checksum
-a64d5d9783fa: Download complete
-b0a80b90ffb1: Verifying Checksum
-b0a80b90ffb1: Download complete
-aa810e3a67f0: Verifying Checksum
-aa810e3a67f0: Download complete
-08c72364895e: Verifying Checksum
-08c72364895e: Download complete
-cae210642d67: Download complete
-f6a11eb09e43: Pull complete
-d23276c47804: Verifying Checksum
-d23276c47804: Download complete
-4c7160c6a79c: Verifying Checksum
-4c7160c6a79c: Download complete
-5a1cbe6420c3: Verifying Checksum
-5a1cbe6420c3: Download complete
-a5e24f510939: Verifying Checksum
-a5e24f510939: Download complete
-8cf9cb417b14: Verifying Checksum
-8cf9cb417b14: Download complete
-f6f19127e704: Verifying Checksum
-f6f19127e704: Download complete
-841ffce94827: Verifying Checksum
-841ffce94827: Download complete
-b8bc7dd8364b: Verifying Checksum
-b8bc7dd8364b: Download complete
-c6f2fe243994: Pull complete
-49fa58c0ccbd: Verifying Checksum
-49fa58c0ccbd: Download complete
-78cdf7bbd181: Verifying Checksum
-78cdf7bbd181: Download complete
-133a2db3d16d: Verifying Checksum
-133a2db3d16d: Download complete
-8d871efb029e: Pull complete
-b77b4c8f7522: Pull complete
-65049d307b8a: Pull complete
-6396d81d3cd2: Pull complete
-ee91c085d682: Pull complete
-2dbc7ea55a48: Pull complete
-ca9b939de07a: Pull complete
-d827091cd9a9: Pull complete
-0457b20b6f18: Pull complete
-4176b60be977: Pull complete
-91c2e2b31114: Pull complete
-92ab6ddbc5e9: Pull complete
-cfabbfd9fc0f: Pull complete
-f8415d83311d: Pull complete
-a64d5d9783fa: Pull complete
-a5e24f510939: Pull complete
-b0a80b90ffb1: Pull complete
-aa810e3a67f0: Pull complete
-08c72364895e: Pull complete
-d23276c47804: Pull complete
-cae210642d67: Pull complete
-4c7160c6a79c: Pull complete
-5a1cbe6420c3: Pull complete
-8cf9cb417b14: Pull complete
-f6f19127e704: Pull complete
-b8bc7dd8364b: Pull complete
-841ffce94827: Pull complete
-1462ef3d00bf: Download complete
-1462ef3d00bf: Pull complete
-78cdf7bbd181: Pull complete
-49fa58c0ccbd: Pull complete
-04edeb53c679: Verifying Checksum
-04edeb53c679: Download complete
-04edeb53c679: Pull complete
-133a2db3d16d: Pull complete
-Digest: sha256:de5d1bfb6015e129b51ef59f07ac3eb26e95f959128106e33c6fd106d79569e7
-Status: Downloaded newer image for n132/arvo:14168-vul
-INFO: Seed: 3103903501
+INFO: Seed: 1882405857
 INFO: Loaded 1 modules   (38758 inline 8-bit counters): 38758 [0xf8edd0, 0xf98536), 
 INFO: Loaded 1 PC tables (38758 PCs): 38758 [0xbd8df0,0xc70450), 
 /out/ffmpeg_AV_CODEC_ID_AGM_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000370 at pc 0x0000004fc45a bp 0x7ffd4ca104f0 sp 0x7ffd4ca104e8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000370 at pc 0x0000004fc45a bp 0x7ffe9bb01490 sp 0x7ffe9bb01488
 READ of size 2 at 0x611000000370 thread T0
 SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #0 0x4fc459 in decode_inter_plane /src/ffmpeg/libavcodec/agm.c:289:52
@@ -218,7 +20,7 @@ SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #10 0x99e72f in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:286:6
     #11 0x9aa403 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:715:9
     #12 0x99dd87 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #13 0x7ac5edfba83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x739ecf32f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #14 0x41e288 in _start (/out/ffmpeg_AV_CODEC_ID_AGM_fuzzer+0x41e288)
 
 DEDUP_TOKEN: decode_inter_plane--decode_inter--decode_frame
@@ -242,7 +44,7 @@ allocated by thread T0 here:
     #15 0x99e72f in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:286:6
     #16 0x9aa403 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:715:9
     #17 0x99dd87 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #18 0x7ac5edfba83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x739ecf32f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/agm.c:289:52 in decode_inter_plane

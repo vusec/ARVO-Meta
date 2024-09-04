@@ -1,198 +1,12 @@
-Unable to find image 'n132/arvo:53454-vul' locally
-53454-vul: Pulling from n132/arvo
-eaead16dc43b: Already exists
-02109c8667a6: Pulling fs layer
-3d109c96e596: Pulling fs layer
-8ec2ba5f09fc: Pulling fs layer
-d2637c13e829: Pulling fs layer
-f1d091cc6c51: Pulling fs layer
-f568da73b6b2: Pulling fs layer
-c44be3d3e6b9: Pulling fs layer
-4d8c6e6dcbf5: Pulling fs layer
-5b0b65043169: Pulling fs layer
-5495a6a3e7cd: Pulling fs layer
-b5ac6cc3cd48: Pulling fs layer
-6122118c344e: Pulling fs layer
-e470e9698c80: Pulling fs layer
-c467beaeb32c: Pulling fs layer
-206665d4d23a: Pulling fs layer
-7f008581e4ca: Pulling fs layer
-973668db46a1: Pulling fs layer
-e6a2c2e1c8de: Pulling fs layer
-c0a56d08b804: Pulling fs layer
-9f38c5719115: Pulling fs layer
-979df13b1b2e: Pulling fs layer
-95a0addaaf6c: Pulling fs layer
-c98f9b624c6d: Pulling fs layer
-3fa1ef4540f0: Pulling fs layer
-7ace9014f596: Pulling fs layer
-1503b6b878ed: Pulling fs layer
-21af426ab583: Pulling fs layer
-d9b1c1cc84ee: Pulling fs layer
-d5c7ed74f25a: Pulling fs layer
-e4011e295715: Pulling fs layer
-f568da73b6b2: Waiting
-2fdbdc2c9ecb: Pulling fs layer
-2dd72ea290a3: Pulling fs layer
-8bdf4c5c7358: Pulling fs layer
-c44be3d3e6b9: Waiting
-9363d70580ee: Pulling fs layer
-4d8c6e6dcbf5: Waiting
-2b75dd50cc27: Pulling fs layer
-b3b237caa142: Pulling fs layer
-2fb4c7cb88a4: Pulling fs layer
-6657b09aee68: Pulling fs layer
-5b0b65043169: Waiting
-6122118c344e: Waiting
-5495a6a3e7cd: Waiting
-e470e9698c80: Waiting
-c467beaeb32c: Waiting
-b5ac6cc3cd48: Waiting
-d9b1c1cc84ee: Waiting
-d5c7ed74f25a: Waiting
-2b75dd50cc27: Waiting
-b3b237caa142: Waiting
-e4011e295715: Waiting
-2fb4c7cb88a4: Waiting
-2fdbdc2c9ecb: Waiting
-2dd72ea290a3: Waiting
-6657b09aee68: Waiting
-21af426ab583: Waiting
-8bdf4c5c7358: Waiting
-206665d4d23a: Waiting
-7f008581e4ca: Waiting
-95a0addaaf6c: Waiting
-9363d70580ee: Waiting
-973668db46a1: Waiting
-c98f9b624c6d: Waiting
-e6a2c2e1c8de: Waiting
-d2637c13e829: Waiting
-c0a56d08b804: Waiting
-3fa1ef4540f0: Waiting
-979df13b1b2e: Waiting
-9f38c5719115: Waiting
-7ace9014f596: Waiting
-1503b6b878ed: Waiting
-f1d091cc6c51: Waiting
-3d109c96e596: Download complete
-8ec2ba5f09fc: Verifying Checksum
-8ec2ba5f09fc: Download complete
-d2637c13e829: Verifying Checksum
-d2637c13e829: Download complete
-f1d091cc6c51: Verifying Checksum
-f1d091cc6c51: Download complete
-02109c8667a6: Verifying Checksum
-02109c8667a6: Download complete
-c44be3d3e6b9: Verifying Checksum
-c44be3d3e6b9: Download complete
-4d8c6e6dcbf5: Verifying Checksum
-4d8c6e6dcbf5: Download complete
-02109c8667a6: Pull complete
-3d109c96e596: Pull complete
-5495a6a3e7cd: Verifying Checksum
-5495a6a3e7cd: Download complete
-8ec2ba5f09fc: Pull complete
-d2637c13e829: Pull complete
-f1d091cc6c51: Pull complete
-b5ac6cc3cd48: Verifying Checksum
-b5ac6cc3cd48: Download complete
-5b0b65043169: Verifying Checksum
-5b0b65043169: Download complete
-e470e9698c80: Verifying Checksum
-e470e9698c80: Download complete
-f568da73b6b2: Verifying Checksum
-f568da73b6b2: Download complete
-c467beaeb32c: Verifying Checksum
-6122118c344e: Verifying Checksum
-6122118c344e: Download complete
-206665d4d23a: Verifying Checksum
-206665d4d23a: Download complete
-973668db46a1: Verifying Checksum
-973668db46a1: Download complete
-7f008581e4ca: Verifying Checksum
-7f008581e4ca: Download complete
-e6a2c2e1c8de: Verifying Checksum
-e6a2c2e1c8de: Download complete
-9f38c5719115: Verifying Checksum
-9f38c5719115: Download complete
-c0a56d08b804: Verifying Checksum
-c0a56d08b804: Download complete
-979df13b1b2e: Verifying Checksum
-979df13b1b2e: Download complete
-c98f9b624c6d: Verifying Checksum
-c98f9b624c6d: Download complete
-95a0addaaf6c: Verifying Checksum
-95a0addaaf6c: Download complete
-3fa1ef4540f0: Download complete
-7ace9014f596: Verifying Checksum
-7ace9014f596: Download complete
-21af426ab583: Download complete
-d5c7ed74f25a: Verifying Checksum
-d5c7ed74f25a: Download complete
-f568da73b6b2: Pull complete
-c44be3d3e6b9: Pull complete
-4d8c6e6dcbf5: Pull complete
-1503b6b878ed: Verifying Checksum
-1503b6b878ed: Download complete
-d9b1c1cc84ee: Verifying Checksum
-d9b1c1cc84ee: Download complete
-e4011e295715: Download complete
-2fdbdc2c9ecb: Verifying Checksum
-2fdbdc2c9ecb: Download complete
-2dd72ea290a3: Verifying Checksum
-2dd72ea290a3: Download complete
-5b0b65043169: Pull complete
-2b75dd50cc27: Verifying Checksum
-2b75dd50cc27: Download complete
-9363d70580ee: Verifying Checksum
-9363d70580ee: Download complete
-b3b237caa142: Verifying Checksum
-b3b237caa142: Download complete
-5495a6a3e7cd: Pull complete
-b5ac6cc3cd48: Pull complete
-6122118c344e: Pull complete
-6657b09aee68: Download complete
-2fb4c7cb88a4: Verifying Checksum
-2fb4c7cb88a4: Download complete
-e470e9698c80: Pull complete
-c467beaeb32c: Pull complete
-206665d4d23a: Pull complete
-7f008581e4ca: Pull complete
-973668db46a1: Pull complete
-e6a2c2e1c8de: Pull complete
-c0a56d08b804: Pull complete
-9f38c5719115: Pull complete
-979df13b1b2e: Pull complete
-95a0addaaf6c: Pull complete
-c98f9b624c6d: Pull complete
-3fa1ef4540f0: Pull complete
-7ace9014f596: Pull complete
-1503b6b878ed: Pull complete
-21af426ab583: Pull complete
-d9b1c1cc84ee: Pull complete
-d5c7ed74f25a: Pull complete
-e4011e295715: Pull complete
-2fdbdc2c9ecb: Pull complete
-2dd72ea290a3: Pull complete
-8bdf4c5c7358: Verifying Checksum
-8bdf4c5c7358: Download complete
-8bdf4c5c7358: Pull complete
-9363d70580ee: Pull complete
-2b75dd50cc27: Pull complete
-b3b237caa142: Pull complete
-2fb4c7cb88a4: Pull complete
-6657b09aee68: Pull complete
-Digest: sha256:823fbf3fdb8e36a73f9b96e99931a2780bdde136632cfc214f720f7b6c402b6a
-Status: Downloaded newer image for n132/arvo:53454-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 765626633
+INFO: Seed: 2083824361
 INFO: Loaded 1 modules   (8526 inline 8-bit counters): 8526 [0x70d068, 0x70f1b6), 
 INFO: Loaded 1 PC tables (8526 PCs): 8526 [0x70f1b8,0x730698), 
 /out/fuzzer_reencoder: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x72f1f8f91df8 at pc 0x000000572284 bp 0x7ffc5875fe20 sp 0x7ffc5875fe18
-WRITE of size 8 at 0x72f1f8f91df8 thread T0
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x74c413d9fdf8 at pc 0x000000572284 bp 0x7ffe623ad5c0 sp 0x7ffe623ad5b8
+WRITE of size 8 at 0x74c413d9fdf8 thread T0
 SCARINESS: 57 (8-byte-write-stack-buffer-overflow)
     #0 0x572283 in FLAC::Decoder::FuzzerDecoder::metadata_callback(FLAC__StreamMetadata const*) /src/flac/oss-fuzz/fuzzer_reencoder.cc:64:58
     #1 0x5868dc in FLAC::Decoder::Stream::metadata_callback_(FLAC__StreamDecoder const*, FLAC__StreamMetadata const*, void*) /src/flac/src/libFLAC++/stream_decoder.cpp:321:14
@@ -204,11 +18,11 @@ SCARINESS: 57 (8-byte-write-stack-buffer-overflow)
     #7 0x4295e2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x42ee8c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x4583c2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x72f1f93cb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #10 0x74c41443b082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #11 0x41f7ad in _start (/out/fuzzer_reencoder+0x41f7ad)
 
 DEDUP_TOKEN: FLAC::Decoder::FuzzerDecoder::metadata_callback(FLAC__StreamMetadata const*)--FLAC::Decoder::Stream::metadata_callback_(FLAC__StreamDecoder const*, FLAC__StreamMetadata const*, void*)--read_metadata_
-Address 0x72f1f8f91df8 is located in stack of thread T0 at offset 1528 in frame
+Address 0x74c413d9fdf8 is located in stack of thread T0 at offset 1528 in frame
     #0 0x56ea9f in LLVMFuzzerTestOneInput /src/flac/oss-fuzz/fuzzer_reencoder.cc:126
 
 DEDUP_TOKEN: LLVMFuzzerTestOneInput
@@ -239,17 +53,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/flac/oss-fuzz/fuzzer_reencoder.cc:64:58 in FLAC::Decoder::FuzzerDecoder::metadata_callback(FLAC__StreamMetadata const*)
 Shadow bytes around the buggy address:
-  0x0e5ebf1ea360: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
-  0x0e5ebf1ea370: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
-  0x0e5ebf1ea380: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
-  0x0e5ebf1ea390: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 00 00 00 00
-  0x0e5ebf1ea3a0: 00 f2 f2 f2 f2 f2 00 00 f2 f2 00 00 00 00 00 00
-=>0x0e5ebf1ea3b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[f3]
-  0x0e5ebf1ea3c0: f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00 00 00 00 00
-  0x0e5ebf1ea3d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e5ebf1ea3e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e5ebf1ea3f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e5ebf1ea400: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e99027abf60: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
+  0x0e99027abf70: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
+  0x0e99027abf80: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
+  0x0e99027abf90: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 00 00 00 00
+  0x0e99027abfa0: 00 f2 f2 f2 f2 f2 00 00 f2 f2 00 00 00 00 00 00
+=>0x0e99027abfb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[f3]
+  0x0e99027abfc0: f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x0e99027abfd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e99027abfe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e99027abff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e99027ac000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

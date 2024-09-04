@@ -1,274 +1,14 @@
-Unable to find image 'n132/arvo:40680-vul' locally
-40680-vul: Pulling from n132/arvo
-7b1a6ab2e44d: Already exists
-62b4300592ae: Pulling fs layer
-34b5ea9f9ec4: Pulling fs layer
-b95727eaa29b: Pulling fs layer
-70391a145f52: Pulling fs layer
-1b935f447b3a: Pulling fs layer
-4eb48f26fca1: Pulling fs layer
-94c4ea000725: Pulling fs layer
-c0b833145186: Pulling fs layer
-2dcfefbac0c8: Pulling fs layer
-f262e3981d37: Pulling fs layer
-63798b3685f7: Pulling fs layer
-338923d0083f: Pulling fs layer
-8c273fd8d501: Pulling fs layer
-d33b60795733: Pulling fs layer
-1efe4d8720e9: Pulling fs layer
-61ee2e8d0509: Pulling fs layer
-484bd97b6315: Pulling fs layer
-13977aa1081a: Pulling fs layer
-08482e9c005f: Pulling fs layer
-a5df67537025: Pulling fs layer
-c888ced246d4: Pulling fs layer
-5188f0799ae9: Pulling fs layer
-70391a145f52: Waiting
-84fd306c4ac8: Pulling fs layer
-66d808b28245: Pulling fs layer
-1b935f447b3a: Waiting
-4eb48f26fca1: Waiting
-33b90db88915: Pulling fs layer
-63798b3685f7: Waiting
-94c4ea000725: Waiting
-8f9332a6e7f8: Pulling fs layer
-338923d0083f: Waiting
-c0b833145186: Waiting
-8c273fd8d501: Waiting
-2dcfefbac0c8: Waiting
-d33b60795733: Waiting
-3aacde312631: Pulling fs layer
-f262e3981d37: Waiting
-5d7a655c4831: Pulling fs layer
-1efe4d8720e9: Waiting
-61ee2e8d0509: Waiting
-13977aa1081a: Waiting
-484bd97b6315: Waiting
-952cfb086f5d: Pulling fs layer
-a5df67537025: Waiting
-1c0d3dee080d: Pulling fs layer
-c888ced246d4: Waiting
-08482e9c005f: Waiting
-bd57c67d8216: Pulling fs layer
-33b90db88915: Waiting
-15c81cc1569d: Pulling fs layer
-8f9332a6e7f8: Waiting
-66d808b28245: Waiting
-5188f0799ae9: Waiting
-3aacde312631: Waiting
-ed45167c0fde: Pulling fs layer
-84fd306c4ac8: Waiting
-742779536156: Pulling fs layer
-bd57c67d8216: Waiting
-15c81cc1569d: Waiting
-7b15dd48d28c: Pulling fs layer
-952cfb086f5d: Waiting
-ed45167c0fde: Waiting
-74b6efba7665: Pulling fs layer
-1c0d3dee080d: Waiting
-60095ee57bb0: Pulling fs layer
-2d1e705842b1: Pulling fs layer
-7b15dd48d28c: Waiting
-742779536156: Waiting
-3c26ca478f94: Pulling fs layer
-b7b816825baf: Pulling fs layer
-60095ee57bb0: Waiting
-3c26ca478f94: Waiting
-fe6a47f1ed68: Pulling fs layer
-bd6c555ea0f6: Pulling fs layer
-b7b816825baf: Waiting
-e1ed7feb9e76: Pulling fs layer
-bd6c555ea0f6: Waiting
-fe6a47f1ed68: Waiting
-cecbbc3cce50: Pulling fs layer
-e1ed7feb9e76: Waiting
-d604550e1f8e: Pulling fs layer
-3dacd0977ea3: Pulling fs layer
-d604550e1f8e: Waiting
-cecbbc3cce50: Waiting
-286950b43bf7: Pulling fs layer
-3dacd0977ea3: Waiting
-e772beac0201: Pulling fs layer
-286950b43bf7: Waiting
-ddccd1f6ad70: Pulling fs layer
-896cda072f9f: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-e772beac0201: Waiting
-ddccd1f6ad70: Waiting
-9b555ad50eb1: Pulling fs layer
-1222c3ea2f52: Pulling fs layer
-4f4fb700ef54: Waiting
-9b555ad50eb1: Waiting
-48f0e6a55b4c: Pulling fs layer
-48f0e6a55b4c: Waiting
-34b5ea9f9ec4: Download complete
-b95727eaa29b: Verifying Checksum
-b95727eaa29b: Download complete
-62b4300592ae: Verifying Checksum
-62b4300592ae: Download complete
-70391a145f52: Verifying Checksum
-70391a145f52: Download complete
-62b4300592ae: Pull complete
-34b5ea9f9ec4: Pull complete
-4eb48f26fca1: Verifying Checksum
-4eb48f26fca1: Download complete
-b95727eaa29b: Pull complete
-70391a145f52: Pull complete
-c0b833145186: Verifying Checksum
-c0b833145186: Download complete
-2dcfefbac0c8: Verifying Checksum
-2dcfefbac0c8: Download complete
-94c4ea000725: Verifying Checksum
-94c4ea000725: Download complete
-f262e3981d37: Verifying Checksum
-f262e3981d37: Download complete
-338923d0083f: Verifying Checksum
-338923d0083f: Download complete
-8c273fd8d501: Verifying Checksum
-8c273fd8d501: Download complete
-63798b3685f7: Verifying Checksum
-63798b3685f7: Download complete
-1b935f447b3a: Verifying Checksum
-1b935f447b3a: Download complete
-1efe4d8720e9: Download complete
-61ee2e8d0509: Verifying Checksum
-61ee2e8d0509: Download complete
-d33b60795733: Verifying Checksum
-d33b60795733: Download complete
-13977aa1081a: Verifying Checksum
-13977aa1081a: Download complete
-08482e9c005f: Download complete
-c888ced246d4: Verifying Checksum
-c888ced246d4: Download complete
-1b935f447b3a: Pull complete
-4eb48f26fca1: Pull complete
-5188f0799ae9: Verifying Checksum
-5188f0799ae9: Download complete
-484bd97b6315: Verifying Checksum
-484bd97b6315: Download complete
-a5df67537025: Verifying Checksum
-a5df67537025: Download complete
-94c4ea000725: Pull complete
-66d808b28245: Verifying Checksum
-66d808b28245: Download complete
-c0b833145186: Pull complete
-2dcfefbac0c8: Pull complete
-f262e3981d37: Pull complete
-63798b3685f7: Pull complete
-338923d0083f: Pull complete
-8c273fd8d501: Pull complete
-d33b60795733: Pull complete
-1efe4d8720e9: Pull complete
-61ee2e8d0509: Pull complete
-484bd97b6315: Pull complete
-13977aa1081a: Pull complete
-08482e9c005f: Pull complete
-84fd306c4ac8: Verifying Checksum
-84fd306c4ac8: Download complete
-33b90db88915: Verifying Checksum
-33b90db88915: Download complete
-5d7a655c4831: Verifying Checksum
-5d7a655c4831: Download complete
-8f9332a6e7f8: Verifying Checksum
-8f9332a6e7f8: Download complete
-3aacde312631: Verifying Checksum
-3aacde312631: Download complete
-952cfb086f5d: Verifying Checksum
-952cfb086f5d: Download complete
-1c0d3dee080d: Verifying Checksum
-1c0d3dee080d: Download complete
-bd57c67d8216: Download complete
-15c81cc1569d: Download complete
-742779536156: Verifying Checksum
-742779536156: Download complete
-a5df67537025: Pull complete
-ed45167c0fde: Verifying Checksum
-ed45167c0fde: Download complete
-7b15dd48d28c: Verifying Checksum
-7b15dd48d28c: Download complete
-c888ced246d4: Pull complete
-74b6efba7665: Verifying Checksum
-74b6efba7665: Download complete
-2d1e705842b1: Verifying Checksum
-2d1e705842b1: Download complete
-b7b816825baf: Verifying Checksum
-b7b816825baf: Download complete
-5188f0799ae9: Pull complete
-60095ee57bb0: Verifying Checksum
-60095ee57bb0: Download complete
-bd6c555ea0f6: Verifying Checksum
-bd6c555ea0f6: Download complete
-3c26ca478f94: Verifying Checksum
-3c26ca478f94: Download complete
-fe6a47f1ed68: Verifying Checksum
-fe6a47f1ed68: Download complete
-d604550e1f8e: Verifying Checksum
-d604550e1f8e: Download complete
-cecbbc3cce50: Verifying Checksum
-cecbbc3cce50: Download complete
-3dacd0977ea3: Verifying Checksum
-3dacd0977ea3: Download complete
-e772beac0201: Download complete
-286950b43bf7: Verifying Checksum
-286950b43bf7: Download complete
-ddccd1f6ad70: Verifying Checksum
-ddccd1f6ad70: Download complete
-4f4fb700ef54: Download complete
-9b555ad50eb1: Verifying Checksum
-9b555ad50eb1: Download complete
-84fd306c4ac8: Pull complete
-896cda072f9f: Verifying Checksum
-896cda072f9f: Download complete
-66d808b28245: Pull complete
-33b90db88915: Pull complete
-8f9332a6e7f8: Pull complete
-48f0e6a55b4c: Verifying Checksum
-48f0e6a55b4c: Download complete
-3aacde312631: Pull complete
-5d7a655c4831: Pull complete
-952cfb086f5d: Pull complete
-1c0d3dee080d: Pull complete
-bd57c67d8216: Pull complete
-15c81cc1569d: Pull complete
-ed45167c0fde: Pull complete
-742779536156: Pull complete
-7b15dd48d28c: Pull complete
-74b6efba7665: Pull complete
-60095ee57bb0: Pull complete
-2d1e705842b1: Pull complete
-3c26ca478f94: Pull complete
-e1ed7feb9e76: Verifying Checksum
-e1ed7feb9e76: Download complete
-b7b816825baf: Pull complete
-fe6a47f1ed68: Pull complete
-bd6c555ea0f6: Pull complete
-e1ed7feb9e76: Pull complete
-cecbbc3cce50: Pull complete
-d604550e1f8e: Pull complete
-3dacd0977ea3: Pull complete
-286950b43bf7: Pull complete
-e772beac0201: Pull complete
-ddccd1f6ad70: Pull complete
-896cda072f9f: Pull complete
-4f4fb700ef54: Pull complete
-9b555ad50eb1: Pull complete
-1222c3ea2f52: Verifying Checksum
-1222c3ea2f52: Download complete
-1222c3ea2f52: Pull complete
-48f0e6a55b4c: Pull complete
-Digest: sha256:f35f2d2acaa74cf2fa38ca75ddec1d57bd0ff9abbfb5df884a2c430ef7364454
-Status: Downloaded newer image for n132/arvo:40680-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 1644125237
+INFO: Seed: 2006595725
 INFO: Loaded 1 modules   (228574 inline 8-bit counters): 228574 [0x9d01620, 0x9d392fe), 
 INFO: Loaded 1 PC tables (228574 PCs): 228574 [0x9d39300,0x9ef79f0), 
 /out/coder_MSL_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
-18:39:51 0:0.019296  0.020u 7 msl.c/MSLStartElement/4123/Option:
+09:04:53 0:0.019697  0.020u 7 msl.c/MSLStartElement/4123/Option:
   Unrecognized element (u)
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xed503d7c at pc 0x0861f503 bp 0xffe823c8 sp 0xffe823c0
-READ of size 4 at 0xed503d7c thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xec103d7c at pc 0x0861f503 bp 0xffdbbe08 sp 0xffdbbe00
+READ of size 4 at 0xec103d7c thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x861f502 in MSLEndElement /src/graphicsmagick/coders/msl.c:4162:59
     #1 0x88560d7 in xmlParseEndTag1 /src/libxml2/parser.c:8708:9
@@ -321,11 +61,11 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #48 0x80e540e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #49 0x80eb12c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #50 0x8114657 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #51 0xf276fed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #51 0xf1396ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
     #52 0x80c1985 in _start (/out/coder_MSL_fuzzer+0x80c1985)
 
 DEDUP_TOKEN: MSLEndElement--xmlParseEndTag1--xmlParseElementEnd
-0xed503d7c is located 4 bytes to the left of 256-byte region [0xed503d80,0xed503e80)
+0xec103d7c is located 4 bytes to the left of 256-byte region [0xec103d80,0xec103e80)
 allocated by thread T0 here:
     #0 0x81cfb46 in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:148:3
     #1 0x83ebae0 in _MagickReallocateResourceLimitedMemory /src/graphicsmagick/magick/memory.c:743:36
@@ -343,22 +83,22 @@ allocated by thread T0 here:
     #13 0x80e540e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #14 0x80eb12c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #15 0x8114657 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0xf276fed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #16 0xf1396ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
 
 DEDUP_TOKEN: __interceptor_realloc--_MagickReallocateResourceLimitedMemory--MSLStartElement
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/msl.c:4162:59 in MSLEndElement
 Shadow bytes around the buggy address:
-  0x3daa0750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3daa0760: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3daa0770: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3daa0780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3daa0790: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x3daa07a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
-  0x3daa07b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3daa07c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3daa07d0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
-  0x3daa07e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3daa07f0: 00 fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d820750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d820760: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d820770: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d820780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d820790: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x3d8207a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
+  0x3d8207b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d8207c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d8207d0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x3d8207e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d8207f0: 00 fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

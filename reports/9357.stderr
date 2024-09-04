@@ -1,147 +1,3 @@
-Unable to find image 'n132/arvo:9357-vul' locally
-9357-vul: Pulling from n132/arvo
-b234f539f7a1: Already exists
-55172d420b43: Already exists
-5ba5bbeb6b91: Already exists
-43ae2841ad7a: Already exists
-f6c9c6de4190: Already exists
-97a265b0396c: Already exists
-d8c6466b446a: Already exists
-e91eb3927461: Already exists
-c4a238612112: Already exists
-42dd599703ca: Already exists
-41ffcf89428c: Already exists
-3a79ef18785f: Already exists
-e0eebfcf3043: Already exists
-23e11f5c83b7: Already exists
-116eb7b111f1: Already exists
-3cbe07fc9467: Already exists
-a6ef5968443f: Pulling fs layer
-9e5b484b3a04: Pulling fs layer
-24ec2c13f669: Pulling fs layer
-11112c9d74c7: Pulling fs layer
-a7a791c88eea: Pulling fs layer
-03dcf28d298d: Pulling fs layer
-266a3b72e452: Pulling fs layer
-f49a8352a140: Pulling fs layer
-cef69fa8b563: Pulling fs layer
-a7432d6bd8b4: Pulling fs layer
-13c55b6222c5: Pulling fs layer
-faf8eda24a0f: Pulling fs layer
-03dcf28d298d: Waiting
-266a3b72e452: Waiting
-02155896a825: Pulling fs layer
-a7a791c88eea: Waiting
-11112c9d74c7: Waiting
-f49a8352a140: Waiting
-2065792e67db: Pulling fs layer
-cef69fa8b563: Waiting
-a7432d6bd8b4: Waiting
-b991b9de89e1: Pulling fs layer
-f3a54207a2a4: Pulling fs layer
-22be7a628920: Pulling fs layer
-42643f40d914: Pulling fs layer
-3a618111cf14: Pulling fs layer
-faf8eda24a0f: Waiting
-8e71db914aa2: Pulling fs layer
-02155896a825: Waiting
-9c882a4e8424: Pulling fs layer
-2065792e67db: Waiting
-863751fc1afe: Pulling fs layer
-b991b9de89e1: Waiting
-4f4fb700ef54: Pulling fs layer
-410587925a51: Pulling fs layer
-f3a54207a2a4: Waiting
-c6615e9a9aa6: Pulling fs layer
-22be7a628920: Waiting
-7ec9b970eb06: Pulling fs layer
-42643f40d914: Waiting
-13c55b6222c5: Waiting
-3a618111cf14: Waiting
-8e71db914aa2: Waiting
-7ec9b970eb06: Waiting
-410587925a51: Waiting
-c6615e9a9aa6: Waiting
-9c882a4e8424: Waiting
-863751fc1afe: Waiting
-4f4fb700ef54: Waiting
-9e5b484b3a04: Verifying Checksum
-9e5b484b3a04: Download complete
-24ec2c13f669: Verifying Checksum
-24ec2c13f669: Download complete
-a6ef5968443f: Download complete
-a7a791c88eea: Verifying Checksum
-a7a791c88eea: Download complete
-266a3b72e452: Verifying Checksum
-266a3b72e452: Download complete
-03dcf28d298d: Verifying Checksum
-03dcf28d298d: Download complete
-cef69fa8b563: Verifying Checksum
-cef69fa8b563: Download complete
-f49a8352a140: Verifying Checksum
-f49a8352a140: Download complete
-a6ef5968443f: Pull complete
-9e5b484b3a04: Pull complete
-a7432d6bd8b4: Verifying Checksum
-a7432d6bd8b4: Download complete
-13c55b6222c5: Download complete
-faf8eda24a0f: Verifying Checksum
-faf8eda24a0f: Download complete
-02155896a825: Verifying Checksum
-02155896a825: Download complete
-2065792e67db: Verifying Checksum
-2065792e67db: Download complete
-24ec2c13f669: Pull complete
-b991b9de89e1: Verifying Checksum
-b991b9de89e1: Download complete
-22be7a628920: Verifying Checksum
-22be7a628920: Download complete
-11112c9d74c7: Verifying Checksum
-11112c9d74c7: Download complete
-f3a54207a2a4: Verifying Checksum
-f3a54207a2a4: Download complete
-42643f40d914: Verifying Checksum
-42643f40d914: Download complete
-3a618111cf14: Verifying Checksum
-3a618111cf14: Download complete
-9c882a4e8424: Verifying Checksum
-9c882a4e8424: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-863751fc1afe: Verifying Checksum
-863751fc1afe: Download complete
-410587925a51: Verifying Checksum
-410587925a51: Download complete
-7ec9b970eb06: Verifying Checksum
-7ec9b970eb06: Download complete
-8e71db914aa2: Verifying Checksum
-8e71db914aa2: Download complete
-11112c9d74c7: Pull complete
-a7a791c88eea: Pull complete
-03dcf28d298d: Pull complete
-266a3b72e452: Pull complete
-f49a8352a140: Pull complete
-cef69fa8b563: Pull complete
-a7432d6bd8b4: Pull complete
-13c55b6222c5: Pull complete
-faf8eda24a0f: Pull complete
-02155896a825: Pull complete
-2065792e67db: Pull complete
-b991b9de89e1: Pull complete
-f3a54207a2a4: Pull complete
-22be7a628920: Pull complete
-42643f40d914: Pull complete
-3a618111cf14: Pull complete
-8e71db914aa2: Pull complete
-9c882a4e8424: Pull complete
-863751fc1afe: Pull complete
-4f4fb700ef54: Pull complete
-410587925a51: Pull complete
-c6615e9a9aa6: Download complete
-c6615e9a9aa6: Pull complete
-7ec9b970eb06: Pull complete
-Digest: sha256:cefb7b8282ea9e5fd65e1eeb3e17318c526f2154f1330bf9d740ce3c5cd88ec6
-Status: Downloaded newer image for n132/arvo:9357-vul
 ======================= INFO =========================
 This binary is built for AFL-fuzz.
 To run the target function on individual input(s) execute this:
@@ -153,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604000000133 at pc 0x000000667762 bp 0x7ffc7613c770 sp 0x7ffc7613c768
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604000000133 at pc 0x000000667762 bp 0x7ffc4f3b6730 sp 0x7ffc4f3b6728
 READ of size 1 at 0x604000000133 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x667761 in ImportRGBQuantumType /src/graphicsmagick/magick/import.c:2403:17
@@ -165,7 +21,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #6 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #8 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #9 0x7329a190983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7e4080a5f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41ddc8 in _start (/out/coder_MIFF_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: ImportRGBQuantumType--ImportViewPixelArea--ReadMIFFImage
@@ -177,7 +33,7 @@ allocated by thread T0 here:
     #3 0x52ea77 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:18:24
     #4 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #5 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #6 0x7329a190983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #6 0x7e4080a5f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: operator new[](unsigned long)--Magick::BlobRef::BlobRef(void const*, unsigned long)--Magick::Blob::Blob(void const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/import.c:2403:17 in ImportRGBQuantumType

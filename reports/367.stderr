@@ -1,85 +1,11 @@
-Unable to find image 'n132/arvo:367-vul' locally
-367-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-52cafbddcc36: Already exists
-aec666517c96: Already exists
-13e87697aa95: Already exists
-ca00002583cc: Already exists
-e5244b92b1dc: Already exists
-466e870a0a46: Already exists
-afa0989f744f: Already exists
-d23bebd2e2af: Already exists
-00c4e40358b9: Already exists
-22eb436eefc9: Already exists
-dded6ff2558f: Already exists
-d900970ee7e5: Already exists
-f5bd28566a88: Already exists
-b28a5115b987: Already exists
-3131de6c7482: Already exists
-fac4bbfd5ccb: Already exists
-5c88b316b8c0: Already exists
-ee5310633a0d: Already exists
-ac2778ddb0c1: Already exists
-b80ee008ca27: Already exists
-6d688883df03: Already exists
-7c423bcd2be1: Already exists
-f79b3ffc9035: Already exists
-f6ac97a25757: Already exists
-7ca36b00305b: Already exists
-ba3d9e80bd49: Already exists
-97506478b7db: Already exists
-514e40a45fd9: Already exists
-02ff946d53ec: Already exists
-3b27484c11c6: Pulling fs layer
-b93d373d03dd: Pulling fs layer
-b33bcb1d372b: Pulling fs layer
-ca838791efa9: Pulling fs layer
-ce397ec3a54b: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-3a3ef7bd9853: Pulling fs layer
-5b08e810dfe4: Pulling fs layer
-76940fcd9d68: Pulling fs layer
-ce397ec3a54b: Waiting
-4f4fb700ef54: Waiting
-76940fcd9d68: Waiting
-3a3ef7bd9853: Waiting
-5b08e810dfe4: Waiting
-ca838791efa9: Waiting
-b33bcb1d372b: Verifying Checksum
-b33bcb1d372b: Download complete
-b93d373d03dd: Verifying Checksum
-b93d373d03dd: Download complete
-3b27484c11c6: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-ce397ec3a54b: Verifying Checksum
-ce397ec3a54b: Download complete
-3a3ef7bd9853: Verifying Checksum
-3a3ef7bd9853: Download complete
-76940fcd9d68: Download complete
-5b08e810dfe4: Verifying Checksum
-5b08e810dfe4: Download complete
-3b27484c11c6: Pull complete
-b93d373d03dd: Pull complete
-b33bcb1d372b: Pull complete
-ca838791efa9: Verifying Checksum
-ca838791efa9: Download complete
-ca838791efa9: Pull complete
-ce397ec3a54b: Pull complete
-4f4fb700ef54: Pull complete
-3a3ef7bd9853: Pull complete
-5b08e810dfe4: Pull complete
-76940fcd9d68: Pull complete
-Digest: sha256:7ea8a2afbd31f9ac9f2f3ff92d0e5b7a774df2700e368164298a8d7ff40506dc
-Status: Downloaded newer image for n132/arvo:367-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 1349806858
+INFO: Seed: 1806655258
 INFO: Loaded 1 modules   (1065 inline 8-bit counters): 1065 [0x65add8, 0x65b201), 
 INFO: Loaded 1 PC tables (1065 PCs): 1065 [0x605428,0x6096b8), 
 /out/fuzzer-parse_cbor: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60d000000268 at pc 0x0000004e095c bp 0x7fff807c1af0 sp 0x7fff807c1ae8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60d000000268 at pc 0x0000004e095c bp 0x7ffdd19a90f0 sp 0x7ffdd19a90e8
 READ of size 1 at 0x60d000000268 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x4e095b in nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_cbor_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&) /src/json/src/json.hpp:7428:24
@@ -103,7 +29,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #18 0x4f9bf2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #19 0x4ff49c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #20 0x5289d2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #21 0x7352b5f35082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #21 0x765a54197082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #22 0x41f75d in _start (/out/fuzzer-parse_cbor+0x41f75d)
 
 DEDUP_TOKEN: nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_cbor_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&)--nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_cbor_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&)--nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_cbor_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&)
@@ -121,7 +47,7 @@ allocated by thread T0 here:
     #9 0x4f9bf2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x4ff49c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x5289d2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0x7352b5f35082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x765a54197082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: operator new(unsigned long)--__libcpp_operator_new<unsigned long>--__libcpp_allocate
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/json/src/json.hpp:7428:24 in nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_cbor_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&)

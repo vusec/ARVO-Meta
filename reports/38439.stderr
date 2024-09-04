@@ -1,91 +1,12 @@
-Unable to find image 'n132/arvo:38439-vul' locally
-38439-vul: Pulling from n132/arvo
-35807b77a593: Already exists
-9d6d529f0569: Already exists
-2f17daf42909: Already exists
-90ca37a2acfb: Already exists
-f8f4d1165147: Already exists
-5518c00c675f: Already exists
-092cc7347e14: Already exists
-7a3de62c3161: Already exists
-c6175f8dcec0: Already exists
-7160e556b526: Already exists
-afe7b5796cd5: Already exists
-c7c199fd657c: Already exists
-b7b253fb6cd6: Already exists
-813f7c60eceb: Already exists
-43909b85497d: Already exists
-c29d49176c74: Already exists
-1bf55dcb5785: Already exists
-b3c03fcdbd73: Already exists
-d06a28d3e1b2: Already exists
-003523c575a5: Already exists
-b0708cdb4976: Pulling fs layer
-02b2f9619793: Pulling fs layer
-47393be09a83: Pulling fs layer
-7c4f4f7712e8: Pulling fs layer
-5620c433321f: Pulling fs layer
-b725376bda40: Pulling fs layer
-4592bf0edaef: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-d38af4b80740: Pulling fs layer
-4009a654e115: Pulling fs layer
-8b6bc256e044: Pulling fs layer
-ef6b29aa7559: Pulling fs layer
-b725376bda40: Waiting
-4009a654e115: Waiting
-5620c433321f: Waiting
-8b6bc256e044: Waiting
-ef6b29aa7559: Waiting
-4592bf0edaef: Waiting
-4f4fb700ef54: Waiting
-d38af4b80740: Waiting
-7c4f4f7712e8: Waiting
-02b2f9619793: Verifying Checksum
-02b2f9619793: Download complete
-47393be09a83: Verifying Checksum
-47393be09a83: Download complete
-5620c433321f: Verifying Checksum
-5620c433321f: Download complete
-7c4f4f7712e8: Verifying Checksum
-7c4f4f7712e8: Download complete
-4592bf0edaef: Verifying Checksum
-4592bf0edaef: Download complete
-b725376bda40: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-4009a654e115: Verifying Checksum
-4009a654e115: Download complete
-d38af4b80740: Verifying Checksum
-ef6b29aa7559: Verifying Checksum
-ef6b29aa7559: Download complete
-b0708cdb4976: Verifying Checksum
-b0708cdb4976: Download complete
-8b6bc256e044: Verifying Checksum
-8b6bc256e044: Download complete
-b0708cdb4976: Pull complete
-02b2f9619793: Pull complete
-47393be09a83: Pull complete
-7c4f4f7712e8: Pull complete
-5620c433321f: Pull complete
-b725376bda40: Pull complete
-4592bf0edaef: Pull complete
-4f4fb700ef54: Pull complete
-d38af4b80740: Pull complete
-4009a654e115: Pull complete
-8b6bc256e044: Pull complete
-ef6b29aa7559: Pull complete
-Digest: sha256:4f1bf7b1cd09183a2f41b3345769641680f730740cff5f1ffb9fbfc5723a6caf
-Status: Downloaded newer image for n132/arvo:38439-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3101939829
+INFO: Seed: 1992623113
 INFO: Loaded 1 modules   (12216 inline 8-bit counters): 12216 [0x841a140, 0x841d0f8), 
 INFO: Loaded 1 PC tables (12216 PCs): 12216 [0x841d0f8,0x8434eb8), 
 /out/dav1d_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xed7281fa at pc 0x0818537f bp 0xffb2bbb8 sp 0xffb2b798
-READ of size 524 at 0xed7281fa thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xeeaff1fa at pc 0x0818537f bp 0xff7ed7d8 sp 0xff7ed3b8
+READ of size 524 at 0xeeaff1fa thread T0
 SCARINESS: 36 (multi-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x818537e in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
     #1 0x82c764c in padding /work/build/../../src/dav1d/src/looprestoration_tmpl.c:80:9
@@ -106,11 +27,11 @@ SCARINESS: 36 (multi-byte-read-heap-buffer-overflow-far-from-bounds)
     #16 0x80a127e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #17 0x80a6e59 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:859:9
     #18 0x80cd0a7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #19 0xedc09ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #19 0xef38ced4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
     #20 0x807d805 in _start (/out/dav1d_fuzzer+0x807d805)
 
 DEDUP_TOKEN: __asan_memcpy--padding--sgr_mix_c
-0xed7281fa is located 442 bytes to the right of 129088-byte region [0xed708800,0xed728040)
+0xeeaff1fa is located 442 bytes to the right of 129088-byte region [0xeeadf800,0xeeaff040)
 allocated by thread T0 here:
     #0 0x8186a2c in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
     #1 0x81e5c89 in dav1d_alloc_aligned /work/build/../../src/dav1d/src/mem.h:66:9
@@ -125,22 +46,22 @@ allocated by thread T0 here:
     #10 0x80a127e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x80a6e59 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:859:9
     #12 0x80cd0a7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0xedc09ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #13 0xef38ced4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
 
 DEDUP_TOKEN: posix_memalign--dav1d_alloc_aligned--dav1d_decode_frame_init
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
 Shadow bytes around the buggy address:
-  0x3dae4fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3dae4ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3dae5000: 00 00 00 00 00 00 00 00 fa fa fa fa fa fa fa fa
-  0x3dae5010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dae5020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x3dae5030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
-  0x3dae5040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dae5050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dae5060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dae5070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dae5080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dd5fde0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3dd5fdf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3dd5fe00: 00 00 00 00 00 00 00 00 fa fa fa fa fa fa fa fa
+  0x3dd5fe10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dd5fe20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x3dd5fe30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
+  0x3dd5fe40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dd5fe50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dd5fe60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dd5fe70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dd5fe80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

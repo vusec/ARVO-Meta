@@ -1,87 +1,11 @@
-Unable to find image 'n132/arvo:57110-vul' locally
-57110-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-ad2487796c1a: Already exists
-8b42b3b29679: Already exists
-c11d532e9648: Already exists
-5feaaee5aeff: Already exists
-4a38a10173f3: Already exists
-919a4cdf4d9f: Already exists
-c2a667788566: Already exists
-4fe386f7cf37: Already exists
-20ffdf26db1f: Already exists
-222ec402b722: Already exists
-6a648a51e2a5: Already exists
-ffcaadede07d: Already exists
-a3308a2d8c19: Already exists
-20985b6dccd0: Already exists
-b8dbcc6ed4e6: Already exists
-b944b42103d6: Already exists
-07e15d644013: Already exists
-8657451f905f: Already exists
-7e37b7cc9505: Already exists
-f683fbcb8391: Already exists
-0dc7969dcb89: Already exists
-264a7b84c179: Already exists
-1644aa8279ed: Already exists
-f53ed6c6da33: Already exists
-d42bafaa1433: Already exists
-a0d854db0901: Already exists
-4561646c317f: Pulling fs layer
-8309ee27f416: Pulling fs layer
-0ae03e82e69f: Pulling fs layer
-55a4c5658fdc: Pulling fs layer
-0e0540e91747: Pulling fs layer
-b031a352af89: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-c87428370cb9: Pulling fs layer
-a3851e5a27bb: Pulling fs layer
-44f42a44d1ca: Pulling fs layer
-55a4c5658fdc: Waiting
-0e0540e91747: Waiting
-b031a352af89: Waiting
-4f4fb700ef54: Waiting
-c87428370cb9: Waiting
-a3851e5a27bb: Waiting
-44f42a44d1ca: Waiting
-8309ee27f416: Verifying Checksum
-8309ee27f416: Download complete
-55a4c5658fdc: Verifying Checksum
-55a4c5658fdc: Download complete
-0ae03e82e69f: Verifying Checksum
-0ae03e82e69f: Download complete
-0e0540e91747: Verifying Checksum
-0e0540e91747: Download complete
-4f4fb700ef54: Download complete
-b031a352af89: Verifying Checksum
-b031a352af89: Download complete
-c87428370cb9: Verifying Checksum
-c87428370cb9: Download complete
-44f42a44d1ca: Verifying Checksum
-44f42a44d1ca: Download complete
-4561646c317f: Download complete
-a3851e5a27bb: Verifying Checksum
-a3851e5a27bb: Download complete
-4561646c317f: Pull complete
-8309ee27f416: Pull complete
-0ae03e82e69f: Pull complete
-55a4c5658fdc: Pull complete
-0e0540e91747: Pull complete
-b031a352af89: Pull complete
-4f4fb700ef54: Pull complete
-c87428370cb9: Pull complete
-a3851e5a27bb: Pull complete
-44f42a44d1ca: Pull complete
-Digest: sha256:4d08a188c43c9ff17ef9839fb21c8ff2c39c475d7390c5833281193a6e12eb15
-Status: Downloaded newer image for n132/arvo:57110-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2021328139
+INFO: Seed: 2125194180
 INFO: Loaded 1 modules   (52504 inline 8-bit counters): 52504 [0xad7b40, 0xae4858), 
 INFO: Loaded 1 PC tables (52504 PCs): 52504 [0x960110,0xa2d290), 
 /out/schema: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000008fe2ba at pc 0x000000851e13 bp 0x7ffe08e7e780 sp 0x7ffe08e7e778
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000008fe2ba at pc 0x000000851e13 bp 0x7ffc437faa40 sp 0x7ffc437faa38
 READ of size 1 at 0x0000008fe2ba thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x851e12 in xmlDictComputeFastKey /src/libxml2/dict.c:437:14
@@ -103,7 +27,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #16 0x429642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #17 0x42eeec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #18 0x458422 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #19 0x733eedc4a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #19 0x7a5c26d0b082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #20 0x41f80d in _start (/out/schema+0x41f80d)
 
 DEDUP_TOKEN: xmlDictComputeFastKey--xmlDictLookup--xmlParseNCNameComplex

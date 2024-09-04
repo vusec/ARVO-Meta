@@ -1,132 +1,3 @@
-Unable to find image 'n132/arvo:10628-vul' locally
-10628-vul: Pulling from n132/arvo
-3b37166ec614: Pulling fs layer
-504facff238f: Pulling fs layer
-ebbcacd28e10: Pulling fs layer
-c7fb3351ecad: Pulling fs layer
-2e3debadcbf7: Pulling fs layer
-d25779628f6e: Pulling fs layer
-a1ecdb698b65: Pulling fs layer
-a3fec23c7263: Pulling fs layer
-c79e8eaae6cd: Pulling fs layer
-4c32612f1b48: Pulling fs layer
-aef5c733b45d: Pulling fs layer
-21c85764fb01: Pulling fs layer
-9ed05004fa80: Pulling fs layer
-e2dfd1433042: Pulling fs layer
-14a03246f5e6: Pulling fs layer
-fe7c958b97b9: Pulling fs layer
-53111baffd4a: Pulling fs layer
-1e1625c66b4d: Pulling fs layer
-68b8c6245331: Pulling fs layer
-f1e0d4f7a70f: Pulling fs layer
-1d99317dee94: Pulling fs layer
-7326c33555ad: Pulling fs layer
-67ea819b6ff2: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-ddf28ce5ce96: Pulling fs layer
-4136c03ab3f8: Pulling fs layer
-10592fc830a5: Pulling fs layer
-d25779628f6e: Waiting
-53111baffd4a: Waiting
-a1ecdb698b65: Waiting
-1e1625c66b4d: Waiting
-68b8c6245331: Waiting
-a3fec23c7263: Waiting
-f1e0d4f7a70f: Waiting
-c79e8eaae6cd: Waiting
-1d99317dee94: Waiting
-4c32612f1b48: Waiting
-7326c33555ad: Waiting
-c7fb3351ecad: Waiting
-67ea819b6ff2: Waiting
-2e3debadcbf7: Waiting
-4f4fb700ef54: Waiting
-aef5c733b45d: Waiting
-ddf28ce5ce96: Waiting
-4136c03ab3f8: Waiting
-10592fc830a5: Waiting
-21c85764fb01: Waiting
-9ed05004fa80: Waiting
-e2dfd1433042: Waiting
-fe7c958b97b9: Waiting
-14a03246f5e6: Waiting
-ebbcacd28e10: Verifying Checksum
-ebbcacd28e10: Download complete
-504facff238f: Verifying Checksum
-504facff238f: Download complete
-c7fb3351ecad: Verifying Checksum
-2e3debadcbf7: Verifying Checksum
-2e3debadcbf7: Download complete
-3b37166ec614: Verifying Checksum
-3b37166ec614: Download complete
-a3fec23c7263: Verifying Checksum
-a3fec23c7263: Download complete
-a1ecdb698b65: Download complete
-4c32612f1b48: Download complete
-3b37166ec614: Pull complete
-504facff238f: Pull complete
-ebbcacd28e10: Pull complete
-c7fb3351ecad: Pull complete
-2e3debadcbf7: Pull complete
-d25779628f6e: Verifying Checksum
-d25779628f6e: Download complete
-21c85764fb01: Verifying Checksum
-21c85764fb01: Download complete
-d25779628f6e: Pull complete
-a1ecdb698b65: Pull complete
-a3fec23c7263: Pull complete
-9ed05004fa80: Download complete
-aef5c733b45d: Verifying Checksum
-aef5c733b45d: Download complete
-e2dfd1433042: Verifying Checksum
-e2dfd1433042: Download complete
-fe7c958b97b9: Download complete
-14a03246f5e6: Verifying Checksum
-14a03246f5e6: Download complete
-1e1625c66b4d: Download complete
-53111baffd4a: Verifying Checksum
-53111baffd4a: Download complete
-c79e8eaae6cd: Download complete
-68b8c6245331: Verifying Checksum
-68b8c6245331: Download complete
-1d99317dee94: Verifying Checksum
-1d99317dee94: Download complete
-7326c33555ad: Verifying Checksum
-7326c33555ad: Download complete
-67ea819b6ff2: Verifying Checksum
-67ea819b6ff2: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-ddf28ce5ce96: Verifying Checksum
-ddf28ce5ce96: Download complete
-10592fc830a5: Verifying Checksum
-10592fc830a5: Download complete
-f1e0d4f7a70f: Verifying Checksum
-f1e0d4f7a70f: Download complete
-4136c03ab3f8: Verifying Checksum
-4136c03ab3f8: Download complete
-c79e8eaae6cd: Pull complete
-4c32612f1b48: Pull complete
-aef5c733b45d: Pull complete
-21c85764fb01: Pull complete
-9ed05004fa80: Pull complete
-e2dfd1433042: Pull complete
-14a03246f5e6: Pull complete
-fe7c958b97b9: Pull complete
-53111baffd4a: Pull complete
-1e1625c66b4d: Pull complete
-68b8c6245331: Pull complete
-f1e0d4f7a70f: Pull complete
-1d99317dee94: Pull complete
-7326c33555ad: Pull complete
-67ea819b6ff2: Pull complete
-4f4fb700ef54: Pull complete
-ddf28ce5ce96: Pull complete
-4136c03ab3f8: Pull complete
-10592fc830a5: Pull complete
-Digest: sha256:e307b3f986b647ba89f425add93e17b410d3f4779693ff0230021dff121d85a9
-Status: Downloaded newer image for n132/arvo:10628-vul
 ======================= INFO =========================
 This binary is built for AFL-fuzz.
 To run the target function on individual input(s) execute this:
@@ -138,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000000f at pc 0x0000005307db bp 0x7fff912e3740 sp 0x7fff912e3738
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000000f at pc 0x0000005307db bp 0x7ffcf5ee8ca0 sp 0x7ffcf5ee8c98
 READ of size 1 at 0x60200000000f thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x5307da in ref_oneandzero_unpad(unsigned char const*, unsigned long) /src/botan/./src/fuzzer/mode_padding.cpp:63:10
@@ -146,7 +17,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #2 0x52fd74 in LLVMFuzzerTestOneInput /src/botan/./src/fuzzer/fuzzers.h:39:7
     #3 0x55bb11 in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #4 0x55c0be in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #5 0x75132902b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x77a26f40083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #6 0x41cab8 in _start (/out/mode_padding+0x41cab8)
 
 DEDUP_TOKEN: ref_oneandzero_unpad(unsigned char const*, unsigned long)--fuzz(unsigned char const*, unsigned long)--LLVMFuzzerTestOneInput
@@ -160,7 +31,7 @@ allocated by thread T0 here:
     #5 0x55ba18 in vector /usr/local/bin/../include/c++/v1/vector:1115
     #6 0x55ba18 in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:298
     #7 0x55c0be in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #8 0x75132902b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x77a26f40083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: operator new(unsigned long)--__libcpp_allocate--allocate
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/botan/./src/fuzzer/mode_padding.cpp:63:10 in ref_oneandzero_unpad(unsigned char const*, unsigned long)

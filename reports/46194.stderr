@@ -1,225 +1,6 @@
-Unable to find image 'n132/arvo:46194-vul' locally
-46194-vul: Pulling from n132/arvo
-4d32b49e2995: Pulling fs layer
-0372169c5ac9: Pulling fs layer
-73292b01e9e9: Pulling fs layer
-cf811841d42c: Pulling fs layer
-74f6483844ca: Pulling fs layer
-b4b1fbf886d2: Pulling fs layer
-216fadc2b38a: Pulling fs layer
-ff14114eb81b: Pulling fs layer
-36204639bce9: Pulling fs layer
-307231a72c6b: Pulling fs layer
-267b318202ff: Pulling fs layer
-13dd41c18be3: Pulling fs layer
-a32e666759b5: Pulling fs layer
-bed8fffbe8d8: Pulling fs layer
-d7c792a57aa2: Pulling fs layer
-7f3d20816be2: Pulling fs layer
-66b98c33bace: Pulling fs layer
-174f77217014: Pulling fs layer
-a18477932cfb: Pulling fs layer
-cf811841d42c: Waiting
-74f6483844ca: Waiting
-b4b1fbf886d2: Waiting
-f5ff9cf06d4e: Pulling fs layer
-0181c67e3b78: Pulling fs layer
-216fadc2b38a: Waiting
-ff14114eb81b: Waiting
-36204639bce9: Waiting
-307231a72c6b: Waiting
-bed8fffbe8d8: Waiting
-f4fcafbebd45: Pulling fs layer
-a32e666759b5: Waiting
-d7c792a57aa2: Waiting
-e5369f51d39c: Pulling fs layer
-7f3d20816be2: Waiting
-0181c67e3b78: Waiting
-f4fcafbebd45: Waiting
-6e193c94b95d: Pulling fs layer
-f5ff9cf06d4e: Waiting
-13dd41c18be3: Waiting
-66b98c33bace: Waiting
-67c80f73112d: Pulling fs layer
-a18477932cfb: Waiting
-2e9243e6e2f5: Pulling fs layer
-67c80f73112d: Waiting
-64c047334650: Pulling fs layer
-6e193c94b95d: Waiting
-4702eba0e4dc: Pulling fs layer
-a8977884d9cb: Pulling fs layer
-64c047334650: Waiting
-4702eba0e4dc: Waiting
-2be8976bf1e6: Pulling fs layer
-876c453dee3e: Pulling fs layer
-a8977884d9cb: Waiting
-2be8976bf1e6: Waiting
-b58ffb3097bb: Pulling fs layer
-3a8869b0eb92: Pulling fs layer
-414fcd85c19e: Pulling fs layer
-b58ffb3097bb: Waiting
-26ec152059e0: Pulling fs layer
-3a8869b0eb92: Waiting
-876c453dee3e: Waiting
-e3f3bc748f8f: Pulling fs layer
-26ec152059e0: Waiting
-f1d7ac474fae: Pulling fs layer
-dbe93f928e74: Pulling fs layer
-e3f3bc748f8f: Waiting
-71cd3cbbd160: Pulling fs layer
-f1d7ac474fae: Waiting
-dbe93f928e74: Waiting
-459956930506: Pulling fs layer
-4ce50527a10c: Pulling fs layer
-71cd3cbbd160: Waiting
-6773f2a9f7fb: Pulling fs layer
-459956930506: Waiting
-f6268fb08c5c: Pulling fs layer
-4ce50527a10c: Waiting
-6773f2a9f7fb: Waiting
-899f1c01e583: Pulling fs layer
-b47dad4574bd: Pulling fs layer
-f6268fb08c5c: Waiting
-8fd7e5bfc0e7: Pulling fs layer
-b47dad4574bd: Waiting
-899f1c01e583: Waiting
-8fd7e5bfc0e7: Waiting
-4d32b49e2995: Verifying Checksum
-4d32b49e2995: Download complete
-73292b01e9e9: Verifying Checksum
-73292b01e9e9: Download complete
-4d32b49e2995: Pull complete
-74f6483844ca: Verifying Checksum
-74f6483844ca: Download complete
-0372169c5ac9: Verifying Checksum
-0372169c5ac9: Download complete
-cf811841d42c: Verifying Checksum
-cf811841d42c: Download complete
-ff14114eb81b: Verifying Checksum
-ff14114eb81b: Download complete
-0372169c5ac9: Pull complete
-73292b01e9e9: Pull complete
-b4b1fbf886d2: Download complete
-cf811841d42c: Pull complete
-307231a72c6b: Verifying Checksum
-307231a72c6b: Download complete
-74f6483844ca: Pull complete
-b4b1fbf886d2: Pull complete
-267b318202ff: Verifying Checksum
-267b318202ff: Download complete
-216fadc2b38a: Verifying Checksum
-216fadc2b38a: Download complete
-36204639bce9: Verifying Checksum
-36204639bce9: Download complete
-bed8fffbe8d8: Verifying Checksum
-bed8fffbe8d8: Download complete
-13dd41c18be3: Verifying Checksum
-13dd41c18be3: Download complete
-216fadc2b38a: Pull complete
-ff14114eb81b: Pull complete
-d7c792a57aa2: Download complete
-a32e666759b5: Verifying Checksum
-a32e666759b5: Download complete
-7f3d20816be2: Download complete
-66b98c33bace: Verifying Checksum
-66b98c33bace: Download complete
-f5ff9cf06d4e: Verifying Checksum
-f5ff9cf06d4e: Download complete
-a18477932cfb: Download complete
-174f77217014: Verifying Checksum
-0181c67e3b78: Verifying Checksum
-0181c67e3b78: Download complete
-f4fcafbebd45: Verifying Checksum
-f4fcafbebd45: Download complete
-6e193c94b95d: Verifying Checksum
-6e193c94b95d: Download complete
-36204639bce9: Pull complete
-307231a72c6b: Pull complete
-267b318202ff: Pull complete
-13dd41c18be3: Pull complete
-a32e666759b5: Pull complete
-bed8fffbe8d8: Pull complete
-d7c792a57aa2: Pull complete
-7f3d20816be2: Pull complete
-66b98c33bace: Pull complete
-174f77217014: Pull complete
-a18477932cfb: Pull complete
-f5ff9cf06d4e: Pull complete
-0181c67e3b78: Pull complete
-f4fcafbebd45: Pull complete
-2e9243e6e2f5: Verifying Checksum
-2e9243e6e2f5: Download complete
-67c80f73112d: Verifying Checksum
-67c80f73112d: Download complete
-e5369f51d39c: Verifying Checksum
-4702eba0e4dc: Verifying Checksum
-4702eba0e4dc: Download complete
-64c047334650: Verifying Checksum
-64c047334650: Download complete
-2be8976bf1e6: Verifying Checksum
-2be8976bf1e6: Download complete
-a8977884d9cb: Verifying Checksum
-a8977884d9cb: Download complete
-b58ffb3097bb: Verifying Checksum
-b58ffb3097bb: Download complete
-3a8869b0eb92: Verifying Checksum
-3a8869b0eb92: Download complete
-414fcd85c19e: Verifying Checksum
-414fcd85c19e: Download complete
-26ec152059e0: Verifying Checksum
-26ec152059e0: Download complete
-876c453dee3e: Verifying Checksum
-876c453dee3e: Download complete
-f1d7ac474fae: Verifying Checksum
-f1d7ac474fae: Download complete
-71cd3cbbd160: Verifying Checksum
-71cd3cbbd160: Download complete
-dbe93f928e74: Verifying Checksum
-dbe93f928e74: Download complete
-e5369f51d39c: Pull complete
-6e193c94b95d: Pull complete
-e3f3bc748f8f: Verifying Checksum
-e3f3bc748f8f: Download complete
-4ce50527a10c: Verifying Checksum
-4ce50527a10c: Download complete
-459956930506: Verifying Checksum
-459956930506: Download complete
-f6268fb08c5c: Verifying Checksum
-f6268fb08c5c: Download complete
-6773f2a9f7fb: Verifying Checksum
-6773f2a9f7fb: Download complete
-8fd7e5bfc0e7: Download complete
-899f1c01e583: Verifying Checksum
-899f1c01e583: Download complete
-67c80f73112d: Pull complete
-2e9243e6e2f5: Pull complete
-64c047334650: Pull complete
-4702eba0e4dc: Pull complete
-a8977884d9cb: Pull complete
-2be8976bf1e6: Pull complete
-876c453dee3e: Pull complete
-b58ffb3097bb: Pull complete
-3a8869b0eb92: Pull complete
-414fcd85c19e: Pull complete
-26ec152059e0: Pull complete
-e3f3bc748f8f: Pull complete
-f1d7ac474fae: Pull complete
-dbe93f928e74: Pull complete
-71cd3cbbd160: Pull complete
-459956930506: Pull complete
-4ce50527a10c: Pull complete
-6773f2a9f7fb: Pull complete
-f6268fb08c5c: Pull complete
-899f1c01e583: Pull complete
-b47dad4574bd: Verifying Checksum
-b47dad4574bd: Download complete
-b47dad4574bd: Pull complete
-8fd7e5bfc0e7: Pull complete
-Digest: sha256:0a2afbde547f33ff23eb9064cdf35a0ea288a47d41560d1bb33df4998faa9764
-Status: Downloaded newer image for n132/arvo:46194-vul
 =================================================================
-==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x74737795fe30 at pc 0x000000583ef0 bp 0x7fff8dac7b90 sp 0x7fff8dac7b88
-READ of size 2 at 0x74737795fe30 thread T0
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x71287bf5fe30 at pc 0x000000583ef0 bp 0x7ffc21d91fb0 sp 0x7ffc21d91fa8
+READ of size 2 at 0x71287bf5fe30 thread T0
 SCARINESS: 29 (2-byte-read-stack-buffer-overflow)
     #0 0x583eef in decode_tilehdr /src/ffmpeg/libavcodec/wmalosslessdec.c:362:17
     #1 0x581718 in decode_frame /src/ffmpeg/libavcodec/wmalosslessdec.c:1049:16
@@ -231,11 +12,11 @@ SCARINESS: 29 (2-byte-read-stack-buffer-overflow)
     #7 0x500ff3 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:482:9
     #8 0xb5ef15 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #9 0xb5ed85 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #10 0x7473785e9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #10 0x71287cc4f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #11 0x4437fd in _start (/out/ffmpeg_AV_CODEC_ID_WMALOSSLESS_fuzzer+0x4437fd)
 
 DEDUP_TOKEN: decode_tilehdr--decode_frame--decode_packet
-Address 0x74737795fe30 is located in stack of thread T0 at offset 48 in frame
+Address 0x71287bf5fe30 is located in stack of thread T0 at offset 48 in frame
     #0 0x582e6f in decode_tilehdr /src/ffmpeg/libavcodec/wmalosslessdec.c:340
 
 DEDUP_TOKEN: decode_tilehdr
@@ -246,17 +27,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/ffmpeg/libavcodec/wmalosslessdec.c:362:17 in decode_tilehdr
 Shadow bytes around the buggy address:
-  0x0e8eeef23f70: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e8eeef23f80: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e8eeef23f90: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e8eeef23fa0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e8eeef23fb0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-=>0x0e8eeef23fc0: f1 f1 f1 f1 00 00[f2]f2 00 f3 f3 f3 00 00 00 00
-  0x0e8eeef23fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e8eeef23fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e8eeef23ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e8eeef24000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e8eeef24010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e258f7e3f70: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e258f7e3f80: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e258f7e3f90: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e258f7e3fa0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e258f7e3fb0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+=>0x0e258f7e3fc0: f1 f1 f1 f1 00 00[f2]f2 00 f3 f3 f3 00 00 00 00
+  0x0e258f7e3fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e258f7e3fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e258f7e3ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e258f7e4000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e258f7e4010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

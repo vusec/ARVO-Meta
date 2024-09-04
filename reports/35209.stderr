@@ -1,193 +1,12 @@
-Unable to find image 'n132/arvo:35209-vul' locally
-35209-vul: Pulling from n132/arvo
-80bce60046fa: Pulling fs layer
-55a738a15540: Pulling fs layer
-e19cf0706c62: Pulling fs layer
-de4cdd6c27d1: Pulling fs layer
-90f40d7110f1: Pulling fs layer
-6f7e04815d7e: Pulling fs layer
-234688199b08: Pulling fs layer
-37a723b3aa1f: Pulling fs layer
-715e7447db74: Pulling fs layer
-216d1db34533: Pulling fs layer
-bfddaa4d7691: Pulling fs layer
-647dc2a07a9e: Pulling fs layer
-60c578a10d36: Pulling fs layer
-de4cdd6c27d1: Waiting
-f4acfa6f0a3b: Pulling fs layer
-90f40d7110f1: Waiting
-7356ee5a7511: Pulling fs layer
-6f7e04815d7e: Waiting
-f7064d95f7ff: Pulling fs layer
-8273a72142be: Pulling fs layer
-44c16e791e98: Pulling fs layer
-234688199b08: Waiting
-bb75a71b5547: Pulling fs layer
-37a723b3aa1f: Waiting
-f4f396e2a13c: Pulling fs layer
-715e7447db74: Waiting
-216d1db34533: Waiting
-8686952b24c9: Pulling fs layer
-f4acfa6f0a3b: Waiting
-aa7bb414b352: Pulling fs layer
-bfddaa4d7691: Waiting
-7356ee5a7511: Waiting
-ba19f2c8bbca: Pulling fs layer
-647dc2a07a9e: Waiting
-f7064d95f7ff: Waiting
-60c578a10d36: Waiting
-20849f1c5880: Pulling fs layer
-8273a72142be: Waiting
-461af62caab8: Pulling fs layer
-44c16e791e98: Waiting
-20e9394e1dbf: Pulling fs layer
-bb75a71b5547: Waiting
-e4586661efbd: Pulling fs layer
-85e36933438e: Pulling fs layer
-f4f396e2a13c: Waiting
-acd0c1248e5f: Pulling fs layer
-8686952b24c9: Waiting
-aa7bb414b352: Waiting
-62be234b5708: Pulling fs layer
-814f1c1457d8: Pulling fs layer
-ba19f2c8bbca: Waiting
-20849f1c5880: Waiting
-024e41362ae2: Pulling fs layer
-e4586661efbd: Waiting
-85e36933438e: Waiting
-20e9394e1dbf: Waiting
-15dac14750c7: Pulling fs layer
-461af62caab8: Waiting
-acd0c1248e5f: Waiting
-4f4fb700ef54: Pulling fs layer
-cd33964f6b2e: Pulling fs layer
-62be234b5708: Waiting
-814f1c1457d8: Waiting
-024e41362ae2: Waiting
-4f4fb700ef54: Waiting
-15dac14750c7: Waiting
-01b54dcfd268: Pulling fs layer
-cf24be4f0622: Pulling fs layer
-cd33964f6b2e: Waiting
-01b54dcfd268: Waiting
-cf24be4f0622: Waiting
-55a738a15540: Verifying Checksum
-55a738a15540: Download complete
-e19cf0706c62: Verifying Checksum
-e19cf0706c62: Download complete
-6f7e04815d7e: Verifying Checksum
-6f7e04815d7e: Download complete
-80bce60046fa: Verifying Checksum
-80bce60046fa: Download complete
-37a723b3aa1f: Verifying Checksum
-37a723b3aa1f: Download complete
-90f40d7110f1: Verifying Checksum
-90f40d7110f1: Download complete
-234688199b08: Verifying Checksum
-234688199b08: Download complete
-80bce60046fa: Pull complete
-55a738a15540: Pull complete
-e19cf0706c62: Pull complete
-de4cdd6c27d1: Pull complete
-216d1db34533: Download complete
-90f40d7110f1: Pull complete
-6f7e04815d7e: Pull complete
-234688199b08: Pull complete
-37a723b3aa1f: Pull complete
-647dc2a07a9e: Verifying Checksum
-647dc2a07a9e: Download complete
-715e7447db74: Verifying Checksum
-715e7447db74: Download complete
-60c578a10d36: Verifying Checksum
-60c578a10d36: Download complete
-bfddaa4d7691: Verifying Checksum
-bfddaa4d7691: Download complete
-7356ee5a7511: Verifying Checksum
-7356ee5a7511: Download complete
-8273a72142be: Verifying Checksum
-8273a72142be: Download complete
-715e7447db74: Pull complete
-216d1db34533: Pull complete
-44c16e791e98: Verifying Checksum
-44c16e791e98: Download complete
-bb75a71b5547: Download complete
-f4acfa6f0a3b: Verifying Checksum
-f4acfa6f0a3b: Download complete
-8686952b24c9: Verifying Checksum
-8686952b24c9: Download complete
-f7064d95f7ff: Verifying Checksum
-f7064d95f7ff: Download complete
-f4f396e2a13c: Verifying Checksum
-f4f396e2a13c: Download complete
-aa7bb414b352: Verifying Checksum
-aa7bb414b352: Download complete
-20849f1c5880: Verifying Checksum
-20849f1c5880: Download complete
-461af62caab8: Verifying Checksum
-461af62caab8: Download complete
-20e9394e1dbf: Verifying Checksum
-20e9394e1dbf: Download complete
-bfddaa4d7691: Pull complete
-ba19f2c8bbca: Verifying Checksum
-ba19f2c8bbca: Download complete
-e4586661efbd: Verifying Checksum
-e4586661efbd: Download complete
-85e36933438e: Verifying Checksum
-85e36933438e: Download complete
-62be234b5708: Verifying Checksum
-62be234b5708: Download complete
-acd0c1248e5f: Verifying Checksum
-acd0c1248e5f: Download complete
-647dc2a07a9e: Pull complete
-814f1c1457d8: Verifying Checksum
-814f1c1457d8: Download complete
-15dac14750c7: Verifying Checksum
-15dac14750c7: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-60c578a10d36: Pull complete
-024e41362ae2: Verifying Checksum
-024e41362ae2: Download complete
-cd33964f6b2e: Download complete
-cf24be4f0622: Verifying Checksum
-cf24be4f0622: Download complete
-f4acfa6f0a3b: Pull complete
-7356ee5a7511: Pull complete
-f7064d95f7ff: Pull complete
-8273a72142be: Pull complete
-44c16e791e98: Pull complete
-bb75a71b5547: Pull complete
-f4f396e2a13c: Pull complete
-8686952b24c9: Pull complete
-aa7bb414b352: Pull complete
-ba19f2c8bbca: Pull complete
-20849f1c5880: Pull complete
-461af62caab8: Pull complete
-20e9394e1dbf: Pull complete
-e4586661efbd: Pull complete
-85e36933438e: Pull complete
-acd0c1248e5f: Pull complete
-62be234b5708: Pull complete
-814f1c1457d8: Pull complete
-024e41362ae2: Pull complete
-15dac14750c7: Pull complete
-4f4fb700ef54: Pull complete
-cd33964f6b2e: Pull complete
-01b54dcfd268: Verifying Checksum
-01b54dcfd268: Download complete
-01b54dcfd268: Pull complete
-cf24be4f0622: Pull complete
-Digest: sha256:719fac24f2a6f869c252345ee9495de1f135f04bd91c798743708d81190a7a24
-Status: Downloaded newer image for n132/arvo:35209-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 1137026246
+INFO: Seed: 1974673591
 INFO: Loaded 1 modules   (30808 inline 8-bit counters): 30808 [0xb26dc0, 0xb2e618), 
 INFO: Loaded 1 PC tables (30808 PCs): 30808 [0x83ea20,0x8b6fa0), 
 /out/simple_compress: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fb7783f8392 at pc 0x0000006ef24d bp 0x7fffccbeb2b0 sp 0x7fffccbeb2a8
-WRITE of size 1 at 0x7fb7783f8392 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7532ef9ad392 at pc 0x0000006ef24d bp 0x7ffc93bdc430 sp 0x7ffc93bdc428
+WRITE of size 1 at 0x7532ef9ad392 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x6ef24c in FSE_writeNCount_generic /src/zstd/tests/fuzz/../../lib/compress/fse_compress.c:270:20
     #1 0x6ee9f8 in FSE_writeNCount /src/zstd/tests/fuzz/../../lib/compress/fse_compress.c
@@ -212,11 +31,11 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #20 0x443712 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #21 0x4493e7 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #22 0x473052 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #23 0x7fb77850f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #23 0x7532efac483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #24 0x41eac8 in _start (/out/simple_compress+0x41eac8)
 
 DEDUP_TOKEN: FSE_writeNCount_generic--FSE_writeNCount--HUF_compressWeights
-0x7fb7783f8392 is located 7 bytes to the right of 252811-byte region [0x7fb7783ba800,0x7fb7783f838b)
+0x7532ef9ad392 is located 7 bytes to the right of 252811-byte region [0x7532ef96f800,0x7532ef9ad38b)
 allocated by thread T0 here:
     #0 0x52195d in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0x55aaa7 in FUZZ_malloc /src/zstd/tests/fuzz/fuzz_helpers.c:19:27
@@ -225,22 +44,22 @@ allocated by thread T0 here:
     #4 0x443712 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #5 0x4493e7 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #6 0x473052 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x7fb77850f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x7532efac483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--FUZZ_malloc--LLVMFuzzerTestOneInput
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/zstd/tests/fuzz/../../lib/compress/fse_compress.c:270:20 in FSE_writeNCount_generic
 Shadow bytes around the buggy address:
-  0x0ff76f077020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ff76f077030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ff76f077040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ff76f077050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ff76f077060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0ff76f077070: 00 03[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0ff76f077080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0ff76f077090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0ff76f0770a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0ff76f0770b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0ff76f0770c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ea6ddf2da20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ea6ddf2da30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ea6ddf2da40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ea6ddf2da50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ea6ddf2da60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ea6ddf2da70: 00 03[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ea6ddf2da80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ea6ddf2da90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ea6ddf2daa0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ea6ddf2dab0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ea6ddf2dac0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

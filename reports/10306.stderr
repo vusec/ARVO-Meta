@@ -1,146 +1,3 @@
-Unable to find image 'n132/arvo:10306-vul' locally
-10306-vul: Pulling from n132/arvo
-3620e2d282dc: Already exists
-ef22f5e4b3b2: Already exists
-99f229f854da: Already exists
-4fe433abe16a: Already exists
-c9b72a16d85e: Already exists
-de599d649ace: Already exists
-b095926b8e5d: Already exists
-2cb899c88361: Already exists
-e3e971831feb: Already exists
-2b6c6771b90f: Already exists
-7d225808fe07: Already exists
-9b379b826590: Already exists
-b2a75a6e4d30: Already exists
-3dd7d3726d39: Already exists
-e060c62c016e: Already exists
-0482579cc5a5: Already exists
-e8b35572acfa: Pulling fs layer
-19b3c90cca08: Pulling fs layer
-96f6d341a373: Pulling fs layer
-38d6dd49361f: Pulling fs layer
-137e332d7074: Pulling fs layer
-c057daa20488: Pulling fs layer
-0689336a0ed7: Pulling fs layer
-feb68d5f831d: Pulling fs layer
-f66dde6c436f: Pulling fs layer
-60acc72d3cc4: Pulling fs layer
-c04d55a9b5b9: Pulling fs layer
-840f09fb6ee9: Pulling fs layer
-5bfc9348cd11: Pulling fs layer
-766a97df3a97: Pulling fs layer
-bd64a6f7c9e1: Pulling fs layer
-94afa0f45fdb: Pulling fs layer
-e96c8dd0585b: Pulling fs layer
-c6ddf65fdd81: Pulling fs layer
-ad7f64cb91e1: Pulling fs layer
-0da033a9b9fc: Pulling fs layer
-d67ecc2c8b24: Pulling fs layer
-5b5d76180407: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-c5181dbb6f10: Pulling fs layer
-c1e327c4f8c6: Pulling fs layer
-f92be0d25e22: Pulling fs layer
-c057daa20488: Waiting
-0689336a0ed7: Waiting
-feb68d5f831d: Waiting
-f66dde6c436f: Waiting
-60acc72d3cc4: Waiting
-c04d55a9b5b9: Waiting
-840f09fb6ee9: Waiting
-5bfc9348cd11: Waiting
-5b5d76180407: Waiting
-d67ecc2c8b24: Waiting
-766a97df3a97: Waiting
-4f4fb700ef54: Waiting
-bd64a6f7c9e1: Waiting
-c5181dbb6f10: Waiting
-94afa0f45fdb: Waiting
-e96c8dd0585b: Waiting
-c1e327c4f8c6: Waiting
-c6ddf65fdd81: Waiting
-ad7f64cb91e1: Waiting
-0da033a9b9fc: Waiting
-f92be0d25e22: Waiting
-38d6dd49361f: Waiting
-137e332d7074: Waiting
-19b3c90cca08: Verifying Checksum
-19b3c90cca08: Download complete
-e8b35572acfa: Verifying Checksum
-e8b35572acfa: Download complete
-96f6d341a373: Verifying Checksum
-96f6d341a373: Download complete
-c057daa20488: Verifying Checksum
-c057daa20488: Download complete
-0689336a0ed7: Verifying Checksum
-0689336a0ed7: Download complete
-137e332d7074: Verifying Checksum
-137e332d7074: Download complete
-f66dde6c436f: Download complete
-feb68d5f831d: Verifying Checksum
-feb68d5f831d: Download complete
-c04d55a9b5b9: Verifying Checksum
-c04d55a9b5b9: Download complete
-e8b35572acfa: Pull complete
-19b3c90cca08: Pull complete
-60acc72d3cc4: Verifying Checksum
-60acc72d3cc4: Download complete
-5bfc9348cd11: Verifying Checksum
-5bfc9348cd11: Download complete
-840f09fb6ee9: Verifying Checksum
-840f09fb6ee9: Download complete
-bd64a6f7c9e1: Verifying Checksum
-bd64a6f7c9e1: Download complete
-96f6d341a373: Pull complete
-94afa0f45fdb: Verifying Checksum
-94afa0f45fdb: Download complete
-766a97df3a97: Download complete
-c6ddf65fdd81: Verifying Checksum
-c6ddf65fdd81: Download complete
-ad7f64cb91e1: Verifying Checksum
-ad7f64cb91e1: Download complete
-e96c8dd0585b: Verifying Checksum
-e96c8dd0585b: Download complete
-d67ecc2c8b24: Verifying Checksum
-5b5d76180407: Verifying Checksum
-5b5d76180407: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-c5181dbb6f10: Verifying Checksum
-c5181dbb6f10: Download complete
-38d6dd49361f: Verifying Checksum
-38d6dd49361f: Download complete
-f92be0d25e22: Download complete
-0da033a9b9fc: Verifying Checksum
-0da033a9b9fc: Download complete
-38d6dd49361f: Pull complete
-137e332d7074: Pull complete
-c057daa20488: Pull complete
-0689336a0ed7: Pull complete
-feb68d5f831d: Pull complete
-f66dde6c436f: Pull complete
-60acc72d3cc4: Pull complete
-c04d55a9b5b9: Pull complete
-840f09fb6ee9: Pull complete
-5bfc9348cd11: Pull complete
-766a97df3a97: Pull complete
-bd64a6f7c9e1: Pull complete
-94afa0f45fdb: Pull complete
-e96c8dd0585b: Pull complete
-c6ddf65fdd81: Pull complete
-ad7f64cb91e1: Pull complete
-0da033a9b9fc: Pull complete
-d67ecc2c8b24: Pull complete
-5b5d76180407: Pull complete
-4f4fb700ef54: Pull complete
-c5181dbb6f10: Pull complete
-c1e327c4f8c6: Verifying Checksum
-c1e327c4f8c6: Download complete
-c1e327c4f8c6: Pull complete
-f92be0d25e22: Pull complete
-Digest: sha256:deaf9ae198720ae02b70ef08c3e0aaf3ffe0c8f91b3b0e59dda84b5326967f53
-Status: Downloaded newer image for n132/arvo:10306-vul
 ======================= INFO =========================
 This binary is built for AFL-fuzz.
 To run the target function on individual input(s) execute this:
@@ -152,8 +9,8 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x74c3d04e84c0 at pc 0x0000006ca63a bp 0x7fff82cb6a10 sp 0x7fff82cb6a08
-WRITE of size 8 at 0x74c3d04e84c0 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7210728814c0 at pc 0x0000006ca63a bp 0x7ffd5b69af30 sp 0x7ffd5b69af28
+WRITE of size 8 at 0x7210728814c0 thread T0
 SCARINESS: 52 (8-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x6ca639 in TracePoint /src/graphicsmagick/magick/render.c:6810:30
     #1 0x6cb5cf in TraceEllipse /src/graphicsmagick/magick/render.c:6235:5
@@ -166,11 +23,11 @@ SCARINESS: 52 (8-byte-write-heap-buffer-overflow-far-from-bounds)
     #8 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #9 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #10 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #11 0x74c3cf52483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7210718bd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: TracePoint--TraceEllipse--TraceRoundRectangle
-0x74c3d04e84c0 is located 16 bytes to the right of 314544-byte region [0x74c3d049b800,0x74c3d04e84b0)
+0x7210728814c0 is located 16 bytes to the right of 314544-byte region [0x721072834800,0x7210728814b0)
 allocated by thread T0 here:
     #0 0x4ebc57 in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:121
     #1 0x6b8779 in DrawImage /src/graphicsmagick/magick/render.c:2390:5
@@ -181,22 +38,22 @@ allocated by thread T0 here:
     #6 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #8 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #9 0x74c3cf52483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7210718bd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--DrawImage--ReadMVGImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:6810:30 in TracePoint
 Shadow bytes around the buggy address:
-  0x0e98fa095040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e98fa095050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e98fa095060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e98fa095070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e98fa095080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0e98fa095090: 00 00 00 00 00 00 fa fa[fa]fa fa fa fa fa fa fa
-  0x0e98fa0950a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e98fa0950b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e98fa0950c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e98fa0950d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e98fa0950e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e428e508240: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e428e508250: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e428e508260: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e428e508270: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e428e508280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e428e508290: 00 00 00 00 00 00 fa fa[fa]fa fa fa fa fa fa fa
+  0x0e428e5082a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e428e5082b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e428e5082c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e428e5082d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e428e5082e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

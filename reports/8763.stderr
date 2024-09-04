@@ -1,151 +1,10 @@
-Unable to find image 'n132/arvo:8763-vul' locally
-8763-vul: Pulling from n132/arvo
-297061f60c36: Already exists
-e9ccef17b516: Already exists
-dbc33716854d: Already exists
-8fe36b178d25: Already exists
-686596545a94: Already exists
-dcd5c3fae03a: Already exists
-b185ad8a5803: Already exists
-691c44d8650f: Already exists
-eb38715ac26f: Already exists
-d22955ec0608: Already exists
-a96397e1b962: Already exists
-bd50ea5a7863: Already exists
-8f3d86761d2c: Already exists
-ada9e45150f2: Already exists
-cb78044c2fe3: Already exists
-c95372feab6c: Already exists
-7bd41efe42bc: Pulling fs layer
-4a8bbe8bfd8a: Pulling fs layer
-b4bcf074c7ff: Pulling fs layer
-c92a4cf27753: Pulling fs layer
-71de747619bf: Pulling fs layer
-dc9b8c61df6d: Pulling fs layer
-e8bcd92deeb3: Pulling fs layer
-7886f6fa0a2a: Pulling fs layer
-72391a4587dc: Pulling fs layer
-f60b3109706e: Pulling fs layer
-4570be4b39dc: Pulling fs layer
-29cb0874d3bd: Pulling fs layer
-8958090e8a9a: Pulling fs layer
-71de747619bf: Waiting
-a27e4787b9a3: Pulling fs layer
-ebb88449c25a: Pulling fs layer
-dc9b8c61df6d: Waiting
-e8bcd92deeb3: Waiting
-ed647bbde6ce: Pulling fs layer
-ab51e6a4ba69: Pulling fs layer
-9b363242dbd0: Pulling fs layer
-45347660827a: Pulling fs layer
-67ea18e1f316: Pulling fs layer
-e13164950634: Pulling fs layer
-3550148930ad: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-6e5ea918641f: Pulling fs layer
-7cc0fdbb5a63: Pulling fs layer
-d8438743eaf7: Pulling fs layer
-7886f6fa0a2a: Waiting
-72391a4587dc: Waiting
-f60b3109706e: Waiting
-c92a4cf27753: Waiting
-4570be4b39dc: Waiting
-29cb0874d3bd: Waiting
-e13164950634: Waiting
-3550148930ad: Waiting
-8958090e8a9a: Waiting
-a27e4787b9a3: Waiting
-4f4fb700ef54: Waiting
-d8438743eaf7: Waiting
-ebb88449c25a: Waiting
-6e5ea918641f: Waiting
-ed647bbde6ce: Waiting
-ab51e6a4ba69: Waiting
-7cc0fdbb5a63: Waiting
-9b363242dbd0: Waiting
-45347660827a: Waiting
-67ea18e1f316: Waiting
-4a8bbe8bfd8a: Verifying Checksum
-4a8bbe8bfd8a: Download complete
-b4bcf074c7ff: Verifying Checksum
-b4bcf074c7ff: Download complete
-71de747619bf: Verifying Checksum
-71de747619bf: Download complete
-7bd41efe42bc: Verifying Checksum
-7bd41efe42bc: Download complete
-dc9b8c61df6d: Verifying Checksum
-dc9b8c61df6d: Download complete
-e8bcd92deeb3: Download complete
-72391a4587dc: Download complete
-7886f6fa0a2a: Verifying Checksum
-7886f6fa0a2a: Download complete
-f60b3109706e: Verifying Checksum
-f60b3109706e: Download complete
-4570be4b39dc: Verifying Checksum
-4570be4b39dc: Download complete
-29cb0874d3bd: Verifying Checksum
-29cb0874d3bd: Download complete
-8958090e8a9a: Verifying Checksum
-8958090e8a9a: Download complete
-ebb88449c25a: Download complete
-7bd41efe42bc: Pull complete
-4a8bbe8bfd8a: Pull complete
-c92a4cf27753: Verifying Checksum
-c92a4cf27753: Download complete
-a27e4787b9a3: Verifying Checksum
-a27e4787b9a3: Download complete
-ed647bbde6ce: Verifying Checksum
-ed647bbde6ce: Download complete
-ab51e6a4ba69: Verifying Checksum
-ab51e6a4ba69: Download complete
-b4bcf074c7ff: Pull complete
-9b363242dbd0: Verifying Checksum
-9b363242dbd0: Download complete
-45347660827a: Verifying Checksum
-45347660827a: Download complete
-3550148930ad: Verifying Checksum
-3550148930ad: Download complete
-e13164950634: Verifying Checksum
-e13164950634: Download complete
-6e5ea918641f: Verifying Checksum
-6e5ea918641f: Download complete
-67ea18e1f316: Verifying Checksum
-67ea18e1f316: Download complete
-d8438743eaf7: Verifying Checksum
-d8438743eaf7: Download complete
-c92a4cf27753: Pull complete
-71de747619bf: Pull complete
-dc9b8c61df6d: Pull complete
-e8bcd92deeb3: Pull complete
-7886f6fa0a2a: Pull complete
-72391a4587dc: Pull complete
-f60b3109706e: Pull complete
-4570be4b39dc: Pull complete
-29cb0874d3bd: Pull complete
-8958090e8a9a: Pull complete
-a27e4787b9a3: Pull complete
-ebb88449c25a: Pull complete
-ed647bbde6ce: Pull complete
-ab51e6a4ba69: Pull complete
-9b363242dbd0: Pull complete
-45347660827a: Pull complete
-67ea18e1f316: Pull complete
-e13164950634: Pull complete
-3550148930ad: Pull complete
-4f4fb700ef54: Pull complete
-6e5ea918641f: Pull complete
-7cc0fdbb5a63: Download complete
-7cc0fdbb5a63: Pull complete
-d8438743eaf7: Pull complete
-Digest: sha256:202e1ff15ac5ce3b370ef6a8567705d04b733a64560f8436b80f6ede2bbb5751
-Status: Downloaded newer image for n132/arvo:8763-vul
-INFO: Seed: 372714799
+INFO: Seed: 1849920857
 INFO: Loaded 1 modules   (74411 inline 8-bit counters): 74411 [0x1353f08, 0x13661b3), 
 INFO: Loaded 1 PC tables (74411 PCs): 74411 [0x13661b8,0x1488c68), 
 /out/coder_PNG32_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000002be at pc 0x0000007d1749 bp 0x7ffd15aac0b0 sp 0x7ffd15aac0a8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000002be at pc 0x0000007d1749 bp 0x7fff9e892230 sp 0x7fff9e892228
 READ of size 1 at 0x6040000002be thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x7d1748 in png_read_raw_profile /src/graphicsmagick/coders/png.c:1161:10
@@ -159,7 +18,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #8 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #9 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #10 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #11 0x70b9a58a983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7661c137083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41dd88 in _start (/out/coder_PNG32_fuzzer+0x41dd88)
 
 DEDUP_TOKEN: png_read_raw_profile--ReadOnePNGImage--ReadPNGImage
@@ -179,7 +38,7 @@ allocated by thread T0 here:
     #11 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #12 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #13 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #14 0x70b9a58a983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x7661c137083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--png_set_text_2--png_handle_tEXt
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/png.c:1161:10 in png_read_raw_profile

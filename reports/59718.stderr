@@ -1,89 +1,11 @@
-Unable to find image 'n132/arvo:59718-vul' locally
-59718-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-5e1fe8bf7ee8: Already exists
-f45ed49201eb: Already exists
-1ae1aec1aa24: Already exists
-20cb60261ca0: Already exists
-80ef62ed2551: Already exists
-26e5cbf8454a: Already exists
-332e3b8b7739: Already exists
-3ce29b269480: Already exists
-5e205551e2c4: Already exists
-cd2c59937fbd: Already exists
-e69c067c7196: Already exists
-cd3db4afd969: Already exists
-6518ef711a17: Already exists
-a43451488147: Already exists
-62c602a5c6d4: Already exists
-fc13decaafa6: Already exists
-c39a4a6b455d: Already exists
-2b56e4b36560: Already exists
-aca3089efe23: Already exists
-9d31995b98c4: Already exists
-8edf67cf860c: Already exists
-b8253eb9b082: Already exists
-2ff49a9604f7: Already exists
-dc48b9bb5d7f: Already exists
-77ca28b90fe1: Already exists
-5e62dcc47d96: Already exists
-91167f615f66: Pulling fs layer
-596f7c9b4150: Pulling fs layer
-acc1f90e8adb: Pulling fs layer
-a9807d95e724: Pulling fs layer
-d7156b29d007: Pulling fs layer
-3c22f08ae163: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-1743f8301405: Pulling fs layer
-9ff53670e67a: Pulling fs layer
-5c41477c129a: Pulling fs layer
-a9807d95e724: Waiting
-d7156b29d007: Waiting
-3c22f08ae163: Waiting
-4f4fb700ef54: Waiting
-1743f8301405: Waiting
-9ff53670e67a: Waiting
-5c41477c129a: Waiting
-596f7c9b4150: Verifying Checksum
-596f7c9b4150: Download complete
-acc1f90e8adb: Verifying Checksum
-acc1f90e8adb: Download complete
-d7156b29d007: Verifying Checksum
-d7156b29d007: Download complete
-a9807d95e724: Verifying Checksum
-a9807d95e724: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-3c22f08ae163: Verifying Checksum
-3c22f08ae163: Download complete
-91167f615f66: Verifying Checksum
-91167f615f66: Download complete
-1743f8301405: Verifying Checksum
-1743f8301405: Download complete
-5c41477c129a: Verifying Checksum
-5c41477c129a: Download complete
-9ff53670e67a: Verifying Checksum
-9ff53670e67a: Download complete
-91167f615f66: Pull complete
-596f7c9b4150: Pull complete
-acc1f90e8adb: Pull complete
-a9807d95e724: Pull complete
-d7156b29d007: Pull complete
-3c22f08ae163: Pull complete
-4f4fb700ef54: Pull complete
-1743f8301405: Pull complete
-9ff53670e67a: Pull complete
-5c41477c129a: Pull complete
-Digest: sha256:9a75ee506420823349ddbbefdb57de178f18eee89e8f63f5adf063f66f85034c
-Status: Downloaded newer image for n132/arvo:59718-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 505471492
+INFO: Seed: 2166544719
 INFO: Loaded 1 modules   (51765 inline 8-bit counters): 51765 [0x873c520, 0x8748f55), 
 INFO: Loaded 1 PC tables (51765 PCs): 51765 [0x862e43c,0x86935e4), 
 /out/html: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x085cb941 at pc 0x0834c20c bp 0xffb8a6c8 sp 0xffb8a6c0
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x085cb941 at pc 0x0834c20c bp 0xfff37c68 sp 0xfff37c60
 READ of size 1 at 0x085cb941 thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x834c20b in htmlParseHTMLAttribute /src/libxml2/HTMLparser.c:2759:13
@@ -100,7 +22,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #11 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #12 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #13 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #14 0xea53fed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #14 0xf1ec6ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #15 0x8077a55 in _start (/out/html+0x8077a55)
 
 DEDUP_TOKEN: htmlParseHTMLAttribute--htmlParseAttValue--htmlParseAttribute

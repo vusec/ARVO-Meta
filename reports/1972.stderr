@@ -1,92 +1,12 @@
-Unable to find image 'n132/arvo:1972-vul' locally
-1972-vul: Pulling from n132/arvo
-7608715873ec: Already exists
-52cafbddcc36: Already exists
-aec666517c96: Already exists
-13e87697aa95: Already exists
-ca00002583cc: Already exists
-e5244b92b1dc: Already exists
-466e870a0a46: Already exists
-afa0989f744f: Already exists
-d23bebd2e2af: Already exists
-00c4e40358b9: Already exists
-22eb436eefc9: Already exists
-dded6ff2558f: Already exists
-d900970ee7e5: Already exists
-f5bd28566a88: Already exists
-b28a5115b987: Already exists
-3131de6c7482: Already exists
-fac4bbfd5ccb: Already exists
-5c88b316b8c0: Already exists
-ee5310633a0d: Already exists
-ac2778ddb0c1: Already exists
-b80ee008ca27: Already exists
-6d688883df03: Already exists
-7c423bcd2be1: Already exists
-f79b3ffc9035: Already exists
-f6ac97a25757: Already exists
-7ca36b00305b: Already exists
-ba3d9e80bd49: Already exists
-97506478b7db: Already exists
-514e40a45fd9: Already exists
-02ff946d53ec: Already exists
-bb8d012f15f6: Pulling fs layer
-4380aca5ccf7: Pulling fs layer
-9bed89ffa27f: Pulling fs layer
-199dc836e5c2: Pulling fs layer
-9eaae5484381: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-8d3466f39a77: Pulling fs layer
-623a7f967c5f: Pulling fs layer
-f162dfe67215: Pulling fs layer
-31b509c950d9: Pulling fs layer
-199dc836e5c2: Waiting
-9eaae5484381: Waiting
-8d3466f39a77: Waiting
-623a7f967c5f: Waiting
-4f4fb700ef54: Waiting
-f162dfe67215: Waiting
-31b509c950d9: Waiting
-4380aca5ccf7: Verifying Checksum
-4380aca5ccf7: Download complete
-9bed89ffa27f: Verifying Checksum
-9bed89ffa27f: Download complete
-9eaae5484381: Verifying Checksum
-9eaae5484381: Download complete
-bb8d012f15f6: Verifying Checksum
-bb8d012f15f6: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-199dc836e5c2: Verifying Checksum
-199dc836e5c2: Download complete
-623a7f967c5f: Download complete
-8d3466f39a77: Verifying Checksum
-8d3466f39a77: Download complete
-31b509c950d9: Verifying Checksum
-31b509c950d9: Download complete
-f162dfe67215: Verifying Checksum
-f162dfe67215: Download complete
-bb8d012f15f6: Pull complete
-4380aca5ccf7: Pull complete
-9bed89ffa27f: Pull complete
-199dc836e5c2: Pull complete
-9eaae5484381: Pull complete
-4f4fb700ef54: Pull complete
-8d3466f39a77: Pull complete
-623a7f967c5f: Pull complete
-f162dfe67215: Pull complete
-31b509c950d9: Pull complete
-Digest: sha256:7b725b749870803ad744728cef15b9c164d627ff8036b9f2467b46549aa36e53
-Status: Downloaded newer image for n132/arvo:1972-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3664672620
+INFO: Seed: 1827169994
 INFO: Loaded 1 modules   (56424 inline 8-bit counters): 56424 [0xb4d310, 0xb5af78), 
 INFO: Loaded 1 PC tables (56424 PCs): 56424 [0x9b68e0,0xa92f60), 
 /out/libxml2_xml_read_memory_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x70b833bd0c08 at pc 0x00000048ac57 bp 0x7ffe1c68ae50 sp 0x7ffe1c68a5f8
-WRITE of size 37 at 0x70b833bd0c08 thread T0
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x71da845b8c08 at pc 0x00000048ac57 bp 0x7fffaf5a6570 sp 0x7fffaf5a5d18
+WRITE of size 37 at 0x71da845b8c08 thread T0
 SCARINESS: 60 (multi-byte-write-stack-buffer-overflow)
     #0 0x48ac56 in strcat /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:378:7
     #1 0x64b872 in xmlSnprintfElementContent /src/libxml2/valid.c:1279:3
@@ -174,11 +94,11 @@ SCARINESS: 60 (multi-byte-write-stack-buffer-overflow)
     #83 0x4e9f62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #84 0x4ef80c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #85 0x518d42 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #86 0x70b834108082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #86 0x71da849be082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #87 0x41f88d in _start (/out/libxml2_xml_read_memory_fuzzer+0x41f88d)
 
 DEDUP_TOKEN: strcat--xmlSnprintfElementContent--xmlSnprintfElementContent
-Address 0x70b833bd0c08 is located in stack of thread T0 at offset 5128 in frame
+Address 0x71da845b8c08 is located in stack of thread T0 at offset 5128 in frame
     #0 0x66688f in xmlValidateElementContent /src/libxml2/valid.c:5231
 
 DEDUP_TOKEN: xmlValidateElementContent
@@ -190,17 +110,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:378:7 in strcat
 Shadow bytes around the buggy address:
-  0x0e1786772130: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e1786772140: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e1786772150: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e1786772160: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e1786772170: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0e1786772180: 00[f2]f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
-  0x0e1786772190: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
-  0x0e17867721a0: f2 f2 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e17867721b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e17867721c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e17867721d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af130: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af140: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af150: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af160: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af170: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e3bd08af180: 00[f2]f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x0e3bd08af190: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x0e3bd08af1a0: f2 f2 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af1b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af1c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e3bd08af1d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

@@ -1,112 +1,10 @@
-Unable to find image 'n132/arvo:14368-vul' locally
-14368-vul: Pulling from n132/arvo
-34667c7e4631: Already exists
-d18d76a881a4: Already exists
-119c7358fbfc: Already exists
-2aaf13f3eff0: Already exists
-5d91fa3ee8a5: Pulling fs layer
-7a645d4a323d: Pulling fs layer
-d5ce375e7c89: Pulling fs layer
-ca7413e7c2ac: Pulling fs layer
-80b766c1fa8d: Pulling fs layer
-1164b5047533: Pulling fs layer
-5cf8b382d474: Pulling fs layer
-8049d167a8d1: Pulling fs layer
-6b65bbf38467: Pulling fs layer
-99acaea223d0: Pulling fs layer
-ceebcb202a97: Pulling fs layer
-458168a75803: Pulling fs layer
-306d03fbb90c: Pulling fs layer
-1164b5047533: Waiting
-5cf8b382d474: Waiting
-3fdb0847cd52: Pulling fs layer
-768e9ec526ca: Pulling fs layer
-3e5fcbe6aec7: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-ca50d62cdf6d: Pulling fs layer
-bc97f4a73059: Pulling fs layer
-6626f8bc8ab0: Pulling fs layer
-ceebcb202a97: Waiting
-8049d167a8d1: Waiting
-458168a75803: Waiting
-306d03fbb90c: Waiting
-6b65bbf38467: Waiting
-3fdb0847cd52: Waiting
-768e9ec526ca: Waiting
-99acaea223d0: Waiting
-3e5fcbe6aec7: Waiting
-4f4fb700ef54: Waiting
-ca50d62cdf6d: Waiting
-ca7413e7c2ac: Waiting
-bc97f4a73059: Waiting
-6626f8bc8ab0: Waiting
-80b766c1fa8d: Waiting
-7a645d4a323d: Download complete
-d5ce375e7c89: Verifying Checksum
-d5ce375e7c89: Download complete
-80b766c1fa8d: Download complete
-5d91fa3ee8a5: Verifying Checksum
-5d91fa3ee8a5: Download complete
-5cf8b382d474: Verifying Checksum
-5cf8b382d474: Download complete
-1164b5047533: Verifying Checksum
-1164b5047533: Download complete
-8049d167a8d1: Verifying Checksum
-8049d167a8d1: Download complete
-5d91fa3ee8a5: Pull complete
-7a645d4a323d: Pull complete
-d5ce375e7c89: Pull complete
-99acaea223d0: Verifying Checksum
-99acaea223d0: Download complete
-6b65bbf38467: Verifying Checksum
-6b65bbf38467: Download complete
-ceebcb202a97: Verifying Checksum
-ceebcb202a97: Download complete
-306d03fbb90c: Verifying Checksum
-306d03fbb90c: Download complete
-3fdb0847cd52: Verifying Checksum
-3fdb0847cd52: Download complete
-768e9ec526ca: Verifying Checksum
-768e9ec526ca: Download complete
-ca7413e7c2ac: Verifying Checksum
-ca7413e7c2ac: Download complete
-4f4fb700ef54: Download complete
-3e5fcbe6aec7: Verifying Checksum
-3e5fcbe6aec7: Download complete
-458168a75803: Verifying Checksum
-458168a75803: Download complete
-ca50d62cdf6d: Verifying Checksum
-ca50d62cdf6d: Download complete
-6626f8bc8ab0: Verifying Checksum
-6626f8bc8ab0: Download complete
-ca7413e7c2ac: Pull complete
-80b766c1fa8d: Pull complete
-1164b5047533: Pull complete
-5cf8b382d474: Pull complete
-8049d167a8d1: Pull complete
-6b65bbf38467: Pull complete
-99acaea223d0: Pull complete
-ceebcb202a97: Pull complete
-458168a75803: Pull complete
-306d03fbb90c: Pull complete
-bc97f4a73059: Verifying Checksum
-bc97f4a73059: Download complete
-3fdb0847cd52: Pull complete
-768e9ec526ca: Pull complete
-3e5fcbe6aec7: Pull complete
-4f4fb700ef54: Pull complete
-ca50d62cdf6d: Pull complete
-bc97f4a73059: Pull complete
-6626f8bc8ab0: Pull complete
-Digest: sha256:91de838126148d066a6987f45f8767031a518361eea8944f4a2a59a668787794
-Status: Downloaded newer image for n132/arvo:14368-vul
-INFO: Seed: 3151633551
+INFO: Seed: 1884641127
 INFO: Loaded 1 modules   (15933 inline 8-bit counters): 15933 [0x9c6440, 0x9ca27d), 
 INFO: Loaded 1 PC tables (15933 PCs): 15933 [0x721a08,0x75fdd8), 
 /out/stream_decompress: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000000fc at pc 0x00000068a1be bp 0x7fff2493e410 sp 0x7fff2493e408
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000000fc at pc 0x00000068a1be bp 0x7ffd81399150 sp 0x7ffd81399148
 READ of size 4 at 0x6040000000fc thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x68a1bd in MEM_read32 /src/zstd/tests/fuzz/../../lib/common/mem.h:171:14
@@ -121,7 +19,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #9 0x457801 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:286:6
     #10 0x45c5ab in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:715:9
     #11 0x482e02 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #12 0x76fab16e483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x79aeb5b2083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41de28 in _start (/out/stream_decompress+0x41de28)
 
 DEDUP_TOKEN: MEM_read32--ZSTDv05_decodeSequence--ZSTDv05_decompressSequences
@@ -132,7 +30,7 @@ allocated by thread T0 here:
     #2 0x457801 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:286:6
     #3 0x45c5ab in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:715:9
     #4 0x482e02 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #5 0x76fab16e483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x79aeb5b2083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/zstd/tests/fuzz/../../lib/common/mem.h:171:14 in MEM_read32

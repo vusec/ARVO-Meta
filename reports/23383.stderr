@@ -1,170 +1,10 @@
-Unable to find image 'n132/arvo:23383-vul' locally
-23383-vul: Pulling from n132/arvo
-e92ed755c008: Already exists
-b9fd7cb1ff8f: Already exists
-ee690f2d57a1: Already exists
-53e3366ec435: Already exists
-63e7c0e1f466: Pulling fs layer
-a2db896529a8: Pulling fs layer
-1aadbf2b743b: Pulling fs layer
-c47cfe87133d: Pulling fs layer
-d47d661e0346: Pulling fs layer
-54f456767742: Pulling fs layer
-50838dae68b0: Pulling fs layer
-e3dcfa897fac: Pulling fs layer
-a39a6f57d314: Pulling fs layer
-8e5ad5f844bd: Pulling fs layer
-acdc4754fb16: Pulling fs layer
-561d38f2523f: Pulling fs layer
-d89ccc9de79b: Pulling fs layer
-d555683b6ceb: Pulling fs layer
-77f0c8f46b99: Pulling fs layer
-ff650ebce0c0: Pulling fs layer
-82e53dcf5b25: Pulling fs layer
-6cdc92e4034f: Pulling fs layer
-5ac0b8588de6: Pulling fs layer
-7ea325996a10: Pulling fs layer
-e3dcfa897fac: Waiting
-7fed19f021de: Pulling fs layer
-8bcde10b31d0: Pulling fs layer
-a39a6f57d314: Waiting
-dff29815a68f: Pulling fs layer
-c53a6c55d0b3: Pulling fs layer
-8e5ad5f844bd: Waiting
-a1a3cf18028d: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-acdc4754fb16: Waiting
-214abe20ee9d: Pulling fs layer
-561d38f2523f: Waiting
-01b1e920bac9: Pulling fs layer
-b87ab411802c: Pulling fs layer
-cc142e5739a5: Pulling fs layer
-10c383a8fd13: Pulling fs layer
-83864da5ed31: Pulling fs layer
-d89ccc9de79b: Waiting
-d555683b6ceb: Waiting
-77f0c8f46b99: Waiting
-ff650ebce0c0: Waiting
-82e53dcf5b25: Waiting
-6cdc92e4034f: Waiting
-d47d661e0346: Waiting
-c47cfe87133d: Waiting
-50838dae68b0: Waiting
-54f456767742: Waiting
-5ac0b8588de6: Waiting
-dff29815a68f: Waiting
-7ea325996a10: Waiting
-c53a6c55d0b3: Waiting
-7fed19f021de: Waiting
-214abe20ee9d: Waiting
-8bcde10b31d0: Waiting
-a1a3cf18028d: Waiting
-01b1e920bac9: Waiting
-10c383a8fd13: Waiting
-83864da5ed31: Waiting
-b87ab411802c: Waiting
-cc142e5739a5: Waiting
-4f4fb700ef54: Waiting
-a2db896529a8: Verifying Checksum
-a2db896529a8: Download complete
-1aadbf2b743b: Verifying Checksum
-1aadbf2b743b: Download complete
-63e7c0e1f466: Download complete
-d47d661e0346: Verifying Checksum
-d47d661e0346: Download complete
-63e7c0e1f466: Pull complete
-a2db896529a8: Pull complete
-1aadbf2b743b: Pull complete
-50838dae68b0: Download complete
-e3dcfa897fac: Verifying Checksum
-e3dcfa897fac: Download complete
-a39a6f57d314: Verifying Checksum
-a39a6f57d314: Download complete
-54f456767742: Verifying Checksum
-54f456767742: Download complete
-acdc4754fb16: Verifying Checksum
-acdc4754fb16: Download complete
-8e5ad5f844bd: Verifying Checksum
-8e5ad5f844bd: Download complete
-c47cfe87133d: Verifying Checksum
-c47cfe87133d: Download complete
-561d38f2523f: Verifying Checksum
-561d38f2523f: Download complete
-d555683b6ceb: Verifying Checksum
-d555683b6ceb: Download complete
-77f0c8f46b99: Verifying Checksum
-77f0c8f46b99: Download complete
-d89ccc9de79b: Verifying Checksum
-d89ccc9de79b: Download complete
-6cdc92e4034f: Download complete
-5ac0b8588de6: Verifying Checksum
-5ac0b8588de6: Download complete
-82e53dcf5b25: Verifying Checksum
-82e53dcf5b25: Download complete
-ff650ebce0c0: Verifying Checksum
-ff650ebce0c0: Download complete
-7ea325996a10: Verifying Checksum
-7ea325996a10: Download complete
-8bcde10b31d0: Verifying Checksum
-8bcde10b31d0: Download complete
-dff29815a68f: Download complete
-c53a6c55d0b3: Verifying Checksum
-c53a6c55d0b3: Download complete
-a1a3cf18028d: Verifying Checksum
-a1a3cf18028d: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-7fed19f021de: Verifying Checksum
-7fed19f021de: Download complete
-c47cfe87133d: Pull complete
-d47d661e0346: Pull complete
-01b1e920bac9: Verifying Checksum
-01b1e920bac9: Download complete
-cc142e5739a5: Verifying Checksum
-cc142e5739a5: Download complete
-214abe20ee9d: Verifying Checksum
-214abe20ee9d: Download complete
-b87ab411802c: Verifying Checksum
-b87ab411802c: Download complete
-83864da5ed31: Download complete
-10c383a8fd13: Verifying Checksum
-10c383a8fd13: Download complete
-54f456767742: Pull complete
-50838dae68b0: Pull complete
-e3dcfa897fac: Pull complete
-a39a6f57d314: Pull complete
-8e5ad5f844bd: Pull complete
-acdc4754fb16: Pull complete
-561d38f2523f: Pull complete
-d89ccc9de79b: Pull complete
-d555683b6ceb: Pull complete
-77f0c8f46b99: Pull complete
-ff650ebce0c0: Pull complete
-82e53dcf5b25: Pull complete
-6cdc92e4034f: Pull complete
-5ac0b8588de6: Pull complete
-7ea325996a10: Pull complete
-7fed19f021de: Pull complete
-8bcde10b31d0: Pull complete
-dff29815a68f: Pull complete
-c53a6c55d0b3: Pull complete
-a1a3cf18028d: Pull complete
-4f4fb700ef54: Pull complete
-214abe20ee9d: Pull complete
-01b1e920bac9: Pull complete
-b87ab411802c: Pull complete
-cc142e5739a5: Pull complete
-10c383a8fd13: Pull complete
-83864da5ed31: Pull complete
-Digest: sha256:877b508039c872ea32f12f1b6885367838b2e75a8f51015578b85aac76c76d33
-Status: Downloaded newer image for n132/arvo:23383-vul
-INFO: Seed: 1605461567
+INFO: Seed: 1938344026
 INFO: Loaded 1 modules   (17435 inline 8-bit counters): 17435 [0xae67a8, 0xaeabc3), 
 INFO: Loaded 1 PC tables (17435 PCs): 17435 [0x7c4e78,0x809028), 
 /out/libraw_cr2_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000774e7c at pc 0x0000005503a0 bp 0x7ffd973340f0 sp 0x7ffd973340e8
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000774e7c at pc 0x0000005503a0 bp 0x7ffefd327570 sp 0x7ffefd327568
 READ of size 4 at 0x000000774e7c thread T0
 SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #0 0x55039f in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:55:63
@@ -172,7 +12,7 @@ SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #2 0x444cf2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
     #3 0x44ad4e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
     #4 0x4726c2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #5 0x71206a71b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x7850f91a283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #6 0x41f388 in _start (/out/libraw_cr2_fuzzer+0x41f388)
 
 DEDUP_TOKEN: LLVMFuzzerTestOneInput--fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)

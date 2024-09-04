@@ -1,334 +1,68 @@
-Unable to find image 'n132/arvo:43511-vul' locally
-43511-vul: Pulling from n132/arvo
-ea362f368469: Pulling fs layer
-869eb0c9a524: Pulling fs layer
-355b1eeb7496: Pulling fs layer
-f321b54e275c: Pulling fs layer
-874bfe9194ff: Pulling fs layer
-f7abba3c4c22: Pulling fs layer
-48f8c1a219be: Pulling fs layer
-dbe26a6d78be: Pulling fs layer
-b2a1ffc6b4d5: Pulling fs layer
-073ab9652891: Pulling fs layer
-dac232d3a84c: Pulling fs layer
-cfee554867ea: Pulling fs layer
-aa956c5346f0: Pulling fs layer
-aa82b9c13420: Pulling fs layer
-5b50462cf6da: Pulling fs layer
-105f4792bac1: Pulling fs layer
-cfe31e651639: Pulling fs layer
-d65a977c5640: Pulling fs layer
-e3e30f9ac332: Pulling fs layer
-bc86a1d70d0e: Pulling fs layer
-6ba7025c4cdd: Pulling fs layer
-450d7bbb7991: Pulling fs layer
-9a2603e57e7d: Pulling fs layer
-4d38cf3ce793: Pulling fs layer
-5a8f38d2e60a: Pulling fs layer
-717d94ec7c3c: Pulling fs layer
-f321b54e275c: Waiting
-8990c882edd5: Pulling fs layer
-63cbb49052d1: Pulling fs layer
-874bfe9194ff: Waiting
-60bd8f84355e: Pulling fs layer
-48f8c1a219be: Waiting
-dac232d3a84c: Waiting
-f7abba3c4c22: Waiting
-2780c6584e6e: Pulling fs layer
-dbe26a6d78be: Waiting
-cfee554867ea: Waiting
-b2a1ffc6b4d5: Waiting
-073ab9652891: Waiting
-aa956c5346f0: Waiting
-6df7f481b80e: Pulling fs layer
-105f4792bac1: Waiting
-b4a0f10a4cbd: Pulling fs layer
-4d38cf3ce793: Waiting
-5a8f38d2e60a: Waiting
-aa82b9c13420: Waiting
-59f61ac32118: Pulling fs layer
-717d94ec7c3c: Waiting
-e3e30f9ac332: Waiting
-26bf4d56462c: Pulling fs layer
-8990c882edd5: Waiting
-cfe31e651639: Waiting
-bc86a1d70d0e: Waiting
-5b50462cf6da: Waiting
-d65a977c5640: Waiting
-34cf46a79a5a: Pulling fs layer
-63cbb49052d1: Waiting
-6df7f481b80e: Waiting
-a3a612e7cd0e: Pulling fs layer
-b4a0f10a4cbd: Waiting
-6ba7025c4cdd: Waiting
-242acbfe8551: Pulling fs layer
-9a2603e57e7d: Waiting
-9b9ec90acb7d: Pulling fs layer
-59f61ac32118: Waiting
-affa554318ce: Pulling fs layer
-a3a612e7cd0e: Waiting
-62b0c44e99a8: Pulling fs layer
-60bd8f84355e: Waiting
-450d7bbb7991: Waiting
-55675fb948a0: Pulling fs layer
-26bf4d56462c: Waiting
-482a65baccf4: Pulling fs layer
-9b9ec90acb7d: Waiting
-f0b92df990dc: Pulling fs layer
-affa554318ce: Waiting
-8b1ade073af1: Pulling fs layer
-62b0c44e99a8: Waiting
-55675fb948a0: Waiting
-53fcbe97bf16: Pulling fs layer
-f0b92df990dc: Waiting
-f7677473b689: Pulling fs layer
-8b1ade073af1: Waiting
-53fcbe97bf16: Waiting
-a68bfff04804: Pulling fs layer
-f7677473b689: Waiting
-6587e98f60d9: Pulling fs layer
-2780c6584e6e: Waiting
-e3f717df2d33: Pulling fs layer
-a68bfff04804: Waiting
-6587e98f60d9: Waiting
-ca5d022fc89f: Pulling fs layer
-b7ac4a0eb3b1: Pulling fs layer
-ca5d022fc89f: Waiting
-4f4fb700ef54: Pulling fs layer
-c434703afa13: Pulling fs layer
-34cf46a79a5a: Waiting
-d871e675cbfb: Pulling fs layer
-4f4fb700ef54: Waiting
-0f4cfc927a22: Pulling fs layer
-c434703afa13: Waiting
-d871e675cbfb: Waiting
-0f4cfc927a22: Waiting
-355b1eeb7496: Download complete
-ea362f368469: Verifying Checksum
-ea362f368469: Download complete
-874bfe9194ff: Verifying Checksum
-874bfe9194ff: Download complete
-ea362f368469: Pull complete
-869eb0c9a524: Verifying Checksum
-869eb0c9a524: Download complete
-48f8c1a219be: Verifying Checksum
-48f8c1a219be: Download complete
-869eb0c9a524: Pull complete
-355b1eeb7496: Pull complete
-f321b54e275c: Verifying Checksum
-f321b54e275c: Download complete
-f321b54e275c: Pull complete
-874bfe9194ff: Pull complete
-b2a1ffc6b4d5: Verifying Checksum
-b2a1ffc6b4d5: Download complete
-dbe26a6d78be: Verifying Checksum
-dbe26a6d78be: Download complete
-f7abba3c4c22: Verifying Checksum
-f7abba3c4c22: Download complete
-073ab9652891: Verifying Checksum
-073ab9652891: Download complete
-dac232d3a84c: Verifying Checksum
-dac232d3a84c: Download complete
-aa82b9c13420: Verifying Checksum
-aa82b9c13420: Download complete
-aa956c5346f0: Verifying Checksum
-aa956c5346f0: Download complete
-cfee554867ea: Verifying Checksum
-cfee554867ea: Download complete
-105f4792bac1: Verifying Checksum
-105f4792bac1: Download complete
-d65a977c5640: Verifying Checksum
-d65a977c5640: Download complete
-cfe31e651639: Download complete
-5b50462cf6da: Verifying Checksum
-5b50462cf6da: Download complete
-e3e30f9ac332: Verifying Checksum
-e3e30f9ac332: Download complete
-bc86a1d70d0e: Verifying Checksum
-bc86a1d70d0e: Download complete
-450d7bbb7991: Verifying Checksum
-450d7bbb7991: Download complete
-9a2603e57e7d: Verifying Checksum
-9a2603e57e7d: Download complete
-f7abba3c4c22: Pull complete
-48f8c1a219be: Pull complete
-5a8f38d2e60a: Verifying Checksum
-5a8f38d2e60a: Download complete
-6ba7025c4cdd: Verifying Checksum
-6ba7025c4cdd: Download complete
-717d94ec7c3c: Verifying Checksum
-717d94ec7c3c: Download complete
-8990c882edd5: Download complete
-dbe26a6d78be: Pull complete
-63cbb49052d1: Verifying Checksum
-63cbb49052d1: Download complete
-60bd8f84355e: Verifying Checksum
-60bd8f84355e: Download complete
-4d38cf3ce793: Verifying Checksum
-4d38cf3ce793: Download complete
-b2a1ffc6b4d5: Pull complete
-073ab9652891: Pull complete
-dac232d3a84c: Pull complete
-cfee554867ea: Pull complete
-aa956c5346f0: Pull complete
-aa82b9c13420: Pull complete
-5b50462cf6da: Pull complete
-105f4792bac1: Pull complete
-cfe31e651639: Pull complete
-d65a977c5640: Pull complete
-e3e30f9ac332: Pull complete
-bc86a1d70d0e: Pull complete
-b4a0f10a4cbd: Verifying Checksum
-b4a0f10a4cbd: Download complete
-2780c6584e6e: Verifying Checksum
-2780c6584e6e: Download complete
-59f61ac32118: Verifying Checksum
-59f61ac32118: Download complete
-6df7f481b80e: Download complete
-34cf46a79a5a: Verifying Checksum
-34cf46a79a5a: Download complete
-26bf4d56462c: Verifying Checksum
-26bf4d56462c: Download complete
-242acbfe8551: Verifying Checksum
-242acbfe8551: Download complete
-a3a612e7cd0e: Verifying Checksum
-a3a612e7cd0e: Download complete
-affa554318ce: Verifying Checksum
-affa554318ce: Download complete
-9b9ec90acb7d: Verifying Checksum
-9b9ec90acb7d: Download complete
-55675fb948a0: Verifying Checksum
-55675fb948a0: Download complete
-f0b92df990dc: Verifying Checksum
-f0b92df990dc: Download complete
-62b0c44e99a8: Download complete
-6ba7025c4cdd: Pull complete
-450d7bbb7991: Pull complete
-482a65baccf4: Verifying Checksum
-482a65baccf4: Download complete
-9a2603e57e7d: Pull complete
-53fcbe97bf16: Verifying Checksum
-53fcbe97bf16: Download complete
-f7677473b689: Verifying Checksum
-f7677473b689: Download complete
-6587e98f60d9: Verifying Checksum
-6587e98f60d9: Download complete
-e3f717df2d33: Download complete
-ca5d022fc89f: Verifying Checksum
-ca5d022fc89f: Download complete
-b7ac4a0eb3b1: Verifying Checksum
-b7ac4a0eb3b1: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-4d38cf3ce793: Pull complete
-c434703afa13: Verifying Checksum
-c434703afa13: Download complete
-5a8f38d2e60a: Pull complete
-8b1ade073af1: Verifying Checksum
-8b1ade073af1: Download complete
-717d94ec7c3c: Pull complete
-8990c882edd5: Pull complete
-63cbb49052d1: Pull complete
-60bd8f84355e: Pull complete
-2780c6584e6e: Pull complete
-0f4cfc927a22: Verifying Checksum
-0f4cfc927a22: Download complete
-6df7f481b80e: Pull complete
-b4a0f10a4cbd: Pull complete
-59f61ac32118: Pull complete
-26bf4d56462c: Pull complete
-34cf46a79a5a: Pull complete
-a3a612e7cd0e: Pull complete
-242acbfe8551: Pull complete
-9b9ec90acb7d: Pull complete
-a68bfff04804: Verifying Checksum
-a68bfff04804: Download complete
-affa554318ce: Pull complete
-62b0c44e99a8: Pull complete
-55675fb948a0: Pull complete
-482a65baccf4: Pull complete
-f0b92df990dc: Pull complete
-8b1ade073af1: Pull complete
-53fcbe97bf16: Pull complete
-f7677473b689: Pull complete
-a68bfff04804: Pull complete
-6587e98f60d9: Pull complete
-e3f717df2d33: Pull complete
-ca5d022fc89f: Pull complete
-b7ac4a0eb3b1: Pull complete
-4f4fb700ef54: Pull complete
-c434703afa13: Pull complete
-d871e675cbfb: Verifying Checksum
-d871e675cbfb: Download complete
-d871e675cbfb: Pull complete
-0f4cfc927a22: Pull complete
-Digest: sha256:77a78ee146164a34e1e92c05c89b456a7b1e6ec2f132021fe26fcbf13639aeb3
-Status: Downloaded newer image for n132/arvo:43511-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 153681588
+INFO: Seed: 2023707560
 INFO: Loaded 1 modules   (223760 inline 8-bit counters): 223760 [0x9b9f330, 0x9bd5d40), 
 INFO: Loaded 1 PC tables (223760 PCs): 223760 [0x9bd5d40,0x9d8adc0), 
 /out/coder_PCT_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
-19:26:35 0:0.022519  0.020u 7 jpeg.c/JPEGErrorHandler/533/Coder:
+09:05:10 0:0.020238  0.020u 7 jpeg.c/JPEGErrorHandler/533/Coder:
   Not a JPEG file: starts with 0xff 0xff ()
-19:26:35 0:0.022821  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.020509  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.022874  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.020564  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.023074  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.020759  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 142 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.023131  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.020808  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 14 extraneous bytes before marker 0xd9 ()
-19:26:35 0:0.023338  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.021008  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.023379  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.021047  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.023564  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.021210  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.023604  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.021248  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.023769  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.021415  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.023806  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.021453  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 10 extraneous bytes before marker 0xd9 ()
-19:26:35 0:0.023962  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.021609  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.023999  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.021651  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.024197  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.021842  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 142 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.024234  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.021879  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 14 extraneous bytes before marker 0xd9 ()
-19:26:35 0:0.024441  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.022080  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.024479  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.022118  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.024648  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.022281  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.024685  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.022316  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 14 extraneous bytes before marker 0xd9 ()
-19:26:35 0:0.024843  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.022471  0.030u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-19:26:35 0:0.024880  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+09:05:10 0:0.022510  0.030u 7 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.025057  0.020u 7 jpeg.c/JPEGErrorHandler/533/Coder:
+09:05:10 0:0.022672  0.030u 7 jpeg.c/JPEGErrorHandler/533/Coder:
   Not a JPEG file: starts with 0x00 0x00 ()
-19:26:35 0:0.025662  0.020u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.023230  0.030u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 221 extraneous bytes before marker 0xe4 ()
-19:26:35 0:0.025817  0.020u 7 jpeg.c/JPEGErrorHandler/533/Coder:
+09:05:10 0:0.023380  0.030u 7 jpeg.c/JPEGErrorHandler/533/Coder:
   Bogus Huffman table definition ()
-19:26:35 0:0.131840  0.130u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.128068  0.130u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.131884  0.130u 7 jpeg.c/JPEGErrorHandler/533/Coder:
+09:05:10 0:0.128122  0.130u 7 jpeg.c/JPEGErrorHandler/533/Coder:
   JPEG datastream contains no image ()
-19:26:35 0:0.182834  0.180u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+09:05:10 0:0.178784  0.180u 7 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Premature end of JPEG file ()
-19:26:35 0:0.182865  0.180u 7 jpeg.c/JPEGErrorHandler/533/Coder:
+09:05:10 0:0.178818  0.180u 7 jpeg.c/JPEGErrorHandler/533/Coder:
   JPEG datastream contains no image ()
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xecf03e9c at pc 0x081cf1d1 bp 0xff89db88 sp 0xff89d768
-WRITE of size 10982 at 0xecf03e9c thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xed403e9c at pc 0x081cf1d1 bp 0xffdde168 sp 0xffdddd48
+WRITE of size 10982 at 0xed403e9c thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x81cf1d0 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
     #1 0x82b5fd6 in ReadBlob /src/graphicsmagick/magick/blob.c:3352:18
@@ -342,11 +76,11 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #9 0x80e3d8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x80e9940 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x8112b27 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0xf6c24ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #12 0xf7158ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
     #13 0x80c1995 in _start (/out/coder_PCT_fuzzer+0x80c1995)
 
 DEDUP_TOKEN: __asan_memcpy--ReadBlob--DecodeImage
-0xecf03e9c is located 0 bytes to the right of 540-byte region [0xecf03c80,0xecf03e9c)
+0xed403e9c is located 0 bytes to the right of 540-byte region [0xed403c80,0xed403e9c)
 allocated by thread T0 here:
     #0 0x81d0056 in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:148:3
     #1 0x83ea920 in _MagickReallocateResourceLimitedMemory /src/graphicsmagick/magick/memory.c:769:36
@@ -360,22 +94,22 @@ allocated by thread T0 here:
     #9 0x80e3d8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x80e9940 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x8112b27 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0xf6c24ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #12 0xf7158ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
 
 DEDUP_TOKEN: __interceptor_realloc--_MagickReallocateResourceLimitedMemory--DecodeImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
 Shadow bytes around the buggy address:
-  0x3d9e0780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d9e0790: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d9e07a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d9e07b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d9e07c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x3d9e07d0: 00 00 00[04]fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d9e07e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d9e07f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d9e0800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d9e0810: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d9e0820: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da80780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da80790: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3da807a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3da807b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3da807c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3da807d0: 00 00 00[04]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da807e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da807f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da80800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da80810: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da80820: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

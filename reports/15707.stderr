@@ -1,145 +1,3 @@
-Unable to find image 'n132/arvo:15707-vul' locally
-15707-vul: Pulling from n132/arvo
-3620e2d282dc: Already exists
-ef22f5e4b3b2: Already exists
-99f229f854da: Already exists
-4fe433abe16a: Already exists
-c9b72a16d85e: Already exists
-de599d649ace: Already exists
-b095926b8e5d: Already exists
-2cb899c88361: Already exists
-e3e971831feb: Already exists
-2b6c6771b90f: Already exists
-7d225808fe07: Already exists
-9b379b826590: Already exists
-b2a75a6e4d30: Already exists
-3dd7d3726d39: Already exists
-e060c62c016e: Already exists
-0482579cc5a5: Already exists
-9ead6413f967: Pulling fs layer
-884e2e0f94b1: Pulling fs layer
-3242195565d3: Pulling fs layer
-2a47fe20a25a: Pulling fs layer
-c0940080ef72: Pulling fs layer
-c2214398b4b6: Pulling fs layer
-905022cc3d2f: Pulling fs layer
-85d8a34f0447: Pulling fs layer
-634f559d71f0: Pulling fs layer
-98b614fb1664: Pulling fs layer
-7cd5b5e8dae5: Pulling fs layer
-21e52baa4032: Pulling fs layer
-e1cd3ae471bb: Pulling fs layer
-ab6f466e5af3: Pulling fs layer
-ee5cd16d586b: Pulling fs layer
-8c33703cab5e: Pulling fs layer
-17edc7f93cb6: Pulling fs layer
-41ac4d1d17cd: Pulling fs layer
-2a47fe20a25a: Waiting
-e1cea9bf9069: Pulling fs layer
-c0940080ef72: Waiting
-c2214398b4b6: Waiting
-905022cc3d2f: Waiting
-375d6dd1ca5a: Pulling fs layer
-f603a13d7df1: Pulling fs layer
-6675bdf6a8d7: Pulling fs layer
-85d8a34f0447: Waiting
-634f559d71f0: Waiting
-4f4fb700ef54: Pulling fs layer
-98b614fb1664: Waiting
-e4534acacba6: Pulling fs layer
-7cd5b5e8dae5: Waiting
-5105d01f988f: Pulling fs layer
-71adbff34d0a: Pulling fs layer
-21e52baa4032: Waiting
-375d6dd1ca5a: Waiting
-f603a13d7df1: Waiting
-8c33703cab5e: Waiting
-e1cd3ae471bb: Waiting
-6675bdf6a8d7: Waiting
-17edc7f93cb6: Waiting
-4f4fb700ef54: Waiting
-e4534acacba6: Waiting
-ab6f466e5af3: Waiting
-5105d01f988f: Waiting
-ee5cd16d586b: Waiting
-71adbff34d0a: Waiting
-41ac4d1d17cd: Waiting
-884e2e0f94b1: Verifying Checksum
-884e2e0f94b1: Download complete
-9ead6413f967: Verifying Checksum
-9ead6413f967: Download complete
-3242195565d3: Verifying Checksum
-3242195565d3: Download complete
-c2214398b4b6: Verifying Checksum
-c2214398b4b6: Download complete
-c0940080ef72: Verifying Checksum
-c0940080ef72: Download complete
-905022cc3d2f: Verifying Checksum
-905022cc3d2f: Download complete
-634f559d71f0: Download complete
-85d8a34f0447: Verifying Checksum
-85d8a34f0447: Download complete
-9ead6413f967: Pull complete
-884e2e0f94b1: Pull complete
-7cd5b5e8dae5: Download complete
-98b614fb1664: Verifying Checksum
-98b614fb1664: Download complete
-21e52baa4032: Verifying Checksum
-21e52baa4032: Download complete
-e1cd3ae471bb: Download complete
-ee5cd16d586b: Verifying Checksum
-ee5cd16d586b: Download complete
-3242195565d3: Pull complete
-2a47fe20a25a: Verifying Checksum
-2a47fe20a25a: Download complete
-17edc7f93cb6: Verifying Checksum
-17edc7f93cb6: Download complete
-8c33703cab5e: Verifying Checksum
-8c33703cab5e: Download complete
-ab6f466e5af3: Download complete
-e1cea9bf9069: Verifying Checksum
-e1cea9bf9069: Download complete
-41ac4d1d17cd: Verifying Checksum
-41ac4d1d17cd: Download complete
-f603a13d7df1: Verifying Checksum
-f603a13d7df1: Download complete
-6675bdf6a8d7: Verifying Checksum
-6675bdf6a8d7: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-e4534acacba6: Verifying Checksum
-e4534acacba6: Download complete
-71adbff34d0a: Verifying Checksum
-71adbff34d0a: Download complete
-375d6dd1ca5a: Verifying Checksum
-375d6dd1ca5a: Download complete
-2a47fe20a25a: Pull complete
-c0940080ef72: Pull complete
-c2214398b4b6: Pull complete
-905022cc3d2f: Pull complete
-85d8a34f0447: Pull complete
-634f559d71f0: Pull complete
-98b614fb1664: Pull complete
-7cd5b5e8dae5: Pull complete
-21e52baa4032: Pull complete
-e1cd3ae471bb: Pull complete
-ab6f466e5af3: Pull complete
-ee5cd16d586b: Pull complete
-8c33703cab5e: Pull complete
-17edc7f93cb6: Pull complete
-41ac4d1d17cd: Pull complete
-e1cea9bf9069: Pull complete
-375d6dd1ca5a: Pull complete
-f603a13d7df1: Pull complete
-6675bdf6a8d7: Pull complete
-4f4fb700ef54: Pull complete
-e4534acacba6: Pull complete
-5105d01f988f: Verifying Checksum
-5105d01f988f: Download complete
-5105d01f988f: Pull complete
-71adbff34d0a: Pull complete
-Digest: sha256:849b3c5bcf7017a1ab7ad3c28fdc21f851a3cf9de70a1bf5384d0c70d93e3a82
-Status: Downloaded newer image for n132/arvo:15707-vul
 ======================= INFO =========================
 This binary is built for AFL-fuzz.
 To run the target function on individual input(s) execute this:
@@ -151,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000310 at pc 0x0000006de894 bp 0x7ffea0e3dc90 sp 0x7ffea0e3dc88
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000310 at pc 0x0000006de894 bp 0x7ffd4996ccf0 sp 0x7ffd4996cce8
 READ of size 8 at 0x610000000310 thread T0
 SCARINESS: 33 (8-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x6de893 in TraceSquareLinecap /src/graphicsmagick/magick/render.c:6991:69
@@ -166,7 +24,7 @@ SCARINESS: 33 (8-byte-read-heap-buffer-overflow-far-from-bounds)
     #9 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #10 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #11 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #12 0x7e3fdea6583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x78fbcc9b083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: TraceSquareLinecap--TraceStrokePolygon--DrawStrokePolygon
@@ -184,7 +42,7 @@ allocated by thread T0 here:
     #9 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #10 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #11 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #12 0x7e3fdea6583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x78fbcc9b083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--TraceStrokePolygon--DrawStrokePolygon
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:6991:69 in TraceSquareLinecap

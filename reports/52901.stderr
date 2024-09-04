@@ -1,97 +1,11 @@
-Unable to find image 'n132/arvo:52901-vul' locally
-52901-vul: Pulling from n132/arvo
-fb0b3276a519: Already exists
-8626f69058ba: Already exists
-7c4980aa6dd8: Already exists
-e19cd6adc750: Already exists
-dfe9723f4d4c: Already exists
-cd1de1f3c8c6: Already exists
-ecfcaed3e4dc: Already exists
-9508f5b01357: Already exists
-273f92edcfbc: Already exists
-0016acac5acb: Already exists
-3357648990a8: Already exists
-cf091c0fb2b5: Already exists
-d49b64536874: Already exists
-073c4f36516f: Already exists
-06d988a0a6f3: Already exists
-8402f7050a4e: Already exists
-ab5c756968a4: Already exists
-2c28b156673b: Already exists
-a4a776b7201b: Already exists
-25011671c43e: Already exists
-2226dbc1290d: Already exists
-a710ed2b1b23: Already exists
-4aefa62017f2: Already exists
-db8521e1e360: Already exists
-256336ffb999: Already exists
-2d2f8dd67899: Already exists
-49c77b71bf2b: Pulling fs layer
-ed90c15214f5: Pulling fs layer
-10a44c1c2dbf: Pulling fs layer
-f1c62b8d5479: Pulling fs layer
-56d876d15799: Pulling fs layer
-4f4fb700ef54: Pulling fs layer
-d76d7e6240c0: Pulling fs layer
-38f3e4d8654a: Pulling fs layer
-cd31a8589f3c: Pulling fs layer
-adb411514c06: Pulling fs layer
-2c55dea00809: Pulling fs layer
-6749f6f04828: Pulling fs layer
-56d876d15799: Waiting
-4f4fb700ef54: Waiting
-d76d7e6240c0: Waiting
-2c55dea00809: Waiting
-6749f6f04828: Waiting
-38f3e4d8654a: Waiting
-cd31a8589f3c: Waiting
-adb411514c06: Waiting
-f1c62b8d5479: Waiting
-ed90c15214f5: Verifying Checksum
-ed90c15214f5: Download complete
-10a44c1c2dbf: Verifying Checksum
-10a44c1c2dbf: Download complete
-f1c62b8d5479: Verifying Checksum
-f1c62b8d5479: Download complete
-56d876d15799: Download complete
-4f4fb700ef54: Verifying Checksum
-4f4fb700ef54: Download complete
-38f3e4d8654a: Verifying Checksum
-38f3e4d8654a: Download complete
-d76d7e6240c0: Verifying Checksum
-d76d7e6240c0: Download complete
-adb411514c06: Verifying Checksum
-adb411514c06: Download complete
-cd31a8589f3c: Verifying Checksum
-cd31a8589f3c: Download complete
-2c55dea00809: Verifying Checksum
-2c55dea00809: Download complete
-6749f6f04828: Verifying Checksum
-6749f6f04828: Download complete
-49c77b71bf2b: Verifying Checksum
-49c77b71bf2b: Download complete
-49c77b71bf2b: Pull complete
-ed90c15214f5: Pull complete
-10a44c1c2dbf: Pull complete
-f1c62b8d5479: Pull complete
-56d876d15799: Pull complete
-4f4fb700ef54: Pull complete
-d76d7e6240c0: Pull complete
-38f3e4d8654a: Pull complete
-cd31a8589f3c: Pull complete
-adb411514c06: Pull complete
-2c55dea00809: Pull complete
-6749f6f04828: Pull complete
-Digest: sha256:af7b0c8bfa470d9d7d7d39c9841ee1badca8d9802b8981f85138116fcac6017c
-Status: Downloaded newer image for n132/arvo:52901-vul
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 523090714
+INFO: Seed: 2077734832
 INFO: Loaded 1 modules   (21783 inline 8-bit counters): 21783 [0x938cf0, 0x93e207), 
 INFO: Loaded 1 PC tables (21783 PCs): 21783 [0x818f20,0x86e090), 
 /out/libraw_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62c0000074a0 at pc 0x00000052e912 bp 0x7ffe03f54c70 sp 0x7ffe03f54440
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62c0000074a0 at pc 0x00000052e912 bp 0x7fffdcf45170 sp 0x7fffdcf44940
 WRITE of size 888 at 0x62c0000074a0 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x52e911 in __asan_memmove /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3
@@ -101,7 +15,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #4 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #5 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #6 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x7ebca7eda082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #7 0x734a732b0082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #8 0x41f85d in _start (/out/libraw_fuzzer+0x41f85d)
 
 DEDUP_TOKEN: __asan_memmove--LibRaw::raw2image()--LLVMFuzzerTestOneInput
@@ -116,7 +30,7 @@ allocated by thread T0 here:
     #6 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #7 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #8 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #9 0x7ebca7eda082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x734a732b0082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_calloc--calloc--LibRaw::calloc(unsigned long, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3 in __asan_memmove
