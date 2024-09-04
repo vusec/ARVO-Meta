@@ -1,0 +1,129 @@
+Unable to find image 'n132/arvo:22979-vul' locally
+22979-vul: Pulling from n132/arvo
+e92ed755c008: Already exists
+b9fd7cb1ff8f: Already exists
+ee690f2d57a1: Already exists
+53e3366ec435: Already exists
+b5902f6a3f5f: Already exists
+2d3909b316da: Already exists
+252e11a2f76b: Already exists
+48a6b038a469: Already exists
+01aca64c8b44: Already exists
+645260e3360d: Already exists
+3cf3960cc3e3: Already exists
+540f88eea312: Already exists
+471aff0b08de: Already exists
+2d169faf98bf: Already exists
+8c62232a1400: Already exists
+491ce6003727: Already exists
+6f4c28dbe9c8: Already exists
+5f2c1fc1c161: Already exists
+8518bee5487a: Already exists
+196e0622ea62: Already exists
+908c54d02bdc: Already exists
+c82a7af29007: Already exists
+7077d9cf21c7: Already exists
+f8310dc6c170: Pulling fs layer
+6a41dc1a7f89: Pulling fs layer
+45bd70a01337: Pulling fs layer
+962898c05a22: Pulling fs layer
+3cb67abbd4b5: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+06bdfcc6b509: Pulling fs layer
+0a688543bf18: Pulling fs layer
+01ef1703eb57: Pulling fs layer
+3cb67abbd4b5: Waiting
+01ef1703eb57: Waiting
+4f4fb700ef54: Waiting
+06bdfcc6b509: Waiting
+0a688543bf18: Waiting
+962898c05a22: Waiting
+6a41dc1a7f89: Verifying Checksum
+6a41dc1a7f89: Download complete
+45bd70a01337: Verifying Checksum
+45bd70a01337: Download complete
+3cb67abbd4b5: Download complete
+962898c05a22: Verifying Checksum
+962898c05a22: Download complete
+4f4fb700ef54: Download complete
+06bdfcc6b509: Verifying Checksum
+06bdfcc6b509: Download complete
+0a688543bf18: Verifying Checksum
+0a688543bf18: Download complete
+f8310dc6c170: Verifying Checksum
+f8310dc6c170: Download complete
+01ef1703eb57: Verifying Checksum
+01ef1703eb57: Download complete
+f8310dc6c170: Pull complete
+6a41dc1a7f89: Pull complete
+45bd70a01337: Pull complete
+962898c05a22: Pull complete
+3cb67abbd4b5: Pull complete
+4f4fb700ef54: Pull complete
+06bdfcc6b509: Pull complete
+0a688543bf18: Pull complete
+01ef1703eb57: Pull complete
+Digest: sha256:081d37dc874a69c9333ef6b911caa96bb448c445ae65772f8465d976fcc400b2
+Status: Downloaded newer image for n132/arvo:22979-vul
+Accepting input from '/tmp/poc'
+Usage for fuzzing: honggfuzz -P [flags] -- /out/libraw_fuzzer
+=================================================================
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x75a6ccf008a0 at pc 0x000000433b14 bp 0x7ffef98ab610 sp 0x7ffef98aadd0
+READ of size 129 at 0x75a6ccf008a0 thread T0
+SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
+    #0 0x433b13 in strchr /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:689:5
+    #1 0x4e5e61 in __libcpp_strchr(char const*, int) /usr/local/bin/../include/c++/v1/string.h:73:64
+    #2 0x4e5111 in strchr(char*, int) [enable_if:true] /usr/local/bin/../include/c++/v1/string.h:77:54
+    #3 0x5da992 in LibRaw::parse_rollei() /src/libraw/src/metadata/misc_parsers.cpp:305:16
+    #4 0x5baf87 in LibRaw::identify() /src/libraw/src/metadata/identify.cpp:654:5
+    #5 0x4f1d39 in LibRaw::open_datastream(LibRaw_abstract_datastream*) /src/libraw/src/utils/open.cpp:390:4
+    #6 0x4f0e2f in LibRaw::open_buffer(void*, unsigned long) /src/libraw/src/utils/open.cpp:153:13
+    #7 0x4c8e69 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:31:24
+    #8 0x4c955d in main (/out/libraw_fuzzer+0x4c955d)
+    #9 0x75a6cbe9183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x41e808 in _start (/out/libraw_fuzzer+0x41e808)
+
+DEDUP_TOKEN: strchr--__libcpp_strchr(char const*, int)--strchr(char*, int) [enable_if:true]
+Address 0x75a6ccf008a0 is located in stack of thread T0 at offset 160 in frame
+    #0 0x5da65f in LibRaw::parse_rollei() /src/libraw/src/metadata/misc_parsers.cpp:293
+
+DEDUP_TOKEN: LibRaw::parse_rollei()
+  This frame has 2 object(s):
+    [32, 160) 'line' (line 294)
+    [192, 248) 't' (line 295) <== Memory access at offset 160 partially underflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:689:5 in strchr
+Shadow bytes around the buggy address:
+  0x0eb5599d80c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d80d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d80e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d80f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d8100: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0eb5599d8110: 00 00 00 00[f2]f2 f2 f2 00 00 00 00 00 00 00 f3
+  0x0eb5599d8120: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d8130: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d8140: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d8150: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eb5599d8160: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

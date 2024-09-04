@@ -1,0 +1,203 @@
+Unable to find image 'n132/arvo:17451-vul' locally
+17451-vul: Pulling from n132/arvo
+16c48d79e9cc: Pulling fs layer
+3c654ad3ed7d: Pulling fs layer
+6276f4f9c29d: Pulling fs layer
+a4bd43ad48ce: Pulling fs layer
+6aeb9c7d1e24: Pulling fs layer
+531aa78e552c: Pulling fs layer
+5c21e9142fa1: Pulling fs layer
+54e5fa7597aa: Pulling fs layer
+98f698a33891: Pulling fs layer
+79ec37b4b328: Pulling fs layer
+349a3af5779d: Pulling fs layer
+9032494dc267: Pulling fs layer
+cdac40eee2a6: Pulling fs layer
+d9b9353bc497: Pulling fs layer
+3dd0fe7f87c8: Pulling fs layer
+d2be51e9d431: Pulling fs layer
+518884d98076: Pulling fs layer
+eedc70de2e6f: Pulling fs layer
+ae5a589b1d2c: Pulling fs layer
+d63526afec75: Pulling fs layer
+e3eb0b4f069d: Pulling fs layer
+d2343628e82a: Pulling fs layer
+0078beff2553: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+1e22c82c6e41: Pulling fs layer
+523d58526286: Pulling fs layer
+9032494dc267: Waiting
+8e62e4aa5ba0: Pulling fs layer
+cdac40eee2a6: Waiting
+eedc70de2e6f: Waiting
+518884d98076: Waiting
+ae5a589b1d2c: Waiting
+d63526afec75: Waiting
+6aeb9c7d1e24: Waiting
+531aa78e552c: Waiting
+e3eb0b4f069d: Waiting
+d2be51e9d431: Waiting
+d2343628e82a: Waiting
+0078beff2553: Waiting
+5c21e9142fa1: Waiting
+4f4fb700ef54: Waiting
+54e5fa7597aa: Waiting
+98f698a33891: Waiting
+d9b9353bc497: Waiting
+1e22c82c6e41: Waiting
+3dd0fe7f87c8: Waiting
+79ec37b4b328: Waiting
+523d58526286: Waiting
+8e62e4aa5ba0: Waiting
+349a3af5779d: Waiting
+a4bd43ad48ce: Waiting
+3c654ad3ed7d: Verifying Checksum
+3c654ad3ed7d: Download complete
+6276f4f9c29d: Verifying Checksum
+6276f4f9c29d: Download complete
+a4bd43ad48ce: Verifying Checksum
+a4bd43ad48ce: Download complete
+16c48d79e9cc: Verifying Checksum
+16c48d79e9cc: Download complete
+531aa78e552c: Verifying Checksum
+531aa78e552c: Download complete
+5c21e9142fa1: Verifying Checksum
+5c21e9142fa1: Download complete
+6aeb9c7d1e24: Verifying Checksum
+6aeb9c7d1e24: Download complete
+98f698a33891: Verifying Checksum
+98f698a33891: Download complete
+16c48d79e9cc: Pull complete
+3c654ad3ed7d: Pull complete
+6276f4f9c29d: Pull complete
+a4bd43ad48ce: Pull complete
+349a3af5779d: Verifying Checksum
+349a3af5779d: Download complete
+6aeb9c7d1e24: Pull complete
+531aa78e552c: Pull complete
+5c21e9142fa1: Pull complete
+79ec37b4b328: Verifying Checksum
+79ec37b4b328: Download complete
+cdac40eee2a6: Verifying Checksum
+cdac40eee2a6: Download complete
+9032494dc267: Verifying Checksum
+9032494dc267: Download complete
+3dd0fe7f87c8: Verifying Checksum
+3dd0fe7f87c8: Download complete
+d9b9353bc497: Verifying Checksum
+d9b9353bc497: Download complete
+d2be51e9d431: Verifying Checksum
+d2be51e9d431: Download complete
+eedc70de2e6f: Verifying Checksum
+eedc70de2e6f: Download complete
+518884d98076: Download complete
+54e5fa7597aa: Download complete
+d63526afec75: Verifying Checksum
+d63526afec75: Download complete
+e3eb0b4f069d: Verifying Checksum
+e3eb0b4f069d: Download complete
+d2343628e82a: Verifying Checksum
+d2343628e82a: Download complete
+0078beff2553: Verifying Checksum
+0078beff2553: Download complete
+4f4fb700ef54: Download complete
+1e22c82c6e41: Verifying Checksum
+1e22c82c6e41: Download complete
+8e62e4aa5ba0: Verifying Checksum
+8e62e4aa5ba0: Download complete
+ae5a589b1d2c: Verifying Checksum
+ae5a589b1d2c: Download complete
+54e5fa7597aa: Pull complete
+98f698a33891: Pull complete
+79ec37b4b328: Pull complete
+349a3af5779d: Pull complete
+9032494dc267: Pull complete
+cdac40eee2a6: Pull complete
+d9b9353bc497: Pull complete
+3dd0fe7f87c8: Pull complete
+d2be51e9d431: Pull complete
+523d58526286: Verifying Checksum
+523d58526286: Download complete
+518884d98076: Pull complete
+eedc70de2e6f: Pull complete
+ae5a589b1d2c: Pull complete
+d63526afec75: Pull complete
+e3eb0b4f069d: Pull complete
+d2343628e82a: Pull complete
+0078beff2553: Pull complete
+4f4fb700ef54: Pull complete
+1e22c82c6e41: Pull complete
+523d58526286: Pull complete
+8e62e4aa5ba0: Pull complete
+Digest: sha256:63b1fd17148927e54e93e57a0910a9883d94279e88a3c50efacb39844bed87b3
+Status: Downloaded newer image for n132/arvo:17451-vul
+INFO: Seed: 3963935915
+INFO: Loaded 1 modules   (16731 inline 8-bit counters): 16731 [0x9bb680, 0x9bf7db), 
+INFO: Loaded 1 PC tables (16731 PCs): 16731 [0x713e80,0x755430), 
+/out/block_decompress: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60300000011a at pc 0x000000520fea bp 0x7ffcfb941980 sp 0x7ffcfb941148
+READ of size 16 at 0x60300000011a thread T0
+SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
+    #0 0x520fe9 in __asan_memcpy /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
+    #1 0x581574 in ZSTD_copy16 /src/zstd/tests/fuzz/../../lib/common/zstd_internal.h:197:55
+    #2 0x583f9a in ZSTD_wildcopy_16min /src/zstd/tests/fuzz/../../lib/common/zstd_internal.h:266:11
+    #3 0x583f9a in ZSTD_execSequence /src/zstd/tests/fuzz/../../lib/decompress/zstd_decompress_block.c:644:9
+    #4 0x583f9a in ZSTD_decompressSequences_body /src/zstd/tests/fuzz/../../lib/decompress/zstd_decompress_block.c:936:43
+    #5 0x583f9a in ZSTD_decompressSequences_default /src/zstd/tests/fuzz/../../lib/decompress/zstd_decompress_block.c:966:12
+    #6 0x578fb2 in ZSTD_decompressBlock_internal /src/zstd/tests/fuzz/../../lib/decompress/zstd_decompress_block.c:1310:16
+    #7 0x579456 in ZSTD_decompressBlock /src/zstd/tests/fuzz/../../lib/decompress/zstd_decompress_block.c:1322:13
+    #8 0x6d5e83 in LLVMFuzzerTestOneInput /src/zstd/tests/fuzz/block_decompress.c:43:5
+    #9 0x45a1b1 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:554:15
+    #10 0x444a11 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
+    #11 0x44a71e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
+    #12 0x474e82 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #13 0x7635c885783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x41dea8 in _start (/out/block_decompress+0x41dea8)
+
+DEDUP_TOKEN: __asan_memcpy--ZSTD_copy16--ZSTD_wildcopy_16min
+0x60300000011a is located 0 bytes to the right of 26-byte region [0x603000000100,0x60300000011a)
+allocated by thread T0 here:
+    #0 0x521bad in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0x432d97 in operator new(unsigned long) (/out/block_decompress+0x432d97)
+    #2 0x444a11 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
+    #3 0x44a71e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
+    #4 0x474e82 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #5 0x7635c885783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x0c067fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c067fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c067fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c067fff8000: fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa 00 00
+  0x0c067fff8010: 00 fa fa fa 00 00 00 00 fa fa 00 00 00 02 fa fa
+=>0x0c067fff8020: 00 00 00[02]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

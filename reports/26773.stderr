@@ -1,0 +1,246 @@
+Unable to find image 'n132/arvo:26773-vul' locally
+26773-vul: Pulling from n132/arvo
+2c11b7cecaa5: Pulling fs layer
+04637fa56252: Pulling fs layer
+d6e6af23a0f3: Pulling fs layer
+b4a424de92ad: Pulling fs layer
+3f9618a1c61f: Pulling fs layer
+4d85e4b17c82: Pulling fs layer
+189a573418d1: Pulling fs layer
+edc6c15b7f97: Pulling fs layer
+17e5a23eff26: Pulling fs layer
+1ef5832c78f0: Pulling fs layer
+f0a64d890658: Pulling fs layer
+449634606824: Pulling fs layer
+404186f30f98: Pulling fs layer
+7b49c13dcb1d: Pulling fs layer
+d6d8e42ed3fe: Pulling fs layer
+b8d8e3c9dc64: Pulling fs layer
+12a0cc75b3b3: Pulling fs layer
+fab53a0b7a3f: Pulling fs layer
+0950a6c5ef7e: Pulling fs layer
+b2146687dd29: Pulling fs layer
+1ef5832c78f0: Waiting
+90fdfacdc266: Pulling fs layer
+78a044bf816f: Pulling fs layer
+f0a64d890658: Waiting
+404186f30f98: Waiting
+7b49c13dcb1d: Waiting
+bee78f990330: Pulling fs layer
+d6d8e42ed3fe: Waiting
+837ca4ae9165: Pulling fs layer
+449634606824: Waiting
+8509a580d0cc: Pulling fs layer
+5349160c5554: Pulling fs layer
+b8d8e3c9dc64: Waiting
+766d1dc53a87: Pulling fs layer
+985934c1c66e: Pulling fs layer
+4d85e4b17c82: Waiting
+5fff480dbfed: Pulling fs layer
+bc662ec08f03: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+fab53a0b7a3f: Waiting
+934e6da14fd5: Pulling fs layer
+f2f95a0cb7ca: Pulling fs layer
+12a0cc75b3b3: Waiting
+01bf07d12a3b: Pulling fs layer
+189a573418d1: Waiting
+bee78f990330: Waiting
+837ca4ae9165: Waiting
+8509a580d0cc: Waiting
+5349160c5554: Waiting
+766d1dc53a87: Waiting
+0950a6c5ef7e: Waiting
+985934c1c66e: Waiting
+5fff480dbfed: Waiting
+b2146687dd29: Waiting
+bc662ec08f03: Waiting
+4f4fb700ef54: Waiting
+90fdfacdc266: Waiting
+edc6c15b7f97: Waiting
+934e6da14fd5: Waiting
+78a044bf816f: Waiting
+01bf07d12a3b: Waiting
+17e5a23eff26: Waiting
+b4a424de92ad: Waiting
+3f9618a1c61f: Waiting
+04637fa56252: Verifying Checksum
+04637fa56252: Download complete
+d6e6af23a0f3: Download complete
+b4a424de92ad: Verifying Checksum
+b4a424de92ad: Download complete
+2c11b7cecaa5: Verifying Checksum
+2c11b7cecaa5: Download complete
+4d85e4b17c82: Verifying Checksum
+4d85e4b17c82: Download complete
+edc6c15b7f97: Verifying Checksum
+edc6c15b7f97: Download complete
+3f9618a1c61f: Verifying Checksum
+3f9618a1c61f: Download complete
+189a573418d1: Verifying Checksum
+189a573418d1: Download complete
+2c11b7cecaa5: Pull complete
+04637fa56252: Pull complete
+d6e6af23a0f3: Pull complete
+b4a424de92ad: Pull complete
+1ef5832c78f0: Verifying Checksum
+1ef5832c78f0: Download complete
+3f9618a1c61f: Pull complete
+4d85e4b17c82: Pull complete
+449634606824: Verifying Checksum
+449634606824: Download complete
+404186f30f98: Download complete
+189a573418d1: Pull complete
+edc6c15b7f97: Pull complete
+f0a64d890658: Verifying Checksum
+f0a64d890658: Download complete
+d6d8e42ed3fe: Verifying Checksum
+d6d8e42ed3fe: Download complete
+7b49c13dcb1d: Verifying Checksum
+7b49c13dcb1d: Download complete
+12a0cc75b3b3: Verifying Checksum
+12a0cc75b3b3: Download complete
+fab53a0b7a3f: Verifying Checksum
+fab53a0b7a3f: Download complete
+0950a6c5ef7e: Verifying Checksum
+0950a6c5ef7e: Download complete
+17e5a23eff26: Verifying Checksum
+17e5a23eff26: Download complete
+b8d8e3c9dc64: Verifying Checksum
+b8d8e3c9dc64: Download complete
+b2146687dd29: Verifying Checksum
+b2146687dd29: Download complete
+90fdfacdc266: Verifying Checksum
+90fdfacdc266: Download complete
+78a044bf816f: Verifying Checksum
+78a044bf816f: Download complete
+837ca4ae9165: Verifying Checksum
+837ca4ae9165: Download complete
+bee78f990330: Verifying Checksum
+bee78f990330: Download complete
+8509a580d0cc: Verifying Checksum
+8509a580d0cc: Download complete
+766d1dc53a87: Verifying Checksum
+766d1dc53a87: Download complete
+985934c1c66e: Verifying Checksum
+985934c1c66e: Download complete
+5349160c5554: Verifying Checksum
+5349160c5554: Download complete
+5fff480dbfed: Verifying Checksum
+5fff480dbfed: Download complete
+934e6da14fd5: Verifying Checksum
+934e6da14fd5: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+01bf07d12a3b: Verifying Checksum
+01bf07d12a3b: Download complete
+f2f95a0cb7ca: Verifying Checksum
+f2f95a0cb7ca: Download complete
+17e5a23eff26: Pull complete
+1ef5832c78f0: Pull complete
+f0a64d890658: Pull complete
+bc662ec08f03: Verifying Checksum
+bc662ec08f03: Download complete
+449634606824: Pull complete
+404186f30f98: Pull complete
+7b49c13dcb1d: Pull complete
+d6d8e42ed3fe: Pull complete
+b8d8e3c9dc64: Pull complete
+12a0cc75b3b3: Pull complete
+fab53a0b7a3f: Pull complete
+0950a6c5ef7e: Pull complete
+b2146687dd29: Pull complete
+90fdfacdc266: Pull complete
+78a044bf816f: Pull complete
+bee78f990330: Pull complete
+837ca4ae9165: Pull complete
+8509a580d0cc: Pull complete
+5349160c5554: Pull complete
+766d1dc53a87: Pull complete
+985934c1c66e: Pull complete
+5fff480dbfed: Pull complete
+bc662ec08f03: Pull complete
+4f4fb700ef54: Pull complete
+934e6da14fd5: Pull complete
+f2f95a0cb7ca: Pull complete
+01bf07d12a3b: Pull complete
+Digest: sha256:41ae6b18d5cccb6a7e8d3cdcab15648e7492704eadfca108c5e4c6670e928bb6
+Status: Downloaded newer image for n132/arvo:26773-vul
+INFO: Seed: 3348995931
+INFO: Loaded 1 modules   (4710 inline 8-bit counters): 4710 [0x8a9a88, 0x8aacee), 
+INFO: Loaded 1 PC tables (4710 PCs): 4710 [0x8aacf0,0x8bd350), 
+/out/fuzz_dump: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7a305c68df4c at pc 0x00000055f9a0 bp 0x7ffe2acac520 sp 0x7ffe2acac518
+READ of size 1 at 0x7a305c68df4c thread T0
+SCARINESS: 27 (1-byte-read-stack-buffer-overflow)
+    #0 0x55f99f in simdjson::internal::decimal_right_shift(simdjson::internal::decimal&, unsigned int) /src/simdjson/build/../src/from_chars.cpp:337:29
+    #1 0x5ac6a8 in simdjson::internal::adjusted_mantissa simdjson::internal::compute_float<simdjson::internal::binary_format<double> >(simdjson::internal::decimal&) /src/simdjson/build/../src/from_chars.cpp:393:5
+    #2 0x55fbb2 in simdjson::internal::adjusted_mantissa simdjson::internal::parse_long_mantissa<simdjson::internal::binary_format<double> >(char const*) /src/simdjson/build/../src/from_chars.cpp:468:10
+    #3 0x55fa08 in simdjson::internal::from_chars(char const*) /src/simdjson/build/../src/from_chars.cpp:476:26
+    #4 0x5addc5 in simdjson::westmere::(anonymous namespace)::numberparsing::parse_float_fallback(unsigned char const*, double*) /src/simdjson/build/../include/simdjson/generic/numberparsing.h:294:16
+    #5 0x5adccc in simdjson::error_code simdjson::westmere::(anonymous namespace)::numberparsing::slow_float_parsing<simdjson::westmere::(anonymous namespace)::stage2::tape_writer>(unsigned char const*, simdjson::westmere::(anonymous namespace)::stage2::tape_writer) /src/simdjson/build/../include/simdjson/generic/numberparsing.h:323:7
+    #6 0x5953a4 in simdjson::error_code simdjson::westmere::(anonymous namespace)::numberparsing::write_float<simdjson::westmere::(anonymous namespace)::stage2::tape_writer>(unsigned char const*, bool, unsigned long, unsigned char const*, int, long, simdjson::westmere::(anonymous namespace)::stage2::tape_writer&) /src/simdjson/build/../include/simdjson/generic/numberparsing.h:452:24
+    #7 0x5953a4 in simdjson::error_code simdjson::westmere::(anonymous namespace)::numberparsing::parse_number<simdjson::westmere::(anonymous namespace)::stage2::tape_writer>(unsigned char const*, simdjson::westmere::(anonymous namespace)::stage2::tape_writer&) /src/simdjson/build/../include/simdjson/generic/numberparsing.h:546:5
+    #8 0x5953a4 in simdjson::westmere::(anonymous namespace)::stage2::tape_builder::visit_number(simdjson::westmere::(anonymous namespace)::stage2::json_iterator&, unsigned char const*) /src/simdjson/build/../src/generic/stage2/tape_builder.h:163:10
+    #9 0x5953a4 in simdjson::westmere::(anonymous namespace)::stage2::tape_builder::visit_root_number(simdjson::westmere::(anonymous namespace)::stage2::json_iterator&, unsigned char const*) /src/simdjson/build/../src/generic/stage2/tape_builder.h:184:22
+    #10 0x5953a4 in simdjson::error_code simdjson::westmere::(anonymous namespace)::stage2::json_iterator::visit_root_primitive<simdjson::westmere::(anonymous namespace)::stage2::tape_builder>(simdjson::westmere::(anonymous namespace)::stage2::tape_builder&, unsigned char const*) /src/simdjson/build/../src/generic/stage2/json_iterator.h:291:22
+    #11 0x5953a4 in simdjson::westmere::(anonymous namespace)::stage2::tape_builder::visit_root_primitive(simdjson::westmere::(anonymous namespace)::stage2::json_iterator&, unsigned char const*) /src/simdjson/build/../src/generic/stage2/tape_builder.h:97:15
+    #12 0x5953a4 in simdjson::error_code simdjson::westmere::(anonymous namespace)::stage2::json_iterator::walk_document<false, simdjson::westmere::(anonymous namespace)::stage2::tape_builder>(simdjson::westmere::(anonymous namespace)::stage2::tape_builder&) /src/simdjson/build/../src/generic/stage2/json_iterator.h:140:16
+    #13 0x5953a4 in simdjson::error_code simdjson::westmere::(anonymous namespace)::stage2::tape_builder::parse_document<false>(simdjson::westmere::dom_parser_implementation&, simdjson::dom::document&) /src/simdjson/build/../src/generic/stage2/tape_builder.h:93:15
+    #14 0x5953a4 in simdjson::westmere::dom_parser_implementation::stage2(simdjson::dom::document&) /src/simdjson/build/../src/westmere/dom_parser_implementation.cpp:147:10
+    #15 0x5a5bdb in simdjson::westmere::dom_parser_implementation::parse(unsigned char const*, unsigned long, simdjson::dom::document&) /src/simdjson/build/../src/westmere/dom_parser_implementation.cpp:157:10
+    #16 0x5557f1 in simdjson::dom::parser::parse(unsigned char const*, unsigned long, bool) & /src/simdjson/build/../include/simdjson/dom/parser-inl.h:99:28
+    #17 0x5552f7 in LLVMFuzzerTestOneInput /src/simdjson/build/../fuzz/fuzz_dump.cpp:53:23
+    #18 0x459dc1 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:595:15
+    #19 0x444e92 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #20 0x44af4e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:852:9
+    #21 0x472f32 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #22 0x7a305b60d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #23 0x420168 in _start (/out/fuzz_dump+0x420168)
+
+DEDUP_TOKEN: simdjson::internal::decimal_right_shift(simdjson::internal::decimal&, unsigned int)--simdjson::internal::adjusted_mantissa simdjson::internal::compute_float<simdjson::internal::binary_format<double> >(simdjson::internal::decimal&)--simdjson::internal::adjusted_mantissa simdjson::internal::parse_long_mantissa<simdjson::internal::binary_format<double> >(char const*)
+Address 0x7a305c68df4c is located in stack of thread T0 at offset 844 in frame
+    #0 0x55fa8f in simdjson::internal::adjusted_mantissa simdjson::internal::parse_long_mantissa<simdjson::internal::binary_format<double> >(char const*) /src/simdjson/build/../src/from_chars.cpp:466
+
+DEDUP_TOKEN: simdjson::internal::adjusted_mantissa simdjson::internal::parse_long_mantissa<simdjson::internal::binary_format<double> >(char const*)
+  This frame has 2 object(s):
+    [32, 40) 'first.addr'
+    [64, 844) 'd' (line 467) <== Memory access at offset 844 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/simdjson/build/../src/from_chars.cpp:337:29 in simdjson::internal::decimal_right_shift(simdjson::internal::decimal&, unsigned int)
+Shadow bytes around the buggy address:
+  0x0f468b8c9b90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f468b8c9ba0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f468b8c9bb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f468b8c9bc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f468b8c9bd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0f468b8c9be0: 00 00 00 00 00 00 00 00 00[04]f3 f3 f3 f3 f3 f3
+  0x0f468b8c9bf0: f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00
+  0x0f468b8c9c00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f468b8c9c10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f468b8c9c20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f468b8c9c30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

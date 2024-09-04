@@ -1,0 +1,243 @@
+Unable to find image 'n132/arvo:1354-vul' locally
+1354-vul: Pulling from n132/arvo
+d16fc20e681d: Already exists
+63f1c4e4b781: Already exists
+fb4d3bb1280c: Already exists
+8038895a6c2e: Already exists
+43fa392d948c: Already exists
+269c60a1465b: Already exists
+962cf29a2bb7: Already exists
+48dcb286890a: Already exists
+0cede67fb003: Already exists
+3c826b7674fb: Already exists
+8387efc1ffde: Already exists
+911ca8932ada: Already exists
+8e7f672d6b82: Already exists
+9d1a80471d30: Already exists
+331bc47ffa98: Already exists
+e6e93fcba7c8: Already exists
+ffe105f6edb5: Already exists
+c6afe3e7c24e: Already exists
+283a1ab1265f: Already exists
+e7dfee90aaba: Pulling fs layer
+f1ccb15db005: Pulling fs layer
+297c90cc64fb: Pulling fs layer
+581a9c599204: Pulling fs layer
+169d4bed5006: Pulling fs layer
+011d1044a0d1: Pulling fs layer
+51de08bcfb2f: Pulling fs layer
+aa14d7f2fe80: Pulling fs layer
+f6d249d65c62: Pulling fs layer
+53299151bdd6: Pulling fs layer
+c600d52c1a2c: Pulling fs layer
+5786f1a4575c: Pulling fs layer
+c54404ba8825: Pulling fs layer
+eb2703247528: Pulling fs layer
+a73998803221: Pulling fs layer
+5d5a0204569e: Pulling fs layer
+a6ff8ec006c7: Pulling fs layer
+cc3ca81885f7: Pulling fs layer
+011d1044a0d1: Waiting
+917a69ebf367: Pulling fs layer
+51de08bcfb2f: Waiting
+aa14d7f2fe80: Waiting
+f6d249d65c62: Waiting
+cd122e528f84: Pulling fs layer
+d4fcf0d6ad47: Pulling fs layer
+e44de9dacfcd: Pulling fs layer
+53299151bdd6: Waiting
+f2800250417a: Pulling fs layer
+c600d52c1a2c: Waiting
+0b5250f6bca7: Pulling fs layer
+eb2703247528: Waiting
+dffaf83b9e59: Pulling fs layer
+a73998803221: Waiting
+8d7dcb76a085: Pulling fs layer
+5786f1a4575c: Waiting
+d59dc6aa8cfb: Pulling fs layer
+c54404ba8825: Waiting
+0547ad13d318: Pulling fs layer
+d4fcf0d6ad47: Waiting
+581a9c599204: Waiting
+5d5a0204569e: Waiting
+27738f44bb36: Pulling fs layer
+e44de9dacfcd: Waiting
+169d4bed5006: Waiting
+0b5250f6bca7: Waiting
+f2800250417a: Waiting
+91c97258c7a4: Pulling fs layer
+dffaf83b9e59: Waiting
+81d34ad9b756: Pulling fs layer
+8d7dcb76a085: Waiting
+a6ff8ec006c7: Waiting
+cc3ca81885f7: Waiting
+917a69ebf367: Waiting
+2aaed51405e8: Pulling fs layer
+cd122e528f84: Waiting
+0547ad13d318: Waiting
+91c97258c7a4: Waiting
+81d34ad9b756: Waiting
+27738f44bb36: Waiting
+d59dc6aa8cfb: Waiting
+2aaed51405e8: Waiting
+f1ccb15db005: Verifying Checksum
+f1ccb15db005: Download complete
+297c90cc64fb: Download complete
+e7dfee90aaba: Verifying Checksum
+e7dfee90aaba: Download complete
+581a9c599204: Verifying Checksum
+581a9c599204: Download complete
+011d1044a0d1: Download complete
+169d4bed5006: Verifying Checksum
+169d4bed5006: Download complete
+51de08bcfb2f: Verifying Checksum
+51de08bcfb2f: Download complete
+aa14d7f2fe80: Download complete
+f6d249d65c62: Download complete
+e7dfee90aaba: Pull complete
+f1ccb15db005: Pull complete
+53299151bdd6: Verifying Checksum
+53299151bdd6: Download complete
+297c90cc64fb: Pull complete
+581a9c599204: Pull complete
+c600d52c1a2c: Verifying Checksum
+c600d52c1a2c: Download complete
+169d4bed5006: Pull complete
+c54404ba8825: Download complete
+011d1044a0d1: Pull complete
+51de08bcfb2f: Pull complete
+aa14d7f2fe80: Pull complete
+f6d249d65c62: Pull complete
+53299151bdd6: Pull complete
+c600d52c1a2c: Pull complete
+5786f1a4575c: Verifying Checksum
+5786f1a4575c: Download complete
+5786f1a4575c: Pull complete
+c54404ba8825: Pull complete
+eb2703247528: Download complete
+eb2703247528: Pull complete
+a73998803221: Download complete
+a73998803221: Pull complete
+a6ff8ec006c7: Verifying Checksum
+a6ff8ec006c7: Download complete
+cc3ca81885f7: Verifying Checksum
+cc3ca81885f7: Download complete
+917a69ebf367: Download complete
+d4fcf0d6ad47: Download complete
+cd122e528f84: Verifying Checksum
+cd122e528f84: Download complete
+5d5a0204569e: Download complete
+f2800250417a: Verifying Checksum
+f2800250417a: Download complete
+e44de9dacfcd: Verifying Checksum
+e44de9dacfcd: Download complete
+5d5a0204569e: Pull complete
+0b5250f6bca7: Verifying Checksum
+0b5250f6bca7: Download complete
+dffaf83b9e59: Download complete
+a6ff8ec006c7: Pull complete
+cc3ca81885f7: Pull complete
+917a69ebf367: Pull complete
+cd122e528f84: Pull complete
+d4fcf0d6ad47: Pull complete
+d59dc6aa8cfb: Verifying Checksum
+d59dc6aa8cfb: Download complete
+e44de9dacfcd: Pull complete
+f2800250417a: Pull complete
+0b5250f6bca7: Pull complete
+dffaf83b9e59: Pull complete
+8d7dcb76a085: Verifying Checksum
+8d7dcb76a085: Download complete
+8d7dcb76a085: Pull complete
+d59dc6aa8cfb: Pull complete
+91c97258c7a4: Download complete
+27738f44bb36: Verifying Checksum
+27738f44bb36: Download complete
+2aaed51405e8: Verifying Checksum
+2aaed51405e8: Download complete
+0547ad13d318: Download complete
+0547ad13d318: Pull complete
+27738f44bb36: Pull complete
+91c97258c7a4: Pull complete
+81d34ad9b756: Verifying Checksum
+81d34ad9b756: Download complete
+81d34ad9b756: Pull complete
+2aaed51405e8: Pull complete
+Digest: sha256:7d7ae7809ddd7462a51249a6da456b4028e4f955ff40ef80d1ad6528d7c8d7f2
+Status: Downloaded newer image for n132/arvo:1354-vul
+INFO: Seed: 1763325495
+INFO: Loaded 1 modules (68167 guards): [0xe331b0, 0xe75acc), 
+/out/ffmpeg_AV_CODEC_ID_SAMI_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000002681 at pc 0x0000004b0ab8 bp 0x7fff022bc3b0 sp 0x7fff022bbb60
+READ of size 1 at 0x61d000002681 thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x4b0ab7 in __interceptor_strncmp.part.75 /src/llvm/projects/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:367
+    #1 0x5cfc8a in ff_htmlmarkup_to_ass /src/ffmpeg/libavcodec/htmlsubtitles.c:174:30
+    #2 0x572ddb in sami_paragraph_to_ass /src/ffmpeg/libavcodec/samidec.c:119:5
+    #3 0x57169b in sami_decode_frame /src/ffmpeg/libavcodec/samidec.c:134:36
+    #4 0x532005 in avcodec_decode_subtitle2 /src/ffmpeg/libavcodec/decode.c:1011:19
+    #5 0x51a252 in subtitle_handler /src/ffmpeg/tools/target_dec_fuzzer.c:81:15
+    #6 0x519502 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:213:23
+    #7 0x8d08e9 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:440:13
+    #8 0x8d10ba in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:397:3
+    #9 0x8a8416 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
+    #10 0x8b38b6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
+    #11 0x8a7a38 in main /src/libfuzzer/FuzzerMain.cpp:20:10
+    #12 0x7f150288783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x41d6a8 in _start (/out/ffmpeg_AV_CODEC_ID_SAMI_fuzzer+0x41d6a8)
+
+DEDUP_TOKEN: __interceptor_strncmp.part.75--ff_htmlmarkup_to_ass--sami_paragraph_to_ass
+0x61d000002681 is located 1 bytes to the right of 2048-byte region [0x61d000001e80,0x61d000002680)
+allocated by thread T0 here:
+    #0 0x4dc7c8 in realloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:79
+    #1 0x7bee78 in av_bprint_alloc /src/ffmpeg/libavutil/bprint.c:50:15
+    #2 0x7c1142 in av_bprint_chars /src/ffmpeg/libavutil/bprint.c:148:13
+    #3 0x5ce7b5 in ff_htmlmarkup_to_ass /src/ffmpeg/libavcodec/htmlsubtitles.c
+    #4 0x572ddb in sami_paragraph_to_ass /src/ffmpeg/libavcodec/samidec.c:119:5
+    #5 0x57169b in sami_decode_frame /src/ffmpeg/libavcodec/samidec.c:134:36
+    #6 0x532005 in avcodec_decode_subtitle2 /src/ffmpeg/libavcodec/decode.c:1011:19
+    #7 0x51a252 in subtitle_handler /src/ffmpeg/tools/target_dec_fuzzer.c:81:15
+    #8 0x519502 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:213:23
+    #9 0x8d08e9 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:440:13
+    #10 0x8d10ba in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:397:3
+    #11 0x8a8416 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
+    #12 0x8b38b6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
+    #13 0x8a7a38 in main /src/libfuzzer/FuzzerMain.cpp:20:10
+    #14 0x7f150288783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: realloc--av_bprint_alloc--av_bprint_chars
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:367 in __interceptor_strncmp.part.75
+Shadow bytes around the buggy address:
+  0x0c3a7fff8480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff8490: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff84a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff84b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff84c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c3a7fff84d0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff84e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff84f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff8500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff8510: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff8520: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

@@ -1,0 +1,257 @@
+Unable to find image 'n132/arvo:344-vul' locally
+344-vul: Pulling from n132/arvo
+7608715873ec: Pulling fs layer
+52cafbddcc36: Pulling fs layer
+aec666517c96: Pulling fs layer
+13e87697aa95: Pulling fs layer
+ca00002583cc: Pulling fs layer
+e5244b92b1dc: Pulling fs layer
+466e870a0a46: Pulling fs layer
+afa0989f744f: Pulling fs layer
+d23bebd2e2af: Pulling fs layer
+00c4e40358b9: Pulling fs layer
+22eb436eefc9: Pulling fs layer
+dded6ff2558f: Pulling fs layer
+d900970ee7e5: Pulling fs layer
+f5bd28566a88: Pulling fs layer
+b28a5115b987: Pulling fs layer
+3131de6c7482: Pulling fs layer
+fac4bbfd5ccb: Pulling fs layer
+5c88b316b8c0: Pulling fs layer
+ee5310633a0d: Pulling fs layer
+ac2778ddb0c1: Pulling fs layer
+b80ee008ca27: Pulling fs layer
+6d688883df03: Pulling fs layer
+7c423bcd2be1: Pulling fs layer
+f79b3ffc9035: Pulling fs layer
+f6ac97a25757: Pulling fs layer
+7ca36b00305b: Pulling fs layer
+ba3d9e80bd49: Pulling fs layer
+97506478b7db: Pulling fs layer
+514e40a45fd9: Pulling fs layer
+13e87697aa95: Waiting
+02ff946d53ec: Pulling fs layer
+ca00002583cc: Waiting
+b805f4e124b0: Pulling fs layer
+958b7c0659c3: Pulling fs layer
+6229d7f33568: Pulling fs layer
+bbaf0ea68dcc: Pulling fs layer
+e5244b92b1dc: Waiting
+466e870a0a46: Waiting
+d992aaeb554b: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+dded6ff2558f: Waiting
+d64603cfbd78: Pulling fs layer
+d900970ee7e5: Waiting
+9f177ddaa02f: Pulling fs layer
+afa0989f744f: Waiting
+5947c96f3e06: Pulling fs layer
+f5bd28566a88: Waiting
+3131de6c7482: Waiting
+fac4bbfd5ccb: Waiting
+d23bebd2e2af: Waiting
+5c88b316b8c0: Waiting
+bbaf0ea68dcc: Waiting
+ba3d9e80bd49: Waiting
+ee5310633a0d: Waiting
+d992aaeb554b: Waiting
+00c4e40358b9: Waiting
+ac2778ddb0c1: Waiting
+4f4fb700ef54: Waiting
+d64603cfbd78: Waiting
+22eb436eefc9: Waiting
+97506478b7db: Waiting
+b80ee008ca27: Waiting
+9f177ddaa02f: Waiting
+6d688883df03: Waiting
+514e40a45fd9: Waiting
+5947c96f3e06: Waiting
+f79b3ffc9035: Waiting
+b28a5115b987: Waiting
+7ca36b00305b: Waiting
+f6ac97a25757: Waiting
+b805f4e124b0: Waiting
+958b7c0659c3: Waiting
+7c423bcd2be1: Waiting
+6229d7f33568: Waiting
+02ff946d53ec: Waiting
+aec666517c96: Download complete
+7608715873ec: Verifying Checksum
+7608715873ec: Download complete
+13e87697aa95: Verifying Checksum
+13e87697aa95: Download complete
+ca00002583cc: Verifying Checksum
+ca00002583cc: Download complete
+e5244b92b1dc: Verifying Checksum
+e5244b92b1dc: Download complete
+52cafbddcc36: Verifying Checksum
+52cafbddcc36: Download complete
+afa0989f744f: Verifying Checksum
+afa0989f744f: Download complete
+d23bebd2e2af: Verifying Checksum
+d23bebd2e2af: Download complete
+7608715873ec: Pull complete
+22eb436eefc9: Verifying Checksum
+22eb436eefc9: Download complete
+dded6ff2558f: Verifying Checksum
+dded6ff2558f: Download complete
+52cafbddcc36: Pull complete
+aec666517c96: Pull complete
+00c4e40358b9: Verifying Checksum
+00c4e40358b9: Download complete
+d900970ee7e5: Verifying Checksum
+d900970ee7e5: Download complete
+b28a5115b987: Download complete
+f5bd28566a88: Download complete
+3131de6c7482: Verifying Checksum
+3131de6c7482: Download complete
+466e870a0a46: Verifying Checksum
+466e870a0a46: Download complete
+fac4bbfd5ccb: Verifying Checksum
+13e87697aa95: Pull complete
+5c88b316b8c0: Verifying Checksum
+5c88b316b8c0: Download complete
+ac2778ddb0c1: Download complete
+b80ee008ca27: Verifying Checksum
+b80ee008ca27: Download complete
+ee5310633a0d: Verifying Checksum
+ee5310633a0d: Download complete
+ca00002583cc: Pull complete
+e5244b92b1dc: Pull complete
+6d688883df03: Verifying Checksum
+6d688883df03: Download complete
+7c423bcd2be1: Download complete
+f79b3ffc9035: Verifying Checksum
+f79b3ffc9035: Download complete
+f6ac97a25757: Verifying Checksum
+f6ac97a25757: Download complete
+7ca36b00305b: Verifying Checksum
+7ca36b00305b: Download complete
+ba3d9e80bd49: Download complete
+97506478b7db: Verifying Checksum
+97506478b7db: Download complete
+02ff946d53ec: Download complete
+514e40a45fd9: Verifying Checksum
+514e40a45fd9: Download complete
+958b7c0659c3: Verifying Checksum
+958b7c0659c3: Download complete
+6229d7f33568: Verifying Checksum
+6229d7f33568: Download complete
+b805f4e124b0: Verifying Checksum
+b805f4e124b0: Download complete
+4f4fb700ef54: Download complete
+d64603cfbd78: Download complete
+9f177ddaa02f: Verifying Checksum
+9f177ddaa02f: Download complete
+5947c96f3e06: Download complete
+d992aaeb554b: Verifying Checksum
+d992aaeb554b: Download complete
+466e870a0a46: Pull complete
+afa0989f744f: Pull complete
+d23bebd2e2af: Pull complete
+bbaf0ea68dcc: Verifying Checksum
+bbaf0ea68dcc: Download complete
+00c4e40358b9: Pull complete
+22eb436eefc9: Pull complete
+dded6ff2558f: Pull complete
+d900970ee7e5: Pull complete
+f5bd28566a88: Pull complete
+b28a5115b987: Pull complete
+3131de6c7482: Pull complete
+fac4bbfd5ccb: Pull complete
+5c88b316b8c0: Pull complete
+ee5310633a0d: Pull complete
+ac2778ddb0c1: Pull complete
+b80ee008ca27: Pull complete
+6d688883df03: Pull complete
+7c423bcd2be1: Pull complete
+f79b3ffc9035: Pull complete
+f6ac97a25757: Pull complete
+7ca36b00305b: Pull complete
+ba3d9e80bd49: Pull complete
+97506478b7db: Pull complete
+514e40a45fd9: Pull complete
+02ff946d53ec: Pull complete
+b805f4e124b0: Pull complete
+958b7c0659c3: Pull complete
+6229d7f33568: Pull complete
+bbaf0ea68dcc: Pull complete
+d992aaeb554b: Pull complete
+4f4fb700ef54: Pull complete
+d64603cfbd78: Pull complete
+9f177ddaa02f: Pull complete
+5947c96f3e06: Pull complete
+Digest: sha256:6d2ab20ba8437717e5514579a80597027434047eb411de8d900a3fa6843458f7
+Status: Downloaded newer image for n132/arvo:344-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1336961352
+INFO: Loaded 1 modules   (919 inline 8-bit counters): 919 [0x6599c8, 0x659d5f), 
+INFO: Loaded 1 PC tables (919 PCs): 919 [0x604ad8,0x608448), 
+/out/fuzzer-parse_msgpack: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000000d1 at pc 0x0000004e18d5 bp 0x7ffc9ac24710 sp 0x7ffc9ac24708
+READ of size 1 at 0x6020000000d1 thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x4e18d4 in nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_msgpack_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&) /src/json/src/json.hpp:6916:13
+    #1 0x4e06d3 in nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_msgpack_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&) /src/json/src/json.hpp:6928:39
+    #2 0x4de31f in from_msgpack /src/json/src/json.hpp:7672:16
+    #3 0x4de31f in LLVMFuzzerTestOneInput /src/json/./test/src/fuzzer-parse_msgpack.cpp:34:19
+    #4 0x50dba3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #5 0x4f9302 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #6 0x4febac in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #7 0x5280e2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #8 0x75719de43082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x41f74d in _start (/out/fuzzer-parse_msgpack+0x41f74d)
+
+DEDUP_TOKEN: nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_msgpack_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&)--nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_msgpack_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&)--from_msgpack
+0x6020000000d1 is located 0 bytes to the right of 1-byte region [0x6020000000d0,0x6020000000d1)
+allocated by thread T0 here:
+    #0 0x4db9cd in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:95:3
+    #1 0x4de111 in __libcpp_operator_new<unsigned long> /usr/local/bin/../include/c++/v1/new:245:10
+    #2 0x4de111 in __libcpp_allocate /usr/local/bin/../include/c++/v1/new:271:10
+    #3 0x4de111 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator.h:105:38
+    #4 0x4de111 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator_traits.h:262:20
+    #5 0x4de111 in __vallocate /usr/local/bin/../include/c++/v1/vector:931:37
+    #6 0x4de111 in vector<const unsigned char *> /usr/local/bin/../include/c++/v1/vector:1135:9
+    #7 0x4de111 in LLVMFuzzerTestOneInput /src/json/./test/src/fuzzer-parse_msgpack.cpp:33:30
+    #8 0x50dba3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #9 0x4f9302 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #10 0x4febac in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #11 0x5280e2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #12 0x75719de43082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: operator new(unsigned long)--__libcpp_operator_new<unsigned long>--__libcpp_allocate
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/json/src/json.hpp:6916:13 in nlohmann::basic_json<std::__1::map, std::__1::vector, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, bool, long, unsigned long, double, std::__1::allocator>::from_msgpack_internal(std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > const&, unsigned long&)
+Shadow bytes around the buggy address:
+  0x0c047fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa 00 00 fa fa 00 fa fa fa 00 fa fa fa 00 fa
+=>0x0c047fff8010: fa fa 01 fa fa fa 01 fa fa fa[01]fa fa fa fa fa
+  0x0c047fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

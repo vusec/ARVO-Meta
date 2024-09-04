@@ -1,0 +1,222 @@
+Unable to find image 'n132/arvo:13160-vul' locally
+13160-vul: Pulling from n132/arvo
+3620e2d282dc: Already exists
+ef22f5e4b3b2: Already exists
+99f229f854da: Already exists
+4fe433abe16a: Already exists
+c9b72a16d85e: Already exists
+de599d649ace: Already exists
+b095926b8e5d: Already exists
+2cb899c88361: Already exists
+e3e971831feb: Already exists
+2b6c6771b90f: Already exists
+7d225808fe07: Already exists
+9b379b826590: Already exists
+b2a75a6e4d30: Already exists
+3dd7d3726d39: Already exists
+e060c62c016e: Already exists
+0482579cc5a5: Already exists
+b45233a145c5: Pulling fs layer
+bcf9eff397e1: Pulling fs layer
+de78881210ea: Pulling fs layer
+2b04e258cbcd: Pulling fs layer
+1b6e145c5b8a: Pulling fs layer
+7d4fb4e788e0: Pulling fs layer
+437e7e387667: Pulling fs layer
+916f2c45fb4a: Pulling fs layer
+4b330e5e386d: Pulling fs layer
+b3d2e0d87056: Pulling fs layer
+9d0180e2c3b1: Pulling fs layer
+82217a224d3e: Pulling fs layer
+3c4d349c4c8e: Pulling fs layer
+0adb90e070d6: Pulling fs layer
+8509ef7f244a: Pulling fs layer
+17a43b21ead3: Pulling fs layer
+103d56494ffe: Pulling fs layer
+1b6e145c5b8a: Waiting
+482cb5a947a8: Pulling fs layer
+7d4fb4e788e0: Waiting
+b91f037fcd2d: Pulling fs layer
+916f2c45fb4a: Waiting
+437e7e387667: Waiting
+4b330e5e386d: Waiting
+51fe8d01fd81: Pulling fs layer
+9d0180e2c3b1: Waiting
+721c0b9d9e5a: Pulling fs layer
+7ed77f5ec40e: Pulling fs layer
+b3d2e0d87056: Waiting
+4f4fb700ef54: Pulling fs layer
+70cb9669413a: Pulling fs layer
+dc148d0e623e: Pulling fs layer
+c9b9497ace5e: Pulling fs layer
+482cb5a947a8: Waiting
+b91f037fcd2d: Waiting
+51fe8d01fd81: Waiting
+17a43b21ead3: Waiting
+721c0b9d9e5a: Waiting
+8509ef7f244a: Waiting
+82217a224d3e: Waiting
+0adb90e070d6: Waiting
+7ed77f5ec40e: Waiting
+103d56494ffe: Waiting
+4f4fb700ef54: Waiting
+c9b9497ace5e: Waiting
+70cb9669413a: Waiting
+3c4d349c4c8e: Waiting
+dc148d0e623e: Waiting
+2b04e258cbcd: Waiting
+bcf9eff397e1: Verifying Checksum
+bcf9eff397e1: Download complete
+de78881210ea: Verifying Checksum
+de78881210ea: Download complete
+b45233a145c5: Verifying Checksum
+b45233a145c5: Download complete
+7d4fb4e788e0: Verifying Checksum
+7d4fb4e788e0: Download complete
+1b6e145c5b8a: Verifying Checksum
+1b6e145c5b8a: Download complete
+437e7e387667: Verifying Checksum
+437e7e387667: Download complete
+916f2c45fb4a: Verifying Checksum
+916f2c45fb4a: Download complete
+4b330e5e386d: Verifying Checksum
+4b330e5e386d: Download complete
+b45233a145c5: Pull complete
+bcf9eff397e1: Pull complete
+9d0180e2c3b1: Download complete
+2b04e258cbcd: Verifying Checksum
+2b04e258cbcd: Download complete
+b3d2e0d87056: Verifying Checksum
+b3d2e0d87056: Download complete
+3c4d349c4c8e: Verifying Checksum
+3c4d349c4c8e: Download complete
+82217a224d3e: Verifying Checksum
+82217a224d3e: Download complete
+8509ef7f244a: Verifying Checksum
+8509ef7f244a: Download complete
+de78881210ea: Pull complete
+0adb90e070d6: Verifying Checksum
+0adb90e070d6: Download complete
+103d56494ffe: Verifying Checksum
+103d56494ffe: Download complete
+b91f037fcd2d: Verifying Checksum
+b91f037fcd2d: Download complete
+17a43b21ead3: Verifying Checksum
+17a43b21ead3: Download complete
+482cb5a947a8: Verifying Checksum
+482cb5a947a8: Download complete
+7ed77f5ec40e: Verifying Checksum
+7ed77f5ec40e: Download complete
+721c0b9d9e5a: Verifying Checksum
+721c0b9d9e5a: Download complete
+70cb9669413a: Verifying Checksum
+70cb9669413a: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+c9b9497ace5e: Download complete
+51fe8d01fd81: Verifying Checksum
+51fe8d01fd81: Download complete
+2b04e258cbcd: Pull complete
+1b6e145c5b8a: Pull complete
+7d4fb4e788e0: Pull complete
+437e7e387667: Pull complete
+916f2c45fb4a: Pull complete
+4b330e5e386d: Pull complete
+b3d2e0d87056: Pull complete
+9d0180e2c3b1: Pull complete
+82217a224d3e: Pull complete
+3c4d349c4c8e: Pull complete
+0adb90e070d6: Pull complete
+8509ef7f244a: Pull complete
+17a43b21ead3: Pull complete
+103d56494ffe: Pull complete
+482cb5a947a8: Pull complete
+b91f037fcd2d: Pull complete
+51fe8d01fd81: Pull complete
+721c0b9d9e5a: Pull complete
+7ed77f5ec40e: Pull complete
+4f4fb700ef54: Pull complete
+70cb9669413a: Pull complete
+dc148d0e623e: Verifying Checksum
+dc148d0e623e: Download complete
+dc148d0e623e: Pull complete
+c9b9497ace5e: Pull complete
+Digest: sha256:fc4314d1d6e2915c53e81681f7b2026f8a3f89631050558a0d4f8b7514811fb8
+Status: Downloaded newer image for n132/arvo:13160-vul
+======================= INFO =========================
+This binary is built for AFL-fuzz.
+To run the target function on individual input(s) execute this:
+  /out/coder_MVG_fuzzer < INPUT_FILE
+or
+  /out/coder_MVG_fuzzer INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] /out/coder_MVG_fuzzer [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: 1000)
+======================================================
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000000178 at pc 0x0000006d73d0 bp 0x7ffc6990a7d0 sp 0x7ffc6990a7c8
+READ of size 8 at 0x603000000178 thread T0
+SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
+    #0 0x6d73cf in DrawDashPolygon /src/graphicsmagick/magick/render.c:1948:11
+    #1 0x6d2e6a in DrawPrimitive /src/graphicsmagick/magick/render.c:5579:19
+    #2 0x6c45dc in DrawImage /src/graphicsmagick/magick/render.c:4373:13
+    #3 0x7fcfc2 in ReadMVGImage /src/graphicsmagick/coders/mvg.c:224:10
+    #4 0x5ca17d in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #5 0x583445 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #6 0x5371de in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #7 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
+    #8 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
+    #9 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
+    #10 0x742403e8483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
+
+DEDUP_TOKEN: DrawDashPolygon--DrawPrimitive--DrawImage
+0x603000000178 is located 0 bytes to the right of 24-byte region [0x603000000160,0x603000000178)
+allocated by thread T0 here:
+    #0 0x4ebc57 in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:121
+    #1 0x6b4387 in CloneDrawInfo /src/graphicsmagick/magick/render.c:325:9
+    #2 0x6c01b6 in DrawImage /src/graphicsmagick/magick/render.c:3338:19
+    #3 0x7fcfc2 in ReadMVGImage /src/graphicsmagick/coders/mvg.c:224:10
+    #4 0x5ca17d in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #5 0x583445 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #6 0x5371de in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #7 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
+    #8 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
+    #9 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
+    #10 0x742403e8483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: malloc--CloneDrawInfo--DrawImage
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:1948:11 in DrawDashPolygon
+Shadow bytes around the buggy address:
+  0x0c067fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c067fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c067fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c067fff8000: fa fa fd fd fd fd fa fa 00 00 00 00 fa fa 00 00
+  0x0c067fff8010: 00 00 fa fa 00 00 00 00 fa fa 00 00 00 00 fa fa
+=>0x0c067fff8020: fd fd fd fd fa fa 00 00 00 00 fa fa 00 00 00[fa]
+  0x0c067fff8030: fa fa fd fd fd fa fa fa fd fd fd fa fa fa 00 00
+  0x0c067fff8040: 00 fa fa fa fd fd fd fa fa fa fa fa fa fa fa fa
+  0x0c067fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

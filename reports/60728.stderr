@@ -1,0 +1,254 @@
+Unable to find image 'n132/arvo:60728-vul' locally
+60728-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+67d560c78017: Pulling fs layer
+a7e7be41d33e: Pulling fs layer
+bc8ad4baa141: Pulling fs layer
+7fa2beb36056: Pulling fs layer
+b5265d9da61d: Pulling fs layer
+2a778a8d349c: Pulling fs layer
+5c1fe07fc4a9: Pulling fs layer
+de461f4b49f9: Pulling fs layer
+e295ee79afe0: Pulling fs layer
+b725376d49a8: Pulling fs layer
+f453536d9ffc: Pulling fs layer
+1e5c1a1b3ebc: Pulling fs layer
+b9fbb0c3c60c: Pulling fs layer
+bb9e7e18a65c: Pulling fs layer
+b2cbf43d7105: Pulling fs layer
+fc3bb3780840: Pulling fs layer
+a1469dadcb65: Pulling fs layer
+9091bb1d7910: Pulling fs layer
+7294b0ed35ef: Pulling fs layer
+4b3f0ab12282: Pulling fs layer
+f88db4838507: Pulling fs layer
+3eb62b0461d5: Pulling fs layer
+5d1d97af7207: Pulling fs layer
+12f44760bf9f: Pulling fs layer
+e1eb3bcc1005: Pulling fs layer
+7fa2beb36056: Waiting
+8f525c921c1d: Pulling fs layer
+540c6589e028: Pulling fs layer
+2a778a8d349c: Waiting
+c6f6de62ee29: Pulling fs layer
+5c1fe07fc4a9: Waiting
+feaec4b21652: Pulling fs layer
+b5265d9da61d: Waiting
+f85b0b1514a3: Pulling fs layer
+b9fbb0c3c60c: Waiting
+de461f4b49f9: Waiting
+02cbd716dc45: Pulling fs layer
+bb9e7e18a65c: Waiting
+4f4fb700ef54: Pulling fs layer
+9902a9c0d484: Pulling fs layer
+d0bf015ae92e: Pulling fs layer
+e295ee79afe0: Waiting
+b725376d49a8: Waiting
+b2cbf43d7105: Waiting
+4b42d235b784: Pulling fs layer
+f453536d9ffc: Waiting
+ed88ad233226: Pulling fs layer
+1e5c1a1b3ebc: Waiting
+524fc8359511: Pulling fs layer
+cf4c39d15be8: Pulling fs layer
+3eb62b0461d5: Waiting
+f88db4838507: Waiting
+5d1d97af7207: Waiting
+7294b0ed35ef: Waiting
+fc3bb3780840: Waiting
+4b3f0ab12282: Waiting
+8f525c921c1d: Waiting
+12f44760bf9f: Waiting
+540c6589e028: Waiting
+a1469dadcb65: Waiting
+c6f6de62ee29: Waiting
+9091bb1d7910: Waiting
+feaec4b21652: Waiting
+f85b0b1514a3: Waiting
+e1eb3bcc1005: Waiting
+ed88ad233226: Waiting
+524fc8359511: Waiting
+02cbd716dc45: Waiting
+cf4c39d15be8: Waiting
+4f4fb700ef54: Waiting
+d0bf015ae92e: Waiting
+9902a9c0d484: Waiting
+4b42d235b784: Waiting
+a7e7be41d33e: Verifying Checksum
+a7e7be41d33e: Download complete
+bc8ad4baa141: Verifying Checksum
+bc8ad4baa141: Download complete
+67d560c78017: Verifying Checksum
+67d560c78017: Download complete
+7fa2beb36056: Verifying Checksum
+7fa2beb36056: Download complete
+b5265d9da61d: Verifying Checksum
+b5265d9da61d: Download complete
+de461f4b49f9: Download complete
+5c1fe07fc4a9: Verifying Checksum
+5c1fe07fc4a9: Download complete
+67d560c78017: Pull complete
+a7e7be41d33e: Pull complete
+b725376d49a8: Verifying Checksum
+b725376d49a8: Download complete
+f453536d9ffc: Verifying Checksum
+f453536d9ffc: Download complete
+bc8ad4baa141: Pull complete
+7fa2beb36056: Pull complete
+b5265d9da61d: Pull complete
+e295ee79afe0: Verifying Checksum
+e295ee79afe0: Download complete
+1e5c1a1b3ebc: Verifying Checksum
+1e5c1a1b3ebc: Download complete
+b9fbb0c3c60c: Verifying Checksum
+b9fbb0c3c60c: Download complete
+bb9e7e18a65c: Verifying Checksum
+bb9e7e18a65c: Download complete
+b2cbf43d7105: Verifying Checksum
+b2cbf43d7105: Download complete
+a1469dadcb65: Verifying Checksum
+a1469dadcb65: Download complete
+fc3bb3780840: Verifying Checksum
+fc3bb3780840: Download complete
+9091bb1d7910: Verifying Checksum
+9091bb1d7910: Download complete
+7294b0ed35ef: Download complete
+4b3f0ab12282: Verifying Checksum
+4b3f0ab12282: Download complete
+f88db4838507: Verifying Checksum
+f88db4838507: Download complete
+3eb62b0461d5: Verifying Checksum
+3eb62b0461d5: Download complete
+5d1d97af7207: Download complete
+e1eb3bcc1005: Verifying Checksum
+e1eb3bcc1005: Download complete
+12f44760bf9f: Verifying Checksum
+12f44760bf9f: Download complete
+8f525c921c1d: Download complete
+c6f6de62ee29: Verifying Checksum
+c6f6de62ee29: Download complete
+feaec4b21652: Download complete
+f85b0b1514a3: Verifying Checksum
+f85b0b1514a3: Download complete
+02cbd716dc45: Verifying Checksum
+02cbd716dc45: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+9902a9c0d484: Verifying Checksum
+9902a9c0d484: Download complete
+d0bf015ae92e: Verifying Checksum
+d0bf015ae92e: Download complete
+4b42d235b784: Verifying Checksum
+4b42d235b784: Download complete
+ed88ad233226: Download complete
+540c6589e028: Verifying Checksum
+540c6589e028: Download complete
+cf4c39d15be8: Verifying Checksum
+cf4c39d15be8: Download complete
+524fc8359511: Verifying Checksum
+524fc8359511: Download complete
+2a778a8d349c: Verifying Checksum
+2a778a8d349c: Download complete
+2a778a8d349c: Pull complete
+5c1fe07fc4a9: Pull complete
+de461f4b49f9: Pull complete
+e295ee79afe0: Pull complete
+b725376d49a8: Pull complete
+f453536d9ffc: Pull complete
+1e5c1a1b3ebc: Pull complete
+b9fbb0c3c60c: Pull complete
+bb9e7e18a65c: Pull complete
+b2cbf43d7105: Pull complete
+fc3bb3780840: Pull complete
+a1469dadcb65: Pull complete
+9091bb1d7910: Pull complete
+7294b0ed35ef: Pull complete
+4b3f0ab12282: Pull complete
+f88db4838507: Pull complete
+3eb62b0461d5: Pull complete
+5d1d97af7207: Pull complete
+12f44760bf9f: Pull complete
+e1eb3bcc1005: Pull complete
+8f525c921c1d: Pull complete
+540c6589e028: Pull complete
+c6f6de62ee29: Pull complete
+feaec4b21652: Pull complete
+f85b0b1514a3: Pull complete
+02cbd716dc45: Pull complete
+4f4fb700ef54: Pull complete
+9902a9c0d484: Pull complete
+d0bf015ae92e: Pull complete
+4b42d235b784: Pull complete
+ed88ad233226: Pull complete
+524fc8359511: Pull complete
+cf4c39d15be8: Pull complete
+Digest: sha256:a7641cec2f77cfbaa0b49bb922d92ed6b505303a5444b77b4759565812705032
+Status: Downloaded newer image for n132/arvo:60728-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1095863062
+INFO: Loaded 1 modules   (21924 inline 8-bit counters): 21924 [0x93ac90, 0x940234), 
+INFO: Loaded 1 PC tables (21924 PCs): 21924 [0x81af20,0x870960), 
+/out/libraw_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+unknown file: data corrupted at 1
+=================================================================
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x78eac7004200 at pc 0x0000006a9713 bp 0x7ffe998da970 sp 0x7ffe998da968
+WRITE of size 4 at 0x78eac7004200 thread T0
+SCARINESS: 51 (4-byte-write-stack-buffer-overflow)
+    #0 0x6a9712 in LibRaw::xtrans_interpolate(int) /src/libraw/src/demosaic/xtrans_demosaic.cpp:275:41
+    #1 0x575eb9 in LibRaw::dcraw_process() /src/libraw/src/postprocessing/dcraw_process.cpp:165:9
+    #2 0x56dd55 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:86:22
+    #3 0x43df33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #4 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #5 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #6 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #7 0x78eac70ba082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #8 0x41f85d in _start (/out/libraw_fuzzer+0x41f85d)
+
+DEDUP_TOKEN: LibRaw::xtrans_interpolate(int)--LibRaw::dcraw_process()--LLVMFuzzerTestOneInput
+Address 0x78eac7004200 is located in stack of thread T0 at offset 512 in frame
+    #0 0x6a36ef in LibRaw::xtrans_interpolate(int) /src/libraw/src/demosaic/xtrans_demosaic.cpp:26
+
+DEDUP_TOKEN: LibRaw::xtrans_interpolate(int)
+  This frame has 6 object(s):
+    [32, 48) 'cstat' (line 27)
+    [64, 352) 'allhex' (line 36)
+    [416, 512) 'color' (line 213) <== Memory access at offset 512 overflows this variable
+    [544, 568) 'diff' (line 268)
+    [608, 640) 'hm' (line 392)
+    [672, 688) 'avg' (line 409)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/libraw/src/demosaic/xtrans_demosaic.cpp:275:41 in LibRaw::xtrans_interpolate(int)
+Shadow bytes around the buggy address:
+  0x0f1dd8df87f0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f1dd8df8800: f1 f1 f1 f1 00 00 f2 f2 00 00 00 00 00 00 00 00
+  0x0f1dd8df8810: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1dd8df8820: 00 00 00 00 00 00 00 00 00 00 00 00 f2 f2 f2 f2
+  0x0f1dd8df8830: f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0f1dd8df8840:[f2]f2 f2 f2 00 00 00 f2 f2 f2 f2 f2 f8 f8 f8 f8
+  0x0f1dd8df8850: f2 f2 f2 f2 f8 f8 f3 f3 00 00 00 00 00 00 00 00
+  0x0f1dd8df8860: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1dd8df8870: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1dd8df8880: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f1dd8df8890: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

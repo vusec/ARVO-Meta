@@ -1,0 +1,160 @@
+Unable to find image 'n132/arvo:65032-vul' locally
+65032-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+cbcb4c79bfb7: Already exists
+4c8ec03d2d00: Already exists
+422e16a69301: Already exists
+bbea921cb1f9: Already exists
+14b6f8014e37: Already exists
+083c5f95f720: Already exists
+43f2f08fbc74: Already exists
+383046b3a05c: Already exists
+9243965cb88c: Already exists
+96a641677983: Already exists
+25845770698a: Already exists
+e5c6cfcba840: Already exists
+bd7fb237cd69: Already exists
+9b232d1103e6: Already exists
+fe335cc43b9a: Already exists
+8eca285b1139: Already exists
+fd5077389e45: Already exists
+4bd53010d8c7: Already exists
+1359372b9924: Already exists
+4175d358056e: Already exists
+be22cfc83da0: Already exists
+9d5fb656e141: Already exists
+c3e843832b2a: Already exists
+53f9b72de89a: Already exists
+5a350f49e605: Already exists
+c6a5915c8a25: Already exists
+0e13422f858e: Already exists
+864d50f7f7c2: Already exists
+a581d5b82456: Already exists
+ffa43b968820: Pulling fs layer
+ef4634902385: Pulling fs layer
+0748863cf696: Pulling fs layer
+0ec044947634: Pulling fs layer
+b5cf95b090f9: Pulling fs layer
+554e05ae2562: Pulling fs layer
+34720834c4ed: Pulling fs layer
+46f746045bc4: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+074bcfb43fad: Pulling fs layer
+ff5ae734f20d: Pulling fs layer
+75c9b89d36df: Pulling fs layer
+074bcfb43fad: Waiting
+34720834c4ed: Waiting
+46f746045bc4: Waiting
+4f4fb700ef54: Waiting
+75c9b89d36df: Waiting
+b5cf95b090f9: Waiting
+ff5ae734f20d: Waiting
+554e05ae2562: Waiting
+0ec044947634: Waiting
+ef4634902385: Download complete
+0748863cf696: Verifying Checksum
+0748863cf696: Download complete
+0ec044947634: Verifying Checksum
+0ec044947634: Download complete
+ffa43b968820: Verifying Checksum
+ffa43b968820: Download complete
+554e05ae2562: Verifying Checksum
+554e05ae2562: Download complete
+b5cf95b090f9: Verifying Checksum
+b5cf95b090f9: Download complete
+34720834c4ed: Verifying Checksum
+34720834c4ed: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+46f746045bc4: Verifying Checksum
+46f746045bc4: Download complete
+074bcfb43fad: Download complete
+75c9b89d36df: Verifying Checksum
+75c9b89d36df: Download complete
+ffa43b968820: Pull complete
+ef4634902385: Pull complete
+0748863cf696: Pull complete
+0ec044947634: Pull complete
+ff5ae734f20d: Verifying Checksum
+ff5ae734f20d: Download complete
+b5cf95b090f9: Pull complete
+554e05ae2562: Pull complete
+34720834c4ed: Pull complete
+46f746045bc4: Pull complete
+4f4fb700ef54: Pull complete
+074bcfb43fad: Pull complete
+ff5ae734f20d: Pull complete
+75c9b89d36df: Pull complete
+Digest: sha256:6e2e96c7016d188edff6332853417d9d25b84d05a03aac4ae276fd79f48ef45e
+Status: Downloaded newer image for n132/arvo:65032-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3965594654
+INFO: Loaded 1 modules   (37869 inline 8-bit counters): 37869 [0x973130, 0x97c51d), 
+INFO: Loaded 1 PC tables (37869 PCs): 37869 [0x844060,0x8d7f30), 
+/out/xslt: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x00000080b221 at pc 0x00000060d474 bp 0x7ffd9f707030 sp 0x7ffd9f707028
+READ of size 1 at 0x00000080b221 thread T0
+SCARINESS: 12 (1-byte-read-global-buffer-overflow)
+    #0 0x60d473 in xmlDictHashName /src/libxml2/dict.c:471:31
+    #1 0x60d473 in xmlDictLookupInternal /src/libxml2/dict.c:692:21
+    #2 0x60e350 in xmlDictLookupHashed /src/libxml2/dict.c:849:13
+    #3 0x68048d in xmlParseNCNameComplex /src/libxml2/parser.c:3508:11
+    #4 0x68048d in xmlParseNCName /src/libxml2/parser.c:3573:12
+    #5 0x67f632 in xmlParseQNameHashed /src/libxml2/parser.c:8807:9
+    #6 0x66642f in xmlParseStartTag2 /src/libxml2/parser.c:9369:18
+    #7 0x66642f in xmlParseElementStart /src/libxml2/parser.c:10244:16
+    #8 0x6656bc in xmlParseElement /src/libxml2/parser.c:10179:9
+    #9 0x673d28 in xmlParseDocument /src/libxml2/parser.c:10956:2
+    #10 0x5d3be9 in xsltDocDefaultLoaderFunc /src/libxslt/libxslt/documents.c:94:5
+    #11 0x5d4bb1 in xsltLoadStyleDocument /src/libxslt/libxslt/documents.c:396:11
+    #12 0x5ce25e in xsltParseStylesheetInclude /src/libxslt/libxslt/imports.c:236:15
+    #13 0x597dd3 in xsltParseStylesheetTop /src/libxslt/libxslt/xslt.c:6174:10
+    #14 0x597dd3 in xsltParseStylesheetProcess /src/libxslt/libxslt/xslt.c:6452:2
+    #15 0x59bea9 in xsltParseStylesheetUser /src/libxslt/libxslt/xslt.c:6660:9
+    #16 0x56e1f9 in xsltFuzzXslt /src/libxslt/tests/fuzz/fuzz.c:312:9
+    #17 0x56c602 in LLVMFuzzerTestOneInput /src/libxslt/tests/fuzz/xslt.c:18:23
+    #18 0x43dfe3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #19 0x429742 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #20 0x42efec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #21 0x458522 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #22 0x75fc89484082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #23 0x41f90d in _start (/out/xslt+0x41f90d)
+
+DEDUP_TOKEN: xmlDictHashName--xmlDictLookupInternal--xmlDictLookupHashed
+0x00000080b221 is located 0 bytes to the right of global variable '<string literal>' defined in 'buf.c:1014:58' (0x80b220) of size 1
+  '<string literal>' is ascii string ''
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/libxml2/dict.c:471:31 in xmlDictHashName
+Shadow bytes around the buggy address:
+  0x0000800f95f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800f9600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800f9610: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800f9620: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800f9630: 00 00 00 00 00 00 00 00 02 f9 f9 f9 07 f9 f9 f9
+=>0x0000800f9640: 02 f9 f9 f9[01]f9 f9 f9 00 00 00 00 00 00 00 00
+  0x0000800f9650: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800f9660: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800f9670: 00 00 00 00 f9 f9 f9 f9 f9 f9 f9 f9 00 00 00 00
+  0x0000800f9680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800f9690: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

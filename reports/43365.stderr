@@ -1,0 +1,194 @@
+Unable to find image 'n132/arvo:43365-vul' locally
+43365-vul: Pulling from n132/arvo
+35807b77a593: Already exists
+4d06ff54f2f5: Pulling fs layer
+ed2fd4800bfe: Pulling fs layer
+7eb5da249961: Pulling fs layer
+1c104c3497bf: Pulling fs layer
+36c0f69680ec: Pulling fs layer
+11d915f9a30a: Pulling fs layer
+3bae1c23f3b9: Pulling fs layer
+125e705a15a4: Pulling fs layer
+588f994a4862: Pulling fs layer
+887f5e2e7d4e: Pulling fs layer
+8f350c92d1f3: Pulling fs layer
+f4a0b8758250: Pulling fs layer
+2de86029fb3e: Pulling fs layer
+75547be7e499: Pulling fs layer
+5d3109454486: Pulling fs layer
+8f22a1538cab: Pulling fs layer
+b1d872a89e0b: Pulling fs layer
+1f3772f26183: Pulling fs layer
+dc6cb804329b: Pulling fs layer
+acf11018b47d: Pulling fs layer
+bc94be2fd6b9: Pulling fs layer
+c15d5db53926: Pulling fs layer
+11d915f9a30a: Waiting
+493fc8e31e41: Pulling fs layer
+3bae1c23f3b9: Waiting
+887f5e2e7d4e: Waiting
+072d518fca9f: Pulling fs layer
+125e705a15a4: Waiting
+4f4fb700ef54: Pulling fs layer
+8f350c92d1f3: Waiting
+d9ff52918568: Pulling fs layer
+4a0c9d8ec6c3: Pulling fs layer
+f4a0b8758250: Waiting
+1c104c3497bf: Waiting
+36c0f69680ec: Waiting
+21fc2c2bb96a: Pulling fs layer
+acf11018b47d: Waiting
+75547be7e499: Waiting
+bc94be2fd6b9: Waiting
+c15d5db53926: Waiting
+493fc8e31e41: Waiting
+072d518fca9f: Waiting
+5d3109454486: Waiting
+8f22a1538cab: Waiting
+2de86029fb3e: Waiting
+21fc2c2bb96a: Waiting
+1f3772f26183: Waiting
+4f4fb700ef54: Waiting
+dc6cb804329b: Waiting
+b1d872a89e0b: Waiting
+4a0c9d8ec6c3: Waiting
+d9ff52918568: Waiting
+588f994a4862: Waiting
+ed2fd4800bfe: Download complete
+1c104c3497bf: Download complete
+4d06ff54f2f5: Verifying Checksum
+4d06ff54f2f5: Download complete
+7eb5da249961: Verifying Checksum
+7eb5da249961: Download complete
+11d915f9a30a: Download complete
+4d06ff54f2f5: Pull complete
+ed2fd4800bfe: Pull complete
+7eb5da249961: Pull complete
+1c104c3497bf: Pull complete
+36c0f69680ec: Download complete
+588f994a4862: Verifying Checksum
+588f994a4862: Download complete
+125e705a15a4: Verifying Checksum
+125e705a15a4: Download complete
+3bae1c23f3b9: Verifying Checksum
+3bae1c23f3b9: Download complete
+8f350c92d1f3: Verifying Checksum
+8f350c92d1f3: Download complete
+f4a0b8758250: Verifying Checksum
+f4a0b8758250: Download complete
+887f5e2e7d4e: Verifying Checksum
+887f5e2e7d4e: Download complete
+2de86029fb3e: Download complete
+5d3109454486: Verifying Checksum
+5d3109454486: Download complete
+8f22a1538cab: Verifying Checksum
+8f22a1538cab: Download complete
+b1d872a89e0b: Verifying Checksum
+b1d872a89e0b: Download complete
+1f3772f26183: Verifying Checksum
+1f3772f26183: Download complete
+75547be7e499: Verifying Checksum
+75547be7e499: Download complete
+36c0f69680ec: Pull complete
+11d915f9a30a: Pull complete
+dc6cb804329b: Verifying Checksum
+dc6cb804329b: Download complete
+c15d5db53926: Verifying Checksum
+c15d5db53926: Download complete
+bc94be2fd6b9: Verifying Checksum
+bc94be2fd6b9: Download complete
+072d518fca9f: Download complete
+4f4fb700ef54: Download complete
+493fc8e31e41: Verifying Checksum
+493fc8e31e41: Download complete
+d9ff52918568: Verifying Checksum
+d9ff52918568: Download complete
+21fc2c2bb96a: Verifying Checksum
+21fc2c2bb96a: Download complete
+3bae1c23f3b9: Pull complete
+125e705a15a4: Pull complete
+588f994a4862: Pull complete
+887f5e2e7d4e: Pull complete
+8f350c92d1f3: Pull complete
+f4a0b8758250: Pull complete
+2de86029fb3e: Pull complete
+75547be7e499: Pull complete
+5d3109454486: Pull complete
+8f22a1538cab: Pull complete
+b1d872a89e0b: Pull complete
+1f3772f26183: Pull complete
+dc6cb804329b: Pull complete
+acf11018b47d: Verifying Checksum
+acf11018b47d: Download complete
+acf11018b47d: Pull complete
+bc94be2fd6b9: Pull complete
+c15d5db53926: Pull complete
+493fc8e31e41: Pull complete
+072d518fca9f: Pull complete
+4f4fb700ef54: Pull complete
+d9ff52918568: Pull complete
+4a0c9d8ec6c3: Verifying Checksum
+4a0c9d8ec6c3: Download complete
+4a0c9d8ec6c3: Pull complete
+21fc2c2bb96a: Pull complete
+Digest: sha256:4e86e91eb547834a8216fa44992c21144ab59f91dc619e0d0896454e5456dc38
+Status: Downloaded newer image for n132/arvo:43365-vul
+Accepting input from '/tmp/poc'
+Usage for fuzzing: honggfuzz -P [flags] -- /out/simple_compress
+=================================================================
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000a26d30 at pc 0x000000900405 bp 0x7ffc00183c10 sp 0x7ffc00183c08
+READ of size 4 at 0x000000a26d30 thread T0
+SCARINESS: 17 (4-byte-read-global-buffer-overflow)
+    #0 0x900404 in ZSTD_litLengthPrice /src/zstd/tests/fuzz/../../lib/compress/zstd_opt.c:274:17
+    #1 0x900404 in ZSTD_compressBlock_opt_generic /src/zstd/tests/fuzz/../../lib/compress/zstd_opt.c:1072:40
+    #2 0x8fa774 in ZSTD_compressBlock_btopt /src/zstd/tests/fuzz/../../lib/compress/zstd_opt.c:1251:12
+    #3 0x8bf026 in ZSTD_buildSeqStore /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:2887:26
+    #4 0x89af70 in ZSTD_compressBlock_splitBlock /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:3727:28
+    #5 0x89af70 in ZSTD_compress_frameChunk /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:3967:25
+    #6 0x89af70 in ZSTD_compressContinue_internal /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:4142:30
+    #7 0x8a2927 in ZSTD_compressEnd /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:4646:26
+    #8 0x8a3f3d in ZSTD_compress_advanced_internal /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:4695:12
+    #9 0x8a3f3d in ZSTD_compress_usingDict /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:4710:12
+    #10 0x8a41b5 in ZSTD_compressCCtx /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:4720:12
+    #11 0x9e69c5 in LLVMFuzzerTestOneInput /src/zstd/tests/fuzz/simple_compress.c:46:24
+    #12 0x9e70eb in main (/out/simple_compress+0x9e70eb)
+    #13 0x7594fc933082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #14 0x41d60d in _start (/out/simple_compress+0x41d60d)
+
+DEDUP_TOKEN: ZSTD_litLengthPrice--ZSTD_compressBlock_opt_generic--ZSTD_compressBlock_btopt
+0x000000a26d30 is located 48 bytes to the left of global variable '<string literal>' defined in '../../lib/compress/zstd_opt.c:52:5' (0xa26d60) of size 27
+  '<string literal>' is ascii string 'hb + BITCOST_ACCURACY < 31'
+0x000000a26d30 is located 0 bytes to the right of global variable 'LL_bits' defined in '../../lib/compress/../common/zstd_internal.h:195:30' (0xa26ca0) of size 144
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/zstd/tests/fuzz/../../lib/compress/zstd_opt.c:274:17 in ZSTD_litLengthPrice
+Shadow bytes around the buggy address:
+  0x00008013cd50: 00 00 03 f9 f9 f9 f9 f9 00 f9 f9 f9 00 00 02 f9
+  0x00008013cd60: f9 f9 f9 f9 00 00 00 00 04 f9 f9 f9 f9 f9 f9 f9
+  0x00008013cd70: 00 00 00 01 f9 f9 f9 f9 00 00 05 f9 f9 f9 f9 f9
+  0x00008013cd80: 00 05 f9 f9 00 00 00 00 00 00 00 00 00 00 05 f9
+  0x00008013cd90: f9 f9 f9 f9 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x00008013cda0: 00 00 00 00 00 00[f9]f9 f9 f9 f9 f9 00 00 00 03
+  0x00008013cdb0: f9 f9 f9 f9 00 00 00 01 f9 f9 f9 f9 00 00 00 00
+  0x00008013cdc0: 00 00 00 00 f9 f9 f9 f9 00 00 00 f9 f9 f9 f9 f9
+  0x00008013cdd0: 00 00 00 00 00 00 00 00 00 00 01 f9 f9 f9 f9 f9
+  0x00008013cde0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00008013cdf0: 00 00 00 00 00 00 00 00 00 00 04 f9 f9 f9 f9 f9
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

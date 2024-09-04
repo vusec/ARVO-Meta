@@ -1,0 +1,162 @@
+Unable to find image 'n132/arvo:31181-vul' locally
+31181-vul: Pulling from n132/arvo
+4007a89234b4: Already exists
+5dfa26c6b9c9: Already exists
+0ba7bf18aa40: Already exists
+4c6ec688ebe3: Already exists
+8402f6a128ab: Already exists
+a9844295fc02: Already exists
+896d36fd4c48: Already exists
+7caeb050fbae: Already exists
+19c994299ca2: Already exists
+3af6636da2fc: Already exists
+f066005d6cfa: Already exists
+eb7a669b446d: Already exists
+db2d8166cb16: Already exists
+ce13daa0e1d4: Already exists
+49415db117de: Already exists
+2a537e092603: Already exists
+9f8cbd34f314: Already exists
+11795e809c12: Already exists
+60ad66e29b37: Already exists
+667a3fc11e31: Already exists
+7002e1675336: Already exists
+99f1f9ab76c4: Already exists
+2e07133b3a8c: Already exists
+873c68cbb916: Already exists
+51404522b68c: Already exists
+905d55d9e7a6: Already exists
+342b5aeeb441: Already exists
+8cb0e99510b5: Pulling fs layer
+1f9561feceed: Pulling fs layer
+2a97cfafbe61: Pulling fs layer
+5be87dc4eaab: Pulling fs layer
+59c9d109b361: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+087e6d0094e0: Pulling fs layer
+d40c63bee3c1: Pulling fs layer
+7f286e9c9953: Pulling fs layer
+01d5af4d65f2: Pulling fs layer
+138f1b55eb2a: Pulling fs layer
+90a659e3a1c6: Pulling fs layer
+5be87dc4eaab: Waiting
+d40c63bee3c1: Waiting
+7f286e9c9953: Waiting
+138f1b55eb2a: Waiting
+01d5af4d65f2: Waiting
+59c9d109b361: Waiting
+90a659e3a1c6: Waiting
+4f4fb700ef54: Waiting
+087e6d0094e0: Waiting
+1f9561feceed: Verifying Checksum
+1f9561feceed: Download complete
+2a97cfafbe61: Verifying Checksum
+2a97cfafbe61: Download complete
+59c9d109b361: Verifying Checksum
+59c9d109b361: Download complete
+5be87dc4eaab: Verifying Checksum
+5be87dc4eaab: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+087e6d0094e0: Verifying Checksum
+087e6d0094e0: Download complete
+8cb0e99510b5: Verifying Checksum
+8cb0e99510b5: Download complete
+01d5af4d65f2: Verifying Checksum
+01d5af4d65f2: Download complete
+7f286e9c9953: Verifying Checksum
+7f286e9c9953: Download complete
+d40c63bee3c1: Verifying Checksum
+d40c63bee3c1: Download complete
+90a659e3a1c6: Verifying Checksum
+90a659e3a1c6: Download complete
+8cb0e99510b5: Pull complete
+1f9561feceed: Pull complete
+2a97cfafbe61: Pull complete
+5be87dc4eaab: Pull complete
+59c9d109b361: Pull complete
+4f4fb700ef54: Pull complete
+087e6d0094e0: Pull complete
+d40c63bee3c1: Pull complete
+7f286e9c9953: Pull complete
+01d5af4d65f2: Pull complete
+138f1b55eb2a: Verifying Checksum
+138f1b55eb2a: Download complete
+138f1b55eb2a: Pull complete
+90a659e3a1c6: Pull complete
+Digest: sha256:5a78ea47256af237718daf60c29d7bd0eff5bbb2268618580f078b2ce37f477e
+Status: Downloaded newer image for n132/arvo:31181-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 628294469
+INFO: Loaded 1 modules   (18092 inline 8-bit counters): 18092 [0xab76b0, 0xabbd5c), 
+INFO: Loaded 1 PC tables (18092 PCs): 18092 [0x7a4c08,0x7eb6c8), 
+/out/libraw_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61900000047f at pc 0x0000005f867a bp 0x7ffcd851ea50 sp 0x7ffcd851ea48
+READ of size 1 at 0x61900000047f thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x5f8679 in LibRaw::kodak_c330_load_raw() /src/libraw/src/decoders/kodak_decoders.cpp:270:16
+    #1 0x558581 in LibRaw::unpack() /src/libraw/src/decoders/unpack.cpp:287:7
+    #2 0x5570d6 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:47:20
+    #3 0x45a801 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #4 0x4444c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #5 0x44a816 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #6 0x474802 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #7 0x7182cb04e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x41ee88 in _start (/out/libraw_fuzzer+0x41ee88)
+
+DEDUP_TOKEN: LibRaw::kodak_c330_load_raw()--LibRaw::unpack()--LLVMFuzzerTestOneInput
+0x61900000047f is located 1 bytes to the right of 1022-byte region [0x619000000080,0x61900000047e)
+allocated by thread T0 here:
+    #0 0x55464d in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:99:3
+    #1 0x56ba90 in void* std::__1::__libcpp_operator_new<unsigned long>(unsigned long) /usr/local/bin/../include/c++/v1/new:235:10
+    #2 0x56ba10 in std::__1::__libcpp_allocate(unsigned long, unsigned long) /usr/local/bin/../include/c++/v1/new:261:10
+    #3 0x58efdd in std::__1::allocator<unsigned char>::allocate(unsigned long) /usr/local/bin/../include/c++/v1/memory:840:38
+    #4 0x58edb0 in std::__1::allocator_traits<std::__1::allocator<unsigned char> >::allocate(std::__1::allocator<unsigned char>&, unsigned long) /usr/local/bin/../include/c++/v1/__memory/allocator_traits.h:260:20
+    #5 0x58e70c in std::__1::vector<unsigned char, std::__1::allocator<unsigned char> >::__vallocate(unsigned long) /usr/local/bin/../include/c++/v1/vector:993:37
+    #6 0x58c716 in std::__1::vector<unsigned char, std::__1::allocator<unsigned char> >::vector(unsigned long) /usr/local/bin/../include/c++/v1/vector:1126:9
+    #7 0x5f7dc7 in LibRaw::kodak_c330_load_raw() /src/libraw/src/decoders/kodak_decoders.cpp:257:22
+    #8 0x558581 in LibRaw::unpack() /src/libraw/src/decoders/unpack.cpp:287:7
+    #9 0x5570d6 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:47:20
+    #10 0x45a801 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #11 0x4444c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #12 0x44a816 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #13 0x474802 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #14 0x7182cb04e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: operator new(unsigned long)--void* std::__1::__libcpp_operator_new<unsigned long>(unsigned long)--std::__1::__libcpp_allocate(unsigned long, unsigned long)
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libraw/src/decoders/kodak_decoders.cpp:270:16 in LibRaw::kodak_c330_load_raw()
+Shadow bytes around the buggy address:
+  0x0c327fff8030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c327fff8080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[06]
+  0x0c327fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff80c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff80d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

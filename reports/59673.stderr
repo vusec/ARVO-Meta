@@ -1,0 +1,319 @@
+Unable to find image 'n132/arvo:59673-vul' locally
+59673-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+7e6a398eb9c5: Pulling fs layer
+dc8099517e84: Pulling fs layer
+3f4463852cc9: Pulling fs layer
+55121278263a: Pulling fs layer
+e65b4a5a1b7d: Pulling fs layer
+b3c682f8c474: Pulling fs layer
+0da3ce304841: Pulling fs layer
+e293ea6449f9: Pulling fs layer
+eb1277d9ab4a: Pulling fs layer
+70657770d54a: Pulling fs layer
+342150b7eb6a: Pulling fs layer
+cd647162b0e6: Pulling fs layer
+3ea75e85cf14: Pulling fs layer
+a119af21c594: Pulling fs layer
+8550b132eb52: Pulling fs layer
+074976754991: Pulling fs layer
+cc348ab41f38: Pulling fs layer
+55121278263a: Waiting
+4a3f446247af: Pulling fs layer
+b3c682f8c474: Waiting
+663543f672e7: Pulling fs layer
+0da3ce304841: Waiting
+0adf7d646080: Pulling fs layer
+e293ea6449f9: Waiting
+535717b44bcb: Pulling fs layer
+eb1277d9ab4a: Waiting
+70657770d54a: Waiting
+342150b7eb6a: Waiting
+96c86f8e2f4e: Pulling fs layer
+60cfab78b0c4: Pulling fs layer
+cd647162b0e6: Waiting
+b5eb728284ba: Pulling fs layer
+3ea75e85cf14: Waiting
+feebfe3efbf8: Pulling fs layer
+bcfe420779f0: Pulling fs layer
+1759956ba141: Pulling fs layer
+f7b59fcc7cc8: Pulling fs layer
+8550b132eb52: Waiting
+555a132a17b3: Pulling fs layer
+074976754991: Waiting
+e65b4a5a1b7d: Waiting
+0df2cd2434c2: Pulling fs layer
+a119af21c594: Waiting
+a9147b2043ee: Pulling fs layer
+663543f672e7: Waiting
+0adf7d646080: Waiting
+a8b9a5079fd3: Pulling fs layer
+cc348ab41f38: Waiting
+e2d4129c8d60: Pulling fs layer
+535717b44bcb: Waiting
+96c86f8e2f4e: Waiting
+a65d43862145: Pulling fs layer
+4a3f446247af: Waiting
+a7157eb8c9c6: Pulling fs layer
+60cfab78b0c4: Waiting
+f7b59fcc7cc8: Waiting
+c4b355b4b94e: Pulling fs layer
+a8b9a5079fd3: Waiting
+fd9eafc2cf5f: Pulling fs layer
+0df2cd2434c2: Waiting
+9ffd00326b66: Pulling fs layer
+a9147b2043ee: Waiting
+bfa83e7148a2: Pulling fs layer
+e2d4129c8d60: Waiting
+4d83217e1e92: Pulling fs layer
+a65d43862145: Waiting
+abf13ecd3c8c: Pulling fs layer
+c4b355b4b94e: Waiting
+5d0a5b49f21f: Pulling fs layer
+192efc2445a9: Pulling fs layer
+b5eb728284ba: Waiting
+feebfe3efbf8: Waiting
+bcfe420779f0: Waiting
+a7157eb8c9c6: Waiting
+8a1d3c30f140: Pulling fs layer
+1759956ba141: Waiting
+9f3dcaff650c: Pulling fs layer
+5d0a5b49f21f: Waiting
+bfa83e7148a2: Waiting
+192efc2445a9: Waiting
+c0e8362baa50: Pulling fs layer
+9ffd00326b66: Waiting
+0aaee9bab3a0: Pulling fs layer
+4d83217e1e92: Waiting
+555a132a17b3: Waiting
+abf13ecd3c8c: Waiting
+c15effbebb59: Pulling fs layer
+93c4dc12a59e: Pulling fs layer
+8a1d3c30f140: Waiting
+0aaee9bab3a0: Waiting
+fd9eafc2cf5f: Waiting
+9f3dcaff650c: Waiting
+c15effbebb59: Waiting
+93c4dc12a59e: Waiting
+dc8099517e84: Verifying Checksum
+dc8099517e84: Download complete
+3f4463852cc9: Verifying Checksum
+3f4463852cc9: Download complete
+55121278263a: Verifying Checksum
+55121278263a: Download complete
+e65b4a5a1b7d: Verifying Checksum
+e65b4a5a1b7d: Download complete
+7e6a398eb9c5: Verifying Checksum
+7e6a398eb9c5: Download complete
+e293ea6449f9: Verifying Checksum
+e293ea6449f9: Download complete
+0da3ce304841: Verifying Checksum
+0da3ce304841: Download complete
+7e6a398eb9c5: Pull complete
+dc8099517e84: Pull complete
+3f4463852cc9: Pull complete
+70657770d54a: Verifying Checksum
+70657770d54a: Download complete
+55121278263a: Pull complete
+e65b4a5a1b7d: Pull complete
+342150b7eb6a: Download complete
+b3c682f8c474: Verifying Checksum
+b3c682f8c474: Download complete
+cd647162b0e6: Verifying Checksum
+cd647162b0e6: Download complete
+3ea75e85cf14: Verifying Checksum
+3ea75e85cf14: Download complete
+8550b132eb52: Verifying Checksum
+8550b132eb52: Download complete
+a119af21c594: Verifying Checksum
+a119af21c594: Download complete
+cc348ab41f38: Verifying Checksum
+cc348ab41f38: Download complete
+074976754991: Verifying Checksum
+074976754991: Download complete
+663543f672e7: Download complete
+eb1277d9ab4a: Download complete
+4a3f446247af: Verifying Checksum
+4a3f446247af: Download complete
+b3c682f8c474: Pull complete
+0da3ce304841: Pull complete
+e293ea6449f9: Pull complete
+96c86f8e2f4e: Verifying Checksum
+96c86f8e2f4e: Download complete
+0adf7d646080: Verifying Checksum
+0adf7d646080: Download complete
+535717b44bcb: Verifying Checksum
+535717b44bcb: Download complete
+60cfab78b0c4: Verifying Checksum
+60cfab78b0c4: Download complete
+b5eb728284ba: Verifying Checksum
+b5eb728284ba: Download complete
+feebfe3efbf8: Verifying Checksum
+feebfe3efbf8: Download complete
+bcfe420779f0: Download complete
+f7b59fcc7cc8: Verifying Checksum
+f7b59fcc7cc8: Download complete
+0df2cd2434c2: Download complete
+eb1277d9ab4a: Pull complete
+70657770d54a: Pull complete
+342150b7eb6a: Pull complete
+cd647162b0e6: Pull complete
+3ea75e85cf14: Pull complete
+a119af21c594: Pull complete
+8550b132eb52: Pull complete
+074976754991: Pull complete
+cc348ab41f38: Pull complete
+4a3f446247af: Pull complete
+663543f672e7: Pull complete
+0adf7d646080: Pull complete
+535717b44bcb: Pull complete
+96c86f8e2f4e: Pull complete
+60cfab78b0c4: Pull complete
+b5eb728284ba: Pull complete
+feebfe3efbf8: Pull complete
+bcfe420779f0: Pull complete
+1759956ba141: Verifying Checksum
+1759956ba141: Download complete
+a9147b2043ee: Verifying Checksum
+a9147b2043ee: Download complete
+a8b9a5079fd3: Verifying Checksum
+a8b9a5079fd3: Download complete
+e2d4129c8d60: Download complete
+555a132a17b3: Verifying Checksum
+555a132a17b3: Download complete
+a65d43862145: Verifying Checksum
+a65d43862145: Download complete
+a7157eb8c9c6: Verifying Checksum
+a7157eb8c9c6: Download complete
+fd9eafc2cf5f: Verifying Checksum
+fd9eafc2cf5f: Download complete
+9ffd00326b66: Verifying Checksum
+9ffd00326b66: Download complete
+c4b355b4b94e: Verifying Checksum
+c4b355b4b94e: Download complete
+4d83217e1e92: Download complete
+abf13ecd3c8c: Verifying Checksum
+abf13ecd3c8c: Download complete
+1759956ba141: Pull complete
+f7b59fcc7cc8: Pull complete
+bfa83e7148a2: Verifying Checksum
+bfa83e7148a2: Download complete
+192efc2445a9: Download complete
+5d0a5b49f21f: Verifying Checksum
+5d0a5b49f21f: Download complete
+8a1d3c30f140: Verifying Checksum
+8a1d3c30f140: Download complete
+9f3dcaff650c: Verifying Checksum
+9f3dcaff650c: Download complete
+0aaee9bab3a0: Verifying Checksum
+0aaee9bab3a0: Download complete
+c0e8362baa50: Verifying Checksum
+c0e8362baa50: Download complete
+93c4dc12a59e: Verifying Checksum
+93c4dc12a59e: Download complete
+555a132a17b3: Pull complete
+0df2cd2434c2: Pull complete
+a9147b2043ee: Pull complete
+a8b9a5079fd3: Pull complete
+e2d4129c8d60: Pull complete
+a65d43862145: Pull complete
+a7157eb8c9c6: Pull complete
+c4b355b4b94e: Pull complete
+fd9eafc2cf5f: Pull complete
+9ffd00326b66: Pull complete
+bfa83e7148a2: Pull complete
+4d83217e1e92: Pull complete
+abf13ecd3c8c: Pull complete
+5d0a5b49f21f: Pull complete
+192efc2445a9: Pull complete
+8a1d3c30f140: Pull complete
+9f3dcaff650c: Pull complete
+c0e8362baa50: Pull complete
+0aaee9bab3a0: Pull complete
+c15effbebb59: Verifying Checksum
+c15effbebb59: Download complete
+c15effbebb59: Pull complete
+93c4dc12a59e: Pull complete
+Digest: sha256:bf4cf476c4d41b4e6cb0ac52df6e8bd85bb06c02c7ad9b81d1e3c958b0551532
+Status: Downloaded newer image for n132/arvo:59673-vul
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d0000030c5 at pc 0x0000007ea4aa bp 0x7ffe0cf64b60 sp 0x7ffe0cf64b58
+READ of size 1 at 0x61d0000030c5 thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x7ea4a9 in avg_h264_chroma_mc1_8_c /src/ffmpeg/libavcodec/h264chroma_template.c:208:1
+    #1 0x5993a9 in mpeg_motion_lowres /src/ffmpeg/libavcodec/mpegvideo_dec.c:754:13
+    #2 0x5993a9 in MPV_motion_lowres /src/ffmpeg/libavcodec/mpegvideo_dec.c:926:21
+    #3 0x590507 in mpv_reconstruct_mb_internal /src/ffmpeg/libavcodec/mpv_reconstruct_mb_template.c:144:21
+    #4 0x590507 in ff_mpv_reconstruct_mb /src/ffmpeg/libavcodec/mpegvideo_dec.c:1033:9
+    #5 0x577151 in mpeg_decode_slice /src/ffmpeg/libavcodec/mpeg12dec.c:1835:9
+    #6 0x56799f in decode_chunks /src/ffmpeg/libavcodec/mpeg12dec.c:2760:27
+    #7 0x55a108 in mpeg_decode_frame /src/ffmpeg/libavcodec/mpeg12dec.c:2827:11
+    #8 0x519ce2 in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:287:15
+    #9 0x519ce2 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:533:15
+    #10 0x519ce2 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:553:15
+    #11 0x519470 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:641:15
+    #12 0x5028dc in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:521:25
+    #13 0xd6626d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
+    #14 0xd66078 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
+    #15 0xd65c38 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
+    #16 0x7406ed370082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #17 0x4410dd in _start (/out/ffmpeg_AV_CODEC_ID_MPEG1VIDEO_fuzzer+0x4410dd)
+
+DEDUP_TOKEN: avg_h264_chroma_mc1_8_c--mpeg_motion_lowres--MPV_motion_lowres
+0x61d0000030c5 is located 5 bytes to the right of 2112-byte region [0x61d000002880,0x61d0000030c0)
+allocated by thread T0 here:
+    #0 0x4c3067 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0xcbd50a in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
+    #2 0xc6dfc7 in av_buffer_alloc /src/ffmpeg/libavutil/buffer.c:82:12
+    #3 0x504e37 in fuzz_video_get_buffer /src/ffmpeg/tools/target_dec_fuzzer.c:131:25
+    #4 0x504e37 in fuzz_get_buffer2 /src/ffmpeg/tools/target_dec_fuzzer.c:152:18
+    #5 0x523830 in ff_get_buffer /src/ffmpeg/libavcodec/decode.c:1561:11
+    #6 0x5b6e56 in ff_thread_get_ext_buffer /src/ffmpeg/libavcodec/pthread_frame.c:1014:16
+    #7 0x91a208 in alloc_frame_buffer /src/ffmpeg/libavcodec/mpegpicture.c:147:13
+    #8 0x91a208 in ff_alloc_picture /src/ffmpeg/libavcodec/mpegpicture.c:274:13
+    #9 0x58b7c6 in alloc_picture /src/ffmpeg/libavcodec/mpegvideo_dec.c:245:12
+    #10 0x58b7c6 in ff_mpv_frame_start /src/ffmpeg/libavcodec/mpegvideo_dec.c:433:13
+    #11 0x56d40d in mpeg_field_start /src/ffmpeg/libavcodec/mpeg12dec.c:1594:20
+    #12 0x5645d6 in decode_chunks /src/ffmpeg/libavcodec/mpeg12dec.c:2726:32
+    #13 0x55a108 in mpeg_decode_frame /src/ffmpeg/libavcodec/mpeg12dec.c:2827:11
+    #14 0x519ce2 in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:287:15
+    #15 0x519ce2 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:533:15
+    #16 0x519ce2 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:553:15
+    #17 0x519470 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:641:15
+    #18 0x5028dc in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:521:25
+    #19 0xd6626d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
+
+DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/h264chroma_template.c:208:1 in avg_h264_chroma_mc1_8_c
+Shadow bytes around the buggy address:
+  0x0c3a7fff85c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff85d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff85e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff85f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff8600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c3a7fff8610: 00 00 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa
+  0x0c3a7fff8620: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff8630: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff8640: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fff8650: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fff8660: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

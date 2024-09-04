@@ -1,0 +1,128 @@
+Unable to find image 'n132/arvo:16445-vul' locally
+16445-vul: Pulling from n132/arvo
+34667c7e4631: Already exists
+d18d76a881a4: Already exists
+119c7358fbfc: Already exists
+2aaf13f3eff0: Already exists
+5d91fa3ee8a5: Already exists
+7a645d4a323d: Already exists
+d5ce375e7c89: Already exists
+ca7413e7c2ac: Already exists
+80b766c1fa8d: Already exists
+1164b5047533: Already exists
+5cf8b382d474: Already exists
+8049d167a8d1: Already exists
+6b65bbf38467: Already exists
+99acaea223d0: Already exists
+ceebcb202a97: Already exists
+49a494ec2278: Pulling fs layer
+4a966359a2d7: Pulling fs layer
+4533e1c44765: Pulling fs layer
+5188885527cb: Pulling fs layer
+913297a8320a: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+89b6cdf9551b: Pulling fs layer
+b1bb2e95b015: Pulling fs layer
+289bb009602c: Pulling fs layer
+5188885527cb: Waiting
+89b6cdf9551b: Waiting
+b1bb2e95b015: Waiting
+913297a8320a: Waiting
+4f4fb700ef54: Waiting
+289bb009602c: Waiting
+4a966359a2d7: Verifying Checksum
+4a966359a2d7: Download complete
+4533e1c44765: Verifying Checksum
+4533e1c44765: Download complete
+913297a8320a: Verifying Checksum
+913297a8320a: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+5188885527cb: Verifying Checksum
+5188885527cb: Download complete
+89b6cdf9551b: Verifying Checksum
+89b6cdf9551b: Download complete
+289bb009602c: Verifying Checksum
+289bb009602c: Download complete
+49a494ec2278: Verifying Checksum
+49a494ec2278: Download complete
+49a494ec2278: Pull complete
+4a966359a2d7: Pull complete
+4533e1c44765: Pull complete
+5188885527cb: Pull complete
+913297a8320a: Pull complete
+4f4fb700ef54: Pull complete
+89b6cdf9551b: Pull complete
+b1bb2e95b015: Verifying Checksum
+b1bb2e95b015: Download complete
+b1bb2e95b015: Pull complete
+289bb009602c: Pull complete
+Digest: sha256:500e08c59a1748e9b2268d83c841e4f6c4a9935f4615717b2da89a0dff501794
+Status: Downloaded newer image for n132/arvo:16445-vul
+INFO: Seed: 3832288146
+INFO: Loaded 1 modules   (15920 inline 8-bit counters): 15920 [0x9c5340, 0x9c9170), 
+INFO: Loaded 1 PC tables (15920 PCs): 15920 [0x721410,0x75f710), 
+/out/simple_decompress: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffdb2a9b8a8 at pc 0x00000052e3e0 bp 0x7ffdb2a78e50 sp 0x7ffdb2a78618
+WRITE of size 131082 at 0x7ffdb2a9b8a8 thread T0
+SCARINESS: 60 (multi-byte-write-stack-buffer-overflow)
+    #0 0x52e3df in __asan_memcpy /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:22:3
+    #1 0x6901ec in ZSTD_decodeLiteralsBlock /src/zstd/tests/fuzz/../../lib/legacy/zstd_v03.c:2529:17
+    #2 0x68fd67 in ZSTD_decompressBlock /src/zstd/tests/fuzz/../../lib/legacy/zstd_v03.c:2885:23
+    #3 0x68fc3e in ZSTD_decompressDCtx /src/zstd/tests/fuzz/../../lib/legacy/zstd_v03.c:2925:27
+    #4 0x68f0f8 in ZSTD_decompress /src/zstd/tests/fuzz/../../lib/legacy/zstd_v03.c:2955:12
+    #5 0x5662a6 in ZSTD_decompressMultiFrame /src/zstd/tests/fuzz/../../lib/decompress/zstd_decompress.c:726:27
+    #6 0x566829 in ZSTD_decompress_usingDDict /src/zstd/tests/fuzz/../../lib/decompress/zstd_decompress.c:1223:12
+    #7 0x6d98bf in LLVMFuzzerTestOneInput /src/zstd/tests/fuzz/simple_decompress.c:37:9
+    #8 0x469604 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:529:15
+    #9 0x457801 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:286:6
+    #10 0x45c5ab in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:715:9
+    #11 0x482e02 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #12 0x7c3b8153283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x41de28 in _start (/out/simple_decompress+0x41de28)
+
+DEDUP_TOKEN: __asan_memcpy--ZSTD_decodeLiteralsBlock--ZSTD_decompressBlock
+Address 0x7ffdb2a9b8a8 is located in stack of thread T0 at offset 141416 in frame
+    #0 0x68efff in ZSTD_decompress /src/zstd/tests/fuzz/../../lib/legacy/zstd_v03.c:2952
+
+DEDUP_TOKEN: ZSTD_decompress
+  This frame has 1 object(s):
+    [32, 141416) 'ctx' (line 2953) <== Memory access at offset 141416 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:22:3 in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x10003654b6c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003654b6d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003654b6e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003654b6f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003654b700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x10003654b710: 00 00 00 00 00[f3]f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
+  0x10003654b720: f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
+  0x10003654b730: f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x10003654b740: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003654b750: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003654b760: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

@@ -1,0 +1,247 @@
+Unable to find image 'n132/arvo:20053-vul' locally
+20053-vul: Pulling from n132/arvo
+3386e6af03b0: Already exists
+49ac0bbe6c8e: Already exists
+d1983a67e104: Already exists
+1a0f3a523f04: Already exists
+73c5426d06aa: Already exists
+fa7611375f71: Already exists
+cfbeaae4f211: Already exists
+42371f50a4fa: Already exists
+d03027ec3c94: Already exists
+c7d96356120a: Already exists
+6c28d33bde9b: Already exists
+f52300c66b5f: Already exists
+df8ecd39b0e7: Already exists
+9454a074fc30: Already exists
+47fed183f2ed: Already exists
+e96eecbbb562: Already exists
+0b0cc7417213: Already exists
+8e81c9530cd8: Already exists
+4445fbb6820d: Already exists
+8f1a3969422b: Already exists
+3e6f87cba13b: Already exists
+26f8998a1ba9: Pulling fs layer
+666c956e205d: Pulling fs layer
+bf87c180c4b3: Pulling fs layer
+e3405682ce61: Pulling fs layer
+35400a968525: Pulling fs layer
+7c6c77b8ddb4: Pulling fs layer
+f1c8716619f2: Pulling fs layer
+8f0cbface813: Pulling fs layer
+10c5c4b8e2e0: Pulling fs layer
+14fc308d12e4: Pulling fs layer
+cb4527a2606f: Pulling fs layer
+e3405682ce61: Waiting
+e5f4d3fbff62: Pulling fs layer
+35400a968525: Waiting
+026b98951f43: Pulling fs layer
+f2d0873aaa33: Pulling fs layer
+8f0cbface813: Waiting
+89d049520831: Pulling fs layer
+7c6c77b8ddb4: Waiting
+f1c8716619f2: Waiting
+10c5c4b8e2e0: Waiting
+14fc308d12e4: Waiting
+f8163e912073: Pulling fs layer
+f579bf8b4679: Pulling fs layer
+026b98951f43: Waiting
+cb4527a2606f: Waiting
+f2d0873aaa33: Waiting
+e5f4d3fbff62: Waiting
+247a39bef595: Pulling fs layer
+89d049520831: Waiting
+be670ecbbb4d: Pulling fs layer
+f8163e912073: Waiting
+18412ceba256: Pulling fs layer
+f579bf8b4679: Waiting
+2b748e0884b4: Pulling fs layer
+cd792ef2dd59: Pulling fs layer
+be670ecbbb4d: Waiting
+15bc78727f72: Pulling fs layer
+247a39bef595: Waiting
+18412ceba256: Waiting
+533eaa8a3f82: Pulling fs layer
+a58df2738886: Pulling fs layer
+15bc78727f72: Waiting
+2b748e0884b4: Waiting
+25b1541bca3a: Pulling fs layer
+533eaa8a3f82: Waiting
+b4e80fc903cd: Pulling fs layer
+a58df2738886: Waiting
+cd792ef2dd59: Waiting
+4f4fb700ef54: Pulling fs layer
+25b1541bca3a: Waiting
+d1c685899aac: Pulling fs layer
+b4e80fc903cd: Waiting
+4f4fb700ef54: Waiting
+e9159b075b2d: Pulling fs layer
+6392d799166b: Pulling fs layer
+d1c685899aac: Waiting
+6392d799166b: Waiting
+e9159b075b2d: Waiting
+666c956e205d: Verifying Checksum
+666c956e205d: Download complete
+bf87c180c4b3: Verifying Checksum
+bf87c180c4b3: Download complete
+35400a968525: Verifying Checksum
+35400a968525: Download complete
+7c6c77b8ddb4: Verifying Checksum
+7c6c77b8ddb4: Download complete
+26f8998a1ba9: Verifying Checksum
+26f8998a1ba9: Download complete
+f1c8716619f2: Verifying Checksum
+f1c8716619f2: Download complete
+8f0cbface813: Verifying Checksum
+8f0cbface813: Download complete
+10c5c4b8e2e0: Verifying Checksum
+10c5c4b8e2e0: Download complete
+cb4527a2606f: Verifying Checksum
+cb4527a2606f: Download complete
+14fc308d12e4: Verifying Checksum
+14fc308d12e4: Download complete
+e5f4d3fbff62: Verifying Checksum
+e5f4d3fbff62: Download complete
+026b98951f43: Download complete
+26f8998a1ba9: Pull complete
+666c956e205d: Pull complete
+89d049520831: Verifying Checksum
+89d049520831: Download complete
+f2d0873aaa33: Verifying Checksum
+f2d0873aaa33: Download complete
+f8163e912073: Verifying Checksum
+f8163e912073: Download complete
+f579bf8b4679: Verifying Checksum
+f579bf8b4679: Download complete
+e3405682ce61: Download complete
+be670ecbbb4d: Verifying Checksum
+be670ecbbb4d: Download complete
+bf87c180c4b3: Pull complete
+2b748e0884b4: Download complete
+247a39bef595: Verifying Checksum
+247a39bef595: Download complete
+18412ceba256: Verifying Checksum
+18412ceba256: Download complete
+15bc78727f72: Verifying Checksum
+15bc78727f72: Download complete
+a58df2738886: Verifying Checksum
+a58df2738886: Download complete
+cd792ef2dd59: Verifying Checksum
+cd792ef2dd59: Download complete
+25b1541bca3a: Download complete
+b4e80fc903cd: Verifying Checksum
+b4e80fc903cd: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+d1c685899aac: Verifying Checksum
+d1c685899aac: Download complete
+6392d799166b: Verifying Checksum
+6392d799166b: Download complete
+e3405682ce61: Pull complete
+35400a968525: Pull complete
+7c6c77b8ddb4: Pull complete
+f1c8716619f2: Pull complete
+8f0cbface813: Pull complete
+10c5c4b8e2e0: Pull complete
+14fc308d12e4: Pull complete
+cb4527a2606f: Pull complete
+e5f4d3fbff62: Pull complete
+026b98951f43: Pull complete
+f2d0873aaa33: Pull complete
+89d049520831: Pull complete
+f8163e912073: Pull complete
+f579bf8b4679: Pull complete
+533eaa8a3f82: Verifying Checksum
+533eaa8a3f82: Download complete
+247a39bef595: Pull complete
+be670ecbbb4d: Pull complete
+18412ceba256: Pull complete
+2b748e0884b4: Pull complete
+cd792ef2dd59: Pull complete
+15bc78727f72: Pull complete
+533eaa8a3f82: Pull complete
+a58df2738886: Pull complete
+25b1541bca3a: Pull complete
+b4e80fc903cd: Pull complete
+4f4fb700ef54: Pull complete
+d1c685899aac: Pull complete
+e9159b075b2d: Verifying Checksum
+e9159b075b2d: Download complete
+e9159b075b2d: Pull complete
+6392d799166b: Pull complete
+Digest: sha256:d9878c3fdbb4c1f7f931539e647b5fbd097b1f4514769348fbf617ad577e1496
+Status: Downloaded newer image for n132/arvo:20053-vul
+INFO: Seed: 655404034
+INFO: Loaded 1 modules   (123258 inline 8-bit counters): 123258 [0x1735fa0, 0x175411a), 
+INFO: Loaded 1 PC tables (123258 PCs): 123258 [0x1754120,0x19358c0), 
+/out/coder_PICT_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000026402 at pc 0x0000008988fa bp 0x7ffdf3f85670 sp 0x7ffdf3f85668
+READ of size 1 at 0x62d000026402 thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x8988f9 in ExpandBuffer /src/graphicsmagick/coders/pict.c:749:15
+    #1 0x897dfb in DecodeImage /src/graphicsmagick/coders/pict.c:952:15
+    #2 0x891624 in ReadPICTImage /src/graphicsmagick/coders/pict.c
+    #3 0x5fe94f in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #4 0x5b5398 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #5 0x55cb1f in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #6 0x5559b7 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #7 0x45b411 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:556:15
+    #8 0x445f31 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
+    #9 0x44bbee in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
+    #10 0x475b12 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #11 0x71c98257a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x41f3a8 in _start (/out/coder_PICT_fuzzer+0x41f3a8)
+
+DEDUP_TOKEN: ExpandBuffer--DecodeImage--ReadPICTImage
+0x62d000026402 is located 0 bytes to the right of 32770-byte region [0x62d00001e400,0x62d000026402)
+allocated by thread T0 here:
+    #0 0x522fad in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0x897ab6 in DecodeImage /src/graphicsmagick/coders/pict.c:891:12
+    #2 0x891624 in ReadPICTImage /src/graphicsmagick/coders/pict.c
+    #3 0x5fe94f in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #4 0x5b5398 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #5 0x55cb1f in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #6 0x5559b7 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #7 0x45b411 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:556:15
+    #8 0x445f31 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
+    #9 0x44bbee in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
+    #10 0x475b12 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #11 0x71c98257a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: malloc--DecodeImage--ReadPICTImage
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/pict.c:749:15 in ExpandBuffer
+Shadow bytes around the buggy address:
+  0x0c5a7fffcc30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c5a7fffcc40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c5a7fffcc50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c5a7fffcc60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c5a7fffcc70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c5a7fffcc80:[02]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5a7fffcc90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5a7fffcca0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5a7fffccb0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5a7fffccc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5a7fffccd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

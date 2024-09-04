@@ -1,0 +1,240 @@
+Unable to find image 'n132/arvo:47500-vul' locally
+47500-vul: Pulling from n132/arvo
+d5fd17ec1767: Already exists
+5e6983f39b70: Pulling fs layer
+cf50684f275a: Pulling fs layer
+aa613cc340b8: Pulling fs layer
+c7dd04846185: Pulling fs layer
+dcda5de07025: Pulling fs layer
+f7add1a3c178: Pulling fs layer
+090073ba2a99: Pulling fs layer
+0bd5058878f8: Pulling fs layer
+4df5817b275a: Pulling fs layer
+5bdfad89f750: Pulling fs layer
+09bef27a8ab2: Pulling fs layer
+301ebe886fe8: Pulling fs layer
+1b683747931b: Pulling fs layer
+f8804b03bbf3: Pulling fs layer
+68b5ad165936: Pulling fs layer
+09f81fe87d4e: Pulling fs layer
+c8c3f915570c: Pulling fs layer
+375f361ef6aa: Pulling fs layer
+ce529e6dd82c: Pulling fs layer
+2a9653e32490: Pulling fs layer
+98b2261d5f62: Pulling fs layer
+a542f6b8aa5f: Pulling fs layer
+76d63ae80f2b: Pulling fs layer
+1d8d178b352d: Pulling fs layer
+e2fb8920ad1d: Pulling fs layer
+2b142f121c62: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+c7dd04846185: Waiting
+c20abe2087e8: Pulling fs layer
+dcda5de07025: Waiting
+f7add1a3c178: Waiting
+107086c6c338: Pulling fs layer
+6f93de6f5308: Pulling fs layer
+f8804b03bbf3: Waiting
+a542f6b8aa5f: Waiting
+090073ba2a99: Waiting
+76d63ae80f2b: Waiting
+1d8d178b352d: Waiting
+68b5ad165936: Waiting
+ce529e6dd82c: Waiting
+2a9653e32490: Waiting
+09f81fe87d4e: Waiting
+98b2261d5f62: Waiting
+c8c3f915570c: Waiting
+375f361ef6aa: Waiting
+0bd5058878f8: Waiting
+4df5817b275a: Waiting
+e2fb8920ad1d: Waiting
+09bef27a8ab2: Waiting
+301ebe886fe8: Waiting
+5bdfad89f750: Waiting
+1b683747931b: Waiting
+6f93de6f5308: Waiting
+c20abe2087e8: Waiting
+2b142f121c62: Waiting
+4f4fb700ef54: Waiting
+cf50684f275a: Verifying Checksum
+cf50684f275a: Download complete
+aa613cc340b8: Verifying Checksum
+aa613cc340b8: Download complete
+5e6983f39b70: Verifying Checksum
+5e6983f39b70: Download complete
+dcda5de07025: Verifying Checksum
+dcda5de07025: Download complete
+5e6983f39b70: Pull complete
+cf50684f275a: Pull complete
+090073ba2a99: Verifying Checksum
+090073ba2a99: Download complete
+aa613cc340b8: Pull complete
+0bd5058878f8: Verifying Checksum
+0bd5058878f8: Download complete
+f7add1a3c178: Verifying Checksum
+f7add1a3c178: Download complete
+5bdfad89f750: Verifying Checksum
+09bef27a8ab2: Verifying Checksum
+09bef27a8ab2: Download complete
+4df5817b275a: Verifying Checksum
+4df5817b275a: Download complete
+301ebe886fe8: Verifying Checksum
+301ebe886fe8: Download complete
+1b683747931b: Verifying Checksum
+1b683747931b: Download complete
+f8804b03bbf3: Verifying Checksum
+f8804b03bbf3: Download complete
+09f81fe87d4e: Verifying Checksum
+09f81fe87d4e: Download complete
+68b5ad165936: Verifying Checksum
+68b5ad165936: Download complete
+375f361ef6aa: Download complete
+c8c3f915570c: Download complete
+ce529e6dd82c: Download complete
+2a9653e32490: Verifying Checksum
+2a9653e32490: Download complete
+98b2261d5f62: Verifying Checksum
+98b2261d5f62: Download complete
+76d63ae80f2b: Verifying Checksum
+76d63ae80f2b: Download complete
+1d8d178b352d: Verifying Checksum
+1d8d178b352d: Download complete
+a542f6b8aa5f: Verifying Checksum
+a542f6b8aa5f: Download complete
+e2fb8920ad1d: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+2b142f121c62: Verifying Checksum
+2b142f121c62: Download complete
+c20abe2087e8: Verifying Checksum
+c20abe2087e8: Download complete
+6f93de6f5308: Verifying Checksum
+6f93de6f5308: Download complete
+107086c6c338: Verifying Checksum
+107086c6c338: Download complete
+c7dd04846185: Retrying in 5 seconds
+c7dd04846185: Retrying in 4 seconds
+c7dd04846185: Retrying in 3 seconds
+c7dd04846185: Retrying in 2 seconds
+c7dd04846185: Retrying in 1 second
+c7dd04846185: Retrying in 10 seconds
+c7dd04846185: Retrying in 9 seconds
+c7dd04846185: Retrying in 8 seconds
+c7dd04846185: Retrying in 7 seconds
+c7dd04846185: Retrying in 6 seconds
+c7dd04846185: Retrying in 5 seconds
+c7dd04846185: Retrying in 4 seconds
+c7dd04846185: Retrying in 3 seconds
+c7dd04846185: Retrying in 2 seconds
+c7dd04846185: Retrying in 1 second
+c7dd04846185: Download complete
+c7dd04846185: Pull complete
+dcda5de07025: Pull complete
+f7add1a3c178: Pull complete
+090073ba2a99: Pull complete
+0bd5058878f8: Pull complete
+4df5817b275a: Pull complete
+5bdfad89f750: Pull complete
+09bef27a8ab2: Pull complete
+301ebe886fe8: Pull complete
+1b683747931b: Pull complete
+f8804b03bbf3: Pull complete
+68b5ad165936: Pull complete
+09f81fe87d4e: Pull complete
+c8c3f915570c: Pull complete
+375f361ef6aa: Pull complete
+ce529e6dd82c: Pull complete
+2a9653e32490: Pull complete
+98b2261d5f62: Pull complete
+a542f6b8aa5f: Pull complete
+76d63ae80f2b: Pull complete
+1d8d178b352d: Pull complete
+e2fb8920ad1d: Pull complete
+2b142f121c62: Pull complete
+4f4fb700ef54: Pull complete
+c20abe2087e8: Pull complete
+107086c6c338: Pull complete
+6f93de6f5308: Pull complete
+Digest: sha256:1d6007ccc143110681c4ba8beb59eb015a30cbf3e4be7e62b06e1fcaa637b040
+Status: Downloaded newer image for n132/arvo:47500-vul
+Running LLVMFuzzerInitialize ...
+continue...
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61e0000016d0 at pc 0x00000049befe bp 0x7ffe57eb2a50 sp 0x7ffe57eb2218
+WRITE of size 3828 at 0x61e0000016d0 thread T0
+SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
+    #0 0x49befd in __asan_memset /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:26:3
+    #1 0x5d7bd6 in opj_t1_allocate_buffers /src/openjpeg/src/lib/openjp2/t1.c:1504:9
+    #2 0x5b5940 in opj_t1_decode_cblk /src/openjpeg/src/lib/openjp2/t1.c:1983:10
+    #3 0x5b5940 in opj_t1_clbl_decode_processor /src/openjpeg/src/lib/openjp2/t1.c:1704:26
+    #4 0x582fb3 in opj_thread_pool_submit_job /src/openjpeg/src/lib/openjp2/thread.c:835:9
+    #5 0x5b4930 in opj_t1_decode_cblks /src/openjpeg/src/lib/openjp2/t1.c:1943:21
+    #6 0x56e83e in opj_tcd_t1_decode /src/openjpeg/src/lib/openjp2/tcd.c:2000:9
+    #7 0x56e83e in opj_tcd_decode_tile /src/openjpeg/src/lib/openjp2/tcd.c:1654:11
+    #8 0x4f9db2 in opj_j2k_decode_tile /src/openjpeg/src/lib/openjp2/j2k.c:9862:11
+    #9 0x521b41 in opj_j2k_decode_tiles /src/openjpeg/src/lib/openjp2/j2k.c:11707:15
+    #10 0x502265 in opj_j2k_exec /src/openjpeg/src/lib/openjp2/j2k.c:9006:33
+    #11 0x502265 in opj_j2k_decode /src/openjpeg/src/lib/openjp2/j2k.c:12010:11
+    #12 0x4e00e4 in opj_decode /src/openjpeg/src/lib/openjp2/openjpeg.c:521:16
+    #13 0x4d6002 in LLVMFuzzerTestOneInput /src/openjpeg/./tests/fuzzers/opj_decompress_fuzzer_J2K.cpp:196:13
+    #14 0x4d6baa in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+    #15 0x4d697d in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
+    #16 0x7142c14c8082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #17 0x41d4ed in _start (/out/opj_decompress_fuzzer_J2K+0x41d4ed)
+
+DEDUP_TOKEN: __asan_memset--opj_t1_allocate_buffers--opj_t1_decode_cblk
+0x61e0000016d0 is located 0 bytes to the right of 2640-byte region [0x61e000000c80,0x61e0000016d0)
+allocated by thread T0 here:
+    #0 0x49d217 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
+    #1 0x4e24df in opj_aligned_alloc_n /src/openjpeg/src/lib/openjp2/opj_malloc.c:61:9
+    #2 0x4e24df in opj_aligned_malloc /src/openjpeg/src/lib/openjp2/opj_malloc.c:209:12
+    #3 0x62ff46 in opj_t1_allocate_buffers /src/openjpeg/src/lib/openjp2/ht_dec.c:1066:39
+    #4 0x62ff46 in opj_t1_ht_decode_cblk /src/openjpeg/src/lib/openjp2/ht_dec.c:1151:10
+    #5 0x5b5a9a in opj_t1_clbl_decode_processor /src/openjpeg/src/lib/openjp2/t1.c:1690:26
+    #6 0x582fb3 in opj_thread_pool_submit_job /src/openjpeg/src/lib/openjp2/thread.c:835:9
+    #7 0x5b4930 in opj_t1_decode_cblks /src/openjpeg/src/lib/openjp2/t1.c:1943:21
+    #8 0x56e83e in opj_tcd_t1_decode /src/openjpeg/src/lib/openjp2/tcd.c:2000:9
+    #9 0x56e83e in opj_tcd_decode_tile /src/openjpeg/src/lib/openjp2/tcd.c:1654:11
+    #10 0x4f9db2 in opj_j2k_decode_tile /src/openjpeg/src/lib/openjp2/j2k.c:9862:11
+    #11 0x521b41 in opj_j2k_decode_tiles /src/openjpeg/src/lib/openjp2/j2k.c:11707:15
+    #12 0x502265 in opj_j2k_exec /src/openjpeg/src/lib/openjp2/j2k.c:9006:33
+    #13 0x502265 in opj_j2k_decode /src/openjpeg/src/lib/openjp2/j2k.c:12010:11
+    #14 0x4e00e4 in opj_decode /src/openjpeg/src/lib/openjp2/openjpeg.c:521:16
+    #15 0x4d6002 in LLVMFuzzerTestOneInput /src/openjpeg/./tests/fuzzers/opj_decompress_fuzzer_J2K.cpp:196:13
+    #16 0x4d6baa in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+
+DEDUP_TOKEN: posix_memalign--opj_aligned_alloc_n--opj_aligned_malloc
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:26:3 in __asan_memset
+Shadow bytes around the buggy address:
+  0x0c3c7fff8280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff8290: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff82a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff82b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff82c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c3c7fff82d0: 00 00 00 00 00 00 00 00 00 00[fa]fa fa fa fa fa
+  0x0c3c7fff82e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff82f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff8300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff8310: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff8320: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

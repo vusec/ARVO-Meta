@@ -1,0 +1,150 @@
+Unable to find image 'n132/arvo:65027-vul' locally
+65027-vul: Pulling from n132/arvo
+4007a89234b4: Already exists
+5dfa26c6b9c9: Already exists
+0ba7bf18aa40: Already exists
+4c6ec688ebe3: Already exists
+8402f6a128ab: Already exists
+a9844295fc02: Already exists
+896d36fd4c48: Already exists
+7caeb050fbae: Already exists
+19c994299ca2: Already exists
+3af6636da2fc: Already exists
+f066005d6cfa: Already exists
+eb7a669b446d: Already exists
+db2d8166cb16: Already exists
+ce13daa0e1d4: Already exists
+49415db117de: Already exists
+2a537e092603: Already exists
+9f8cbd34f314: Already exists
+11795e809c12: Already exists
+60ad66e29b37: Already exists
+667a3fc11e31: Already exists
+7002e1675336: Already exists
+99f1f9ab76c4: Already exists
+2e07133b3a8c: Already exists
+873c68cbb916: Already exists
+51404522b68c: Already exists
+905d55d9e7a6: Already exists
+342b5aeeb441: Already exists
+b6d715008194: Pulling fs layer
+1ec86dfac842: Pulling fs layer
+70216f9587bc: Pulling fs layer
+2177abc10e8e: Pulling fs layer
+d46c41a341cf: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+59902f19dece: Pulling fs layer
+9d802638312d: Pulling fs layer
+2602fd9d15c4: Pulling fs layer
+9e06516b8d7e: Pulling fs layer
+16333b100f9a: Pulling fs layer
+74556207b19e: Pulling fs layer
+2177abc10e8e: Waiting
+d46c41a341cf: Waiting
+4f4fb700ef54: Waiting
+59902f19dece: Waiting
+9d802638312d: Waiting
+2602fd9d15c4: Waiting
+9e06516b8d7e: Waiting
+16333b100f9a: Waiting
+74556207b19e: Waiting
+1ec86dfac842: Verifying Checksum
+1ec86dfac842: Download complete
+70216f9587bc: Verifying Checksum
+70216f9587bc: Download complete
+2177abc10e8e: Verifying Checksum
+2177abc10e8e: Download complete
+d46c41a341cf: Download complete
+4f4fb700ef54: Download complete
+b6d715008194: Verifying Checksum
+b6d715008194: Download complete
+9d802638312d: Verifying Checksum
+9d802638312d: Download complete
+59902f19dece: Verifying Checksum
+59902f19dece: Download complete
+9e06516b8d7e: Download complete
+74556207b19e: Verifying Checksum
+74556207b19e: Download complete
+2602fd9d15c4: Verifying Checksum
+2602fd9d15c4: Download complete
+b6d715008194: Pull complete
+1ec86dfac842: Pull complete
+70216f9587bc: Pull complete
+16333b100f9a: Verifying Checksum
+16333b100f9a: Download complete
+2177abc10e8e: Pull complete
+d46c41a341cf: Pull complete
+4f4fb700ef54: Pull complete
+59902f19dece: Pull complete
+9d802638312d: Pull complete
+2602fd9d15c4: Pull complete
+9e06516b8d7e: Pull complete
+16333b100f9a: Pull complete
+74556207b19e: Pull complete
+Digest: sha256:a3af8c9c9c723dbd8e9ef820948a44ecd89634dc5d0a620f1f59372c376a6122
+Status: Downloaded newer image for n132/arvo:65027-vul
+======================= INFO =========================
+This binary is built for AFL-fuzz.
+To run the target function on individual input(s) execute this:
+  /out/libraw_fuzzer < INPUT_FILE
+or
+  /out/libraw_fuzzer INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] /out/libraw_fuzzer [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: 1000)
+======================================================
+=================================================================
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000007292ac at pc 0x00000061088f bp 0x7fff02b0a670 sp 0x7fff02b0a668
+READ of size 4 at 0x0000007292ac thread T0
+SCARINESS: 17 (4-byte-read-global-buffer-overflow)
+    #0 0x61088e in libraw_tagtype_dataunit_bytes(int) /src/libraw/src/tables/wblists.cpp:28:12
+    #1 0x5f1b1d in checked_buffer_t::tiff_sget(unsigned int, long long*, unsigned int*, unsigned int*, long long*, unsigned int*, int*) /src/libraw/src/metadata/sony.cpp:2014:28
+    #2 0x5eff96 in LibRaw::parseSonySR2(unsigned char*, unsigned int, unsigned int, unsigned int) /src/libraw/src/metadata/sony.cpp:2053:24
+    #3 0x602d5a in LibRaw::parse_tiff_ifd(int) /src/libraw/src/metadata/tiff.cpp:1461:5
+    #4 0x60532d in LibRaw::parse_tiff(int) /src/libraw/src/metadata/tiff.cpp:1495:9
+    #5 0x5ad1c8 in LibRaw::identify() /src/libraw/src/metadata/identify.cpp:503:14
+    #6 0x4ef1e7 in LibRaw::open_datastream(LibRaw_abstract_datastream*) /src/libraw/src/utils/open.cpp:464:4
+    #7 0x4ee371 in LibRaw::open_buffer(void const*, unsigned long) /src/libraw/src/utils/open.cpp:227:13
+    #8 0x4cd890 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:41:24
+    #9 0x4cde5e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:207:5
+    #10 0x4cde5e in main /src/libfuzzer/afl/afl_driver.cpp:244:12
+    #11 0x704dcabce83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x41ebc8 in _start (/out/libraw_fuzzer+0x41ebc8)
+
+DEDUP_TOKEN: libraw_tagtype_dataunit_bytes(int)--checked_buffer_t::tiff_sget(unsigned int, long long*, unsigned int*, unsigned int*, long long*, unsigned int*, int*)--LibRaw::parseSonySR2(unsigned char*, unsigned int, unsigned int, unsigned int)
+0x0000007292ac is located 52 bytes to the left of global variable '_Canon_wbi2std' defined in 'src/tables/wblists.cpp:32:18' (0x7292e0) of size 96
+0x0000007292ac is located 0 bytes to the right of global variable '_tagtype_dataunit_bytes' defined in 'src/tables/wblists.cpp:20:18' (0x729260) of size 76
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/libraw/src/tables/wblists.cpp:28:12 in libraw_tagtype_dataunit_bytes(int)
+Shadow bytes around the buggy address:
+  0x0000800dd200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800dd210: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800dd220: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800dd230: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800dd240: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0000800dd250: 00 00 00 00 00[04]f9 f9 f9 f9 f9 f9 00 00 00 00
+  0x0000800dd260: 00 00 00 00 00 00 00 00 f9 f9 f9 f9 00 00 00 00
+  0x0000800dd270: f9 f9 f9 f9 00 00 00 00 00 04 f9 f9 f9 f9 f9 f9
+  0x0000800dd280: 00 00 00 00 00 04 f9 f9 f9 f9 f9 f9 00 00 00 00
+  0x0000800dd290: 00 f9 f9 f9 f9 f9 f9 f9 00 00 00 f9 f9 f9 f9 f9
+  0x0000800dd2a0: 00 00 00 f9 f9 f9 f9 f9 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

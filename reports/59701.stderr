@@ -1,0 +1,248 @@
+Unable to find image 'n132/arvo:59701-vul' locally
+59701-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+5e1fe8bf7ee8: Pulling fs layer
+f45ed49201eb: Pulling fs layer
+1ae1aec1aa24: Pulling fs layer
+20cb60261ca0: Pulling fs layer
+80ef62ed2551: Pulling fs layer
+26e5cbf8454a: Pulling fs layer
+332e3b8b7739: Pulling fs layer
+3ce29b269480: Pulling fs layer
+5e205551e2c4: Pulling fs layer
+cd2c59937fbd: Pulling fs layer
+e69c067c7196: Pulling fs layer
+cd3db4afd969: Pulling fs layer
+6518ef711a17: Pulling fs layer
+26e5cbf8454a: Waiting
+332e3b8b7739: Waiting
+a43451488147: Pulling fs layer
+3ce29b269480: Waiting
+62c602a5c6d4: Pulling fs layer
+fc13decaafa6: Pulling fs layer
+e69c067c7196: Waiting
+c39a4a6b455d: Pulling fs layer
+cd3db4afd969: Waiting
+2b56e4b36560: Pulling fs layer
+aca3089efe23: Pulling fs layer
+cd2c59937fbd: Waiting
+6518ef711a17: Waiting
+9d31995b98c4: Pulling fs layer
+5e205551e2c4: Waiting
+a43451488147: Waiting
+8edf67cf860c: Pulling fs layer
+62c602a5c6d4: Waiting
+c39a4a6b455d: Waiting
+b8253eb9b082: Pulling fs layer
+2ff49a9604f7: Pulling fs layer
+fc13decaafa6: Waiting
+8edf67cf860c: Waiting
+80ef62ed2551: Waiting
+dc48b9bb5d7f: Pulling fs layer
+77ca28b90fe1: Pulling fs layer
+b8253eb9b082: Waiting
+aca3089efe23: Waiting
+20cb60261ca0: Waiting
+9d31995b98c4: Waiting
+dc48b9bb5d7f: Waiting
+5e62dcc47d96: Pulling fs layer
+d187b9fbb105: Pulling fs layer
+77ca28b90fe1: Waiting
+2ff49a9604f7: Waiting
+5e62dcc47d96: Waiting
+f274bcf3001e: Pulling fs layer
+ab08cc9073ce: Pulling fs layer
+f2b554bc374f: Pulling fs layer
+f274bcf3001e: Waiting
+ab08cc9073ce: Waiting
+bdcf65627525: Pulling fs layer
+c0d240a6087e: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+bdcf65627525: Waiting
+c0d240a6087e: Waiting
+6a3c1dc3938b: Pulling fs layer
+694b72b4c9a3: Pulling fs layer
+4f4fb700ef54: Waiting
+1e1c93c6878f: Pulling fs layer
+694b72b4c9a3: Waiting
+6a3c1dc3938b: Waiting
+1e1c93c6878f: Waiting
+f45ed49201eb: Verifying Checksum
+f45ed49201eb: Download complete
+1ae1aec1aa24: Verifying Checksum
+1ae1aec1aa24: Download complete
+20cb60261ca0: Verifying Checksum
+20cb60261ca0: Download complete
+5e1fe8bf7ee8: Verifying Checksum
+5e1fe8bf7ee8: Download complete
+80ef62ed2551: Verifying Checksum
+80ef62ed2551: Download complete
+332e3b8b7739: Verifying Checksum
+332e3b8b7739: Download complete
+3ce29b269480: Verifying Checksum
+3ce29b269480: Download complete
+5e1fe8bf7ee8: Pull complete
+f45ed49201eb: Pull complete
+cd2c59937fbd: Verifying Checksum
+cd2c59937fbd: Download complete
+e69c067c7196: Verifying Checksum
+e69c067c7196: Download complete
+1ae1aec1aa24: Pull complete
+20cb60261ca0: Pull complete
+80ef62ed2551: Pull complete
+cd3db4afd969: Verifying Checksum
+cd3db4afd969: Download complete
+5e205551e2c4: Verifying Checksum
+5e205551e2c4: Download complete
+a43451488147: Verifying Checksum
+a43451488147: Download complete
+26e5cbf8454a: Verifying Checksum
+26e5cbf8454a: Download complete
+6518ef711a17: Verifying Checksum
+6518ef711a17: Download complete
+62c602a5c6d4: Verifying Checksum
+62c602a5c6d4: Download complete
+c39a4a6b455d: Verifying Checksum
+c39a4a6b455d: Download complete
+fc13decaafa6: Verifying Checksum
+fc13decaafa6: Download complete
+aca3089efe23: Verifying Checksum
+aca3089efe23: Download complete
+2b56e4b36560: Verifying Checksum
+2b56e4b36560: Download complete
+9d31995b98c4: Verifying Checksum
+9d31995b98c4: Download complete
+b8253eb9b082: Verifying Checksum
+b8253eb9b082: Download complete
+2ff49a9604f7: Verifying Checksum
+2ff49a9604f7: Download complete
+dc48b9bb5d7f: Verifying Checksum
+dc48b9bb5d7f: Download complete
+77ca28b90fe1: Verifying Checksum
+77ca28b90fe1: Download complete
+5e62dcc47d96: Download complete
+f274bcf3001e: Verifying Checksum
+f274bcf3001e: Download complete
+26e5cbf8454a: Pull complete
+332e3b8b7739: Pull complete
+3ce29b269480: Pull complete
+ab08cc9073ce: Verifying Checksum
+ab08cc9073ce: Download complete
+f2b554bc374f: Verifying Checksum
+f2b554bc374f: Download complete
+8edf67cf860c: Retrying in 5 seconds
+d187b9fbb105: Verifying Checksum
+d187b9fbb105: Download complete
+8edf67cf860c: Retrying in 4 seconds
+bdcf65627525: Verifying Checksum
+bdcf65627525: Download complete
+5e205551e2c4: Pull complete
+c0d240a6087e: Verifying Checksum
+c0d240a6087e: Download complete
+4f4fb700ef54: Download complete
+8edf67cf860c: Retrying in 3 seconds
+6a3c1dc3938b: Verifying Checksum
+6a3c1dc3938b: Download complete
+1e1c93c6878f: Verifying Checksum
+1e1c93c6878f: Download complete
+8edf67cf860c: Retrying in 2 seconds
+cd2c59937fbd: Pull complete
+e69c067c7196: Pull complete
+cd3db4afd969: Pull complete
+694b72b4c9a3: Verifying Checksum
+694b72b4c9a3: Download complete
+6518ef711a17: Pull complete
+a43451488147: Pull complete
+62c602a5c6d4: Pull complete
+fc13decaafa6: Pull complete
+c39a4a6b455d: Pull complete
+2b56e4b36560: Pull complete
+8edf67cf860c: Retrying in 1 second
+aca3089efe23: Pull complete
+9d31995b98c4: Pull complete
+8edf67cf860c: Verifying Checksum
+8edf67cf860c: Download complete
+8edf67cf860c: Pull complete
+b8253eb9b082: Pull complete
+2ff49a9604f7: Pull complete
+dc48b9bb5d7f: Pull complete
+77ca28b90fe1: Pull complete
+5e62dcc47d96: Pull complete
+d187b9fbb105: Pull complete
+f274bcf3001e: Pull complete
+ab08cc9073ce: Pull complete
+f2b554bc374f: Pull complete
+bdcf65627525: Pull complete
+c0d240a6087e: Pull complete
+4f4fb700ef54: Pull complete
+6a3c1dc3938b: Pull complete
+694b72b4c9a3: Pull complete
+1e1c93c6878f: Pull complete
+Digest: sha256:bf4e374e2db84c5f50552e51b661ebb4b5ab0ebc36997b47f4d0112d40c6b002
+Status: Downloaded newer image for n132/arvo:59701-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 471207108
+INFO: Loaded 1 modules   (51774 inline 8-bit counters): 51774 [0x873c510, 0x8748f4e), 
+INFO: Loaded 1 PC tables (51774 PCs): 51774 [0x862e41c,0x869360c), 
+/out/xml: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x085cc1c7 at pc 0x08547fe0 bp 0xffa063e8 sp 0xffa063e0
+READ of size 1 at 0x085cc1c7 thread T0
+SCARINESS: 22 (1-byte-read-global-buffer-overflow-far-from-bounds)
+    #0 0x8547fdf in xmlDictComputeFastKey /src/libxml2/dict.c:438:14
+    #1 0x8547fdf in xmlDictLookup /src/libxml2/dict.c:860:12
+    #2 0x82619bd in xmlParseNCNameComplex /src/libxml2/parser.c:3210:12
+    #3 0x82619bd in xmlParseNCName /src/libxml2/parser.c:3274:12
+    #4 0x82602ba in xmlParseQName /src/libxml2/parser.c:8557:9
+    #5 0x8258adf in xmlParseStartTag2 /src/libxml2/parser.c:9050:17
+    #6 0x8237594 in xmlParseElementStart /src/libxml2/parser.c:9796:16
+    #7 0x8235ec9 in xmlParseContentInternal /src/libxml2/parser.c:9664:10
+    #8 0x823676e in xmlParseElement /src/libxml2/parser.c:9734:5
+    #9 0x823eb12 in xmlParseDocument /src/libxml2/parser.c:10588:2
+    #10 0x8255a0e in xmlDoRead /src/libxml2/parser.c:14613:5
+    #11 0x8255cb0 in xmlReadMemory /src/libxml2/parser.c:14699:13
+    #12 0x81d4b75 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:53:11
+    #13 0x80959ae in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #14 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #15 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #16 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #17 0xece50ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #18 0x8077a55 in _start (/out/xml+0x8077a55)
+
+DEDUP_TOKEN: xmlDictComputeFastKey--xmlDictLookup--xmlParseNCNameComplex
+0x085cc1c7 is located 25 bytes to the left of global variable 'switch.table.xmlReportError.42' defined in 'error.c' (0x85cc1e0) of size 16
+0x085cc1c7 is located 15 bytes to the right of global variable 'switch.table.xmlReportError' defined in 'error.c' (0x85cc140) of size 120
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/libxml2/dict.c:438:14 in xmlDictComputeFastKey
+Shadow bytes around the buggy address:
+  0x210b97e0: 00 00 03 f9 f9 f9 f9 f9 00 01 f9 f9 06 f9 f9 f9
+  0x210b97f0: 06 f9 f9 f9 00 02 f9 f9 00 04 f9 f9 00 00 01 f9
+  0x210b9800: f9 f9 f9 f9 05 f9 f9 f9 03 f9 f9 f9 00 03 f9 f9
+  0x210b9810: 00 01 f9 f9 00 00 04 f9 f9 f9 f9 f9 00 01 f9 f9
+  0x210b9820: 00 00 03 f9 f9 f9 f9 f9 00 00 00 00 00 00 00 00
+=>0x210b9830: 00 00 00 00 00 00 00 f9[f9]f9 f9 f9 00 00 f9 f9
+  0x210b9840: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x210b9850: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x210b9860: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x210b9870: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x210b9880: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

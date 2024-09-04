@@ -1,0 +1,190 @@
+Unable to find image 'n132/arvo:16107-vul' locally
+16107-vul: Pulling from n132/arvo
+f7277927d38a: Pulling fs layer
+8d3eac894db4: Pulling fs layer
+edf72af6d627: Pulling fs layer
+3e4f86211d23: Pulling fs layer
+ea9da55b7c2c: Pulling fs layer
+8eb8fcac572a: Pulling fs layer
+8c1955be1767: Pulling fs layer
+297c4e2ee1f4: Pulling fs layer
+33eb55b6b83d: Pulling fs layer
+024545aed62c: Pulling fs layer
+b716aafd8e54: Pulling fs layer
+1d394b63458a: Pulling fs layer
+5d531a063688: Pulling fs layer
+47b7668d7de9: Pulling fs layer
+2704a1010a21: Pulling fs layer
+ac895196e920: Pulling fs layer
+078f0692e5a6: Pulling fs layer
+978a0332392d: Pulling fs layer
+4e9a5f5ae712: Pulling fs layer
+e49bddc29d02: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+c0d2afe4d3a5: Pulling fs layer
+b6530a4173cf: Pulling fs layer
+6b77cc4cb4d9: Pulling fs layer
+3e4f86211d23: Waiting
+ea9da55b7c2c: Waiting
+8eb8fcac572a: Waiting
+8c1955be1767: Waiting
+297c4e2ee1f4: Waiting
+33eb55b6b83d: Waiting
+024545aed62c: Waiting
+b716aafd8e54: Waiting
+1d394b63458a: Waiting
+5d531a063688: Waiting
+47b7668d7de9: Waiting
+2704a1010a21: Waiting
+ac895196e920: Waiting
+078f0692e5a6: Waiting
+978a0332392d: Waiting
+4e9a5f5ae712: Waiting
+e49bddc29d02: Waiting
+4f4fb700ef54: Waiting
+c0d2afe4d3a5: Waiting
+b6530a4173cf: Waiting
+6b77cc4cb4d9: Waiting
+8d3eac894db4: Verifying Checksum
+8d3eac894db4: Download complete
+edf72af6d627: Verifying Checksum
+edf72af6d627: Download complete
+3e4f86211d23: Verifying Checksum
+3e4f86211d23: Download complete
+f7277927d38a: Verifying Checksum
+f7277927d38a: Download complete
+8c1955be1767: Verifying Checksum
+8c1955be1767: Download complete
+8eb8fcac572a: Verifying Checksum
+8eb8fcac572a: Download complete
+ea9da55b7c2c: Verifying Checksum
+ea9da55b7c2c: Download complete
+f7277927d38a: Pull complete
+8d3eac894db4: Pull complete
+edf72af6d627: Pull complete
+3e4f86211d23: Pull complete
+33eb55b6b83d: Download complete
+b716aafd8e54: Verifying Checksum
+b716aafd8e54: Download complete
+ea9da55b7c2c: Pull complete
+8eb8fcac572a: Pull complete
+8c1955be1767: Pull complete
+1d394b63458a: Verifying Checksum
+1d394b63458a: Download complete
+024545aed62c: Verifying Checksum
+024545aed62c: Download complete
+5d531a063688: Verifying Checksum
+5d531a063688: Download complete
+2704a1010a21: Verifying Checksum
+2704a1010a21: Download complete
+47b7668d7de9: Verifying Checksum
+47b7668d7de9: Download complete
+078f0692e5a6: Verifying Checksum
+078f0692e5a6: Download complete
+297c4e2ee1f4: Verifying Checksum
+297c4e2ee1f4: Download complete
+978a0332392d: Verifying Checksum
+978a0332392d: Download complete
+ac895196e920: Verifying Checksum
+ac895196e920: Download complete
+4f4fb700ef54: Download complete
+c0d2afe4d3a5: Download complete
+297c4e2ee1f4: Pull complete
+33eb55b6b83d: Pull complete
+4e9a5f5ae712: Verifying Checksum
+4e9a5f5ae712: Download complete
+b6530a4173cf: Download complete
+6b77cc4cb4d9: Verifying Checksum
+6b77cc4cb4d9: Download complete
+e49bddc29d02: Verifying Checksum
+e49bddc29d02: Download complete
+024545aed62c: Pull complete
+b716aafd8e54: Pull complete
+1d394b63458a: Pull complete
+5d531a063688: Pull complete
+47b7668d7de9: Pull complete
+2704a1010a21: Pull complete
+ac895196e920: Pull complete
+078f0692e5a6: Pull complete
+978a0332392d: Pull complete
+4e9a5f5ae712: Pull complete
+e49bddc29d02: Pull complete
+4f4fb700ef54: Pull complete
+c0d2afe4d3a5: Pull complete
+b6530a4173cf: Pull complete
+6b77cc4cb4d9: Pull complete
+Digest: sha256:0f15caf367278b2c745a4affe18fcca3b2f1bedf2f4cc1f43778fae8c575b2cf
+Status: Downloaded newer image for n132/arvo:16107-vul
+INFO: Seed: 3599039649
+INFO: Loaded 1 modules   (40125 inline 8-bit counters): 40125 [0xddb920, 0xde55dd), 
+INFO: Loaded 1 PC tables (40125 PCs): 40125 [0xde55e0,0xe821b0), 
+/out/conf: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x608000000171 at pc 0x0000005836b4 bp 0x7ffdc7cd8eb0 sp 0x7ffdc7cd8ea8
+WRITE of size 1 at 0x608000000171 thread T0
+SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
+    #0 0x5836b3 in OPENSSL_strlcpy /src/openssl/crypto/o_str.c:77:14
+    #1 0x5837af in OPENSSL_strlcat /src/openssl/crypto/o_str.c:86:16
+    #2 0x5789e8 in ERR_add_error_vdata /src/openssl/crypto/err/err.c:888:9
+    #3 0x575ed0 in ERR_add_error_data /src/openssl/crypto/err/err.c:831:5
+    #4 0x5c1884 in process_include /src/openssl/crypto/conf/conf_def.c
+    #5 0x5bf1dd in def_load_bio /src/openssl/crypto/conf/conf_def.c:365:24
+    #6 0x4c9eec in FuzzerTestOneInput /src/openssl/fuzz/conf.c:38:5
+    #7 0x514cc0 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:553:15
+    #8 0x4caaaf in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:292:6
+    #9 0x4d7894 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:775:9
+    #10 0x4ca107 in main /src/libfuzzer/FuzzerMain.cpp:19:10
+    #11 0x7f4c2f0ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x41fd98 in _start (/out/conf+0x41fd98)
+
+DEDUP_TOKEN: OPENSSL_strlcpy--OPENSSL_strlcat--ERR_add_error_vdata
+0x608000000171 is located 0 bytes to the right of 81-byte region [0x608000000120,0x608000000171)
+allocated by thread T0 here:
+    #0 0x497cfd in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:145:3
+    #1 0x578815 in ERR_add_error_vdata /src/openssl/crypto/err/err.c:865:23
+    #2 0x575ed0 in ERR_add_error_data /src/openssl/crypto/err/err.c:831:5
+    #3 0x5c1871 in process_include /src/openssl/crypto/conf/conf_def.c:676:9
+    #4 0x5bf1dd in def_load_bio /src/openssl/crypto/conf/conf_def.c:365:24
+    #5 0x4c9eec in FuzzerTestOneInput /src/openssl/fuzz/conf.c:38:5
+    #6 0x514cc0 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:553:15
+    #7 0x4caaaf in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:292:6
+    #8 0x4d7894 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:775:9
+    #9 0x4ca107 in main /src/libfuzzer/FuzzerMain.cpp:19:10
+    #10 0x7f4c2f0ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: malloc--ERR_add_error_vdata--ERR_add_error_data
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/openssl/crypto/o_str.c:77:14 in OPENSSL_strlcpy
+Shadow bytes around the buggy address:
+  0x0c107fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff8000: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff8010: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 04 fa
+=>0x0c107fff8020: fa fa fa fa 00 00 00 00 00 00 00 00 00 00[01]fa
+  0x0c107fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

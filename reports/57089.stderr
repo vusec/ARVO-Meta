@@ -1,0 +1,134 @@
+Unable to find image 'n132/arvo:57089-vul' locally
+57089-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+ad2487796c1a: Already exists
+8b42b3b29679: Already exists
+c11d532e9648: Already exists
+5feaaee5aeff: Already exists
+4a38a10173f3: Already exists
+919a4cdf4d9f: Already exists
+c2a667788566: Already exists
+4fe386f7cf37: Already exists
+20ffdf26db1f: Already exists
+222ec402b722: Already exists
+6a648a51e2a5: Already exists
+ffcaadede07d: Already exists
+a3308a2d8c19: Already exists
+20985b6dccd0: Already exists
+b8dbcc6ed4e6: Already exists
+b944b42103d6: Already exists
+07e15d644013: Already exists
+8657451f905f: Already exists
+7e37b7cc9505: Already exists
+f683fbcb8391: Already exists
+0dc7969dcb89: Already exists
+264a7b84c179: Already exists
+1644aa8279ed: Already exists
+f53ed6c6da33: Already exists
+d42bafaa1433: Already exists
+a0d854db0901: Already exists
+a0cec2808c86: Pulling fs layer
+af7b8a2b45aa: Pulling fs layer
+c5383dfc4f07: Pulling fs layer
+21c43e5ae2c3: Pulling fs layer
+3ca541b4cf29: Pulling fs layer
+de7309627519: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+1a9230ae4d95: Pulling fs layer
+d9b4352b077c: Pulling fs layer
+cedcc7272bb9: Pulling fs layer
+4f4fb700ef54: Waiting
+de7309627519: Waiting
+21c43e5ae2c3: Waiting
+1a9230ae4d95: Waiting
+3ca541b4cf29: Waiting
+d9b4352b077c: Waiting
+cedcc7272bb9: Waiting
+af7b8a2b45aa: Verifying Checksum
+af7b8a2b45aa: Download complete
+c5383dfc4f07: Verifying Checksum
+c5383dfc4f07: Download complete
+21c43e5ae2c3: Verifying Checksum
+21c43e5ae2c3: Download complete
+de7309627519: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+3ca541b4cf29: Verifying Checksum
+3ca541b4cf29: Download complete
+1a9230ae4d95: Verifying Checksum
+1a9230ae4d95: Download complete
+cedcc7272bb9: Download complete
+a0cec2808c86: Verifying Checksum
+a0cec2808c86: Download complete
+d9b4352b077c: Download complete
+a0cec2808c86: Pull complete
+af7b8a2b45aa: Pull complete
+c5383dfc4f07: Pull complete
+21c43e5ae2c3: Pull complete
+3ca541b4cf29: Pull complete
+de7309627519: Pull complete
+4f4fb700ef54: Pull complete
+1a9230ae4d95: Pull complete
+d9b4352b077c: Pull complete
+cedcc7272bb9: Pull complete
+Digest: sha256:bf31e67abd0e125b04e1b041e1f3b26339ebd2004489c54d7f4ea0df8d854ed0
+Status: Downloaded newer image for n132/arvo:57089-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2000580353
+INFO: Loaded 1 modules   (52512 inline 8-bit counters): 52512 [0x874d4c0, 0x875a1e0), 
+INFO: Loaded 1 PC tables (52512 PCs): 52512 [0x863db3c,0x86a443c), 
+/out/html: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x085e3081 at pc 0x08340377 bp 0xff8c22c8 sp 0xff8c22c0
+READ of size 1 at 0x085e3081 thread T0
+SCARINESS: 12 (1-byte-read-global-buffer-overflow)
+    #0 0x8340376 in htmlParseDocument /src/libxml2/HTMLparser.c:5068:9
+    #1 0x8354a86 in htmlDoRead /src/libxml2/HTMLparser.c:6962:5
+    #2 0x8354f30 in htmlReadMemory /src/libxml2/HTMLparser.c:7044:13
+    #3 0x81d4b43 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/html.c:48:11
+    #4 0x80959ae in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #5 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #6 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #7 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #8 0xefaaced4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #9 0x8077a55 in _start (/out/html+0x8077a55)
+
+DEDUP_TOKEN: htmlParseDocument--htmlDoRead--htmlReadMemory
+0x085e3081 is located 31 bytes to the left of global variable '<string literal>' defined in 'parserInternals.c:332:30' (0x85e30a0) of size 18
+  '<string literal>' is ascii string 'Huge input lookup'
+0x085e3081 is located 0 bytes to the right of global variable '<string literal>' defined in 'parserInternals.c:289:29' (0x85e3080) of size 1
+  '<string literal>' is ascii string ''
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/libxml2/HTMLparser.c:5068:9 in htmlParseDocument
+Shadow bytes around the buggy address:
+  0x210bc5c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x210bc5d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x210bc5e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03
+  0x210bc5f0: f9 f9 f9 f9 00 00 00 00 00 00 00 04 f9 f9 f9 f9
+  0x210bc600: 00 00 00 07 f9 f9 f9 f9 00 00 00 02 f9 f9 f9 f9
+=>0x210bc610:[01]f9 f9 f9 00 00 02 f9 f9 f9 f9 f9 00 00 05 f9
+  0x210bc620: f9 f9 f9 f9 00 00 00 00 f9 f9 f9 f9 00 00 00 00
+  0x210bc630: f9 f9 f9 f9 00 00 00 00 00 00 f9 f9 f9 f9 f9 f9
+  0x210bc640: 00 00 00 00 04 f9 f9 f9 f9 f9 f9 f9 00 00 00 00
+  0x210bc650: 00 00 02 f9 f9 f9 f9 f9 00 00 00 07 f9 f9 f9 f9
+  0x210bc660: 00 00 00 00 00 00 00 f9 f9 f9 f9 f9 00 00 02 f9
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

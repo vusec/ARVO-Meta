@@ -1,0 +1,165 @@
+Unable to find image 'n132/arvo:63124-vul' locally
+63124-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+7a6fb64bbddc: Already exists
+40cb9ed18c8e: Already exists
+1e1f8e7cd29d: Already exists
+c6b815875d06: Already exists
+47159b548a93: Already exists
+037d1a3ff5d1: Already exists
+0e0bbcf6a384: Already exists
+0319480abea7: Already exists
+367068d13bc6: Already exists
+c8d7cfbaa190: Already exists
+c4d4823cab8a: Already exists
+60da9451a13c: Already exists
+d66a22fb8853: Already exists
+18588d234dd3: Already exists
+d66d47d04176: Already exists
+bdc278742aba: Already exists
+66c95331b0ec: Already exists
+ac59a9edd0e7: Already exists
+6343a3667c5d: Already exists
+3e572c4768ff: Already exists
+cd8af4ec1e16: Already exists
+108e28d2c1fb: Already exists
+09cdd25ca2bd: Already exists
+e2a1acfa12f8: Already exists
+a80b6ffa30b4: Already exists
+227a7ada6d70: Already exists
+60f79a13ad8e: Already exists
+97c538113066: Already exists
+8e13f51e6611: Already exists
+b80d02d69d22: Pulling fs layer
+cec8c9c3ea72: Pulling fs layer
+5c8593b3a2b2: Pulling fs layer
+72c11f115193: Pulling fs layer
+ea18151a6ec1: Pulling fs layer
+b49fd407cb96: Pulling fs layer
+c24e30179912: Pulling fs layer
+3c23a697d342: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+d1299f129c6e: Pulling fs layer
+27c7ade9e4b8: Pulling fs layer
+07530f75ed2e: Pulling fs layer
+4f4fb700ef54: Waiting
+d1299f129c6e: Waiting
+27c7ade9e4b8: Waiting
+07530f75ed2e: Waiting
+ea18151a6ec1: Waiting
+c24e30179912: Waiting
+b49fd407cb96: Waiting
+3c23a697d342: Waiting
+72c11f115193: Waiting
+5c8593b3a2b2: Verifying Checksum
+5c8593b3a2b2: Download complete
+cec8c9c3ea72: Download complete
+72c11f115193: Verifying Checksum
+b80d02d69d22: Verifying Checksum
+b80d02d69d22: Download complete
+ea18151a6ec1: Verifying Checksum
+ea18151a6ec1: Download complete
+b49fd407cb96: Verifying Checksum
+b49fd407cb96: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+c24e30179912: Verifying Checksum
+c24e30179912: Download complete
+3c23a697d342: Download complete
+d1299f129c6e: Download complete
+07530f75ed2e: Download complete
+27c7ade9e4b8: Verifying Checksum
+27c7ade9e4b8: Download complete
+b80d02d69d22: Pull complete
+cec8c9c3ea72: Pull complete
+5c8593b3a2b2: Pull complete
+72c11f115193: Pull complete
+ea18151a6ec1: Pull complete
+b49fd407cb96: Pull complete
+c24e30179912: Pull complete
+3c23a697d342: Pull complete
+4f4fb700ef54: Pull complete
+d1299f129c6e: Pull complete
+27c7ade9e4b8: Pull complete
+07530f75ed2e: Pull complete
+Digest: sha256:86b799f4487c8308adedcdbe5c11657dfca527a6be02c3b57ee48a548039ab2e
+Status: Downloaded newer image for n132/arvo:63124-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3282457084
+INFO: Loaded 1 modules   (39446 inline 8-bit counters): 39446 [0x996030, 0x99fa46), 
+INFO: Loaded 1 PC tables (39446 PCs): 39446 [0x85f470,0x8f95d0), 
+/out/xslt: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000cf4 at pc 0x00000068b5d7 bp 0x7ffe4cd35150 sp 0x7ffe4cd35148
+WRITE of size 1 at 0x602000000cf4 thread T0
+SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
+    #0 0x68b5d6 in xmlCopyCharMultiByte /src/libxml2/parserInternals.c:1095:12
+    #1 0x64be18 in xmlParseCommentComplex /src/libxml2/parser.c:4964:2
+    #2 0x64a9c3 in xmlParseComment /src/libxml2/parser.c:5189:5
+    #3 0x677f09 in xmlParseMisc /src/libxml2/parser.c:11001:6
+    #4 0x678642 in xmlParseDocument /src/libxml2/parser.c:11082:5
+    #5 0x681d07 in xmlDoRead /src/libxml2/parser.c:14773:5
+    #6 0x681f42 in xmlReadMemory /src/libxml2/parser.c:14859:13
+    #7 0x56deeb in xsltFuzzXslt /src/libxslt/tests/fuzz/fuzz.c:284:11
+    #8 0x56c602 in LLVMFuzzerTestOneInput /src/libxslt/tests/fuzz/xslt.c:18:23
+    #9 0x43dfe3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #10 0x429742 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x42efec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #12 0x458522 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x70e384d1a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x41f90d in _start (/out/xslt+0x41f90d)
+
+DEDUP_TOKEN: xmlCopyCharMultiByte--xmlParseCommentComplex--xmlParseComment
+0x602000000cf4 is located 0 bytes to the right of 4-byte region [0x602000000cf0,0x602000000cf4)
+allocated by thread T0 here:
+    #0 0x52f57c in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:85:3
+    #1 0x56ef4a in xmlFuzzRealloc /src/libxslt/tests/fuzz/fuzz.c:437:12
+    #2 0x64bd16 in xmlParseCommentComplex /src/libxml2/parser.c:4955:28
+    #3 0x64a9c3 in xmlParseComment /src/libxml2/parser.c:5189:5
+    #4 0x677f09 in xmlParseMisc /src/libxml2/parser.c:11001:6
+    #5 0x678642 in xmlParseDocument /src/libxml2/parser.c:11082:5
+    #6 0x681d07 in xmlDoRead /src/libxml2/parser.c:14773:5
+    #7 0x681f42 in xmlReadMemory /src/libxml2/parser.c:14859:13
+    #8 0x56deeb in xsltFuzzXslt /src/libxslt/tests/fuzz/fuzz.c:284:11
+    #9 0x56c602 in LLVMFuzzerTestOneInput /src/libxslt/tests/fuzz/xslt.c:18:23
+    #10 0x43dfe3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #11 0x429742 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #12 0x42efec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #13 0x458522 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #14 0x70e384d1a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: __interceptor_realloc--xmlFuzzRealloc--xmlParseCommentComplex
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libxml2/parserInternals.c:1095:12 in xmlCopyCharMultiByte
+Shadow bytes around the buggy address:
+  0x0c047fff8140: fa fa 00 01 fa fa 00 04 fa fa 00 01 fa fa 00 01
+  0x0c047fff8150: fa fa 04 fa fa fa 00 00 fa fa 00 fa fa fa 00 fa
+  0x0c047fff8160: fa fa 00 fa fa fa 00 00 fa fa 01 fa fa fa 00 00
+  0x0c047fff8170: fa fa 02 fa fa fa 00 00 fa fa 02 fa fa fa 04 fa
+  0x0c047fff8180: fa fa 04 fa fa fa fd fa fa fa fd fa fa fa 02 fa
+=>0x0c047fff8190: fa fa 02 fa fa fa 02 fa fa fa 02 fa fa fa[04]fa
+  0x0c047fff81a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff81b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff81c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff81d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff81e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

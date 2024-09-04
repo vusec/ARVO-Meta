@@ -1,0 +1,287 @@
+Unable to find image 'n132/arvo:67791-vul' locally
+67791-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+e58219a0fcda: Pulling fs layer
+1d2a317d9391: Pulling fs layer
+80135338b3d9: Pulling fs layer
+9ce9f8f0d355: Pulling fs layer
+40a15a09239a: Pulling fs layer
+477b6eb7bd7b: Pulling fs layer
+74e493b1aa20: Pulling fs layer
+7c5ff0585d73: Pulling fs layer
+31461b2c49af: Pulling fs layer
+320b528a7a44: Pulling fs layer
+b7dd1a5450a7: Pulling fs layer
+f32d2afdd2be: Pulling fs layer
+a970d4e8d32d: Pulling fs layer
+160b4238b8ae: Pulling fs layer
+c04f5ff8477b: Pulling fs layer
+a53717bf7e06: Pulling fs layer
+21eb0b5fffc3: Pulling fs layer
+2a5e0accc092: Pulling fs layer
+b11a5b8e766e: Pulling fs layer
+49a6ced00644: Pulling fs layer
+5b923e986824: Pulling fs layer
+fd8514f60ef9: Pulling fs layer
+7db635688510: Pulling fs layer
+477b6eb7bd7b: Waiting
+9bf9d9403d4b: Pulling fs layer
+9ce9f8f0d355: Waiting
+74e493b1aa20: Waiting
+8a7bd37ae54b: Pulling fs layer
+40a15a09239a: Waiting
+7c5ff0585d73: Waiting
+cb83bbc99d39: Pulling fs layer
+b7dd1a5450a7: Waiting
+a4212869af56: Pulling fs layer
+68ca89a09360: Pulling fs layer
+f32d2afdd2be: Waiting
+3cf61e483d03: Pulling fs layer
+45fb716361d4: Pulling fs layer
+12ee6035b420: Pulling fs layer
+dab3b928ba17: Pulling fs layer
+5b923e986824: Waiting
+8967a375ad09: Pulling fs layer
+17bd90ca63f8: Pulling fs layer
+fd8514f60ef9: Waiting
+21eb0b5fffc3: Waiting
+a970d4e8d32d: Waiting
+160b4238b8ae: Waiting
+4f4fb700ef54: Pulling fs layer
+7db635688510: Waiting
+10c0e3d77a0d: Pulling fs layer
+31461b2c49af: Waiting
+b11a5b8e766e: Waiting
+49a6ced00644: Waiting
+4f4aa63a3868: Pulling fs layer
+bbf6f5152683: Pulling fs layer
+12ee6035b420: Waiting
+320b528a7a44: Waiting
+c04f5ff8477b: Waiting
+68ca89a09360: Waiting
+dab3b928ba17: Waiting
+9bf9d9403d4b: Waiting
+3cf61e483d03: Waiting
+b5db08c3ca0c: Pulling fs layer
+a53717bf7e06: Waiting
+45fb716361d4: Waiting
+d8e541455a36: Pulling fs layer
+cb83bbc99d39: Waiting
+8967a375ad09: Waiting
+a4212869af56: Waiting
+bbf6f5152683: Waiting
+3acaae86dba2: Pulling fs layer
+4f4fb700ef54: Waiting
+10c0e3d77a0d: Waiting
+3acaae86dba2: Waiting
+b5db08c3ca0c: Waiting
+17bd90ca63f8: Waiting
+d8e541455a36: Waiting
+1d2a317d9391: Verifying Checksum
+1d2a317d9391: Download complete
+9ce9f8f0d355: Verifying Checksum
+9ce9f8f0d355: Download complete
+80135338b3d9: Verifying Checksum
+80135338b3d9: Download complete
+e58219a0fcda: Verifying Checksum
+e58219a0fcda: Download complete
+74e493b1aa20: Verifying Checksum
+74e493b1aa20: Download complete
+40a15a09239a: Verifying Checksum
+40a15a09239a: Download complete
+7c5ff0585d73: Verifying Checksum
+7c5ff0585d73: Download complete
+e58219a0fcda: Pull complete
+1d2a317d9391: Pull complete
+320b528a7a44: Verifying Checksum
+320b528a7a44: Download complete
+b7dd1a5450a7: Verifying Checksum
+b7dd1a5450a7: Download complete
+80135338b3d9: Pull complete
+9ce9f8f0d355: Pull complete
+40a15a09239a: Pull complete
+477b6eb7bd7b: Verifying Checksum
+477b6eb7bd7b: Download complete
+31461b2c49af: Verifying Checksum
+31461b2c49af: Download complete
+f32d2afdd2be: Verifying Checksum
+f32d2afdd2be: Download complete
+160b4238b8ae: Verifying Checksum
+160b4238b8ae: Download complete
+a970d4e8d32d: Verifying Checksum
+a970d4e8d32d: Download complete
+c04f5ff8477b: Verifying Checksum
+c04f5ff8477b: Download complete
+a53717bf7e06: Verifying Checksum
+a53717bf7e06: Download complete
+21eb0b5fffc3: Verifying Checksum
+21eb0b5fffc3: Download complete
+49a6ced00644: Verifying Checksum
+49a6ced00644: Download complete
+2a5e0accc092: Verifying Checksum
+2a5e0accc092: Download complete
+b11a5b8e766e: Download complete
+fd8514f60ef9: Verifying Checksum
+fd8514f60ef9: Download complete
+7db635688510: Verifying Checksum
+7db635688510: Download complete
+5b923e986824: Verifying Checksum
+5b923e986824: Download complete
+9bf9d9403d4b: Verifying Checksum
+9bf9d9403d4b: Download complete
+8a7bd37ae54b: Verifying Checksum
+8a7bd37ae54b: Download complete
+cb83bbc99d39: Verifying Checksum
+cb83bbc99d39: Download complete
+a4212869af56: Verifying Checksum
+a4212869af56: Download complete
+68ca89a09360: Verifying Checksum
+68ca89a09360: Download complete
+477b6eb7bd7b: Pull complete
+74e493b1aa20: Pull complete
+7c5ff0585d73: Pull complete
+3cf61e483d03: Verifying Checksum
+3cf61e483d03: Download complete
+12ee6035b420: Verifying Checksum
+12ee6035b420: Download complete
+45fb716361d4: Verifying Checksum
+45fb716361d4: Download complete
+dab3b928ba17: Verifying Checksum
+dab3b928ba17: Download complete
+17bd90ca63f8: Verifying Checksum
+17bd90ca63f8: Download complete
+8967a375ad09: Verifying Checksum
+8967a375ad09: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+10c0e3d77a0d: Verifying Checksum
+10c0e3d77a0d: Download complete
+4f4aa63a3868: Verifying Checksum
+4f4aa63a3868: Download complete
+bbf6f5152683: Verifying Checksum
+bbf6f5152683: Download complete
+31461b2c49af: Pull complete
+b5db08c3ca0c: Verifying Checksum
+b5db08c3ca0c: Download complete
+3acaae86dba2: Download complete
+d8e541455a36: Verifying Checksum
+d8e541455a36: Download complete
+320b528a7a44: Pull complete
+b7dd1a5450a7: Pull complete
+f32d2afdd2be: Pull complete
+a970d4e8d32d: Pull complete
+160b4238b8ae: Pull complete
+c04f5ff8477b: Pull complete
+a53717bf7e06: Pull complete
+21eb0b5fffc3: Pull complete
+2a5e0accc092: Pull complete
+b11a5b8e766e: Pull complete
+49a6ced00644: Pull complete
+5b923e986824: Pull complete
+fd8514f60ef9: Pull complete
+7db635688510: Pull complete
+9bf9d9403d4b: Pull complete
+8a7bd37ae54b: Pull complete
+cb83bbc99d39: Pull complete
+a4212869af56: Pull complete
+68ca89a09360: Pull complete
+3cf61e483d03: Pull complete
+45fb716361d4: Pull complete
+12ee6035b420: Pull complete
+dab3b928ba17: Pull complete
+8967a375ad09: Pull complete
+17bd90ca63f8: Pull complete
+4f4fb700ef54: Pull complete
+10c0e3d77a0d: Pull complete
+4f4aa63a3868: Pull complete
+bbf6f5152683: Pull complete
+b5db08c3ca0c: Pull complete
+d8e541455a36: Pull complete
+3acaae86dba2: Pull complete
+Digest: sha256:f4565a8ab7be473b89ea764912a72aaa5617cf8a9bd6a14b799c8539db714c0d
+Status: Downloaded newer image for n132/arvo:67791-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 4000762836
+INFO: Loaded 1 modules   (22547 inline 8-bit counters): 22547 [0x952c90, 0x9584a3), 
+INFO: Loaded 1 PC tables (22547 PCs): 22547 [0x82ca40,0x884b70), 
+/out/libraw_nef_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7573bfe017fd at pc 0x00000059cf29 bp 0x7fffee9454e0 sp 0x7fffee9454d8
+READ of size 1 at 0x7573bfe017fd thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x59cf28 in libraw_sget4_static(short, unsigned char*) /src/libraw/src/utils/read_utils.cpp:63:12
+    #1 0x5ad8eb in checked_buffer_t::sget4(int) /src/libraw/src/utils/utils_libraw.cpp:704:10
+    #2 0x77ddd2 in LibRaw::parseAdobeRAFMakernote() /src/libraw/src/metadata/fuji.cpp:229:33
+    #3 0x74ac9b in LibRaw::parse_tiff_ifd(int) /src/libraw/src/metadata/tiff.cpp:1531:21
+    #4 0x751ab9 in LibRaw::parse_tiff(int) /src/libraw/src/metadata/tiff.cpp:1707:9
+    #5 0x6d062a in LibRaw::identify() /src/libraw/src/metadata/identify.cpp:474:14
+    #6 0x592e3c in LibRaw::open_datastream(LibRaw_abstract_datastream*) /src/libraw/src/utils/open.cpp:480:4
+    #7 0x591ef9 in LibRaw::open_buffer(void const*, unsigned long) /src/libraw/src/utils/open.cpp:240:13
+    #8 0x56dc20 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:62:24
+    #9 0x43df33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #10 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #12 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x7573c4583082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x41f85d in _start (/out/libraw_nef_fuzzer+0x41f85d)
+
+DEDUP_TOKEN: libraw_sget4_static(short, unsigned char*)--checked_buffer_t::sget4(int)--LibRaw::parseAdobeRAFMakernote()
+0x7573bfe017fd is located 3 bytes to the left of 2106464-byte region [0x7573bfe01800,0x7573c0003c60)
+allocated by thread T0 here:
+    #0 0x569f0d in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:95:3
+    #1 0x5ad3a2 in __libcpp_operator_new<unsigned long> /usr/local/bin/../include/c++/v1/new:245:10
+    #2 0x5ad3a2 in __libcpp_allocate /usr/local/bin/../include/c++/v1/new:271:10
+    #3 0x5ad3a2 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator.h:105:38
+    #4 0x5ad3a2 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator_traits.h:262:20
+    #5 0x5ad3a2 in __vallocate /usr/local/bin/../include/c++/v1/vector:931:37
+    #6 0x5ad3a2 in vector /usr/local/bin/../include/c++/v1/vector:1062:9
+    #7 0x5ad3a2 in checked_buffer_t::checked_buffer_t(short, int) /src/libraw/src/utils/utils_libraw.cpp:679:72
+    #8 0x77da24 in fuji_wb_checked_buffer_t /src/libraw/src/metadata/fuji.cpp:120:50
+    #9 0x77da24 in LibRaw::parseAdobeRAFMakernote() /src/libraw/src/metadata/fuji.cpp:211:27
+    #10 0x74ac9b in LibRaw::parse_tiff_ifd(int) /src/libraw/src/metadata/tiff.cpp:1531:21
+    #11 0x751ab9 in LibRaw::parse_tiff(int) /src/libraw/src/metadata/tiff.cpp:1707:9
+    #12 0x6d062a in LibRaw::identify() /src/libraw/src/metadata/identify.cpp:474:14
+    #13 0x592e3c in LibRaw::open_datastream(LibRaw_abstract_datastream*) /src/libraw/src/utils/open.cpp:480:4
+    #14 0x591ef9 in LibRaw::open_buffer(void const*, unsigned long) /src/libraw/src/utils/open.cpp:240:13
+    #15 0x56dc20 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:62:24
+    #16 0x43df33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #17 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #18 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #19 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #20 0x7573c4583082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: operator new(unsigned long)--__libcpp_operator_new<unsigned long>--__libcpp_allocate
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libraw/src/utils/read_utils.cpp:63:12 in libraw_sget4_static(short, unsigned char*)
+Shadow bytes around the buggy address:
+  0x0eaef7fb82a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaef7fb82b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaef7fb82c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaef7fb82d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaef7fb82e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0eaef7fb82f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
+  0x0eaef7fb8300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaef7fb8310: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaef7fb8320: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaef7fb8330: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaef7fb8340: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

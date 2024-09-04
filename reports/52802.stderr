@@ -1,0 +1,156 @@
+Unable to find image 'n132/arvo:52802-vul' locally
+52802-vul: Pulling from n132/arvo
+fb0b3276a519: Already exists
+8626f69058ba: Already exists
+7c4980aa6dd8: Already exists
+e19cd6adc750: Already exists
+dfe9723f4d4c: Already exists
+cd1de1f3c8c6: Already exists
+ecfcaed3e4dc: Already exists
+9508f5b01357: Already exists
+273f92edcfbc: Already exists
+0016acac5acb: Already exists
+3357648990a8: Already exists
+cf091c0fb2b5: Already exists
+d49b64536874: Already exists
+073c4f36516f: Already exists
+06d988a0a6f3: Already exists
+8402f7050a4e: Already exists
+ab5c756968a4: Already exists
+2c28b156673b: Already exists
+a4a776b7201b: Already exists
+25011671c43e: Already exists
+2226dbc1290d: Already exists
+a710ed2b1b23: Already exists
+4aefa62017f2: Already exists
+db8521e1e360: Already exists
+256336ffb999: Already exists
+2d2f8dd67899: Already exists
+316072abdc70: Pulling fs layer
+cb64723ee4e8: Pulling fs layer
+fd8e235d3ff3: Pulling fs layer
+4c2a361511a6: Pulling fs layer
+9c55db9a59d6: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+fab2a36802eb: Pulling fs layer
+f4e92493fdcd: Pulling fs layer
+03447311c5cd: Pulling fs layer
+8314d487318e: Pulling fs layer
+714b2517e6f5: Pulling fs layer
+3260b8092e9c: Pulling fs layer
+4f4fb700ef54: Waiting
+fab2a36802eb: Waiting
+f4e92493fdcd: Waiting
+03447311c5cd: Waiting
+3260b8092e9c: Waiting
+8314d487318e: Waiting
+714b2517e6f5: Waiting
+4c2a361511a6: Waiting
+9c55db9a59d6: Waiting
+cb64723ee4e8: Verifying Checksum
+cb64723ee4e8: Download complete
+fd8e235d3ff3: Verifying Checksum
+fd8e235d3ff3: Download complete
+4c2a361511a6: Verifying Checksum
+4c2a361511a6: Download complete
+9c55db9a59d6: Verifying Checksum
+9c55db9a59d6: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+f4e92493fdcd: Verifying Checksum
+f4e92493fdcd: Download complete
+fab2a36802eb: Verifying Checksum
+fab2a36802eb: Download complete
+8314d487318e: Verifying Checksum
+8314d487318e: Download complete
+03447311c5cd: Verifying Checksum
+03447311c5cd: Download complete
+316072abdc70: Verifying Checksum
+316072abdc70: Download complete
+3260b8092e9c: Download complete
+714b2517e6f5: Verifying Checksum
+714b2517e6f5: Download complete
+316072abdc70: Pull complete
+cb64723ee4e8: Pull complete
+fd8e235d3ff3: Pull complete
+4c2a361511a6: Pull complete
+9c55db9a59d6: Pull complete
+4f4fb700ef54: Pull complete
+fab2a36802eb: Pull complete
+f4e92493fdcd: Pull complete
+03447311c5cd: Pull complete
+8314d487318e: Pull complete
+714b2517e6f5: Pull complete
+3260b8092e9c: Pull complete
+Digest: sha256:98d6057ebf1b29389c470031a6eceac61ec755dec79ede7027b7bd870ffd877e
+Status: Downloaded newer image for n132/arvo:52802-vul
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 500767683
+INFO: Loaded 1 modules   (21783 inline 8-bit counters): 21783 [0x938cf0, 0x93e207), 
+INFO: Loaded 1 PC tables (21783 PCs): 21783 [0x818f20,0x86e090), 
+/out/libraw_nef_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001b780 at pc 0x0000006598dd bp 0x7ffcb4d25510 sp 0x7ffcb4d25508
+WRITE of size 2 at 0x63300001b780 thread T0
+SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
+    #0 0x6598dc in LibRaw::kodak_rgb_load_raw() /src/libraw/src/decoders/kodak_decoders.cpp:503:23
+    #1 0x5a02fa in LibRaw::kodak_thumb_loader() /src/libraw/src/utils/thumb_utils.cpp:66:9
+    #2 0x56f5d5 in LibRaw::unpack_thumb() /src/libraw/src/decoders/unpack_thumb.cpp:98:7
+    #3 0x56dc8e in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:72:20
+    #4 0x43df33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #5 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #6 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #7 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #8 0x71556c9b2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x41f85d in _start (/out/libraw_nef_fuzzer+0x41f85d)
+
+DEDUP_TOKEN: LibRaw::kodak_rgb_load_raw()--LibRaw::kodak_thumb_loader()--LibRaw::unpack_thumb()
+0x63300001b780 is located 0 bytes to the right of 110464-byte region [0x633000000800,0x63300001b780)
+allocated by thread T0 here:
+    #0 0x52f29e in __interceptor_calloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:77:3
+    #1 0x5a8e1b in calloc /src/libraw/./libraw/libraw_alloc.h:56:17
+    #2 0x5a8e1b in LibRaw::calloc(unsigned long, unsigned long) /src/libraw/src/utils/utils_libraw.cpp:271:20
+    #3 0x5a0204 in LibRaw::kodak_thumb_loader() /src/libraw/src/utils/thumb_utils.cpp:57:21
+    #4 0x56f5d5 in LibRaw::unpack_thumb() /src/libraw/src/decoders/unpack_thumb.cpp:98:7
+    #5 0x56dc8e in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:72:20
+    #6 0x43df33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #7 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #8 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #9 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #10 0x71556c9b2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: __interceptor_calloc--calloc--LibRaw::calloc(unsigned long, unsigned long)
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libraw/src/decoders/kodak_decoders.cpp:503:23 in LibRaw::kodak_rgb_load_raw()
+Shadow bytes around the buggy address:
+  0x0c667fffb6a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb6b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb6c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb6d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb6e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c667fffb6f0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb700: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb710: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb720: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb730: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb740: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING
