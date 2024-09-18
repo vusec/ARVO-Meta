@@ -1,0 +1,73 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 378473200
+INFO: Loaded 1 modules   (169554 inline 8-bit counters): 169554 [0x9706260, 0x972f8b2),
+INFO: Loaded 1 PC tables (169554 PCs): 169554 [0x972f8b4,0x987ab44),
+/out/coder_RAS_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xf3403bfc at pc 0x086a680c bp 0xffa6e608 sp 0xffa6e600
+READ of size 1 at 0xf3403bfc thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x86a680b in ReadSUNImage /src/graphicsmagick/coders/sun.c:662:24
+    #1 0x8301ef0 in ReadImage /src/graphicsmagick/magick/constitute.c:1682:13
+    #2 0x82ac427 in BlobToImage /src/graphicsmagick/magick/blob.c:784:13
+    #3 0x8217e77 in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1592:5
+    #4 0x820be8b in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #5 0x80cc7be in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #6 0x80b771e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #7 0x80bd320 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #8 0x80e6f07 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #9 0xf5b5bed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4) (BuildId: d56935956a210bf85f6592f3178b979ad4f7b35f)
+    #10 0x80ae865 in _start (/out/coder_RAS_fuzzer+0x80ae865)
+
+DEDUP_TOKEN: ReadSUNImage--ReadImage--BlobToImage
+0xf3403bfc is located 0 bytes to the right of 316-byte region [0xf3403ac0,0xf3403bfc)
+allocated by thread T0 here:
+    #0 0x81c8719 in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:85:3
+    #1 0x83e514e in _MagickReallocateResourceLimitedMemory /src/graphicsmagick/magick/memory.c:769:36
+    #2 0x83e5568 in _MagickAllocateResourceLimitedMemory /src/graphicsmagick/magick/memory.c:860:10
+    #3 0x86a2d93 in ReadSUNImage /src/graphicsmagick/coders/sun.c:586:20
+    #4 0x8301ef0 in ReadImage /src/graphicsmagick/magick/constitute.c:1682:13
+    #5 0x82ac427 in BlobToImage /src/graphicsmagick/magick/blob.c:784:13
+    #6 0x8217e77 in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1592:5
+    #7 0x820be8b in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #8 0x80cc7be in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #9 0x80b771e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #10 0x80bd320 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #11 0x80e6f07 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #12 0xf5b5bed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4) (BuildId: d56935956a210bf85f6592f3178b979ad4f7b35f)
+
+DEDUP_TOKEN: __interceptor_realloc--_MagickReallocateResourceLimitedMemory--_MagickAllocateResourceLimitedMemory
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/sun.c:662:24 in ReadSUNImage
+Shadow bytes around the buggy address:
+  0x3e680720: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e680730: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e680740: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e680750: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x3e680760: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3e680770: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[04]
+  0x3e680780: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x3e680790: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3e6807a0: 00 00 00 00 00 00 00 00 00 00 00 00 fa fa fa fa
+  0x3e6807b0: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x3e6807c0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

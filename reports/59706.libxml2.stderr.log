@@ -1,0 +1,63 @@
+Accepting input from '/tmp/poc'
+Usage for fuzzing: honggfuzz -P [flags] -- /out/xslt
+=================================================================
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x00000077c560 at pc 0x00000049efc1 bp 0x7fff51193c60 sp 0x7fff51193430
+READ of size 3467 at 0x00000077c560 thread T0
+SCARINESS: 26 (multi-byte-read-global-buffer-overflow)
+    #0 0x49efc0 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
+    #1 0x58ba42 in xmlDictAddString /src/libxml2/dict.c:266:5
+    #2 0x58ba42 in xmlDictLookup /src/libxml2/dict.c:935:11
+    #3 0x5ff3bf in xmlParseNCNameComplex /src/libxml2/parser.c:3210:12
+    #4 0x5ff3bf in xmlParseNCName /src/libxml2/parser.c:3274:12
+    #5 0x5fe17b in xmlParseQName /src/libxml2/parser.c:8573:6
+    #6 0x5e659c in xmlParseStartTag2 /src/libxml2/parser.c:9050:17
+    #7 0x5e659c in xmlParseElementStart /src/libxml2/parser.c:9796:16
+    #8 0x5e53c0 in xmlParseContentInternal /src/libxml2/parser.c:9664:10
+    #9 0x5f27ab in xmlParseElement /src/libxml2/parser.c:9734:5
+    #10 0x5f27ab in xmlParseDocument /src/libxml2/parser.c:10588:2
+    #11 0x54f94d in xsltDocDefaultLoaderFunc /src/libxslt/libxslt/documents.c:94:5
+    #12 0x54994e in xsltParseStylesheetImport /src/libxslt/libxslt/imports.c:146:14
+    #13 0x513438 in xsltParseStylesheetTop /src/libxslt/libxslt/xslt.c:6121:11
+    #14 0x513438 in xsltParseStylesheetProcess /src/libxslt/libxslt/xslt.c:6452:2
+    #15 0x5176c0 in xsltParseStylesheetUser /src/libxslt/libxslt/xslt.c:6660:9
+    #16 0x4decb4 in xsltFuzzXslt /src/libxslt/tests/fuzz/fuzz.c:312:9
+    #17 0x4dd0b1 in LLVMFuzzerTestOneInput /src/libxslt/tests/fuzz/xslt.c:18:23
+    #18 0x4e02db in main (/out/xslt+0x4e02db)
+    #19 0x739d3dbfa082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #20 0x41e7fd in _start (/out/xslt+0x41e7fd)
+
+DEDUP_TOKEN: __asan_memcpy--xmlDictAddString--xmlDictLookup
+0x00000077c560 is located 0 bytes to the right of global variable 'xmlIsPubidChar_tab' defined in 'chvalid.c:27:21' (0x77c460) of size 256
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x0000800e7850: 00 00 00 00 f9 f9 f9 f9 00 00 00 00 05 f9 f9 f9
+  0x0000800e7860: f9 f9 f9 f9 00 00 00 00 06 f9 f9 f9 f9 f9 f9 f9
+  0x0000800e7870: 01 f9 f9 f9 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e7880: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e7890: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0000800e78a0: 00 00 00 00 00 00 00 00 00 00 00 00[f9]f9 f9 f9
+  0x0000800e78b0: f9 f9 f9 f9 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e78c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e78d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e78e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e78f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

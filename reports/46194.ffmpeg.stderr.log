@@ -1,0 +1,60 @@
+=================================================================
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7f9ec69bfe30 at pc 0x000000583ef0 bp 0x7ffc6ead00b0 sp 0x7ffc6ead00a8
+READ of size 2 at 0x7f9ec69bfe30 thread T0
+SCARINESS: 29 (2-byte-read-stack-buffer-overflow)
+    #0 0x583eef in decode_tilehdr /src/ffmpeg/libavcodec/wmalosslessdec.c:362:17
+    #1 0x581718 in decode_frame /src/ffmpeg/libavcodec/wmalosslessdec.c:1049:16
+    #2 0x57fe71 in decode_packet /src/ffmpeg/libavcodec/wmalosslessdec.c:1200:14
+    #3 0x52395a in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:325:15
+    #4 0x523216 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:533:15
+    #5 0x515cd6 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:554:15
+    #6 0x515987 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:622:15
+    #7 0x500ff3 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:482:9
+    #8 0xb5ef15 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
+    #9 0xb5ed85 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
+    #10 0x7f9ec6aa3082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #11 0x4437fd in _start (/out/ffmpeg_AV_CODEC_ID_WMALOSSLESS_fuzzer+0x4437fd)
+
+DEDUP_TOKEN: decode_tilehdr--decode_frame--decode_packet
+Address 0x7f9ec69bfe30 is located in stack of thread T0 at offset 48 in frame
+    #0 0x582e6f in decode_tilehdr /src/ffmpeg/libavcodec/wmalosslessdec.c:340
+
+DEDUP_TOKEN: decode_tilehdr
+  This frame has 2 object(s):
+    [32, 48) 'num_samples' (line 341) <== Memory access at offset 48 overflows this variable
+    [64, 72) 'contains_subframe' (line 342)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/ffmpeg/libavcodec/wmalosslessdec.c:362:17 in decode_tilehdr
+Shadow bytes around the buggy address:
+  0x0ff458d2ff70: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ff458d2ff80: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ff458d2ff90: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ff458d2ffa0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ff458d2ffb0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+=>0x0ff458d2ffc0: f1 f1 f1 f1 00 00[f2]f2 00 f3 f3 f3 00 00 00 00
+  0x0ff458d2ffd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff458d2ffe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff458d2fff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff458d30000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff458d30010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

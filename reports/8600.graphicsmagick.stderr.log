@@ -1,0 +1,76 @@
+======================= INFO =========================
+This binary is built for AFL-fuzz.
+To run the target function on individual input(s) execute this:
+  /out/coder_MAT_fuzzer < INPUT_FILE
+or
+  /out/coder_MAT_fuzzer INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] /out/coder_MAT_fuzzer [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: 1000)
+======================================================
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x623000006e00 at pc 0x00000058ac3d bp 0x7ffdc7522d70 sp 0x7ffdc7522d68
+READ of size 8 at 0x623000006e00 thread T0
+SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
+    #0 0x58ac3c in ReadBlobLSBDoubles /src/graphicsmagick/magick/blob.c:3532:9
+    #1 0x5c836a in MagickFindRawImageMinMax /src/graphicsmagick/magick/constitute.c:1193:13
+    #2 0x7ce9d1 in ReadMATImageV4 /src/graphicsmagick/coders/mat.c:592:13
+    #3 0x7c88bc in ReadMATImage /src/graphicsmagick/coders/mat.c:800:14
+    #4 0x5c937b in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #5 0x582c08 in BlobToImage /src/graphicsmagick/magick/blob.c:800:19
+    #6 0x536d5e in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #7 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
+    #8 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
+    #9 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
+    #10 0x70e6e5a7e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x41ddc8 in _start (/out/coder_MAT_fuzzer+0x41ddc8)
+
+DEDUP_TOKEN: ReadBlobLSBDoubles--MagickFindRawImageMinMax--ReadMATImageV4
+0x623000006e00 is located 0 bytes to the right of 6400-byte region [0x623000005500,0x623000006e00)
+allocated by thread T0 here:
+    #0 0x4ebc57 in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:98
+    #1 0x7ce8c8 in ReadMATImageV4 /src/graphicsmagick/coders/mat.c:587:16
+    #2 0x7c88bc in ReadMATImage /src/graphicsmagick/coders/mat.c:800:14
+    #3 0x5c937b in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #4 0x582c08 in BlobToImage /src/graphicsmagick/magick/blob.c:800:19
+    #5 0x536d5e in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #6 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
+    #7 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
+    #8 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
+    #9 0x70e6e5a7e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: malloc--ReadMATImageV4--ReadMATImage
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/blob.c:3532:9 in ReadBlobLSBDoubles
+Shadow bytes around the buggy address:
+  0x0c467fff8d70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c467fff8d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c467fff8d90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c467fff8da0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c467fff8db0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c467fff8dc0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c467fff8dd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c467fff8de0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c467fff8df0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c467fff8e00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c467fff8e10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

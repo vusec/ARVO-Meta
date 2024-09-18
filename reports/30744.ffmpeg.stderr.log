@@ -1,0 +1,82 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 199755486
+INFO: Loaded 1 modules   (59416 inline 8-bit counters): 59416 [0x115c980, 0x116b198),
+INFO: Loaded 1 PC tables (59416 PCs): 59416 [0xd470c8,0xe2f248),
+/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60700000014f at pc 0x0000009fde54 bp 0x7ffd7dc4b7c0 sp 0x7ffd7dc4b7b8
+READ of size 4 at 0x60700000014f thread T0
+SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
+    #0 0x9fde53 in get_bits /src/ffmpeg/libavcodec/get_bits.h:403:5
+    #1 0x9fc95d in ff_parse_itu_t_t35_to_dynamic_hdr10_plus /src/ffmpeg/libavcodec/dynamic_hdr10_plus.c:114:30
+    #2 0x8c1842 in decode_registered_user_data_dynamic_hdr_plus /src/ffmpeg/libavcodec/hevc_sei.c:219:11
+    #3 0x8c0377 in decode_nal_sei_user_data_registered_itu_t_t35 /src/ffmpeg/libavcodec/hevc_sei.c:281:20
+    #4 0x8bf295 in decode_nal_sei_prefix /src/ffmpeg/libavcodec/hevc_sei.c:418:16
+    #5 0x8bed48 in decode_nal_sei_message /src/ffmpeg/libavcodec/hevc_sei.c:467:16
+    #6 0x8beb84 in ff_hevc_decode_nal_sei /src/ffmpeg/libavcodec/hevc_sei.c:484:15
+    #7 0x595e7d in decode_nal_unit /src/ffmpeg/libavcodec/hevcdec.c:3004:15
+    #8 0x59495d in decode_nal_units /src/ffmpeg/libavcodec/hevcdec.c:3172:15
+    #9 0x591825 in hevc_decode_frame /src/ffmpeg/libavcodec/hevcdec.c:3315:14
+    #10 0x58d5c2 in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:308:15
+    #11 0x58cee4 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:507:15
+    #12 0x5821bb in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:527:15
+    #13 0x581fc8 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:589:15
+    #14 0x579112 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:351:25
+    #15 0x47ab01 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #16 0x4647c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #17 0x46ab16 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #18 0x494b02 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #19 0x72e4b3cbd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #20 0x43f188 in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x43f188)
+
+DEDUP_TOKEN: get_bits--ff_parse_itu_t_t35_to_dynamic_hdr10_plus--decode_registered_user_data_dynamic_hdr_plus
+0x60700000014f is located 0 bytes to the right of 79-byte region [0x607000000100,0x60700000014f)
+allocated by thread T0 here:
+    #0 0x5438e9 in realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:164:3
+    #1 0xb97fad in av_realloc /src/ffmpeg/libavutil/mem.c:142:12
+    #2 0xb71e93 in av_buffer_realloc /src/ffmpeg/libavutil/buffer.c:178:25
+    #3 0x57b4f0 in packet_alloc /src/ffmpeg/libavcodec/avpacket.c:79:11
+    #4 0x57b336 in av_new_packet /src/ffmpeg/libavcodec/avpacket.c:91:15
+    #5 0x578bd1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:307:15
+    #6 0x47ab01 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #7 0x4647c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #8 0x46ab16 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #9 0x494b02 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #10 0x72e4b3cbd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: realloc--av_realloc--av_buffer_realloc
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/get_bits.h:403:5 in get_bits
+Shadow bytes around the buggy address:
+  0x0c0e7fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c0e7fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c0e7fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c0e7fff8000: fa fa fa fa fd fd fd fd fd fd fd fd fd fa fa fa
+  0x0c0e7fff8010: fa fa 00 00 00 00 00 00 00 00 06 fa fa fa fa fa
+=>0x0c0e7fff8020: 00 00 00 00 00 00 00 00 00[07]fa fa fa fa fa fa
+  0x0c0e7fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

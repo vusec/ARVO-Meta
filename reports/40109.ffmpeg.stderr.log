@@ -1,0 +1,67 @@
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001a800 at pc 0x000000fe07c3 bp 0x7ffc54779f90 sp 0x7ffc54779f88
+READ of size 4 at 0x63300001a800 thread T0
+SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
+    #0 0xfe07c2 in get_bits /src/ffmpeg/libavcodec/get_bits.h:404:5
+    #1 0xfdd725 in frame_header_is_valid /src/ffmpeg/libavcodec/flac_parser.c:118:21
+    #2 0xfe4b16 in find_headers_search_validate /src/ffmpeg/libavcodec/flac_parser.c:202:9
+    #3 0xfe3f8e in find_headers_search /src/ffmpeg/libavcodec/flac_parser.c:248:31
+    #4 0xfdebb6 in find_new_headers /src/ffmpeg/libavcodec/flac_parser.c:268:18
+    #5 0xfd9d49 in flac_parse /src/ffmpeg/libavcodec/flac_parser.c:666:24
+    #6 0xe8aa2c in av_parser_parse2 /src/ffmpeg/libavcodec/parser.c:165:13
+    #7 0x67f655 in parse_packet /src/ffmpeg/libavformat/demux.c:1127:15
+    #8 0x64f5e9 in read_frame_internal /src/ffmpeg/libavformat/demux.c:1322:24
+    #9 0x64c342 in av_read_frame /src/ffmpeg/libavformat/demux.c:1426:17
+    #10 0x4e40d1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:197:15
+    #11 0x114fd45 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
+    #12 0x114fbb5 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
+    #13 0x73c7b1014082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #14 0x4299cd in _start (/out/ffmpeg_dem_FLAC_fuzzer+0x4299cd)
+
+DEDUP_TOKEN: get_bits--frame_header_is_valid--find_headers_search_validate
+0x63300001a800 is located 0 bytes to the right of 106496-byte region [0x633000000800,0x63300001a800)
+allocated by thread T0 here:
+    #0 0x4aac27 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
+    #1 0x10c01b8 in av_malloc /src/ffmpeg/libavutil/mem.c:104:9
+    #2 0x10c16d5 in av_malloc_array /src/ffmpeg/libavutil/mem.c:211:12
+    #3 0x107e760 in av_fifo_alloc_array /src/ffmpeg/libavutil/fifo.c:51:20
+    #4 0x42876f in flac_parse_init /src/ffmpeg/libavcodec/flac_parser.c:747:21
+    #5 0xe885d4 in av_parser_init /src/ffmpeg/libavcodec/parser.c:67:15
+    #6 0x65c79f in avformat_find_stream_info /src/ffmpeg/libavformat/demux.c:2453:27
+    #7 0x4e4083 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:192:11
+    #8 0x114fd45 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
+
+DEDUP_TOKEN: posix_memalign--av_malloc--av_malloc_array
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/get_bits.h:404:5 in get_bits
+Shadow bytes around the buggy address:
+  0x0c667fffb4b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb4c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb4d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb4e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c667fffb4f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c667fffb500:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb510: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb520: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb530: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb540: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c667fffb550: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

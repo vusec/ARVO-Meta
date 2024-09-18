@@ -1,0 +1,87 @@
+INFO: Seed: 203119334
+INFO: Loaded 1 modules   (47725 inline 8-bit counters): 47725 [0xf647e0, 0xf7024d),
+INFO: Loaded 1 PC tables (47725 PCs): 47725 [0xb95ce8,0xc503b8),
+/out/ffmpeg_AV_CODEC_ID_DXTORY_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000002880 at pc 0x00000056d2c9 bp 0x7ffe060a4b30 sp 0x7ffe060a4b28
+WRITE of size 2 at 0x621000002880 thread T0
+SCARINESS: 43 (2-byte-write-heap-buffer-overflow-far-from-bounds)
+    #0 0x56d2c8 in dxtory_decode_v1_420 /src/ffmpeg/libavcodec/dxtory.c:175:13
+    #1 0x56c574 in decode_frame /src/ffmpeg/libavcodec/dxtory.c:653:15
+    #2 0x568e3a in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:342:15
+    #3 0x568a81 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:538:15
+    #4 0x55e0e2 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:556:15
+    #5 0x55df02 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:614:15
+    #6 0x55f375 in compat_decode /src/ffmpeg/libavcodec/decode.c:749:15
+    #7 0x55f190 in avcodec_decode_video2 /src/ffmpeg/libavcodec/decode.c:810:12
+    #8 0x555a8a in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:336:23
+    #9 0x4590d1 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:559:15
+    #10 0x444872 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:301:6
+    #11 0x44a80d in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:801:9
+    #12 0x4720f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x7fc2f110b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x41f018 in _start (/out/ffmpeg_AV_CODEC_ID_DXTORY_fuzzer+0x41f018)
+
+DEDUP_TOKEN: dxtory_decode_v1_420--decode_frame--decode_simple_internal
+0x621000002880 is located 128 bytes to the left of 4175-byte region [0x621000002900,0x62100000394f)
+allocated by thread T0 here:
+    #0 0x521f97 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:226:3
+    #1 0x9f3762 in av_malloc /src/ffmpeg/libavutil/mem.c:86:9
+    #2 0x9cf2e9 in av_buffer_alloc /src/ffmpeg/libavutil/buffer.c:72:12
+    #3 0x9cf3d9 in av_buffer_allocz /src/ffmpeg/libavutil/buffer.c:85:24
+    #4 0x9d0cb9 in pool_alloc_buffer /src/ffmpeg/libavutil/buffer.c:317:26
+    #5 0x9d0947 in av_buffer_pool_get /src/ffmpeg/libavutil/buffer.c:353:15
+    #6 0x565593 in video_get_buffer /src/ffmpeg/libavcodec/decode.c:1625:23
+    #7 0x5640bc in avcodec_default_get_buffer2 /src/ffmpeg/libavcodec/decode.c:1664:16
+    #8 0x5679c5 in ff_get_buffer /src/ffmpeg/libavcodec/decode.c:1897:11
+    #9 0x56cdb9 in dxtory_decode_v1_420 /src/ffmpeg/libavcodec/dxtory.c:163:16
+    #10 0x56c574 in decode_frame /src/ffmpeg/libavcodec/dxtory.c:653:15
+    #11 0x568e3a in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:342:15
+    #12 0x568a81 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:538:15
+    #13 0x55e0e2 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:556:15
+    #14 0x55df02 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:614:15
+    #15 0x55f375 in compat_decode /src/ffmpeg/libavcodec/decode.c:749:15
+    #16 0x55f190 in avcodec_decode_video2 /src/ffmpeg/libavcodec/decode.c:810:12
+    #17 0x555a8a in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:336:23
+    #18 0x4590d1 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:559:15
+    #19 0x444872 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:301:6
+    #20 0x44a80d in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:801:9
+    #21 0x4720f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #22 0x7fc2f110b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/dxtory.c:175:13 in dxtory_decode_v1_420
+Shadow bytes around the buggy address:
+  0x0c427fff84c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff8500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c427fff8510:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff8520: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8530: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8540: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8550: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8560: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

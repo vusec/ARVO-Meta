@@ -1,0 +1,80 @@
+Accepting input from '/tmp/poc'
+Usage for fuzzing: honggfuzz -P [flags] -- /out/coder_TXT_fuzzer
+=================================================================
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x766818ddc976 at pc 0x000000572e9b bp 0x7ffdfce1b820 sp 0x7ffdfce1b818
+WRITE of size 1 at 0x766818ddc976 thread T0
+SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
+    #0 0x572e9a in ReadBlobString /src/graphicsmagick/magick/blob.c:4623:18
+    #1 0x93fcb0 in ReadTXTImage /src/graphicsmagick/coders/txt.c:337:7
+    #2 0x5ba056 in ReadImage /src/graphicsmagick/magick/constitute.c:1630:13
+    #3 0x567179 in BlobToImage /src/graphicsmagick/magick/blob.c:784:13
+    #4 0x4f2bd5 in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1592:5
+    #5 0x4de4d6 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #6 0x4df38b in main (/out/coder_TXT_fuzzer+0x4df38b)
+    #7 0x7668193fb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #8 0x41f54d in _start (/out/coder_TXT_fuzzer+0x41f54d)
+
+DEDUP_TOKEN: ReadBlobString--ReadTXTImage--ReadImage
+Address 0x766818ddc976 is located in stack of thread T0 at offset 4470 in frame
+    #0 0x93f98f in ReadTXTImage /src/graphicsmagick/coders/txt.c:306
+
+DEDUP_TOKEN: ReadTXTImage
+  This frame has 23 object(s):
+    [32, 40) 'column.i' (line 182)
+    [64, 72) 'row.i' (line 182)
+    [96, 100) 'red.i' (line 186)
+    [112, 116) 'green.i' (line 186)
+    [128, 132) 'blue.i' (line 186)
+    [144, 148) 'opacity.i' (line 186)
+    [160, 164) 'hex_red.i' (line 186)
+    [176, 180) 'hex_green.i' (line 186)
+    [192, 196) 'hex_blue.i' (line 186)
+    [208, 212) 'hex_opacity.i' (line 186)
+    [224, 2277) 'buffer.i' (line 199)
+    [2416, 4469) 'text' (line 307) <== Memory access at offset 4470 overflows this variable
+    [4608, 4612) 'x_min' (line 354)
+    [4624, 4628) 'x_max' (line 354)
+    [4640, 4644) 'y_curr' (line 354)
+    [4656, 4660) 'ch' (line 359)
+    [4672, 4712) 'import_options' (line 389)
+    [4752, 6805) 'filename956' (line 883)
+    [6944, 8997) 'geometry' (line 883)
+    [9136, 9168) 'page' (line 905)
+    [9200, 9304) 'metrics' (line 908)
+    [9344, 11397) 'density' (line 918)
+    [11536, 11544) 'tmp' (line 1098)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/graphicsmagick/magick/blob.c:4623:18 in ReadBlobString
+Shadow bytes around the buggy address:
+  0x0ecd831b38d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ecd831b38e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ecd831b38f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ecd831b3900: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ecd831b3910: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ecd831b3920: 00 00 00 00 00 00 00 00 00 00 00 00 00 00[05]f2
+  0x0ecd831b3930: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x0ecd831b3940: f8 f2 f8 f2 f8 f2 f8 f2 f8 f8 f8 f8 f8 f2 f2 f2
+  0x0ecd831b3950: f2 f2 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0ecd831b3960: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0ecd831b3970: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

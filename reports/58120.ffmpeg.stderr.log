@@ -1,0 +1,67 @@
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000400 at pc 0x0000008e1168 bp 0x7ffc0988a1b0 sp 0x7ffc0988a1a8
+WRITE of size 4 at 0x610000000400 thread T0
+SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
+    #0 0x8e1167 in imf_base_resource_init /src/ffmpeg/libavformat/imf_cpl.c:154:20
+    #1 0x8e1167 in imf_trackfile_resource_init /src/ffmpeg/libavformat/imf_cpl.c:176:5
+    #2 0x8e1167 in push_main_image_2d_sequence /src/ffmpeg/libavformat/imf_cpl.c:689:9
+    #3 0x8e1167 in fill_virtual_tracks /src/ffmpeg/libavformat/imf_cpl.c:734:23
+    #4 0x8dc439 in ff_imf_parse_cpl_from_xml_dom /src/ffmpeg/libavformat/imf_cpl.c:784:16
+    #5 0x8e1ed0 in ff_imf_parse_cpl /src/ffmpeg/libavformat/imf_cpl.c:907:16
+    #6 0x679e17 in imf_read_header /src/ffmpeg/libavformat/imfdec.c:652:16
+    #7 0x52556c in avformat_open_input /src/ffmpeg/libavformat/demux.c:311:20
+    #8 0x50ebb1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:201:11
+    #9 0x1723f9a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+    #10 0x1723d6c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
+    #11 0x7350af82c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x44ff0d in _start (/out/ffmpeg_DEMUXER_fuzzer+0x44ff0d)
+
+DEDUP_TOKEN: imf_base_resource_init--imf_trackfile_resource_init--push_main_image_2d_sequence
+0x610000000400 is located 7 bytes to the right of 185-byte region [0x610000000340,0x6100000003f9)
+allocated by thread T0 here:
+    #0 0x4d174c in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:85:3
+    #1 0x127f248 in av_realloc /src/ffmpeg/libavutil/mem.c:162:11
+    #2 0x127f248 in av_fast_realloc /src/ffmpeg/libavutil/mem.c:513:11
+    #3 0x8e05f5 in push_main_image_2d_sequence /src/ffmpeg/libavformat/imf_cpl.c:677:11
+    #4 0x8e05f5 in fill_virtual_tracks /src/ffmpeg/libavformat/imf_cpl.c:734:23
+    #5 0x8dc439 in ff_imf_parse_cpl_from_xml_dom /src/ffmpeg/libavformat/imf_cpl.c:784:16
+    #6 0x8e1ed0 in ff_imf_parse_cpl /src/ffmpeg/libavformat/imf_cpl.c:907:16
+    #7 0x679e17 in imf_read_header /src/ffmpeg/libavformat/imfdec.c:652:16
+    #8 0x52556c in avformat_open_input /src/ffmpeg/libavformat/demux.c:311:20
+    #9 0x50ebb1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:201:11
+    #10 0x1723f9a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+
+DEDUP_TOKEN: __interceptor_realloc--av_realloc--av_fast_realloc
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavformat/imf_cpl.c:154:20 in imf_base_resource_init
+Shadow bytes around the buggy address:
+  0x0c207fff8030: 00 00 00 00 00 fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff8040: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c207fff8050: 00 00 00 00 00 fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff8060: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c207fff8070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01
+=>0x0c207fff8080:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff80c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c207fff80d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

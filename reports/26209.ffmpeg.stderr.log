@@ -1,0 +1,61 @@
+INFO: Seed: 198274177
+INFO: Loaded 1 modules   (47648 inline 8-bit counters): 47648 [0xf66e60, 0xf72880),
+INFO: Loaded 1 PC tables (47648 PCs): 47648 [0xb97b48,0xc51d48),
+/out/ffmpeg_AV_CODEC_ID_SMVJPEG_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000aedf8c at pc 0x00000056e8d4 bp 0x7fffc042b4d0 sp 0x7fffc042b4c8
+READ of size 1 at 0x000000aedf8c thread T0
+SCARINESS: 12 (1-byte-read-global-buffer-overflow)
+    #0 0x56e8d3 in build_vlc /src/ffmpeg/libavcodec/mjpegdec.c:82:23
+    #1 0x56d4b6 in init_default_huffman_tables /src/ffmpeg/libavcodec/mjpegdec.c:118:15
+    #2 0x56cd31 in ff_mjpeg_decode_init /src/ffmpeg/libavcodec/mjpegdec.c:181:16
+    #3 0x5a4b40 in avcodec_open2 /src/ffmpeg/libavcodec/utils.c:932:15
+    #4 0x5a1a20 in ff_codec_open2_recursive /src/ffmpeg/libavcodec/utils.c:544:11
+    #5 0x59a498 in smvjpeg_decode_init /src/ffmpeg/libavcodec/smvjpegdec.c:132:14
+    #6 0x5a4b40 in avcodec_open2 /src/ffmpeg/libavcodec/utils.c:932:15
+    #7 0x5552c7 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:268:15
+    #8 0x458b91 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:595:15
+    #9 0x443c62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #10 0x449d1e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:852:9
+    #11 0x471d02 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #12 0x7f3ba473f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x41ef38 in _start (/out/ffmpeg_AV_CODEC_ID_SMVJPEG_fuzzer+0x41ef38)
+
+DEDUP_TOKEN: build_vlc--init_default_huffman_tables--ff_mjpeg_decode_init
+0x000000aedf8c is located 52 bytes to the left of global variable 'avpriv_mjpeg_bits_dc_chrominance' defined in 'libavcodec/jpegtables.c:70:15' (0xaedfc0) of size 17
+0x000000aedf8c is located 0 bytes to the right of global variable 'avpriv_mjpeg_val_dc' defined in 'libavcodec/jpegtables.c:67:15' (0xaedf80) of size 12
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/ffmpeg/libavcodec/mjpegdec.c:82:23 in build_vlc
+Shadow bytes around the buggy address:
+  0x000080155ba0: 00 00 00 06 f9 f9 f9 f9 07 f9 f9 f9 f9 f9 f9 f9
+  0x000080155bb0: 00 00 07 f9 f9 f9 f9 f9 00 00 00 00 00 00 00 00
+  0x000080155bc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x000080155bd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x000080155be0: 00 00 00 00 00 00 00 00 00 00 01 f9 f9 f9 f9 f9
+=>0x000080155bf0: 00[04]f9 f9 f9 f9 f9 f9 00 00 01 f9 f9 f9 f9 f9
+  0x000080155c00: 00 00 01 f9 f9 f9 f9 f9 00 00 00 00 00 00 00 00
+  0x000080155c10: 00 00 00 00 00 00 00 00 00 00 00 00 02 f9 f9 f9
+  0x000080155c20: f9 f9 f9 f9 00 00 01 f9 f9 f9 f9 f9 00 00 00 00
+  0x000080155c30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x000080155c40: 02 f9 f9 f9 f9 f9 f9 f9 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

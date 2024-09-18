@@ -1,0 +1,85 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 316373888
+INFO: Loaded 1 modules   (105487 inline 8-bit counters): 105487 [0x11c0a80, 0x11da68f),
+INFO: Loaded 1 PC tables (105487 PCs): 105487 [0xeaae30,0x1046f20),
+/out/ffmpeg_dem_DASH_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+:1: parser error : Double hyphen within comment: <!--
+<!-- --󾿾
+     ^
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000274 at pc 0x000000a62ef7 bp 0x7ffc90b92ed0 sp 0x7ffc90b92ec8
+WRITE of size 1 at 0x602000000274 thread T0
+SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
+    #0 0xa62ef6 in xmlCopyCharMultiByte /src/libxml2/parserInternals.c:1095:12
+    #1 0xa138d8 in xmlParseCommentComplex /src/libxml2/parser.c:4964:2
+    #2 0xa12483 in xmlParseComment /src/libxml2/parser.c:5189:5
+    #3 0xa3ab09 in xmlParseMisc /src/libxml2/parser.c:11001:6
+    #4 0xa3b242 in xmlParseDocument /src/libxml2/parser.c:11082:5
+    #5 0xa4fca7 in xmlDoRead /src/libxml2/parser.c:14773:5
+    #6 0xa4fee2 in xmlReadMemory /src/libxml2/parser.c:14859:13
+    #7 0x5f8ba3 in parse_manifest /src/ffmpeg/libavformat/dashdec.c:1246:15
+    #8 0x5f506f in dash_read_header /src/ffmpeg/libavformat/dashdec.c:2028:16
+    #9 0x60818b in avformat_open_input /src/ffmpeg/libavformat/demux.c:316:20
+    #10 0x577f91 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:201:11
+    #11 0x4490f3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #12 0x434852 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #13 0x43a0fc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #14 0x463632 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #15 0x798957783082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #16 0x42aa1d in _start (/out/ffmpeg_dem_DASH_fuzzer+0x42aa1d)
+
+DEDUP_TOKEN: xmlCopyCharMultiByte--xmlParseCommentComplex--xmlParseComment
+0x602000000274 is located 0 bytes to the right of 4-byte region [0x602000000270,0x602000000274)
+allocated by thread T0 here:
+    #0 0x53a68c in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:85:3
+    #1 0xa137d6 in xmlParseCommentComplex /src/libxml2/parser.c:4955:28
+    #2 0xa12483 in xmlParseComment /src/libxml2/parser.c:5189:5
+    #3 0xa3ab09 in xmlParseMisc /src/libxml2/parser.c:11001:6
+    #4 0xa3b242 in xmlParseDocument /src/libxml2/parser.c:11082:5
+    #5 0xa4fca7 in xmlDoRead /src/libxml2/parser.c:14773:5
+    #6 0xa4fee2 in xmlReadMemory /src/libxml2/parser.c:14859:13
+    #7 0x5f8ba3 in parse_manifest /src/ffmpeg/libavformat/dashdec.c:1246:15
+    #8 0x5f506f in dash_read_header /src/ffmpeg/libavformat/dashdec.c:2028:16
+    #9 0x60818b in avformat_open_input /src/ffmpeg/libavformat/demux.c:316:20
+    #10 0x577f91 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:201:11
+    #11 0x4490f3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #12 0x434852 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #13 0x43a0fc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #14 0x463632 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #15 0x798957783082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: __interceptor_realloc--xmlParseCommentComplex--xmlParseComment
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libxml2/parserInternals.c:1095:12 in xmlCopyCharMultiByte
+Shadow bytes around the buggy address:
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa 00 00 fa fa 00 fa fa fa 00 fa fa fa 00 fa
+  0x0c047fff8010: fa fa 00 05 fa fa 00 05 fa fa 03 fa fa fa 01 fa
+  0x0c047fff8020: fa fa 01 fa fa fa 00 00 fa fa 01 fa fa fa 04 fa
+  0x0c047fff8030: fa fa 04 fa fa fa 01 fa fa fa fd fa fa fa 01 fa
+=>0x0c047fff8040: fa fa 02 fa fa fa 01 fa fa fa 02 fa fa fa[04]fa
+  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

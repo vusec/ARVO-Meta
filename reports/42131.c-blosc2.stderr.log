@@ -1,0 +1,66 @@
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x617000000310 at pc 0x0000004983dc bp 0x7ffe98368290 sp 0x7ffe98367a58
+WRITE of size 48423648 at 0x617000000310 thread T0
+SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
+    #0 0x4983db in __asan_memset /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:26:3
+    #1 0x11ef17b in ndlz4_decompress /src/c-blosc2/plugins/codecs/ndlz/ndlz4x4.c:540:3
+    #2 0x4fb7e7 in blosc_d /src/c-blosc2/blosc/blosc2.c:1656:22
+    #3 0x4de45e in serial_blosc /src/c-blosc2/blosc/blosc2.c:1753:16
+    #4 0x4de45e in do_job /src/c-blosc2/blosc/blosc2.c:1918:15
+    #5 0x4ecbf7 in blosc_run_decompression_with_context /src/c-blosc2/blosc/blosc2.c:2558:13
+    #6 0x4ee52e in blosc2_decompress /src/c-blosc2/blosc/blosc2.c:2626:12
+    #7 0x4cc853 in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_chunk.c:34:5
+    #8 0x4ccd8e in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:185:7
+    #9 0x4ccd8e in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:249:12
+    #10 0x71eb95dba83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x41cf48 in _start (/out/decompress_chunk_fuzzer+0x41cf48)
+
+DEDUP_TOKEN: __asan_memset--ndlz4_decompress--blosc_d
+0x617000000310 is located 0 bytes to the right of 656-byte region [0x617000000080,0x617000000310)
+allocated by thread T0 here:
+    #0 0x499787 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:226:3
+    #1 0x4dbe57 in my_malloc /src/c-blosc2/blosc/blosc2.c:169:9
+    #2 0x4dbe57 in init_thread_context /src/c-blosc2/blosc/blosc2.c:1810:25
+    #3 0x4dbe57 in create_thread_context /src/c-blosc2/blosc/blosc2.c:1845:12
+    #4 0x4dbe57 in do_job /src/c-blosc2/blosc/blosc2.c:1911:33
+    #5 0x4ecbf7 in blosc_run_decompression_with_context /src/c-blosc2/blosc/blosc2.c:2558:13
+    #6 0x4ee52e in blosc2_decompress /src/c-blosc2/blosc/blosc2.c:2626:12
+    #7 0x4cc853 in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_chunk.c:34:5
+    #8 0x4ccd8e in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:185:7
+    #9 0x4ccd8e in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:249:12
+
+DEDUP_TOKEN: posix_memalign--my_malloc--init_thread_context
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:26:3 in __asan_memset
+Shadow bytes around the buggy address:
+  0x0c2e7fff8010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c2e7fff8060: 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

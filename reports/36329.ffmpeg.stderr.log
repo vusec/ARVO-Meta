@@ -1,0 +1,72 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 209068673
+INFO: Loaded 1 modules   (59355 inline 8-bit counters): 59355 [0x1152a40, 0x116121b),
+INFO: Loaded 1 PC tables (59355 PCs): 59355 [0xd40908,0xe286b8),
+/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60900000038f at pc 0x000000835891 bp 0x7ffc83c74da0 sp 0x7ffc83c74d98
+READ of size 8 at 0x60900000038f thread T0
+SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
+    #0 0x835890 in ff_h2645_extract_rbsp /src/ffmpeg/libavcodec/h2645_parse.c:57:17
+    #1 0x835ffe in ff_h2645_packet_split /src/ffmpeg/libavcodec/h2645_parse.c:479:20
+    #2 0x8b2f0e in hevc_decode_nal_units /src/ffmpeg/libavcodec/hevc_parse.c:32:11
+    #3 0x8b264d in ff_hevc_decode_extradata /src/ffmpeg/libavcodec/hevc_parse.c:138:15
+    #4 0x8b35c9 in hevc_parse /src/ffmpeg/libavcodec/hevc_parser.c:312:9
+    #5 0x6a4448 in av_parser_parse2 /src/ffmpeg/libavcodec/parser.c:161:13
+    #6 0x577cd3 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:352:27
+    #7 0x4791d3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #8 0x464912 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #9 0x46a5ee in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #10 0x4940d2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #11 0x7c5d36cda83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x43f9e8 in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x43f9e8)
+
+DEDUP_TOKEN: ff_h2645_extract_rbsp--ff_h2645_packet_split--hevc_decode_nal_units
+0x60900000038f is located 0 bytes to the right of 15-byte region [0x609000000380,0x60900000038f)
+allocated by thread T0 here:
+    #0 0x542b77 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:226:3
+    #1 0xb9a845 in av_malloc /src/ffmpeg/libavutil/mem.c:87:9
+    #2 0xb9b6d4 in av_memdup /src/ffmpeg/libavutil/mem.c:296:15
+    #3 0x577771 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:318:36
+    #4 0x4791d3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #5 0x464912 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #6 0x46a5ee in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #7 0x4940d2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #8 0x7c5d36cda83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: posix_memalign--av_malloc--av_memdup
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/h2645_parse.c:57:17 in ff_h2645_extract_rbsp
+Shadow bytes around the buggy address:
+  0x0c127fff8020: fa fa fa fa fa fa fa fa 00 00 fa fa fa fa fa fa
+  0x0c127fff8030: fa fa fa fa fa fa fa fa 00 fa fa fa fa fa fa fa
+  0x0c127fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c127fff8050: 00 fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c127fff8060: fd fd fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c127fff8070: 00[07]fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c127fff8080: 00 00 00 00 00 00 fa fa fa fa fa fa fa fa fa fa
+  0x0c127fff8090: fa fa fa fa fa fa fa fa 00 00 00 fa fa fa fa fa
+  0x0c127fff80a0: fa fa fa fa fa fa fa fa 00 04 fa fa fa fa fa fa
+  0x0c127fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c127fff80c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

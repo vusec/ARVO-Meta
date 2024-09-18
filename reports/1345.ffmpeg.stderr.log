@@ -1,0 +1,74 @@
+INFO: Seed: 146067776
+INFO: Loaded 1 modules (68871 guards): [0xe39ef0, 0xe7d30c),
+/out/ffmpeg_AV_CODEC_ID_DFA_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60e0000001a0 at pc 0x000000560cd9 bp 0x7ffe9cca1a10 sp 0x7ffe9cca1a08
+WRITE of size 1 at 0x60e0000001a0 thread T0
+SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
+    #0 0x560cd8 in decode_dds1 /src/ffmpeg/libavcodec/dfa.c:184:45
+    #1 0x554663 in dfa_decode_frame /src/ffmpeg/libavcodec/dfa.c:368:17
+    #2 0x54756f in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:414:15
+    #3 0x546b65 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:617:15
+    #4 0x52ee9f in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:635:15
+    #5 0x52c6bf in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:675:15
+    #6 0x53070f in compat_decode /src/ffmpeg/libavcodec/decode.c:730:15
+    #7 0x5194b2 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:213:23
+    #8 0x8d7f59 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:440:13
+    #9 0x8d872a in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:397:3
+    #10 0x8afa86 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
+    #11 0x8baf26 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
+    #12 0x8af0a8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
+    #13 0x73cd9dca483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x41d658 in _start (/out/ffmpeg_AV_CODEC_ID_DFA_fuzzer+0x41d658)
+
+DEDUP_TOKEN: decode_dds1--dfa_decode_frame--decode_simple_internal
+0x60e0000001a0 is located 0 bytes to the right of 128-byte region [0x60e000000120,0x60e0000001a0)
+allocated by thread T0 here:
+    #0 0x4dcdc0 in __interceptor_posix_memalign /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:142
+    #1 0x82c9a4 in av_malloc /src/ffmpeg/libavutil/mem.c:87:9
+    #2 0x82d36b in av_mallocz /src/ffmpeg/libavutil/mem.c:224:17
+    #3 0x5537f9 in dfa_decode_init /src/ffmpeg/libavcodec/dfa.c:49:20
+    #4 0x58cf1b in avcodec_open2 /src/ffmpeg/libavcodec/utils.c:1020:15
+    #5 0x519115 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:182:15
+    #6 0x8d7f59 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:440:13
+    #7 0x8d872a in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:397:3
+    #8 0x8afa86 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
+    #9 0x8baf26 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
+    #10 0x8af0a8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
+    #11 0x73cd9dca483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_mallocz
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/dfa.c:184:45 in decode_dds1
+Shadow bytes around the buggy address:
+  0x0c1c7fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c1c7fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c1c7fff8000: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c1c7fff8010: 00 00 00 00 00 fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fff8020: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c1c7fff8030: 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

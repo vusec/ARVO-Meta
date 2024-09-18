@@ -1,0 +1,110 @@
+======================= INFO =========================
+This binary is built for AFL-fuzz.
+To run the target function on individual input(s) execute this:
+  /out/coder_MVG_fuzzer < INPUT_FILE
+or
+  /out/coder_MVG_fuzzer INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] /out/coder_MVG_fuzzer [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: 1000)
+======================================================
+=================================================================
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x70acaf80b1d5 at pc 0x0000004eb0fb bp 0x7ffecebfa150 sp 0x7ffecebf9900
+READ of size 2049 at 0x70acaf80b1d5 thread T0
+SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
+    #0 0x4eb0fa in __asan_memmove /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:31
+    #1 0x714d8c in MagickGetToken /src/graphicsmagick/magick/utility.c:3830:16
+    #2 0x6b8e74 in DrawImage /src/graphicsmagick/magick/render.c:2467:9
+    #3 0x7fcfc2 in ReadMVGImage /src/graphicsmagick/coders/mvg.c:224:10
+    #4 0x5ca17d in ReadImage /src/graphicsmagick/magick/constitute.c:1607:13
+    #5 0x583445 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #6 0x5371de in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #7 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
+    #8 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
+    #9 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
+    #10 0x70acae74183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
+
+DEDUP_TOKEN: __asan_memmove--MagickGetToken--DrawImage
+Address 0x70acaf80b1d5 is located in stack of thread T0 at offset 6613 in frame
+    #0 0x6b7eff in DrawImage /src/graphicsmagick/magick/render.c:2253
+
+DEDUP_TOKEN: DrawImage
+  This frame has 41 object(s):
+    [32, 80) 'affine' (line 2256)
+    [112, 160) 'current' (line 2256)
+    [192, 4298) 'key' (line 2260)
+    [4560, 6613) 'keyword' (line 2260)
+    [6752, 8805) 'geometry' (line 2260) <== Memory access at offset 6613 partially underflows this variable
+    [8944, 10997) 'name' (line 2260)
+    [11136, 13189) 'pattern' (line 2260)
+    [13328, 13336) 'primitive' (line 2260)
+    [13360, 13368) 'q' (line 2260)
+    [13392, 13400) 'token' (line 2260)
+    [13424, 13432) 'angle' (line 2270)
+    [13456, 13472) 'point' (line 2283)
+    [13488, 13496) 'start_color' (line 2286)
+    [13520, 13528) 'primitive_info' (line 2289)
+    [13552, 13560) 'length' (line 2305)
+    [13584, 13592) 'token_max_length' (line 2305)
+    [13616, 13624) 'primitive_extent' (line 2305)
+    [13648, 13652) 'status' (line 2310)
+    [13664, 13672) 'number_points' (line 2313)
+    [13696, 13728) 'PIMgr' (line 2343)
+    [13760, 13768) 'opacity508' (line 2744)
+    [13792, 13800) 'opacity868' (line 2945)
+    [13824, 13832) 'ExtractedLength' (line 3085)
+    [13856, 17962) 'key1142' (line 3093)
+    [18224, 20277) 'name1143' (line 3093)
+    [20416, 22469) 'type' (line 3093)
+    [22608, 22640) 'segment' (line 3098)
+    [22672, 24725) 'resource_str' (line 3183)
+    [24864, 26917) 'gradient_size_str' (line 3220)
+    [27056, 27064) 'ExtractedLength1573' (line 3249)
+    [27088, 27096) 'ordinate' (line 3257)
+    [27120, 27128) 'stop_color' (line 3427)
+    [27152, 27160) 'p1958' (line 3485)
+    [27184, 27192) 'opacity2146' (line 3592)
+    [27216, 27220) 'SVGCompliant' (line 3634)
+    [27232, 27240) 'value' (line 3664)
+    [27264, 27272) 'value2289' (line 3683)
+    [27296, 27304) 'value2355' (line 3734)
+    [27328, 27336) 'value2365' (line 3742)
+    [27360, 27368) 't' (line 3982)
+    [27392, 27496) 'metrics' (line 4300)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:31 in __asan_memmove
+Shadow bytes around the buggy address:
+  0x0e1615ef95e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e1615ef95f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e1615ef9600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e1615ef9610: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e1615ef9620: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e1615ef9630: 00 00 00 00 00 00 00 00 00 00[05]f2 f2 f2 f2 f2
+  0x0e1615ef9640: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 00 00 00 00
+  0x0e1615ef9650: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e1615ef9660: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e1615ef9670: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e1615ef9680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

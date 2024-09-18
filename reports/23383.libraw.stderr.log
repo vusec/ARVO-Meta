@@ -1,0 +1,53 @@
+INFO: Seed: 378782410
+INFO: Loaded 1 modules   (17435 inline 8-bit counters): 17435 [0xae67a8, 0xaeabc3),
+INFO: Loaded 1 PC tables (17435 PCs): 17435 [0x7c4e78,0x809028),
+/out/libraw_cr2_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000774e7c at pc 0x0000005503a0 bp 0x7ffebcc5b090 sp 0x7ffebcc5b088
+READ of size 4 at 0x000000774e7c thread T0
+SCARINESS: 17 (4-byte-read-global-buffer-overflow)
+    #0 0x55039f in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:55:63
+    #1 0x459571 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:558:15
+    #2 0x444cf2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
+    #3 0x44ad4e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
+    #4 0x4726c2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #5 0x79445204d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #6 0x41f388 in _start (/out/libraw_cr2_fuzzer+0x41f388)
+
+DEDUP_TOKEN: LLVMFuzzerTestOneInput--fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
+0x000000774e7c is located 0 bytes to the right of global variable '__const.LLVMFuzzerTestOneInput.options' defined in '/src/libraw_fuzzer.cc' (0x774e60) of size 28
+SUMMARY: AddressSanitizer: global-buffer-overflow /src/libraw_fuzzer.cc:55:63 in LLVMFuzzerTestOneInput
+Shadow bytes around the buggy address:
+  0x0000800e6970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e6980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e6990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e69a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e69b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0000800e69c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[04]
+  0x0000800e69d0: f9 f9 f9 f9 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e69e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800e69f0: 00 00 01 f9 f9 f9 f9 f9 06 f9 f9 f9 f9 f9 f9 f9
+  0x0000800e6a00: 00 03 f9 f9 f9 f9 f9 f9 00 00 00 00 00 00 00 00
+  0x0000800e6a10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

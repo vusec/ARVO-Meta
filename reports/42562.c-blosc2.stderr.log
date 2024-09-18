@@ -1,0 +1,77 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 113793229
+INFO: Loaded 1 modules   (60376 inline 8-bit counters): 60376 [0xfe7080, 0xff5c58),
+INFO: Loaded 1 PC tables (60376 PCs): 60376 [0xc9fed0,0xd8bc50),
+/out/decompress_chunk_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6180000007a4 at pc 0x0000005219fc bp 0x7ffcb314d590 sp 0x7ffcb314cd58
+WRITE of size 201851904 at 0x6180000007a4 thread T0
+SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
+    #0 0x5219fb in __asan_memset /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:26:3
+    #1 0xc0ec55 in ndlz4_decompress /src/c-blosc2/plugins/codecs/ndlz/ndlz4x4.c:540:3
+    #2 0x56cee6 in blosc_d /src/c-blosc2/blosc/blosc2.c:1656:22
+    #3 0x55e5cb in serial_blosc /src/c-blosc2/blosc/blosc2.c:1753:16
+    #4 0x55e5cb in do_job /src/c-blosc2/blosc/blosc2.c:1918:15
+    #5 0x565ada in blosc_run_decompression_with_context /src/c-blosc2/blosc/blosc2.c:2558:13
+    #6 0x56636e in blosc2_decompress /src/c-blosc2/blosc/blosc2.c:2626:12
+    #7 0x555c76 in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_chunk.c:34:5
+    #8 0x4583b3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #9 0x443852 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #10 0x4494fe in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #11 0x473172 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #12 0x7b9f0479f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x41ec08 in _start (/out/decompress_chunk_fuzzer+0x41ec08)
+
+DEDUP_TOKEN: __asan_memset--ndlz4_decompress--blosc_d
+0x6180000007a4 is located 0 bytes to the right of 804-byte region [0x618000000480,0x6180000007a4)
+allocated by thread T0 here:
+    #0 0x522da7 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:226:3
+    #1 0x55de64 in my_malloc /src/c-blosc2/blosc/blosc2.c:169:9
+    #2 0x55de64 in init_thread_context /src/c-blosc2/blosc/blosc2.c:1810:25
+    #3 0x55de64 in create_thread_context /src/c-blosc2/blosc/blosc2.c:1845:12
+    #4 0x55de64 in do_job /src/c-blosc2/blosc/blosc2.c:1911:33
+    #5 0x565ada in blosc_run_decompression_with_context /src/c-blosc2/blosc/blosc2.c:2558:13
+    #6 0x56636e in blosc2_decompress /src/c-blosc2/blosc/blosc2.c:2626:12
+    #7 0x555c76 in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_chunk.c:34:5
+    #8 0x4583b3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:599:15
+    #9 0x443852 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
+    #10 0x4494fe in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
+    #11 0x473172 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #12 0x7b9f0479f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+
+DEDUP_TOKEN: posix_memalign--my_malloc--init_thread_context
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:26:3 in __asan_memset
+Shadow bytes around the buggy address:
+  0x0c307fff80a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff80b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff80c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff80d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff80e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c307fff80f0: 00 00 00 00[04]fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8120: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8130: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8140: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==13==ABORTING

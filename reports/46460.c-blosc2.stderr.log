@@ -1,0 +1,67 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 117302468
+INFO: Loaded 1 modules   (48516 inline 8-bit counters): 48516 [0xd1d0d0, 0xd28e54),
+INFO: Loaded 1 PC tables (48516 PCs): 48516 [0xbfa420,0xcb7c60),
+/out/decompress_frame_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60b000000204 at pc 0x000000523b87 bp 0x7fffc010dcb0 sp 0x7fffc010d478
+READ of size 2147483647 at 0x60b000000204 thread T0
+SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
+    #0 0x523b86 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
+    #1 0x5a5d10 in get_meta_from_header /src/c-blosc2/blosc/frame.c:1363:5
+    #2 0x5a5d10 in frame_get_metalayers /src/c-blosc2/blosc/frame.c:1419:9
+    #3 0x5a7ece in frame_to_schunk /src/c-blosc2/blosc/frame.c:1838:8
+    #4 0x592fd4 in blosc2_schunk_from_buffer /src/c-blosc2/blosc/schunk.c:477:27
+    #5 0x55d67a in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_frame.c:22:27
+    #6 0x455412 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #7 0x441032 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #8 0x44688c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #9 0x46f172 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #10 0x7dd6d3315082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #11 0x41f78d in _start (/out/decompress_frame_fuzzer+0x41f78d)
+
+DEDUP_TOKEN: __asan_memcpy--get_meta_from_header--frame_get_metalayers
+0x60b000000204 is located 0 bytes to the right of 100-byte region [0x60b0000001a0,0x60b000000204)
+allocated by thread T0 here:
+    #0 0x5247bd in __interceptor_malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:129:3
+    #1 0x436fb7 in operator new(unsigned long) cxa_noexception.cpp
+    #2 0x441032 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #3 0x44688c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #4 0x46f172 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #5 0x7dd6d3315082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+
+DEDUP_TOKEN: __interceptor_malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x0c167fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c167fff8000: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c167fff8010: fd fd fd fd fd fa fa fa fa fa fa fa fa fa 00 00
+  0x0c167fff8020: 00 00 00 00 00 00 00 00 00 00 04 fa fa fa fa fa
+  0x0c167fff8030: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c167fff8040:[04]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

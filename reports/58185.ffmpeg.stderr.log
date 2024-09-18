@@ -1,0 +1,81 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 281636478
+INFO: Loaded 1 modules   (56377 inline 8-bit counters): 56377 [0xeb5970, 0xec35a9),
+INFO: Loaded 1 PC tables (56377 PCs): 56377 [0xcd1fe0,0xdae370),
+/out/ffmpeg_AV_CODEC_ID_JPEGLS_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x616000000e80 at pc 0x0000005d1aab bp 0x7ffd12dc5b10 sp 0x7ffd12dc5b08
+READ of size 2 at 0x616000000e80 thread T0
+SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
+    #0 0x5d1aaa in mjpeg_decode_scan /src/ffmpeg/libavcodec/mjpegdec.c:1526:38
+    #1 0x5c6c58 in ff_mjpeg_decode_sos /src/ffmpeg/libavcodec/mjpegdec.c:1792:24
+    #2 0x5d5e03 in ff_mjpeg_decode_frame_from_buf /src/ffmpeg/libavcodec/mjpegdec.c:2561:24
+    #3 0x5de3b1 in ff_mjpeg_decode_frame /src/ffmpeg/libavcodec/mjpegdec.c:2885:12
+    #4 0x5a1ffd in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:287:15
+    #5 0x5a1ffd in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:540:15
+    #6 0x5a1ffd in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:560:15
+    #7 0x5a1822 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:635:15
+    #8 0x58d9bf in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:513:25
+    #9 0x45ce03 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #10 0x448562 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x44de0c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #12 0x477342 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x7ec122289082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x43e72d in _start (/out/ffmpeg_AV_CODEC_ID_JPEGLS_fuzzer+0x43e72d)
+
+DEDUP_TOKEN: mjpeg_decode_scan--ff_mjpeg_decode_sos--ff_mjpeg_decode_frame_from_buf
+0x616000000e80 is located 0 bytes to the right of 512-byte region [0x616000000c80,0x616000000e80)
+allocated by thread T0 here:
+    #0 0x54eae7 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0xb17a71 in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
+    #2 0xb17a71 in av_mallocz /src/ffmpeg/libavutil/mem.c:256:17
+    #3 0xb17a71 in av_calloc /src/ffmpeg/libavutil/mem.c:267:12
+    #4 0x5c2aba in ff_mjpeg_decode_sof /src/ffmpeg/libavcodec/mjpegdec.c:767:34
+    #5 0x5d57dc in ff_mjpeg_decode_frame_from_buf /src/ffmpeg/libavcodec/mjpegdec.c:2481:24
+    #6 0x5de3b1 in ff_mjpeg_decode_frame /src/ffmpeg/libavcodec/mjpegdec.c:2885:12
+    #7 0x5a1ffd in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:287:15
+    #8 0x5a1ffd in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:540:15
+    #9 0x5a1ffd in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:560:15
+    #10 0x5a1822 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:635:15
+    #11 0x58d9bf in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:513:25
+    #12 0x45ce03 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #13 0x448562 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #14 0x44de0c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #15 0x477342 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #16 0x7ec122289082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/mjpegdec.c:1526:38 in mjpeg_decode_scan
+Shadow bytes around the buggy address:
+  0x0c2c7fff8180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8190: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2c7fff81a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2c7fff81b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2c7fff81c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c2c7fff81d0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff81e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff81f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8210: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8220: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

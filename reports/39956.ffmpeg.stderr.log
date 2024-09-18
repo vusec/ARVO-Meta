@@ -1,0 +1,23 @@
+Warning: AFL++ tools might need to set AFL_MAP_SIZE to 273672 to be able to run this instrumented program if this crashes!
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==13==ERROR: AddressSanitizer: SEGV on unknown address 0x62d000808400 (pc 0x000000a6a0e5 bp 0x7ffd2b7b2350 sp 0x7ffd2b7b21e0 T0)
+==13==The signal is caused by a WRITE memory access.
+SCARINESS: 30 (wild-addr-write)
+    #0 0xa6a0e5 in iir_mem /src/ffmpeg/libavcodec/speexdec.c:593:14
+    #1 0xa198b8 in nb_decode /src/ffmpeg/libavcodec/speexdec.c:948:9
+    #2 0xa07cf6 in speex_decode_frame /src/ffmpeg/libavcodec/speexdec.c:1557:15
+    #3 0x73ba7c in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:326:15
+    #4 0x73485f in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:521:15
+    #5 0x6b3a5e in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:541:15
+    #6 0x6b1162 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:608:15
+    #7 0x5b740c in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:390:25
+    #8 0x3edf235 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
+    #9 0x3edf0a5 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
+    #10 0x74162abdd082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #11 0x4e9c4d in _start (/out/ffmpeg_AV_CODEC_ID_SPEEX_fuzzer+0x4e9c4d)
+
+DEDUP_TOKEN: iir_mem--nb_decode--speex_decode_frame
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /src/ffmpeg/libavcodec/speexdec.c:593:14 in iir_mem
+==13==ABORTING
