@@ -9,8 +9,8 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7594180354c0 at pc 0x0000006ca63a bp 0x7ffca370a710 sp 0x7ffca370a708
-WRITE of size 8 at 0x7594180354c0 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7578f740a4c0 at pc 0x0000006ca63a bp 0x7fffbde6a5d0 sp 0x7fffbde6a5c8
+WRITE of size 8 at 0x7578f740a4c0 thread T0
 SCARINESS: 52 (8-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x6ca639 in TracePoint /src/graphicsmagick/magick/render.c:6810:30
     #1 0x6cb5cf in TraceEllipse /src/graphicsmagick/magick/render.c:6235:5
@@ -23,11 +23,11 @@ SCARINESS: 52 (8-byte-write-heap-buffer-overflow-far-from-bounds)
     #8 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #9 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #10 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #11 0x75941707183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7578f644683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: TracePoint--TraceEllipse--TraceRoundRectangle
-0x7594180354c0 is located 16 bytes to the right of 314544-byte region [0x759417fe8800,0x7594180354b0)
+0x7578f740a4c0 is located 16 bytes to the right of 314544-byte region [0x7578f73bd800,0x7578f740a4b0)
 allocated by thread T0 here:
     #0 0x4ebc57 in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:121
     #1 0x6b8779 in DrawImage /src/graphicsmagick/magick/render.c:2390:5
@@ -38,22 +38,22 @@ allocated by thread T0 here:
     #6 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #8 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #9 0x75941707183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7578f644683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--DrawImage--ReadMVGImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:6810:30 in TracePoint
 Shadow bytes around the buggy address:
-  0x0eb302ffea40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0eb302ffea50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0eb302ffea60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0eb302ffea70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0eb302ffea80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0eb302ffea90: 00 00 00 00 00 00 fa fa[fa]fa fa fa fa fa fa fa
-  0x0eb302ffeaa0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0eb302ffeab0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0eb302ffeac0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0eb302ffead0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0eb302ffeae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaf9ee79440: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaf9ee79450: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaf9ee79460: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaf9ee79470: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eaf9ee79480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0eaf9ee79490: 00 00 00 00 00 00 fa fa[fa]fa fa fa fa fa fa fa
+  0x0eaf9ee794a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaf9ee794b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaf9ee794c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaf9ee794d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0eaf9ee794e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

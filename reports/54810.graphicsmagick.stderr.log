@@ -1,5 +1,5 @@
 =================================================================
-==12==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x606000000119 at pc 0x000000a45590 bp 0x7fff07902450 sp 0x7fff07902448
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x606000000119 at pc 0x000000a45590 bp 0x7ffdb2b755d0 sp 0x7ffdb2b755c8
 READ of size 1 at 0x606000000119 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0xa4558f in ReadSUNImage /src/graphicsmagick/coders/sun.c
@@ -9,7 +9,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #4 0x4de715 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #5 0x4dfb1a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #6 0x4df8ec in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #7 0x77a71b40c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #7 0x716b97148082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #8 0x41f59d in _start (/out/coder_SUN_fuzzer+0x41f59d)
 
 DEDUP_TOKEN: ReadSUNImage--ReadImage--BlobToImage
@@ -58,4 +58,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==12==ABORTING
+==13==ABORTING

@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/html
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000852fa3 at pc 0x0000006212e2 bp 0x7ffea3da51d0 sp 0x7ffea3da51c8
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000852fa3 at pc 0x0000006212e2 bp 0x7ffd6e393d30 sp 0x7ffd6e393d28
 READ of size 1 at 0x000000852fa3 thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x6212e1 in htmlParseDocument /src/libxml2/HTMLparser.c:5068:9
@@ -9,7 +9,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #2 0x63223c in htmlReadMemory /src/libxml2/HTMLparser.c:7044:13
     #3 0x4dc0cc in LLVMFuzzerTestOneInput /src/libxml2/fuzz/html.c:48:11
     #4 0x4de07b in main (/out/html+0x4de07b)
-    #5 0x73b0d98f5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #5 0x7db4c7fa5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #6 0x41d6fd in _start (/out/html+0x41d6fd)
 
 DEDUP_TOKEN: htmlParseDocument--htmlDoRead--htmlReadMemory

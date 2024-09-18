@@ -1,6 +1,6 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x713dee2bd800 at pc 0x00000049deb7 bp 0x7ffd56e13190 sp 0x7ffd56e12958
-READ of size 2147483647 at 0x713dee2bd800 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x785135fde800 at pc 0x00000049deb7 bp 0x7ffe77aff390 sp 0x7ffe77afeb58
+READ of size 2147483647 at 0x785135fde800 thread T0
 SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #0 0x49deb6 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
     #1 0x56671c in get_vlmeta_from_trailer /src/c-blosc2/blosc/frame.c:1480:5
@@ -10,32 +10,32 @@ SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #5 0x4d2246 in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_frame.c:22:27
     #6 0x4d2b1e in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:185:7
     #7 0x4d2b1e in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:249:12
-    #8 0x713ded2a083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x785134fc183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #9 0x424108 in _start (/out/decompress_frame_fuzzer+0x424108)
 
 DEDUP_TOKEN: __asan_memcpy--get_vlmeta_from_trailer--frame_get_vlmetalayers
-0x713dee2bd800 is located 0 bytes to the right of 1048576-byte region [0x713dee1bd800,0x713dee2bd800)
+0x785135fde800 is located 0 bytes to the right of 1048576-byte region [0x785135ede800,0x785135fde800)
 allocated by thread T0 here:
     #0 0x49eafd in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0x4d2a9c in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:176:41
     #2 0x4d2a9c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:249:12
 LLVMSymbolizer: error reading file: No such file or directory
-    #3 0x7ffd56e15498  ([stack]+0x20498)
+    #3 0x7ffe77b01498  ([stack]+0x20498)
 
 DEDUP_TOKEN: malloc--ExecuteFilesOnyByOne--main
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
 Shadow bytes around the buggy address:
-  0x0e283dc4fab0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e283dc4fac0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e283dc4fad0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e283dc4fae0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e283dc4faf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0e283dc4fb00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e283dc4fb10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e283dc4fb20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e283dc4fb30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e283dc4fb40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e283dc4fb50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f0aa6bf3cb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f0aa6bf3cc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f0aa6bf3cd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f0aa6bf3ce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f0aa6bf3cf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0f0aa6bf3d00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f0aa6bf3d10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f0aa6bf3d20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f0aa6bf3d30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f0aa6bf3d40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f0aa6bf3d50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

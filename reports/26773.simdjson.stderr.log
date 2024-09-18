@@ -1,11 +1,11 @@
-INFO: Seed: 440420483
+INFO: Seed: 3276432090
 INFO: Loaded 1 modules   (4710 inline 8-bit counters): 4710 [0x8a9a88, 0x8aacee),
 INFO: Loaded 1 PC tables (4710 PCs): 4710 [0x8aacf0,0x8bd350),
 /out/fuzz_dump: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x73c167b9df4c at pc 0x00000055f9a0 bp 0x7ffd706a0740 sp 0x7ffd706a0738
-READ of size 1 at 0x73c167b9df4c thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x748d1c89df4c at pc 0x00000055f9a0 bp 0x7fff78e87660 sp 0x7fff78e87658
+READ of size 1 at 0x748d1c89df4c thread T0
 SCARINESS: 27 (1-byte-read-stack-buffer-overflow)
     #0 0x55f99f in simdjson::internal::decimal_right_shift(simdjson::internal::decimal&, unsigned int) /src/simdjson/build/../src/from_chars.cpp:337:29
     #1 0x5ac6a8 in simdjson::internal::adjusted_mantissa simdjson::internal::compute_float<simdjson::internal::binary_format<double> >(simdjson::internal::decimal&) /src/simdjson/build/../src/from_chars.cpp:393:5
@@ -29,11 +29,11 @@ SCARINESS: 27 (1-byte-read-stack-buffer-overflow)
     #19 0x444e92 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #20 0x44af4e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:852:9
     #21 0x472f32 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #22 0x73c166b1d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #22 0x748d1b81d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #23 0x420168 in _start (/out/fuzz_dump+0x420168)
 
 DEDUP_TOKEN: simdjson::internal::decimal_right_shift(simdjson::internal::decimal&, unsigned int)--simdjson::internal::adjusted_mantissa simdjson::internal::compute_float<simdjson::internal::binary_format<double> >(simdjson::internal::decimal&)--simdjson::internal::adjusted_mantissa simdjson::internal::parse_long_mantissa<simdjson::internal::binary_format<double> >(char const*)
-Address 0x73c167b9df4c is located in stack of thread T0 at offset 844 in frame
+Address 0x748d1c89df4c is located in stack of thread T0 at offset 844 in frame
     #0 0x55fa8f in simdjson::internal::adjusted_mantissa simdjson::internal::parse_long_mantissa<simdjson::internal::binary_format<double> >(char const*) /src/simdjson/build/../src/from_chars.cpp:466
 
 DEDUP_TOKEN: simdjson::internal::adjusted_mantissa simdjson::internal::parse_long_mantissa<simdjson::internal::binary_format<double> >(char const*)
@@ -44,17 +44,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/simdjson/build/../src/from_chars.cpp:337:29 in simdjson::internal::decimal_right_shift(simdjson::internal::decimal&, unsigned int)
 Shadow bytes around the buggy address:
-  0x0e78acf6bb90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e78acf6bba0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e78acf6bbb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e78acf6bbc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e78acf6bbd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0e78acf6bbe0: 00 00 00 00 00 00 00 00 00[04]f3 f3 f3 f3 f3 f3
-  0x0e78acf6bbf0: f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00
-  0x0e78acf6bc00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e78acf6bc10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e78acf6bc20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e78acf6bc30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bb90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bba0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bbb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bbc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bbd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e922390bbe0: 00 00 00 00 00 00 00 00 00[04]f3 f3 f3 f3 f3 f3
+  0x0e922390bbf0: f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00
+  0x0e922390bc00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bc10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bc20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e922390bc30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

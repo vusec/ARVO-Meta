@@ -1,10 +1,10 @@
-INFO: Seed: 196640503
+INFO: Seed: 3269176131
 INFO: Loaded 1 modules   (39453 inline 8-bit counters): 39453 [0xed0b50, 0xeda56d),
 INFO: Loaded 1 PC tables (39453 PCs): 39453 [0xb2efc8,0xbc9198),
 /out/ffmpeg_AV_CODEC_ID_DVVIDEO_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000a1d029 at pc 0x000000572646 bp 0x7ffc57c67910 sp 0x7ffc57c67908
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000a1d029 at pc 0x000000572646 bp 0x7fffa2142390 sp 0x7fffa2142388
 READ of size 1 at 0x000000a1d029 thread T0
 SCARINESS: 22 (1-byte-read-global-buffer-overflow-far-from-bounds)
     #0 0x572645 in put_block_8x4 /src/ffmpeg/libavcodec/dvdec.c:279:20
@@ -22,7 +22,7 @@ SCARINESS: 22 (1-byte-read-global-buffer-overflow-far-from-bounds)
     #12 0x445531 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #13 0x44b1ee in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
     #14 0x475362 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #15 0x73c4c04bd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x721510b9f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #16 0x41e8e8 in _start (/out/ffmpeg_AV_CODEC_ID_DVVIDEO_fuzzer+0x41e8e8)
 
 DEDUP_TOKEN: put_block_8x4--dv100_idct_put_last_row_field_luma--dv_decode_video_segment

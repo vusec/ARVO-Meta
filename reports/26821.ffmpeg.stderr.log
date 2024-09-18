@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61f000000c00 at pc 0x0000004e2a37 bp 0x7ffc818bcaf0 sp 0x7ffc818bcae8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61f000000c00 at pc 0x0000004e2a37 bp 0x7ffe91980750 sp 0x7ffe91980748
 WRITE of size 2 at 0x61f000000c00 thread T0
 SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #0 0x4e2a36 in adpcm_swf_decode /src/ffmpeg/libavcodec/adpcm.c:689:28
@@ -23,7 +23,7 @@ SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #8 0x4cf69e in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:338:23
     #9 0x99392e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #10 0x99392e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #11 0x76178c95e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7b3dc56f983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41ee58 in _start (/out/ffmpeg_AV_CODEC_ID_ADPCM_SWF_fuzzer+0x41ee58)
 
 DEDUP_TOKEN: adpcm_swf_decode--adpcm_decode_frame--decode_simple_internal
@@ -47,7 +47,7 @@ allocated by thread T0 here:
     #15 0x4cf69e in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:338:23
     #16 0x99392e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #17 0x99392e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #18 0x76178c95e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x7b3dc56f983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/adpcm.c:689:28 in adpcm_swf_decode

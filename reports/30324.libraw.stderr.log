@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61f000001ac0 at pc 0x000000499362 bp 0x7ffea5bad880 sp 0x7ffea5bad048
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61f000001ac0 at pc 0x000000499362 bp 0x7ffc4b876680 sp 0x7ffc4b875e48
 WRITE of size 3137 at 0x61f000001ac0 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x499361 in __asan_memmove /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3
@@ -19,7 +19,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #4 0x4cd8b5 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:47:20
     #5 0x4cde5e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:207:5
     #6 0x4cde5e in main /src/libfuzzer/afl/afl_driver.cpp:244:12
-    #7 0x7f8afc90483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x7389a269b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41ebc8 in _start (/out/libraw_cr2_fuzzer+0x41ebc8)
 
 DEDUP_TOKEN: __asan_memmove--LibRaw_buffer_datastream::read(void*, unsigned long, unsigned long)--LibRaw::uncompressed_fp_dng_load_raw()
@@ -33,7 +33,7 @@ allocated by thread T0 here:
     #5 0x4cd8b5 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:47:20
     #6 0x4cde5e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:207:5
     #7 0x4cde5e in main /src/libfuzzer/afl/afl_driver.cpp:244:12
-    #8 0x7f8afc90483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7389a269b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: calloc--libraw_memmgr::calloc(unsigned long, unsigned long)--LibRaw::calloc(unsigned long, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3 in __asan_memmove

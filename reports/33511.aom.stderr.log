@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 71065278
+INFO: Seed: 3280723980
 INFO: Loaded 1 modules   (30979 inline 8-bit counters): 30979 [0x101ee70, 0x1026773),
 INFO: Loaded 1 PC tables (30979 PCs): 30979 [0x1026778,0x109f7a8),
 /out/av1_dec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60c0000029f0 at pc 0x0000009afd8d bp 0x7158455ff930 sp 0x7158455ff928
-READ of size 8 at 0x60c0000029f0 thread T47 (aom tile worker)
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60c0000029f0 at pc 0x0000009afd8d bp 0x7647171ff930 sp 0x7647171ff928
+READ of size 8 at 0x60c0000029f0 thread T40 (aom tile worker)
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x9afd8c in cdef_row_mt_sync_write /src/aom/av1/common/thread_common.c:198:39
     #1 0x9afd8c in av1_cdef_init_fb_row_mt /src/aom/av1/common/thread_common.c:1152:3
@@ -14,8 +14,8 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #3 0x9b0862 in cdef_sb_row_worker_hook /src/aom/av1/common/thread_common.c:1062:5
     #4 0x843b67 in execute /src/aom/aom_util/aom_thread.c:163:27
     #5 0x843b67 in thread_loop /src/aom/aom_util/aom_thread.c:72:7
-    #6 0x7158678076b9 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76b9)
-    #7 0x715866f1b51c in clone (/lib/x86_64-linux-gnu/libc.so.6+0x10751c)
+    #6 0x764734e4a6b9 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76b9)
+    #7 0x76473455e51c in clone (/lib/x86_64-linux-gnu/libc.so.6+0x10751c)
 
 DEDUP_TOKEN: cdef_row_mt_sync_write--av1_cdef_init_fb_row_mt--av1_cdef_fb_row
 0x60c0000029f7 is located 0 bytes to the right of 119-byte region [0x60c000002980,0x60c0000029f7)
@@ -38,10 +38,10 @@ allocated by thread T0 here:
     #15 0x443c62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #16 0x449aaa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #17 0x475792 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0x715866e3483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x76473447783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--aom_memalign--aom_malloc
-Thread T47 (aom tile worker) created by T0 here:
+Thread T40 (aom tile worker) created by T0 here:
     #0 0x50dafa in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:214:3
     #1 0x842e89 in reset /src/aom/aom_util/aom_thread.c:140:11
     #2 0x58fcc1 in decode_mt_init /src/aom/av1/decoder/decodeframe.c:3507:31
@@ -60,7 +60,7 @@ Thread T47 (aom tile worker) created by T0 here:
     #15 0x443c62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #16 0x449aaa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #17 0x475792 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0x715866e3483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x76473447783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: pthread_create--reset--decode_mt_init
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/aom/av1/common/thread_common.c:198:39 in cdef_row_mt_sync_write

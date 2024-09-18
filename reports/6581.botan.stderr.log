@@ -1,10 +1,10 @@
-INFO: Seed: 131770315
+INFO: Seed: 3267713682
 INFO: Loaded 1 modules   (26379 inline 8-bit counters): 26379 [0xd9ede8, 0xda54f3),
 INFO: Loaded 1 PC tables (26379 PCs): 26379 [0xa40b10,0xaa7bc0),
 /out/pkcs8: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000008f98 at pc 0x00000084f4da bp 0x7fff248a1310 sp 0x7fff248a1308
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000008f98 at pc 0x00000084f4da bp 0x7fff15fb0fb0 sp 0x7fff15fb0fa8
 READ of size 8 at 0x603000008f98 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x84f4d9 in Botan::bigint_monty_redc(unsigned long*, unsigned long const*, unsigned long, unsigned long, unsigned long*, unsigned long) /src/botan/src/lib/math/mp/mp_monty.cpp:62:17
@@ -33,7 +33,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #23 0x859309 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #24 0x864b3a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:703:9
     #25 0x8589ac in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #26 0x798645a0583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #26 0x74221cc1783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #27 0x426538 in _start (/out/pkcs8+0x426538)
 
 DEDUP_TOKEN: Botan::bigint_monty_redc(unsigned long*, unsigned long const*, unsigned long, unsigned long, unsigned long*, unsigned long)--Botan::(anonymous namespace)::CurveGFp_Montgomery::curve_mul(Botan::BigInt&, Botan::BigInt const&, Botan::BigInt const&, std::__1::vector<unsigned long, Botan::secure_allocator<unsigned long> >&) const--Botan::(anonymous namespace)::CurveGFp_Montgomery::to_curve_rep(Botan::BigInt&, std::__1::vector<unsigned long, Botan::secure_allocator<unsigned long> >&) const
@@ -69,7 +69,7 @@ allocated by thread T0 here:
     #27 0x859309 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #28 0x864b3a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:703:9
     #29 0x8589ac in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #30 0x798645a0583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #30 0x74221cc1783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: calloc--Botan::allocate_memory(unsigned long, unsigned long)--allocate
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/botan/src/lib/math/mp/mp_monty.cpp:62:17 in Botan::bigint_monty_redc(unsigned long*, unsigned long const*, unsigned long, unsigned long, unsigned long*, unsigned long)

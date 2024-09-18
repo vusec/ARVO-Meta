@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 71060741
+INFO: Seed: 3280692881
 INFO: Loaded 1 modules   (30979 inline 8-bit counters): 30979 [0x101ee70, 0x1026773),
 INFO: Loaded 1 PC tables (30979 PCs): 30979 [0x1026778,0x109f7a8),
 /out/av1_dec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604000000138 at pc 0x00000084d278 bp 0x7ffc04d5c520 sp 0x7ffc04d5c518
+==12==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604000000138 at pc 0x00000084d278 bp 0x7ffc9df57620 sp 0x7ffc9df57618
 READ of size 8 at 0x604000000138 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x84d277 in av1_free_cdef_buffers /src/aom/av1/common/alloccommon.c:92:53
@@ -16,7 +16,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #5 0x443c62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #6 0x449aaa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #7 0x475792 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #8 0x7ec7e0fc483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7978b9bc683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #9 0x41e948 in _start (/out/av1_dec_fuzzer+0x41e948)
 
 DEDUP_TOKEN: av1_free_cdef_buffers--decoder_destroy--aom_codec_destroy
@@ -40,7 +40,7 @@ allocated by thread T0 here:
     #15 0x443c62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #16 0x449aaa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #17 0x475792 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0x7ec7e0fc483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x7978b9bc683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--aom_memalign--aom_malloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/aom/av1/common/alloccommon.c:92:53 in av1_free_cdef_buffers
@@ -76,4 +76,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==12==ABORTING

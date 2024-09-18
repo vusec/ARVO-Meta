@@ -12,7 +12,7 @@ afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 
 [ WARN:0] global /src/opencv/modules/imgcodecs/src/grfmt_jpeg2000_openjpeg.cpp (609) readData OpenJPEG2000: Image has unknown color space, SRGB is assumed
 =================================================================
-==14==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x605000000040 at pc 0x000000536a45 bp 0x7ffe3607f230 sp 0x7ffe3607f228
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x605000000040 at pc 0x000000536a45 bp 0x7fffe5410350 sp 0x7fffe5410348
 READ of size 4 at 0x605000000040 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x536a44 in transform<const int *, cv::(anonymous namespace)::ChannelsIterator<cv::(anonymous namespace)::NonConstItTraits<unsigned char> >, (lambda at /src/opencv/modules/imgcodecs/src/grfmt_jpeg2000_openjpeg.cpp:232:51)> /usr/local/bin/../include/c++/v1/algorithm:1948:26
@@ -25,7 +25,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #7 0x4d2899 in LLVMFuzzerTestOneInput /src/imdecode_fuzzer.cc:10:30
     #8 0x4d0dee in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #9 0x4d0dee in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #10 0x7d6c847b383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7eff8aaa983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x422cd8 in _start (/out/imdecode_fuzzer+0x422cd8)
 
 DEDUP_TOKEN: transform<const int *, cv::(anonymous namespace)::ChannelsIterator<cv::(anonymous namespace)::NonConstItTraits<unsigned char> >, (lambda at /src/opencv/modules/imgcodecs/src/grfmt_jpeg2000_openjpeg.cpp:232:51)>--copyToMatImpl<unsigned char, const int>--void cv::(anonymous namespace)::copyToMat<int>(std::__1::vector<int const*, std::__1::allocator<int const*> >&&, cv::Mat&, unsigned char)
@@ -47,7 +47,7 @@ allocated by thread T0 here:
     #13 0x4d2899 in LLVMFuzzerTestOneInput /src/imdecode_fuzzer.cc:10:30
     #14 0x4d0dee in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #15 0x4d0dee in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #16 0x7d6c847b383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x7eff8aaa983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--opj_aligned_alloc_n--opj_aligned_malloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /usr/local/bin/../include/c++/v1/algorithm:1948:26 in transform<const int *, cv::(anonymous namespace)::ChannelsIterator<cv::(anonymous namespace)::NonConstItTraits<unsigned char> >, (lambda at /src/opencv/modules/imgcodecs/src/grfmt_jpeg2000_openjpeg.cpp:232:51)>
@@ -83,4 +83,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==14==ABORTING
+==13==ABORTING

@@ -1,10 +1,10 @@
-INFO: Seed: 182435882
+INFO: Seed: 3272696118
 INFO: Loaded 1 modules   (35521 inline 8-bit counters): 35521 [0xf4efe8, 0xf57aa9),
 INFO: Loaded 1 PC tables (35521 PCs): 35521 [0xbb6dc0,0xc419d0),
 /out/ffmpeg_AV_CODEC_ID_ILBC_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000aa3f9e at pc 0x00000054f1ca bp 0x7fff952a1110 sp 0x7fff952a1108
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000aa3f9e at pc 0x00000054f1ca bp 0x7ffc66c4c750 sp 0x7ffc66c4c748
 READ of size 2 at 0x000000aa3f9e thread T0
 SCARINESS: 14 (2-byte-read-global-buffer-overflow)
     #0 0x54f1c9 in gain_dequantization /src/ffmpeg/libavcodec/ilbcdec.c:604:22
@@ -21,7 +21,7 @@ SCARINESS: 14 (2-byte-read-global-buffer-overflow)
     #11 0x988a1d in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #12 0x994293 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #13 0x98809c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #14 0x7a85641f383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x75484f8ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #15 0x41d8a8 in _start (/out/ffmpeg_AV_CODEC_ID_ILBC_fuzzer+0x41d8a8)
 
 DEDUP_TOKEN: gain_dequantization--construct_vector--decode_residual

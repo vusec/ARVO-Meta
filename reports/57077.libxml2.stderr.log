@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/xinclude
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000852f9f at pc 0x00000056ba63 bp 0x7ffffc8bc550 sp 0x7ffffc8bc548
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000852f9f at pc 0x00000056ba63 bp 0x7ffcd685ed70 sp 0x7ffcd685ed68
 READ of size 1 at 0x000000852f9f thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x56ba62 in xmlParseQName /src/libxml2/parser.c
@@ -13,7 +13,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #6 0x5640bc in xmlReadMemory /src/libxml2/parser.c:15061:13
     #7 0x4dc0ef in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xinclude.c:52:11
     #8 0x4de0ab in main (/out/xinclude+0x4de0ab)
-    #9 0x7f25b5648082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x7683aa59f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #10 0x41d6fd in _start (/out/xinclude+0x41d6fd)
 
 DEDUP_TOKEN: xmlParseQName--xmlParseStartTag2--xmlParseElementStart

@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000400 at pc 0x0000008e1168 bp 0x7ffc0988a1b0 sp 0x7ffc0988a1a8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000400 at pc 0x0000008e1168 bp 0x7ffe37a5ef90 sp 0x7ffe37a5ef88
 WRITE of size 4 at 0x610000000400 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x8e1167 in imf_base_resource_init /src/ffmpeg/libavformat/imf_cpl.c:154:20
@@ -13,7 +13,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #8 0x50ebb1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:201:11
     #9 0x1723f9a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #10 0x1723d6c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #11 0x7350af82c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #11 0x73905351e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #12 0x44ff0d in _start (/out/ffmpeg_DEMUXER_fuzzer+0x44ff0d)
 
 DEDUP_TOKEN: imf_base_resource_init--imf_trackfile_resource_init--push_main_image_2d_sequence

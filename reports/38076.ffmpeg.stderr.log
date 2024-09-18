@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 200394237
+INFO: Seed: 3283716445
 INFO: Loaded 1 modules   (49008 inline 8-bit counters): 49008 [0xdb81e0, 0xdc4150),
 INFO: Loaded 1 PC tables (49008 PCs): 49008 [0xbe2a28,0xca2128),
 /out/ffmpeg_AV_CODEC_ID_XMA2_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60e000000948 at pc 0x0000005e323b bp 0x7fff29117510 sp 0x7fff29117508
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60e000000948 at pc 0x0000005e323b bp 0x7ffdbc177d30 sp 0x7ffdbc177d28
 READ of size 8 at 0x60e000000948 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x5e323a in xma_decode_packet /src/ffmpeg/libavcodec/wmaprodec.c:1916:36
@@ -18,7 +18,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #7 0x46b0b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #8 0x470d7e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/out/ffmpeg_AV_CODEC_ID_XMA2_fuzzer+0x470d7e)
     #9 0x49a652 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x73ae76da2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #10 0x70add29e9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #11 0x44635d in _start (/out/ffmpeg_AV_CODEC_ID_XMA2_fuzzer+0x44635d)
 
 DEDUP_TOKEN: xma_decode_packet--decode_simple_internal--decode_simple_receive_frame
@@ -41,7 +41,7 @@ allocated by thread T0 here:
     #14 0x46b0b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #15 0x470d7e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/out/ffmpeg_AV_CODEC_ID_XMA2_fuzzer+0x470d7e)
     #16 0x49a652 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #17 0x73ae76da2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #17 0x70add29e9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/wmaprodec.c:1916:36 in xma_decode_packet

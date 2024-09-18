@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 199755486
+INFO: Seed: 3278523169
 INFO: Loaded 1 modules   (59416 inline 8-bit counters): 59416 [0x115c980, 0x116b198),
 INFO: Loaded 1 PC tables (59416 PCs): 59416 [0xd470c8,0xe2f248),
 /out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60700000014f at pc 0x0000009fde54 bp 0x7ffd7dc4b7c0 sp 0x7ffd7dc4b7b8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60700000014f at pc 0x0000009fde54 bp 0x7ffc04cb5720 sp 0x7ffc04cb5718
 READ of size 4 at 0x60700000014f thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x9fde53 in get_bits /src/ffmpeg/libavcodec/get_bits.h:403:5
@@ -27,7 +27,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #16 0x4647c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #17 0x46ab16 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #18 0x494b02 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #19 0x72e4b3cbd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #19 0x79eadabf883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #20 0x43f188 in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x43f188)
 
 DEDUP_TOKEN: get_bits--ff_parse_itu_t_t35_to_dynamic_hdr10_plus--decode_registered_user_data_dynamic_hdr_plus
@@ -43,7 +43,7 @@ allocated by thread T0 here:
     #7 0x4647c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #8 0x46ab16 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #9 0x494b02 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x72e4b3cbd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x79eadabf883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: realloc--av_realloc--av_buffer_realloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/get_bits.h:403:5 in get_bits

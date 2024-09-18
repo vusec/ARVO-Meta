@@ -1,10 +1,10 @@
-INFO: Seed: 203119334
+INFO: Seed: 3275610729
 INFO: Loaded 1 modules   (47725 inline 8-bit counters): 47725 [0xf647e0, 0xf7024d),
 INFO: Loaded 1 PC tables (47725 PCs): 47725 [0xb95ce8,0xc503b8),
 /out/ffmpeg_AV_CODEC_ID_DXTORY_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000002880 at pc 0x00000056d2c9 bp 0x7ffe060a4b30 sp 0x7ffe060a4b28
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000002880 at pc 0x00000056d2c9 bp 0x7ffd85179310 sp 0x7ffd85179308
 WRITE of size 2 at 0x621000002880 thread T0
 SCARINESS: 43 (2-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x56d2c8 in dxtory_decode_v1_420 /src/ffmpeg/libavcodec/dxtory.c:175:13
@@ -20,7 +20,7 @@ SCARINESS: 43 (2-byte-write-heap-buffer-overflow-far-from-bounds)
     #10 0x444872 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:301:6
     #11 0x44a80d in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:801:9
     #12 0x4720f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0x7fc2f110b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x720ee81df83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #14 0x41f018 in _start (/out/ffmpeg_AV_CODEC_ID_DXTORY_fuzzer+0x41f018)
 
 DEDUP_TOKEN: dxtory_decode_v1_420--decode_frame--decode_simple_internal
@@ -48,7 +48,7 @@ allocated by thread T0 here:
     #19 0x444872 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:301:6
     #20 0x44a80d in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:801:9
     #21 0x4720f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #22 0x7fc2f110b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #22 0x720ee81df83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/dxtory.c:175:13 in dxtory_decode_v1_420

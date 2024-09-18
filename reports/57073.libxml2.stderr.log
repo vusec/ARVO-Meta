@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 404216821
+INFO: Seed: 3296602259
 INFO: Loaded 1 modules   (52663 inline 8-bit counters): 52663 [0xaddb40, 0xaea8f7),
 INFO: Loaded 1 PC tables (52663 PCs): 52663 [0x966130,0xa33ca0),
 /out/html: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000009042c1 at pc 0x000000601261 bp 0x7fffacc36190 sp 0x7fffacc36188
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000009042c1 at pc 0x000000601261 bp 0x7ffc9e205850 sp 0x7ffc9e205848
 READ of size 1 at 0x0000009042c1 thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x601260 in xmlNextChar /src/libxml2/parserInternals.c:500:18
@@ -17,7 +17,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #6 0x429642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #7 0x42eeec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #8 0x458422 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #9 0x7b0ba6686082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x727294331082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #10 0x41f80d in _start (/out/html+0x41f80d)
 
 DEDUP_TOKEN: xmlNextChar--htmlParseStartTag--htmlParseTryOrFinish

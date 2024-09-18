@@ -1,8 +1,8 @@
 Running LLVMFuzzerInitialize ...
 continue...
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7acf824451cf at pc 0x00000063ed5c bp 0x7ffd1066ac70 sp 0x7ffd1066ac68
-READ of size 1 at 0x7acf824451cf thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ac8ad8091cf at pc 0x00000063ed5c bp 0x7ffd2f3184f0 sp 0x7ffd2f3184e8
+READ of size 1 at 0x7ac8ad8091cf thread T0
 SCARINESS: 27 (1-byte-read-stack-buffer-overflow)
     #0 0x63ed5b in TranslateNumber_1 /src/espeak-ng/src/libespeak-ng/numbers.c:1785:34
     #1 0x638bb6 in TranslateNumber /src/espeak-ng/src/libespeak-ng/numbers.c:2080:10
@@ -18,11 +18,11 @@ SCARINESS: 27 (1-byte-read-stack-buffer-overflow)
     #11 0x4cc334 in LLVMFuzzerTestOneInput /src/espeak-ng/tests/ssml-fuzzer.c:64:8
     #12 0x4cbf8e in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:185:7
     #13 0x4cbf8e in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:249:12
-    #14 0x7acf8139483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x7ac8ac75883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #15 0x41d158 in _start (/out/ssml-fuzzer+0x41d158)
 
 DEDUP_TOKEN: TranslateNumber_1--TranslateNumber--TranslateWord3
-Address 0x7acf824451cf is located in stack of thread T0 at offset 6607 in frame
+Address 0x7ac8ad8091cf is located in stack of thread T0 at offset 6607 in frame
     #0 0x51509f in TranslateClause /src/espeak-ng/src/libespeak-ng/translate.c:1985
 
 DEDUP_TOKEN: TranslateClause
@@ -47,17 +47,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/espeak-ng/src/libespeak-ng/numbers.c:1785:34 in TranslateNumber_1
 Shadow bytes around the buggy address:
-  0x0f5a704809e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f5a704809f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f5a70480a00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f5a70480a10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f5a70480a20: 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
-=>0x0f5a70480a30: f2 f2 f2 f2 04 f2 f8 f2 04[f2]00 00 00 00 00 00
-  0x0f5a70480a40: 00 00 00 00 00 00 00 00 00 00 00 00 06 f2 f2 f2
-  0x0f5a70480a50: f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00
-  0x0f5a70480a60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f5a70480a70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f5a70480a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af91e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af91f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af9200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af9210: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af9220: 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+=>0x0f5995af9230: f2 f2 f2 f2 04 f2 f8 f2 04[f2]00 00 00 00 00 00
+  0x0f5995af9240: 00 00 00 00 00 00 00 00 00 00 00 00 06 f2 f2 f2
+  0x0f5995af9250: f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af9260: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af9270: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f5995af9280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

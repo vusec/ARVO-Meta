@@ -1,0 +1,77 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3486099919
+INFO: Loaded 1 modules   (26311 inline 8-bit counters): 26311 [0x5a95699b7598, 0x5a95699bdc5f),
+INFO: Loaded 1 PC tables (26311 PCs): 26311 [0x5a95699bdc60,0x5a9569a248d0),
+/out/djxl_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6080000000f2 at pc 0x5a956948b180 bp 0x7ffdead0c890 sp 0x7ffdead0c888
+READ of size 8 at 0x6080000000f2 thread T0
+SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
+    #0 0x5a956948b17f in LoadLE64 /src/libjxl/lib/jxl/base/byte_order.h:113:3
+    #1 0x5a956948b17f in Refill /src/libjxl/lib/jxl/dec_bit_reader.h:92:15
+    #2 0x5a956948b17f in ReadBits /src/libjxl/lib/jxl/dec_bit_reader.h:150:5
+    #3 0x5a956948b17f in jxl::BitsCoder::Read(unsigned long, jxl::BitReader*) /src/libjxl/lib/jxl/fields.h:51:20
+    #4 0x5a9569489ef1 in jxl::(anonymous namespace)::ReadVisitor::Bits(unsigned long, unsigned int, unsigned int*) /src/libjxl/lib/jxl/fields.cc:266:14
+    #5 0x5a9569504277 in VisitMarker /src/libjxl/lib/jxl/jpeg/jpeg_data.cc:34:3
+    #6 0x5a9569504277 in jxl::jpeg::JPEGData::VisitFields(jxl::Visitor*) /src/libjxl/lib/jxl/jpeg/jpeg_data.cc:67:7
+    #7 0x5a95694829a5 in jxl::(anonymous namespace)::VisitorBase::Visit(jxl::Fields*) /src/libjxl/lib/jxl/fields.cc:76:31
+    #8 0x5a9569483d15 in jxl::Bundle::Read(jxl::BitReader*, jxl::Fields*) /src/libjxl/lib/jxl/fields.cc:619:3
+    #9 0x5a95694b489a in jxl::jpeg::DecodeJPEGData(jxl::Span<unsigned char const>, jxl::jpeg::JPEGData*) /src/libjxl/lib/jxl/jpeg/dec_jpeg_data.cc:24:5
+    #10 0x5a956947e747 in jxl::JxlToJpegDecoder::Process(unsigned char const**, unsigned long*) /src/libjxl/lib/jxl/decode_to_jpeg.cc:46:25
+    #11 0x5a95694540c7 in HandleBoxes(JxlDecoderStruct*) /src/libjxl/lib/jxl/decode.cc:2163:29
+    #12 0x5a95694501ef in JxlDecoderProcessInput /src/libjxl/lib/jxl/decode.cc:2269:29
+    #13 0x5a956943e85e in DecodeJpegXl /src/libjxl/tools/djxl_fuzzer.cc:178:31
+    #14 0x5a956943e85e in TestOneInput /src/libjxl/tools/djxl_fuzzer.cc:559:3
+    #15 0x5a956943e85e in LLVMFuzzerTestOneInput /src/libjxl/tools/djxl_fuzzer.cc:569:10
+    #16 0x5a9569335513 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #17 0x5a95693211a2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #18 0x5a95693269ec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #19 0x5a956934f5e2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #20 0x725a030a5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #21 0x5a95692ff9cd in _start (/out/djxl_fuzzer+0xfa9cd)
+
+DEDUP_TOKEN: LoadLE64--Refill--ReadBits
+0x6080000000f2 is located 0 bytes to the right of 82-byte region [0x6080000000a0,0x6080000000f2)
+allocated by thread T0 here:
+    #0 0x5a9569403dfd in __interceptor_malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:129:3
+    #1 0x5a95693171a7 in operator new(unsigned long) cxa_noexception.cpp
+    #2 0x5a95693211a2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #3 0x5a95693269ec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #4 0x5a956934f5e2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #5 0x725a030a5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+
+DEDUP_TOKEN: __interceptor_malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libjxl/lib/jxl/base/byte_order.h:113:3 in LoadLE64
+Shadow bytes around the buggy address:
+  0x0c107fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff8000: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 02 fa
+=>0x0c107fff8010: fa fa fa fa 00 00 00 00 00 00 00 00 00 00[02]fa
+  0x0c107fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/libraw_cr2_fuzzer
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x607000000067 at pc 0x000000525b5b bp 0x7fffb4ff8a30 sp 0x7fffb4ff8a28
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x607000000067 at pc 0x000000525b5b bp 0x7fff9c4ad130 sp 0x7fff9c4ad128
 READ of size 1 at 0x607000000067 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x525b5a in LibRaw_buffer_datastream::scanf_one(char const*, void*) /src/libraw/src/libraw_datastream.cpp:467:11
@@ -13,7 +13,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #6 0x5043d6 in LibRaw::open_buffer(void const*, unsigned long) /src/libraw/src/utils/open.cpp:240:13
     #7 0x4d9021 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:61:24
     #8 0x4da4ab in main (/out/libraw_cr2_fuzzer+0x4da4ab)
-    #9 0x75adc3c90082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #9 0x7e9c98fb8082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #10 0x41e78d in _start (/out/libraw_cr2_fuzzer+0x41e78d)
 
 DEDUP_TOKEN: LibRaw_buffer_datastream::scanf_one(char const*, void*)--LibRaw::parse_mos(long long)--LibRaw::parse_tiff_ifd(int)

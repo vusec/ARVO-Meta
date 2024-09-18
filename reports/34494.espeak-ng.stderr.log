@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 105995379
+INFO: Seed: 3281207668
 INFO: Loaded 1 modules   (10244 inline 8-bit counters): 10244 [0x8bf2e0, 0x8c1ae4),
 INFO: Loaded 1 PC tables (10244 PCs): 10244 [0x8c1ae8,0x8e9b28),
 /out/ssml-fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x00000126b27c at pc 0x0000005d8362 bp 0x7ffe6bda0ac0 sp 0x7ffe6bda0ab8
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x00000126b27c at pc 0x0000005d8362 bp 0x7ffc6402d100 sp 0x7ffc6402d0f8
 READ of size 1 at 0x00000126b27c thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x5d8361 in IsLetterGroup /src/espeak-ng/src/libespeak-ng/dictionary.c:714:17
@@ -28,7 +28,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #17 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #18 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #19 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #20 0x72866938b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #20 0x7069bae4d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #21 0x41ed38 in _start (/out/ssml-fuzzer+0x41ed38)
 
 DEDUP_TOKEN: IsLetterGroup--MatchRule--TranslateRules

@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000000be at pc 0x00000059454a bp 0x7ffd98854080 sp 0x7ffd98854078
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000000be at pc 0x00000059454a bp 0x7ffe1b6c7d80 sp 0x7ffe1b6c7d78
 WRITE of size 2 at 0x6090000000be thread T0
 SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #0 0x594549 in transform1 /src/ffmpeg/libavcodec/vqcdec.c:279:20
@@ -13,7 +13,7 @@ SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #8 0x50524b in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:510:25
     #9 0xd8bd2a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #10 0xd8bafc in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #11 0x71d7127bb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #11 0x78705fbe7082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #12 0x442cad in _start (/out/ffmpeg_AV_CODEC_ID_VQC_fuzzer+0x442cad)
 
 DEDUP_TOKEN: transform1--decode_strip--decode_frame

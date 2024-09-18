@@ -1,11 +1,11 @@
-INFO: Seed: 338519816
+INFO: Seed: 3270506302
 INFO: Loaded 1 modules   (120139 inline 8-bit counters): 120139 [0x92392d0, 0x925681b),
 INFO: Loaded 1 PC tables (120139 PCs): 120139 [0x925681c,0x9341274),
 /out/coder_SFW_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe57036ce at pc 0x0824a2b4 bp 0xffbfd3c8 sp 0xffbfd3c0
-READ of size 1 at 0xe57036ce thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe31036ce at pc 0x0824a2b4 bp 0xff86d2e8 sp 0xff86d2e0
+READ of size 1 at 0xe31036ce thread T0
 SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x824a2b3 in GenerateEXIFAttribute /src/graphicsmagick/magick/attribute.c:2141:29
     #1 0x824626b in GetImageAttribute /src/graphicsmagick/magick/attribute.c:2399:11
@@ -20,24 +20,24 @@ SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #10 0x80d5d63 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #11 0x80db478 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
     #12 0x8100527 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #13 0xec67e646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #13 0xe9ffe646 in __libc_start_main (/lib32/libc.so.6+0x18646)
     #14 0x80b0d84 in _start (/out/coder_SFW_fuzzer+0x80b0d84)
 
 DEDUP_TOKEN: GenerateEXIFAttribute--GetImageAttribute--ReadJPEGImage
-Address 0xe57036ce is a wild pointer.
+Address 0xe31036ce is a wild pointer.
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/attribute.c:2141:29 in GenerateEXIFAttribute
 Shadow bytes around the buggy address:
-  0x3cae0680: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cae0690: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cae06a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cae06b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cae06c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x3cae06d0: fa fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa
-  0x3cae06e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cae06f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3cae0700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3cae0710: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3cae0720: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3c620680: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3c620690: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3c6206a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3c6206b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3c6206c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x3c6206d0: fa fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa
+  0x3c6206e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3c6206f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3c620700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3c620710: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3c620720: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

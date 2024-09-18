@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 283758610
+INFO: Seed: 3298869882
 INFO: Loaded 1 modules   (56994 inline 8-bit counters): 56994 [0x8ac5ad0, 0x8ad3972),
 INFO: Loaded 1 PC tables (56994 PCs): 56994 [0x897e520,0x89eda30),
 /out/ffmpeg_AV_CODEC_ID_MPEG2VIDEO_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xea3fe800 at pc 0x084cb9a7 bp 0xffb99528 sp 0xffb99520
-WRITE of size 4 at 0xea3fe800 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe96fe800 at pc 0x084cb9a7 bp 0xfff4e368 sp 0xfff4e360
+WRITE of size 4 at 0xe96fe800 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x84cb9a6 in put_pixels8_8_c /src/ffmpeg/libavcodec/pel_template.c:78:1
     #1 0x84cb9a6 in put_pixels16_8_c /src/ffmpeg/libavcodec/pel_template.c:78:1
@@ -27,11 +27,11 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #16 0x809c38e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #17 0x80a1f90 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #18 0x80cbb77 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #19 0xeb5cfed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #19 0xea88eed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #20 0x80934d5 in _start (/out/ffmpeg_AV_CODEC_ID_MPEG2VIDEO_fuzzer+0x80934d5)
 
 DEDUP_TOKEN: put_pixels8_8_c--put_pixels16_8_c--mpv_reconstruct_mb_internal
-0xea3fe800 is located 0 bytes to the right of 532480-byte region [0xea37c800,0xea3fe800)
+0xe96fe800 is located 0 bytes to the right of 532480-byte region [0xe967c800,0xe96fe800)
 allocated by thread T0 here:
     #0 0x81adada in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0x87c672f in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -56,22 +56,22 @@ allocated by thread T0 here:
     #20 0x809c38e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #21 0x80a1f90 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #22 0x80cbb77 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #23 0xeb5cfed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #23 0xea88eed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/pel_template.c:78:1 in put_pixels8_8_c
 Shadow bytes around the buggy address:
-  0x3d47fcb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d47fcc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d47fcd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d47fce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d47fcf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x3d47fd00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d47fd10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d47fd20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d47fd30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d47fd40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d47fd50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d2dfcb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d2dfcc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d2dfcd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d2dfce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d2dfcf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3d2dfd00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d2dfd10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d2dfd20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d2dfd30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d2dfd40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d2dfd50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

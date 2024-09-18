@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 227081561
+INFO: Seed: 3291685331
 INFO: Loaded 1 modules   (70134 inline 8-bit counters): 70134 [0x10d5c20, 0x10e6e16),
 INFO: Loaded 1 PC tables (70134 PCs): 70134 [0xea7cb0,0xfb9c10),
 /out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7ff5b2bff006 at pc 0x0000008ff2f0 bp 0x7ffdd5f04a10 sp 0x7ffdd5f04a08
-READ of size 8 at 0x7ff5b2bff006 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7567657ff006 at pc 0x0000008ff2f0 bp 0x7ffd5bdb61d0 sp 0x7ffd5bdb61c8
+READ of size 8 at 0x7567657ff006 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x8ff2ef in copy_CTB /src/ffmpeg/libavcodec/hevc_filter.c:147:17
     #1 0x8ff2ef in sao_filter_CTB /src/ffmpeg/libavcodec/hevc_filter.c:427:13
@@ -26,11 +26,11 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #15 0x4640f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #16 0x46993c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #17 0x492532 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0x7ff5b3e66082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #18 0x756766a35082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #19 0x44291d in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x44291d)
 
 DEDUP_TOKEN: copy_CTB--sao_filter_CTB--ff_hevc_hls_filter
-0x7ff5b2bff006 is located 6 bytes to the right of 399360-byte region [0x7ff5b2b9d800,0x7ff5b2bff000)
+0x7567657ff006 is located 6 bytes to the right of 399360-byte region [0x75676579d800,0x7567657ff000)
 allocated by thread T0 here:
     #0 0x547777 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
     #1 0xcf53b0 in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -54,22 +54,22 @@ allocated by thread T0 here:
     #19 0x4640f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #20 0x46993c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #21 0x492532 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #22 0x7ff5b3e66082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #22 0x756766a35082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/hevc_filter.c:147:17 in copy_CTB
 Shadow bytes around the buggy address:
-  0x0fff36577db0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff36577dc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff36577dd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff36577de0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff36577df0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fff36577e00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fff36577e10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fff36577e20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fff36577e30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fff36577e40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fff36577e50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ead6caf7db0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ead6caf7dc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ead6caf7dd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ead6caf7de0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ead6caf7df0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ead6caf7e00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ead6caf7e10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ead6caf7e20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ead6caf7e30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ead6caf7e40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ead6caf7e50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

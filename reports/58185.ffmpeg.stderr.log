@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 281636478
+INFO: Seed: 3298867749
 INFO: Loaded 1 modules   (56377 inline 8-bit counters): 56377 [0xeb5970, 0xec35a9),
 INFO: Loaded 1 PC tables (56377 PCs): 56377 [0xcd1fe0,0xdae370),
 /out/ffmpeg_AV_CODEC_ID_JPEGLS_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x616000000e80 at pc 0x0000005d1aab bp 0x7ffd12dc5b10 sp 0x7ffd12dc5b08
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x616000000e80 at pc 0x0000005d1aab bp 0x7ffc8b285990 sp 0x7ffc8b285988
 READ of size 2 at 0x616000000e80 thread T0
 SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #0 0x5d1aaa in mjpeg_decode_scan /src/ffmpeg/libavcodec/mjpegdec.c:1526:38
@@ -21,7 +21,7 @@ SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #10 0x448562 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x44de0c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #12 0x477342 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0x7ec122289082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #13 0x75f83768a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #14 0x43e72d in _start (/out/ffmpeg_AV_CODEC_ID_JPEGLS_fuzzer+0x43e72d)
 
 DEDUP_TOKEN: mjpeg_decode_scan--ff_mjpeg_decode_sos--ff_mjpeg_decode_frame_from_buf
@@ -43,7 +43,7 @@ allocated by thread T0 here:
     #13 0x448562 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #14 0x44de0c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #15 0x477342 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0x7ec122289082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #16 0x75f83768a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/mjpegdec.c:1526:38 in mjpeg_decode_scan

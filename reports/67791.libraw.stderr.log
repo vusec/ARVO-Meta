@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 397835063
+INFO: Seed: 3302851512
 INFO: Loaded 1 modules   (22547 inline 8-bit counters): 22547 [0x952c90, 0x9584a3),
 INFO: Loaded 1 PC tables (22547 PCs): 22547 [0x82ca40,0x884b70),
 /out/libraw_nef_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x77fe5b6017fd at pc 0x00000059cf29 bp 0x7ffc15b75000 sp 0x7ffc15b74ff8
-READ of size 1 at 0x77fe5b6017fd thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7e7d94c017fd at pc 0x00000059cf29 bp 0x7fffa35af460 sp 0x7fffa35af458
+READ of size 1 at 0x7e7d94c017fd thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x59cf28 in libraw_sget4_static(short, unsigned char*) /src/libraw/src/utils/read_utils.cpp:63:12
     #1 0x5ad8eb in checked_buffer_t::sget4(int) /src/libraw/src/utils/utils_libraw.cpp:704:10
@@ -21,11 +21,11 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #10 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #12 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0x77fe5fcf4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #13 0x7e7d991e5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #14 0x41f85d in _start (/out/libraw_nef_fuzzer+0x41f85d)
 
 DEDUP_TOKEN: libraw_sget4_static(short, unsigned char*)--checked_buffer_t::sget4(int)--LibRaw::parseAdobeRAFMakernote()
-0x77fe5b6017fd is located 3 bytes to the left of 2106464-byte region [0x77fe5b601800,0x77fe5b803c60)
+0x7e7d94c017fd is located 3 bytes to the left of 2106464-byte region [0x7e7d94c01800,0x7e7d94e03c60)
 allocated by thread T0 here:
     #0 0x569f0d in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:95:3
     #1 0x5ad3a2 in __libcpp_operator_new<unsigned long> /usr/local/bin/../include/c++/v1/new:245:10
@@ -47,22 +47,22 @@ allocated by thread T0 here:
     #17 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #18 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #19 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #20 0x77fe5fcf4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #20 0x7e7d991e5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: operator new(unsigned long)--__libcpp_operator_new<unsigned long>--__libcpp_allocate
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libraw/src/utils/read_utils.cpp:63:12 in libraw_sget4_static(short, unsigned char*)
 Shadow bytes around the buggy address:
-  0x0f004b6b82a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f004b6b82b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f004b6b82c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f004b6b82d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f004b6b82e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x0f004b6b82f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
-  0x0f004b6b8300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f004b6b8310: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f004b6b8320: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f004b6b8330: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f004b6b8340: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd0329782a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fd0329782b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fd0329782c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fd0329782d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fd0329782e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0fd0329782f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
+  0x0fd032978300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd032978310: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd032978320: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd032978330: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd032978340: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

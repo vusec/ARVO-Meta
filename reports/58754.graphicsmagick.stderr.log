@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 381480699
+INFO: Seed: 3298873536
 INFO: Loaded 1 modules   (174198 inline 8-bit counters): 174198 [0x1a75d40, 0x1aa05b6),
 INFO: Loaded 1 PC tables (174198 PCs): 174198 [0x1aa05b8,0x1d48d18),
 /out/coder_BIGTIFF_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x73ef089dba10 at pc 0x000000bb22ce bp 0x7ffef5cd6010 sp 0x7ffef5cd6008
-WRITE of size 8 at 0x73ef089dba10 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7eaf9d225a10 at pc 0x000000bb22ce bp 0x7fffcf6c6070 sp 0x7fffcf6c6068
+WRITE of size 8 at 0x7eaf9d225a10 thread T0
 SCARINESS: 57 (8-byte-write-stack-buffer-overflow)
     #0 0xbb22cd in _TIFFVGetField /src/libtiff/libtiff/tif_dir.c:1482:46
     #1 0xba111e in TIFFVGetField /src/libtiff/libtiff/tif_dir.c:1603:19
@@ -20,11 +20,11 @@ SCARINESS: 57 (8-byte-write-stack-buffer-overflow)
     #9 0x42b3b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x430c5c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x45a192 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0x73ef09078082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x7eaf9d292082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #13 0x42157d in _start (/out/coder_BIGTIFF_fuzzer+0x42157d)
 
 DEDUP_TOKEN: _TIFFVGetField--TIFFVGetField--TIFFGetField
-Address 0x73ef089dba10 is located in stack of thread T0 at offset 528 in frame
+Address 0x7eaf9d225a10 is located in stack of thread T0 at offset 528 in frame
     #0 0x98d92f in ReadTIFFImage /src/graphicsmagick/coders/tiff.c:1803
 
 DEDUP_TOKEN: ReadTIFFImage
@@ -84,17 +84,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/libtiff/libtiff/tif_dir.c:1482:46 in _TIFFVGetField
 Shadow bytes around the buggy address:
-  0x0e7e611336f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e7e61133700: f1 f1 f1 f1 f8 f2 f8 f2 f8 f2 f2 f2 f8 f2 f2 f2
-  0x0e7e61133710: f8 f2 f2 f2 00 f2 f2 f2 00 f2 f2 f2 04 f2 04 f2
-  0x0e7e61133720: 00 f2 f2 f2 02 f2 02 f2 02 f2 02 f2 02 f2 02 f2
-  0x0e7e61133730: 02 f2 02 f2 02 f2 02 f2 00 f2 f2 f2 02 f2 02 f2
-=>0x0e7e61133740: 02 f2[04]f2 04 f2 04 f2 04 f2 00 00 f2 f2 00 00
-  0x0e7e61133750: 00 00 00 f2 f2 f2 f2 f2 f8 f2 f2 f2 f8 f2 f8 f8
-  0x0e7e61133760: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0e7e61133770: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0e7e61133780: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0e7e61133790: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd673a3caf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd673a3cb00: f1 f1 f1 f1 f8 f2 f8 f2 f8 f2 f2 f2 f8 f2 f2 f2
+  0x0fd673a3cb10: f8 f2 f2 f2 00 f2 f2 f2 00 f2 f2 f2 04 f2 04 f2
+  0x0fd673a3cb20: 00 f2 f2 f2 02 f2 02 f2 02 f2 02 f2 02 f2 02 f2
+  0x0fd673a3cb30: 02 f2 02 f2 02 f2 02 f2 00 f2 f2 f2 02 f2 02 f2
+=>0x0fd673a3cb40: 02 f2[04]f2 04 f2 04 f2 04 f2 00 00 f2 f2 00 00
+  0x0fd673a3cb50: 00 00 00 f2 f2 f2 f2 f2 f8 f2 f2 f2 f8 f2 f8 f8
+  0x0fd673a3cb60: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd673a3cb70: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd673a3cb80: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd673a3cb90: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

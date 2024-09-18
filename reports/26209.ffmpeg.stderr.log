@@ -1,10 +1,10 @@
-INFO: Seed: 198274177
+INFO: Seed: 3275705332
 INFO: Loaded 1 modules   (47648 inline 8-bit counters): 47648 [0xf66e60, 0xf72880),
 INFO: Loaded 1 PC tables (47648 PCs): 47648 [0xb97b48,0xc51d48),
 /out/ffmpeg_AV_CODEC_ID_SMVJPEG_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000aedf8c at pc 0x00000056e8d4 bp 0x7fffc042b4d0 sp 0x7fffc042b4c8
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000aedf8c at pc 0x00000056e8d4 bp 0x7ffd2506e230 sp 0x7ffd2506e228
 READ of size 1 at 0x000000aedf8c thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x56e8d3 in build_vlc /src/ffmpeg/libavcodec/mjpegdec.c:82:23
@@ -19,7 +19,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #9 0x443c62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #10 0x449d1e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:852:9
     #11 0x471d02 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0x7f3ba473f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x7fe7b826683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41ef38 in _start (/out/ffmpeg_AV_CODEC_ID_SMVJPEG_fuzzer+0x41ef38)
 
 DEDUP_TOKEN: build_vlc--init_default_huffman_tables--ff_mjpeg_decode_init

@@ -1,10 +1,10 @@
-INFO: Seed: 297277993
+INFO: Seed: 3268419585
 INFO: Loaded 1 modules   (74411 inline 8-bit counters): 74411 [0x1353f08, 0x13661b3),
 INFO: Loaded 1 PC tables (74411 PCs): 74411 [0x13661b8,0x1488c68),
 /out/coder_PNG32_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000002be at pc 0x0000007d1749 bp 0x7ffed9d9f8d0 sp 0x7ffed9d9f8c8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000002be at pc 0x0000007d1749 bp 0x7ffcee246910 sp 0x7ffcee246908
 READ of size 1 at 0x6040000002be thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x7d1748 in png_read_raw_profile /src/graphicsmagick/coders/png.c:1161:10
@@ -18,7 +18,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #8 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #9 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #10 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #11 0x7d7f9334183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x79bc8b15783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41dd88 in _start (/out/coder_PNG32_fuzzer+0x41dd88)
 
 DEDUP_TOKEN: png_read_raw_profile--ReadOnePNGImage--ReadPNGImage
@@ -38,7 +38,7 @@ allocated by thread T0 here:
     #11 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #12 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #13 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #14 0x7d7f9334183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x79bc8b15783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--png_set_text_2--png_handle_tEXt
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/png.c:1161:10 in png_read_raw_profile

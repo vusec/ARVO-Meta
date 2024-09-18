@@ -1,0 +1,100 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3295268165
+INFO: Loaded 1 modules   (860903 inline 8-bit counters): 860903 [0x9ff9890, 0xa0cbb77),
+INFO: Loaded 1 PC tables (860903 PCs): 860903 [0x8914bf8,0x9637a68),
+/out/fuzz_env: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60400000c673 at pc 0x0000024d9a4a bp 0x7ffce96c83d0 sp 0x7ffce96c83c8
+WRITE of size 16 at 0x60400000c673 thread T0
+SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
+    #0 0x24d9a49 in unsigned long simdutf::westmere::(anonymous namespace)::convert_masked_utf8_to_utf16<(simdutf::endianness)0>(char const*, unsigned long, char16_t*&) /src/node/out/../deps/simdutf/simdutf.cpp:24905:5
+    #1 0x24be46f in convert<simdutf::LITTLE> /src/node/out/../deps/simdutf/simdutf.cpp:27109:31
+    #2 0x24be46f in simdutf::westmere::implementation::convert_utf8_to_utf16le(char const*, unsigned long, char16_t*) const /src/node/out/../deps/simdutf/simdutf.cpp:27748:20
+    #3 0x2419767 in simdutf::convert_utf8_to_utf16le(char const*, unsigned long, char16_t*) /src/node/out/../deps/simdutf/simdutf.cpp:4694:33
+    #4 0x175c305 in node::builtins::BuiltinLoader::Add(char const*, std::__1::basic_string_view<char, std::__1::char_traits<char> >) /src/node/out/../src/node_builtins.cc:260:23
+    #5 0x15f4d99 in operator() /src/node/out/../src/api/environment.cc:473:9
+    #6 0x15f4d99 in __invoke<(lambda at ../src/api/environment.cc:471:12) &, const node::StartExecutionCallbackInfo &> /usr/local/bin/../include/c++/v1/type_traits:3592:23
+    #7 0x15f4d99 in __call<(lambda at ../src/api/environment.cc:471:12) &, const node::StartExecutionCallbackInfo &> /usr/local/bin/../include/c++/v1/__functional/invoke.h:30:16
+    #8 0x15f4d99 in operator() /usr/local/bin/../include/c++/v1/__functional/function.h:181:16
+    #9 0x15f4d99 in std::__1::__function::__func<node::LoadEnvironment(node::Environment*, char const*)::$_0, std::__1::allocator<node::LoadEnvironment(node::Environment*, char const*)::$_0>, v8::MaybeLocal<v8::Value> (node::StartExecutionCallbackInfo const&)>::operator()(node::StartExecutionCallbackInfo const&) /usr/local/bin/../include/c++/v1/__functional/function.h:355:12
+    #10 0x16e0c20 in operator() /usr/local/bin/../include/c++/v1/__functional/function.h:508:16
+    #11 0x16e0c20 in operator() /usr/local/bin/../include/c++/v1/__functional/function.h:1185:12
+    #12 0x16e0c20 in node::StartExecution(node::Environment*, std::__1::function<v8::MaybeLocal<v8::Value> (node::StartExecutionCallbackInfo const&)>) /src/node/out/../src/node.cc:288:30
+    #13 0x15eed01 in node::LoadEnvironment(node::Environment*, std::__1::function<v8::MaybeLocal<v8::Value> (node::StartExecutionCallbackInfo const&)>) /src/node/out/../src/api/environment.cc:463:10
+    #14 0x15eefcb in node::LoadEnvironment(node::Environment*, char const*) /src/node/out/../src/api/environment.cc:470:10
+    #15 0x15e85e4 in EnvTest(v8::Isolate*, char*) /src/node/out/../test/fuzzers/fuzz_env.cc:92:3
+    #16 0x15e8dc1 in LLVMFuzzerTestOneInput /src/node/out/../test/fuzzers/fuzz_env.cc:103:3
+    #17 0xc09c33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #18 0xbf5392 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #19 0xbfac3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #20 0xc24172 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #21 0x7b79c9d0f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #22 0xbeb55d in _start (/out/fuzz_env+0xbeb55d)
+
+DEDUP_TOKEN: unsigned long simdutf::westmere::(anonymous namespace)::convert_masked_utf8_to_utf16<(simdutf::endianness)0>(char const*, unsigned long, char16_t*&)--convert<simdutf::LITTLE>--simdutf::westmere::implementation::convert_utf8_to_utf16le(char const*, unsigned long, char16_t*) const
+0x60400000c673 is located 1 bytes to the right of 34-byte region [0x60400000c650,0x60400000c672)
+allocated by thread T0 here:
+    #0 0xd35c0d in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:95:3
+    #1 0x1767db3 in __libcpp_operator_new<unsigned long> /usr/local/bin/../include/c++/v1/new:245:10
+    #2 0x1767db3 in __libcpp_allocate /usr/local/bin/../include/c++/v1/new:271:10
+    #3 0x1767db3 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator.h:105:38
+    #4 0x1767db3 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator_traits.h:262:20
+    #5 0x1767db3 in __vallocate /usr/local/bin/../include/c++/v1/vector:931:37
+    #6 0x1767db3 in std::__1::vector<unsigned short, std::__1::allocator<unsigned short> >::vector(unsigned long) /usr/local/bin/../include/c++/v1/vector:1062:9
+    #7 0x175c2df in __shared_ptr_emplace<unsigned long &> /usr/local/bin/../include/c++/v1/__memory/shared_ptr.h:294:37
+    #8 0x175c2df in allocate_shared<std::__1::vector<unsigned short, std::__1::allocator<unsigned short> >, std::__1::allocator<std::__1::vector<unsigned short, std::__1::allocator<unsigned short> > >, unsigned long &, void> /usr/local/bin/../include/c++/v1/__memory/shared_ptr.h:953:55
+    #9 0x175c2df in make_shared<std::__1::vector<unsigned short, std::__1::allocator<unsigned short> >, unsigned long &, void> /usr/local/bin/../include/c++/v1/__memory/shared_ptr.h:962:12
+    #10 0x175c2df in node::builtins::BuiltinLoader::Add(char const*, std::__1::basic_string_view<char, std::__1::char_traits<char> >) /src/node/out/../src/node_builtins.cc:259:14
+    #11 0x15f4d99 in operator() /src/node/out/../src/api/environment.cc:473:9
+    #12 0x15f4d99 in __invoke<(lambda at ../src/api/environment.cc:471:12) &, const node::StartExecutionCallbackInfo &> /usr/local/bin/../include/c++/v1/type_traits:3592:23
+    #13 0x15f4d99 in __call<(lambda at ../src/api/environment.cc:471:12) &, const node::StartExecutionCallbackInfo &> /usr/local/bin/../include/c++/v1/__functional/invoke.h:30:16
+    #14 0x15f4d99 in operator() /usr/local/bin/../include/c++/v1/__functional/function.h:181:16
+    #15 0x15f4d99 in std::__1::__function::__func<node::LoadEnvironment(node::Environment*, char const*)::$_0, std::__1::allocator<node::LoadEnvironment(node::Environment*, char const*)::$_0>, v8::MaybeLocal<v8::Value> (node::StartExecutionCallbackInfo const&)>::operator()(node::StartExecutionCallbackInfo const&) /usr/local/bin/../include/c++/v1/__functional/function.h:355:12
+    #16 0x16e0c20 in operator() /usr/local/bin/../include/c++/v1/__functional/function.h:508:16
+    #17 0x16e0c20 in operator() /usr/local/bin/../include/c++/v1/__functional/function.h:1185:12
+    #18 0x16e0c20 in node::StartExecution(node::Environment*, std::__1::function<v8::MaybeLocal<v8::Value> (node::StartExecutionCallbackInfo const&)>) /src/node/out/../src/node.cc:288:30
+    #19 0x15eed01 in node::LoadEnvironment(node::Environment*, std::__1::function<v8::MaybeLocal<v8::Value> (node::StartExecutionCallbackInfo const&)>) /src/node/out/../src/api/environment.cc:463:10
+    #20 0x15eefcb in node::LoadEnvironment(node::Environment*, char const*) /src/node/out/../src/api/environment.cc:470:10
+    #21 0x15e85e4 in EnvTest(v8::Isolate*, char*) /src/node/out/../test/fuzzers/fuzz_env.cc:92:3
+    #22 0x15e8dc1 in LLVMFuzzerTestOneInput /src/node/out/../test/fuzzers/fuzz_env.cc:103:3
+    #23 0xc09c33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #24 0xbf5392 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #25 0xbfac3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #26 0xc24172 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #27 0x7b79c9d0f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: operator new(unsigned long)--__libcpp_operator_new<unsigned long>--__libcpp_allocate
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/node/out/../deps/simdutf/simdutf.cpp:24905:5 in unsigned long simdutf::westmere::(anonymous namespace)::convert_masked_utf8_to_utf16<(simdutf::endianness)0>(char const*, unsigned long, char16_t*&)
+Shadow bytes around the buggy address:
+  0x0c087fff9870: fa fa 00 00 00 00 00 00 fa fa 00 00 00 00 00 00
+  0x0c087fff9880: fa fa fd fd fd fd fd fa fa fa fa fa fa fa fa fa
+  0x0c087fff9890: fa fa fd fd fd fd fd fd fa fa fd fd fd fd fd fa
+  0x0c087fff98a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff98b0: fa fa 00 00 00 00 00 00 fa fa fa fa fa fa fa fa
+=>0x0c087fff98c0: fa fa fa fa fa fa fa fa fa fa 00 00 00 00[02]fa
+  0x0c087fff98d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff98e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff98f0: fa fa fd fd fd fd fd fa fa fa fa fa fa fa fa fa
+  0x0c087fff9900: fa fa fd fd fd fd fd fd fa fa 00 00 00 00 00 00
+  0x0c087fff9910: fa fa 00 00 00 00 00 fa fa fa fd fd fd fd fd fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

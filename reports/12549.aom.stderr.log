@@ -1,10 +1,10 @@
-INFO: Seed: 70491025
+INFO: Seed: 3273601819
 INFO: Loaded 1 modules   (29109 inline 8-bit counters): 29109 [0x10b0fc8, 0x10b817d),
 INFO: Loaded 1 PC tables (29109 PCs): 29109 [0x10b8180,0x1129cd0),
 /out/av1_dec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63200000015c at pc 0x000000a1a75b bp 0x7ffc5e222420 sp 0x7ffc5e222418
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63200000015c at pc 0x000000a1a75b bp 0x7fff2a0d6180 sp 0x7fff2a0d6178
 READ of size 16 at 0x63200000015c thread T0
 SCARINESS: 36 (multi-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0xa1a75a in av1_convolve_2d_copy_sr_sse2 /src/aom/av1/common/x86/convolve_2d_sse2.c
@@ -34,7 +34,7 @@ SCARINESS: 36 (multi-byte-read-heap-buffer-overflow-far-from-bounds)
     #24 0x53ba46 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:285:6
     #25 0x547306 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:714:9
     #26 0x53b0bc in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #27 0x77e57d2b283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #27 0x79675481983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #28 0x423ea8 in _start (/out/av1_dec_fuzzer+0x423ea8)
 
 DEDUP_TOKEN: av1_convolve_2d_copy_sr_sse2--av1_convolve_2d_facade--inter_predictor
@@ -63,7 +63,7 @@ allocated by thread T0 here:
     #20 0x53ba46 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:285:6
     #21 0x547306 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:714:9
     #22 0x53b0bc in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #23 0x77e57d2b283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #23 0x79675481983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--aom_memalign--aom_malloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/aom/av1/common/x86/convolve_2d_sse2.c in av1_convolve_2d_copy_sr_sse2

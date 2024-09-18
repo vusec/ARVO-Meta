@@ -1,0 +1,64 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3302283661
+INFO: Loaded 1 modules   (6385 inline 8-bit counters): 6385 [0x5a37068c, 0x5a371f7d),
+INFO: Loaded 1 PC tables (6385 PCs): 6385 [0x5a371f80,0x5a37e708),
+/out/icc_codec_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xf0d0932f at pc 0x5a1e8b04 bp 0xffaaf8a8 sp 0xffaaf8a0
+READ of size 1 at 0xf0d0932f thread T0
+SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
+    #0 0x5a1e8b03 in jxl::PredictICC(unsigned char const*, unsigned int, jxl::PaddedBytes*) /src/libjxl/lib/jxl/enc_icc_codec.cc:265:30
+    #1 0x5a1d9acf in jpegxl::tools::TestOneInput(unsigned char const*, unsigned int) /src/libjxl/tools/icc_codec_fuzzer.cc:61:5
+    #2 0x5a1da2d8 in LLVMFuzzerTestOneInput /src/libjxl/tools/icc_codec_fuzzer.cc:75:10
+    #3 0x5a09a90e in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #4 0x5a08586e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #5 0x5a08b470 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #6 0x5a0b5057 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #7 0xf5643ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4) (BuildId: d56935956a210bf85f6592f3178b979ad4f7b35f)
+    #8 0x5a07c994 in _start (/out/icc_codec_fuzzer+0x36994)
+
+DEDUP_TOKEN: jxl::PredictICC(unsigned char const*, unsigned int, jxl::PaddedBytes*)--jpegxl::tools::TestOneInput(unsigned char const*, unsigned int)--LLVMFuzzerTestOneInput
+0xf0d0932f is located 0 bytes to the right of 16687-byte region [0xf0d05200,0xf0d0932f)
+allocated by thread T0 here:
+    #0 0x5a19639f in __interceptor_malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:69:3
+    #1 0x5a112524 in operator new(unsigned int) cxa_noexception.cpp
+    #2 0x5a08586e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #3 0x5a08b470 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #4 0x5a0b5057 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #5 0xf5643ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4) (BuildId: d56935956a210bf85f6592f3178b979ad4f7b35f)
+
+DEDUP_TOKEN: __interceptor_malloc--operator new(unsigned int)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int)
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libjxl/lib/jxl/enc_icc_codec.cc:265:30 in jxl::PredictICC(unsigned char const*, unsigned int, jxl::PaddedBytes*)
+Shadow bytes around the buggy address:
+  0x3e1a1210: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3e1a1220: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3e1a1230: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3e1a1240: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3e1a1250: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3e1a1260: 00 00 00 00 00[07]fa fa fa fa fa fa fa fa fa fa
+  0x3e1a1270: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e1a1280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e1a1290: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e1a12a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e1a12b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

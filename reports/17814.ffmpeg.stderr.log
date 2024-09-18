@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x609000000194 at pc 0x0000004e08e7 bp 0x7fff89149cf0 sp 0x7fff89149ce8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x609000000194 at pc 0x0000004e08e7 bp 0x7ffe74661fd0 sp 0x7ffe74661fc8
 READ of size 2 at 0x609000000194 thread T0
 SCARINESS: 24 (2-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x4e08e6 in hcom_decode /src/ffmpeg/libavcodec/hcom.c:102:36
@@ -21,7 +21,7 @@ SCARINESS: 24 (2-byte-read-heap-buffer-overflow-far-from-bounds)
     #6 0x4c9e99 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:259:23
     #7 0x927e4e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #8 0x927e4e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #9 0x7006dc47683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x762b3954883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41e898 in _start (/out/ffmpeg_AV_CODEC_ID_HCOM_fuzzer+0x41e898)
 
 DEDUP_TOKEN: hcom_decode--decode_simple_internal--decode_simple_receive_frame
@@ -36,7 +36,7 @@ allocated by thread T0 here:
     #6 0x4c962c in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:192:15
     #7 0x927e4e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #8 0x927e4e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #9 0x7006dc47683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x762b3954883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/hcom.c:102:36 in hcom_decode

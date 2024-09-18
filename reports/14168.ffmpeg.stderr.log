@@ -1,10 +1,10 @@
-INFO: Seed: 186769576
+INFO: Seed: 3273602839
 INFO: Loaded 1 modules   (38758 inline 8-bit counters): 38758 [0xf8edd0, 0xf98536),
 INFO: Loaded 1 PC tables (38758 PCs): 38758 [0xbd8df0,0xc70450),
 /out/ffmpeg_AV_CODEC_ID_AGM_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000370 at pc 0x0000004fc45a bp 0x7ffedfabc670 sp 0x7ffedfabc668
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000370 at pc 0x0000004fc45a bp 0x7fff63995c50 sp 0x7fff63995c48
 READ of size 2 at 0x611000000370 thread T0
 SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #0 0x4fc459 in decode_inter_plane /src/ffmpeg/libavcodec/agm.c:289:52
@@ -20,7 +20,7 @@ SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #10 0x99e72f in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:286:6
     #11 0x9aa403 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:715:9
     #12 0x99dd87 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #13 0x7a87f1b0483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x7065e691983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #14 0x41e288 in _start (/out/ffmpeg_AV_CODEC_ID_AGM_fuzzer+0x41e288)
 
 DEDUP_TOKEN: decode_inter_plane--decode_inter--decode_frame
@@ -44,7 +44,7 @@ allocated by thread T0 here:
     #15 0x99e72f in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:286:6
     #16 0x9aa403 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:715:9
     #17 0x99dd87 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #18 0x7a87f1b0483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x7065e691983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/agm.c:289:52 in decode_inter_plane

@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001a800 at pc 0x000000fe07c3 bp 0x7ffc54779f90 sp 0x7ffc54779f88
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001a800 at pc 0x000000fe07c3 bp 0x7ffdc56b36f0 sp 0x7ffdc56b36e8
 READ of size 4 at 0x63300001a800 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0xfe07c2 in get_bits /src/ffmpeg/libavcodec/get_bits.h:404:5
@@ -15,7 +15,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #10 0x4e40d1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:197:15
     #11 0x114fd45 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #12 0x114fbb5 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #13 0x73c7b1014082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #13 0x72bb5af7a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #14 0x4299cd in _start (/out/ffmpeg_dem_FLAC_fuzzer+0x4299cd)
 
 DEDUP_TOKEN: get_bits--frame_header_is_valid--find_headers_search_validate

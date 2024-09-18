@@ -1,11 +1,11 @@
-INFO: Seed: 119322168
+INFO: Seed: 3275704529
 INFO: Loaded 1 modules   (43401 inline 8-bit counters): 43401 [0x8791540, 0x879bec9),
 INFO: Loaded 1 PC tables (43401 PCs): 43401 [0x86f0e9c,0x8745ae4),
 /out/decompress_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xedd00f38 at pc 0x081b8237 bp 0xff8d29a8 sp 0xff8d29a0
-READ of size 1 at 0xedd00f38 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe8200f38 at pc 0x081b8237 bp 0xffa1ab88 sp 0xffa1ab80
+READ of size 1 at 0xe8200f38 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x81b8236 in tinfl_decompress /src/c-blosc2/internal-complibs/miniz-2.0.8/miniz.c:2374:9
     #1 0x81b6070 in mz_inflate /src/c-blosc2/internal-complibs/miniz-2.0.8/miniz.c:434:18
@@ -21,33 +21,33 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #11 0x809213e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #12 0x8097e2f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:852:9
     #13 0x80bfed7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #14 0xf2dfc646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #14 0xed357646 in __libc_start_main (/lib32/libc.so.6+0x18646)
     #15 0x806d128 in _start (/out/decompress_fuzzer+0x806d128)
 
 DEDUP_TOKEN: tinfl_decompress--mz_inflate--mz_uncompress
-0xedd00f38 is located 0 bytes to the right of 40-byte region [0xedd00f10,0xedd00f38)
+0xe8200f38 is located 0 bytes to the right of 40-byte region [0xe8200f10,0xe8200f38)
 allocated by thread T0 here:
     #0 0x8174b45 in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0x8081744 in operator new(unsigned int) (/out/decompress_fuzzer+0x8081744)
     #2 0x809213e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #3 0x8097e2f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:852:9
     #4 0x80bfed7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0xf2dfc646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #5 0xed357646 in __libc_start_main (/lib32/libc.so.6+0x18646)
 
 DEDUP_TOKEN: malloc--operator new(unsigned int)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/c-blosc2/internal-complibs/miniz-2.0.8/miniz.c:2374:9 in tinfl_decompress
 Shadow bytes around the buggy address:
-  0x3dba0190: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba01a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba01b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba01c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba01d0: fa fa fa fa fa fa fa fa fa fa 00 00 00 00 00 fa
-=>0x3dba01e0: fa fa 00 00 00 00 00[fa]fa fa 00 00 00 00 00 fa
-  0x3dba01f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba0200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba0210: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba0220: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3dba0230: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d040190: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d0401a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d0401b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d0401c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d0401d0: fa fa fa fa fa fa fa fa fa fa 00 00 00 00 00 fa
+=>0x3d0401e0: fa fa 00 00 00 00 00[fa]fa fa 00 00 00 00 00 fa
+  0x3d0401f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d040200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d040210: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d040220: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d040230: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

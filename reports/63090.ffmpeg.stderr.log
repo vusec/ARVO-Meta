@@ -1,5 +1,5 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 316373888
+INFO: Seed: 3301347752
 INFO: Loaded 1 modules   (105487 inline 8-bit counters): 105487 [0x11c0a80, 0x11da68f),
 INFO: Loaded 1 PC tables (105487 PCs): 105487 [0xeaae30,0x1046f20),
 /out/ffmpeg_dem_DASH_fuzzer: Running 1 inputs 1 time(s) each.
@@ -8,7 +8,7 @@ Running: /tmp/poc
 <!-- --󾿾
      ^
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000274 at pc 0x000000a62ef7 bp 0x7ffc90b92ed0 sp 0x7ffc90b92ec8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000274 at pc 0x000000a62ef7 bp 0x7ffdb9f25e50 sp 0x7ffdb9f25e48
 WRITE of size 1 at 0x602000000274 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0xa62ef6 in xmlCopyCharMultiByte /src/libxml2/parserInternals.c:1095:12
@@ -26,7 +26,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #12 0x434852 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #13 0x43a0fc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #14 0x463632 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0x798957783082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #15 0x754a87a2f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #16 0x42aa1d in _start (/out/ffmpeg_dem_DASH_fuzzer+0x42aa1d)
 
 DEDUP_TOKEN: xmlCopyCharMultiByte--xmlParseCommentComplex--xmlParseComment
@@ -47,7 +47,7 @@ allocated by thread T0 here:
     #12 0x434852 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #13 0x43a0fc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #14 0x463632 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0x798957783082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #15 0x754a87a2f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_realloc--xmlParseCommentComplex--xmlParseComment
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libxml2/parserInternals.c:1095:12 in xmlCopyCharMultiByte

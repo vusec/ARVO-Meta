@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62e00000a800 at pc 0x00000049610f bp 0x7fffca301450 sp 0x7fffca300c18
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62e00000a800 at pc 0x00000049610f bp 0x7ffcead04790 sp 0x7ffcead03f58
 WRITE of size 61381 at 0x62e00000a800 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x49610e in __asan_memmove /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3
@@ -20,7 +20,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #5 0x4c8b65 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:47:20
     #6 0x4c910e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #7 0x4c910e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #8 0x7805047ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7218771ef83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #9 0x41e4b8 in _start (/out/libraw_raf_fuzzer+0x41e4b8)
 
 DEDUP_TOKEN: __asan_memmove--LibRaw_buffer_datastream::read(void*, unsigned long, unsigned long)--LibRaw::read_shorts(unsigned short*, unsigned int)
@@ -33,7 +33,7 @@ allocated by thread T0 here:
     #4 0x4c8b65 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:47:20
     #5 0x4c910e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #6 0x4c910e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #7 0x7805047ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x7218771ef83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--libraw_memmgr::malloc(unsigned long)--LibRaw::malloc(unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3 in __asan_memmove

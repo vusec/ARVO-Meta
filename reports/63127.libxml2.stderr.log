@@ -1,7 +1,7 @@
 Running LLVMFuzzerInitialize ...
 continue...
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000934 at pc 0x0000005110a8 bp 0x7ffe57652fb0 sp 0x7ffe57652fa8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000934 at pc 0x0000005110a8 bp 0x7ffd6e556490 sp 0x7ffd6e556488
 WRITE of size 1 at 0x602000000934 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x5110a7 in xmlParseCommentComplex /src/libxml2/parser.c:4981:14
@@ -16,7 +16,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #9 0x4df26d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #10 0x4df078 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #11 0x4dec38 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #12 0x7fd92fba8082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x76aac778a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #13 0x41e5ad in _start (/out/schema+0x41e5ad)
 
 DEDUP_TOKEN: xmlParseCommentComplex--xmlParseComment--xmlParseMisc

@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 105876784
+INFO: Seed: 3281260618
 INFO: Loaded 1 modules   (10244 inline 8-bit counters): 10244 [0x8bf2e0, 0x8c1ae4),
 INFO: Loaded 1 PC tables (10244 PCs): 10244 [0x8c1ae8,0x8e9b28),
 /out/ssml-fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==12==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000153 at pc 0x0000005d933d bp 0x7ffeb18fc660 sp 0x7ffeb18fc658
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000153 at pc 0x0000005d933d bp 0x7ffdf17e2000 sp 0x7ffdf17e1ff8
 READ of size 1 at 0x602000000153 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x5d933c in string_decoder_getc_utf_8 /src/espeak-ng/src/libespeak-ng/encoding.c:539:15
@@ -23,7 +23,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #12 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #13 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #14 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0x74f7ce33483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x7a6d5a14b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #16 0x41ed38 in _start (/out/ssml-fuzzer+0x41ed38)
 
 DEDUP_TOKEN: string_decoder_getc_utf_8--text_decoder_getc--GetC
@@ -35,7 +35,7 @@ allocated by thread T0 here:
     #3 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #4 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #5 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #6 0x74f7ce33483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #6 0x7a6d5a14b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--LLVMFuzzerTestOneInput--fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/espeak-ng/src/libespeak-ng/encoding.c:539:15 in string_decoder_getc_utf_8
@@ -71,4 +71,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==12==ABORTING
+==13==ABORTING

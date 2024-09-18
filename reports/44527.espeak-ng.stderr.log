@@ -5,8 +5,8 @@ Unknown phoneme table: ''
 Unknown phoneme table: ''
 Unknown phoneme table: ''
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7b0e122ef198 at pc 0x00000043af4d bp 0x7ffceae7b3a0 sp 0x7ffceae7ab20
-READ of size 42 at 0x7b0e122ef198 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7f34a85e8198 at pc 0x00000043af4d bp 0x7ffca96ce180 sp 0x7ffca96cd900
+READ of size 42 at 0x7f34a85e8198 thread T0
 SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
     #0 0x43af4c in printf_common(void*, char const*, __va_list_tag*) /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors_format.inc:553:9
     #1 0x43c489 in __interceptor_vfprintf /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:1647:1
@@ -21,11 +21,11 @@ SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
     #10 0x4cc110 in LLVMFuzzerTestOneInput /src/espeak-ng/tests/ssml-fuzzer.c:67:8
     #11 0x4cbef0 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #12 0x4cbcc0 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #13 0x7b0e1125983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x7f34a755283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #14 0x41d2e8 in _start (/out/ssml-fuzzer+0x41d2e8)
 
 DEDUP_TOKEN: printf_common(void*, char const*, __va_list_tag*)--__interceptor_vfprintf--fprintf
-Address 0x7b0e122ef198 is located in stack of thread T0 at offset 408 in frame
+Address 0x7f34a85e8198 is located in stack of thread T0 at offset 408 in frame
     #0 0x5a83df in LoadVoice /src/espeak-ng/src/libespeak-ng/voices.c:492
 
 DEDUP_TOKEN: LoadVoice
@@ -55,17 +55,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors_format.inc:553:9 in printf_common(void*, char const*, __va_list_tag*)
 Shadow bytes around the buggy address:
-  0x0f6242455de0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f6242455df0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f6242455e00: f1 f1 f1 f1 04 f2 00 00 00 00 00 f2 f2 f2 f2 f2
-  0x0f6242455e10: 00 00 00 00 00 f2 f2 f2 f2 f2 00 00 00 00 00 f2
-  0x0f6242455e20: f2 f2 f2 f2 00 00 00 00 00 f2 f2 f2 f2 f2 00 00
-=>0x0f6242455e30: 00 00 00[f2]f2 f2 f2 f2 00 00 00 00 00 00 00 00
-  0x0f6242455e40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06
-  0x0f6242455e50: f2 f2 f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00
-  0x0f6242455e60: 00 00 00 00 00 00 00 00 00 00 00 00 00 04 f2 f2
-  0x0f6242455e70: f2 f2 f2 f2 f2 f2 00 00 00 00 f2 f2 f2 f2 00 00
-  0x0f6242455e80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe7150b4fe0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fe7150b4ff0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fe7150b5000: f1 f1 f1 f1 04 f2 00 00 00 00 00 f2 f2 f2 f2 f2
+  0x0fe7150b5010: 00 00 00 00 00 f2 f2 f2 f2 f2 00 00 00 00 00 f2
+  0x0fe7150b5020: f2 f2 f2 f2 00 00 00 00 00 f2 f2 f2 f2 f2 00 00
+=>0x0fe7150b5030: 00 00 00[f2]f2 f2 f2 f2 00 00 00 00 00 00 00 00
+  0x0fe7150b5040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06
+  0x0fe7150b5050: f2 f2 f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00
+  0x0fe7150b5060: 00 00 00 00 00 00 00 00 00 00 00 00 00 04 f2 f2
+  0x0fe7150b5070: f2 f2 f2 f2 f2 f2 00 00 00 00 f2 f2 f2 f2 00 00
+  0x0fe7150b5080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

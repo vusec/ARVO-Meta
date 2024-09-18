@@ -1,10 +1,10 @@
-INFO: Seed: 299201743
+INFO: Seed: 3268422358
 INFO: Loaded 1 modules   (83953 inline 8-bit counters): 83953 [0x1509c88, 0x151e479),
 INFO: Loaded 1 PC tables (83953 PCs): 83953 [0x151e480,0x1666390),
 /out/coder_BIGTIFF_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000009d00 at pc 0x000000b05086 bp 0x7fff2573c110 sp 0x7fff2573c108
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000009d00 at pc 0x000000b05086 bp 0x7fff7ccda690 sp 0x7fff7ccda688
 WRITE of size 4 at 0x621000009d00 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0xb05085 in put1bitbwtile /src/libtiff/libtiff/tif_getimage.c:1377:2
@@ -19,7 +19,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #9 0x52b76a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #10 0x536fbb in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #11 0x52ae0c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #12 0x7ab34daf183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x795d410dc83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41de18 in _start (/out/coder_BIGTIFF_fuzzer+0x41de18)
 
 DEDUP_TOKEN: put1bitbwtile--gtStripContig--TIFFReadRGBAImageOriented
@@ -35,7 +35,7 @@ allocated by thread T0 here:
     #7 0x52b76a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #8 0x536fbb in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #9 0x52ae0c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #10 0x7ab34daf183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x795d410dc83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ReadTIFFImage--ReadImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libtiff/libtiff/tif_getimage.c:1377:2 in put1bitbwtile

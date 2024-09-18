@@ -1,9 +1,9 @@
-INFO: Seed: 144347562
+INFO: Seed: 3266028510
 INFO: Loaded 1 modules (68167 guards): [0xe331b0, 0xe75acc),
 /out/ffmpeg_AV_CODEC_ID_SAMI_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000002681 at pc 0x0000004b0ab8 bp 0x7ffc768d2ad0 sp 0x7ffc768d2280
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000002681 at pc 0x0000004b0ab8 bp 0x7ffe142d11f0 sp 0x7ffe142d09a0
 READ of size 1 at 0x61d000002681 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x4b0ab7 in __interceptor_strncmp.part.75 /src/llvm/projects/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:367
@@ -18,7 +18,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #9 0x8a8416 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #10 0x8b38b6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #11 0x8a7a38 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #12 0x7996f146c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x790ef905b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41d6a8 in _start (/out/ffmpeg_AV_CODEC_ID_SAMI_fuzzer+0x41d6a8)
 
 DEDUP_TOKEN: __interceptor_strncmp.part.75--ff_htmlmarkup_to_ass--sami_paragraph_to_ass
@@ -38,7 +38,7 @@ allocated by thread T0 here:
     #11 0x8a8416 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #12 0x8b38b6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #13 0x8a7a38 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #14 0x7996f146c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x790ef905b83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: realloc--av_bprint_alloc--av_bprint_chars
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:367 in __interceptor_strncmp.part.75

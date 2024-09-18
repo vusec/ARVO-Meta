@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/xslt
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x00000077c560 at pc 0x00000049efc1 bp 0x7fff51193c60 sp 0x7fff51193430
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x00000077c560 at pc 0x00000049efc1 bp 0x7ffd79cb3880 sp 0x7ffd79cb3050
 READ of size 3467 at 0x00000077c560 thread T0
 SCARINESS: 26 (multi-byte-read-global-buffer-overflow)
     #0 0x49efc0 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -23,7 +23,7 @@ SCARINESS: 26 (multi-byte-read-global-buffer-overflow)
     #16 0x4decb4 in xsltFuzzXslt /src/libxslt/tests/fuzz/fuzz.c:312:9
     #17 0x4dd0b1 in LLVMFuzzerTestOneInput /src/libxslt/tests/fuzz/xslt.c:18:23
     #18 0x4e02db in main (/out/xslt+0x4e02db)
-    #19 0x739d3dbfa082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #19 0x78f925d91082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #20 0x41e7fd in _start (/out/xslt+0x41e7fd)
 
 DEDUP_TOKEN: __asan_memcpy--xmlDictAddString--xmlDictLookup

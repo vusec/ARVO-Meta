@@ -1,9 +1,9 @@
-INFO: Seed: 146067776
+INFO: Seed: 3266008887
 INFO: Loaded 1 modules (68871 guards): [0xe39ef0, 0xe7d30c),
 /out/ffmpeg_AV_CODEC_ID_DFA_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60e0000001a0 at pc 0x000000560cd9 bp 0x7ffe9cca1a10 sp 0x7ffe9cca1a08
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60e0000001a0 at pc 0x000000560cd9 bp 0x7ffe82b74e70 sp 0x7ffe82b74e68
 WRITE of size 1 at 0x60e0000001a0 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x560cd8 in decode_dds1 /src/ffmpeg/libavcodec/dfa.c:184:45
@@ -19,7 +19,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #10 0x8afa86 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #11 0x8baf26 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #12 0x8af0a8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #13 0x73cd9dca483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x7974076a283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #14 0x41d658 in _start (/out/ffmpeg_AV_CODEC_ID_DFA_fuzzer+0x41d658)
 
 DEDUP_TOKEN: decode_dds1--dfa_decode_frame--decode_simple_internal
@@ -36,7 +36,7 @@ allocated by thread T0 here:
     #8 0x8afa86 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #9 0x8baf26 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #10 0x8af0a8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #11 0x73cd9dca483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7974076a283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/dfa.c:184:45 in decode_dds1

@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/av1_dec_fuzzer
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x615000000554 at pc 0x000000522d9f bp 0x7fff4b8195e0 sp 0x7fff4b8195d8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x615000000554 at pc 0x000000522d9f bp 0x7ffe8baf83c0 sp 0x7ffe8baf83b8
 WRITE of size 4 at 0x615000000554 thread T0
 SCARINESS: 46 (4-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x522d9e in sync_write /src/aom/av1/decoder/decodeframe.c:2567:36
@@ -21,7 +21,7 @@ SCARINESS: 46 (4-byte-write-heap-buffer-overflow-far-from-bounds)
     #14 0x4e28fe in aom_codec_decode /src/aom/aom/src/aom_decoder.c:103:11
     #15 0x4e0fe6 in LLVMFuzzerTestOneInput /src/aom/examples/av1_dec_fuzzer.cc:56:9
     #16 0x4d6f8b in main (/out/av1_dec_fuzzer+0x4d6f8b)
-    #17 0x71fc55b8f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #17 0x7fa73a3d9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #18 0x41d55d in _start (/out/av1_dec_fuzzer+0x41d55d)
 
 DEDUP_TOKEN: sync_write--signal_decoding_done_for_erroneous_row--row_mt_worker_hook

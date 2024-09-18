@@ -1,6 +1,6 @@
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7c1981dbf922 at pc 0x0000006483ae bp 0x7fff2e1a0a70 sp 0x7fff2e1a0a68
-READ of size 4 at 0x7c1981dbf922 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7e7fcc60b922 at pc 0x0000006483ae bp 0x7ffd14341a10 sp 0x7ffd14341a08
+READ of size 4 at 0x7e7fcc60b922 thread T0
 SCARINESS: 32 (4-byte-read-stack-buffer-overflow)
     #0 0x6483ad in get_bits /src/ffmpeg/./libavcodec/get_bits.h:330:5
     #1 0x6483ad in get_bits_long /src/ffmpeg/./libavcodec/get_bits.h:417:16
@@ -12,11 +12,11 @@ SCARINESS: 32 (4-byte-read-stack-buffer-overflow)
     #7 0xd307dd in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #8 0xd305e8 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #9 0xd301a8 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #10 0x7c1982411082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #10 0x7e7fcc78c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #11 0x4299ed in _start (/out/ffmpeg_dem_JPEGXL_ANIM_fuzzer+0x4299ed)
 
 DEDUP_TOKEN: get_bits--get_bits_long--jpegxl_read_extra_channel_info
-Address 0x7c1981dbf922 is located in stack of thread T0 at offset 290 in frame
+Address 0x7e7fcc60b922 is located in stack of thread T0 at offset 290 in frame
     #0 0x63e2ff in jpegxl_anim_read_header /src/ffmpeg/libavformat/jpegxl_anim_dec.c:136
 
 DEDUP_TOKEN: jpegxl_anim_read_header
@@ -32,17 +32,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/ffmpeg/./libavcodec/get_bits.h:330:5 in get_bits
 Shadow bytes around the buggy address:
-  0x0f83b03afed0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f83b03afee0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f83b03afef0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f83b03aff00: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f83b03aff10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0f83b03aff20: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 f8 f2 f8 f8
-  0x0f83b03aff30: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0f83b03aff40: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0f83b03aff50: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0f83b03aff60: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0f83b03aff70: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd0798b96d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd0798b96e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd0798b96f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd0798b9700: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fd0798b9710: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0fd0798b9720: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 f8 f2 f8 f8
+  0x0fd0798b9730: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd0798b9740: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd0798b9750: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd0798b9760: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0fd0798b9770: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

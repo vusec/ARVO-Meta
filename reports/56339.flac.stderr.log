@@ -1,6 +1,6 @@
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffd00f76f3c at pc 0x0000004dc822 bp 0x7ffd00f76940 sp 0x7ffd00f76938
-READ of size 4 at 0x7ffd00f76f3c thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffd4a8a4a9c at pc 0x0000004dc822 bp 0x7ffd4a8a44a0 sp 0x7ffd4a8a4498
+READ of size 4 at 0x7ffd4a8a4a9c thread T0
 SCARINESS: 32 (4-byte-read-stack-buffer-overflow)
     #0 0x4dc821 in dump_stats /src/flac/oss-fuzz/../src/flac/analyze.c:219:53
     #1 0x4dbd55 in flac__analyze_frame /src/flac/oss-fuzz/../src/flac/analyze.c:159:10
@@ -16,11 +16,11 @@ SCARINESS: 32 (4-byte-read-stack-buffer-overflow)
     #11 0x521f9a in LLVMFuzzerTestOneInput /src/flac/oss-fuzz/tool_flac.c:81:2
     #12 0x52d8aa in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #13 0x52d67c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #14 0x7fd134233082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x74c03e8a9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #15 0x41d62d in _start (/out/fuzzer_tool_flac+0x41d62d)
 
 DEDUP_TOKEN: dump_stats--flac__analyze_frame--write_callback
-Address 0x7ffd00f76f3c is located in stack of thread T0 at offset 1180 in frame
+Address 0x7ffd4a8a4a9c is located in stack of thread T0 at offset 1180 in frame
     #0 0x4d98cf in flac__analyze_frame /src/flac/oss-fuzz/../src/flac/analyze.c:66
 
 DEDUP_TOKEN: flac__analyze_frame
@@ -31,17 +31,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/flac/oss-fuzz/../src/flac/analyze.c:219:53 in dump_stats
 Shadow bytes around the buggy address:
-  0x1000201e6d90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6da0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6db0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6dc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6dd0: 00 00 00 00 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2
-=>0x1000201e6de0: f2 f2 f2 f2 f2 f2 f2[f2]00 00 00 00 00 00 00 00
-  0x1000201e6df0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6e00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6e10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6e20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x1000201e6e30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c900: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c910: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c920: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c930: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c940: 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+=>0x10002950c950: f2 f2 f2[f2]00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10002950c9a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

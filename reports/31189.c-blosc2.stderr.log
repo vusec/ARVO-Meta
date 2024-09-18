@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 106231405
+INFO: Seed: 3278522493
 INFO: Loaded 1 modules   (40891 inline 8-bit counters): 40891 [0x8745260, 0x874f21b),
 INFO: Loaded 1 PC tables (40891 PCs): 40891 [0x86a7924,0x86f76fc),
 /out/decompress_frame_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xefc5e56e at pc 0x08247a5e bp 0xff87c528 sp 0xff87c520
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xefc5e56e at pc 0x08247a5e bp 0xffd09608 sp 0xffd09600
 READ of size 4 at 0xefc5e56e thread T0
 SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x8247a5d in sw32_ /src/c-blosc2/blosc/blosc-private.h:90:13
@@ -17,7 +17,7 @@ SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #6 0x808dd8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #7 0x8093cb4 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #8 0x80bd497 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #9 0xf1675646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #9 0xf163c646 in __libc_start_main (/lib32/libc.so.6+0x18646)
     #10 0x8068238 in _start (/out/decompress_frame_fuzzer+0x8068238)
 
 DEDUP_TOKEN: sw32_--frame_get_lazychunk--frame_decompress_chunk
@@ -28,7 +28,7 @@ allocated by thread T0 here:
     #2 0x808dd8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #3 0x8093cb4 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #4 0x80bd497 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0xf1675646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #5 0xf163c646 in __libc_start_main (/lib32/libc.so.6+0x18646)
 
 DEDUP_TOKEN: malloc--operator new(unsigned int)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/c-blosc2/blosc/blosc-private.h:90:13 in sw32_

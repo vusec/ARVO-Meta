@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 71064266
+INFO: Seed: 3302444866
 INFO: Loaded 1 modules   (30955 inline 8-bit counters): 30955 [0xef3d30, 0xefb61b),
 INFO: Loaded 1 PC tables (30955 PCs): 30955 [0xefb620,0xf744d0),
 /out/av1_dec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60f0000001de at pc 0x0000007bd2dc bp 0x7ffc3266e310 sp 0x7ffc3266e308
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60f0000001de at pc 0x0000007bd2dc bp 0x7ffcd71516f0 sp 0x7ffcd71516e8
 READ of size 1 at 0x60f0000001de thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x7bd2db in od_ec_dec_refill /src/aom/aom_dsp/entdec.c:94:26
@@ -38,7 +38,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #27 0x429552 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #28 0x42edfc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #29 0x458332 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #30 0x7c1357ccf082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #30 0x7e6d30551082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #31 0x41f71d in _start (/out/av1_dec_fuzzer+0x41f71d)
 
 DEDUP_TOKEN: od_ec_dec_refill--od_ec_dec_normalize--aom_read_cdf_
@@ -49,7 +49,7 @@ allocated by thread T0 here:
     #2 0x429552 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #3 0x42edfc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #4 0x458332 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0x7c1357ccf082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #5 0x7e6d30551082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/aom/aom_dsp/entdec.c:94:26 in od_ec_dec_refill

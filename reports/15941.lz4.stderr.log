@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61c00000075b at pc 0x0000004f0b5e bp 0x7ffce6f1da80 sp 0x7ffce6f1da78
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61c00000075b at pc 0x0000004f0b5e bp 0x7ffd2870ed80 sp 0x7ffd2870ed78
 WRITE of size 4 at 0x61c00000075b thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x4f0b5d in LZ4_write32 /src/lz4/lib/lz4.c:250:76
@@ -19,7 +19,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #4 0x4c9963 in LLVMFuzzerTestOneInput /src/lz4/ossfuzz/compress_fuzzer.c:27:29
     #5 0x4c7eea in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #6 0x4c7eea in main /src/libfuzzer/afl/afl_driver.cpp:253
-    #7 0x70b238dc383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x78ae4128783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41daa8 in _start (/out/compress_fuzzer+0x41daa8)
 
 DEDUP_TOKEN: LZ4_write32--LZ4_compress_generic--LZ4_compress_fast_extState
@@ -29,7 +29,7 @@ allocated by thread T0 here:
     #1 0x4c991d in LLVMFuzzerTestOneInput /src/lz4/ossfuzz/compress_fuzzer.c:19:30
     #2 0x4c7eea in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #3 0x4c7eea in main /src/libfuzzer/afl/afl_driver.cpp:253
-    #4 0x70b238dc383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #4 0x78ae4128783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--LLVMFuzzerTestOneInput--ExecuteFilesOnyByOne
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/lz4/lib/lz4.c:250:76 in LZ4_write32

@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 384402197
+INFO: Seed: 3293725859
 INFO: Loaded 1 modules   (21783 inline 8-bit counters): 21783 [0x938cf0, 0x93e207),
 INFO: Loaded 1 PC tables (21783 PCs): 21783 [0x818f20,0x86e090),
 /out/libraw_nef_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001b780 at pc 0x0000006598dd bp 0x7ffc91ab98b0 sp 0x7ffc91ab98a8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001b780 at pc 0x0000006598dd bp 0x7ffcb6cd0ab0 sp 0x7ffcb6cd0aa8
 WRITE of size 2 at 0x63300001b780 thread T0
 SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #0 0x6598dc in LibRaw::kodak_rgb_load_raw() /src/libraw/src/decoders/kodak_decoders.cpp:503:23
@@ -16,7 +16,7 @@ SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #5 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #6 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #7 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #8 0x75f5e7934082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #8 0x77ccbb659082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #9 0x41f85d in _start (/out/libraw_nef_fuzzer+0x41f85d)
 
 DEDUP_TOKEN: LibRaw::kodak_rgb_load_raw()--LibRaw::kodak_thumb_loader()--LibRaw::unpack_thumb()
@@ -32,7 +32,7 @@ allocated by thread T0 here:
     #7 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x75f5e7934082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #10 0x77ccbb659082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_calloc--calloc--LibRaw::calloc(unsigned long, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libraw/src/decoders/kodak_decoders.cpp:503:23 in LibRaw::kodak_rgb_load_raw()

@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62700000365c at pc 0x000000571824 bp 0x7ffe6daaace0 sp 0x7ffe6daaacd8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62700000365c at pc 0x000000571824 bp 0x7ffd68cefae0 sp 0x7ffd68cefad8
 READ of size 4 at 0x62700000365c thread T0
 SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x571823 in ff_mlp_pack_output /src/ffmpeg/libavcodec/mlpdsp.c:116:30
@@ -12,7 +12,7 @@ SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #7 0x50550b in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:510:25
     #8 0xd9e0ea in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #9 0xd9debc in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #10 0x70e9d4b18082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #10 0x7977cb7fc082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #11 0x442f6d in _start (/out/ffmpeg_AV_CODEC_ID_TRUEHD_fuzzer+0x442f6d)
 
 DEDUP_TOKEN: ff_mlp_pack_output--output_data--read_access_unit

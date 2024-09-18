@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 105996761
+INFO: Seed: 3281611769
 INFO: Loaded 1 modules   (10244 inline 8-bit counters): 10244 [0x8bf2e0, 0x8c1ae4),
 INFO: Loaded 1 PC tables (10244 PCs): 10244 [0x8c1ae8,0x8e9b28),
 /out/ssml-fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ff46ed65120 at pc 0x000000521487 bp 0x7fff4c9d8bf0 sp 0x7fff4c9d83b8
-READ of size 16 at 0x7ff46ed65120 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7203bd78e120 at pc 0x000000521487 bp 0x7ffe7d2d0b30 sp 0x7ffe7d2d02f8
+READ of size 16 at 0x7203bd78e120 thread T0
 SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
     #0 0x521486 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
     #1 0x579e09 in TranslateClause /src/espeak-ng/src/libespeak-ng/translate.c:2649:4
@@ -20,11 +20,11 @@ SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
     #9 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #10 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #11 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0x7ff46dcac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x7203bc6d583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41ed38 in _start (/out/ssml-fuzzer+0x41ed38)
 
 DEDUP_TOKEN: __asan_memcpy--TranslateClause--SpeakNextClause
-Address 0x7ff46ed65120 is located in stack of thread T0 at offset 6432 in frame
+Address 0x7203bd78e120 is located in stack of thread T0 at offset 6432 in frame
     #0 0x5746ef in TranslateClause /src/espeak-ng/src/libespeak-ng/translate.c:1985
 
 DEDUP_TOKEN: TranslateClause
@@ -49,17 +49,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
 Shadow bytes around the buggy address:
-  0x0fff0dda49d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff0dda49e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff0dda49f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff0dda4a00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff0dda4a10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fff0dda4a20: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
-  0x0fff0dda4a30: f2 f2 f2 f2 04 f2 f8 f2 04 f2 00 00 00 00 00 00
-  0x0fff0dda4a40: 00 00 00 00 00 00 00 00 00 00 00 00 06 f2 f2 f2
-  0x0fff0dda4a50: f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00
-  0x0fff0dda4a60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fff0dda4a70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e40f7ae9bd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e40f7ae9be0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e40f7ae9bf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e40f7ae9c00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e40f7ae9c10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e40f7ae9c20: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x0e40f7ae9c30: f2 f2 f2 f2 04 f2 f8 f2 04 f2 00 00 00 00 00 00
+  0x0e40f7ae9c40: 00 00 00 00 00 00 00 00 00 00 00 00 06 f2 f2 f2
+  0x0e40f7ae9c50: f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00
+  0x0e40f7ae9c60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e40f7ae9c70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

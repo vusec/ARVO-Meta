@@ -1,9 +1,9 @@
-INFO: Seed: 147063242
+INFO: Seed: 3266056847
 INFO: Loaded 1 modules (73793 guards): [0xf1f4f0, 0xf675f4),
 /out/ffmpeg_AV_CODEC_ID_LIBFDK_AAC_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000012400 at pc 0x0000004c5d4d bp 0x7ffd4c9de460 sp 0x7ffd4c9ddc10
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000012400 at pc 0x0000004c5d4d bp 0x7ffe810c6d60 sp 0x7ffe810c6510
 WRITE of size 65536 at 0x62d000012400 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x4c5d4c in __asan_memset /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors.cc:473
@@ -21,7 +21,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #12 0x95f756 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #13 0x96abf6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #14 0x95ed78 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #15 0x7da70ff1483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x70980175f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #16 0x41d7b8 in _start (/out/ffmpeg_AV_CODEC_ID_LIBFDK_AAC_fuzzer+0x41d7b8)
 
 DEDUP_TOKEN: __asan_memset--FDKmemset--aacDecoder_DecodeFrame
@@ -37,7 +37,7 @@ allocated by thread T0 here:
     #7 0x95f756 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #8 0x96abf6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #9 0x95ed78 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #10 0x7da70ff1483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x70980175f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--fdk_aac_decode_init
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors.cc:473 in __asan_memset

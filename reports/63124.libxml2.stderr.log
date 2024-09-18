@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 420746433
+INFO: Seed: 3301263282
 INFO: Loaded 1 modules   (39446 inline 8-bit counters): 39446 [0x996030, 0x99fa46),
 INFO: Loaded 1 PC tables (39446 PCs): 39446 [0x85f470,0x8f95d0),
 /out/xslt: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000cf4 at pc 0x00000068b5d7 bp 0x7ffe6383ff10 sp 0x7ffe6383ff08
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000cf4 at pc 0x00000068b5d7 bp 0x7ffdf32508b0 sp 0x7ffdf32508a8
 WRITE of size 1 at 0x602000000cf4 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x68b5d6 in xmlCopyCharMultiByte /src/libxml2/parserInternals.c:1095:12
@@ -21,7 +21,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #10 0x429742 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x42efec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #12 0x458522 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0x7b5b14328082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #13 0x7c47552b2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #14 0x41f90d in _start (/out/xslt+0x41f90d)
 
 DEDUP_TOKEN: xmlCopyCharMultiByte--xmlParseCommentComplex--xmlParseComment
@@ -41,7 +41,7 @@ allocated by thread T0 here:
     #11 0x429742 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #12 0x42efec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #13 0x458522 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #14 0x7b5b14328082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x7c47552b2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_realloc--xmlFuzzRealloc--xmlParseCommentComplex
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libxml2/parserInternals.c:1095:12 in xmlCopyCharMultiByte

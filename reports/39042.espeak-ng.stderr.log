@@ -1,13 +1,13 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 119572127
+INFO: Seed: 3284301166
 INFO: Loaded 1 modules   (11730 inline 8-bit counters): 11730 [0x6d1b60, 0x6d4932),
 INFO: Loaded 1 PC tables (11730 PCs): 11730 [0x6d4938,0x702658),
 /out/ssml-fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 Unknown phoneme table: ''
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-underflow on address 0x733cbd009000 at pc 0x000000564519 bp 0x7ffcca85fe90 sp 0x7ffcca85fe88
-READ of size 8 at 0x733cbd009000 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-underflow on address 0x7d7d8921c000 at pc 0x000000564519 bp 0x7ffdfac89c50 sp 0x7ffdfac89c48
+READ of size 8 at 0x7d7d8921c000 thread T0
 SCARINESS: 48 (8-byte-read-stack-buffer-underflow-far-from-bounds)
     #0 0x564518 in CountVowelPosition /src/espeak-ng/src/libespeak-ng/synthdata.c:473:14
     #1 0x564518 in InterpretCondition /src/espeak-ng/src/libespeak-ng/synthdata.c:652:12
@@ -24,11 +24,11 @@ SCARINESS: 48 (8-byte-read-stack-buffer-underflow-far-from-bounds)
     #12 0x4426e2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #13 0x44810b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #14 0x46dfb2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0x733cbd0d9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #15 0x7d7d892ec082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #16 0x41f7fd in _start (/out/ssml-fuzzer+0x41f7fd)
 
 DEDUP_TOKEN: CountVowelPosition--InterpretCondition--InterpretPhoneme
-Address 0x733cbd009000 is located in stack of thread T0 at offset 0 in frame
+Address 0x7d7d8921c000 is located in stack of thread T0 at offset 0 in frame
     #0 0x56479f in InterpretPhoneme2 /src/espeak-ng/src/libespeak-ng/synthdata.c:983
 
 DEDUP_TOKEN: InterpretPhoneme2
@@ -38,17 +38,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-underflow /src/espeak-ng/src/libespeak-ng/synthdata.c:473:14 in CountVowelPosition
 Shadow bytes around the buggy address:
-  0x0e68179f91b0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e68179f91c0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e68179f91d0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e68179f91e0: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e68179f91f0: 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3 f3
-=>0x0e68179f9200:[f1]f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e68179f9210: 00 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3
-  0x0e68179f9220: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 f3 f3
-  0x0e68179f9230: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e68179f9240: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e68179f9250: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fb03123b7b0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fb03123b7c0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fb03123b7d0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fb03123b7e0: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb03123b7f0: 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3 f3
+=>0x0fb03123b800:[f1]f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb03123b810: 00 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3
+  0x0fb03123b820: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 f3 f3
+  0x0fb03123b830: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb03123b840: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fb03123b850: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

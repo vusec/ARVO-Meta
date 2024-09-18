@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60600000011d at pc 0x00000049ee81 bp 0x7ffe4afb7e90 sp 0x7ffe4afb7660
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60600000011d at pc 0x00000049ee81 bp 0x7ffd17a98af0 sp 0x7ffd17a982c0
 READ of size 40 at 0x60600000011d thread T0
 SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #0 0x49ee80 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -11,7 +11,7 @@ SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #6 0x4dd275 in LLVMFuzzerTestOneInput /src/pjsip/tests/fuzz/fuzz-stun.c:85:11
     #7 0x531b9a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #8 0x53196c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #9 0x73e7261b7082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x76bfebbd4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #10 0x41e6bd in _start (/out/fuzz-stun+0x41e6bd)
 
 DEDUP_TOKEN: __asan_memcpy--pj_memcpy--pj_strdup

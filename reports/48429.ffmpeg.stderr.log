@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61900000ae80 at pc 0x000000570e29 bp 0x7ffdbccbf7f0 sp 0x7ffdbccbf7e8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61900000ae80 at pc 0x000000570e29 bp 0x7ffd84c5eed0 sp 0x7ffd84c5eec8
 WRITE of size 4 at 0x61900000ae80 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x570e28 in parse_palette /src/ffmpeg/libavcodec/qdrw.c:70:31
@@ -11,7 +11,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #6 0x4ff985 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:482:25
     #7 0xdb37ea in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #8 0xdb35bd in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #9 0x768af27a5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #9 0x7efca2821082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #10 0x443afd in _start (/out/ffmpeg_AV_CODEC_ID_QDRAW_fuzzer+0x443afd)
 
 DEDUP_TOKEN: parse_palette--decode_frame--decode_simple_internal

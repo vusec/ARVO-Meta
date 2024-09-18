@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 382228405
+INFO: Seed: 3286167054
 INFO: Loaded 1 modules   (20570 inline 8-bit counters): 20570 [0x900b60, 0x905bba),
 INFO: Loaded 1 PC tables (20570 PCs): 20570 [0x7e6148,0x8366e8),
 /out/libraw_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x732d522bc7e0 at pc 0x00000070fcc6 bp 0x7fff5ae2d970 sp 0x7fff5ae2d968
-WRITE of size 1 at 0x732d522bc7e0 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7dc9b61ba7e0 at pc 0x00000070fcc6 bp 0x7fff99b50750 sp 0x7fff99b50748
+WRITE of size 1 at 0x7dc9b61ba7e0 thread T0
 SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #0 0x70fcc5 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:255:38
     #1 0x70d8a2 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&) /src/libraw/src/metadata/cr3_parser.cpp:583:13
@@ -48,11 +48,11 @@ SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #37 0x4425f2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #38 0x44816c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #39 0x4711a2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #40 0x732d52330082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #40 0x7dc9b65bc082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #41 0x41f7ed in _start (/out/libraw_fuzzer+0x41f7ed)
 
 DEDUP_TOKEN: LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)--LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)--LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)
-Address 0x732d522bc7e0 is located in stack of thread T0 at offset 12256 in frame
+Address 0x7dc9b61ba7e0 is located in stack of thread T0 at offset 12256 in frame
     #0 0x68b20f in LibRaw::identify() /src/libraw/src/metadata/identify.cpp:181
 
 DEDUP_TOKEN: LibRaw::identify()
@@ -69,17 +69,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/libraw/src/metadata/cr3_parser.cpp:255:38 in LibRaw::parseCR3(long long, long long, short&, char*, short&, short&)
 Shadow bytes around the buggy address:
-  0x0e662a44f8a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e662a44f8b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e662a44f8c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e662a44f8d0: 00 00 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
-  0x0e662a44f8e0: f2 f2 f2 f2 f2 f2 02 f2 02 f2 02 f2 00 00 00 00
-=>0x0e662a44f8f0: 00 00 00 00 00 00 00 00 00 00 00 00[f2]f2 f2 f2
-  0x0e662a44f900: f8 f8 f8 f8 f3 f3 f3 f3 00 00 00 00 00 00 00 00
-  0x0e662a44f910: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e662a44f920: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e662a44f930: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e662a44f940: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f4a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f4b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f4c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f4d0: 00 00 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x0fb9b6c2f4e0: f2 f2 f2 f2 f2 f2 02 f2 02 f2 02 f2 00 00 00 00
+=>0x0fb9b6c2f4f0: 00 00 00 00 00 00 00 00 00 00 00 00[f2]f2 f2 f2
+  0x0fb9b6c2f500: f8 f8 f8 f8 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f510: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f520: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f530: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fb9b6c2f540: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

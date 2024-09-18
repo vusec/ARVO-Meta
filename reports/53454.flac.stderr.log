@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 252176444
+INFO: Seed: 3294102611
 INFO: Loaded 1 modules   (8526 inline 8-bit counters): 8526 [0x70d068, 0x70f1b6),
 INFO: Loaded 1 PC tables (8526 PCs): 8526 [0x70f1b8,0x730698),
 /out/fuzzer_reencoder: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ce8cd39fdf8 at pc 0x000000572284 bp 0x7fffe1596680 sp 0x7fffe1596678
-WRITE of size 8 at 0x7ce8cd39fdf8 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x76eab639fdf8 at pc 0x000000572284 bp 0x7ffecb89f9c0 sp 0x7ffecb89f9b8
+WRITE of size 8 at 0x76eab639fdf8 thread T0
 SCARINESS: 57 (8-byte-write-stack-buffer-overflow)
     #0 0x572283 in FLAC::Decoder::FuzzerDecoder::metadata_callback(FLAC__StreamMetadata const*) /src/flac/oss-fuzz/fuzzer_reencoder.cc:64:58
     #1 0x5868dc in FLAC::Decoder::Stream::metadata_callback_(FLAC__StreamDecoder const*, FLAC__StreamMetadata const*, void*) /src/flac/src/libFLAC++/stream_decoder.cpp:321:14
@@ -18,11 +18,11 @@ SCARINESS: 57 (8-byte-write-stack-buffer-overflow)
     #7 0x4295e2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x42ee8c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x4583c2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x7ce8cd921082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #10 0x76eab694e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #11 0x41f7ad in _start (/out/fuzzer_reencoder+0x41f7ad)
 
 DEDUP_TOKEN: FLAC::Decoder::FuzzerDecoder::metadata_callback(FLAC__StreamMetadata const*)--FLAC::Decoder::Stream::metadata_callback_(FLAC__StreamDecoder const*, FLAC__StreamMetadata const*, void*)--read_metadata_
-Address 0x7ce8cd39fdf8 is located in stack of thread T0 at offset 1528 in frame
+Address 0x76eab639fdf8 is located in stack of thread T0 at offset 1528 in frame
     #0 0x56ea9f in LLVMFuzzerTestOneInput /src/flac/oss-fuzz/fuzzer_reencoder.cc:126
 
 DEDUP_TOKEN: LLVMFuzzerTestOneInput
@@ -53,17 +53,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/flac/oss-fuzz/fuzzer_reencoder.cc:64:58 in FLAC::Decoder::FuzzerDecoder::metadata_callback(FLAC__StreamMetadata const*)
 Shadow bytes around the buggy address:
-  0x0f9d99a6bf60: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
-  0x0f9d99a6bf70: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
-  0x0f9d99a6bf80: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
-  0x0f9d99a6bf90: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 00 00 00 00
-  0x0f9d99a6bfa0: 00 f2 f2 f2 f2 f2 00 00 f2 f2 00 00 00 00 00 00
-=>0x0f9d99a6bfb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[f3]
-  0x0f9d99a6bfc0: f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00 00 00 00 00
-  0x0f9d99a6bfd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f9d99a6bfe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f9d99a6bff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f9d99a6c000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eddd6c6bf60: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
+  0x0eddd6c6bf70: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
+  0x0eddd6c6bf80: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 f8 f8 f8 f2
+  0x0eddd6c6bf90: f2 f2 f2 f2 f8 f8 f8 f2 f2 f2 f2 f2 00 00 00 00
+  0x0eddd6c6bfa0: 00 f2 f2 f2 f2 f2 00 00 f2 f2 00 00 00 00 00 00
+=>0x0eddd6c6bfb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[f3]
+  0x0eddd6c6bfc0: f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x0eddd6c6bfd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eddd6c6bfe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eddd6c6bff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0eddd6c6c000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

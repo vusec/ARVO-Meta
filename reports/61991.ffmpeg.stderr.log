@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x608000000080 at pc 0x0000004aa1ac bp 0x7ffff63353f0 sp 0x7ffff6334bc0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x608000000080 at pc 0x0000004aa1ac bp 0x7ffd6421c9d0 sp 0x7ffd6421c1a0
 WRITE of size 256 at 0x608000000080 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x4aa1ab in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -11,7 +11,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #6 0xd406dd in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #7 0xd404e8 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #8 0xd400a8 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #9 0x77f617907082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x7f637d68b082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #10 0x42992d in _start (/out/ffmpeg_dem_JPEGXL_ANIM_fuzzer+0x42992d)
 
 DEDUP_TOKEN: __asan_memcpy--jpegxl_anim_read_packet--ff_read_packet

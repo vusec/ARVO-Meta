@@ -1,8 +1,8 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/imread_fuzzer
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7be005e12920 at pc 0x000000437ef6 bp 0x7ffee3dd57d0 sp 0x7ffee3dd4f90
-READ of size 257 at 0x7be005e12920 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7d38386b9920 at pc 0x000000437ef6 bp 0x7ffe5e300770 sp 0x7ffe5e2fff30
+READ of size 257 at 0x7d38386b9920 thread T0
 SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
     #0 0x437ef5 in __interceptor_strlen /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:389:5
     #1 0x1851a40 in length /usr/local/bin/../include/c++/v1/__string:344:53
@@ -21,11 +21,11 @@ SCARINESS: 41 (multi-byte-read-stack-buffer-overflow)
     #14 0x4e8afe in cv::imread(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int) /src/opencv/modules/imgcodecs/src/loadsave.cpp:627:5
     #15 0x4e7868 in LLVMFuzzerTestOneInput /src/imread_fuzzer.cc:11:22
     #16 0x4dd8ab in main (/out/imread_fuzzer+0x4dd8ab)
-    #17 0x7be005ece082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #17 0x7d3838775082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #18 0x422e1d in _start (/out/imread_fuzzer+0x422e1d)
 
 DEDUP_TOKEN: __interceptor_strlen--length--basic_string<std::nullptr_t>
-Address 0x7be005e12920 is located in stack of thread T0 at offset 288 in frame
+Address 0x7d38386b9920 is located in stack of thread T0 at offset 288 in frame
     #0 0x18517ef in Imf_opencv::DwaCompressor::Classifier::Classifier(char const*&, int) /src/opencv/3rdparty/openexr/IlmImf/ImfDwaCompressor.cpp:263
 
 DEDUP_TOKEN: Imf_opencv::DwaCompressor::Classifier::Classifier(char const*&, int)
@@ -36,17 +36,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:389:5 in __interceptor_strlen
 Shadow bytes around the buggy address:
-  0x0f7c80bba4d0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f7c80bba4e0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f7c80bba4f0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f7c80bba500: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f7c80bba510: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0f7c80bba520: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 00 00 00 f3
-  0x0f7c80bba530: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f7c80bba540: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f7c80bba550: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f7c80bba560: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0f7c80bba570: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fa7870cf2d0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fa7870cf2e0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fa7870cf2f0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fa7870cf300: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fa7870cf310: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0fa7870cf320: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 00 00 00 f3
+  0x0fa7870cf330: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fa7870cf340: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fa7870cf350: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fa7870cf360: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fa7870cf370: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

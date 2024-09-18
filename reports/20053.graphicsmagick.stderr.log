@@ -1,10 +1,10 @@
-INFO: Seed: 336806801
+INFO: Seed: 3273472469
 INFO: Loaded 1 modules   (123258 inline 8-bit counters): 123258 [0x1735fa0, 0x175411a),
 INFO: Loaded 1 PC tables (123258 PCs): 123258 [0x1754120,0x19358c0),
 /out/coder_PICT_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000026402 at pc 0x0000008988fa bp 0x7ffca13ed650 sp 0x7ffca13ed648
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000026402 at pc 0x0000008988fa bp 0x7ffeb9fc1ad0 sp 0x7ffeb9fc1ac8
 READ of size 1 at 0x62d000026402 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x8988f9 in ExpandBuffer /src/graphicsmagick/coders/pict.c:749:15
@@ -18,7 +18,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #8 0x445f31 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #9 0x44bbee in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
     #10 0x475b12 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #11 0x7210dc83083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x739c44e1483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41f3a8 in _start (/out/coder_PICT_fuzzer+0x41f3a8)
 
 DEDUP_TOKEN: ExpandBuffer--DecodeImage--ReadPICTImage
@@ -35,7 +35,7 @@ allocated by thread T0 here:
     #8 0x445f31 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #9 0x44bbee in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
     #10 0x475b12 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #11 0x7210dc83083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x739c44e1483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--DecodeImage--ReadPICTImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/pict.c:749:15 in ExpandBuffer

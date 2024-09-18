@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000c94518 at pc 0x00000056deb7 bp 0x7ffd10647970 sp 0x7ffd10647968
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000c94518 at pc 0x00000056deb7 bp 0x7ffec781fe50 sp 0x7ffec781fe48
 READ of size 4 at 0x000000c94518 thread T0
 SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #0 0x56deb6 in decode_vector /src/ffmpeg/libavcodec/siren.c:652:58
@@ -12,7 +12,7 @@ SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #7 0x4fc446 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:443:9
     #8 0xc3e135 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #9 0xc3dfa5 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #10 0x7c23c9e27082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #10 0x7e3da61f6082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #11 0x44a67d in _start (/out/ffmpeg_AV_CODEC_ID_MSNSIREN_fuzzer+0x44a67d)
 
 DEDUP_TOKEN: decode_vector--siren_decode--decode_simple_internal

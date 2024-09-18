@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 292433176
+INFO: Seed: 3298872349
 INFO: Loaded 1 modules   (14148 inline 8-bit counters): 14148 [0x842f370, 0x8432ab4),
 INFO: Loaded 1 PC tables (14148 PCs): 14148 [0x8432ab4,0x844e4d4),
 /out/fuzzer_tool_flac: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0xfff04d2c at pc 0x081cccd4 bp 0xfff04728 sp 0xfff04720
-READ of size 4 at 0xfff04d2c thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0xffadd76c at pc 0x081cccd4 bp 0xffadd168 sp 0xffadd160
+READ of size 4 at 0xffadd76c thread T0
 SCARINESS: 32 (4-byte-read-stack-buffer-overflow)
     #0 0x81cccd3 in dump_stats /src/flac/oss-fuzz/../src/flac/analyze.c:219:53
     #1 0x81cbd6b in flac__analyze_frame /src/flac/oss-fuzz/../src/flac/analyze.c:159:10
@@ -26,11 +26,11 @@ SCARINESS: 32 (4-byte-read-stack-buffer-overflow)
     #15 0x807594e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #16 0x807b550 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #17 0x80a5137 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0xf7735ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4) (BuildId: d56935956a210bf85f6592f3178b979ad4f7b35f)
+    #18 0xec578ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4) (BuildId: d56935956a210bf85f6592f3178b979ad4f7b35f)
     #19 0x806ca95 in _start (/out/fuzzer_tool_flac+0x806ca95)
 
 DEDUP_TOKEN: dump_stats--flac__analyze_frame--write_callback
-Address 0xfff04d2c is located in stack of thread T0 at offset 1164 in frame
+Address 0xffadd76c is located in stack of thread T0 at offset 1164 in frame
     #0 0x81c9a8f in flac__analyze_frame /src/flac/oss-fuzz/../src/flac/analyze.c:66
 
 DEDUP_TOKEN: flac__analyze_frame
@@ -41,17 +41,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/flac/oss-fuzz/../src/flac/analyze.c:219:53 in dump_stats
 Shadow bytes around the buggy address:
-  0x3ffe0950: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe0960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe0970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe0980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe0990: 00 00 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
-=>0x3ffe09a0: f2 f2 f2 f2 f2[f2]00 00 00 00 00 00 00 00 00 00
-  0x3ffe09b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe09c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe09d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe09e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3ffe09f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5ba90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5baa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5bab0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5bac0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5bad0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f2 f2
+=>0x3ff5bae0: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2[f2]00 00
+  0x3ff5baf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5bb00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5bb10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5bb20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3ff5bb30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

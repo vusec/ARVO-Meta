@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6120000002d8 at pc 0x0000008599c4 bp 0x7ffe71fcb7d0 sp 0x7ffe71fcb7c8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6120000002d8 at pc 0x0000008599c4 bp 0x7ffec7f12830 sp 0x7ffec7f12828
 WRITE of size 2 at 0x6120000002d8 thread T0
 SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #0 0x8599c3 in InsertRow /src/graphicsmagick/coders/wpg.c:328:25
@@ -21,7 +21,7 @@ SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #6 0x4ca739 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #7 0x4cbdce in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #8 0x4cbdce in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #9 0x79c0538f883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x70f96b40c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41f148 in _start (/out/coder_WPG_fuzzer+0x41f148)
 
 DEDUP_TOKEN: InsertRow--UnpackWPGRaster--ReadWPGImage
@@ -43,7 +43,7 @@ allocated by thread T0 here:
     #13 0x4ca739 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #14 0x4cbdce in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #15 0x4cbdce in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #16 0x79c0538f883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x70f96b40c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--OpenCache--ModifyCache
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/wpg.c:328:25 in InsertRow

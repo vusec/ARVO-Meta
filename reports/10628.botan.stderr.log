@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000000f at pc 0x0000005307db bp 0x7ffdd7091de0 sp 0x7ffdd7091dd8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000000f at pc 0x0000005307db bp 0x7ffc4a8eda00 sp 0x7ffc4a8ed9f8
 READ of size 1 at 0x60200000000f thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x5307da in ref_oneandzero_unpad(unsigned char const*, unsigned long) /src/botan/./src/fuzzer/mode_padding.cpp:63:10
@@ -17,7 +17,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #2 0x52fd74 in LLVMFuzzerTestOneInput /src/botan/./src/fuzzer/fuzzers.h:39:7
     #3 0x55bb11 in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #4 0x55c0be in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #5 0x75a9d644183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x7392204fb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #6 0x41cab8 in _start (/out/mode_padding+0x41cab8)
 
 DEDUP_TOKEN: ref_oneandzero_unpad(unsigned char const*, unsigned long)--fuzz(unsigned char const*, unsigned long)--LLVMFuzzerTestOneInput
@@ -31,7 +31,7 @@ allocated by thread T0 here:
     #5 0x55ba18 in vector /usr/local/bin/../include/c++/v1/vector:1115
     #6 0x55ba18 in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:298
     #7 0x55c0be in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #8 0x75a9d644183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7392204fb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: operator new(unsigned long)--__libcpp_allocate--allocate
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/botan/./src/fuzzer/mode_padding.cpp:63:10 in ref_oneandzero_unpad(unsigned char const*, unsigned long)

@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000001a at pc 0x0000004f6228 bp 0x7ffd479c9bb0 sp 0x7ffd479c9ba8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000001a at pc 0x0000004f6228 bp 0x7ffee5cfe350 sp 0x7ffee5cfe348
 READ of size 4 at 0x60200000001a thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x4f6227 in bytestream2_peek_be32 /src/ffmpeg/libavcodec/bytestream.h:92:1
@@ -27,7 +27,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #12 0x4ce732 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:335:23
     #13 0x99d30e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #14 0x99d30e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #15 0x7f4448e6983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x73da4058183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #16 0x41ef78 in _start (/out/ffmpeg_AV_CODEC_ID_JPEG2000_fuzzer+0x41ef78)
 
 DEDUP_TOKEN: bytestream2_peek_be32--jpeg2000_decode_packet--jpeg2000_decode_packets_po_iteration
@@ -47,7 +47,7 @@ allocated by thread T0 here:
     #11 0x4ce732 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:335:23
     #12 0x99d30e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #13 0x99d30e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #14 0x7f4448e6983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x73da4058183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: realloc--av_realloc--get_ppm
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/bytestream.h:92:1 in bytestream2_peek_be32

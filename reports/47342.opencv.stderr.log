@@ -13,7 +13,7 @@ afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 [ WARN:0] global /src/opencv/modules/imgcodecs/src/grfmt_jpeg2000_openjpeg.cpp (304) warningLogCallback OpenJPEG2000: Found a misplaced 'cmap' box outside jp2h box
 
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000001d80 at pc 0x000001adcb54 bp 0x7ffcb4ccba60 sp 0x7ffcb4ccba58
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000001d80 at pc 0x000001adcb54 bp 0x7ffc198448a0 sp 0x7ffc19844898
 READ of size 4 at 0x61d000001d80 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x1adcb53 in opj_jp2_apply_pclr /src/opencv/3rdparty/openjpeg/openjp2/jp2.c:1112:26
@@ -24,7 +24,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #5 0x4d2899 in LLVMFuzzerTestOneInput /src/imdecode_fuzzer.cc:10:30
     #6 0x4d0dee in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #7 0x4d0dee in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #8 0x7a38e478083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7a5a2250583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #9 0x422cd8 in _start (/out/imdecode_fuzzer+0x422cd8)
 
 DEDUP_TOKEN: opj_jp2_apply_pclr--opj_jp2_decode--cv::Jpeg2KOpjDecoder::readData(cv::Mat&)
@@ -46,7 +46,7 @@ allocated by thread T0 here:
     #13 0x4d2899 in LLVMFuzzerTestOneInput /src/imdecode_fuzzer.cc:10:30
     #14 0x4d0dee in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #15 0x4d0dee in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #16 0x7a38e478083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x7a5a2250583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--opj_aligned_alloc_n--opj_aligned_malloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/opencv/3rdparty/openjpeg/openjp2/jp2.c:1112:26 in opj_jp2_apply_pclr

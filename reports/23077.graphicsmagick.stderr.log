@@ -1,11 +1,11 @@
-INFO: Seed: 346368770
+INFO: Seed: 3274830920
 INFO: Loaded 1 modules   (121254 inline 8-bit counters): 121254 [0x925f820, 0x927d1c6),
 INFO: Loaded 1 PC tables (121254 PCs): 121254 [0x927d1c8,0x9369ef8),
 /out/coder_WPG_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe5f03d58 at pc 0x086241ee bp 0xff90da08 sp 0xff90da00
-WRITE of size 2 at 0xe5f03d58 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xee403d58 at pc 0x086241ee bp 0xffbb2da8 sp 0xffbb2da0
+WRITE of size 2 at 0xee403d58 thread T0
 SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #0 0x86241ed in InsertRow /src/graphicsmagick/coders/wpg.c:328:25
     #1 0x8625d79 in ZeroFillMissingData /src/graphicsmagick/coders/wpg.c:422:9
@@ -19,11 +19,11 @@ SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #9 0x80d5f43 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #10 0x80db648 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
     #11 0x8100457 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #12 0xe9629646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #12 0xf1b27646 in __libc_start_main (/lib32/libc.so.6+0x18646)
     #13 0x80b0f14 in _start (/out/coder_WPG_fuzzer+0x80b0f14)
 
 DEDUP_TOKEN: InsertRow--ZeroFillMissingData--UnpackWPGRaster
-0xe5f03d58 is located 0 bytes to the right of 280-byte region [0xe5f03c40,0xe5f03d58)
+0xee403d58 is located 0 bytes to the right of 280-byte region [0xee403c40,0xee403d58)
 allocated by thread T0 here:
     #0 0x81b00b5 in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0x837ea8b in MagickRealloc /src/graphicsmagick/magick/memory.c
@@ -45,22 +45,22 @@ allocated by thread T0 here:
     #17 0x80d5f43 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #18 0x80db648 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
     #19 0x8100457 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #20 0xe9629646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #20 0xf1b27646 in __libc_start_main (/lib32/libc.so.6+0x18646)
 
 DEDUP_TOKEN: malloc--MagickRealloc--OpenCache
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/wpg.c:328:25 in InsertRow
 Shadow bytes around the buggy address:
-  0x3cbe0750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cbe0760: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cbe0770: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cbe0780: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
-  0x3cbe0790: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x3cbe07a0: 00 00 00 00 00 00 00 00 00 00 00[fa]fa fa fa fa
-  0x3cbe07b0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
-  0x3cbe07c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3cbe07d0: 00 00 00 00 00 00 00 00 00 00 00 00 fa fa fa fa
-  0x3cbe07e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cbe07f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dc80750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dc80760: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dc80770: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dc80780: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x3dc80790: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3dc807a0: 00 00 00 00 00 00 00 00 00 00 00[fa]fa fa fa fa
+  0x3dc807b0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x3dc807c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3dc807d0: 00 00 00 00 00 00 00 00 00 00 00 00 fa fa fa fa
+  0x3dc807e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3dc807f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

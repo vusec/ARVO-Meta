@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 331076075
+INFO: Seed: 3276958498
 INFO: Loaded 1 modules   (150063 inline 8-bit counters): 150063 [0x1a78c00, 0x1a9d62f),
 INFO: Loaded 1 PC tables (150063 PCs): 150063 [0x1a9d630,0x1ce7920),
 /out/coder_JPG_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6120000007d8 at pc 0x000000dfc2e5 bp 0x7ffd86a55120 sp 0x7ffd86a55118
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6120000007d8 at pc 0x000000dfc2e5 bp 0x7ffca4e2e640 sp 0x7ffca4e2e638
 READ of size 2 at 0x6120000007d8 thread T0
 SCARINESS: 24 (2-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0xdfc2e4 in decompress_smooth_data /src/libjpeg-turbo/jdcoefct.c:594:23
@@ -20,7 +20,7 @@ SCARINESS: 24 (2-byte-read-heap-buffer-overflow-far-from-bounds)
     #9 0x4447b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #10 0x44aaf5 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #11 0x474a12 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0x79437dc4583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x713819eb383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41f7c8 in _start (/out/coder_JPG_fuzzer+0x41f7c8)
 
 DEDUP_TOKEN: decompress_smooth_data--process_data_simple_main--jpeg_read_scanlines
@@ -42,7 +42,7 @@ allocated by thread T0 here:
     #13 0x4447b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #14 0x44aaf5 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #15 0x474a12 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0x79437dc4583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x713819eb383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--alloc_large--alloc_barray
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libjpeg-turbo/jdcoefct.c:594:23 in decompress_smooth_data

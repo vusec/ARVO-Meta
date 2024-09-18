@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000007500 at pc 0x0000005307e3 bp 0x7ffd63d3c590 sp 0x7ffd63d3c588
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000007500 at pc 0x0000005307e3 bp 0x7ffc543cd4d0 sp 0x7ffc543cd4c8
 WRITE of size 2 at 0x621000007500 thread T0
 SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #0 0x5307e2 in scale_block_c /src/ffmpeg/libavcodec/binkdsp.c:126:31
@@ -12,7 +12,7 @@ SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #7 0x500a15 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:482:25
     #8 0xdcecba in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #9 0xdcea8d in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #10 0x77b2f7efb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #10 0x7c457202c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #11 0x444b8d in _start (/out/ffmpeg_AV_CODEC_ID_BINK_fuzzer+0x444b8d)
 
 DEDUP_TOKEN: scale_block_c--bink_decode_plane--decode_frame

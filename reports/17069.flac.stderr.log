@@ -1,10 +1,10 @@
-INFO: Seed: 247321874
+INFO: Seed: 3272631834
 INFO: Loaded 1 modules   (2677 inline 8-bit counters): 2677 [0x83dca8, 0x83e71d),
 INFO: Loaded 1 PC tables (2677 PCs): 2677 [0x83e720,0x848e70),
 /out/fuzzer_decoder: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000002100 at pc 0x000000579a01 bp 0x7ffc4f236fb0 sp 0x7ffc4f236fa8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000002100 at pc 0x000000579a01 bp 0x7ffcf2a35e30 sp 0x7ffcf2a35e28
 READ of size 4 at 0x625000002100 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x579a00 in FLAC__bitreader_read_rice_signed_block /src/flac/src/libFLAC/bitreader.c:867:8
@@ -19,7 +19,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #9 0x445e11 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #10 0x44bb1e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
     #11 0x4754a2 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #12 0x74af9831383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x7893dd74183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41f2a8 in _start (/out/fuzzer_decoder+0x41f2a8)
 
 DEDUP_TOKEN: FLAC__bitreader_read_rice_signed_block--read_residual_partitioned_rice_--read_subframe_lpc_
@@ -35,7 +35,7 @@ allocated by thread T0 here:
     #7 0x445e11 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
     #8 0x44bb1e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
     #9 0x4754a2 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #10 0x74af9831383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7893dd74183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--FLAC__bitreader_init--init_stream_internal_
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/flac/src/libFLAC/bitreader.c:867:8 in FLAC__bitreader_read_rice_signed_block

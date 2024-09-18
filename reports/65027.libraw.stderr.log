@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000007292ac at pc 0x00000061088f bp 0x7ffe104fbb10 sp 0x7ffe104fbb08
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000007292ac at pc 0x00000061088f bp 0x7ffe353298d0 sp 0x7ffe353298c8
 READ of size 4 at 0x0000007292ac thread T0
 SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #0 0x61088e in libraw_tagtype_dataunit_bytes(int) /src/libraw/src/tables/wblists.cpp:28:12
@@ -23,7 +23,7 @@ SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #8 0x4cd890 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:41:24
     #9 0x4cde5e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:207:5
     #10 0x4cde5e in main /src/libfuzzer/afl/afl_driver.cpp:244:12
-    #11 0x792af679483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7e006c58c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41ebc8 in _start (/out/libraw_fuzzer+0x41ebc8)
 
 DEDUP_TOKEN: libraw_tagtype_dataunit_bytes(int)--checked_buffer_t::tiff_sget(unsigned int, long long*, unsigned int*, unsigned int*, long long*, unsigned int*, int*)--LibRaw::parseSonySR2(unsigned char*, unsigned int, unsigned int, unsigned int)

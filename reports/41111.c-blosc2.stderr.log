@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 109210257
+INFO: Seed: 3285324024
 INFO: Loaded 1 modules   (44238 inline 8-bit counters): 44238 [0xdcb3e0, 0xdd60ae),
 INFO: Loaded 1 PC tables (44238 PCs): 44238 [0xac54b0,0xb72190),
 /out/decompress_frame_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000276 at pc 0x000000a125e7 bp 0x7fff9415a350 sp 0x7fff9415a348
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000276 at pc 0x000000a125e7 bp 0x7fff069e3ed0 sp 0x7fff069e3ec8
 READ of size 1 at 0x611000000276 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0xa125e6 in inflate /src/c-blosc2/internal-complibs/zlib-ng-2.0.2/inflate.c:408:13
@@ -24,7 +24,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #13 0x44ac62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #14 0x450aaa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #15 0x47c792 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0x704708a6a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x774cba8e883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #17 0x425948 in _start (/out/decompress_frame_fuzzer+0x425948)
 
 DEDUP_TOKEN: inflate--uncompress2--uncompress
@@ -35,7 +35,7 @@ allocated by thread T0 here:
     #2 0x44ac62 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #3 0x450aaa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #4 0x47c792 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0x704708a6a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x774cba8e883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/c-blosc2/internal-complibs/zlib-ng-2.0.2/inflate.c:408:13 in inflate

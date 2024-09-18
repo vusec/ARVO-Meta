@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62900000440c at pc 0x0000004e55ce bp 0x7ffdfff933c0 sp 0x7ffdfff933b8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62900000440c at pc 0x0000004e55ce bp 0x7ffcd8b95c00 sp 0x7ffcd8b95bf8
 READ of size 4 at 0x62900000440c thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x4e55cd in LibRaw::hat_transform(float*, float*, int, int, int) /src/libraw/src/postprocessing/postprocessing_aux.cpp:25:56
@@ -9,7 +9,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #4 0x4d884a in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:75:22
     #5 0x4deb75 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #6 0x4de9e5 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #7 0x786952015082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x7bf8ed574082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #8 0x41e6fd in _start (/out/libraw_fuzzer+0x41e6fd)
 
 DEDUP_TOKEN: LibRaw::hat_transform(float*, float*, int, int, int)--LibRaw::wavelet_denoise()--LibRaw::scale_colors()

@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000000d1 at pc 0x00000072cf31 bp 0x7ffea9daaeb0 sp 0x7ffea9daaea8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000000d1 at pc 0x00000072cf31 bp 0x7ffca36c05d0 sp 0x7ffca36c05c8
 READ of size 1 at 0x6020000000d1 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x72cf30 in ReadMNGImage /src/graphicsmagick/coders/png.c:4886:73
@@ -19,7 +19,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #4 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #5 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #6 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #7 0x739a488b983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x7b0874c6483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41ddc8 in _start (/out/coder_MNG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: ReadMNGImage--ReadImage--BlobToImage
@@ -33,7 +33,7 @@ allocated by thread T0 here:
     #5 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #6 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #7 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #8 0x739a488b983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7b0874c6483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ReadMNGImage--ReadImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/png.c:4886:73 in ReadMNGImage

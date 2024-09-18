@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 281146802
+INFO: Seed: 3295184555
 INFO: Loaded 1 modules   (56256 inline 8-bit counters): 56256 [0x8aa87e0, 0x8ab63a0),
 INFO: Loaded 1 PC tables (56256 PCs): 56256 [0x89638a0,0x89d16a0),
 /out/ffmpeg_AV_CODEC_ID_SCPR_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe4036020 at pc 0x08275252 bp 0xffbb8e58 sp 0xffbb8e50
-READ of size 4 at 0xe4036020 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe9c36020 at pc 0x08275252 bp 0xffe00378 sp 0xffe00370
+READ of size 4 at 0xe9c36020 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x8275251 in decode_run_p /src/ffmpeg/libavcodec/scpr.h:283:19
     #1 0x8266196 in decompress_p3 /src/ffmpeg/libavcodec/scpr3.c:1197:27
@@ -20,11 +20,11 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #9 0x809b24e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x80a0e50 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x80caa37 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0xebd75ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #12 0xf1a21ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #13 0x8092395 in _start (/out/ffmpeg_AV_CODEC_ID_SCPR_fuzzer+0x8092395)
 
 DEDUP_TOKEN: decode_run_p--decompress_p3--decode_frame
-0xe4036020 is located 0 bytes to the right of 48160-byte region [0xe402a400,0xe4036020)
+0xe9c36020 is located 0 bytes to the right of 48160-byte region [0xe9c2a400,0xe9c36020)
 allocated by thread T0 here:
     #0 0x81ac99a in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0x87b028f in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -44,22 +44,22 @@ allocated by thread T0 here:
     #15 0x809b24e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #16 0x80a0e50 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #17 0x80caa37 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0xebd75ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #18 0xf1a21ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/scpr.h:283:19 in decode_run_p
 Shadow bytes around the buggy address:
-  0x3c806bb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3c806bc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3c806bd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3c806be0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3c806bf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x3c806c00: 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa
-  0x3c806c10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3c806c20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3c806c30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3c806c40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3c806c50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d386bb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d386bc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d386bd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d386be0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d386bf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3d386c00: 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa
+  0x3d386c10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d386c20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d386c30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d386c40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d386c50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

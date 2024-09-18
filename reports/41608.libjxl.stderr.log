@@ -1,0 +1,104 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3285427671
+INFO: Loaded 1 modules   (32223 inline 8-bit counters): 32223 [0x5809307ae3b8, 0x5809307b6197),
+INFO: Loaded 1 PC tables (32223 PCs): 32223 [0x5809307b6198,0x580930833f88),
+/out/djxl_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==13==ERROR: AddressSanitizer: container-overflow on address 0x61100001eab0 at pc 0x580930292c68 bp 0x709bd41ff800 sp 0x709bd41ff7f8
+READ of size 4 at 0x61100001eab0 thread T3
+SCARINESS: 17 (4-byte-read-container-overflow)
+    #0 0x580930292c67 in xsize /src/libjxl/lib/jxl/image.h:65:44
+    #1 0x580930292c67 in IsInside<jxl::Plane<int> > /src/libjxl/lib/jxl/image.h:285:35
+    #2 0x580930292c67 in void jxl::CopyImageTo<int>(jxl::Rect const&, jxl::Plane<int> const&, jxl::Rect const&, jxl::Plane<int>*) /src/libjxl/lib/jxl/image_ops.h:49:3
+    #3 0x58093028e0de in jxl::ModularFrameDecoder::DecodeGroup(jxl::Rect const&, jxl::BitReader*, int, int, jxl::ModularStreamId const&, bool, jxl::PassesDecoderState*, jxl::ImageBundle*, bool) /src/libjxl/lib/jxl/dec_modular.cc:334:5
+    #4 0x5809301508d9 in jxl::FrameDecoder::ProcessACGroup(unsigned long, jxl::BitReader* restrict*, unsigned long, unsigned long, bool, bool) /src/libjxl/lib/jxl/dec_frame.cc:638:7
+    #5 0x58093015fe84 in operator() /src/libjxl/lib/jxl/dec_frame.cc:790:16
+    #6 0x58093015fe84 in jxl::ThreadPool::RunCallState<jxl::FrameDecoder::ProcessSections(jxl::FrameDecoder::SectionInfo const*, unsigned long, jxl::FrameDecoder::SectionStatus*)::$_1, jxl::FrameDecoder::ProcessSections(jxl::FrameDecoder::SectionInfo const*, unsigned long, jxl::FrameDecoder::SectionStatus*)::$_2>::CallDataFunc(void*, unsigned int, unsigned long) /src/libjxl/lib/jxl/base/data_parallel.h:88:14
+    #7 0x580930659954 in RunRange /src/libjxl/lib/threads/thread_parallel_runner_internal.cc:139:7
+    #8 0x580930659954 in jpegxl::ThreadParallelRunner::ThreadFunc(jpegxl::ThreadParallelRunner*, int) /src/libjxl/lib/threads/thread_parallel_runner_internal.cc:169:9
+    #9 0x58093065bb93 in __invoke<void (*)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int> /usr/local/bin/../include/c++/v1/type_traits:3662:23
+    #10 0x58093065bb93 in __thread_execute<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int, 2UL, 3UL> /usr/local/bin/../include/c++/v1/thread:280:5
+    #11 0x58093065bb93 in void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*)(jpegxl::ThreadParallelRunner*, int), jpegxl::ThreadParallelRunner*, unsigned int> >(void*) /usr/local/bin/../include/c++/v1/thread:291:5
+    #12 0x709bd85fc608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
+    #13 0x709bd84f6352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)
+
+DEDUP_TOKEN: xsize--IsInside<jxl::Plane<int> >--void jxl::CopyImageTo<int>(jxl::Rect const&, jxl::Plane<int> const&, jxl::Rect const&, jxl::Plane<int>*)
+0x61100001eab0 is located 112 bytes inside of 224-byte region [0x61100001ea40,0x61100001eb20)
+allocated by thread T3 here:
+    #0 0x58092ffe2c8d in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:95:3
+    #1 0x5809300d7ff5 in __libcpp_operator_new<unsigned long> /usr/local/bin/../include/c++/v1/new:245:10
+    #2 0x5809300d7ff5 in __libcpp_allocate /usr/local/bin/../include/c++/v1/new:271:10
+    #3 0x5809300d7ff5 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator.h:105:38
+    #4 0x5809300d7ff5 in allocate /usr/local/bin/../include/c++/v1/__memory/allocator_traits.h:262:20
+    #5 0x5809300d7ff5 in __split_buffer /usr/local/bin/../include/c++/v1/__split_buffer:306:29
+    #6 0x5809300d7ff5 in void std::__1::vector<jxl::Channel, std::__1::allocator<jxl::Channel> >::__emplace_back_slow_path<jxl::Channel>(jxl::Channel&&) /usr/local/bin/../include/c++/v1/vector:1674:49
+    #7 0x58093028d316 in emplace_back<jxl::Channel> /usr/local/bin/../include/c++/v1/vector:1696:9
+    #8 0x58093028d316 in jxl::ModularFrameDecoder::DecodeGroup(jxl::Rect const&, jxl::BitReader*, int, int, jxl::ModularStreamId const&, bool, jxl::PassesDecoderState*, jxl::ImageBundle*, bool) /src/libjxl/lib/jxl/dec_modular.cc:298:18
+    #9 0x5809301508d9 in jxl::FrameDecoder::ProcessACGroup(unsigned long, jxl::BitReader* restrict*, unsigned long, unsigned long, bool, bool) /src/libjxl/lib/jxl/dec_frame.cc:638:7
+    #10 0x58093015fe84 in operator() /src/libjxl/lib/jxl/dec_frame.cc:790:16
+    #11 0x58093015fe84 in jxl::ThreadPool::RunCallState<jxl::FrameDecoder::ProcessSections(jxl::FrameDecoder::SectionInfo const*, unsigned long, jxl::FrameDecoder::SectionStatus*)::$_1, jxl::FrameDecoder::ProcessSections(jxl::FrameDecoder::SectionInfo const*, unsigned long, jxl::FrameDecoder::SectionStatus*)::$_2>::CallDataFunc(void*, unsigned int, unsigned long) /src/libjxl/lib/jxl/base/data_parallel.h:88:14
+    #12 0x580930659954 in RunRange /src/libjxl/lib/threads/thread_parallel_runner_internal.cc:139:7
+    #13 0x580930659954 in jpegxl::ThreadParallelRunner::ThreadFunc(jpegxl::ThreadParallelRunner*, int) /src/libjxl/lib/threads/thread_parallel_runner_internal.cc:169:9
+    #14 0x58093065bb93 in __invoke<void (*)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int> /usr/local/bin/../include/c++/v1/type_traits:3662:23
+    #15 0x58093065bb93 in __thread_execute<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int, 2UL, 3UL> /usr/local/bin/../include/c++/v1/thread:280:5
+    #16 0x58093065bb93 in void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*)(jpegxl::ThreadParallelRunner*, int), jpegxl::ThreadParallelRunner*, unsigned int> >(void*) /usr/local/bin/../include/c++/v1/thread:291:5
+    #17 0x709bd85fc608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
+
+DEDUP_TOKEN: operator new(unsigned long)--__libcpp_operator_new<unsigned long>--__libcpp_allocate
+Thread T3 created by T0 here:
+    #0 0x58092ff956ec in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:207:3
+    #1 0x58093065a08d in __libcpp_thread_create /usr/local/bin/../include/c++/v1/__threading_support:514:10
+    #2 0x58093065a08d in thread<void (&)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int &, void> /usr/local/bin/../include/c++/v1/thread:307:16
+    #3 0x58093065a08d in construct<std::__1::thread, void (&)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int &> /usr/local/bin/../include/c++/v1/__memory/allocator.h:151:28
+    #4 0x58093065a08d in construct<std::__1::thread, void (&)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int &, void> /usr/local/bin/../include/c++/v1/__memory/allocator_traits.h:290:13
+    #5 0x58093065a08d in __construct_one_at_end<void (&)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int &> /usr/local/bin/../include/c++/v1/vector:933:5
+    #6 0x58093065a08d in emplace_back<void (&)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int &> /usr/local/bin/../include/c++/v1/vector:1693:9
+    #7 0x58093065a08d in jpegxl::ThreadParallelRunner::ThreadParallelRunner(int) /src/libjxl/lib/threads/thread_parallel_runner_internal.cc:196:14
+    #8 0x5809306587a8 in JxlThreadParallelRunnerCreate /src/libjxl/lib/threads/thread_parallel_runner.cc:81:19
+    #9 0x58092ffe5b8d in JxlThreadParallelRunnerMake /src/libjxl/lib/include/jxl/thread_parallel_runner_cxx.h:59:7
+    #10 0x58092ffe5b8d in DecodeJpegXl /src/libjxl/tools/djxl_fuzzer.cc:79:17
+    #11 0x58092ffe5b8d in TestOneInput /src/libjxl/tools/djxl_fuzzer.cc:536:3
+    #12 0x58092ffe5b8d in LLVMFuzzerTestOneInput /src/libjxl/tools/djxl_fuzzer.cc:546:10
+    #13 0x58092fedce23 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) cxa_noexception.cpp
+    #14 0x58092fec8732 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #15 0x58092fece1fa in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
+    #16 0x58092fef7122 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #17 0x709bd83fb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+
+DEDUP_TOKEN: pthread_create--__libcpp_thread_create--thread<void (&)(jpegxl::ThreadParallelRunner *, int), jpegxl::ThreadParallelRunner *, unsigned int &, void>
+HINT: if you don't care about these errors you may set ASAN_OPTIONS=detect_container_overflow=0.
+If you suspect a false positive see also: https://github.com/google/sanitizers/wiki/AddressSanitizerContainerOverflow.
+SUMMARY: AddressSanitizer: container-overflow /src/libjxl/lib/jxl/image.h:65:44 in xsize
+Shadow bytes around the buggy address:
+  0x0c227fffbd00: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fffbd10: fd fd fd fd fd fd fd fd fa fa fa fa fa fa fa fa
+  0x0c227fffbd20: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fffbd30: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fffbd40: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+=>0x0c227fffbd50: 00 00 00 00 00 00[fc]fc fc fc fc fc fc fc fc fc
+  0x0c227fffbd60: fc fc fc fc fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fffbd70: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fffbd80: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fffbd90: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c227fffbda0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

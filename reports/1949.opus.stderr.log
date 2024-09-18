@@ -1,9 +1,9 @@
-INFO: Seed: 451989024
+INFO: Seed: 3267053903
 INFO: Loaded 1 modules (17608 guards): [0xc0b990, 0xc1ccb0),
 /out/ffmpeg_AV_CODEC_ID_SVQ3_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000008b6a99 at pc 0x00000053ff6b bp 0x7ffce102b4b0 sp 0x7ffce102b4a8
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000008b6a99 at pc 0x00000053ff6b bp 0x7ffdf3f1ef70 sp 0x7ffdf3f1ef68
 READ of size 1 at 0x0000008b6a99 thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x53ff6a in svq3_decode_mb /src/ffmpeg/libavcodec/svq3.c:870:27
@@ -19,7 +19,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #10 0x79b236 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #11 0x7a67c0 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:683:9
     #12 0x79a848 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #13 0x76f115ee183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x72967117f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #14 0x41d6a8 in _start (/out/ffmpeg_AV_CODEC_ID_SVQ3_fuzzer+0x41d6a8)
 
 DEDUP_TOKEN: svq3_decode_mb--svq3_decode_frame--decode_simple_internal

@@ -1,0 +1,63 @@
+=================================================================
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7e748354d528 at pc 0x00000057b61b bp 0x7ffc898bb4d0 sp 0x7ffc898bb4c8
+WRITE of size 4 at 0x7e748354d528 thread T0
+SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
+    #0 0x57b61a in decode_filter /src/ffmpeg/libavcodec/rka.c
+    #1 0x574203 in decode_samples /src/ffmpeg/libavcodec/rka.c
+    #2 0x574203 in decode_ch_samples /src/ffmpeg/libavcodec/rka.c:813:18
+    #3 0x572d66 in rka_decode_frame /src/ffmpeg/libavcodec/rka.c:885:23
+    #4 0x51d4fe in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:285:15
+    #5 0x51d4fe in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:532:15
+    #6 0x51d4fe in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:551:15
+    #7 0x51cba7 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:626:15
+    #8 0x503bdb in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:513:25
+    #9 0xd8c34a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+    #10 0xd8c11c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
+    #11 0x7e7483c0c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x4415dd in _start (/out/ffmpeg_AV_CODEC_ID_RKA_fuzzer+0x4415dd)
+
+DEDUP_TOKEN: decode_filter--decode_samples--decode_ch_samples
+0x7e748354d528 is located 0 bytes to the right of 220456-byte region [0x7e7483517800,0x7e748354d528)
+allocated by thread T0 here:
+    #0 0x4c3567 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0xcd83e1 in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
+    #2 0xcd83e1 in av_mallocz /src/ffmpeg/libavutil/mem.c:256:17
+    #3 0x5610db in init_context_defaults /src/ffmpeg/libavcodec/options.c:133:24
+    #4 0x5610db in avcodec_alloc_context3 /src/ffmpeg/libavcodec/options.c:160:9
+    #5 0x501092 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:314:27
+    #6 0xd8c34a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+
+DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/rka.c in decode_filter
+Shadow bytes around the buggy address:
+  0x0fcf106a1a50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fcf106a1a60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fcf106a1a70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fcf106a1a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fcf106a1a90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0fcf106a1aa0: 00 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa
+  0x0fcf106a1ab0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fcf106a1ac0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fcf106a1ad0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fcf106a1ae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0fcf106a1af0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13==ABORTING

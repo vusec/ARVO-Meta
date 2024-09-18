@@ -1,68 +1,68 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 387796982
+INFO: Seed: 3287675532
 INFO: Loaded 1 modules   (223760 inline 8-bit counters): 223760 [0x9b9f330, 0x9bd5d40),
 INFO: Loaded 1 PC tables (223760 PCs): 223760 [0x9bd5d40,0x9d8adc0),
 /out/coder_PCT_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
-10:15:53 0:10.010127 0.030u 13 jpeg.c/JPEGErrorHandler/533/Coder:
+14:38:54 0:0.021421  0.020u 13 jpeg.c/JPEGErrorHandler/533/Coder:
   Not a JPEG file: starts with 0xff 0xff ()
-10:15:55 0:10.222515 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:54 0:0.021761  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.222587 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:54 0:0.021825  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-10:15:55 0:10.222836 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:54 0:0.022028  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 142 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.222894 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:54 0:0.022095  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 14 extraneous bytes before marker 0xd9 ()
-10:15:55 0:10.223102 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:54 0:0.022316  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.223144 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:54 0:0.022355  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-10:15:55 0:10.223320 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:54 0:0.022528  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.223373 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:54 0:0.022574  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-10:15:55 0:10.223542 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.022749  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.223580 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:55 0:0.022776  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 10 extraneous bytes before marker 0xd9 ()
-10:15:55 0:10.223737 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.022932  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.223776 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:55 0:0.022967  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-10:15:55 0:10.224030 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.023148  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 142 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.224066 0.030u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:55 0:0.023181  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 14 extraneous bytes before marker 0xd9 ()
-10:15:55 0:10.224271 0.040u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.023395  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.224310 0.040u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:55 0:0.023423  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-10:15:55 0:10.224487 0.040u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.023601  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.224526 0.040u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:55 0:0.023633  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Corrupt JPEG data: 14 extraneous bytes before marker 0xd9 ()
-10:15:55 0:10.224690 0.040u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.023790  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 158 extraneous bytes before marker 0xdc ()
-10:15:55 0:10.224730 0.040u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
+14:38:55 0:0.023831  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/374/CorruptImage:
   Premature end of JPEG file ()
-10:15:55 0:10.224897 0.040u 13 jpeg.c/JPEGErrorHandler/533/Coder:
+14:38:55 0:0.024001  0.020u 13 jpeg.c/JPEGErrorHandler/533/Coder:
   Not a JPEG file: starts with 0x00 0x00 ()
-10:15:55 0:10.225490 0.040u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.024540  0.020u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Corrupt JPEG data: 221 extraneous bytes before marker 0xe4 ()
-10:15:55 0:10.225640 0.040u 13 jpeg.c/JPEGErrorHandler/533/Coder:
+14:38:55 0:0.024700  0.020u 13 jpeg.c/JPEGErrorHandler/533/Coder:
   Bogus Huffman table definition ()
-10:15:56 0:10.336556 0.150u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.132666  0.130u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Premature end of JPEG file ()
-10:15:56 0:10.336615 0.150u 13 jpeg.c/JPEGErrorHandler/533/Coder:
+14:38:55 0:0.132717  0.130u 13 jpeg.c/JPEGErrorHandler/533/Coder:
   JPEG datastream contains no image ()
-10:15:56 0:10.391175 0.200u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
+14:38:55 0:0.185497  0.190u 13 jpeg.c/JPEGDecodeMessageHandler/381/CorruptImage:
   Premature end of JPEG file ()
-10:15:56 0:10.391210 0.200u 13 jpeg.c/JPEGErrorHandler/533/Coder:
+14:38:55 0:0.185531  0.190u 13 jpeg.c/JPEGErrorHandler/533/Coder:
   JPEG datastream contains no image ()
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe5a03e9c at pc 0x081cf1d1 bp 0xffda0ec8 sp 0xffda0aa8
-WRITE of size 10982 at 0xe5a03e9c thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xec403e9c at pc 0x081cf1d1 bp 0xffc36748 sp 0xffc36328
+WRITE of size 10982 at 0xec403e9c thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x81cf1d0 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
     #1 0x82b5fd6 in ReadBlob /src/graphicsmagick/magick/blob.c:3352:18
@@ -76,11 +76,11 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #9 0x80e3d8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x80e9940 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x8112b27 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0xef744ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #12 0xf616ced4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
     #13 0x80c1995 in _start (/out/coder_PCT_fuzzer+0x80c1995)
 
 DEDUP_TOKEN: __asan_memcpy--ReadBlob--DecodeImage
-0xe5a03e9c is located 0 bytes to the right of 540-byte region [0xe5a03c80,0xe5a03e9c)
+0xec403e9c is located 0 bytes to the right of 540-byte region [0xec403c80,0xec403e9c)
 allocated by thread T0 here:
     #0 0x81d0056 in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:148:3
     #1 0x83ea920 in _MagickReallocateResourceLimitedMemory /src/graphicsmagick/magick/memory.c:769:36
@@ -94,22 +94,22 @@ allocated by thread T0 here:
     #9 0x80e3d8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x80e9940 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x8112b27 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0xef744ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #12 0xf616ced4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
 
 DEDUP_TOKEN: __interceptor_realloc--_MagickReallocateResourceLimitedMemory--DecodeImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
 Shadow bytes around the buggy address:
-  0x3cb40780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cb40790: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3cb407a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3cb407b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3cb407c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x3cb407d0: 00 00 00[04]fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cb407e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cb407f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cb40800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cb40810: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3cb40820: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d880780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d880790: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d8807a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d8807b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3d8807c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3d8807d0: 00 00 00[04]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d8807e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d8807f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d880800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d880810: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d880820: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

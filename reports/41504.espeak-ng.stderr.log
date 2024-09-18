@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 105888545
+INFO: Seed: 3285426957
 INFO: Loaded 1 modules   (10244 inline 8-bit counters): 10244 [0x8bf2e0, 0x8c1ae4),
 INFO: Loaded 1 PC tables (10244 PCs): 10244 [0x8c1ae8,0x8e9b28),
 /out/ssml-fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7953aa824dfd at pc 0x0000005d8362 bp 0x7ffe0cf50180 sp 0x7ffe0cf50178
-READ of size 1 at 0x7953aa824dfd thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ef73a216dfd at pc 0x0000005d8362 bp 0x7ffe46ffe380 sp 0x7ffe46ffe378
+READ of size 1 at 0x7ef73a216dfd thread T0
 SCARINESS: 27 (1-byte-read-stack-buffer-overflow)
     #0 0x5d8361 in IsLetterGroup /src/espeak-ng/src/libespeak-ng/dictionary.c:714:17
     #1 0x5d1644 in MatchRule /src/espeak-ng/src/libespeak-ng/dictionary.c:1972:21
@@ -25,11 +25,11 @@ SCARINESS: 27 (1-byte-read-stack-buffer-overflow)
     #14 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #15 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #16 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #17 0x7953a977483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #17 0x7ef73916683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #18 0x41ed38 in _start (/out/ssml-fuzzer+0x41ed38)
 
 DEDUP_TOKEN: IsLetterGroup--MatchRule--TranslateRules
-Address 0x7953aa824dfd is located in stack of thread T0 at offset 5629 in frame
+Address 0x7ef73a216dfd is located in stack of thread T0 at offset 5629 in frame
     #0 0x5746ef in TranslateClause /src/espeak-ng/src/libespeak-ng/translate.c:1985
 
 DEDUP_TOKEN: TranslateClause
@@ -54,17 +54,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/espeak-ng/src/libespeak-ng/dictionary.c:714:17 in IsLetterGroup
 Shadow bytes around the buggy address:
-  0x0f2af54fc960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fc970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fc980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fc990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fc9a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0f2af54fc9b0: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2[f2]
-  0x0f2af54fc9c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fc9d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fc9e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fc9f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f2af54fca00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743ad60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743ad70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743ad80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743ad90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743ada0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0fdf6743adb0: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2[f2]
+  0x0fdf6743adc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743add0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743ade0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743adf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fdf6743ae00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

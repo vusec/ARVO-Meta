@@ -1,9 +1,9 @@
-INFO: Seed: 146059301
+INFO: Seed: 3266212622
 INFO: Loaded 1 modules (148483 guards): [0x12dffb0, 0x1370fbc),
 /out/ffmpeg_AV_CODEC_ID_WEBP_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x616000003ec0 at pc 0x0000007c91f2 bp 0x7ffcd991fd30 sp 0x7ffcd991fd28
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x616000003ec0 at pc 0x0000007c91f2 bp 0x7fff79c4c0f0 sp 0x7fff79c4c0e8
 WRITE of size 4 at 0x616000003ec0 thread T0
 SCARINESS: 46 (4-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x7c91f1 in intra_predict /src/ffmpeg/libavcodec/vp8.c:1677:21
@@ -27,7 +27,7 @@ SCARINESS: 46 (4-byte-write-heap-buffer-overflow-far-from-bounds)
     #18 0xc3aa56 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #19 0xc45ef6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #20 0xc3a078 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #21 0x7f6628f9883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #21 0x79a7bb0de83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #22 0x41d658 in _start (/out/ffmpeg_AV_CODEC_ID_WEBP_fuzzer+0x41d658)
 
 DEDUP_TOKEN: intra_predict--decode_mb_row_no_filter--vp8_decode_mb_row_no_filter
@@ -59,7 +59,7 @@ allocated by thread T0 here:
     #23 0xc3aa56 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #24 0xc45ef6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #25 0xc3a078 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #26 0x7f6628f9883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #26 0x79a7bb0de83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/vp8.c:1677:21 in intra_predict

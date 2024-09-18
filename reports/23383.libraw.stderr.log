@@ -1,10 +1,10 @@
-INFO: Seed: 378782410
+INFO: Seed: 3274867096
 INFO: Loaded 1 modules   (17435 inline 8-bit counters): 17435 [0xae67a8, 0xaeabc3),
 INFO: Loaded 1 PC tables (17435 PCs): 17435 [0x7c4e78,0x809028),
 /out/libraw_cr2_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000774e7c at pc 0x0000005503a0 bp 0x7ffebcc5b090 sp 0x7ffebcc5b088
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000774e7c at pc 0x0000005503a0 bp 0x7fffab00f4d0 sp 0x7fffab00f4c8
 READ of size 4 at 0x000000774e7c thread T0
 SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #0 0x55039f in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:55:63
@@ -12,7 +12,7 @@ SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #2 0x444cf2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
     #3 0x44ad4e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
     #4 0x4726c2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #5 0x79445204d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x701e7152f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #6 0x41f388 in _start (/out/libraw_cr2_fuzzer+0x41f388)
 
 DEDUP_TOKEN: LLVMFuzzerTestOneInput--fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)

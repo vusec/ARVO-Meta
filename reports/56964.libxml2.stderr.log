@@ -1,7 +1,7 @@
 Running LLVMFuzzerInitialize ...
 continue...
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000923d43 at pc 0x0000006802bd bp 0x7fffd8f051f0 sp 0x7fffd8f051e8
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000923d43 at pc 0x0000006802bd bp 0x7ffd6ec60410 sp 0x7ffd6ec60408
 READ of size 1 at 0x000000923d43 thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x6802bc in htmlCurrentChar /src/libxml2/HTMLparser.c:471:9
@@ -16,7 +16,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #9 0x4dcfc4 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/html.c:48:11
     #10 0x4df86a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #11 0x4df63c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #12 0x7a5d96b18082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x7777dbfcc082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #13 0x41e5dd in _start (/out/html+0x41e5dd)
 
 DEDUP_TOKEN: htmlCurrentChar--htmlParseNameComplex--htmlParseName

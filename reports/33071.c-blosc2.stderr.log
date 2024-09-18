@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 103267981
+INFO: Seed: 3279937138
 INFO: Loaded 1 modules   (44456 inline 8-bit counters): 44456 [0xdbb840, 0xdc65e8),
 INFO: Loaded 1 PC tables (44456 PCs): 44456 [0xab5cd0,0xb63750),
 /out/decompress_frame_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000024a at pc 0x000000529157 bp 0x7ffc393fabf0 sp 0x7ffc393fa3b8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000024a at pc 0x000000529157 bp 0x7ffc9a5a7d30 sp 0x7ffc9a5a74f8
 READ of size 67 at 0x61100000024a thread T0
 SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #0 0x529156 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -18,7 +18,7 @@ SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #7 0x44afa2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #8 0x4512f6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #9 0x47b2e2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x75502d68c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7ac5173bb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x425968 in _start (/out/decompress_frame_fuzzer+0x425968)
 
 DEDUP_TOKEN: __asan_memcpy--get_vlmeta_from_trailer--frame_get_vlmetalayers
@@ -29,7 +29,7 @@ allocated by thread T0 here:
     #2 0x44afa2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #3 0x4512f6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #4 0x47b2e2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0x75502d68c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x7ac5173bb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy

@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 71054986
+INFO: Seed: 3276889641
 INFO: Loaded 1 modules   (73338 inline 8-bit counters): 73338 [0x1765848, 0x17776c2),
 INFO: Loaded 1 PC tables (73338 PCs): 73338 [0x17776c8,0x1895e68),
 /out/jpegsave_file_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-use-after-free on address 0x612000010260 at pc 0x000000a9e025 bp 0x712ec45fe3e0 sp 0x712ec45fe3d8
+==13==ERROR: AddressSanitizer: heap-use-after-free on address 0x612000010260 at pc 0x000000a9e025 bp 0x74cce47fe3e0 sp 0x74cce47fe3d8
 READ of size 2 at 0x612000010260 thread T4 (worker)
 SCARINESS: 42 (2-byte-read-heap-use-after-free)
     #0 0xa9e024 in decompress_smooth_data /src/libjpeg-turbo/jdcoefct.c:594:23
@@ -53,8 +53,8 @@ SCARINESS: 42 (2-byte-read-heap-use-after-free)
     #42 0x5b5e31 in vips_thread_main_loop /src/libvips/libvips/iofuncs/threadpool.c:705:3
     #43 0x5b41c6 in vips_thread_run /src/libvips/libvips/iofuncs/threadpool.c:210:11
     #44 0xf4c89e in g_thread_proxy (/out/jpegsave_file_fuzzer+0xf4c89e)
-    #45 0x712ecbae66b9 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76b9)
-    #46 0x712ecb1fa51c in clone (/lib/x86_64-linux-gnu/libc.so.6+0x10751c)
+    #45 0x74ccebc8c6b9 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76b9)
+    #46 0x74cceb3a051c in clone (/lib/x86_64-linux-gnu/libc.so.6+0x10751c)
 
 DEDUP_TOKEN: decompress_smooth_data--process_data_simple_main--jpeg_read_scanlines
 0x612000010260 is located 32 bytes inside of 296-byte region [0x612000010240,0x612000010368)

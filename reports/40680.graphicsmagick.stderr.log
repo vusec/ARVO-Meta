@@ -1,14 +1,14 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 389493274
+INFO: Seed: 3285073052
 INFO: Loaded 1 modules   (228574 inline 8-bit counters): 228574 [0x9d01620, 0x9d392fe),
 INFO: Loaded 1 PC tables (228574 PCs): 228574 [0x9d39300,0x9ef79f0),
 /out/coder_MSL_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
-10:15:56 0:13.396018 0.020u 13 msl.c/MSLStartElement/4123/Option:
+14:38:52 0:0.018326  0.020u 13 msl.c/MSLStartElement/4123/Option:
   Unrecognized element (u)
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xf2503d7c at pc 0x0861f503 bp 0xffd7bf28 sp 0xffd7bf20
-READ of size 4 at 0xf2503d7c thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xed203d7c at pc 0x0861f503 bp 0xff982a68 sp 0xff982a60
+READ of size 4 at 0xed203d7c thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x861f502 in MSLEndElement /src/graphicsmagick/coders/msl.c:4162:59
     #1 0x88560d7 in xmlParseEndTag1 /src/libxml2/parser.c:8708:9
@@ -61,11 +61,11 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #48 0x80e540e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #49 0x80eb12c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #50 0x8114657 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #51 0xf770aed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #51 0xf24a1ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
     #52 0x80c1985 in _start (/out/coder_MSL_fuzzer+0x80c1985)
 
 DEDUP_TOKEN: MSLEndElement--xmlParseEndTag1--xmlParseElementEnd
-0xf2503d7c is located 4 bytes to the left of 256-byte region [0xf2503d80,0xf2503e80)
+0xed203d7c is located 4 bytes to the left of 256-byte region [0xed203d80,0xed203e80)
 allocated by thread T0 here:
     #0 0x81cfb46 in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:148:3
     #1 0x83ebae0 in _MagickReallocateResourceLimitedMemory /src/graphicsmagick/magick/memory.c:743:36
@@ -83,22 +83,22 @@ allocated by thread T0 here:
     #13 0x80e540e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #14 0x80eb12c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #15 0x8114657 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0xf770aed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #16 0xf24a1ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
 
 DEDUP_TOKEN: __interceptor_realloc--_MagickReallocateResourceLimitedMemory--MSLStartElement
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/msl.c:4162:59 in MSLEndElement
 Shadow bytes around the buggy address:
-  0x3e4a0750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e4a0760: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e4a0770: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e4a0780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e4a0790: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x3e4a07a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
-  0x3e4a07b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e4a07c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e4a07d0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
-  0x3e4a07e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e4a07f0: 00 fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da40750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da40760: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da40770: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da40780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3da40790: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x3da407a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]
+  0x3da407b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3da407c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3da407d0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x3da407e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3da407f0: 00 fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 395365289
+INFO: Seed: 3293711860
 INFO: Loaded 1 modules   (21783 inline 8-bit counters): 21783 [0x938cf0, 0x93e207),
 INFO: Loaded 1 PC tables (21783 PCs): 21783 [0x818f20,0x86e090),
 /out/libraw_nef_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 unknown file: data corrupted at 1505
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61f000000c34 at pc 0x0000005880f3 bp 0x7ffd6ddba570 sp 0x7ffd6ddba568
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61f000000c34 at pc 0x0000005880f3 bp 0x7fff11b93ab0 sp 0x7fff11b93aa8
 READ of size 2 at 0x61f000000c34 thread T0
 SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #0 0x5880f2 in LibRaw::raw2image() /src/libraw/src/preprocessing/raw2image.cpp:122:19
@@ -15,7 +15,7 @@ SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #3 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #4 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #5 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #6 0x78ec36a8e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #6 0x7767d9d2f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #7 0x41f85d in _start (/out/libraw_nef_fuzzer+0x41f85d)
 
 DEDUP_TOKEN: LibRaw::raw2image()--LLVMFuzzerTestOneInput--fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long)
@@ -30,7 +30,7 @@ allocated by thread T0 here:
     #6 0x429692 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #7 0x42ef3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #8 0x458472 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #9 0x78ec36a8e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x7767d9d2f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_malloc--malloc--LibRaw::malloc(unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libraw/src/preprocessing/raw2image.cpp:122:19 in LibRaw::raw2image()

@@ -1,10 +1,10 @@
-INFO: Seed: 127747307
+INFO: Seed: 3275718248
 INFO: Loaded 1 modules   (46461 inline 8-bit counters): 46461 [0xde78c0, 0xdf2e3d),
 INFO: Loaded 1 PC tables (46461 PCs): 46461 [0xade7a8,0xb93f78),
 /out/decompress_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000000f8 at pc 0x00000056c880 bp 0x7ffc20775850 sp 0x7ffc20775848
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000000f8 at pc 0x00000056c880 bp 0x7ffc61beecd0 sp 0x7ffc61beecc8
 READ of size 1 at 0x6040000000f8 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x56c87f in tinfl_decompress /src/c-blosc2/internal-complibs/miniz-2.0.8/miniz.c:2374:9
@@ -21,7 +21,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #11 0x450ed2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:301:6
     #12 0x456e6d in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:801:9
     #13 0x47e752 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #14 0x78869554c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x7f012b07483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #15 0x42b678 in _start (/out/decompress_fuzzer+0x42b678)
 
 DEDUP_TOKEN: tinfl_decompress--mz_inflate--mz_uncompress
@@ -32,7 +32,7 @@ allocated by thread T0 here:
     #2 0x450ed2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:301:6
     #3 0x456e6d in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:801:9
     #4 0x47e752 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0x78869554c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #5 0x7f012b07483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/c-blosc2/internal-complibs/miniz-2.0.8/miniz.c:2374:9 in tinfl_decompress

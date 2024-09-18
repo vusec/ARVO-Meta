@@ -1,10 +1,10 @@
-INFO: Seed: 299062999
+INFO: Seed: 3270406745
 INFO: Loaded 1 modules   (74411 inline 8-bit counters): 74411 [0x1353f08, 0x13661b3),
 INFO: Loaded 1 PC tables (74411 PCs): 74411 [0x13661b8,0x1488c68),
 /out/coder_MNG_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000151 at pc 0x0000007c6cbf bp 0x7ffeb0881cc0 sp 0x7ffeb0881cb8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000151 at pc 0x0000007c6cbf bp 0x7fff0b152720 sp 0x7fff0b152718
 READ of size 1 at 0x602000000151 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x7c6cbe in mng_get_long /src/graphicsmagick/coders/png.c:1018:38
@@ -17,7 +17,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #7 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #8 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #9 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #10 0x7a577aa1583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x79ba25e9783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41dd88 in _start (/out/coder_MNG_fuzzer+0x41dd88)
 
 DEDUP_TOKEN: mng_get_long--ReadMNGImage--ReadImage
@@ -33,7 +33,7 @@ allocated by thread T0 here:
     #7 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #8 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #9 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #10 0x7a577aa1583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x79ba25e9783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ReadMNGImage--ReadImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/png.c:1018:38 in mng_get_long

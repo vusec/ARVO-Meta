@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62500000a0ff at pc 0x000000a8c01e bp 0x7fff046c92d0 sp 0x7fff046c92c8
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62500000a0ff at pc 0x000000a8c01e bp 0x7ffc8a140270 sp 0x7ffc8a140268
 READ of size 1 at 0x62500000a0ff thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0xa8c01d in CheckFName /src/graphicsmagick/coders/topol.c:340:8
@@ -10,7 +10,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #5 0x4de715 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #6 0x4dfb1a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #7 0x4df8ec in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #8 0x7b5784257082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #8 0x747bd1de7082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #9 0x41f59d in _start (/out/coder_TOPOL_fuzzer+0x41f59d)
 
 DEDUP_TOKEN: CheckFName--ReadTopoLImage--ReadImage

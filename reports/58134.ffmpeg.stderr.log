@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x624000003eb8 at pc 0x0000008c21d2 bp 0x7ffc3afa7920 sp 0x7ffc3afa7918
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x624000003eb8 at pc 0x0000008c21d2 bp 0x7ffd3045c240 sp 0x7ffd3045c238
 WRITE of size 1 at 0x624000003eb8 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x8c21d1 in colour_mapping_table /src/ffmpeg/libavcodec/hevc_ps.c:1365:33
@@ -16,7 +16,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #9 0x513b95 in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:635:15
     #10 0x4ff62f in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:513:25
     #11 0xcbca2b in main (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0xcbca2b)
-    #12 0x7d7208624082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x7bde3d4d5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #13 0x43e4cd in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x43e4cd)
 
 DEDUP_TOKEN: colour_mapping_table--pps_multilayer_extension--ff_hevc_decode_nal_pps

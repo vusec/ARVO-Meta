@@ -1,10 +1,10 @@
-INFO: Seed: 184631536
+INFO: Seed: 3272271866
 INFO: Loaded 1 modules   (38758 inline 8-bit counters): 38758 [0xf8edd0, 0xf98536),
 INFO: Loaded 1 PC tables (38758 PCs): 38758 [0xbd8df0,0xc70450),
 /out/ffmpeg_AV_CODEC_ID_AGM_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000001d11 at pc 0x0000004fa9dc bp 0x7fff3d157a10 sp 0x7fff3d157a08
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000001d11 at pc 0x0000004fa9dc bp 0x7ffd17a48590 sp 0x7ffd17a48588
 READ of size 4 at 0x619000001d11 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x4fa9db in show_bits /src/ffmpeg/libavcodec/get_bits.h:455:5
@@ -23,7 +23,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #13 0x99e72f in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:286:6
     #14 0x9aa403 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:715:9
     #15 0x99dd87 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #16 0x7eb9a221983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x794640c2083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #17 0x41e288 in _start (/out/ffmpeg_AV_CODEC_ID_AGM_fuzzer+0x41e288)
 
 DEDUP_TOKEN: show_bits--read_code--decode_inter_block
@@ -40,7 +40,7 @@ allocated by thread T0 here:
     #8 0x99e72f in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:286:6
     #9 0x9aa403 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:715:9
     #10 0x99dd87 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #11 0x7eb9a221983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x794640c2083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: realloc--av_buffer_realloc--packet_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/get_bits.h:455:5 in show_bits

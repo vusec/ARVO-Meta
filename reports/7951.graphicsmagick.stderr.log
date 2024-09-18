@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000176 at pc 0x00000074c270 bp 0x7ffe45adf070 sp 0x7ffe45adf068
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000176 at pc 0x00000074c270 bp 0x7ffe00d10b10 sp 0x7ffe00d10b08
 READ of size 2 at 0x602000000176 thread T0
 SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #0 0x74c26f in ReadDPXImage /src/graphicsmagick/coders/dpx.c:2791:37
@@ -19,7 +19,7 @@ SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #4 0x5285c3 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #5 0x528ecf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:290:5
     #6 0x52946f in main /src/libfuzzer/afl/afl_driver.cpp:327:12
-    #7 0x75592924583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x7d469ff7183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41d638 in _start (/out/coder_DPX_fuzzer+0x41d638)
 
 DEDUP_TOKEN: ReadDPXImage--ReadImage--BlobToImage
@@ -34,7 +34,7 @@ allocated by thread T0 here:
     #6 0x5285c3 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x528ecf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:290:5
     #8 0x52946f in main /src/libfuzzer/afl/afl_driver.cpp:327:12
-    #9 0x75592924583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7d469ff7183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--AllocateThreadViewDataArray--ReadDPXImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/dpx.c:2791:37 in ReadDPXImage

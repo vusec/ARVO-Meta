@@ -1,9 +1,9 @@
-INFO: Seed: 452492682
+INFO: Seed: 3268478699
 INFO: Loaded 1 modules (15604 guards): [0xb985b0, 0xba7980),
 /out/ffmpeg_AV_CODEC_ID_AAC_FIXED_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000018bb420 at pc 0x0000005910d1 bp 0x7ffd7d81a9d0 sp 0x7ffd7d81a9c8
+==12==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000018bb420 at pc 0x0000005910d1 bp 0x7ffe3e70d6b0 sp 0x7ffe3e70d6a8
 READ of size 4 at 0x0000018bb420 thread T0
 SCARINESS: 27 (4-byte-read-global-buffer-overflow-far-from-bounds)
     #0 0x5910d0 in stereo_processing /src/ffmpeg/libavcodec/aacps.c:904:19
@@ -23,7 +23,7 @@ SCARINESS: 27 (4-byte-read-global-buffer-overflow-far-from-bounds)
     #14 0x712656 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #15 0x71dbe0 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:683:9
     #16 0x711c68 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #17 0x76904d43d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #17 0x7bda0e8b683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #18 0x41d728 in _start (/out/ffmpeg_AV_CODEC_ID_AAC_FIXED_fuzzer+0x41d728)
 
 DEDUP_TOKEN: stereo_processing--ff_ps_apply_fixed--ff_sbr_apply_fixed
@@ -60,4 +60,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==12==ABORTING

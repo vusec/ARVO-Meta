@@ -1,6 +1,6 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x783f987fe800 at pc 0x0000007c6ed4 bp 0x7ffe813c2970 sp 0x7ffe813c2968
-READ of size 1 at 0x783f987fe800 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x720b91bfe800 at pc 0x0000007c6ed4 bp 0x7fff866ee4f0 sp 0x7fff866ee4e8
+READ of size 1 at 0x720b91bfe800 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x7c6ed3 in ff_jpegls_decode_picture /src/ffmpeg/libavcodec/jpeglsdec.c:500:46
     #1 0x53dfc1 in ff_mjpeg_decode_sos /src/ffmpeg/libavcodec/mjpegdec.c:1764:24
@@ -10,11 +10,11 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #5 0x4ff985 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:482:25
     #6 0xdad0da in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #7 0xdacead in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #8 0x783f997b9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #8 0x720b92b99082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #9 0x443afd in _start (/out/ffmpeg_AV_CODEC_ID_AMV_fuzzer+0x443afd)
 
 DEDUP_TOKEN: ff_jpegls_decode_picture--ff_mjpeg_decode_sos--ff_mjpeg_receive_frame
-0x783f987fe800 is located 0 bytes to the right of 786432-byte region [0x783f9873e800,0x783f987fe800)
+0x720b91bfe800 is located 0 bytes to the right of 786432-byte region [0x720b91b3e800,0x720b91bfe800)
 allocated by thread T0 here:
     #0 0x4c3827 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
     #1 0xd00a7c in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -32,17 +32,17 @@ allocated by thread T0 here:
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/jpeglsdec.c:500:46 in ff_jpegls_decode_picture
 Shadow bytes around the buggy address:
-  0x0f08730f7cb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f08730f7cc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f08730f7cd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f08730f7ce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f08730f7cf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0f08730f7d00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f08730f7d10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f08730f7d20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f08730f7d30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f08730f7d40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0f08730f7d50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e41f2377cb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e41f2377cc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e41f2377cd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e41f2377ce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e41f2377cf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e41f2377d00:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e41f2377d10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e41f2377d20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e41f2377d30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e41f2377d40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e41f2377d50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

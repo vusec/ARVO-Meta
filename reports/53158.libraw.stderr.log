@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000003900 at pc 0x00000049d2a2 bp 0x7ffe73d42380 sp 0x7ffe73d41b48
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000003900 at pc 0x00000049d2a2 bp 0x7ffedd1e5060 sp 0x7ffedd1e4828
 WRITE of size 6167 at 0x621000003900 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x49d2a1 in __asan_memmove /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3
@@ -9,7 +9,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #4 0x4da87f in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:66:20
     #5 0x4dce0a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #6 0x4dcbdd in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #7 0x756c4ff51082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x70aa48c1c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #8 0x41e6bd in _start (/out/libraw_raf_fuzzer+0x41e6bd)
 
 DEDUP_TOKEN: __asan_memmove--LibRaw_buffer_datastream::read(void*, unsigned long, unsigned long)--LibRaw::uncompressed_fp_dng_load_raw()

@@ -1,8 +1,8 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/coder_TXT_fuzzer
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x766818ddc976 at pc 0x000000572e9b bp 0x7ffdfce1b820 sp 0x7ffdfce1b818
-WRITE of size 1 at 0x766818ddc976 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x710cdb3dc976 at pc 0x000000572e9b bp 0x7ffcf3756160 sp 0x7ffcf3756158
+WRITE of size 1 at 0x710cdb3dc976 thread T0
 SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #0 0x572e9a in ReadBlobString /src/graphicsmagick/magick/blob.c:4623:18
     #1 0x93fcb0 in ReadTXTImage /src/graphicsmagick/coders/txt.c:337:7
@@ -11,11 +11,11 @@ SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #4 0x4f2bd5 in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1592:5
     #5 0x4de4d6 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #6 0x4df38b in main (/out/coder_TXT_fuzzer+0x4df38b)
-    #7 0x7668193fb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #7 0x710cdba32082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #8 0x41f54d in _start (/out/coder_TXT_fuzzer+0x41f54d)
 
 DEDUP_TOKEN: ReadBlobString--ReadTXTImage--ReadImage
-Address 0x766818ddc976 is located in stack of thread T0 at offset 4470 in frame
+Address 0x710cdb3dc976 is located in stack of thread T0 at offset 4470 in frame
     #0 0x93f98f in ReadTXTImage /src/graphicsmagick/coders/txt.c:306
 
 DEDUP_TOKEN: ReadTXTImage
@@ -47,17 +47,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/graphicsmagick/magick/blob.c:4623:18 in ReadBlobString
 Shadow bytes around the buggy address:
-  0x0ecd831b38d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ecd831b38e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ecd831b38f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ecd831b3900: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0ecd831b3910: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0ecd831b3920: 00 00 00 00 00 00 00 00 00 00 00 00 00 00[05]f2
-  0x0ecd831b3930: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
-  0x0ecd831b3940: f8 f2 f8 f2 f8 f2 f8 f2 f8 f8 f8 f8 f8 f2 f2 f2
-  0x0ecd831b3950: f2 f2 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0ecd831b3960: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
-  0x0ecd831b3970: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0e221b6738d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e221b6738e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e221b6738f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e221b673900: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e221b673910: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e221b673920: 00 00 00 00 00 00 00 00 00 00 00 00 00 00[05]f2
+  0x0e221b673930: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x0e221b673940: f8 f2 f8 f2 f8 f2 f8 f2 f8 f8 f8 f8 f8 f2 f2 f2
+  0x0e221b673950: f2 f2 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0e221b673960: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x0e221b673970: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

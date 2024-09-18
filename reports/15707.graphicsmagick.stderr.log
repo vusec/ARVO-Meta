@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000310 at pc 0x0000006de894 bp 0x7ffd503ff750 sp 0x7ffd503ff748
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000310 at pc 0x0000006de894 bp 0x7fff25d62530 sp 0x7fff25d62528
 READ of size 8 at 0x610000000310 thread T0
 SCARINESS: 33 (8-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x6de893 in TraceSquareLinecap /src/graphicsmagick/magick/render.c:6991:69
@@ -24,7 +24,7 @@ SCARINESS: 33 (8-byte-read-heap-buffer-overflow-far-from-bounds)
     #9 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #10 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #11 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #12 0x7897dcec583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x72471b9e483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: TraceSquareLinecap--TraceStrokePolygon--DrawStrokePolygon
@@ -42,7 +42,7 @@ allocated by thread T0 here:
     #9 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #10 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #11 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #12 0x7897dcec583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x72471b9e483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--TraceStrokePolygon--DrawStrokePolygon
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:6991:69 in TraceSquareLinecap

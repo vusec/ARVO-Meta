@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 413596638
+INFO: Seed: 3280686648
 INFO: Loaded 1 modules   (19157 inline 8-bit counters): 19157 [0x862b424, 0x862fef9),
 INFO: Loaded 1 PC tables (19157 PCs): 19157 [0x862fefc,0x86555a4),
 /out/tiff_read_rgba_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xebc00f92 at pc 0x084350ce bp 0xffcb2f28 sp 0xffcb2f20
-READ of size 1 at 0xebc00f92 thread T0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xeac00f92 at pc 0x084350ce bp 0xffd2fd88 sp 0xffd2fd80
+READ of size 1 at 0xeac00f92 thread T0
 SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x84350cd in decode_mcu_fast /src/libjpeg-turbo/jdhuff.c:693:9
     #1 0x84350cd in decode_mcu /src/libjpeg-turbo/jdhuff.c:782:12
@@ -29,24 +29,24 @@ SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #18 0x80b59fe in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #19 0x80bb9b9 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #20 0x80e71c7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #21 0xf2001646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #21 0xf0fb1646 in __libc_start_main (/lib32/libc.so.6+0x18646)
     #22 0x8090121 in _start (/out/tiff_read_rgba_fuzzer+0x8090121)
 
 DEDUP_TOKEN: decode_mcu_fast--decode_mcu--decompress_onepass
-Address 0xebc00f92 is a wild pointer.
+Address 0xeac00f92 is a wild pointer.
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libjpeg-turbo/jdhuff.c:693:9 in decode_mcu_fast
 Shadow bytes around the buggy address:
-  0x3d7801a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d7801b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d7801c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d7801d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d7801e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x3d7801f0: fa fa[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d780200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d780210: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d780220: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d780230: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d780240: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d5801a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d5801b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d5801c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d5801d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d5801e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x3d5801f0: fa fa[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d580200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d580210: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d580220: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d580230: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d580240: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

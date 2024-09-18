@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000000178 at pc 0x0000006d73d0 bp 0x7ffd1e849390 sp 0x7ffd1e849388
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000000178 at pc 0x0000006d73d0 bp 0x7ffebe625c50 sp 0x7ffebe625c48
 READ of size 8 at 0x603000000178 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x6d73cf in DrawDashPolygon /src/graphicsmagick/magick/render.c:1948:11
@@ -22,7 +22,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #7 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #8 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #9 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #10 0x7ac971bde83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x72888636183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: DrawDashPolygon--DrawPrimitive--DrawImage
@@ -38,7 +38,7 @@ allocated by thread T0 here:
     #7 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #8 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #9 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #10 0x7ac971bde83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x72888636183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--CloneDrawInfo--DrawImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:1948:11 in DrawDashPolygon

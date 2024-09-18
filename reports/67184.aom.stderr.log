@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 71056748
+INFO: Seed: 3302447986
 INFO: Loaded 1 modules   (30955 inline 8-bit counters): 30955 [0xef3d30, 0xefb61b),
 INFO: Loaded 1 PC tables (30955 PCs): 30955 [0xefb620,0xf744d0),
 /out/av1_dec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000382 at pc 0x0000007bcebe bp 0x733da63ff7e0 sp 0x733da63ff7d8
-READ of size 1 at 0x611000000382 thread T12 (aom tile worker)
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000382 at pc 0x0000007bcebe bp 0x76463d3ff7e0 sp 0x76463d3ff7d8
+READ of size 1 at 0x611000000382 thread T10 (aom tile worker)
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x7bcebd in od_ec_dec_refill /src/aom/aom_dsp/entdec.c:94:26
     #1 0x7bcebd in od_ec_dec_init /src/aom/aom_dsp/entdec.c:152:3
@@ -16,8 +16,8 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #5 0x5ac7c4 in row_mt_worker_hook /src/aom/av1/decoder/decodeframe.c:3212:7
     #6 0x944c2d in execute /src/aom/aom_util/aom_thread.c:195:27
     #7 0x944c2d in thread_loop /src/aom/aom_util/aom_thread.c:82:7
-    #8 0x733db130f608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608) (BuildId: c6d0d79d906d62bb768421fc6dada0d5e729f177)
-    #9 0x733db1209352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #8 0x764646e82608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608) (BuildId: c6d0d79d906d62bb768421fc6dada0d5e729f177)
+    #9 0x764646d7c352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: od_ec_dec_refill--od_ec_dec_init--aom_reader_init
 0x611000000382 is located 0 bytes to the right of 194-byte region [0x6110000002c0,0x611000000382)
@@ -27,10 +27,10 @@ allocated by thread T0 here:
     #2 0x429552 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #3 0x42edfc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #4 0x458332 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0x733db110e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #5 0x764646c81082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_malloc--operator new(unsigned long)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long)
-Thread T12 (aom tile worker) created by T0 here:
+Thread T10 (aom tile worker) created by T0 here:
     #0 0x51867c in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:208:3
     #1 0x943f58 in reset /src/aom/aom_util/aom_thread.c:170:11
     #2 0x5a96f1 in decode_mt_init /src/aom/av1/decoder/decodeframe.c:3487:31
@@ -49,7 +49,7 @@ Thread T12 (aom tile worker) created by T0 here:
     #15 0x429552 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #16 0x42edfc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #17 0x458332 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #18 0x733db110e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #18 0x764646c81082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: pthread_create--reset--decode_mt_init
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/aom/aom_dsp/entdec.c:94:26 in od_ec_dec_refill

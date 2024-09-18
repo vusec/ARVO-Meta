@@ -1,9 +1,9 @@
-INFO: Seed: 146143712
+INFO: Seed: 3266056423
 INFO: Loaded 1 modules (68291 guards): [0xe34430, 0xe76f3c),
 /out/ffmpeg_AV_CODEC_ID_CDXL_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60a00000056f at pc 0x0000004c55e8 bp 0x7fffe7d0c550 sp 0x7fffe7d0bd00
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60a00000056f at pc 0x0000004c55e8 bp 0x7ffd271120b0 sp 0x7ffd27111860
 WRITE of size 80 at 0x60a00000056f thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x4c55e7 in __asan_memcpy /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors.cc:469
@@ -21,7 +21,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #12 0x8a9d36 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #13 0x8b51d6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #14 0x8a9358 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #15 0x7d49950ce83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x7b5402ec683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #16 0x41d658 in _start (/out/ffmpeg_AV_CODEC_ID_CDXL_fuzzer+0x41d658)
 
 DEDUP_TOKEN: __asan_memcpy--bytestream2_get_buffer--chunky2chunky
@@ -48,7 +48,7 @@ allocated by thread T0 here:
     #18 0x8a9d36 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #19 0x8b51d6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #20 0x8a9358 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #21 0x7d49950ce83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #21 0x7b5402ec683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors.cc:469 in __asan_memcpy

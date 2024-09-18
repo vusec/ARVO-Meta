@@ -1,9 +1,9 @@
-INFO: Seed: 441103404
+INFO: Seed: 3266875286
 INFO: Loaded 1 modules   (3932 guards): 3932 [0x911b80, 0x9158f0),
 /out/block_round_trip: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62a000005ae8 at pc 0x0000004dd485 bp 0x7ffd3fe43080 sp 0x7ffd3fe42830
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62a000005ae8 at pc 0x0000004dd485 bp 0x7fff6a28a580 sp 0x7fff6a289d30
 WRITE of size 1025 at 0x62a000005ae8 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x4dd484 in __asan_memcpy /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23
@@ -17,7 +17,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #8 0x58b335 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:273:6
     #9 0x596650 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:687:9
     #10 0x58a9d8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #11 0x7db09a7c283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x72918b6c283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41bff8 in _start (/out/block_round_trip+0x41bff8)
 
 DEDUP_TOKEN: __asan_memcpy--ZSTD_storeLastLiterals--ZSTD_compressBlock_internal
@@ -35,7 +35,7 @@ allocated by thread T0 here:
     #9 0x58b335 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:273:6
     #10 0x596650 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:687:9
     #11 0x58a9d8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #12 0x7db09a7c283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x72918b6c283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ZSTD_malloc--ZSTD_resetCCtx_internal
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23 in __asan_memcpy

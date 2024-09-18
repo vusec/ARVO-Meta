@@ -1,7 +1,7 @@
 Running LLVMFuzzerInitialize ...
 continue...
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000014498 at pc 0x0000004389e6 bp 0x7fff259cca20 sp 0x7fff259cc1d0
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000014498 at pc 0x0000004389e6 bp 0x7ffe334898a0 sp 0x7ffe33489050
 READ of size 8128207 at 0x619000014498 thread T0
 SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #0 0x4389e5 in MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long) /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:860:7
@@ -19,7 +19,7 @@ SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #12 0x4df50d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #13 0x4df318 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #14 0x4deed8 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #15 0x73296434b082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #15 0x72bee1f4e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #16 0x41e5ad in _start (/out/html+0x41e5ad)
 
 DEDUP_TOKEN: MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long)--bcmp--xmlDictFindEntry

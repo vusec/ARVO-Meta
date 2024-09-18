@@ -9,7 +9,7 @@ To fuzz with afl-fuzz execute this:
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61200000040f at pc 0x0000006b1507 bp 0x7fff6a5922c0 sp 0x7fff6a5922b8
+==12==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61200000040f at pc 0x0000006b1507 bp 0x7ffc1ad86a40 sp 0x7ffc1ad86a38
 WRITE of size 1 at 0x61200000040f thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x6b1506 in ff_lzw_decode /src/ffmpeg/libavcodec/lzw.c:184:20
@@ -23,7 +23,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #8 0x4f545a in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:245:23
     #9 0x9766aa in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:156:5
     #10 0x976911 in main /src/libfuzzer/afl/afl_driver.cpp:193:12
-    #11 0x7d1c638f683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7b2403af683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41dcb8 in _start (/out/ffmpeg_AV_CODEC_ID_TIFF_fuzzer+0x41dcb8)
 
 DEDUP_TOKEN: ff_lzw_decode--tiff_unpack_strip--decode_frame
@@ -49,7 +49,7 @@ allocated by thread T0 here:
     #17 0x4f545a in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:245:23
     #18 0x9766aa in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:156:5
     #19 0x976911 in main /src/libfuzzer/afl/afl_driver.cpp:193:12
-    #20 0x7d1c638f683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #20 0x7b2403af683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/lzw.c:184:20 in ff_lzw_decode
@@ -85,4 +85,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==12==ABORTING

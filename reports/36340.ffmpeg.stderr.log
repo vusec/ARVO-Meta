@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/ffmpeg_AV_CODEC_ID_MPEG4_fuzzer
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000001c3 at pc 0x0000005336c0 bp 0x7ffe3fe4ca30 sp 0x7ffe3fe4ca28
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000001c3 at pc 0x0000005336c0 bp 0x7ffcfffd4610 sp 0x7ffcfffd4608
 READ of size 4 at 0x6090000001c3 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x5336bf in get_bits /src/ffmpeg/libavcodec/get_bits.h:404:5
@@ -11,7 +11,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #4 0x5836c6 in av_parser_parse2 /src/ffmpeg/libavcodec/parser.c:161:13
     #5 0x4ed553 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:352:27
     #6 0x9df06b in main (/out/ffmpeg_AV_CODEC_ID_MPEG4_fuzzer+0x9df06b)
-    #7 0x729f43c7983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x786c529e783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x43cd68 in _start (/out/ffmpeg_AV_CODEC_ID_MPEG4_fuzzer+0x43cd68)
 
 DEDUP_TOKEN: get_bits--ff_mpeg4_decode_picture_header--mpeg4_decode_header

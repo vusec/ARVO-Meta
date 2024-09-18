@@ -10,7 +10,7 @@ afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 attribute not recognized: w
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6140000001e8 at pc 0x0000006d8083 bp 0x7fff70e2eb80 sp 0x7fff70e2eb78
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6140000001e8 at pc 0x0000006d8083 bp 0x7ffc147e7b00 sp 0x7ffc147e7af8
 WRITE of size 4 at 0x6140000001e8 thread T0
 SCARINESS: 46 (4-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x6d8082 in ConvertPrimitiveToPath /src/graphicsmagick/magick/render.c:942:22
@@ -24,7 +24,7 @@ SCARINESS: 46 (4-byte-write-heap-buffer-overflow-far-from-bounds)
     #8 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #9 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #10 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #11 0x7d73f38ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x79e5c4b4083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: ConvertPrimitiveToPath--DrawPolygonPrimitive--DrawPrimitive
@@ -42,7 +42,7 @@ allocated by thread T0 here:
     #9 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #10 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #11 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #12 0x7d73f38ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x79e5c4b4083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ConvertPrimitiveToPath--DrawPolygonPrimitive
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:942:22 in ConvertPrimitiveToPath

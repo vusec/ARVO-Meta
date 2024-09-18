@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/simple_compress
 =================================================================
-==14==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000a26d30 at pc 0x000000900405 bp 0x7fff288b3470 sp 0x7fff288b3468
+==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000a26d30 at pc 0x000000900405 bp 0x7ffd008365d0 sp 0x7ffd008365c8
 READ of size 4 at 0x000000a26d30 thread T0
 SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #0 0x900404 in ZSTD_litLengthPrice /src/zstd/tests/fuzz/../../lib/compress/zstd_opt.c:274:17
@@ -17,7 +17,7 @@ SCARINESS: 17 (4-byte-read-global-buffer-overflow)
     #10 0x8a41b5 in ZSTD_compressCCtx /src/zstd/tests/fuzz/../../lib/compress/zstd_compress.c:4720:12
     #11 0x9e69c5 in LLVMFuzzerTestOneInput /src/zstd/tests/fuzz/simple_compress.c:46:24
     #12 0x9e70eb in main (/out/simple_compress+0x9e70eb)
-    #13 0x740c2a15c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #13 0x708929cb2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #14 0x41d60d in _start (/out/simple_compress+0x41d60d)
 
 DEDUP_TOKEN: ZSTD_litLengthPrice--ZSTD_compressBlock_opt_generic--ZSTD_compressBlock_btopt
@@ -56,4 +56,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==14==ABORTING
+==13==ABORTING

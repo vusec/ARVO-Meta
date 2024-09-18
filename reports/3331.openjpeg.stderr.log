@@ -1,9 +1,9 @@
-INFO: Seed: 436885764
+INFO: Seed: 3266526522
 INFO: Loaded 1 modules   (6960 guards): 6960 [0x98c040, 0x992d00),
 /out/opj_decompress_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x613000001848 at pc 0x0000005fd775 bp 0x7fff4b4caab0 sp 0x7fff4b4caaa8
+==14==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x613000001848 at pc 0x0000005fd775 bp 0x7fff77b82490 sp 0x7fff77b82488
 READ of size 4 at 0x613000001848 thread T0
 SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x5fd774 in opj_tcd_mct_decode /src/openjpeg/src/lib/openjp2/tcd.c:1988:45
@@ -17,7 +17,7 @@ SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #8 0x5199a5 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:273:6
     #9 0x524c3f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:689:9
     #10 0x519048 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #11 0x7490cdb6183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x743049f1483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41c298 in _start (/out/opj_decompress_fuzzer+0x41c298)
 
 DEDUP_TOKEN: opj_tcd_mct_decode--opj_tcd_decode_tile--opj_j2k_decode_tile
@@ -54,4 +54,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==14==ABORTING

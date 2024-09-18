@@ -1,11 +1,11 @@
-INFO: Seed: 380064130
+INFO: Seed: 3274574304
 INFO: Loaded 1 modules   (17425 inline 8-bit counters): 17425 [0xae6768, 0xaeab79),
 INFO: Loaded 1 PC tables (17425 PCs): 17425 [0x7c4b58,0x808c68),
 /out/libraw_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x78e42e95d8a0 at pc 0x000000586165 bp 0x7ffcdea4bf50 sp 0x7ffcdea4bf48
-WRITE of size 1 at 0x78e42e95d8a0 thread T0
+==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x74e2738d28a0 at pc 0x000000586165 bp 0x7fff76739990 sp 0x7fff76739988
+WRITE of size 1 at 0x74e2738d28a0 thread T0
 SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #0 0x586164 in LibRaw_buffer_datastream::gets(char*, int) /src/libraw/src/libraw_datastream.cpp:436:16
     #1 0x65f9b4 in LibRaw::parse_rollei() /src/libraw/src/metadata/misc_parsers.cpp:302:10
@@ -17,11 +17,11 @@ SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #7 0x444cf2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
     #8 0x44ad4e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
     #9 0x4726c2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #10 0x78e42d8ed83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x74e27286283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41f388 in _start (/out/libraw_fuzzer+0x41f388)
 
 DEDUP_TOKEN: LibRaw_buffer_datastream::gets(char*, int)--LibRaw::parse_rollei()--LibRaw::identify()
-Address 0x78e42e95d8a0 is located in stack of thread T0 at offset 160 in frame
+Address 0x74e2738d28a0 is located in stack of thread T0 at offset 160 in frame
     #0 0x65f6cf in LibRaw::parse_rollei() /src/libraw/src/metadata/misc_parsers.cpp:293
 
 DEDUP_TOKEN: LibRaw::parse_rollei()
@@ -32,17 +32,17 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/libraw/src/libraw_datastream.cpp:436:16 in LibRaw_buffer_datastream::gets(char*, int)
 Shadow bytes around the buggy address:
-  0x0f1d05d23ac0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23ad0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23ae0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23af0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23b00: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0f1d05d23b10: 00 00 00 00[f2]f2 f2 f2 00 00 00 00 00 00 00 f3
-  0x0f1d05d23b20: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23b30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23b40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23b50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0f1d05d23b60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce7124c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce7124d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce7124e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce7124f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce712500: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e9cce712510: 00 00 00 00[f2]f2 f2 f2 00 00 00 00 00 00 00 f3
+  0x0e9cce712520: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce712530: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce712540: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce712550: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e9cce712560: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07

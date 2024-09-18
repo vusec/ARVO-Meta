@@ -1,5 +1,5 @@
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d0000030c5 at pc 0x0000007ea4aa bp 0x7ffe3ab36440 sp 0x7ffe3ab36438
+==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d0000030c5 at pc 0x0000007ea4aa bp 0x7ffe9a1d4c60 sp 0x7ffe9a1d4c58
 READ of size 1 at 0x61d0000030c5 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x7ea4a9 in avg_h264_chroma_mc1_8_c /src/ffmpeg/libavcodec/h264chroma_template.c:208:1
@@ -18,7 +18,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #13 0xd6626d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #14 0xd66078 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #15 0xd65c38 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #16 0x710e3ade5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #16 0x74c5277b5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #17 0x4410dd in _start (/out/ffmpeg_AV_CODEC_ID_MPEG1VIDEO_fuzzer+0x4410dd)
 
 DEDUP_TOKEN: avg_h264_chroma_mc1_8_c--mpeg_motion_lowres--MPV_motion_lowres
