@@ -1,0 +1,67 @@
+Unable to find image 'n132/arvo:34461-vul' locally
+34461-vul: Pulling from n132/arvo
+7b378fa0f908: Already exists
+4d77b1b29f2e: Already exists
+7c793be88bae: Already exists
+ecc05c8a19c0: Already exists
+0f8f9ded502c: Already exists
+b6f3bcbfc6ae: Already exists
+94707635307e: Already exists
+746c67679e47: Already exists
+6d641893a221: Already exists
+b2b7869d756a: Already exists
+161d04369c39: Already exists
+3dca45b9afdf: Already exists
+775853853699: Already exists
+f9085b10fe4b: Already exists
+99a0fd16b3b3: Already exists
+91018a50671d: Already exists
+2f629eaf8213: Already exists
+6e29c74b95b2: Already exists
+6e9f7d063e5b: Already exists
+40dd04eef0ad: Already exists
+d1b831fef183: Already exists
+66f99fcf401b: Already exists
+ab203c033d2a: Already exists
+ba3c418020e6: Already exists
+9a1e266165c9: Pulling fs layer
+da558cac0535: Pulling fs layer
+cd829811764a: Pulling fs layer
+fbe0babe1e95: Pulling fs layer
+e435ae51375b: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+6ffd7bac01d5: Pulling fs layer
+69ca49261df1: Pulling fs layer
+951d6f574a6b: Pulling fs layer
+4f4fb700ef54: Waiting
+6ffd7bac01d5: Waiting
+69ca49261df1: Waiting
+fbe0babe1e95: Waiting
+951d6f574a6b: Waiting
+e435ae51375b: Waiting
+da558cac0535: Verifying Checksum
+da558cac0535: Download complete
+cd829811764a: Verifying Checksum
+cd829811764a: Download complete
+e435ae51375b: Verifying Checksum
+e435ae51375b: Download complete
+fbe0babe1e95: Verifying Checksum
+fbe0babe1e95: Download complete
+4f4fb700ef54: Download complete
+6ffd7bac01d5: Download complete
+9a1e266165c9: Verifying Checksum
+9a1e266165c9: Download complete
+951d6f574a6b: Download complete
+69ca49261df1: Verifying Checksum
+69ca49261df1: Download complete
+9a1e266165c9: Pull complete
+da558cac0535: Pull complete
+cd829811764a: Pull complete
+fbe0babe1e95: Pull complete
+e435ae51375b: Pull complete
+4f4fb700ef54: Pull complete
+6ffd7bac01d5: Pull complete
+69ca49261df1: Pull complete
+951d6f574a6b: Pull complete
+Digest: sha256:bc72d494493ca3685b03acf471dd0a43aef8175a88981db3e9348af261df862a
+Status: Downloaded newer image for n132/arvo:34461-vul

@@ -1,0 +1,87 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3897682185
+INFO: Loaded 1 modules   (159948 inline 8-bit counters): 159948 [0x1aae6c0, 0x1ad578c), 
+INFO: Loaded 1 PC tables (159948 PCs): 159948 [0x16370f0,0x18a7db0), 
+/out/ffmpeg_DEMUXER_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x72b052dfeb78 at pc 0x000000a3620d bp 0x7ffe4ef18dd0 sp 0x7ffe4ef18dc8
+READ of size 2 at 0x72b052dfeb78 thread T0
+SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
+    #0 0xa3620c in cbs_h266_read_slice_header /src/ffmpeg/libavcodec/cbs_h266_syntax_template.c:3021:30
+    #1 0xa3620c in cbs_h266_read_nal_unit /src/ffmpeg/libavcodec/cbs_h2645.c:1127:19
+    #2 0x9bc20c in cbs_read_fragment_content /src/ffmpeg/libavcodec/cbs.c:207:15
+    #3 0x9bc20c in cbs_read_data /src/ffmpeg/libavcodec/cbs.c:274:12
+    #4 0x9bc8da in ff_cbs_read /src/ffmpeg/libavcodec/cbs.c:320:12
+    #5 0x999981 in parse_nal_units /src/ffmpeg/libavcodec/vvc_parser.c:363:16
+    #6 0x999981 in combine_au /src/ffmpeg/libavcodec/vvc_parser.c:402:11
+    #7 0x9994f5 in vvc_parser_parse /src/ffmpeg/libavcodec/vvc_parser.c:452:15
+    #8 0x948920 in av_parser_parse2 /src/ffmpeg/libavcodec/parser.c:163:13
+    #9 0x5c3025 in parse_packet /src/ffmpeg/libavformat/demux.c:1153:15
+    #10 0x5b12c7 in read_frame_internal /src/ffmpeg/libavformat/demux.c:1272:21
+    #11 0x5b7fd1 in avformat_find_stream_info /src/ffmpeg/libavformat/demux.c:2634:15
+    #12 0x5999b3 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:206:11
+    #13 0x46b063 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #14 0x4567c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #15 0x45c06c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #16 0x4855a2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #17 0x72b0537ae082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #18 0x44c98d in _start (/out/ffmpeg_DEMUXER_fuzzer+0x44c98d)
+
+DEDUP_TOKEN: cbs_h266_read_slice_header--cbs_h266_read_nal_unit--cbs_read_fragment_content
+0x72b052dfeb78 is located 0 bytes to the right of 537464-byte region [0x72b052d7b800,0x72b052dfeb78)
+allocated by thread T0 here:
+    #0 0x55cd47 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0x103914f in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
+    #2 0x103914f in av_mallocz /src/ffmpeg/libavutil/mem.c:256:17
+    #3 0x9c1558 in ff_cbs_alloc_unit_content /src/ffmpeg/libavcodec/cbs.c:895:21
+    #4 0xa2f753 in cbs_h266_read_nal_unit /src/ffmpeg/libavcodec/cbs_h2645.c:1057:11
+    #5 0x9bc20c in cbs_read_fragment_content /src/ffmpeg/libavcodec/cbs.c:207:15
+    #6 0x9bc20c in cbs_read_data /src/ffmpeg/libavcodec/cbs.c:274:12
+    #7 0x9bc6b9 in ff_cbs_read_extradata_from_codec /src/ffmpeg/libavcodec/cbs.c:290:12
+    #8 0x998e24 in vvc_parser_parse /src/ffmpeg/libavcodec/vvc_parser.c:434:15
+    #9 0x948920 in av_parser_parse2 /src/ffmpeg/libavcodec/parser.c:163:13
+    #10 0x5c3025 in parse_packet /src/ffmpeg/libavformat/demux.c:1153:15
+    #11 0x5b1ad8 in read_frame_internal /src/ffmpeg/libavformat/demux.c:1354:24
+    #12 0x5b7fd1 in avformat_find_stream_info /src/ffmpeg/libavformat/demux.c:2634:15
+    #13 0x5999b3 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:206:11
+    #14 0x46b063 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #15 0x4567c2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #16 0x45c06c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #17 0x4855a2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #18 0x72b0537ae082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+
+DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/cbs_h266_syntax_template.c:3021:30 in cbs_h266_read_slice_header
+Shadow bytes around the buggy address:
+  0x0e568a5b7d10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e568a5b7d20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e568a5b7d30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e568a5b7d40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e568a5b7d50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e568a5b7d60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[fa]
+  0x0e568a5b7d70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e568a5b7d80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e568a5b7d90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e568a5b7da0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e568a5b7db0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

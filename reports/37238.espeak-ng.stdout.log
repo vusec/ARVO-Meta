@@ -1,0 +1,74 @@
+Unable to find image 'n132/arvo:37238-vul' locally
+37238-vul: Pulling from n132/arvo
+92473f7ef455: Already exists
+fb52bde70123: Already exists
+64788f86be3f: Already exists
+33f6d5f2e001: Already exists
+7d7cbc4e47fb: Already exists
+2d44b7c2da37: Already exists
+11d470b8a1b6: Already exists
+8aa92643b6de: Already exists
+ca16caafcd75: Already exists
+081ba9a425c9: Already exists
+2c9503648655: Already exists
+a8c5c2732860: Already exists
+05d9bfa86a0b: Already exists
+b2c82883bfe5: Already exists
+bc79739b4ec7: Already exists
+e748102656e1: Already exists
+01a37b6fd157: Already exists
+9b769dcdfaeb: Already exists
+b3c9f7780c90: Already exists
+f7539ca1b6d1: Already exists
+82f346466c69: Already exists
+04b3adc64217: Already exists
+2d87a9b30356: Already exists
+609523f3c48d: Already exists
+02f049f25ab4: Already exists
+d84c877493f5: Already exists
+9297b1743a8f: Already exists
+d25b5c140dbb: Already exists
+86181a1be476: Pulling fs layer
+796ec250bf5b: Pulling fs layer
+1b034c7f49fb: Pulling fs layer
+cfd2ebf0a3a8: Pulling fs layer
+4fc09653da72: Pulling fs layer
+d60c83fd7a1e: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+4480738c4d8e: Pulling fs layer
+03c2b7db4f0c: Pulling fs layer
+4480738c4d8e: Waiting
+4f4fb700ef54: Waiting
+03c2b7db4f0c: Waiting
+4fc09653da72: Waiting
+d60c83fd7a1e: Waiting
+cfd2ebf0a3a8: Waiting
+796ec250bf5b: Verifying Checksum
+796ec250bf5b: Download complete
+1b034c7f49fb: Verifying Checksum
+1b034c7f49fb: Download complete
+86181a1be476: Verifying Checksum
+86181a1be476: Download complete
+86181a1be476: Pull complete
+796ec250bf5b: Pull complete
+4fc09653da72: Verifying Checksum
+4fc09653da72: Download complete
+1b034c7f49fb: Pull complete
+d60c83fd7a1e: Verifying Checksum
+d60c83fd7a1e: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+cfd2ebf0a3a8: Verifying Checksum
+cfd2ebf0a3a8: Download complete
+4480738c4d8e: Verifying Checksum
+4480738c4d8e: Download complete
+03c2b7db4f0c: Verifying Checksum
+03c2b7db4f0c: Download complete
+cfd2ebf0a3a8: Pull complete
+4fc09653da72: Pull complete
+d60c83fd7a1e: Pull complete
+4f4fb700ef54: Pull complete
+4480738c4d8e: Pull complete
+03c2b7db4f0c: Pull complete
+Digest: sha256:e3c36ff721825b6e020233c4a2410ee9c5159ca5b07d980b58fec56c43782420
+Status: Downloaded newer image for n132/arvo:37238-vul

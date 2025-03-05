@@ -1,0 +1,90 @@
+Accepting input from '/tmp/poc'
+Usage for fuzzing: honggfuzz -P [flags] -- /out/xml
+=================================================================
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000001110 at pc 0x00000043aa18 bp 0x7ffe84d53510 sp 0x7ffe84d52c98
+READ of size 2 at 0x602000001110 thread T0
+SCARINESS: 42 (2-byte-read-heap-use-after-free)
+    #0 0x43aa17 in printf_common(void*, char const*, __va_list_tag*) /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors_format.inc:547:9
+    #1 0x4d29c0 in __xmlRaiseError /src/libxml2/error.c:501:9
+    #2 0x58a579 in xmlErrValidNode /src/libxml2/valid.c:163:5
+    #3 0x5a5405 in xmlValidateRef /src/libxml2/valid.c:6556:6
+    #4 0x5a4f18 in xmlWalkValidateList /src/libxml2/valid.c:6603:2
+    #5 0x7000ea in xmlListWalk /src/libxml2/list.c:682:13
+    #6 0x5a115a in xmlValidateCheckRefCallback /src/libxml2/valid.c:6625:5
+    #7 0x56fafa in stubHashScannerFull /src/libxml2/hash.c:852:5
+    #8 0x56f7fc in xmlHashScanFull /src/libxml2/hash.c:899:7
+    #9 0x56f58e in xmlHashScan /src/libxml2/hash.c:868:5
+    #10 0x5a0f7d in xmlValidateDocumentFinal /src/libxml2/valid.c:6673:5
+    #11 0x6c5345 in xmlSAX2EndDocument /src/libxml2/SAX2.c:1029:17
+    #12 0x5248d3 in xmlParseChunk /src/libxml2/parser.c:12332:3
+    #13 0x675af0 in xmlTextReaderPushData /src/libxml2/xmlreader.c:935:12
+    #14 0x672a97 in xmlTextReaderRead /src/libxml2/xmlreader.c:1384:8
+    #15 0x4c7007 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:73:12
+    #16 0x4c833d in main (/out/xml+0x4c833d)
+    #17 0x7d7fcf2c083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x41c6c8 in _start (/out/xml+0x41c6c8)
+
+DEDUP_TOKEN: printf_common(void*, char const*, __va_list_tag*)--__xmlRaiseError--xmlErrValidNode
+0x602000001110 is located 0 bytes inside of 4-byte region [0x602000001110,0x602000001114)
+freed by thread T0 here:
+    #0 0x49472d in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:123:3
+    #1 0x688f64 in xmlTextReaderFreeProp /src/libxml2/xmlreader.c:311:5
+    #2 0x689c52 in xmlTextReaderFreePropList /src/libxml2/xmlreader.c:335:9
+    #3 0x676811 in xmlTextReaderFreeNode /src/libxml2/xmlreader.c:478:2
+    #4 0x673de9 in xmlTextReaderRead /src/libxml2/xmlreader.c:1440:3
+    #5 0x4c7007 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:73:12
+    #6 0x4c833d in main (/out/xml+0x4c833d)
+
+DEDUP_TOKEN: free--xmlTextReaderFreeProp--xmlTextReaderFreePropList
+previously allocated by thread T0 here:
+    #0 0x4949ad in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0x62b3bc in xmlStrndup /src/libxml2/xmlstring.c:45:23
+    #2 0x62b4be in xmlStrdup /src/libxml2/xmlstring.c:71:12
+    #3 0x54c6f3 in xmlNewPropInternal /src/libxml2/tree.c:1880:25
+    #4 0x54cc33 in xmlNewNsProp /src/libxml2/tree.c:1977:12
+    #5 0x6cc1fe in xmlSAX2AttributeNs /src/libxml2/SAX2.c:2003:12
+    #6 0x6cb5f5 in xmlSAX2StartElementNs /src/libxml2/SAX2.c
+    #7 0x67ab3c in xmlTextReaderStartElementNs /src/libxml2/xmlreader.c:753:2
+    #8 0x53b81a in xmlParseStartTag2 /src/libxml2/parser.c
+    #9 0x527773 in xmlParseTryOrFinish /src/libxml2/parser.c:11374:14
+    #10 0x523e9b in xmlParseChunk /src/libxml2/parser.c
+    #11 0x6756a5 in xmlTextReaderPushData /src/libxml2/xmlreader.c:893:12
+    #12 0x6723b8 in xmlTextReaderRead /src/libxml2/xmlreader.c:1321:12
+    #13 0x4c6f20 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:73:12
+    #14 0x4c833d in main (/out/xml+0x4c833d)
+
+DEDUP_TOKEN: malloc--xmlStrndup--xmlStrdup
+SUMMARY: AddressSanitizer: heap-use-after-free /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors_format.inc:547:9 in printf_common(void*, char const*, __va_list_tag*)
+Shadow bytes around the buggy address:
+  0x0c047fff81d0: fa fa fd fa fa fa 04 fa fa fa 04 fa fa fa 04 fa
+  0x0c047fff81e0: fa fa 04 fa fa fa 04 fa fa fa 04 fa fa fa fd fa
+  0x0c047fff81f0: fa fa 02 fa fa fa 02 fa fa fa 02 fa fa fa 02 fa
+  0x0c047fff8200: fa fa 02 fa fa fa 02 fa fa fa 04 fa fa fa fd fa
+  0x0c047fff8210: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+=>0x0c047fff8220: fa fa[fd]fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff8230: fa fa fd fa fa fa fd fa fa fa fd fa fa fa 01 fa
+  0x0c047fff8240: fa fa 01 fa fa fa fd fa fa fa fd fa fa fa 02 fa
+  0x0c047fff8250: fa fa fd fa fa fa fd fa fa fa 04 fa fa fa 04 fa
+  0x0c047fff8260: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8270: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

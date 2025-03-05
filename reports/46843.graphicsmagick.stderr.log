@@ -1,0 +1,94 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3477537731
+INFO: Loaded 1 modules   (222528 inline 8-bit counters): 222528 [0x9c48100, 0x9c7e640), 
+INFO: Loaded 1 PC tables (222528 PCs): 222528 [0x9c7e640,0x9e31040), 
+/out/enhance_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+11:45:30 0:0.005685  0.000u 7 png.c/PNGErrorHandler/1086/Coder:
+  [00][00][00][08]: invalid chunk type ()
+=================================================================
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xebc0a700 at pc 0x082b05c2 bp 0xffd91318 sp 0xffd91310
+READ of size 4 at 0xebc0a700 thread T0
+SCARINESS: 45 (4-byte-read-heap-use-after-free)
+    #0 0x82b05c1 in CloseBlob /src/graphicsmagick/magick/blob.c:924:3
+    #1 0x84d0dc8 in ReadMNGImage /src/graphicsmagick/coders/png.c:5703:11
+    #2 0x83044e9 in ReadImage /src/graphicsmagick/magick/constitute.c:1630:13
+    #3 0x82aef0c in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #4 0x8219c78 in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #5 0x820e2fb in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/enhance_fuzzer.cc:12:15
+    #6 0x80f88fe in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #7 0x80e3d7e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #8 0x80e9930 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #9 0x8112b17 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #10 0xf0a78ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #11 0x80c1985 in _start (/out/enhance_fuzzer+0x80c1985)
+
+DEDUP_TOKEN: CloseBlob--ReadMNGImage--ReadImage
+0xebc0a700 is located 6656 bytes inside of 6660-byte region [0xebc08d00,0xebc0a704)
+freed by thread T0 here:
+    #0 0x81cfac6 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:111:3
+    #1 0x83e8d3c in MagickFree /src/graphicsmagick/magick/memory.c:536:5
+    #2 0x8396ff2 in DestroyImage /src/graphicsmagick/magick/image.c:1503:3
+    #3 0x84f9ef8 in ReadOnePNGImage /src/graphicsmagick/coders/png.c:1632:11
+    #4 0x84d0b37 in ReadMNGImage /src/graphicsmagick/coders/png.c:5695:15
+    #5 0x83044e9 in ReadImage /src/graphicsmagick/magick/constitute.c:1630:13
+    #6 0x82aef0c in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #7 0x8219c78 in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #8 0x820e2fb in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/enhance_fuzzer.cc:12:15
+    #9 0x80f88fe in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #10 0x80e3d7e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x80e9930 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #12 0x8112b17 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0xf0a78ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+
+DEDUP_TOKEN: free--MagickFree--DestroyImage
+previously allocated by thread T0 here:
+    #0 0x81cfd45 in __interceptor_malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:129:3
+    #1 0x83e8b95 in MagickMalloc /src/graphicsmagick/magick/memory.c:175:10
+    #2 0x83e8b95 in MagickMallocCleared /src/graphicsmagick/magick/memory.c:406:9
+    #3 0x839596d in AllocateImage /src/graphicsmagick/magick/image.c:336:18
+    #4 0x84cdf82 in ReadMNGImage /src/graphicsmagick/coders/png.c:4260:9
+    #5 0x83044e9 in ReadImage /src/graphicsmagick/magick/constitute.c:1630:13
+    #6 0x82aef0c in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #7 0x8219c78 in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #8 0x820e2fb in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/enhance_fuzzer.cc:12:15
+    #9 0x80f88fe in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #10 0x80e3d7e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x80e9930 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #12 0x8112b17 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0xf0a78ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+
+DEDUP_TOKEN: __interceptor_malloc--MagickMalloc--MagickMallocCleared
+SUMMARY: AddressSanitizer: heap-use-after-free /src/graphicsmagick/magick/blob.c:924:3 in CloseBlob
+Shadow bytes around the buggy address:
+  0x3d781490: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d7814a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d7814b0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d7814c0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d7814d0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+=>0x3d7814e0:[fd]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d7814f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d781500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d781510: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d781520: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d781530: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

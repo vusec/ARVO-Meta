@@ -1,0 +1,79 @@
+Unable to find image 'n132/arvo:66446-vul' locally
+66446-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+649270f74e12: Already exists
+45917c593ac2: Already exists
+5cf48b4c4f4b: Already exists
+6935c611cee5: Already exists
+447baab2da02: Already exists
+a89cec3c3559: Already exists
+3b13fc94f924: Already exists
+d04fe0394c59: Already exists
+aa7c8ea0b806: Already exists
+f0751992edae: Already exists
+c92b5801682a: Already exists
+b3a6ded346fb: Already exists
+d5fb061b1055: Already exists
+904575aaf4fe: Already exists
+395fb6e7dc1f: Already exists
+45a8760d7cee: Already exists
+79b8a195c5d6: Already exists
+2e3836bec4fb: Already exists
+fc8411249e1a: Already exists
+7c5d7c04dd80: Already exists
+19822db508d9: Already exists
+18ab359b623d: Already exists
+694ed7759a12: Already exists
+3e1d5f5586d6: Already exists
+3a18e761efa3: Already exists
+0f957a45451b: Already exists
+58a1f5ceb97b: Already exists
+649415d0bbaa: Already exists
+8547b4279f62: Already exists
+788d4b1b0d67: Pulling fs layer
+af66012b138a: Pulling fs layer
+149cf4728df5: Pulling fs layer
+0c694c3a4f3d: Pulling fs layer
+521df54bf881: Pulling fs layer
+0b416b6126df: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+d7ac432983ba: Pulling fs layer
+c0caee4cf9f4: Pulling fs layer
+521df54bf881: Waiting
+0b416b6126df: Waiting
+70e4ed670532: Pulling fs layer
+4f4fb700ef54: Waiting
+d7ac432983ba: Waiting
+70e4ed670532: Waiting
+c0caee4cf9f4: Waiting
+0c694c3a4f3d: Waiting
+af66012b138a: Verifying Checksum
+af66012b138a: Download complete
+149cf4728df5: Verifying Checksum
+149cf4728df5: Download complete
+0c694c3a4f3d: Verifying Checksum
+0c694c3a4f3d: Download complete
+0b416b6126df: Verifying Checksum
+0b416b6126df: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+788d4b1b0d67: Verifying Checksum
+788d4b1b0d67: Download complete
+521df54bf881: Verifying Checksum
+521df54bf881: Download complete
+d7ac432983ba: Verifying Checksum
+d7ac432983ba: Download complete
+788d4b1b0d67: Pull complete
+af66012b138a: Pull complete
+70e4ed670532: Download complete
+149cf4728df5: Pull complete
+0c694c3a4f3d: Pull complete
+521df54bf881: Pull complete
+0b416b6126df: Pull complete
+c0caee4cf9f4: Download complete
+4f4fb700ef54: Pull complete
+d7ac432983ba: Pull complete
+c0caee4cf9f4: Pull complete
+70e4ed670532: Pull complete
+Digest: sha256:f55b1cf97281da00af02fd0ace43c827b8c3477e430b2188b3068f0ee7d2193e
+Status: Downloaded newer image for n132/arvo:66446-vul

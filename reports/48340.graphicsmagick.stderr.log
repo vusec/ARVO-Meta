@@ -1,0 +1,88 @@
+Accepting input from '/tmp/poc'
+Usage for fuzzing: honggfuzz -P [flags] -- /out/coder_SVG_fuzzer
+11:46:56 0:0.015034  0.000u 7 svg.c/SVGError/3758/Coder:
+  xmlParseStringEntityRef: no name
+
+=================================================================
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60b000000468 at pc 0x000000a17469 bp 0x7ffff62f6ab0 sp 0x7ffff62f6aa8
+READ of size 8 at 0x60b000000468 thread T0
+SCARINESS: 51 (8-byte-read-heap-use-after-free)
+    #0 0xa17468 in xmlParseInternalSubset /src/libxml2/parser.c:8371:54
+    #1 0xa1cb6b in xmlParseTryOrFinish /src/libxml2/parser.c:12059:3
+    #2 0xa18e64 in xmlParseChunk /src/libxml2/parser.c
+    #3 0x8b2a8b in ReadSVGImage /src/graphicsmagick/coders/svg.c:4011:14
+    #4 0x584d64 in ReadImage /src/graphicsmagick/magick/constitute.c:1630:13
+    #5 0x5379a1 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #6 0x4df6ee in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #7 0x4cdf9c in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #8 0x4cfa1b in main (/out/coder_SVG_fuzzer+0x4cfa1b)
+    #9 0x7f927868283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x41f188 in _start (/out/coder_SVG_fuzzer+0x41f188)
+
+DEDUP_TOKEN: xmlParseInternalSubset--xmlParseTryOrFinish--xmlParseChunk
+0x60b000000468 is located 8 bytes inside of 104-byte region [0x60b000000460,0x60b0000004c8)
+freed by thread T0 here:
+    #0 0x49a442 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:127:3
+    #1 0x9d1475 in xmlFreeInputStream /src/libxml2/parserInternals.c:1350:5
+    #2 0x9d7d23 in xmlParsePEReference /src/libxml2/parser.c:8003:17
+    #3 0xa16f6f in xmlParseInternalSubset /src/libxml2/parser.c:8365:6
+    #4 0xa1cb6b in xmlParseTryOrFinish /src/libxml2/parser.c:12059:3
+    #5 0xa18e64 in xmlParseChunk /src/libxml2/parser.c
+    #6 0x8b2a8b in ReadSVGImage /src/graphicsmagick/coders/svg.c:4011:14
+    #7 0x584d64 in ReadImage /src/graphicsmagick/magick/constitute.c:1630:13
+    #8 0x5379a1 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #9 0x4df6ee in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #10 0x4cdf9c in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #11 0x4cfa1b in main (/out/coder_SVG_fuzzer+0x4cfa1b)
+
+DEDUP_TOKEN: free--xmlFreeInputStream--xmlParsePEReference
+previously allocated by thread T0 here:
+    #0 0x49a6ad in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
+    #1 0x9d1522 in xmlNewInputStream /src/libxml2/parserInternals.c:1365:33
+    #2 0x9d19a0 in xmlNewEntityInputStream /src/libxml2/parserInternals.c:1469:13
+    #3 0x9d7c7b in xmlParsePEReference /src/libxml2/parser.c:8001:14
+    #4 0xa16f6f in xmlParseInternalSubset /src/libxml2/parser.c:8365:6
+    #5 0xa1cb6b in xmlParseTryOrFinish /src/libxml2/parser.c:12059:3
+    #6 0xa18e64 in xmlParseChunk /src/libxml2/parser.c
+    #7 0x8b2a8b in ReadSVGImage /src/graphicsmagick/coders/svg.c:4011:14
+    #8 0x584d64 in ReadImage /src/graphicsmagick/magick/constitute.c:1630:13
+    #9 0x5379a1 in BlobToImage /src/graphicsmagick/magick/blob.c:764:13
+    #10 0x4df6ee in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
+    #11 0x4cdf9c in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
+    #12 0x4cfa1b in main (/out/coder_SVG_fuzzer+0x4cfa1b)
+
+DEDUP_TOKEN: malloc--xmlNewInputStream--xmlNewEntityInputStream
+SUMMARY: AddressSanitizer: heap-use-after-free /src/libxml2/parser.c:8371:54 in xmlParseInternalSubset
+Shadow bytes around the buggy address:
+  0x0c167fff8030: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c167fff8040: 00 fa fa fa fa fa fa fa fa fa 00 00 00 00 00 00
+  0x0c167fff8050: 00 00 00 00 00 00 04 fa fa fa fa fa fa fa fa fa
+  0x0c167fff8060: fd fd fd fd fd fd fd fd fd fd fd fd fd fa fa fa
+  0x0c167fff8070: fa fa fa fa fa fa fd fd fd fd fd fd fd fd fd fd
+=>0x0c167fff8080: fd fd fd fa fa fa fa fa fa fa fa fa fd[fd]fd fd
+  0x0c167fff8090: fd fd fd fd fd fd fd fd fd fa fa fa fa fa fa fa
+  0x0c167fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff80c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c167fff80d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

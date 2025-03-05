@@ -1,0 +1,88 @@
+Reading 4678 bytes from /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x615000006700 at pc 0x0000004df857 bp 0x7ffc71b573d0 sp 0x7ffc71b573c8
+READ of size 4 at 0x615000006700 thread T0
+SCARINESS: 45 (4-byte-read-heap-use-after-free)
+    #0 0x4df856 in flac__analyze_frame /src/flac/oss-fuzz/../src/flac/analyze.c:144:28
+    #1 0x4e5650 in write_callback /src/flac/oss-fuzz/../src/flac/decode.c:1238:4
+    #2 0x5c38ae in write_audio_frame_to_client_ /src/flac/src/libFLAC/stream_decoder.c
+    #3 0x5b6528 in read_frame_ /src/flac/src/libFLAC/stream_decoder.c:2241:7
+    #4 0x5b89b1 in FLAC__stream_decoder_process_until_end_of_stream /src/flac/src/libFLAC/stream_decoder.c:1063:9
+    #5 0x4e1edf in DecoderSession_process /src/flac/oss-fuzz/../src/flac/decode.c:470:6
+    #6 0x4e1edf in flac__decode_file /src/flac/oss-fuzz/../src/flac/decode.c:188:6
+    #7 0x52dcdd in decode_file /src/flac/oss-fuzz/./../src/flac/main.c
+    #8 0x5272da in do_it /src/flac/oss-fuzz/./../src/flac/main.c:525:15
+    #9 0x5272da in main_to_fuzz /src/flac/oss-fuzz/./../src/flac/main.c:350:13
+    #10 0x5272da in LLVMFuzzerTestOneInput /src/flac/oss-fuzz/tool_flac.c:84:2
+    #11 0x5329ca in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+    #12 0x53279c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
+    #13 0x728ba2ae2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x41e61d in _start (/out/fuzzer_tool_flac+0x41e61d)
+
+DEDUP_TOKEN: flac__analyze_frame--write_callback--write_audio_frame_to_client_
+0x615000006700 is located 0 bytes inside of 455-byte region [0x615000006700,0x6150000068c7)
+freed by thread T0 here:
+    #0 0x49f7b2 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:52:3
+    #1 0x5c2977 in allocate_output_ /src/flac/src/libFLAC/stream_decoder.c:1251:4
+    #2 0x5b395c in read_frame_ /src/flac/src/libFLAC/stream_decoder.c:2173:10
+    #3 0x5b89b1 in FLAC__stream_decoder_process_until_end_of_stream /src/flac/src/libFLAC/stream_decoder.c:1063:9
+    #4 0x4e1edf in DecoderSession_process /src/flac/oss-fuzz/../src/flac/decode.c:470:6
+    #5 0x4e1edf in flac__decode_file /src/flac/oss-fuzz/../src/flac/decode.c:188:6
+    #6 0x52dcdd in decode_file /src/flac/oss-fuzz/./../src/flac/main.c
+    #7 0x5272da in do_it /src/flac/oss-fuzz/./../src/flac/main.c:525:15
+    #8 0x5272da in main_to_fuzz /src/flac/oss-fuzz/./../src/flac/main.c:350:13
+    #9 0x5272da in LLVMFuzzerTestOneInput /src/flac/oss-fuzz/tool_flac.c:84:2
+    #10 0x5329ca in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+
+DEDUP_TOKEN: free--allocate_output_--read_frame_
+previously allocated by thread T0 here:
+    #0 0x49fa56 in __interceptor_malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:69:3
+    #1 0x68d601 in safe_malloc_ /src/flac/src/libFLAC/../../include/share/alloc.h:94:9
+    #2 0x68d601 in safe_malloc_add_2op_ /src/flac/src/libFLAC/../../include/share/alloc.h:130:9
+    #3 0x68d601 in FLAC__memory_alloc_aligned /src/flac/src/libFLAC/memory.c:54:6
+    #4 0x68d601 in FLAC__memory_alloc_aligned_int32_array /src/flac/src/libFLAC/memory.c:79:7
+    #5 0x5c2d68 in allocate_output_ /src/flac/src/libFLAC/stream_decoder.c:1276:7
+    #6 0x5ad7cc in read_frame_ /src/flac/src/libFLAC/stream_decoder.c:2051:6
+    #7 0x5b89b1 in FLAC__stream_decoder_process_until_end_of_stream /src/flac/src/libFLAC/stream_decoder.c:1063:9
+    #8 0x4e1edf in DecoderSession_process /src/flac/oss-fuzz/../src/flac/decode.c:470:6
+    #9 0x4e1edf in flac__decode_file /src/flac/oss-fuzz/../src/flac/decode.c:188:6
+    #10 0x52dcdd in decode_file /src/flac/oss-fuzz/./../src/flac/main.c
+    #11 0x5272da in do_it /src/flac/oss-fuzz/./../src/flac/main.c:525:15
+    #12 0x5272da in main_to_fuzz /src/flac/oss-fuzz/./../src/flac/main.c:350:13
+    #13 0x5272da in LLVMFuzzerTestOneInput /src/flac/oss-fuzz/tool_flac.c:84:2
+    #14 0x5329ca in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
+
+DEDUP_TOKEN: __interceptor_malloc--safe_malloc_--safe_malloc_add_2op_
+SUMMARY: AddressSanitizer: heap-use-after-free /src/flac/oss-fuzz/../src/flac/analyze.c:144:28 in flac__analyze_frame
+Shadow bytes around the buggy address:
+  0x0c2a7fff8c90: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8ca0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8cb0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8cc0: fd fd fd fd fd fd fd fd fd fd fd fa fa fa fa fa
+  0x0c2a7fff8cd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c2a7fff8ce0:[fd]fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8cf0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8d00: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8d10: fd fd fd fd fd fd fd fd fd fa fa fa fa fa fa fa
+  0x0c2a7fff8d20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2a7fff8d30: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7==ABORTING

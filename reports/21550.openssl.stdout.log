@@ -1,0 +1,65 @@
+Unable to find image 'n132/arvo:21550-vul' locally
+21550-vul: Pulling from n132/arvo
+0a01a72a686c: Already exists
+cc899a5544da: Already exists
+19197c550755: Already exists
+716d454e56b6: Already exists
+ca95e2b53a78: Already exists
+65659b6b2389: Already exists
+6eee12ea8cf5: Already exists
+7a1daa78c8a4: Already exists
+b32b6776c8d5: Already exists
+603c1152ebc5: Already exists
+efdbef4cb1cb: Already exists
+67704ab6c89b: Already exists
+6754bbf4e748: Already exists
+07bd8c274671: Already exists
+9bb25de514cb: Already exists
+f0b219331cd9: Already exists
+75145c21a6a3: Already exists
+45ecdb756067: Already exists
+058b0a3e90cb: Already exists
+073af9879750: Already exists
+f7e9a0c57e9c: Already exists
+a4360a4a61b4: Pulling fs layer
+4e57477282c2: Pulling fs layer
+f7b4b0be4272: Pulling fs layer
+358a73f3ae2a: Pulling fs layer
+83b6d568847c: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+3032f9f56297: Pulling fs layer
+3b74e6fd1937: Pulling fs layer
+0824ce6a66a7: Pulling fs layer
+0824ce6a66a7: Waiting
+3b74e6fd1937: Waiting
+4f4fb700ef54: Waiting
+358a73f3ae2a: Waiting
+3032f9f56297: Waiting
+83b6d568847c: Waiting
+f7b4b0be4272: Verifying Checksum
+f7b4b0be4272: Download complete
+4e57477282c2: Verifying Checksum
+4e57477282c2: Download complete
+a4360a4a61b4: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+a4360a4a61b4: Pull complete
+3032f9f56297: Verifying Checksum
+3032f9f56297: Download complete
+4e57477282c2: Pull complete
+f7b4b0be4272: Pull complete
+358a73f3ae2a: Verifying Checksum
+358a73f3ae2a: Download complete
+0824ce6a66a7: Download complete
+358a73f3ae2a: Pull complete
+3b74e6fd1937: Verifying Checksum
+3b74e6fd1937: Download complete
+83b6d568847c: Verifying Checksum
+83b6d568847c: Download complete
+83b6d568847c: Pull complete
+4f4fb700ef54: Pull complete
+3032f9f56297: Pull complete
+3b74e6fd1937: Pull complete
+0824ce6a66a7: Pull complete
+Digest: sha256:ea283b0d5c523a4af09c764f8ab9602a1d45ebc07c93328783c016b747123652
+Status: Downloaded newer image for n132/arvo:21550-vul
