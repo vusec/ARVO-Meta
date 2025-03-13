@@ -1,10 +1,10 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3278587398
-INFO: Loaded 1 modules   (44494 inline 8-bit counters): 44494 [0xdbd840, 0xdc860e),
-INFO: Loaded 1 PC tables (44494 PCs): 44494 [0xab81b0,0xb65e90),
+INFO: Seed: 3456538255
+INFO: Loaded 1 modules   (44494 inline 8-bit counters): 44494 [0xdbd840, 0xdc860e), 
+INFO: Loaded 1 PC tables (44494 PCs): 44494 [0xab81b0,0xb65e90), 
 /out/decompress_frame_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
-==13== ERROR: libFuzzer: out-of-memory (malloc(2155905168))
+==7== ERROR: libFuzzer: out-of-memory (malloc(2155905168))
    To change the out-of-memory limit use -rss_limit_mb=<N>
 
     #0 0x532801 in __sanitizer_print_stack_trace /src/llvm-project/compiler-rt/lib/asan/asan_stack.cpp:86:3
@@ -29,7 +29,7 @@ Running: /tmp/poc
     #19 0x44afa2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #20 0x4512f6 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #21 0x47b2e2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #22 0x77e44055f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #22 0x7ebd1664683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #23 0x425968 in _start (/out/decompress_frame_fuzzer+0x425968)
 
 DEDUP_TOKEN: __sanitizer_print_stack_trace--fuzzer::PrintStackTrace()--fuzzer::Fuzzer::HandleMalloc(unsigned long)

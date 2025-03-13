@@ -1,0 +1,82 @@
+Unable to find image 'n132/arvo:36490-vul' locally
+36490-vul: Pulling from n132/arvo
+61e03ba1d414: Already exists
+4afb39f216bd: Already exists
+e489abdc9f90: Already exists
+999fff7bcc24: Already exists
+7ad5aaabb4f0: Already exists
+936ea618963b: Already exists
+c86696509def: Already exists
+0a94a2cfb8e3: Already exists
+f601aa8d321d: Already exists
+b92b70bee63d: Already exists
+76f47b212340: Already exists
+66f3562b00da: Already exists
+927a2dc2c354: Already exists
+ba63089415ec: Already exists
+791274b8be81: Already exists
+f33af1093e9f: Already exists
+95f03d21518b: Already exists
+00fc961cca80: Already exists
+234244089b40: Already exists
+20f8340a0f93: Already exists
+fc8daab37ceb: Already exists
+3153db85ddfa: Already exists
+fe8bf775f22a: Already exists
+204b6d075f16: Already exists
+8b6d1b838510: Already exists
+1bb4d20a7d4f: Already exists
+81bf466399f8: Already exists
+aecd405f3582: Already exists
+074b238ad4de: Pulling fs layer
+086d236f2d41: Pulling fs layer
+8b7778f80cd6: Pulling fs layer
+c20a282a5fe4: Pulling fs layer
+39e7d4703f95: Pulling fs layer
+1dd816425e6c: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+6d65abb6151c: Pulling fs layer
+464cba984aeb: Pulling fs layer
+2c40a916bb4c: Pulling fs layer
+074b238ad4de: Waiting
+086d236f2d41: Waiting
+c20a282a5fe4: Waiting
+8b7778f80cd6: Waiting
+39e7d4703f95: Waiting
+1dd816425e6c: Waiting
+464cba984aeb: Waiting
+4f4fb700ef54: Waiting
+2c40a916bb4c: Waiting
+6d65abb6151c: Waiting
+086d236f2d41: Verifying Checksum
+086d236f2d41: Download complete
+8b7778f80cd6: Verifying Checksum
+8b7778f80cd6: Download complete
+074b238ad4de: Verifying Checksum
+074b238ad4de: Download complete
+074b238ad4de: Pull complete
+086d236f2d41: Pull complete
+c20a282a5fe4: Verifying Checksum
+c20a282a5fe4: Download complete
+8b7778f80cd6: Pull complete
+1dd816425e6c: Verifying Checksum
+1dd816425e6c: Download complete
+c20a282a5fe4: Pull complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+6d65abb6151c: Verifying Checksum
+6d65abb6151c: Download complete
+2c40a916bb4c: Verifying Checksum
+2c40a916bb4c: Download complete
+39e7d4703f95: Verifying Checksum
+39e7d4703f95: Download complete
+39e7d4703f95: Pull complete
+1dd816425e6c: Pull complete
+4f4fb700ef54: Pull complete
+6d65abb6151c: Pull complete
+464cba984aeb: Verifying Checksum
+464cba984aeb: Download complete
+464cba984aeb: Pull complete
+2c40a916bb4c: Pull complete
+Digest: sha256:3d7ddea6a7908becc12116d36268431b5b810fc0e9a9c4c5e6047777abb355c9
+Status: Downloaded newer image for n132/arvo:36490-vul

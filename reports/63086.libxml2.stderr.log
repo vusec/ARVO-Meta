@@ -1,7 +1,8 @@
 Running LLVMFuzzerInitialize ...
 continue...
+Reading 52 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000134 at pc 0x0000005607dc bp 0x7ffce0d21220 sp 0x7ffce0d21218
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000134 at pc 0x0000005607dc bp 0x7ffd484f9f60 sp 0x7ffd484f9f58
 WRITE of size 1 at 0x602000000134 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x5607db in xmlCopyCharMultiByte /src/libxml2/parserInternals.c:1095:12
@@ -20,7 +21,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #13 0x4df40d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #14 0x4df218 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #15 0x4dedd8 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #16 0x7c51b08e4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #16 0x72cb81f0e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #17 0x41e5ad in _start (/out/xpath+0x41e5ad)
 
 DEDUP_TOKEN: xmlCopyCharMultiByte--xmlParseCommentComplex--xmlParseComment
@@ -58,7 +59,7 @@ Shadow bytes around the buggy address:
   0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -75,4 +76,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

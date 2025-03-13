@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 1496068621
+INFO: Seed: 3453050776
 INFO: Loaded 1 modules   (47385 inline 8-bit counters): 47385 [0xe372e0, 0xe42bf9), 
 INFO: Loaded 1 PC tables (47385 PCs): 47385 [0xb277c8,0xbe0958), 
 /out/decompress_frame_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 Decompression error.  Error code: -10
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x62b000006a48 at pc 0x000000528307 bp 0x7ffc12069f90 sp 0x7ffc12069758
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x62b000006a48 at pc 0x000000528307 bp 0x7ffdc3e14150 sp 0x7ffdc3e13918
 READ of size 24 at 0x62b000006a48 thread T0
 SCARINESS: 54 (multi-byte-read-heap-use-after-free)
     #0 0x528306 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -18,7 +18,7 @@ SCARINESS: 54 (multi-byte-read-heap-use-after-free)
     #6 0x44a642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #7 0x450985 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #8 0x47a832 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #9 0x7cd458ab483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x714ee45cb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x425558 in _start (/out/decompress_frame_fuzzer+0x425558)
 
 DEDUP_TOKEN: __asan_memcpy--ZSTD_freeDDict--blosc2_free_ctx
@@ -37,7 +37,7 @@ freed by thread T0 here:
     #10 0x44a642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #11 0x450985 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #12 0x47a832 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0x7cd458ab483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x714ee45cb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: free--ZSTD_free--ZSTD_freeDDict
 previously allocated by thread T0 here:
@@ -55,7 +55,7 @@ previously allocated by thread T0 here:
     #11 0x44a642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #12 0x450985 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #13 0x47a832 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #14 0x7cd458ab483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x714ee45cb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ZSTD_malloc--ZSTD_createDDict_advanced
 SUMMARY: AddressSanitizer: heap-use-after-free /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy

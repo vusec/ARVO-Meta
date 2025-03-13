@@ -1,5 +1,6 @@
+Reading 2 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000000b0 at pc 0x0000004e2b0e bp 0x7ffe10fd2ff0 sp 0x7ffe10fd2fe8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000000b0 at pc 0x0000004e2b0e bp 0x7ffd31d63a50 sp 0x7ffd31d63a48
 WRITE of size 4 at 0x6040000000b0 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x4e2b0d in _sw32 /src/c-blosc2/blosc/blosc-private.h:128:23
@@ -11,7 +12,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #6 0x4d72dc in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_compress_frame.c:60:15
     #7 0x4d7eaa in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #8 0x4d7c7d in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #9 0x7b06c6217082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #9 0x7b25e59e9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #10 0x41e54d in _start (/out/compress_frame_fuzzer+0x41e54d)
 
 DEDUP_TOKEN: _sw32--serial_blosc--do_job
@@ -38,7 +39,7 @@ Shadow bytes around the buggy address:
   0x0c087fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -55,4 +56,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

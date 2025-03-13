@@ -1,13 +1,13 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3286887502
-INFO: Loaded 1 modules   (11732 inline 8-bit counters): 11732 [0x6d7b60, 0x6da934),
-INFO: Loaded 1 PC tables (11732 PCs): 11732 [0x6da938,0x708678),
+INFO: Seed: 3475120802
+INFO: Loaded 1 modules   (11732 inline 8-bit counters): 11732 [0x6d7b60, 0x6da934), 
+INFO: Loaded 1 PC tables (11732 PCs): 11732 [0x6da938,0x708678), 
 /out/ssml-fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 Unknown phoneme table: ''
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-underflow on address 0x7f6f3e771100 at pc 0x00000056a518 bp 0x7ffc3df0edd0 sp 0x7ffc3df0edc8
-READ of size 8 at 0x7f6f3e771100 thread T0
+==7==ERROR: AddressSanitizer: stack-buffer-underflow on address 0x729dfae5e100 at pc 0x00000056a518 bp 0x7ffea14c23f0 sp 0x7ffea14c23e8
+READ of size 8 at 0x729dfae5e100 thread T0
 SCARINESS: 48 (8-byte-read-stack-buffer-underflow-far-from-bounds)
     #0 0x56a517 in CountVowelPosition /src/espeak-ng/src/libespeak-ng/synthdata.c:473:14
     #1 0x56a517 in InterpretCondition /src/espeak-ng/src/libespeak-ng/synthdata.c:652:12
@@ -25,11 +25,11 @@ SCARINESS: 48 (8-byte-read-stack-buffer-underflow-far-from-bounds)
     #13 0x4425be in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:329:8
     #14 0x44803a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #15 0x470f62 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0x7f6f3f46e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #16 0x729dfaf33082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #17 0x41f7fd in _start (/out/ssml-fuzzer+0x41f7fd)
 
 DEDUP_TOKEN: CountVowelPosition--InterpretCondition--InterpretPhoneme
-Address 0x7f6f3e771100 is located in stack of thread T0 at offset 0 in frame
+Address 0x729dfae5e100 is located in stack of thread T0 at offset 0 in frame
     #0 0x56a79f in InterpretPhoneme2 /src/espeak-ng/src/libespeak-ng/synthdata.c:983
 
 DEDUP_TOKEN: InterpretPhoneme2
@@ -39,20 +39,20 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-underflow /src/espeak-ng/src/libespeak-ng/synthdata.c:473:14 in CountVowelPosition
 Shadow bytes around the buggy address:
-  0x0fee67ce61d0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0fee67ce61e0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0fee67ce61f0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0fee67ce6200: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fee67ce6210: 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3 f3
-=>0x0fee67ce6220:[f1]f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fee67ce6230: 00 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3
-  0x0fee67ce6240: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 f3 f3
-  0x0fee67ce6250: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fee67ce6260: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0fee67ce6270: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e543f5c3bd0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e543f5c3be0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e543f5c3bf0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e543f5c3c00: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e543f5c3c10: 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3 f3
+=>0x0e543f5c3c20:[f1]f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e543f5c3c30: 00 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3
+  0x0e543f5c3c40: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 f3 f3
+  0x0e543f5c3c50: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e543f5c3c60: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0e543f5c3c70: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -69,4 +69,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

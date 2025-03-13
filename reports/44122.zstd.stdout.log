@@ -1,0 +1,66 @@
+Unable to find image 'n132/arvo:44122-vul' locally
+44122-vul: Pulling from n132/arvo
+ea362f368469: Already exists
+becca0674b25: Already exists
+ee6f577f8fb9: Already exists
+43e215053d63: Already exists
+7831c60fbe20: Already exists
+5f03cac10c41: Already exists
+0a42c3f99330: Already exists
+99c497c179ec: Already exists
+ef0eefbd407f: Already exists
+fd414e53864b: Already exists
+328106ee42e6: Already exists
+ebb2b4145de5: Already exists
+6ddadebb26e9: Already exists
+1b88ed0a74c4: Already exists
+4f057acb8360: Already exists
+bbc06448cbb9: Already exists
+09a8626e841f: Already exists
+8705af801c1b: Already exists
+fc9117b268f0: Already exists
+ef38a434bdc8: Already exists
+d521461545de: Already exists
+ff15f0e80a7c: Already exists
+57d17e2a1f7b: Pulling fs layer
+8f3962705065: Pulling fs layer
+2e4bce8ad881: Pulling fs layer
+033318c324cd: Pulling fs layer
+9e7f6e88ee99: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+cae0ccb1806d: Pulling fs layer
+74eae4d6b670: Pulling fs layer
+894c91f9e249: Pulling fs layer
+9e7f6e88ee99: Waiting
+4f4fb700ef54: Waiting
+cae0ccb1806d: Waiting
+74eae4d6b670: Waiting
+894c91f9e249: Waiting
+033318c324cd: Waiting
+8f3962705065: Verifying Checksum
+8f3962705065: Download complete
+2e4bce8ad881: Verifying Checksum
+2e4bce8ad881: Download complete
+9e7f6e88ee99: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+033318c324cd: Verifying Checksum
+033318c324cd: Download complete
+cae0ccb1806d: Verifying Checksum
+cae0ccb1806d: Download complete
+894c91f9e249: Download complete
+57d17e2a1f7b: Verifying Checksum
+57d17e2a1f7b: Download complete
+57d17e2a1f7b: Pull complete
+8f3962705065: Pull complete
+2e4bce8ad881: Pull complete
+033318c324cd: Pull complete
+9e7f6e88ee99: Pull complete
+4f4fb700ef54: Pull complete
+cae0ccb1806d: Pull complete
+74eae4d6b670: Verifying Checksum
+74eae4d6b670: Download complete
+74eae4d6b670: Pull complete
+894c91f9e249: Pull complete
+Digest: sha256:1e3599cfc1bea52926a080861c247e488b8561dc8949b72b3da12487807eecab
+Status: Downloaded newer image for n132/arvo:44122-vul

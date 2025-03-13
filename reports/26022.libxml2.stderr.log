@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/xml
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c000001cc8 at pc 0x000000557c5b bp 0x7ffc509ef000 sp 0x7ffc509eeff8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c000001cc8 at pc 0x000000557c5b bp 0x7ffc6e8983a0 sp 0x7ffc6e898398
 READ of size 4 at 0x60c000001cc8 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x557c5a in xmlStaticCopyNode /src/libxml2/tree.c:4197:19
@@ -13,7 +13,7 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #6 0x67e8e2 in xmlTextReaderRead /src/libxml2/xmlreader.c:1603:2
     #7 0x4cadb7 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:79:12
     #8 0x4cc60b in main (/out/xml+0x4cc60b)
-    #9 0x797521c2783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7a4eddb1983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41cc08 in _start (/out/xml+0x41cc08)
 
 DEDUP_TOKEN: xmlStaticCopyNode--xmlCopyNode--xmlXIncludeLoadTxt

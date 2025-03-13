@@ -1,10 +1,10 @@
-INFO: Seed: 2891610556
+INFO: Seed: 639131255
 INFO: Loaded 1 modules   (60028 inline 8-bit counters): 60028 [0x1060780, 0x106f1fc), 
 INFO: Loaded 1 PC tables (60028 PCs): 60028 [0x106f200,0x11599c0), 
 /out/client: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60f00002d560 at pc 0x0000006b5972 bp 0x7fff06aece70 sp 0x7fff06aece68
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60f00002d560 at pc 0x0000006b5972 bp 0x7fffb0225db0 sp 0x7fffb0225da8
 WRITE of size 4 at 0x60f00002d560 thread T0
 SCARINESS: 46 (4-byte-write-heap-use-after-free)
     #0 0x6b5971 in CRYPTO_DOWN_REF /src/openssl/include/internal/refcount.h:51:12
@@ -21,7 +21,7 @@ SCARINESS: 46 (4-byte-write-heap-use-after-free)
     #11 0x4cc0af in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:292:6
     #12 0x4d9d12 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:774:9
     #13 0x4cb6f7 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #14 0x7e7d27bc983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x72024792a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #15 0x41fd58 in _start (/out/client+0x41fd58)
 
 DEDUP_TOKEN: CRYPTO_DOWN_REF--DH_free--evp_pkey_free_it
@@ -39,7 +39,7 @@ freed by thread T0 here:
     #9 0x4cc0af in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:292:6
     #10 0x4d9d12 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:774:9
     #11 0x4cb6f7 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #12 0x7e7d27bc983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x72024792a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: free--DH_free--tls_process_ske_dhe
 previously allocated by thread T0 here:
@@ -56,7 +56,7 @@ previously allocated by thread T0 here:
     #10 0x4cc0af in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:292:6
     #11 0x4d9d12 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:774:9
     #12 0x4cb6f7 in main /src/libfuzzer/FuzzerMain.cpp:19:10
-    #13 0x7e7d27bc983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x72024792a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--CRYPTO_zalloc--dh_new_intern
 SUMMARY: AddressSanitizer: heap-use-after-free /src/openssl/include/internal/refcount.h:51:12 in CRYPTO_DOWN_REF

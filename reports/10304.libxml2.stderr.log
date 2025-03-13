@@ -1,10 +1,10 @@
-INFO: Seed: 2704779428
+INFO: Seed: 4251367612
 INFO: Loaded 1 modules   (44898 inline 8-bit counters): 44898 [0xd396a8, 0xd4460a), 
 INFO: Loaded 1 PC tables (44898 PCs): 44898 [0x9bf460,0xa6ea80), 
 /out/libxml2_xml_read_memory_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x625000002a7d at pc 0x0000007b7ea5 bp 0x7ffdddb00bf0 sp 0x7ffdddb00be8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x625000002a7d at pc 0x0000007b7ea5 bp 0x7ffc1d0d95b0 sp 0x7ffc1d0d95a8
 READ of size 1 at 0x625000002a7d thread T0
 SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #0 0x7b7ea4 in xmlSAX2AttributeNs /src/libxml2/SAX2.c:2042:6
@@ -312,7 +312,7 @@ previously allocated by thread T0 here:
     #13 0x532d0a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #14 0x53e583 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #15 0x53238c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #16 0x7c237b7d683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x7656cc5ff83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--xmlBufCreateSize--xmlAllocParserInputBuffer
 SUMMARY: AddressSanitizer: heap-use-after-free /src/libxml2/SAX2.c:2042:6 in xmlSAX2AttributeNs

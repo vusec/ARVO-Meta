@@ -1,8 +1,9 @@
 Running LLVMFuzzerInitialize ...
 continue...
+Reading 739009 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000014498 at pc 0x0000004389e6 bp 0x7ffe334898a0 sp 0x7ffe33489050
-READ of size 8128207 at 0x619000014498 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000014998 at pc 0x0000004389e6 bp 0x7ffdf4718080 sp 0x7ffdf4717830
+READ of size 8128207 at 0x619000014998 thread T0
 SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #0 0x4389e5 in MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long) /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:860:7
     #1 0x438f3b in bcmp /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:906:10
@@ -19,11 +20,11 @@ SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #12 0x4df50d in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #13 0x4df318 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #14 0x4deed8 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #15 0x72bee1f4e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #15 0x71a48e182082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #16 0x41e5ad in _start (/out/html+0x41e5ad)
 
 DEDUP_TOKEN: MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long)--bcmp--xmlDictFindEntry
-0x619000014498 is located 0 bytes to the right of 1048-byte region [0x619000014080,0x619000014498)
+0x619000014998 is located 0 bytes to the right of 1048-byte region [0x619000014580,0x619000014998)
 allocated by thread T0 here:
     #0 0x49f9e6 in __interceptor_malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:69:3
     #1 0x4dd338 in xmlFuzzMalloc /src/libxml2/fuzz/fuzz.c:84:12
@@ -40,20 +41,20 @@ allocated by thread T0 here:
 DEDUP_TOKEN: __interceptor_malloc--xmlFuzzMalloc--xmlDictAddString
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:860:7 in MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long)
 Shadow bytes around the buggy address:
-  0x0c327fffa840: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fffa850: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fffa860: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fffa870: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fffa880: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0c327fffa890: 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fffa8a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fffa8b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fffa8c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fffa8d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fffa8e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fffa8e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fffa8f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fffa900: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fffa910: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fffa920: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c327fffa930: 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fffa940: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fffa950: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fffa960: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fffa970: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fffa980: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -70,4 +71,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

@@ -1,0 +1,121 @@
+Unable to find image 'n132/arvo:60783-vul' locally
+60783-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+67d560c78017: Already exists
+a7e7be41d33e: Already exists
+bc8ad4baa141: Already exists
+7fa2beb36056: Already exists
+b5265d9da61d: Already exists
+2a778a8d349c: Already exists
+5c1fe07fc4a9: Already exists
+de461f4b49f9: Already exists
+e295ee79afe0: Already exists
+b725376d49a8: Already exists
+f453536d9ffc: Already exists
+1e5c1a1b3ebc: Already exists
+b9fbb0c3c60c: Already exists
+bb9e7e18a65c: Already exists
+b2cbf43d7105: Already exists
+fc3bb3780840: Already exists
+a1469dadcb65: Already exists
+9091bb1d7910: Already exists
+7294b0ed35ef: Already exists
+4b3f0ab12282: Already exists
+f88db4838507: Already exists
+3eb62b0461d5: Already exists
+5d1d97af7207: Already exists
+12f44760bf9f: Already exists
+e1eb3bcc1005: Already exists
+8f525c921c1d: Already exists
+6201a215818d: Pulling fs layer
+02b8e7cbd209: Pulling fs layer
+1a41529d3503: Pulling fs layer
+0ad3d0a8e96b: Pulling fs layer
+6544d360857a: Pulling fs layer
+cce9efd99b42: Pulling fs layer
+186a1b671e1a: Pulling fs layer
+2da4a8568e73: Pulling fs layer
+737cdbbe6134: Pulling fs layer
+c4781875dd66: Pulling fs layer
+d854b02a8bc7: Pulling fs layer
+7c3cb29e8520: Pulling fs layer
+938b026a511c: Pulling fs layer
+3ff81059291c: Pulling fs layer
+37c1d15db56f: Pulling fs layer
+345aa220cc3a: Pulling fs layer
+a90fa4d0dfa8: Pulling fs layer
+4b4589b209af: Pulling fs layer
+060d3f1af445: Pulling fs layer
+07fb7fdd257c: Pulling fs layer
+b123c9e901a0: Pulling fs layer
+910744d25321: Pulling fs layer
+558534554fed: Pulling fs layer
+02b8e7cbd209: Verifying Checksum
+02b8e7cbd209: Download complete
+7c3cb29e8520: Verifying Checksum
+7c3cb29e8520: Download complete
+b123c9e901a0: Download complete
+558534554fed: Verifying Checksum
+558534554fed: Download complete
+37c1d15db56f: Verifying Checksum
+37c1d15db56f: Download complete
+d854b02a8bc7: Verifying Checksum
+d854b02a8bc7: Download complete
+186a1b671e1a: Download complete
+0ad3d0a8e96b: Verifying Checksum
+0ad3d0a8e96b: Download complete
+3ff81059291c: Verifying Checksum
+3ff81059291c: Download complete
+07fb7fdd257c: Verifying Checksum
+07fb7fdd257c: Download complete
+737cdbbe6134: Verifying Checksum
+737cdbbe6134: Download complete
+a90fa4d0dfa8: Verifying Checksum
+a90fa4d0dfa8: Download complete
+4b4589b209af: Verifying Checksum
+4b4589b209af: Download complete
+c4781875dd66: Verifying Checksum
+c4781875dd66: Download complete
+cce9efd99b42: Verifying Checksum
+cce9efd99b42: Download complete
+345aa220cc3a: Verifying Checksum
+345aa220cc3a: Download complete
+2da4a8568e73: Verifying Checksum
+2da4a8568e73: Download complete
+060d3f1af445: Verifying Checksum
+060d3f1af445: Download complete
+938b026a511c: Verifying Checksum
+938b026a511c: Download complete
+6201a215818d: Verifying Checksum
+6201a215818d: Download complete
+6201a215818d: Pull complete
+02b8e7cbd209: Pull complete
+1a41529d3503: Verifying Checksum
+1a41529d3503: Download complete
+6544d360857a: Verifying Checksum
+6544d360857a: Download complete
+1a41529d3503: Pull complete
+0ad3d0a8e96b: Pull complete
+6544d360857a: Pull complete
+cce9efd99b42: Pull complete
+186a1b671e1a: Pull complete
+2da4a8568e73: Pull complete
+737cdbbe6134: Pull complete
+c4781875dd66: Pull complete
+d854b02a8bc7: Pull complete
+7c3cb29e8520: Pull complete
+938b026a511c: Pull complete
+3ff81059291c: Pull complete
+37c1d15db56f: Pull complete
+345aa220cc3a: Pull complete
+a90fa4d0dfa8: Pull complete
+4b4589b209af: Pull complete
+060d3f1af445: Pull complete
+07fb7fdd257c: Pull complete
+b123c9e901a0: Pull complete
+910744d25321: Verifying Checksum
+910744d25321: Download complete
+910744d25321: Pull complete
+558534554fed: Pull complete
+Digest: sha256:43fb4d5ac1015d3426473a1121a24da134ad7b985e018cf0ff74ea72cc9137d1
+Status: Downloaded newer image for n132/arvo:60783-vul

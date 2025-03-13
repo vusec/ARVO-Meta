@@ -1,0 +1,73 @@
+Unable to find image 'n132/arvo:48123-vul' locally
+48123-vul: Pulling from n132/arvo
+d7bfe07ed847: Already exists
+9c47d98ee439: Already exists
+d0f43cc418e1: Already exists
+a521a8da3f2d: Already exists
+c78a3d631f33: Already exists
+ba26ad0a5d51: Already exists
+2f7789138cec: Already exists
+4f8fe3be58c1: Already exists
+ca36150dafbf: Already exists
+d5774680e43a: Already exists
+262306f7f329: Already exists
+4048e172fbdc: Already exists
+4e082f3591a8: Already exists
+9da32420f4d7: Already exists
+973854117697: Already exists
+8835c03d5f8f: Already exists
+3650340198db: Already exists
+fbe9f24cfea2: Already exists
+ce1d669f6376: Already exists
+bbfd6859b31c: Already exists
+4e6d0a15896c: Already exists
+db93bba6c3f4: Already exists
+ebfa88038328: Pulling fs layer
+56d2354e189f: Pulling fs layer
+84eca5f60f74: Pulling fs layer
+5ec65aca2163: Pulling fs layer
+c1a44f578b2a: Pulling fs layer
+9ac0705b1901: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+5912da432dab: Pulling fs layer
+b54b87367235: Pulling fs layer
+daeb146b87b1: Pulling fs layer
+c1a44f578b2a: Waiting
+5912da432dab: Waiting
+b54b87367235: Waiting
+9ac0705b1901: Waiting
+4f4fb700ef54: Waiting
+daeb146b87b1: Waiting
+5ec65aca2163: Waiting
+56d2354e189f: Verifying Checksum
+56d2354e189f: Download complete
+84eca5f60f74: Verifying Checksum
+84eca5f60f74: Download complete
+5ec65aca2163: Verifying Checksum
+5ec65aca2163: Download complete
+9ac0705b1901: Verifying Checksum
+9ac0705b1901: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+5912da432dab: Verifying Checksum
+5912da432dab: Download complete
+ebfa88038328: Verifying Checksum
+ebfa88038328: Download complete
+daeb146b87b1: Verifying Checksum
+daeb146b87b1: Download complete
+ebfa88038328: Pull complete
+56d2354e189f: Pull complete
+84eca5f60f74: Pull complete
+5ec65aca2163: Pull complete
+c1a44f578b2a: Verifying Checksum
+c1a44f578b2a: Download complete
+c1a44f578b2a: Pull complete
+9ac0705b1901: Pull complete
+4f4fb700ef54: Pull complete
+5912da432dab: Pull complete
+b54b87367235: Verifying Checksum
+b54b87367235: Download complete
+b54b87367235: Pull complete
+daeb146b87b1: Pull complete
+Digest: sha256:9493402b3091ba11bb9eac5764f04fe203536b0fdf371737a284fbdd4f833bb2
+Status: Downloaded newer image for n132/arvo:48123-vul

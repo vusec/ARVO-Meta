@@ -11,11 +11,11 @@ Reading 36 bytes from /tmp/poc
 encoding error : input conversion failed due to input error, bytes 0xFF 0x00 0xFF 0x00
 encoding error : input conversion failed due to input error, bytes 0xFF 0x00 0xFF 0x00
 I/O error : encoder error
-11:42:56 0:0.003330  0.000u 7 msl.c/MSLError/4650/Delegate:
+18:36:32 0:0.004355  0.000u 7 msl.c/MSLError/4650/Delegate:
   Extra content at the end of the document
  (some text)
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x623000003708 at pc 0x000000c836b2 bp 0x7ffdfd214610 sp 0x7ffdfd214608
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x623000003708 at pc 0x000000c836b2 bp 0x7ffd2c960c30 sp 0x7ffd2c960c28
 READ of size 4 at 0x623000003708 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0xc836b1 in ProcessMSLScript /src/graphicsmagick/coders/msl.c:4978:28
@@ -26,7 +26,7 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #5 0x4cdc2a in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:30:15
     #6 0x4d1563 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:185:7
     #7 0x4d1563 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:247:12
-    #8 0x79f227b3d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7a7cbcfea83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #9 0x41f748 in _start (/out/coder_MSL_fuzzer+0x41f748)
 
 DEDUP_TOKEN: ProcessMSLScript--WriteMSLImage--WriteImage

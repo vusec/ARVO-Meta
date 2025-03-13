@@ -1,0 +1,20 @@
+INFO: Seed: 4057596390
+INFO: Loaded 1 modules   (66138 inline 8-bit counters): 66138 [0xe715d8, 0xe81832), 
+INFO: Loaded 1 PC tables (66138 PCs): 66138 [0x9161f8,0xa18798), 
+/out/libraw_raf_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+unknown file: data corrupted at 116218
+src/demosaic/dht_demosaic.cpp:344:16: runtime error: index 3 out of bounds for type 'float [3]'
+    #0 0x68aa37 in DHT::hide_hots() /src/libraw/src/demosaic/dht_demosaic.cpp:344:16
+    #1 0x692d50 in LibRaw::dht_interpolate() /src/libraw/src/demosaic/dht_demosaic.cpp:1015:7
+    #2 0x4bbb2e in LibRaw::dcraw_process() /src/libraw/src/postprocessing/dcraw_process.cpp:171:9
+    #3 0x4b07a6 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:57:22
+    #4 0x442501 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:558:15
+    #5 0x42dc82 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
+    #6 0x433cde in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
+    #7 0x45b652 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #8 0x7c6a8faf583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x408318 in _start (/out/libraw_raf_fuzzer+0x408318)
+
+DEDUP_TOKEN: DHT::hide_hots()--LibRaw::dht_interpolate()--LibRaw::dcraw_process()
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior src/demosaic/dht_demosaic.cpp:344:16 in 

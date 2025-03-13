@@ -1,0 +1,102 @@
+Unable to find image 'n132/arvo:15114-vul' locally
+15114-vul: Pulling from n132/arvo
+9ff7e2e5f967: Already exists
+59856638ac9f: Already exists
+6f317d6d954b: Already exists
+a9dde5e2a643: Already exists
+4f75aeb30e3e: Pulling fs layer
+87d3384d1fae: Pulling fs layer
+82e6e90eda02: Pulling fs layer
+e3125be17c0e: Pulling fs layer
+3e1f67882abd: Pulling fs layer
+32d466e35cf5: Pulling fs layer
+c51abb26c79d: Pulling fs layer
+19c8281a6e55: Pulling fs layer
+db9e1c54a1c2: Pulling fs layer
+572aa4dfcf43: Pulling fs layer
+560fbb94012f: Pulling fs layer
+02add9488033: Pulling fs layer
+82e6e90eda02: Waiting
+e3125be17c0e: Waiting
+e90cafe05fab: Pulling fs layer
+3e1f67882abd: Waiting
+32d466e35cf5: Waiting
+90db80e1d87f: Pulling fs layer
+c51abb26c79d: Waiting
+4089e070c518: Pulling fs layer
+ad3ec3fe5efc: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+0d25c062e071: Pulling fs layer
+db9e1c54a1c2: Waiting
+e90cafe05fab: Waiting
+cf889b5d94d4: Pulling fs layer
+572aa4dfcf43: Waiting
+560fbb94012f: Waiting
+e8c77a3dfa1d: Pulling fs layer
+4089e070c518: Waiting
+90db80e1d87f: Waiting
+4f4fb700ef54: Waiting
+cf889b5d94d4: Waiting
+0d25c062e071: Waiting
+e8c77a3dfa1d: Waiting
+87d3384d1fae: Verifying Checksum
+87d3384d1fae: Download complete
+4f75aeb30e3e: Verifying Checksum
+4f75aeb30e3e: Download complete
+82e6e90eda02: Verifying Checksum
+82e6e90eda02: Download complete
+4f75aeb30e3e: Pull complete
+87d3384d1fae: Pull complete
+82e6e90eda02: Pull complete
+3e1f67882abd: Verifying Checksum
+3e1f67882abd: Download complete
+32d466e35cf5: Verifying Checksum
+32d466e35cf5: Download complete
+c51abb26c79d: Verifying Checksum
+c51abb26c79d: Download complete
+19c8281a6e55: Verifying Checksum
+19c8281a6e55: Download complete
+db9e1c54a1c2: Verifying Checksum
+db9e1c54a1c2: Download complete
+572aa4dfcf43: Verifying Checksum
+572aa4dfcf43: Download complete
+560fbb94012f: Verifying Checksum
+560fbb94012f: Download complete
+e3125be17c0e: Verifying Checksum
+e3125be17c0e: Download complete
+e90cafe05fab: Verifying Checksum
+e90cafe05fab: Download complete
+90db80e1d87f: Verifying Checksum
+90db80e1d87f: Download complete
+e3125be17c0e: Pull complete
+3e1f67882abd: Pull complete
+32d466e35cf5: Pull complete
+c51abb26c79d: Pull complete
+19c8281a6e55: Pull complete
+db9e1c54a1c2: Pull complete
+02add9488033: Verifying Checksum
+02add9488033: Download complete
+572aa4dfcf43: Pull complete
+560fbb94012f: Pull complete
+02add9488033: Pull complete
+e90cafe05fab: Pull complete
+90db80e1d87f: Pull complete
+4089e070c518: Verifying Checksum
+4089e070c518: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+4089e070c518: Pull complete
+0d25c062e071: Verifying Checksum
+0d25c062e071: Download complete
+cf889b5d94d4: Verifying Checksum
+cf889b5d94d4: Download complete
+e8c77a3dfa1d: Download complete
+ad3ec3fe5efc: Verifying Checksum
+ad3ec3fe5efc: Download complete
+ad3ec3fe5efc: Pull complete
+4f4fb700ef54: Pull complete
+0d25c062e071: Pull complete
+cf889b5d94d4: Pull complete
+e8c77a3dfa1d: Pull complete
+Digest: sha256:081ef81fccfb055d6d90dc02f4c4235757e70546818c854a77d8677afc6b737d
+Status: Downloaded newer image for n132/arvo:15114-vul

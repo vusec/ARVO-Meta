@@ -1,14 +1,14 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3477537731
+INFO: Seed: 1080085859
 INFO: Loaded 1 modules   (222528 inline 8-bit counters): 222528 [0x9c48100, 0x9c7e640), 
 INFO: Loaded 1 PC tables (222528 PCs): 222528 [0x9c7e640,0x9e31040), 
 /out/enhance_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
-11:45:30 0:0.005685  0.000u 7 png.c/PNGErrorHandler/1086/Coder:
+18:36:33 0:0.008023  0.000u 7 png.c/PNGErrorHandler/1086/Coder:
   [00][00][00][08]: invalid chunk type ()
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xebc0a700 at pc 0x082b05c2 bp 0xffd91318 sp 0xffd91310
-READ of size 4 at 0xebc0a700 thread T0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xe890a700 at pc 0x082b05c2 bp 0xfff8b058 sp 0xfff8b050
+READ of size 4 at 0xe890a700 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x82b05c1 in CloseBlob /src/graphicsmagick/magick/blob.c:924:3
     #1 0x84d0dc8 in ReadMNGImage /src/graphicsmagick/coders/png.c:5703:11
@@ -20,11 +20,11 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #7 0x80e3d7e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x80e9930 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x8112b17 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0xf0a78ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #10 0xed733ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
     #11 0x80c1985 in _start (/out/enhance_fuzzer+0x80c1985)
 
 DEDUP_TOKEN: CloseBlob--ReadMNGImage--ReadImage
-0xebc0a700 is located 6656 bytes inside of 6660-byte region [0xebc08d00,0xebc0a704)
+0xe890a700 is located 6656 bytes inside of 6660-byte region [0xe8908d00,0xe890a704)
 freed by thread T0 here:
     #0 0x81cfac6 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:111:3
     #1 0x83e8d3c in MagickFree /src/graphicsmagick/magick/memory.c:536:5
@@ -39,7 +39,7 @@ freed by thread T0 here:
     #10 0x80e3d7e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x80e9930 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #12 0x8112b17 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0xf0a78ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #13 0xed733ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
 
 DEDUP_TOKEN: free--MagickFree--DestroyImage
 previously allocated by thread T0 here:
@@ -56,22 +56,22 @@ previously allocated by thread T0 here:
     #10 0x80e3d7e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x80e9930 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #12 0x8112b17 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0xf0a78ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
+    #13 0xed733ed4 in __libc_start_main (/lib32/libc.so.6+0x1aed4)
 
 DEDUP_TOKEN: __interceptor_malloc--MagickMalloc--MagickMallocCleared
 SUMMARY: AddressSanitizer: heap-use-after-free /src/graphicsmagick/magick/blob.c:924:3 in CloseBlob
 Shadow bytes around the buggy address:
-  0x3d781490: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d7814a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d7814b0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d7814c0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d7814d0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-=>0x3d7814e0:[fd]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d7814f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d781500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d781510: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d781520: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d781530: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d121490: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d1214a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d1214b0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d1214c0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3d1214d0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+=>0x3d1214e0:[fd]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d1214f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d121500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d121510: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d121520: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3d121530: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

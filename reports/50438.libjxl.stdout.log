@@ -1,0 +1,74 @@
+Unable to find image 'n132/arvo:50438-vul' locally
+50438-vul: Pulling from n132/arvo
+d7bfe07ed847: Already exists
+b8b05e763496: Already exists
+0512e19e0c1a: Already exists
+15f446755779: Already exists
+7b58de6178d2: Already exists
+bdbf2afa9b34: Already exists
+cd27d5dfafa5: Already exists
+d6dbc6fa7c4e: Already exists
+6769b91ef297: Already exists
+50ca925f8aad: Already exists
+4d859aa954de: Already exists
+68673f000b90: Already exists
+47423e217fd0: Already exists
+db891d1f7acc: Already exists
+51e21fc977b1: Already exists
+b007acefd9ae: Already exists
+71187b7aa0f8: Already exists
+7723a76d4a5a: Already exists
+720b82e89272: Already exists
+1b2394199888: Already exists
+d8fb21c7676f: Already exists
+5e093e5d20c3: Already exists
+3d48ecd58be9: Pulling fs layer
+293695c84eeb: Pulling fs layer
+13b745ce529a: Pulling fs layer
+f7b1084ed8fc: Pulling fs layer
+76e62e764ae2: Pulling fs layer
+c80e31431845: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+5170d18569c7: Pulling fs layer
+64306e025e90: Pulling fs layer
+d4b31296d92f: Pulling fs layer
+13b745ce529a: Waiting
+f7b1084ed8fc: Waiting
+64306e025e90: Waiting
+5170d18569c7: Waiting
+76e62e764ae2: Waiting
+d4b31296d92f: Waiting
+c80e31431845: Waiting
+3d48ecd58be9: Waiting
+4f4fb700ef54: Waiting
+293695c84eeb: Waiting
+293695c84eeb: Verifying Checksum
+293695c84eeb: Download complete
+13b745ce529a: Download complete
+3d48ecd58be9: Verifying Checksum
+3d48ecd58be9: Download complete
+f7b1084ed8fc: Verifying Checksum
+f7b1084ed8fc: Download complete
+c80e31431845: Verifying Checksum
+c80e31431845: Download complete
+4f4fb700ef54: Download complete
+3d48ecd58be9: Pull complete
+293695c84eeb: Pull complete
+5170d18569c7: Verifying Checksum
+5170d18569c7: Download complete
+13b745ce529a: Pull complete
+f7b1084ed8fc: Pull complete
+76e62e764ae2: Verifying Checksum
+76e62e764ae2: Download complete
+d4b31296d92f: Verifying Checksum
+d4b31296d92f: Download complete
+76e62e764ae2: Pull complete
+c80e31431845: Pull complete
+4f4fb700ef54: Pull complete
+5170d18569c7: Pull complete
+64306e025e90: Verifying Checksum
+64306e025e90: Download complete
+64306e025e90: Pull complete
+d4b31296d92f: Pull complete
+Digest: sha256:30c1e7618a1ad6827f9570fc41ea36b87f698d7f863a69e2a4f4051077a527c1
+Status: Downloaded newer image for n132/arvo:50438-vul

@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3944602823
+INFO: Seed: 56533463
 INFO: Loaded 1 modules   (51661 inline 8-bit counters): 51661 [0x8736340, 0x8742d0d), 
 INFO: Loaded 1 PC tables (51661 PCs): 51661 [0x8628ddc,0x868dc44), 
 /out/html: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xf3f00670 at pc 0x0812f640 bp 0xffe517f8 sp 0xffe513a8
-READ of size 2 at 0xf3f00670 thread T0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xf2800670 at pc 0x0812f640 bp 0xffc73f58 sp 0xffc73b08
+READ of size 2 at 0xf2800670 thread T0
 SCARINESS: 42 (2-byte-read-heap-use-after-free)
     #0 0x812f63f in printf_common(void*, char const*, char*) /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors_format.inc:553:9
     #1 0x812f825 in __interceptor_vsnprintf /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:1665:1
@@ -24,11 +24,11 @@ SCARINESS: 42 (2-byte-read-heap-use-after-free)
     #13 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #14 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #15 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0xf60aced4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #16 0xf49f8ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #17 0x8077a55 in _start (/out/html+0x8077a55)
 
 DEDUP_TOKEN: printf_common(void*, char const*, char*)--__interceptor_vsnprintf--__xmlRaiseError
-0xf3f00670 is located 0 bytes inside of 2-byte region [0xf3f00670,0xf3f00672)
+0xf2800670 is located 0 bytes inside of 2-byte region [0xf2800670,0xf2800672)
 freed by thread T0 here:
     #0 0x8191116 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:52:3
     #1 0x83429c6 in htmlCurrentChar /src/libxml2/HTMLparser.c:448:13
@@ -43,7 +43,7 @@ freed by thread T0 here:
     #10 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #12 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0xf60aced4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #13 0xf49f8ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: free--htmlCurrentChar--htmlParseCharDataInternal
 previously allocated by thread T0 here:
@@ -63,22 +63,22 @@ previously allocated by thread T0 here:
     #13 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #14 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #15 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0xf60aced4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #16 0xf49f8ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: __interceptor_malloc--xmlFuzzMalloc--xmlStrndup
 SUMMARY: AddressSanitizer: heap-use-after-free /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors_format.inc:553:9 in printf_common(void*, char const*, char*)
 Shadow bytes around the buggy address:
-  0x3e7e0070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e7e0080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fd fa
-  0x3e7e0090: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
-  0x3e7e00a0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
-  0x3e7e00b0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
-=>0x3e7e00c0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa[fd]fa
-  0x3e7e00d0: fa fa 00 fa fa fa 00 00 fa fa 00 00 fa fa 04 fa
-  0x3e7e00e0: fa fa 00 fa fa fa 00 fa fa fa 00 00 fa fa 00 04
-  0x3e7e00f0: fa fa 00 04 fa fa 00 04 fa fa fa fa fa fa fa fa
-  0x3e7e0100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e7e0110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e500070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e500080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fd fa
+  0x3e500090: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x3e5000a0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x3e5000b0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+=>0x3e5000c0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa[fd]fa
+  0x3e5000d0: fa fa 00 fa fa fa 00 00 fa fa 00 00 fa fa 04 fa
+  0x3e5000e0: fa fa 00 fa fa fa 00 fa fa fa 00 00 fa fa 00 04
+  0x3e5000f0: fa fa 00 04 fa fa 00 04 fa fa fa fa fa fa fa fa
+  0x3e500100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e500110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

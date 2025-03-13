@@ -1,10 +1,10 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/coder_SVG_fuzzer
-11:46:56 0:0.015034  0.000u 7 svg.c/SVGError/3758/Coder:
+18:36:33 0:0.009705  0.000u 7 svg.c/SVGError/3758/Coder:
   xmlParseStringEntityRef: no name
 
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60b000000468 at pc 0x000000a17469 bp 0x7ffff62f6ab0 sp 0x7ffff62f6aa8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60b000000468 at pc 0x000000a17469 bp 0x7ffe92879230 sp 0x7ffe92879228
 READ of size 8 at 0x60b000000468 thread T0
 SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #0 0xa17468 in xmlParseInternalSubset /src/libxml2/parser.c:8371:54
@@ -16,7 +16,7 @@ SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #6 0x4df6ee in Magick::Image::read(Magick::Blob const&) /src/graphicsmagick/Magick++/lib/Image.cpp:1591:5
     #7 0x4cdf9c in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #8 0x4cfa1b in main (/out/coder_SVG_fuzzer+0x4cfa1b)
-    #9 0x7f927868283f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x736d1c93e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41f188 in _start (/out/coder_SVG_fuzzer+0x41f188)
 
 DEDUP_TOKEN: xmlParseInternalSubset--xmlParseTryOrFinish--xmlParseChunk

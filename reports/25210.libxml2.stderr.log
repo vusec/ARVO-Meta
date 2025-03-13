@@ -1,10 +1,10 @@
-INFO: Seed: 3095897052
+INFO: Seed: 4255078975
 INFO: Loaded 1 modules   (47165 inline 8-bit counters): 47165 [0xc401c0, 0xc4b9fd), 
 INFO: Loaded 1 PC tables (47165 PCs): 47165 [0x8d4070,0x98c440), 
 /out/xml: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c000000708 at pc 0x0000006fcdf2 bp 0x7fffae0555d0 sp 0x7fffae0555c8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c000000708 at pc 0x0000006fcdf2 bp 0x7ffc685282f0 sp 0x7ffc685282e8
 READ of size 4 at 0x60c000000708 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x6fcdf1 in xmlTextReaderRead /src/libxml2/xmlreader.c:1484:16
@@ -13,7 +13,7 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #3 0x443e22 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
     #4 0x449e7e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
     #5 0x4717f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #6 0x73786398083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #6 0x76bb0963683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #7 0x41e4b8 in _start (/out/xml+0x41e4b8)
 
 DEDUP_TOKEN: xmlTextReaderRead--LLVMFuzzerTestOneInput--fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long)
@@ -27,7 +27,7 @@ freed by thread T0 here:
     #5 0x443e22 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
     #6 0x449e7e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
     #7 0x4717f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #8 0x73786398083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x76bb0963683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: free--xmlTextReaderFreeNode--xmlTextReaderRead
 previously allocated by thread T0 here:
@@ -44,7 +44,7 @@ previously allocated by thread T0 here:
     #10 0x443e22 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:296:6
     #11 0x449e7e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:796:9
     #12 0x4717f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
-    #13 0x73786398083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x76bb0963683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--xmlNewDocPI--xmlSAX2ProcessingInstruction
 SUMMARY: AddressSanitizer: heap-use-after-free /src/libxml2/xmlreader.c:1484:16 in xmlTextReaderRead

@@ -1,0 +1,27 @@
+INFO: Seed: 79364635
+INFO: Loaded 0 modules (0 guards): 
+/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/hevc_refs.c:451:5: runtime error: index 16 out of bounds for type 'int [16]'
+    #0 0x50842e in add_candidate_ref /src/ffmpeg/libavcodec/hevc_refs.c:451:31
+    #1 0x5082a8 in ff_hevc_frame_rps /src/ffmpeg/libavcodec/hevc_refs.c:506:15
+    #2 0x437f32 in hevc_frame_start /src/ffmpeg/libavcodec/hevcdec.c:2714:11
+    #3 0x4366c5 in decode_nal_unit /src/ffmpeg/libavcodec/hevcdec.c:2820:19
+    #4 0x436151 in decode_nal_units /src/ffmpeg/libavcodec/hevcdec.c:2916:15
+    #5 0x434f5d in hevc_decode_frame /src/ffmpeg/libavcodec/hevcdec.c:3052:14
+    #6 0x433800 in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:417:15
+    #7 0x433654 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:620:15
+    #8 0x4308d2 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:638:15
+    #9 0x4303db in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:678:15
+    #10 0x430db1 in compat_decode /src/ffmpeg/libavcodec/decode.c:847:15
+    #11 0x42dff1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:216:23
+    #12 0x60206d in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:458:13
+    #13 0x602447 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long) /src/libfuzzer/FuzzerLoop.cpp:397:3
+    #14 0x5f3578 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
+    #15 0x5f7a18 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:683:9
+    #16 0x5f31dc in main /src/libfuzzer/FuzzerMain.cpp:20:10
+    #17 0x7c431888e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #18 0x406c68 in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x406c68)
+
+DEDUP_TOKEN: add_candidate_ref--ff_hevc_frame_rps--hevc_frame_start
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/hevc_refs.c:451:5 in 

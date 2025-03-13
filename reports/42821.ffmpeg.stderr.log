@@ -1,5 +1,6 @@
+Reading 1153 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000009400 at pc 0x0000004ef26a bp 0x7fffde949490 sp 0x7fffde948c58
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62d000009400 at pc 0x0000004ef26a bp 0x7ffe6dea8390 sp 0x7ffe6dea7b58
 WRITE of size 160 at 0x62d000009400 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x4ef269 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -13,7 +14,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #8 0x5383c1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:390:25
     #9 0x1927365 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #10 0x19271d5 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #11 0x75181d62a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #11 0x709e15428082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #12 0x46f60d in _start (/out/ffmpeg_AV_CODEC_ID_SPEEX_fuzzer+0x46f60d)
 
 DEDUP_TOKEN: __asan_memcpy--nb_decode--sb_decode
@@ -51,7 +52,7 @@ Shadow bytes around the buggy address:
   0x0c5a7fff92d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -68,4 +69,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

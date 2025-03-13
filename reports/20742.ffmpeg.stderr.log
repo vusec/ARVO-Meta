@@ -8,8 +8,9 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/ffmpeg_AV_CODEC_ID_CDTOONS_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 1106 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61a00000050a at pc 0x00000049697a bp 0x7ffd36a40ba0 sp 0x7ffd36a40368
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61a00000050a at pc 0x00000049697a bp 0x7ffc3b8840c0 sp 0x7ffc3b883888
 READ of size 1 at 0x61a00000050a thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x496979 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -23,7 +24,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #8 0x4cbb10 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:322:23
     #9 0x92da7e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #10 0x92da7e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #11 0x7be43a2cd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x77876372483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41e958 in _start (/out/ffmpeg_AV_CODEC_ID_CDTOONS_fuzzer+0x41e958)
 
 DEDUP_TOKEN: __asan_memcpy--cdtoons_render_sprite--cdtoons_decode_frame
@@ -36,7 +37,7 @@ allocated by thread T0 here:
     #4 0x4cb56f in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:281:15
     #5 0x92da7e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #6 0x92da7e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #7 0x7be43a2cd83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x77876372483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: realloc--av_buffer_realloc--packet_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
@@ -54,7 +55,7 @@ Shadow bytes around the buggy address:
   0x0c347fff80f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -72,4 +73,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

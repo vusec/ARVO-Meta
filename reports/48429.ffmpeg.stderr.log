@@ -1,6 +1,7 @@
+Reading 8322 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61900000ae80 at pc 0x000000570e29 bp 0x7ffd84c5eed0 sp 0x7ffd84c5eec8
-WRITE of size 4 at 0x61900000ae80 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61900000b380 at pc 0x000000570e29 bp 0x7fff3c24cdd0 sp 0x7fff3c24cdc8
+WRITE of size 4 at 0x61900000b380 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x570e28 in parse_palette /src/ffmpeg/libavcodec/qdrw.c:70:31
     #1 0x570e28 in decode_frame /src/ffmpeg/libavcodec/qdrw.c:384:19
@@ -11,11 +12,11 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #6 0x4ff985 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:482:25
     #7 0xdb37ea in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #8 0xdb35bd in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #9 0x7efca2821082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #9 0x7787811ba082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #10 0x443afd in _start (/out/ffmpeg_AV_CODEC_ID_QDRAW_fuzzer+0x443afd)
 
 DEDUP_TOKEN: parse_palette--decode_frame--decode_simple_internal
-0x61900000ae80 is located 0 bytes to the right of 1024-byte region [0x61900000aa80,0x61900000ae80)
+0x61900000b380 is located 0 bytes to the right of 1024-byte region [0x61900000af80,0x61900000b380)
 allocated by thread T0 here:
     #0 0x4c3827 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
     #1 0xd0714c in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -34,20 +35,20 @@ allocated by thread T0 here:
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/qdrw.c:70:31 in parse_palette
 Shadow bytes around the buggy address:
-  0x0c327fff9580: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fff9590: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fff95a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fff95b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c327fff95c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0c327fff95d0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fff95e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fff95f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fff9600: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fff9610: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c327fff9620: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff9620: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff9630: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff9640: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff9650: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff9660: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c327fff9670:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff9680: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff9690: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff96a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff96b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff96c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -64,4 +65,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

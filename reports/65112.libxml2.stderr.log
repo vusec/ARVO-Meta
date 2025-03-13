@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 4005077858
+INFO: Seed: 137433800
 INFO: Loaded 1 modules   (50880 inline 8-bit counters): 50880 [0xaad120, 0xab97e0), 
 INFO: Loaded 1 PC tables (50880 PCs): 50880 [0x93ddd0,0xa049d0), 
 /out/html: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x625000000fa7 at pc 0x00000068fdc3 bp 0x7ffd91460690 sp 0x7ffd91460688
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x625000000fa7 at pc 0x00000068fdc3 bp 0x7ffea1a0cc50 sp 0x7ffea1a0cc48
 READ of size 1 at 0x625000000fa7 thread T0
 SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #0 0x68fdc2 in htmlParseDocument /src/libxml2/HTMLparser.c:4886:9
@@ -16,7 +16,7 @@ SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #5 0x429642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #6 0x42eeec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #7 0x458422 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #8 0x7a3debaa4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #8 0x7a5d4c33d082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #9 0x41f80d in _start (/out/html+0x41f80d)
 
 DEDUP_TOKEN: htmlParseDocument--htmlDoRead--htmlCtxtReadMemory
@@ -37,7 +37,7 @@ freed by thread T0 here:
     #12 0x429642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #13 0x42eeec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #14 0x458422 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0x7a3debaa4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #15 0x7a5d4c33d082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_realloc--xmlFuzzRealloc--xmlBufGrowInternal
 previously allocated by thread T0 here:
@@ -52,7 +52,7 @@ previously allocated by thread T0 here:
     #8 0x429642 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #9 0x42eeec in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #10 0x458422 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #11 0x7a3debaa4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #11 0x7a5d4c33d082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_malloc--xmlFuzzMalloc--xmlBufCreateSize
 SUMMARY: AddressSanitizer: heap-use-after-free /src/libxml2/HTMLparser.c:4886:9 in htmlParseDocument

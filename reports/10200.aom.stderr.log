@@ -1,11 +1,11 @@
-INFO: Seed: 3568525333
-INFO: Loaded 1 modules   (26839 inline 8-bit counters): 26839 [0xfd1228, 0xfd7aff),
-INFO: Loaded 1 PC tables (26839 PCs): 26839 [0xfd7b00,0x1040870),
+INFO: Seed: 3222853618
+INFO: Loaded 1 modules   (26839 inline 8-bit counters): 26839 [0xfd1228, 0xfd7aff), 
+INFO: Loaded 1 PC tables (26839 PCs): 26839 [0xfd7b00,0x1040870), 
 /out/av1_dec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-use-after-free on address 0x77ed572f3a60 at pc 0x0000005f596a bp 0x7ffcf7fd3930 sp 0x7ffcf7fd3928
-WRITE of size 2 at 0x77ed572f3a60 thread T0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x7e37d8ef3a60 at pc 0x0000005f596a bp 0x7ffdfbeb3ab0 sp 0x7ffdfbeb3aa8
+WRITE of size 2 at 0x7e37d8ef3a60 thread T0
 SCARINESS: 43 (2-byte-write-heap-use-after-free)
     #0 0x5f5969 in set_planes_to_neutral_grey /src/aom/av1/decoder/decodeframe.c:99:57
     #1 0x5f5969 in reset_frame_buffers /src/aom/av1/decoder/decodeframe.c:4398
@@ -24,11 +24,11 @@ SCARINESS: 43 (2-byte-write-heap-use-after-free)
     #14 0x53772a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #15 0x542fa3 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #16 0x536dac in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #17 0x77ed5aa4483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #17 0x7e37dc62c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #18 0x423b08 in _start (/out/av1_dec_fuzzer+0x423b08)
 
 DEDUP_TOKEN: set_planes_to_neutral_grey--reset_frame_buffers--read_uncompressed_header
-0x77ed572f3a60 is located 516704 bytes inside of 1612854-byte region [0x77ed57275800,0x77ed573ff436)
+0x7e37d8ef3a60 is located 516704 bytes inside of 1612854-byte region [0x7e37d8e75800,0x7e37d8fff436)
 freed by thread T0 here:
     #0 0x4f2470 in __interceptor_free /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:124
     #1 0x91596d in av1_get_frame_buffer /src/aom/av1/common/frame_buffers.c:56:5
@@ -50,7 +50,7 @@ freed by thread T0 here:
     #17 0x53772a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #18 0x542fa3 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #19 0x536dac in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #20 0x77ed5aa4483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #20 0x7e37dc62c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_free--av1_get_frame_buffer--aom_realloc_frame_buffer
 previously allocated by thread T0 here:
@@ -77,25 +77,25 @@ previously allocated by thread T0 here:
     #20 0x53772a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #21 0x542fa3 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #22 0x536dac in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #23 0x77ed5aa4483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #23 0x7e37dc62c83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--aom_memalign--aom_malloc
 SUMMARY: AddressSanitizer: heap-use-after-free /src/aom/av1/decoder/decodeframe.c:99:57 in set_planes_to_neutral_grey
 Shadow bytes around the buggy address:
-  0x0efe2ae566f0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56700: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56710: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56720: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56730: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-=>0x0efe2ae56740: fd fd fd fd fd fd fd fd fd fd fd fd[fd]fd fd fd
-  0x0efe2ae56750: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56760: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56770: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56780: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x0efe2ae56790: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d66f0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6700: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6710: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6720: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6730: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+=>0x0fc77b1d6740: fd fd fd fd fd fd fd fd fd fd fd fd[fd]fd fd fd
+  0x0fc77b1d6750: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6760: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6770: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6780: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fc77b1d6790: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -113,4 +113,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

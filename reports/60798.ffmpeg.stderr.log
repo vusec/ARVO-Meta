@@ -1,0 +1,20 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 4261725758
+INFO: Loaded 1 modules   (81210 inline 8-bit counters): 81210 [0xb2eaa8, 0xb427e2), 
+INFO: Loaded 1 PC tables (81210 PCs): 81210 [0x8c8918,0xa05cb8), 
+/out/ffmpeg_BSF_EVC_FRAME_MERGE_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/evc_parse.c:622:27: runtime error: index 15 out of bounds for type 'const enum AVPixelFormat[4]'
+    #0 0x4d9885 in ff_evc_parse_nal_unit /src/ffmpeg/libavcodec/evc_parse.c:622:27
+    #1 0x4d5e8f in evc_frame_merge_filter /src/ffmpeg/libavcodec/evc_frame_merge_bsf.c:93:11
+    #2 0x4d3aee in av_bsf_receive_packet /src/ffmpeg/libavcodec/bsf.c:233:12
+    #3 0x4d07ab in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_bsf_fuzzer.c:153:16
+    #4 0x435d33 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #5 0x421492 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #6 0x426d3c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #7 0x450272 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #8 0x74680d501082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x41765d in _start (/out/ffmpeg_BSF_EVC_FRAME_MERGE_fuzzer+0x41765d)
+
+DEDUP_TOKEN: ff_evc_parse_nal_unit--evc_frame_merge_filter--av_bsf_receive_packet
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/evc_parse.c:622:27 in 

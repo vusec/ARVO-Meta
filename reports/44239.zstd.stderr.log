@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3287902296
-INFO: Loaded 1 modules   (42910 inline 8-bit counters): 42910 [0xa96ac0, 0xaa125e),
-INFO: Loaded 1 PC tables (42910 PCs): 42910 [0x9871a0,0xa2eb80),
+INFO: Seed: 1395104926
+INFO: Loaded 1 modules   (42910 inline 8-bit counters): 42910 [0xa96ac0, 0xaa125e), 
+INFO: Loaded 1 PC tables (42910 PCs): 42910 [0x9871a0,0xa2eb80), 
 /out/sequence_compression_api: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62c0000071b3 at pc 0x0000005cdbaf bp 0x7ffce9758490 sp 0x7ffce9758488
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62c0000071b3 at pc 0x0000005cdbaf bp 0x7ffe29765df0 sp 0x7ffe29765de8
 WRITE of size 1 at 0x62c0000071b3 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x5cdbae in ZSTD_noCompressLiterals /src/zstd/tests/fuzz/../../lib/compress/zstd_compress_literals.c:49:23
@@ -20,7 +20,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #9 0x440ee2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x44672c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x46f322 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0x7408b03fb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #12 0x78d6e7701082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #13 0x41f70d in _start (/out/sequence_compression_api+0x41f70d)
 
 DEDUP_TOKEN: ZSTD_noCompressLiterals--ZSTD_compressLiterals--ZSTD_entropyCompressSeqStore_internal
@@ -33,7 +33,7 @@ allocated by thread T0 here:
     #4 0x440ee2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #5 0x44672c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #6 0x46f322 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x7408b03fb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x78d6e7701082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: __interceptor_malloc--FUZZ_malloc--LLVMFuzzerTestOneInput
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/zstd/tests/fuzz/../../lib/compress/zstd_compress_literals.c:49:23 in ZSTD_noCompressLiterals
@@ -51,7 +51,7 @@ Shadow bytes around the buggy address:
   0x0c587fff8e80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -68,4 +68,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

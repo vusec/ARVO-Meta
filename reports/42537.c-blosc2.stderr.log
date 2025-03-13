@@ -1,5 +1,14 @@
+======================= INFO =========================
+This binary is built for afl++.
+To run the target function on individual input(s) execute this:
+  /out/decompress_chunk_fuzzer INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] -- /out/decompress_chunk_fuzzer [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: INT_MAX)
+======================================================
+Reading 40 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x617000000300 at pc 0x0000004983dc bp 0x7fffcfa971e0 sp 0x7fffcfa969a8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x617000000300 at pc 0x0000004983dc bp 0x7ffe720cd6e0 sp 0x7ffe720ccea8
 WRITE of size 67108864 at 0x617000000300 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x4983db in __asan_memset /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:26:3
@@ -12,7 +21,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #7 0x4cc853 in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_chunk.c:34:5
     #8 0x4ccd8e in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:185:7
     #9 0x4ccd8e in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:249:12
-    #10 0x7858ef3aa83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7d99259e883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41cf48 in _start (/out/decompress_chunk_fuzzer+0x41cf48)
 
 DEDUP_TOKEN: __asan_memset--ndlz8_decompress--blosc_d
@@ -45,7 +54,7 @@ Shadow bytes around the buggy address:
   0x0c2e7fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -63,4 +72,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

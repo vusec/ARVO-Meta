@@ -1,6 +1,7 @@
+Reading 1944 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7e748354d528 at pc 0x00000057b61b bp 0x7ffc898bb4d0 sp 0x7ffc898bb4c8
-WRITE of size 4 at 0x7e748354d528 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x706b66bf4528 at pc 0x00000057b61b bp 0x7fff90d9a930 sp 0x7fff90d9a928
+WRITE of size 4 at 0x706b66bf4528 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x57b61a in decode_filter /src/ffmpeg/libavcodec/rka.c
     #1 0x574203 in decode_samples /src/ffmpeg/libavcodec/rka.c
@@ -13,11 +14,11 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #8 0x503bdb in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:513:25
     #9 0xd8c34a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #10 0xd8c11c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #11 0x7e7483c0c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #11 0x706b66d66082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #12 0x4415dd in _start (/out/ffmpeg_AV_CODEC_ID_RKA_fuzzer+0x4415dd)
 
 DEDUP_TOKEN: decode_filter--decode_samples--decode_ch_samples
-0x7e748354d528 is located 0 bytes to the right of 220456-byte region [0x7e7483517800,0x7e748354d528)
+0x706b66bf4528 is located 0 bytes to the right of 220456-byte region [0x706b66bbe800,0x706b66bf4528)
 allocated by thread T0 here:
     #0 0x4c3567 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0xcd83e1 in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -30,20 +31,20 @@ allocated by thread T0 here:
 DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/rka.c in decode_filter
 Shadow bytes around the buggy address:
-  0x0fcf106a1a50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fcf106a1a60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fcf106a1a70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fcf106a1a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fcf106a1a90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fcf106a1aa0: 00 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa
-  0x0fcf106a1ab0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fcf106a1ac0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fcf106a1ad0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fcf106a1ae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fcf106a1af0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e0decd76850: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e0decd76860: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e0decd76870: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e0decd76880: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0e0decd76890: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0e0decd768a0: 00 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa
+  0x0e0decd768b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e0decd768c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e0decd768d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e0decd768e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0e0decd768f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -60,4 +61,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3998051269
+INFO: Seed: 137003873
 INFO: Loaded 1 modules   (50904 inline 8-bit counters): 50904 [0x8729ee0, 0x87365b8), 
 INFO: Loaded 1 PC tables (50904 PCs): 50904 [0x861e71c,0x8681ddc), 
 /out/html: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xeae00fa8 at pc 0x08335554 bp 0xff88d268 sp 0xff88d260
-READ of size 1 at 0xeae00fa8 thread T0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xe4a00fa8 at pc 0x08335554 bp 0xffacc468 sp 0xffacc460
+READ of size 1 at 0xe4a00fa8 thread T0
 SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #0 0x8335553 in htmlCurrentChar /src/libxml2/HTMLparser.c:427:9
     #1 0x8322c0c in htmlParseComment /src/libxml2/HTMLparser.c:3459:9
@@ -18,11 +18,11 @@ SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #7 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0xefb50ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #10 0xe97a3ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #11 0x8077a55 in _start (/out/html+0x8077a55)
 
 DEDUP_TOKEN: htmlCurrentChar--htmlParseComment--htmlParseDocument
-0xeae00fa8 is located 3752 bytes inside of 8193-byte region [0xeae00100,0xeae02101)
+0xe4a00fa8 is located 3752 bytes inside of 8193-byte region [0xe4a00100,0xe4a02101)
 freed by thread T0 here:
     #0 0x8191909 in __interceptor_realloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:85:3
     #1 0x81d50ed in xmlFuzzRealloc /src/libxml2/fuzz/fuzz.c:96:12
@@ -40,7 +40,7 @@ freed by thread T0 here:
     #13 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #14 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #15 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0xefb50ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #16 0xe97a3ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: __interceptor_realloc--xmlFuzzRealloc--xmlBufGrowInternal
 previously allocated by thread T0 here:
@@ -55,22 +55,22 @@ previously allocated by thread T0 here:
     #8 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #9 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #10 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #11 0xefb50ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #11 0xe97a3ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: __interceptor_malloc--xmlFuzzMalloc--xmlBufCreateSize
 SUMMARY: AddressSanitizer: heap-use-after-free /src/libxml2/HTMLparser.c:427:9 in htmlCurrentChar
 Shadow bytes around the buggy address:
-  0x3d5c01a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c01b0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c01c0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c01d0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c01e0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-=>0x3d5c01f0: fd fd fd fd fd[fd]fd fd fd fd fd fd fd fd fd fd
-  0x3d5c0200: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c0210: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c0220: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c0230: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
-  0x3d5c0240: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c9401a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c9401b0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c9401c0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c9401d0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c9401e0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+=>0x3c9401f0: fd fd fd fd fd[fd]fd fd fd fd fd fd fd fd fd fd
+  0x3c940200: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c940210: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c940220: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c940230: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x3c940240: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

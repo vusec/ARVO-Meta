@@ -8,8 +8,9 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/coder_MIFF_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 35 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604000000133 at pc 0x000000667762 bp 0x7ffc1e27ee50 sp 0x7ffc1e27ee48
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604000000133 at pc 0x000000667762 bp 0x7ffcba5024f0 sp 0x7ffcba5024e8
 READ of size 1 at 0x604000000133 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x667761 in ImportRGBQuantumType /src/graphicsmagick/magick/import.c:2403:17
@@ -21,7 +22,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #6 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #8 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #9 0x7b1079a1f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7a351be5183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41ddc8 in _start (/out/coder_MIFF_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: ImportRGBQuantumType--ImportViewPixelArea--ReadMIFFImage
@@ -33,7 +34,7 @@ allocated by thread T0 here:
     #3 0x52ea77 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:18:24
     #4 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #5 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #6 0x7b1079a1f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #6 0x7a351be5183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: operator new[](unsigned long)--Magick::BlobRef::BlobRef(void const*, unsigned long)--Magick::Blob::Blob(void const*, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/import.c:2403:17 in ImportRGBQuantumType
@@ -51,7 +52,7 @@ Shadow bytes around the buggy address:
   0x0c087fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -69,4 +70,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

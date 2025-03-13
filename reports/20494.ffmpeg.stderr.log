@@ -10,7 +10,7 @@ afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 Reading 1054 bytes from /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000001eec at pc 0x0000004e2ee7 bp 0x7ffdb951ac50 sp 0x7ffdb951ac48
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000001eec at pc 0x0000004e2ee7 bp 0x7fffdd319a70 sp 0x7fffdd319a68
 READ of size 1 at 0x619000001eec thread T0
 SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x4e2ee6 in decode_mvdv /src/ffmpeg/libavcodec/midivid.c:128:44
@@ -23,7 +23,7 @@ SCARINESS: 22 (1-byte-read-heap-buffer-overflow-far-from-bounds)
     #7 0x4cb4de in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:287:23
     #8 0x92aa8e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #9 0x92aa8e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #10 0x7b4e8782f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7b9d9849e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41e958 in _start (/out/ffmpeg_AV_CODEC_ID_MVDV_fuzzer+0x41e958)
 
 DEDUP_TOKEN: decode_mvdv--decode_frame--decode_simple_internal

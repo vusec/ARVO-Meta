@@ -1,0 +1,19 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 613391747
+INFO: Loaded 1 modules   (86130 inline 8-bit counters): 86130 [0xb876b0, 0xb9c722), 
+INFO: Loaded 1 PC tables (86130 PCs): 86130 [0x8ff9c8,0xa500e8), 
+/out/ffmpeg_AV_CODEC_ID_WMALOSSLESS_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/wmalosslessdec.c:266:9: runtime error: index 8 out of bounds for type 'WmallChannelCtx[8]'
+    #0 0x40932b in decode_init /src/ffmpeg/libavcodec/wmalosslessdec.c:266:23
+    #1 0x4c74e0 in avcodec_open2 /src/ffmpeg/libavcodec/avcodec.c:347:19
+    #2 0x4c4c96 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:353:15
+    #3 0x44e5e2 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #4 0x43a192 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #5 0x43f9fc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #6 0x468392 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #7 0x7709e8e5a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #8 0x4188dd in _start (/out/ffmpeg_AV_CODEC_ID_WMALOSSLESS_fuzzer+0x4188dd)
+
+DEDUP_TOKEN: decode_init--avcodec_open2--LLVMFuzzerTestOneInput
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/wmalosslessdec.c:266:9 in 

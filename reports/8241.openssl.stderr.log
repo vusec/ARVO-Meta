@@ -10,7 +10,7 @@ afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 Reading 369 bytes from /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x616000001b80 at pc 0x00000057fc90 bp 0x7ffe82e15a10 sp 0x7ffe82e15a08
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x616000001b80 at pc 0x00000057fc90 bp 0x7fffdde65450 sp 0x7fffdde65448
 READ of size 4 at 0x616000001b80 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x57fc8f in ssl_get_prev_session /src/openssl/ssl/ssl_sess.c:593:14
@@ -22,7 +22,7 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #6 0x52b0e3 in FuzzerTestOneInput /src/openssl/fuzz/server.c:629:9
     #7 0x52b84f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #8 0x52bdfe in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #9 0x73d5901dc83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x767df9fdb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41e218 in _start (/out/server+0x41e218)
 
 DEDUP_TOKEN: ssl_get_prev_session--tls_early_post_process_client_hello--tls_post_process_client_hello
@@ -40,7 +40,7 @@ freed by thread T0 here:
     #9 0x52b0e3 in FuzzerTestOneInput /src/openssl/fuzz/server.c:629:9
     #10 0x52b84f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #11 0x52bdfe in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #12 0x73d5901dc83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x767df9fdb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_cfree.localalias.1--SSL_SESSION_free--tls_decrypt_ticket
 previously allocated by thread T0 here:
@@ -58,7 +58,7 @@ previously allocated by thread T0 here:
     #11 0x52b0e3 in FuzzerTestOneInput /src/openssl/fuzz/server.c:629:9
     #12 0x52b84f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #13 0x52bdfe in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #14 0x73d5901dc83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x767df9fdb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--CRYPTO_zalloc--SSL_SESSION_new
 SUMMARY: AddressSanitizer: heap-use-after-free /src/openssl/ssl/ssl_sess.c:593:14 in ssl_get_prev_session

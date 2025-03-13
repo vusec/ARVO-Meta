@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3377337954
+INFO: Seed: 3472802225
 INFO: Loaded 1 modules   (10244 inline 8-bit counters): 10244 [0x8bf2e0, 0x8c1ae4), 
 INFO: Loaded 1 PC tables (10244 PCs): 10244 [0x8c1ae8,0x8e9b28), 
 /out/ssml-fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x6280000078e0 at pc 0x0000005d02fe bp 0x7ffcf6e2fc30 sp 0x7ffcf6e2fc28
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x6280000078e0 at pc 0x0000005d02fe bp 0x7ffcca059970 sp 0x7ffcca059968
 READ of size 1 at 0x6280000078e0 thread T0
 SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #0 0x5d02fd in TranslateRules /src/espeak-ng/src/libespeak-ng/dictionary.c:2237:7
@@ -23,7 +23,7 @@ SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #12 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #13 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #14 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0x707107a2e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x7de2540e683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #16 0x41ed38 in _start (/out/ssml-fuzzer+0x41ed38)
 
 DEDUP_TOKEN: TranslateRules--TranslateWord3--TranslateWord
@@ -48,7 +48,7 @@ freed by thread T0 here:
     #16 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #17 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #18 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #19 0x707107a2e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #19 0x7de2540e683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: free--DeleteTranslator--SetTranslator2
 previously allocated by thread T0 here:
@@ -68,7 +68,7 @@ previously allocated by thread T0 here:
     #13 0x444012 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #14 0x449ca1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #15 0x473672 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #16 0x707107a2e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x7de2540e683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--NewTranslator--SelectTranslator
 SUMMARY: AddressSanitizer: heap-use-after-free /src/espeak-ng/src/libespeak-ng/dictionary.c:2237:7 in TranslateRules

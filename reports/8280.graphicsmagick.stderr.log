@@ -1,4 +1,4 @@
-INFO: Seed: 2568872269
+INFO: Seed: 763493953
 INFO: Loaded 1 modules   (74411 inline 8-bit counters): 74411 [0x1353f08, 0x13661b3), 
 INFO: Loaded 1 PC tables (74411 PCs): 74411 [0x13661b8,0x1488c68), 
 /out/coder_PTIF_fuzzer: Running 1 inputs 1 time(s) each.
@@ -14,7 +14,7 @@ SCARINESS: 42 (double-free)
     #5 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #6 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #7 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #8 0x7afd946bf83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7bd661a2483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #9 0x41dd88 in _start (/out/coder_PTIF_fuzzer+0x41dd88)
 
 DEDUP_TOKEN: __interceptor_cfree.localalias.1--Magick::BlobRef::~BlobRef()--Magick::Blob::~Blob()
@@ -36,7 +36,7 @@ freed by thread T0 here:
     #13 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #14 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #15 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #16 0x7afd946bf83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x7bd661a2483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: realloc--MagickRealloc--ExtendBlobWriteStream
 previously allocated by thread T0 here:
@@ -48,7 +48,7 @@ previously allocated by thread T0 here:
     #5 0x52b6da in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #6 0x536f2b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:701:9
     #7 0x52ad7c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #8 0x7afd946bf83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7bd661a2483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ImageToBlob--Magick::Image::write(Magick::Blob*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
 SUMMARY: AddressSanitizer: double-free /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:86 in __interceptor_cfree.localalias.1

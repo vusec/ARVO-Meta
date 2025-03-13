@@ -2,7 +2,7 @@ Running LLVMFuzzerInitialize ...
 continue...
 Reading 6067 bytes from /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c00001a2c8 at pc 0x00000083605e bp 0x7fffb4187960 sp 0x7fffb4187958
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c00001a2c8 at pc 0x00000083605e bp 0x7ffc0e0f6200 sp 0x7ffc0e0f61f8
 READ of size 4 at 0x60c00001a2c8 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x83605d in xmlXIncludeIncludeNode /src/libxml2/xinclude.c:2052:32
@@ -12,7 +12,7 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #4 0x4dd33a in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:88:12
     #5 0x4df84a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #6 0x4df61c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #7 0x7eb803e17082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #7 0x7a87256b4082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #8 0x41e5ed in _start (/out/xml+0x41e5ed)
 
 DEDUP_TOKEN: xmlXIncludeIncludeNode--xmlXIncludeDoProcess--xmlXIncludeProcessNode

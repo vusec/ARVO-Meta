@@ -1,0 +1,25 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1592205248
+INFO: Loaded 1 modules   (208783 inline 8-bit counters): 208783 [0x1360090, 0x139301f), 
+INFO: Loaded 1 PC tables (208783 PCs): 208783 [0xdc9278,0x10f8b68), 
+/out/ffmpeg_DEMUXER_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/hevc_ps.c:1396:9: runtime error: index 64 out of bounds for type 'uint8_t[64]' (aka 'unsigned char[64]')
+    #0 0x8fb31b in pps_multilayer_extension /src/ffmpeg/libavcodec/hevc_ps.c:1396:41
+    #1 0x8f949f in ff_hevc_decode_nal_pps /src/ffmpeg/libavcodec/hevc_ps.c:1920:24
+    #2 0x8f12a0 in parse_nal_units /src/ffmpeg/libavcodec/hevc_parser.c:218:13
+    #3 0x8f12a0 in hevc_parse /src/ffmpeg/libavcodec/hevc_parser.c:331:9
+    #4 0x6d8ead in av_parser_parse2 /src/ffmpeg/libavcodec/parser.c:163:13
+    #5 0x4eaa94 in parse_packet /src/ffmpeg/libavformat/demux.c:1140:15
+    #6 0x4e11e4 in read_frame_internal /src/ffmpeg/libavformat/demux.c:1254:21
+    #7 0x4e491c in avformat_find_stream_info /src/ffmpeg/libavformat/demux.c:2613:15
+    #8 0x4d68a1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:206:11
+    #9 0x43c6d3 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #10 0x427e32 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x42d6dc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #12 0x456c12 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x7a7f71afd082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x41dffd in _start (/out/ffmpeg_DEMUXER_fuzzer+0x41dffd)
+
+DEDUP_TOKEN: pps_multilayer_extension--ff_hevc_decode_nal_pps--parse_nal_units
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/hevc_ps.c:1396:9 in 

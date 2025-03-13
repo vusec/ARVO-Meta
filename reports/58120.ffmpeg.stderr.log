@@ -1,5 +1,6 @@
+Reading 16191 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000400 at pc 0x0000008e1168 bp 0x7ffe37a5ef90 sp 0x7ffe37a5ef88
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x610000000400 at pc 0x0000008e1168 bp 0x7ffcc62882d0 sp 0x7ffcc62882c8
 WRITE of size 4 at 0x610000000400 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x8e1167 in imf_base_resource_init /src/ffmpeg/libavformat/imf_cpl.c:154:20
@@ -13,7 +14,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #8 0x50ebb1 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:201:11
     #9 0x1723f9a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #10 0x1723d6c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #11 0x73905351e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #11 0x76fbdf4cf082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #12 0x44ff0d in _start (/out/ffmpeg_DEMUXER_fuzzer+0x44ff0d)
 
 DEDUP_TOKEN: imf_base_resource_init--imf_trackfile_resource_init--push_main_image_2d_sequence
@@ -47,7 +48,7 @@ Shadow bytes around the buggy address:
   0x0c207fff80d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -64,4 +65,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

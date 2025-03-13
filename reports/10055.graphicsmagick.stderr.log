@@ -8,14 +8,15 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/coder_MVG_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 2105 bytes from /tmp/poc
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g24744x24" "-sOutputFile=/tmp/gmsbnHsO" "--" "/tmp/gmIoAbpy" "-c" "quit".
+Magick: "gs" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g24744x24" "-sOutputFile=/tmp/gmY0WCRM" "--" "/tmp/gmgZecLw" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g24744x24" "-sOutputFile=/tmp/gmsbnHsO" "--" "/tmp/gmIoAbpy" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmdXLpwO).
+Magick: "gs" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g24744x24" "-sOutputFile=/tmp/gmY0WCRM" "--" "/tmp/gmgZecLw" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmPWVe9s).
 =================================================================
-==13==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x73c0f07d6915 at pc 0x00000071d439 bp 0x7fff12d34110 sp 0x7fff12d34108
-WRITE of size 1 at 0x73c0f07d6915 thread T0
+==7==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x77bcf31be915 at pc 0x00000071d439 bp 0x7fff01700570 sp 0x7fff01700568
+WRITE of size 1 at 0x77bcf31be915 thread T0
 SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #0 0x71d438 in TranslateTextEx /src/graphicsmagick/magick/utility.c:6317:15
     #1 0x56e8a3 in AnnotateImage /src/graphicsmagick/magick/annotate.c:219:8
@@ -28,11 +29,11 @@ SCARINESS: 46 (1-byte-write-stack-buffer-overflow)
     #8 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #9 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #10 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #11 0x73c0ef72783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x77bcf210f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: TranslateTextEx--AnnotateImage--DrawPrimitive
-Address 0x73c0f07d6915 is located in stack of thread T0 at offset 4373 in frame
+Address 0x77bcf31be915 is located in stack of thread T0 at offset 4373 in frame
     #0 0x71b66f in TranslateTextEx /src/graphicsmagick/magick/utility.c:5877
 
 DEDUP_TOKEN: TranslateTextEx
@@ -45,20 +46,20 @@ HINT: this may be a false positive if your program uses some custom stack unwind
       (longjmp and C++ exceptions *are* supported)
 SUMMARY: AddressSanitizer: stack-buffer-overflow /src/graphicsmagick/magick/utility.c:6317:15 in TranslateTextEx
 Shadow bytes around the buggy address:
-  0x0e789e0f2cd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e789e0f2ce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e789e0f2cf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e789e0f2d00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e789e0f2d10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0e789e0f2d20: 00 00[05]f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
-  0x0e789e0f2d30: f3 f3 f3 f3 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e789e0f2d40: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e789e0f2d50: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e789e0f2d60: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
-  0x0e789e0f2d70: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ef81e62fcd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ef81e62fce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ef81e62fcf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ef81e62fd00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ef81e62fd10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ef81e62fd20: 00 00[05]f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
+  0x0ef81e62fd30: f3 f3 f3 f3 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ef81e62fd40: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ef81e62fd50: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ef81e62fd60: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0ef81e62fd70: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -76,4 +77,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

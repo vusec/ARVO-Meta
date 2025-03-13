@@ -1,0 +1,29 @@
+INFO: Seed: 38169212
+INFO: Loaded 1 modules   (5166 inline 8-bit counters): 5166 [0x832926c, 0x832a69a), 
+INFO: Loaded 1 PC tables (5166 PCs): 5166 [0x832a69c,0x833480c), 
+/out/fuzzer_encoder: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==7==ERROR: AddressSanitizer: SEGV on unknown address 0xb0dfc214 (pc 0x081f6976 bp 0xffc97748 sp 0xffc97700 T0)
+==7==The signal is caused by a WRITE memory access.
+SCARINESS: 30 (wild-addr-write)
+    #0 0x81f6975 in FLAC__bitwriter_write_raw_uint32_nocheck /src/flac/src/libFLAC/bitwriter.c
+    #1 0x81f66e9 in FLAC__bitwriter_write_raw_uint32 /src/flac/src/libFLAC/bitwriter.c:369:9
+    #2 0x81edc7d in FLAC__frame_add_header /src/flac/src/libFLAC/stream_encoder_framing.c:227:6
+    #3 0x81e357e in process_subframes_ /src/flac/src/libFLAC/stream_encoder.c:3365:7
+    #4 0x81d17ee in process_frame_ /src/flac/src/libFLAC/stream_encoder.c:3096:6
+    #5 0x81dcf0f in FLAC__stream_encoder_process_interleaved /src/flac/src/libFLAC/stream_encoder.c:2298:9
+    #6 0x81c96b9 in FLAC::Encoder::Stream::process_interleaved(int const*, unsigned int) /src/flac/src/libFLAC++/stream_encoder.cpp:370:17
+    #7 0x81bf7ee in LLVMFuzzerTestOneInput /src/flac-fuzzers/fuzzer_encoder.cpp:141:46
+    #8 0x80c7736 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:553:15
+    #9 0x80b3b73 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
+    #10 0x80b91f8 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:775:9
+    #11 0x80dd507 in main /src/llvm/projects/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #12 0xf0167646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #13 0x8076028 in _start (/out/fuzzer_encoder+0x8076028)
+
+DEDUP_TOKEN: FLAC__bitwriter_write_raw_uint32_nocheck--FLAC__bitwriter_write_raw_uint32--FLAC__frame_add_header
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /src/flac/src/libFLAC/bitwriter.c in FLAC__bitwriter_write_raw_uint32_nocheck
+==7==ABORTING

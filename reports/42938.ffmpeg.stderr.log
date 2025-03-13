@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3286792464
-INFO: Loaded 1 modules   (57484 inline 8-bit counters): 57484 [0xf3ab00, 0xf48b8c),
-INFO: Loaded 1 PC tables (57484 PCs): 57484 [0xd35210,0xe15ad0),
+INFO: Seed: 386757910
+INFO: Loaded 1 modules   (57484 inline 8-bit counters): 57484 [0xf3ab00, 0xf48b8c), 
+INFO: Loaded 1 PC tables (57484 PCs): 57484 [0xd35210,0xe15ad0), 
 /out/ffmpeg_AV_CODEC_ID_TIFF_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62a000005480 at pc 0x0000007e0edb bp 0x7ffcf91f7130 sp 0x7ffcf91f7128
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62a000005480 at pc 0x0000007e0edb bp 0x7ffe7f4d2250 sp 0x7ffe7f4d2248
 WRITE of size 1 at 0x62a000005480 thread T0
 SCARINESS: 41 (1-byte-write-heap-buffer-overflow-far-from-bounds)
     #0 0x7e0eda in ff_put_pixels_clamped_c /src/ffmpeg/libavcodec/idctdsp.c:90:19
@@ -27,7 +27,7 @@ SCARINESS: 41 (1-byte-write-heap-buffer-overflow-far-from-bounds)
     #16 0x4635d2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #17 0x468e2c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #18 0x491c32 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #19 0x7c8ac5163082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #19 0x709a7581a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #20 0x441d8d in _start (/out/ffmpeg_AV_CODEC_ID_TIFF_fuzzer+0x441d8d)
 
 DEDUP_TOKEN: ff_put_pixels_clamped_c--ff_jref_idct_put--mjpeg_idct_scan_progressive_ac
@@ -59,7 +59,7 @@ allocated by thread T0 here:
     #23 0x4635d2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #24 0x468e2c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #25 0x491c32 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #26 0x7c8ac5163082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #26 0x709a7581a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/idctdsp.c:90:19 in ff_put_pixels_clamped_c
@@ -77,7 +77,7 @@ Shadow bytes around the buggy address:
   0x0c547fff8ae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -94,4 +94,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

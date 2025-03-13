@@ -1,10 +1,10 @@
-INFO: Seed: 3128070362
+INFO: Seed: 1774788853
 INFO: Loaded 1 modules   (10792 inline 8-bit counters): 10792 [0x9af400, 0x9b1e28), 
 INFO: Loaded 1 PC tables (10792 PCs): 10792 [0x9b1e28,0x9dc0a8), 
 /out/avif_decode_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000000098 at pc 0x0000004bb0e6 bp 0x7ffdfa580c20 sp 0x7ffdfa5803c8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000000098 at pc 0x0000004bb0e6 bp 0x7ffe3028e860 sp 0x7ffe3028e008
 READ of size 4 at 0x602000000098 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x4bb0e5 in MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long) /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:841:7
@@ -16,7 +16,7 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #6 0x443262 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #7 0x44933e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:850:9
     #8 0x471252 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #9 0x7d88c6fb683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7ee087d3783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41e468 in _start (/out/avif_decode_fuzzer+0x41e468)
 
 DEDUP_TOKEN: MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long)--memcmp--avifFileTypeIsCompatible
@@ -33,7 +33,7 @@ freed by thread T0 here:
     #8 0x443262 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #9 0x44933e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:850:9
     #10 0x471252 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #11 0x7d88c6fb683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7ee087d3783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: free--avifFree--avifRWDataFree
 previously allocated by thread T0 here:
@@ -48,7 +48,7 @@ previously allocated by thread T0 here:
     #8 0x443262 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #9 0x44933e in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:850:9
     #10 0x471252 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #11 0x7d88c6fb683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7ee087d3783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--avifAlloc--avifRWDataRealloc
 SUMMARY: AddressSanitizer: heap-use-after-free /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors.inc:841:7 in MemcmpInterceptorCommon(void*, int (*)(void const*, void const*, unsigned long), void const*, void const*, unsigned long)

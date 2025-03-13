@@ -1,9 +1,9 @@
-INFO: Seed: 3266730368
-INFO: Loaded 1 modules   (6941 guards): 6941 [0x98b000, 0x991c74),
+INFO: Seed: 403777991
+INFO: Loaded 1 modules   (6941 guards): 6941 [0x98b000, 0x991c74), 
 /out/opj_decompress_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000000dc4 at pc 0x0000005ddb87 bp 0x7ffd9a62ca10 sp 0x7ffd9a62ca08
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000000dc4 at pc 0x0000005ddb87 bp 0x7fff1c6346f0 sp 0x7fff1c6346e8
 READ of size 4 at 0x603000000dc4 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x5ddb86 in opj_mct_decode_real /src/openjpeg/src/lib/openjp2/mct.c:433:25
@@ -18,7 +18,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #9 0x5199a5 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:273:6
     #10 0x524c3f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:689:9
     #11 0x519048 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #12 0x735917f2a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x794de328883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41c298 in _start (/out/opj_decompress_fuzzer+0x41c298)
 
 DEDUP_TOKEN: opj_mct_decode_real--opj_tcd_mct_decode--opj_tcd_decode_tile
@@ -37,7 +37,7 @@ allocated by thread T0 here:
     #10 0x5199a5 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:273:6
     #11 0x524c3f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:689:9
     #12 0x519048 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #13 0x735917f2a83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x794de328883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--opj_aligned_alloc_n--opj_alloc_tile_component_data
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/openjpeg/src/lib/openjp2/mct.c:433:25 in opj_mct_decode_real
@@ -55,7 +55,7 @@ Shadow bytes around the buggy address:
   0x0c067fff8200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -72,4 +72,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

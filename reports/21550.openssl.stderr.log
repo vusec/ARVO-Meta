@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/client
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60f00002d560 at pc 0x000000613015 bp 0x7ffcfa61e320 sp 0x7ffcfa61e318
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60f00002d560 at pc 0x000000613015 bp 0x7ffd24bb6e60 sp 0x7ffd24bb6e58
 WRITE of size 4 at 0x60f00002d560 thread T0
 SCARINESS: 46 (4-byte-write-heap-use-after-free)
     #0 0x613014 in CRYPTO_DOWN_REF /src/openssl/include/internal/refcount.h:51:12
@@ -15,7 +15,7 @@ SCARINESS: 46 (4-byte-write-heap-use-after-free)
     #8 0x4ee180 in SSL_do_handshake /src/openssl/ssl/ssl_lib.c:3812:19
     #9 0x4c9666 in FuzzerTestOneInput /src/openssl/fuzz/client.c:84:9
     #10 0x4c9ba4 in HonggfuzzMain (/out/client+0x4c9ba4)
-    #11 0x7a49c254383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x7026cf82483f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41e048 in _start (/out/client+0x41e048)
 
 DEDUP_TOKEN: CRYPTO_DOWN_REF--DH_free--evp_pkey_free_it

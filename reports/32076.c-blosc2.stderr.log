@@ -9,7 +9,7 @@ afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 Reading 186 bytes from /tmp/poc
 Decompression error.  Error code: -9
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x62b000006cc0 at pc 0x00000049e0d7 bp 0x7ffd8e771a10 sp 0x7ffd8e7711d8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x62b000006cc0 at pc 0x00000049e0d7 bp 0x7ffc4e456530 sp 0x7ffc4e455cf8
 READ of size 24 at 0x62b000006cc0 thread T0
 SCARINESS: 54 (multi-byte-read-heap-use-after-free)
     #0 0x49e0d6 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -19,7 +19,7 @@ SCARINESS: 54 (multi-byte-read-heap-use-after-free)
     #4 0x4d2e4c in LLVMFuzzerTestOneInput /src/c-blosc2/tests/fuzz/fuzz_decompress_frame.c
     #5 0x4d3303 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:185:7
     #6 0x4d3303 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:237:12
-    #7 0x7fb7630e683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x7e1b9777583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x423e48 in _start (/out/decompress_frame_fuzzer+0x423e48)
 
 DEDUP_TOKEN: __asan_memcpy--ZSTD_freeDDict--blosc2_free_ctx

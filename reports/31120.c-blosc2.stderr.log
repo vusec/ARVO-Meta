@@ -1,13 +1,13 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3158421021
+INFO: Seed: 3455282084
 INFO: Loaded 1 modules   (40905 inline 8-bit counters): 40905 [0x8745280, 0x874f249), 
 INFO: Loaded 1 PC tables (40905 PCs): 40905 [0x86a7bc4,0x86f7a0c), 
 /out/decompress_frame_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 Decompression error.  Error code: -10
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xe8003462 at pc 0x08248f33 bp 0xffd57188 sp 0xffd57180
-READ of size 4 at 0xe8003462 thread T0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xf1803462 at pc 0x08248f33 bp 0xffeade48 sp 0xffeade40
+READ of size 4 at 0xf1803462 thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x8248f32 in sw32_ /src/c-blosc2/blosc/blosc-private.h:44:13
     #1 0x8248f32 in frame_get_lazychunk /src/c-blosc2/blosc/frame.c:2021:24
@@ -19,18 +19,18 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #7 0x808ddd8 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:328:8
     #8 0x8093cb4 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #9 0x80bd497 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0xeab8d646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #10 0xf4386646 in __libc_start_main (/lib32/libc.so.6+0x18646)
     #11 0x8068238 in _start (/out/decompress_frame_fuzzer+0x8068238)
 
 DEDUP_TOKEN: sw32_--frame_get_lazychunk--frame_decompress_chunk
-0xe8003462 is located 130 bytes inside of 148-byte region [0xe80033e0,0xe8003474)
+0xf1803462 is located 130 bytes inside of 148-byte region [0xf18033e0,0xf1803474)
 freed by thread T0 here:
     #0 0x81719e6 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:127:3
     #1 0x80825cb in operator delete(void*) (/out/decompress_frame_fuzzer+0x80825cb)
     #2 0x808dd8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #3 0x8093cb4 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #4 0x80bd497 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0xeab8d646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #5 0xf4386646 in __libc_start_main (/lib32/libc.so.6+0x18646)
 
 DEDUP_TOKEN: free--operator delete(void*)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int)
 previously allocated by thread T0 here:
@@ -39,22 +39,22 @@ previously allocated by thread T0 here:
     #2 0x808dd8e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:323:6
     #3 0x8093cb4 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:856:9
     #4 0x80bd497 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #5 0xeab8d646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #5 0xf4386646 in __libc_start_main (/lib32/libc.so.6+0x18646)
 
 DEDUP_TOKEN: malloc--operator new(unsigned int)--fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int)
 SUMMARY: AddressSanitizer: heap-use-after-free /src/c-blosc2/blosc/blosc-private.h:44:13 in sw32_
 Shadow bytes around the buggy address:
-  0x3d000630: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d000640: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d000650: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3d000660: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d000670: 00 00 04 fa fa fa fa fa fa fa fa fa fd fd fd fd
-=>0x3d000680: fd fd fd fd fd fd fd fd fd fd fd fd[fd]fd fd fa
-  0x3d000690: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
-  0x3d0006a0: 00 00 00 00 00 00 00 00 00 00 04 fa fa fa fa fa
-  0x3d0006b0: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3d0006c0: 00 00 00 00 00 00 00 04 fa fa fa fa fa fa fa fa
-  0x3d0006d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e300630: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e300640: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e300650: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3e300660: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3e300670: 00 00 04 fa fa fa fa fa fa fa fa fa fd fd fd fd
+=>0x3e300680: fd fd fd fd fd fd fd fd fd fd fd fd[fd]fd fd fa
+  0x3e300690: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x3e3006a0: 00 00 00 00 00 00 00 00 00 00 04 fa fa fa fa fa
+  0x3e3006b0: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3e3006c0: 00 00 00 00 00 00 00 04 fa fa fa fa fa fa fa fa
+  0x3e3006d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

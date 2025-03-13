@@ -1,0 +1,65 @@
+Unable to find image 'n132/arvo:1461-vul' locally
+1461-vul: Pulling from n132/arvo
+d16fc20e681d: Already exists
+63f1c4e4b781: Already exists
+fb4d3bb1280c: Already exists
+8038895a6c2e: Already exists
+43fa392d948c: Already exists
+acb324eaf143: Already exists
+2d869ded115f: Already exists
+33f51ca5dba0: Already exists
+2e24ca0e8f73: Already exists
+fcd73e9b9751: Already exists
+240423bcfba4: Already exists
+d5077c143141: Already exists
+2d5a31a2dd25: Already exists
+c655debf496a: Already exists
+de9124ff0e0f: Already exists
+addbf2b341e9: Pulling fs layer
+307b6d38f31d: Pulling fs layer
+059920eac63f: Pulling fs layer
+26b3760c3275: Pulling fs layer
+51d2cfcf21be: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+23b350526f11: Pulling fs layer
+2785abcdebfc: Pulling fs layer
+168a31bba002: Pulling fs layer
+7d85935da574: Pulling fs layer
+51d2cfcf21be: Waiting
+4f4fb700ef54: Waiting
+23b350526f11: Waiting
+7d85935da574: Waiting
+168a31bba002: Waiting
+2785abcdebfc: Waiting
+26b3760c3275: Waiting
+307b6d38f31d: Verifying Checksum
+307b6d38f31d: Download complete
+059920eac63f: Verifying Checksum
+059920eac63f: Download complete
+26b3760c3275: Verifying Checksum
+26b3760c3275: Download complete
+addbf2b341e9: Verifying Checksum
+addbf2b341e9: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+51d2cfcf21be: Verifying Checksum
+51d2cfcf21be: Download complete
+2785abcdebfc: Verifying Checksum
+2785abcdebfc: Download complete
+23b350526f11: Download complete
+7d85935da574: Verifying Checksum
+7d85935da574: Download complete
+addbf2b341e9: Pull complete
+307b6d38f31d: Pull complete
+168a31bba002: Verifying Checksum
+168a31bba002: Download complete
+059920eac63f: Pull complete
+26b3760c3275: Pull complete
+51d2cfcf21be: Pull complete
+4f4fb700ef54: Pull complete
+23b350526f11: Pull complete
+2785abcdebfc: Pull complete
+168a31bba002: Pull complete
+7d85935da574: Pull complete
+Digest: sha256:2231585c76649cd6174c7340e9ba8e1c809c18a386714886b71058867135dde9
+Status: Downloaded newer image for n132/arvo:1461-vul

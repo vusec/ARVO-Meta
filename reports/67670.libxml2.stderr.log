@@ -2,7 +2,7 @@ Running LLVMFuzzerInitialize ...
 continue...
 Reading 15 bytes from /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c0000002a8 at pc 0x0000004fe244 bp 0x7ffcc0286740 sp 0x7ffcc0286738
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c0000002a8 at pc 0x0000004fe244 bp 0x7fff433d94a0 sp 0x7fff433d9498
 READ of size 8 at 0x60c0000002a8 thread T0
 SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #0 0x4fe243 in nodeGetTree /src/libxml2/fuzz/api.c:603:17
@@ -11,7 +11,7 @@ SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #3 0x5007ed in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #4 0x5005e8 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #5 0x50019d in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:311:10
-    #6 0x73d18bf5d082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #6 0x7b97df2b1082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #7 0x41e59d in _start (/out/api+0x41e59d)
 
 DEDUP_TOKEN: nodeGetTree--dropNode--LLVMFuzzerTestOneInput

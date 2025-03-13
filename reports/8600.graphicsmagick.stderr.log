@@ -8,8 +8,9 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/coder_MAT_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 65666 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x623000006e00 at pc 0x00000058ac3d bp 0x7ffe89302e70 sp 0x7ffe89302e68
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x623000006e00 at pc 0x00000058ac3d bp 0x7ffd17244910 sp 0x7ffd17244908
 READ of size 8 at 0x623000006e00 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x58ac3c in ReadBlobLSBDoubles /src/graphicsmagick/magick/blob.c:3532:9
@@ -22,7 +23,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #7 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #8 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #9 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #10 0x726a85feb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x7c7d534a183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41ddc8 in _start (/out/coder_MAT_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: ReadBlobLSBDoubles--MagickFindRawImageMinMax--ReadMATImageV4
@@ -37,7 +38,7 @@ allocated by thread T0 here:
     #6 0x52e603 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x52ef3f in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #8 0x52f4ee in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #9 0x726a85feb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7c7d534a183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--ReadMATImageV4--ReadMATImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/blob.c:3532:9 in ReadBlobLSBDoubles
@@ -55,7 +56,7 @@ Shadow bytes around the buggy address:
   0x0c467fff8e10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -73,4 +74,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

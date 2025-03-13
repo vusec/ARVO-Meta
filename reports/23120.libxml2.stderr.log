@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/xml
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000001110 at pc 0x00000043aa18 bp 0x7ffe84d53510 sp 0x7ffe84d52c98
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000001110 at pc 0x00000043aa18 bp 0x7ffdca286c10 sp 0x7ffdca286398
 READ of size 2 at 0x602000001110 thread T0
 SCARINESS: 42 (2-byte-read-heap-use-after-free)
     #0 0x43aa17 in printf_common(void*, char const*, __va_list_tag*) /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_common_interceptors_format.inc:547:9
@@ -21,7 +21,7 @@ SCARINESS: 42 (2-byte-read-heap-use-after-free)
     #14 0x672a97 in xmlTextReaderRead /src/libxml2/xmlreader.c:1384:8
     #15 0x4c7007 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:73:12
     #16 0x4c833d in main (/out/xml+0x4c833d)
-    #17 0x7d7fcf2c083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #17 0x760a3dbfb83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #18 0x41c6c8 in _start (/out/xml+0x41c6c8)
 
 DEDUP_TOKEN: printf_common(void*, char const*, __va_list_tag*)--__xmlRaiseError--xmlErrValidNode

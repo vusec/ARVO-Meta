@@ -2,7 +2,7 @@ Running LLVMFuzzerInitialize ...
 continue...
 Reading 233 bytes from /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c000000dd8 at pc 0x00000056bdcd bp 0x7ffc4da295d0 sp 0x7ffc4da295c8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60c000000dd8 at pc 0x00000056bdcd bp 0x7ffe8d165a30 sp 0x7ffe8d165a28
 READ of size 8 at 0x60c000000dd8 thread T0
 SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #0 0x56bdcc in xmlFreeNodeList /src/libxml2/tree.c:3704:22
@@ -14,7 +14,7 @@ SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #6 0x4d7ee7 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/xml.c:57:9
     #7 0x4d9f95 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #8 0x4d9e05 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #9 0x7954982af082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #9 0x7a28cda62082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #10 0x41e57d in _start (/out/xml+0x41e57d)
 
 DEDUP_TOKEN: xmlFreeNodeList--xmlXIncludeIncludeNode--xmlXIncludeDoProcess

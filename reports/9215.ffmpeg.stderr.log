@@ -1,10 +1,10 @@
-INFO: Seed: 2684487507
+INFO: Seed: 138448216
 INFO: Loaded 1 modules   (62530 inline 8-bit counters): 62530 [0x14a85d0, 0x14b7a12), 
 INFO: Loaded 1 PC tables (62530 PCs): 62530 [0x108c7e8,0x1180c08), 
 /out/ffmpeg_AV_CODEC_ID_LIBVPX_VP8_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x621000002900 at pc 0x0000004ea5cd bp 0x7ffded62d240 sp 0x7ffded62c9f0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x621000002900 at pc 0x0000004ea5cd bp 0x7ffc1cb8f040 sp 0x7ffc1cb8e7f0
 READ of size 377 at 0x621000002900 thread T0
 SCARINESS: 54 (multi-byte-read-heap-use-after-free)
     #0 0x4ea5cc in __asan_memcpy /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23
@@ -16,7 +16,7 @@ SCARINESS: 54 (multi-byte-read-heap-use-after-free)
     #6 0xe4675a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #7 0xe51be1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:707:9
     #8 0xe45dfc in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #9 0x70e69fe2783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x7fcbbe4be83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #10 0x41d908 in _start (/out/ffmpeg_AV_CODEC_ID_LIBVPX_VP8_fuzzer+0x41d908)
 
 DEDUP_TOKEN: __asan_memcpy--av_packet_ref--avcodec_send_packet
@@ -30,7 +30,7 @@ freed by thread T0 here:
     #5 0xe4675a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #6 0xe51be1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:707:9
     #7 0xe45dfc in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #8 0x70e69fe2783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7fcbbe4be83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_cfree.localalias.1--FDBRealloc--FDBPrepare
 previously allocated by thread T0 here:
@@ -42,7 +42,7 @@ previously allocated by thread T0 here:
     #5 0xe4675a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #6 0xe51be1 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:707:9
     #7 0xe45dfc in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #8 0x70e69fe2783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7fcbbe4be83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--FDBCreate
 SUMMARY: AddressSanitizer: heap-use-after-free /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23 in __asan_memcpy

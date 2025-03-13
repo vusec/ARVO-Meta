@@ -1,0 +1,23 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2567182128
+INFO: Loaded 1 modules   (126317 inline 8-bit counters): 126317 [0xd3ec10, 0xd5d97d), 
+INFO: Loaded 1 PC tables (126317 PCs): 126317 [0x9f0350,0xbdda20), 
+/out/ffmpeg_dem_MOV_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavutil/aes.c:254:35: runtime error: index 32 out of bounds for type 'uint8_t[16]'
+    #0 0x6e98a9 in av_aes_init /src/ffmpeg/libavutil/aes.c:254:35
+    #1 0x59677e in aax_filter /src/ffmpeg/libavformat/mov.c:1117:5
+    #2 0x59677e in mov_read_packet /src/ffmpeg/libavformat/mov.c:8794:9
+    #3 0x50d4ce in ff_read_packet /src/ffmpeg/libavformat/demux.c:570:15
+    #4 0x50f4ba in read_frame_internal /src/ffmpeg/libavformat/demux.c:1248:15
+    #5 0x512e90 in avformat_find_stream_info /src/ffmpeg/libavformat/demux.c:2617:15
+    #6 0x4b9add in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:206:11
+    #7 0x443723 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #8 0x42f3b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #9 0x434bfc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #10 0x45d7f2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #11 0x7170ab0cb082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #12 0x40dbdd in _start (/out/ffmpeg_dem_MOV_fuzzer+0x40dbdd)
+
+DEDUP_TOKEN: av_aes_init--aax_filter--mov_read_packet
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavutil/aes.c:254:35 in 

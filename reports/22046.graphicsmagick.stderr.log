@@ -28,7 +28,7 @@ Unsupported WPG2 unaligned token RST x=26, please report!
 
 Unsupported WPG2 unaligned token RST x=26, please report!
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x621000011a4c at pc 0x000000600725 bp 0x7ffe5fb507d0 sp 0x7ffe5fb507c8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x621000011a4c at pc 0x000000600725 bp 0x7ffc80ef2150 sp 0x7ffc80ef2148
 WRITE of size 2 at 0x621000011a4c thread T0
 SCARINESS: 43 (2-byte-write-heap-use-after-free)
     #0 0x600724 in ImportGrayQuantumType /src/graphicsmagick/magick/import.c:876:31
@@ -42,7 +42,7 @@ SCARINESS: 43 (2-byte-write-heap-use-after-free)
     #8 0x4ca739 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #9 0x4cbdce in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #10 0x4cbdce in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #11 0x749b3fb9083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x700119f9f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #12 0x41f148 in _start (/out/coder_WPG_fuzzer+0x41f148)
 
 DEDUP_TOKEN: ImportGrayQuantumType--ImportViewPixelArea--InsertRow
@@ -62,7 +62,7 @@ freed by thread T0 here:
     #11 0x4ca739 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #12 0x4cbdce in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #13 0x4cbdce in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #14 0x749b3fb9083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x700119f9f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: free--DestroyImagePixels--DestroyImage
 previously allocated by thread T0 here:
@@ -81,7 +81,7 @@ previously allocated by thread T0 here:
     #12 0x4ca739 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #13 0x4cbdce in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #14 0x4cbdce in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #15 0x749b3fb9083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x700119f9f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--MagickMallocAligned--GetCacheInfo
 SUMMARY: AddressSanitizer: heap-use-after-free /src/graphicsmagick/magick/import.c:876:31 in ImportGrayQuantumType

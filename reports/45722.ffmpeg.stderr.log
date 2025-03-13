@@ -1,5 +1,6 @@
+Reading 1038 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60600000001f at pc 0x000000510422 bp 0x7fffbbbeadb0 sp 0x7fffbbbeada8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60600000001f at pc 0x000000510422 bp 0x7ffc3631b350 sp 0x7ffc3631b348
 READ of size 1 at 0x60600000001f thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x510421 in vp9_superframe_filter /src/ffmpeg/libavcodec/vp9_superframe_bsf.c:111:14
@@ -7,7 +8,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #2 0x4fc4df in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_bsf_fuzzer.c:153:16
     #3 0xb12ef5 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #4 0xb12d65 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #5 0x741b6f2b0082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #5 0x7fbf1038e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #6 0x44160d in _start (/out/ffmpeg_BSF_VP9_SUPERFRAME_fuzzer+0x44160d)
 
 DEDUP_TOKEN: vp9_superframe_filter--av_bsf_receive_packet--LLVMFuzzerTestOneInput
@@ -37,7 +38,7 @@ Shadow bytes around the buggy address:
   0x0c0c7fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -54,4 +55,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

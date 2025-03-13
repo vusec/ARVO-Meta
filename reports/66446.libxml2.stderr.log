@@ -2,7 +2,7 @@ Running LLVMFuzzerInitialize ...
 continue...
 Reading 109 bytes from /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x604000000658 at pc 0x0000005cc4c2 bp 0x7fff0fd96c70 sp 0x7fff0fd96c68
+==8==ERROR: AddressSanitizer: heap-use-after-free on address 0x604000000658 at pc 0x0000005cc4c2 bp 0x7fff58585f30 sp 0x7fff58585f28
 READ of size 8 at 0x604000000658 thread T0
 SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #0 0x5cc4c1 in xmlRemoveID /src/libxml2/valid.c:2745:45
@@ -21,7 +21,7 @@ SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #13 0x4df9ad in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:255:7
     #14 0x4df7b8 in LLVMFuzzerRunDriver /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
     #15 0x4df378 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:300:10
-    #16 0x7373ba0ea082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #16 0x74ab1277f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #17 0x41e59d in _start (/out/xml+0x41e59d)
 
 DEDUP_TOKEN: xmlRemoveID--xmlFreeProp--xmlFreePropList
@@ -103,4 +103,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==7==ABORTING
+==8==ABORTING

@@ -1,0 +1,70 @@
+Unable to find image 'n132/arvo:22977-vul' locally
+22977-vul: Pulling from n132/arvo
+e92ed755c008: Already exists
+b9fd7cb1ff8f: Already exists
+ee690f2d57a1: Already exists
+53e3366ec435: Already exists
+b5902f6a3f5f: Already exists
+2d3909b316da: Already exists
+252e11a2f76b: Already exists
+48a6b038a469: Already exists
+01aca64c8b44: Already exists
+645260e3360d: Already exists
+3cf3960cc3e3: Already exists
+540f88eea312: Already exists
+471aff0b08de: Already exists
+2d169faf98bf: Already exists
+8c62232a1400: Already exists
+491ce6003727: Already exists
+6f4c28dbe9c8: Already exists
+5f2c1fc1c161: Already exists
+8518bee5487a: Already exists
+196e0622ea62: Already exists
+908c54d02bdc: Already exists
+c82a7af29007: Already exists
+7077d9cf21c7: Already exists
+3c6fcd1d52a9: Pulling fs layer
+67dff8d2bd2d: Pulling fs layer
+024ba656aba1: Pulling fs layer
+42828283a83f: Pulling fs layer
+98285ccaf249: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+145cc990d9bc: Pulling fs layer
+05da6e49801b: Pulling fs layer
+42828283a83f: Waiting
+73af27b01283: Pulling fs layer
+024ba656aba1: Waiting
+145cc990d9bc: Waiting
+98285ccaf249: Waiting
+05da6e49801b: Waiting
+4f4fb700ef54: Waiting
+73af27b01283: Waiting
+67dff8d2bd2d: Verifying Checksum
+67dff8d2bd2d: Download complete
+024ba656aba1: Verifying Checksum
+024ba656aba1: Download complete
+42828283a83f: Verifying Checksum
+42828283a83f: Download complete
+3c6fcd1d52a9: Verifying Checksum
+3c6fcd1d52a9: Download complete
+98285ccaf249: Verifying Checksum
+98285ccaf249: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+145cc990d9bc: Verifying Checksum
+145cc990d9bc: Download complete
+3c6fcd1d52a9: Pull complete
+05da6e49801b: Verifying Checksum
+05da6e49801b: Download complete
+67dff8d2bd2d: Pull complete
+024ba656aba1: Pull complete
+42828283a83f: Pull complete
+73af27b01283: Verifying Checksum
+73af27b01283: Download complete
+98285ccaf249: Pull complete
+4f4fb700ef54: Pull complete
+145cc990d9bc: Pull complete
+05da6e49801b: Pull complete
+73af27b01283: Pull complete
+Digest: sha256:56bd8c8672453efbb2fa1daccfcf3facc83f7a965c5d451370d98b0874ade415
+Status: Downloaded newer image for n132/arvo:22977-vul

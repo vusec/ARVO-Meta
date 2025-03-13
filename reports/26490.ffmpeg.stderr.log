@@ -8,8 +8,9 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/ffmpeg_dem_VIVIDAS_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 15071 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000001c0 at pc 0x0000007016a3 bp 0x7ffd2c8a6590 sp 0x7ffd2c8a6588
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000001c0 at pc 0x0000007016a3 bp 0x7ffcfac06f70 sp 0x7ffcfac06f68
 READ of size 4 at 0x6090000001c0 thread T0
 SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #0 0x7016a2 in viv_read_packet /src/ffmpeg/libavformat/vividas.c:673:51
@@ -19,7 +20,7 @@ SCARINESS: 17 (4-byte-read-heap-buffer-overflow)
     #4 0x4ce4be in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:184:11
     #5 0x846bde in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #6 0x846bde in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #7 0x7d83e8bab83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x70c9c4b4783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41f258 in _start (/out/ffmpeg_dem_VIVIDAS_fuzzer+0x41f258)
 
 DEDUP_TOKEN: viv_read_packet--ff_read_packet--read_frame_internal
@@ -36,7 +37,7 @@ allocated by thread T0 here:
     #8 0x4ce496 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:176:11
     #9 0x846bde in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #10 0x846bde in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #11 0x7d83e8bab83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x70c9c4b4783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_malloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavformat/vividas.c:673:51 in viv_read_packet
@@ -54,7 +55,7 @@ Shadow bytes around the buggy address:
   0x0c127fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -72,4 +73,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

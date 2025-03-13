@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3297225694
-INFO: Loaded 1 modules   (52506 inline 8-bit counters): 52506 [0x874d4c0, 0x875a1da),
-INFO: Loaded 1 PC tables (52506 PCs): 52506 [0x863db3c,0x86a440c),
+INFO: Seed: 4282588654
+INFO: Loaded 1 modules   (52506 inline 8-bit counters): 52506 [0x874d4c0, 0x875a1da), 
+INFO: Loaded 1 PC tables (52506 PCs): 52506 [0x863db3c,0x86a440c), 
 /out/html: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x085e322e at pc 0x08190768 bp 0xffe91868 sp 0xffe91450
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x085e322e at pc 0x08190768 bp 0xff88cb28 sp 0xff88c710
 READ of size 1 at 0x085e322e thread T0
 SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #0 0x8190767 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -20,7 +20,7 @@ SCARINESS: 12 (1-byte-read-global-buffer-overflow)
     #9 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0xf37eced4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #12 0xf3081ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #13 0x8077a55 in _start (/out/html+0x8077a55)
 
 DEDUP_TOKEN: __asan_memcpy--xmlStrndup--htmlParseSystemLiteral
@@ -45,7 +45,7 @@ Shadow bytes around the buggy address:
   0x210bc690: 00 00 04 f9 f9 f9 f9 f9 00 00 00 00 07 f9 f9 f9
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -62,4 +62,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

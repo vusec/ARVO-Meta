@@ -8,9 +8,10 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/ffmpeg_AV_CODEC_ID_CFHD_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 33 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x729401c017c0 at pc 0x0000004de35a bp 0x7ffc367eb140 sp 0x7ffc367eb138
-READ of size 2 at 0x729401c017c0 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7942a52017c0 at pc 0x0000004de35a bp 0x7ffe0fd34fa0 sp 0x7ffe0fd34f98
+READ of size 2 at 0x7942a52017c0 thread T0
 SCARINESS: 24 (2-byte-read-heap-buffer-overflow-far-from-bounds)
     #0 0x4de359 in filter /src/ffmpeg/libavcodec/cfhd.c:207:61
     #1 0x4dd0d8 in vert_filter /src/ffmpeg/libavcodec/cfhd.c:252:5
@@ -24,11 +25,11 @@ SCARINESS: 24 (2-byte-read-heap-buffer-overflow-far-from-bounds)
     #9 0x4ce952 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:335:23
     #10 0x983b4e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #11 0x983b4e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #12 0x72940535683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #12 0x7942a891083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #13 0x41ef78 in _start (/out/ffmpeg_AV_CODEC_ID_CFHD_fuzzer+0x41ef78)
 
 DEDUP_TOKEN: filter--vert_filter--cfhd_decode
-0x729401c017c0 is located 64 bytes to the left of 5263360-byte region [0x729401c01800,0x729402106800)
+0x7942a52017c0 is located 64 bytes to the left of 5263360-byte region [0x7942a5201800,0x7942a5706800)
 allocated by thread T0 here:
     #0 0x49af17 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:226:3
     #1 0x926864 in av_malloc /src/ffmpeg/libavutil/mem.c:86:9
@@ -45,25 +46,25 @@ allocated by thread T0 here:
     #12 0x4ce952 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:335:23
     #13 0x983b4e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:217:5
     #14 0x983b4e in main /src/libfuzzer/afl/afl_driver.cpp:254:12
-    #15 0x72940535683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x7942a891083f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_mallocz
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/cfhd.c:207:61 in filter
 Shadow bytes around the buggy address:
-  0x0e53003782a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e53003782b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e53003782c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e53003782d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0e53003782e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x0e53003782f0: fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa
-  0x0e5300378300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e5300378310: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e5300378320: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e5300378330: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0e5300378340: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f28d4a382a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f28d4a382b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f28d4a382c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f28d4a382d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f28d4a382e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0f28d4a382f0: fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa
+  0x0f28d4a38300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f28d4a38310: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f28d4a38320: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f28d4a38330: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f28d4a38340: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -81,4 +82,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

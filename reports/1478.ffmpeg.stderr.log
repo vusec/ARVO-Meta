@@ -1,9 +1,9 @@
-INFO: Seed: 3266210977
-INFO: Loaded 1 modules (69659 guards): [0xe49190, 0xe8d1fc),
+INFO: Seed: 3942117366
+INFO: Loaded 1 modules (69659 guards): [0xe49190, 0xe8d1fc), 
 /out/ffmpeg_AV_CODEC_ID_SCPR_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==14==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63100002550c at pc 0x00000057bfa9 bp 0x7ffc6e1842b0 sp 0x7ffc6e1842a8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63100002550c at pc 0x00000057bfa9 bp 0x7ffe488aeab0 sp 0x7ffe488aeaa8
 WRITE of size 4 at 0x63100002550c thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x57bfa8 in decompress_i /src/ffmpeg/libavcodec/scpr.c:334:35
@@ -19,7 +19,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #10 0x8b9ad6 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #11 0x8c4f76 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #12 0x8b90f8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #13 0x7c727acb783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x746b4eaa883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #14 0x41d658 in _start (/out/ffmpeg_AV_CODEC_ID_SCPR_fuzzer+0x41d658)
 
 DEDUP_TOKEN: decompress_i--decode_frame--decode_simple_internal
@@ -48,7 +48,7 @@ allocated by thread T0 here:
     #20 0x8b9ad6 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:268:6
     #21 0x8c4f76 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:682:9
     #22 0x8b90f8 in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #23 0x7c727acb783f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #23 0x746b4eaa883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: __interceptor_posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/scpr.c:334:35 in decompress_i
@@ -66,7 +66,7 @@ Shadow bytes around the buggy address:
   0x0c627fffcaf0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -83,4 +83,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==14==ABORTING
+==7==ABORTING

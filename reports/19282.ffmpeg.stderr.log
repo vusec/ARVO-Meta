@@ -1,0 +1,23 @@
+INFO: Seed: 377676917
+INFO: Loaded 1 modules   (69220 inline 8-bit counters): 69220 [0xca1570, 0xcb23d4), 
+INFO: Loaded 1 PC tables (69220 PCs): 69220 [0x86ee88,0x97d4c8), 
+/out/ffmpeg_BSF_AV1_FRAME_MERGE_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/cbs_av1_syntax_template.c:1201:13: runtime error: index 24 out of bounds for type 'uint8_t [24]'
+    #0 0x4cb828 in cbs_av1_read_film_grain_params /src/ffmpeg/libavcodec/cbs_av1_syntax_template.c:1201:13
+    #1 0x4c5e9d in cbs_av1_read_uncompressed_header /src/ffmpeg/libavcodec/cbs_av1_syntax_template.c:1534:5
+    #2 0x4c1c24 in cbs_av1_read_frame_header_obu /src/ffmpeg/libavcodec/cbs_av1_syntax_template.c:1612:9
+    #3 0x4c23e7 in cbs_av1_read_frame_obu /src/ffmpeg/libavcodec/cbs_av1_syntax_template.c:1700:5
+    #4 0x4befc4 in cbs_av1_read_unit /src/ffmpeg/libavcodec/cbs_av1.c:995:19
+    #5 0x4bb087 in cbs_read_fragment_content /src/ffmpeg/libavcodec/cbs.c:188:15
+    #6 0x4b56da in av1_frame_merge_filter /src/ffmpeg/libavcodec/av1_frame_merge_bsf.c:57:11
+    #7 0x4b528e in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_bsf_fuzzer.c:135:19
+    #8 0x443ed1 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:556:15
+    #9 0x42e9f1 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
+    #10 0x4346ae in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
+    #11 0x45e5d2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #12 0x7a0322f8383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #13 0x407e68 in _start (/out/ffmpeg_BSF_AV1_FRAME_MERGE_fuzzer+0x407e68)
+
+DEDUP_TOKEN: cbs_av1_read_film_grain_params--cbs_av1_read_uncompressed_header--cbs_av1_read_frame_header_obu
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/cbs_av1_syntax_template.c:1201:13 in 

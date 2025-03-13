@@ -1,5 +1,6 @@
+Reading 247 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000001c0 at pc 0x0000006c8b83 bp 0x7ffd3b486690 sp 0x7ffd3b486688
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6090000001c0 at pc 0x0000006c8b83 bp 0x7ffc61b88570 sp 0x7ffc61b88568
 WRITE of size 4 at 0x6090000001c0 thread T0
 SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #0 0x6c8b82 in mov_read_iloc /src/ffmpeg/libavformat/mov.c:7521:28
@@ -11,7 +12,7 @@ SCARINESS: 36 (4-byte-write-heap-buffer-overflow)
     #6 0x505444 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dem_fuzzer.c:201:11
     #7 0x13a77b5 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:191:7
     #8 0x13a7625 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c
-    #9 0x704b6e2e9082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #9 0x7bcf5e095082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #10 0x44b4cd in _start (/out/ffmpeg_IO_DEMUXER_fuzzer+0x44b4cd)
 
 DEDUP_TOKEN: mov_read_iloc--mov_read_default--mov_read_meta
@@ -46,7 +47,7 @@ Shadow bytes around the buggy address:
   0x0c127fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -63,4 +64,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

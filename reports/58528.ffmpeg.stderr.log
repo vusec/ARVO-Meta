@@ -1,0 +1,25 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3043687122
+INFO: Loaded 1 modules   (109611 inline 8-bit counters): 109611 [0xd5e2f8, 0xd78f23), 
+INFO: Loaded 1 PC tables (109611 PCs): 109611 [0xa35b18,0xbe1dc8), 
+/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+libavcodec/hevc_refs.c:354:17: runtime error: index 16 out of bounds for type 'int[16]'
+    #0 0x732bdb in ff_hevc_slice_rpl /src/ffmpeg/libavcodec/hevc_refs.c:354:57
+    #1 0x4ea2da in decode_nal_unit /src/ffmpeg/libavcodec/hevcdec.c:3113:19
+    #2 0x4e6db6 in decode_nal_units /src/ffmpeg/libavcodec/hevcdec.c:3249:15
+    #3 0x4e6db6 in hevc_decode_frame /src/ffmpeg/libavcodec/hevcdec.c:3391:14
+    #4 0x4dc175 in decode_simple_internal /src/ffmpeg/libavcodec/decode.c:287:15
+    #5 0x4dc175 in decode_simple_receive_frame /src/ffmpeg/libavcodec/decode.c:540:15
+    #6 0x4dc175 in decode_receive_frame_internal /src/ffmpeg/libavcodec/decode.c:560:15
+    #7 0x4dbdfa in avcodec_send_packet /src/ffmpeg/libavcodec/decode.c:635:15
+    #8 0x4d233b in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:513:25
+    #9 0x436b23 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #10 0x422282 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x427b2c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #12 0x451062 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x7b384e0dc082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #14 0x41844d in _start (/out/ffmpeg_AV_CODEC_ID_HEVC_fuzzer+0x41844d)
+
+DEDUP_TOKEN: ff_hevc_slice_rpl--decode_nal_unit--decode_nal_units
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior libavcodec/hevc_refs.c:354:17 in 

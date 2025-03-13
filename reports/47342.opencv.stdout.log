@@ -1,1 +1,75 @@
-Reading 1218 bytes from /tmp/poc
+Unable to find image 'n132/arvo:47342-vul' locally
+47342-vul: Pulling from n132/arvo
+8e097b52bfb8: Already exists
+a613a9b4553c: Already exists
+acc000f01536: Already exists
+73eef93b7466: Already exists
+4b084ef3f647: Already exists
+94ac3e92b23f: Already exists
+bb66073a91ec: Already exists
+79f39a787c20: Already exists
+0b285ba8efc1: Already exists
+61776ed4cf76: Already exists
+8a5158fec2df: Already exists
+62f8548eeab6: Already exists
+dde53b7a84f6: Already exists
+931e33719f2b: Already exists
+50a475cca2b2: Already exists
+e4ea7d232625: Already exists
+b015e1dcb48c: Already exists
+0da2f8c1993e: Already exists
+9d4843de2e76: Already exists
+70a8444e98ff: Already exists
+bfd1ef55b08f: Already exists
+e9b1157829ff: Already exists
+6aadaed0ebea: Already exists
+619947e4b91e: Already exists
+45c5b85ec527: Pulling fs layer
+3617f3b2258a: Pulling fs layer
+ec1181203723: Pulling fs layer
+6e694093ba8b: Pulling fs layer
+a4dc1349633b: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+4e033ccd103f: Pulling fs layer
+633b079baa06: Pulling fs layer
+19a4db43f0e0: Pulling fs layer
+6e694093ba8b: Waiting
+b26e107b9812: Pulling fs layer
+a4dc1349633b: Waiting
+4f4fb700ef54: Waiting
+4e033ccd103f: Waiting
+633b079baa06: Waiting
+b26e107b9812: Waiting
+19a4db43f0e0: Waiting
+ec1181203723: Waiting
+3617f3b2258a: Verifying Checksum
+3617f3b2258a: Download complete
+ec1181203723: Verifying Checksum
+ec1181203723: Download complete
+45c5b85ec527: Verifying Checksum
+45c5b85ec527: Download complete
+45c5b85ec527: Pull complete
+3617f3b2258a: Pull complete
+ec1181203723: Pull complete
+a4dc1349633b: Verifying Checksum
+a4dc1349633b: Download complete
+4f4fb700ef54: Download complete
+4e033ccd103f: Verifying Checksum
+4e033ccd103f: Download complete
+633b079baa06: Verifying Checksum
+633b079baa06: Download complete
+19a4db43f0e0: Verifying Checksum
+19a4db43f0e0: Download complete
+b26e107b9812: Verifying Checksum
+b26e107b9812: Download complete
+6e694093ba8b: Verifying Checksum
+6e694093ba8b: Download complete
+6e694093ba8b: Pull complete
+a4dc1349633b: Pull complete
+4f4fb700ef54: Pull complete
+4e033ccd103f: Pull complete
+633b079baa06: Pull complete
+19a4db43f0e0: Pull complete
+b26e107b9812: Pull complete
+Digest: sha256:46d99e5d16231b89be8859b342c18cd05056fd663ba05995d10de4f90c53def6
+Status: Downloaded newer image for n132/arvo:47342-vul

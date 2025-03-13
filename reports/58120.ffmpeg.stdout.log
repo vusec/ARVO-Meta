@@ -1,0 +1,59 @@
+Unable to find image 'n132/arvo:58120-vul' locally
+58120-vul: Pulling from n132/arvo
+7608715873ec: Already exists
+ae415db10c28: Already exists
+3df13df25856: Already exists
+2e457be5f03c: Already exists
+4e1301d90f76: Already exists
+cd4786088128: Already exists
+9a946082a692: Already exists
+2a318a3aa03b: Already exists
+1de558139cc2: Already exists
+83a20d8eda58: Already exists
+2e3807511e7e: Already exists
+c9e20853cafe: Already exists
+ab59ea540597: Already exists
+6f45af67343c: Already exists
+11000a987582: Already exists
+40682065444e: Already exists
+398f064d2c69: Already exists
+953a5601ef6d: Already exists
+f2dbd038a2fb: Already exists
+bca17f8a8a29: Already exists
+c720cd58b82f: Already exists
+efdf886b6476: Already exists
+53024431fae2: Already exists
+4497c79db972: Already exists
+c13dd88defb2: Already exists
+2a3b0439d56f: Already exists
+e57864ae8143: Already exists
+a4a120846a3f: Already exists
+f72d40d0b3e6: Already exists
+c1ed19c425f5: Already exists
+442b8a8d8d83: Already exists
+466a5b414e4b: Already exists
+08dbbefdd961: Already exists
+9a97bd9dbea7: Already exists
+9173691f07ef: Already exists
+1b44b9ba3d2f: Already exists
+dae7d51066af: Already exists
+f16e77c2c942: Already exists
+5d5cbd5d10ed: Already exists
+9d8d926eb065: Already exists
+640db1d82985: Already exists
+8d9e12910cd5: Already exists
+57da1485db6c: Already exists
+6b2a05bb37bb: Already exists
+3eac9985110e: Already exists
+73b1f71a9ae9: Already exists
+f53b0f9a9655: Already exists
+e87da5cbee14: Already exists
+bfcf519908f7: Pulling fs layer
+51d3bd53daa7: Pulling fs layer
+51d3bd53daa7: Download complete
+bfcf519908f7: Verifying Checksum
+bfcf519908f7: Download complete
+bfcf519908f7: Pull complete
+51d3bd53daa7: Pull complete
+Digest: sha256:fd83aa7489a60c87c4f3448ca2755ff68cd1d264cee247d45617850f231a4889
+Status: Downloaded newer image for n132/arvo:58120-vul

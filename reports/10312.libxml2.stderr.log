@@ -1,10 +1,10 @@
-INFO: Seed: 2713206066
+INFO: Seed: 4251809687
 INFO: Loaded 1 modules   (56276 inline 8-bit counters): 56276 [0xe948a8, 0xea247c), 
 INFO: Loaded 1 PC tables (56276 PCs): 56276 [0xabb420,0xb97160), 
 /out/xmlsec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x625000002992 at pc 0x0000004eb25d bp 0x7ffd43337130 sp 0x7ffd433368e0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x625000002992 at pc 0x0000004eb25d bp 0x7fff1313f650 sp 0x7fff1313ee00
 READ of size 1 at 0x625000002992 thread T0
 SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #0 0x4eb25c in __asan_memcpy /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23
@@ -313,7 +313,7 @@ previously allocated by thread T0 here:
     #13 0x56f38a in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #14 0x57ac03 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #15 0x56ea0c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #16 0x75562c63583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #16 0x79d9f4ca883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--xmlBufCreateSize--xmlAllocParserInputBuffer
 SUMMARY: AddressSanitizer: heap-use-after-free /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23 in __asan_memcpy

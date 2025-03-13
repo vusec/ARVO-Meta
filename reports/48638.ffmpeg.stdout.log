@@ -1,0 +1,129 @@
+Unable to find image 'n132/arvo:48638-vul' locally
+48638-vul: Pulling from n132/arvo
+d7bfe07ed847: Already exists
+9a864283a83c: Already exists
+254bb3ac1e9f: Already exists
+f478a00d2c50: Already exists
+1aea64eeef98: Already exists
+cb3a2597e830: Already exists
+02769aaca88d: Already exists
+049337e518d6: Already exists
+bee9e477f39a: Already exists
+26846b29d9a4: Already exists
+e89f2d9c4737: Already exists
+77689a50ce78: Already exists
+4b5fadb548f7: Already exists
+fd56305bed3b: Already exists
+170844180fac: Already exists
+cdd65a4f0333: Already exists
+dfdcea9fe833: Already exists
+e9da6a47ea6e: Already exists
+a6072333bcab: Already exists
+6c1063ed64f0: Already exists
+6727981b7610: Already exists
+4a81d79890f3: Already exists
+701831f550d7: Already exists
+80e2b714e160: Already exists
+a0a8933ee3dd: Pulling fs layer
+517abb4327fd: Pulling fs layer
+4696738eba23: Pulling fs layer
+6feb0fd79dd7: Pulling fs layer
+4c576008c592: Pulling fs layer
+dc8e83ecee42: Pulling fs layer
+6c2263b3f9e4: Pulling fs layer
+d7cb4c1033cd: Pulling fs layer
+09d79209dd12: Pulling fs layer
+71cc6b0a8a6e: Pulling fs layer
+f0c34dfed62e: Pulling fs layer
+03690edf16db: Pulling fs layer
+36f47cfaaacd: Pulling fs layer
+adb9ac665fd8: Pulling fs layer
+4c576008c592: Waiting
+dc8e83ecee42: Waiting
+9fb9e82fb345: Pulling fs layer
+6feb0fd79dd7: Waiting
+9ba02903b2b1: Pulling fs layer
+d7cb4c1033cd: Waiting
+71cc6b0a8a6e: Waiting
+f0c34dfed62e: Waiting
+ccacb67d0195: Pulling fs layer
+03690edf16db: Waiting
+36f47cfaaacd: Waiting
+9fb9e82fb345: Waiting
+a50e8ab8af84: Pulling fs layer
+adb9ac665fd8: Waiting
+81a759180106: Pulling fs layer
+09d79209dd12: Waiting
+ccacb67d0195: Waiting
+787da33901bc: Pulling fs layer
+a50e8ab8af84: Waiting
+cc0921116cd2: Pulling fs layer
+42133743b269: Pulling fs layer
+787da33901bc: Waiting
+cc0921116cd2: Waiting
+42133743b269: Waiting
+4696738eba23: Verifying Checksum
+4696738eba23: Download complete
+6feb0fd79dd7: Verifying Checksum
+6feb0fd79dd7: Download complete
+4c576008c592: Verifying Checksum
+4c576008c592: Download complete
+dc8e83ecee42: Verifying Checksum
+dc8e83ecee42: Download complete
+6c2263b3f9e4: Download complete
+d7cb4c1033cd: Verifying Checksum
+d7cb4c1033cd: Download complete
+a0a8933ee3dd: Verifying Checksum
+a0a8933ee3dd: Download complete
+71cc6b0a8a6e: Download complete
+09d79209dd12: Verifying Checksum
+09d79209dd12: Download complete
+f0c34dfed62e: Verifying Checksum
+f0c34dfed62e: Download complete
+517abb4327fd: Verifying Checksum
+517abb4327fd: Download complete
+36f47cfaaacd: Verifying Checksum
+36f47cfaaacd: Download complete
+a0a8933ee3dd: Pull complete
+adb9ac665fd8: Download complete
+9ba02903b2b1: Verifying Checksum
+9ba02903b2b1: Download complete
+9fb9e82fb345: Verifying Checksum
+9fb9e82fb345: Download complete
+517abb4327fd: Pull complete
+ccacb67d0195: Verifying Checksum
+ccacb67d0195: Download complete
+4696738eba23: Pull complete
+6feb0fd79dd7: Pull complete
+4c576008c592: Pull complete
+a50e8ab8af84: Verifying Checksum
+a50e8ab8af84: Download complete
+dc8e83ecee42: Pull complete
+6c2263b3f9e4: Pull complete
+d7cb4c1033cd: Pull complete
+09d79209dd12: Pull complete
+81a759180106: Verifying Checksum
+81a759180106: Download complete
+71cc6b0a8a6e: Pull complete
+03690edf16db: Verifying Checksum
+03690edf16db: Download complete
+f0c34dfed62e: Pull complete
+787da33901bc: Verifying Checksum
+787da33901bc: Download complete
+42133743b269: Verifying Checksum
+42133743b269: Download complete
+03690edf16db: Pull complete
+36f47cfaaacd: Pull complete
+adb9ac665fd8: Pull complete
+9fb9e82fb345: Pull complete
+9ba02903b2b1: Pull complete
+ccacb67d0195: Pull complete
+a50e8ab8af84: Pull complete
+81a759180106: Pull complete
+787da33901bc: Pull complete
+cc0921116cd2: Verifying Checksum
+cc0921116cd2: Download complete
+cc0921116cd2: Pull complete
+42133743b269: Pull complete
+Digest: sha256:cd63bfbb4d4514f134d5ddd4fd8ae9f484e953d5e55b56988e60a0ad2916251b
+Status: Downloaded newer image for n132/arvo:48638-vul

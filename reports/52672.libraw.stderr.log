@@ -1,5 +1,6 @@
+Reading 75932 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001b780 at pc 0x000000618e99 bp 0x7ffe3fb1b990 sp 0x7ffe3fb1b988
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x63300001b780 at pc 0x000000618e99 bp 0x7ffe4cf05590 sp 0x7ffe4cf05588
 WRITE of size 2 at 0x63300001b780 thread T0
 SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #0 0x618e98 in LibRaw::kodak_rgb_load_raw() /src/libraw/src/decoders/kodak_decoders.cpp:503:23
@@ -8,7 +9,7 @@ SCARINESS: 33 (2-byte-write-heap-buffer-overflow)
     #3 0x4e1204 in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:72:20
     #4 0x4e458a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #5 0x4e435c in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #6 0x7f3f075ae082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #6 0x75250f213082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #7 0x41e62d in _start (/out/libraw_nef_fuzzer+0x41e62d)
 
 DEDUP_TOKEN: LibRaw::kodak_rgb_load_raw()--LibRaw::kodak_thumb_loader()--LibRaw::unpack_thumb()
@@ -38,7 +39,7 @@ Shadow bytes around the buggy address:
   0x0c667fffb740: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -55,4 +56,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

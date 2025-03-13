@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3295185931
-INFO: Loaded 1 modules   (60992 inline 8-bit counters): 60992 [0x8b41ea0, 0x8b50ce0),
-INFO: Loaded 1 PC tables (60992 PCs): 60992 [0x89f1e70,0x8a69070),
+INFO: Seed: 435677708
+INFO: Loaded 1 modules   (60992 inline 8-bit counters): 60992 [0x8b41ea0, 0x8b50ce0), 
+INFO: Loaded 1 PC tables (60992 PCs): 60992 [0x89f1e70,0x8a69070), 
 /out/ffmpeg_AV_CODEC_ID_VC1_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xf0b02f80 at pc 0x08290a37 bp 0xff9b2798 sp 0xff9b2790
-READ of size 1 at 0xf0b02f80 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0xe6a02f80 at pc 0x08290a37 bp 0xfffaf778 sp 0xfffaf770
+READ of size 1 at 0xe6a02f80 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x8290a36 in put_no_rnd_vc1_chroma_mc8_c /src/ffmpeg/libavcodec/vc1dsp.c:809:18
     #1 0x8625571 in ff_vc1_mc_1mv /src/ffmpeg/libavcodec/vc1_mc.c
@@ -23,11 +23,11 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #12 0x80a098e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #13 0x80a6590 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #14 0x80d0177 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0xf6b39ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #15 0xec95ded4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #16 0x8097ad5 in _start (/out/ffmpeg_AV_CODEC_ID_VC1_fuzzer+0x8097ad5)
 
 DEDUP_TOKEN: put_no_rnd_vc1_chroma_mc8_c--ff_vc1_mc_1mv--vc1_decode_p_mb
-0xf0b02f80 is located 0 bytes to the right of 1280-byte region [0xf0b02a80,0xf0b02f80)
+0xe6a02f80 is located 0 bytes to the right of 1280-byte region [0xe6a02a80,0xe6a02f80)
 allocated by thread T0 here:
     #0 0x81b20da in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:145:3
     #1 0x8833ecf in av_malloc /src/ffmpeg/libavutil/mem.c:105:9
@@ -50,25 +50,25 @@ allocated by thread T0 here:
     #18 0x80a098e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #19 0x80a6590 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #20 0x80d0177 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #21 0xf6b39ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #21 0xec95ded4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: posix_memalign--av_malloc--av_buffer_alloc
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/ffmpeg/libavcodec/vc1dsp.c:809:18 in put_no_rnd_vc1_chroma_mc8_c
 Shadow bytes around the buggy address:
-  0x3e1605a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e1605b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e1605c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e1605d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e1605e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x3e1605f0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e160600: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3e160610: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e160620: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e160630: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x3e160640: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd405a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd405b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd405c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd405d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd405e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x3cd405f0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3cd40600: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3cd40610: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd40620: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd40630: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x3cd40640: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -85,4 +85,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

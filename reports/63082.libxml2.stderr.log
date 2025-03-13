@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/xslt
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000c94 at pc 0x0000005c4bb7 bp 0x7ffd067fde30 sp 0x7ffd067fde28
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000c94 at pc 0x0000005c4bb7 bp 0x7ffd24310150 sp 0x7ffd24310148
 WRITE of size 1 at 0x602000000c94 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x5c4bb6 in xmlParseCommentComplex /src/libxml2/parser.c:4981:14
@@ -13,7 +13,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #6 0x4de9ee in xsltFuzzXslt /src/libxslt/tests/fuzz/fuzz.c:284:11
     #7 0x4dd0b1 in LLVMFuzzerTestOneInput /src/libxslt/tests/fuzz/xslt.c:18:23
     #8 0x4e02fb in main (/out/xslt+0x4e02fb)
-    #9 0x7b655086d082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #9 0x75a272d67082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #10 0x41e7fd in _start (/out/xslt+0x41e7fd)
 
 DEDUP_TOKEN: xmlParseCommentComplex--xmlParseComment--xmlParseMisc
@@ -47,7 +47,7 @@ Shadow bytes around the buggy address:
   0x0c047fff81e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -64,4 +64,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

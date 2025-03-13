@@ -1,5 +1,6 @@
+Reading 86 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62500000a0ff at pc 0x000000a8c01e bp 0x7ffc8a140270 sp 0x7ffc8a140268
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62500000a0ff at pc 0x000000a8c01e bp 0x7ffce747d890 sp 0x7ffce747d888
 READ of size 1 at 0x62500000a0ff thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0xa8c01d in CheckFName /src/graphicsmagick/coders/topol.c:340:8
@@ -10,7 +11,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #5 0x4de715 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:22:15
     #6 0x4dfb1a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #7 0x4df8ec in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #8 0x747bd1de7082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #8 0x7757b5937082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #9 0x41f59d in _start (/out/coder_TOPOL_fuzzer+0x41f59d)
 
 DEDUP_TOKEN: CheckFName--ReadTopoLImage--ReadImage
@@ -42,7 +43,7 @@ Shadow bytes around the buggy address:
   0x0c4a7fff9460: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -59,4 +60,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

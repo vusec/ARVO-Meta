@@ -8,8 +8,9 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/coder_MVG_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 91 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000000178 at pc 0x0000006d73d0 bp 0x7ffebe625c50 sp 0x7ffebe625c48
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000000178 at pc 0x0000006d73d0 bp 0x7ffcd0d146f0 sp 0x7ffcd0d146e8
 READ of size 8 at 0x603000000178 thread T0
 SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #0 0x6d73cf in DrawDashPolygon /src/graphicsmagick/magick/render.c:1948:11
@@ -22,7 +23,7 @@ SCARINESS: 23 (8-byte-read-heap-buffer-overflow)
     #7 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #8 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #9 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #10 0x72888636183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x74f9c14d583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #11 0x41ddc8 in _start (/out/coder_MVG_fuzzer+0x41ddc8)
 
 DEDUP_TOKEN: DrawDashPolygon--DrawPrimitive--DrawImage
@@ -38,7 +39,7 @@ allocated by thread T0 here:
     #7 0x52ea83 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #8 0x52f3bf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:301:5
     #9 0x52f96e in main /src/libfuzzer/afl/afl_driver.cpp:339:12
-    #10 0x72888636183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #10 0x74f9c14d583f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--CloneDrawInfo--DrawImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/magick/render.c:1948:11 in DrawDashPolygon
@@ -56,7 +57,7 @@ Shadow bytes around the buggy address:
   0x0c067fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -74,4 +75,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

@@ -1,361 +1,361 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3301510682
-INFO: Loaded 1 modules   (413987 inline 8-bit counters): 413987 [0x57ec310, 0x5851433),
-INFO: Loaded 1 PC tables (413987 PCs): 413987 [0x5851438,0x5ea2668),
+INFO: Seed: 1464549183
+INFO: Loaded 1 modules   (413987 inline 8-bit counters): 413987 [0x57ec310, 0x5851433), 
+INFO: Loaded 1 PC tables (413987 PCs): 413987 [0x5851438,0x5ea2668), 
 /out/enhance_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
-14:39:08 0:0.032576  0.030u 13 pixel_cache.c/CheckImagePixelLimits/3253/Resource:
+18:42:57 0:0.012042  0.000u 7 pixel_cache.c/CheckImagePixelLimits/3253/Resource:
   Image pixel height limit exceeded (see -limit Height) (268500996 > 2048 "")
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmxwP7Xb" "--" "/tmp/gmw099Aq" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmY2POgO" "--" "/tmp/gmKx5wzb" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmxwP7Xb" "--" "/tmp/gmw099Aq" "-c" "quit".
-14:39:08 0:0.048257  0.050u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmEzKjhe)
-Magick: Postscript delegate failed (/tmp/gmEzKjhe).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmY2POgO" "--" "/tmp/gmKx5wzb" "-c" "quit".
+18:42:57 0:0.021114  0.010u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmiJ3Gfp)
+Magick: Postscript delegate failed (/tmp/gmiJ3Gfp).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm84AwBJ" "--" "/tmp/gmPPyNrA" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm8lFiQk" "--" "/tmp/gmzZC99T" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm84AwBJ" "--" "/tmp/gmPPyNrA" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmEzKjhe).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm8lFiQk" "--" "/tmp/gmzZC99T" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmiJ3Gfp).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmJcGL1V" "--" "/tmp/gmdbtPEW" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmcCBR5N" "--" "/tmp/gmE1mCs2" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmJcGL1V" "--" "/tmp/gmdbtPEW" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmEzKjhe).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmcCBR5N" "--" "/tmp/gmE1mCs2" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmiJ3Gfp).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gmjOOOQI" "--" "/tmp/gmmDmpjE" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gm7PE2PZ" "--" "/tmp/gmnKhzQn" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gmjOOOQI" "--" "/tmp/gmmDmpjE" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gm7PE2PZ" "--" "/tmp/gmnKhzQn" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmqEUa4k" "--" "/tmp/gmkEXXXX" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmhNzpj3" "--" "/tmp/gm32SWp7" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmqEUa4k" "--" "/tmp/gmkEXXXX" "-c" "quit".
-14:39:08 0:0.106968  0.070u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gm1H9gRi)
-Magick: Postscript delegate failed (/tmp/gm1H9gRi).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmhNzpj3" "--" "/tmp/gm32SWp7" "-c" "quit".
+18:42:57 0:0.030807  0.010u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmnEysW2)
+Magick: Postscript delegate failed (/tmp/gmnEysW2).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmnw1HHr" "--" "/tmp/gmcIkxym" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmCtTRIa" "--" "/tmp/gmIgGWgy" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmnw1HHr" "--" "/tmp/gmcIkxym" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gm1H9gRi).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmCtTRIa" "--" "/tmp/gmIgGWgy" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmnEysW2).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmMfmQqt" "--" "/tmp/gmvp65CX" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm4hSQWO" "--" "/tmp/gmWwTz7u" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmMfmQqt" "--" "/tmp/gmvp65CX" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gm1H9gRi).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm4hSQWO" "--" "/tmp/gmWwTz7u" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmnEysW2).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm0yBZta" "--" "/tmp/gm1MUg6v" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmNUvUTd" "--" "/tmp/gmFsmMOX" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm0yBZta" "--" "/tmp/gm1MUg6v" "-c" "quit".
-14:39:08 0:0.148625  0.090u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmKBNO5f)
-Magick: Postscript delegate failed (/tmp/gmKBNO5f).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmNUvUTd" "--" "/tmp/gmFsmMOX" "-c" "quit".
+18:42:57 0:0.038047  0.010u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gm07a3yG)
+Magick: Postscript delegate failed (/tmp/gm07a3yG).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmgzxSTh" "--" "/tmp/gmIg2Xiv" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmlytTN3" "--" "/tmp/gmNbRqXb" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmgzxSTh" "--" "/tmp/gmIg2Xiv" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmKBNO5f).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmlytTN3" "--" "/tmp/gmNbRqXb" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm07a3yG).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm5dD9B4" "--" "/tmp/gmeVDvoV" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmadM3zE" "--" "/tmp/gmu9eMo5" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm5dD9B4" "--" "/tmp/gmeVDvoV" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmKBNO5f).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmadM3zE" "--" "/tmp/gmu9eMo5" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm07a3yG).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmd4xPy4" "--" "/tmp/gm0dRDjC" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmtDnQTX" "--" "/tmp/gmsqbYTw" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmd4xPy4" "--" "/tmp/gm0dRDjC" "-c" "quit".
-14:39:08 0:0.191734  0.110u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gm8pDvqC)
-Magick: Postscript delegate failed (/tmp/gm8pDvqC).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmtDnQTX" "--" "/tmp/gmsqbYTw" "-c" "quit".
+18:42:57 0:0.045731  0.020u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmUc2uSd)
+Magick: Postscript delegate failed (/tmp/gmUc2uSd).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmj3DOFI" "--" "/tmp/gmBot0qh" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmj4NrFb" "--" "/tmp/gmDnwnAE" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmj3DOFI" "--" "/tmp/gmBot0qh" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gm8pDvqC).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmj4NrFb" "--" "/tmp/gmDnwnAE" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmUc2uSd).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmoHGZH6" "--" "/tmp/gmenSvj0" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm5nndFm" "--" "/tmp/gmsR8Zs7" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmoHGZH6" "--" "/tmp/gmenSvj0" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gm8pDvqC).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm5nndFm" "--" "/tmp/gmsR8Zs7" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmUc2uSd).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmIbiJtP" "--" "/tmp/gm3Bsc0E" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm5cRbYW" "--" "/tmp/gm3E6EZr" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmIbiJtP" "--" "/tmp/gm3Bsc0E" "-c" "quit".
-14:39:09 0:0.237691  0.130u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmy3H9aX)
-Magick: Postscript delegate failed (/tmp/gmy3H9aX).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm5cRbYW" "--" "/tmp/gm3E6EZr" "-c" "quit".
+18:42:57 0:0.053124  0.020u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmBMWDeQ)
+Magick: Postscript delegate failed (/tmp/gmBMWDeQ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmWpXgJH" "--" "/tmp/gmFKzTq1" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm2FMhAk" "--" "/tmp/gmLhLKUK" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmWpXgJH" "--" "/tmp/gmFKzTq1" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmy3H9aX).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm2FMhAk" "--" "/tmp/gmLhLKUK" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmBMWDeQ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmNPMEbo" "--" "/tmp/gmfNJrQE" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm7eHPip" "--" "/tmp/gmQNiAbZ" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmNPMEbo" "--" "/tmp/gmfNJrQE" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmy3H9aX).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm7eHPip" "--" "/tmp/gmQNiAbZ" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmBMWDeQ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmCDTaSk" "--" "/tmp/gmSFExcp" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmoeBbiI" "--" "/tmp/gmH0KJ9V" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmCDTaSk" "--" "/tmp/gmSFExcp" "-c" "quit".
-14:39:09 0:0.283569  0.150u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gm4mAykM)
-Magick: Postscript delegate failed (/tmp/gm4mAykM).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmoeBbiI" "--" "/tmp/gmH0KJ9V" "-c" "quit".
+18:42:57 0:0.060787  0.040u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmubM2EP)
+Magick: Postscript delegate failed (/tmp/gmubM2EP).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmgvAUXD" "--" "/tmp/gm1mcUbs" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmz6B1Xv" "--" "/tmp/gmCnFEwD" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmgvAUXD" "--" "/tmp/gm1mcUbs" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gm4mAykM).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmz6B1Xv" "--" "/tmp/gmCnFEwD" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmubM2EP).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmwM3FWk" "--" "/tmp/gmpOZ1Ew" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmnaufZs" "--" "/tmp/gmTrsNyg" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmwM3FWk" "--" "/tmp/gmpOZ1Ew" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gm4mAykM).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmnaufZs" "--" "/tmp/gmTrsNyg" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmubM2EP).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gmHqF6G2" "--" "/tmp/gmgTcb0Q" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gmUE5ivx" "--" "/tmp/gmZJTXQn" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gmHqF6G2" "--" "/tmp/gmgTcb0Q" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-dFirstPage=1" "-dLastPage=1" "-g612x792" "-sOutputFile=/tmp/gmUE5ivx" "--" "/tmp/gmZJTXQn" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm65YaIi" "--" "/tmp/gmdeoKtE" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm6Y6Unf" "--" "/tmp/gmfB3Wh0" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm65YaIi" "--" "/tmp/gmdeoKtE" "-c" "quit".
-14:39:09 0:0.352973  0.190u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmF0u8XO)
-Magick: Postscript delegate failed (/tmp/gmF0u8XO).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm6Y6Unf" "--" "/tmp/gmfB3Wh0" "-c" "quit".
+18:42:57 0:0.070462  0.040u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmhQQhp1)
+Magick: Postscript delegate failed (/tmp/gmhQQhp1).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmkLfRTI" "--" "/tmp/gmCakWJk" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmcAkDBZ" "--" "/tmp/gmSB69vW" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmkLfRTI" "--" "/tmp/gmCakWJk" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmF0u8XO).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmcAkDBZ" "--" "/tmp/gmSB69vW" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmhQQhp1).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmUDC1lz" "--" "/tmp/gmXSFjDR" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmj2VBBj" "--" "/tmp/gmBUZ1PO" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmUDC1lz" "--" "/tmp/gmXSFjDR" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmF0u8XO).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmj2VBBj" "--" "/tmp/gmBUZ1PO" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmhQQhp1).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmWq9QDD" "--" "/tmp/gmLw47hT" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm1eFe5Q" "--" "/tmp/gmWiEZt9" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmWq9QDD" "--" "/tmp/gmLw47hT" "-c" "quit".
-14:39:09 0:0.396146  0.210u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmQi4IiE)
-Magick: Postscript delegate failed (/tmp/gmQi4IiE).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm1eFe5Q" "--" "/tmp/gmWiEZt9" "-c" "quit".
+18:42:57 0:0.077952  0.040u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gm0acUoZ)
+Magick: Postscript delegate failed (/tmp/gm0acUoZ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmMz5bqs" "--" "/tmp/gmihW9uo" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmXuhe7D" "--" "/tmp/gmcLnf0W" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmMz5bqs" "--" "/tmp/gmihW9uo" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmQi4IiE).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmXuhe7D" "--" "/tmp/gmcLnf0W" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm0acUoZ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmsQGJ89" "--" "/tmp/gm0TmFep" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm3fZzrE" "--" "/tmp/gmgqWnHV" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmsQGJ89" "--" "/tmp/gm0TmFep" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmQi4IiE).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm3fZzrE" "--" "/tmp/gmgqWnHV" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm0acUoZ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmFCaWpT" "--" "/tmp/gmdDJ8p6" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm13lvF8" "--" "/tmp/gmp5uVu9" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmFCaWpT" "--" "/tmp/gmdDJ8p6" "-c" "quit".
-14:39:09 0:0.437677  0.220u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmAvWWDe)
-Magick: Postscript delegate failed (/tmp/gmAvWWDe).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gm13lvF8" "--" "/tmp/gmp5uVu9" "-c" "quit".
+18:42:57 0:0.085572  0.050u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmCQtFVs)
+Magick: Postscript delegate failed (/tmp/gmCQtFVs).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmlmhg4B" "--" "/tmp/gmKwu7vO" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmRb9QGj" "--" "/tmp/gmHiDfaB" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmlmhg4B" "--" "/tmp/gmKwu7vO" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmAvWWDe).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmRb9QGj" "--" "/tmp/gmHiDfaB" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmCQtFVs).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmIp6xgU" "--" "/tmp/gmqPmPUD" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmDi2H3l" "--" "/tmp/gmwNHQPB" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmIp6xgU" "--" "/tmp/gmqPmPUD" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmAvWWDe).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmDi2H3l" "--" "/tmp/gmwNHQPB" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmCQtFVs).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmAO6EiK" "--" "/tmp/gmZ0BGv8" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmeKlSfW" "--" "/tmp/gmOEFRHD" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmAO6EiK" "--" "/tmp/gmZ0BGv8" "-c" "quit".
-14:39:09 0:0.486574  0.250u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmZt9LgH)
-Magick: Postscript delegate failed (/tmp/gmZt9LgH).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmeKlSfW" "--" "/tmp/gmOEFRHD" "-c" "quit".
+18:42:57 0:0.093096  0.050u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gmYAuMBi)
+Magick: Postscript delegate failed (/tmp/gmYAuMBi).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmh7cmMJ" "--" "/tmp/gmawM5mo" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm5oHeGD" "--" "/tmp/gmloxFM9" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmh7cmMJ" "--" "/tmp/gmawM5mo" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmZt9LgH).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm5oHeGD" "--" "/tmp/gmloxFM9" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmYAuMBi).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmG8W8yr" "--" "/tmp/gmA2UCVX" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm2smgvl" "--" "/tmp/gmNo7tOg" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmG8W8yr" "--" "/tmp/gmA2UCVX" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmZt9LgH).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm2smgvl" "--" "/tmp/gmNo7tOg" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gmYAuMBi).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmtsKQ25" "--" "/tmp/gmgLDVU7" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmPFcTkc" "--" "/tmp/gmPLmVOS" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmtsKQ25" "--" "/tmp/gmgLDVU7" "-c" "quit".
-14:39:09 0:0.530607  0.280u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmGb5EJG)
-Magick: Postscript delegate failed (/tmp/gmGb5EJG).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmPFcTkc" "--" "/tmp/gmPLmVOS" "-c" "quit".
+18:42:58 0:0.100435  0.050u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gm5wVkFk)
+Magick: Postscript delegate failed (/tmp/gm5wVkFk).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmEkK104" "--" "/tmp/gmyJayZB" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm0dDyU7" "--" "/tmp/gm4Ui6Ds" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmEkK104" "--" "/tmp/gmyJayZB" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmGb5EJG).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gm0dDyU7" "--" "/tmp/gm4Ui6Ds" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm5wVkFk).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmxJpzhd" "--" "/tmp/gmd5vI6x" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmqFo9cB" "--" "/tmp/gmHC9p36" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmxJpzhd" "--" "/tmp/gmd5vI6x" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmGb5EJG).
-14:39:09 0:0.558077  0.290u 13 wpg.c/ExtractPostscript/871/CorruptImage:
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmqFo9cB" "--" "/tmp/gmHC9p36" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm5wVkFk).
+18:42:58 0:0.105008  0.060u 7 wpg.c/ExtractPostscript/871/CorruptImage:
   Unable to read image header ()
-14:39:09 0:0.558264  0.290u 13 sgi.c/ReadSGIImage/346/CorruptImage:
+18:42:58 0:0.105081  0.060u 7 sgi.c/ReadSGIImage/346/CorruptImage:
   Ignored: Unable to read image header ()
-14:39:09 0:0.558387  0.290u 13 sgi.c/ReadSGIImage/346/CorruptImage:
+18:42:58 0:0.105117  0.060u 7 sgi.c/ReadSGIImage/346/CorruptImage:
   Ignored: Unable to read image header ()
-14:39:09 0:0.558479  0.290u 13 sgi.c/ReadSGIImage/346/CorruptImage:
+18:42:58 0:0.105147  0.060u 7 sgi.c/ReadSGIImage/346/CorruptImage:
   Ignored: Unable to read image header ()
-14:39:09 0:0.558501  0.290u 13 wpg.c/ExtractPostscript/871/CorruptImage:
+18:42:58 0:0.105156  0.060u 7 wpg.c/ExtractPostscript/871/CorruptImage:
   Ignored: Unable to read image header ()
-14:39:09 0:0.558647  0.290u 13 rle.c/ReadRLEImage/594/CorruptImage:
+18:42:58 0:0.105219  0.060u 7 rle.c/ReadRLEImage/594/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.558777  0.290u 13 dib.c/ReadDIBImage/804/CorruptImage:
+18:42:58 0:0.105265  0.060u 7 dib.c/ReadDIBImage/804/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.558872  0.290u 13 dib.c/ReadDIBImage/630/CorruptImage:
+18:42:58 0:0.105298  0.060u 7 dib.c/ReadDIBImage/630/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.558956  0.290u 13 rle.c/ReadRLEImage/594/CorruptImage:
+18:42:58 0:0.105327  0.060u 7 rle.c/ReadRLEImage/594/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.559034  0.290u 13 dib.c/ReadDIBImage/623/CorruptImage:
+18:42:58 0:0.105351  0.060u 7 dib.c/ReadDIBImage/623/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.559140  0.290u 13 rle.c/ReadRLEImage/594/CorruptImage:
+18:42:58 0:0.105383  0.060u 7 rle.c/ReadRLEImage/594/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.559219  0.290u 13 dib.c/ReadDIBImage/804/CorruptImage:
+18:42:58 0:0.105409  0.060u 7 dib.c/ReadDIBImage/804/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.559659  0.290u 13 rle.c/ReadRLEImage/594/CorruptImage:
+18:42:58 0:0.105549  0.060u 7 rle.c/ReadRLEImage/594/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.559750  0.290u 13 dib.c/ReadDIBImage/804/CorruptImage:
+18:42:58 0:0.105576  0.060u 7 dib.c/ReadDIBImage/804/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.559953  0.290u 13 rle.c/ReadRLEImage/594/CorruptImage:
+18:42:58 0:0.105643  0.060u 7 rle.c/ReadRLEImage/594/CorruptImage:
   Ignored: Unable to runlength decode image ()
-14:39:09 0:0.560166  0.290u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.105707  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.560234  0.290u 13 wpg.c/ExtractPostscript/871/CorruptImage:
+18:42:58 0:0.105728  0.060u 7 wpg.c/ExtractPostscript/871/CorruptImage:
   Ignored: Unable to read image header ()
-14:39:09 0:0.560652  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.105865  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Sanity check on size of "Compression" value failed. (TIFFReadDirectory)
-14:39:09 0:0.560708  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.105879  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.560867  0.290u 13 dib.c/ReadDIBImage/653/CorruptImage:
+18:42:58 0:0.105915  0.060u 7 dib.c/ReadDIBImage/653/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.561789  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106111  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Can not read TIFF directory count. (TIFFFetchDirectory)
-14:39:09 0:0.561814  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106117  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Failed to read directory at offset 4026466320. (TIFFReadDirectory)
-14:39:09 0:0.561826  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.106122  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.561909  0.290u 13 rle.c/ReadRLEImage/546/CorruptImage:
+18:42:58 0:0.106150  0.060u 7 rle.c/ReadRLEImage/546/CorruptImage:
   Ignored: Unexpected end-of-file ()
-14:39:09 0:0.562057  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106203  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: TIFF directory is missing required "ImageLength" field. (MissingRequired)
-14:39:09 0:0.562084  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.106210  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.562149  0.290u 13 dib.c/ReadDIBImage/653/CorruptImage:
+18:42:58 0:0.106233  0.060u 7 dib.c/ReadDIBImage/653/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.562244  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106263  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Can not read TIFF directory count. (TIFFFetchDirectory)
-14:39:09 0:0.562259  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106267  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Failed to read directory at offset 4026466320. (TIFFReadDirectory)
-14:39:09 0:0.562269  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.106271  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.562888  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106482  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: TIFF directory is missing required "ImageLength" field. (MissingRequired)
-14:39:09 0:0.562930  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.106493  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.563012  0.290u 13 rle.c/ReadRLEImage/546/CorruptImage:
+18:42:58 0:0.106519  0.060u 7 rle.c/ReadRLEImage/546/CorruptImage:
   Ignored: Unexpected end-of-file ()
-14:39:09 0:0.563176  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106573  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: TIFF directory is missing required "ImageLength" field. (MissingRequired)
-14:39:09 0:0.563200  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.106578  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.563271  0.290u 13 dib.c/ReadDIBImage/623/CorruptImage:
+18:42:58 0:0.106602  0.060u 7 dib.c/ReadDIBImage/623/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.563413  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106642  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Can not read TIFF directory count. (TIFFFetchDirectory)
-14:39:09 0:0.563424  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106646  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Failed to read directory at offset 4026466320. (TIFFReadDirectory)
-14:39:09 0:0.563436  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.106650  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.563635  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106712  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Can not read TIFF directory count. (TIFFFetchDirectory)
-14:39:09 0:0.563651  0.290u 13 tiff.c/TIFFReadErrors/955/CorruptImage:
+18:42:58 0:0.106716  0.060u 7 tiff.c/TIFFReadErrors/955/CorruptImage:
   Ignored: Failed to read directory at offset 4026466320. (TIFFReadDirectory)
-14:39:09 0:0.563662  0.290u 13 tiff.c/ReadTIFFImage/1931/FileOpen:
+18:42:58 0:0.106720  0.060u 7 tiff.c/ReadTIFFImage/1931/FileOpen:
   Ignored: Unable to open file ()
-14:39:09 0:0.563743  0.290u 13 rle.c/ReadRLEImage/605/CorruptImage:
+18:42:58 0:0.106747  0.060u 7 rle.c/ReadRLEImage/605/CorruptImage:
   Ignored: Unexpected end-of-file ()
-14:39:09 0:0.563773  0.290u 13 wpg.c/ExtractPostscript/871/CorruptImage:
+18:42:58 0:0.106754  0.060u 7 wpg.c/ExtractPostscript/871/CorruptImage:
   Ignored: Unable to read image header ()
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmTuZaCk" "--" "/tmp/gmyOHzQV" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmaEfOAJ" "--" "/tmp/gmo27BgN" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmTuZaCk" "--" "/tmp/gmyOHzQV" "-c" "quit".
-14:39:09 0:0.581802  0.310u 13 ps.c/ReadPSImage/393/Delegate:
-  Postscript delegate failed (/tmp/gmrS3NOm)
-Magick: Postscript delegate failed (/tmp/gmrS3NOm).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g2160x36" "-sOutputFile=/tmp/gmaEfOAJ" "--" "/tmp/gmo27BgN" "-c" "quit".
+18:42:58 0:0.109795  0.060u 7 ps.c/ReadPSImage/393/Delegate:
+  Postscript delegate failed (/tmp/gm9lSKeZ)
+Magick: Postscript delegate failed (/tmp/gm9lSKeZ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmBCn1e3" "--" "/tmp/gm7vzUJ1" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmX5UEGf" "--" "/tmp/gmTRccqp" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmBCn1e3" "--" "/tmp/gm7vzUJ1" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmrS3NOm).
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmX5UEGf" "--" "/tmp/gmTRccqp" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm9lSKeZ).
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmDSzAAV" "--" "/tmp/gmW3t0kE" "-c" "quit".
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmgw8LW8" "--" "/tmp/gm8BVhrU" "-c" "quit".
 execvp failed, errno = 2 (No such file or directory)
-Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmDSzAAV" "--" "/tmp/gmW3t0kE" "-c" "quit".
-Magick: Postscript delegate failed (/tmp/gmrS3NOm).
-14:39:09 0:0.613307  0.320u 13 dib.c/ReadDIBImage/651/CorruptImage:
+Magick: "gs" "-sstdout=%stderr" "-q" "-dBATCH" "-dSAFER" "-dMaxBitmap=50000000" "-dNOPAUSE" "-sDEVICE=ppmraw" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4" "-r72x72" "-g990x36" "-sOutputFile=/tmp/gmgw8LW8" "--" "/tmp/gm8BVhrU" "-c" "quit".
+Magick: Postscript delegate failed (/tmp/gm9lSKeZ).
+18:42:58 0:0.114720  0.060u 7 dib.c/ReadDIBImage/651/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613409  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.114753  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613505  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.114784  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613591  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.114813  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613668  0.320u 13 dib.c/ReadDIBImage/651/CorruptImage:
+18:42:58 0:0.114840  0.060u 7 dib.c/ReadDIBImage/651/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613744  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.114867  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613818  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.114890  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613900  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.114915  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.613938  0.320u 13 wpg.c/ExtractPostscript/871/CorruptImage:
+18:42:58 0:0.114929  0.060u 7 wpg.c/ExtractPostscript/871/CorruptImage:
   Ignored: Unable to read image header ()
-14:39:09 0:0.614019  0.320u 13 dib.c/ReadDIBImage/623/CorruptImage:
+18:42:58 0:0.114955  0.060u 7 dib.c/ReadDIBImage/623/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614046  0.320u 13 wpg.c/ExtractPostscript/871/CorruptImage:
+18:42:58 0:0.114965  0.060u 7 wpg.c/ExtractPostscript/871/CorruptImage:
   Ignored: Unable to read image header ()
-14:39:09 0:0.614118  0.320u 13 dib.c/ReadDIBImage/596/CorruptImage:
+18:42:58 0:0.114990  0.060u 7 dib.c/ReadDIBImage/596/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614198  0.320u 13 dib.c/ReadDIBImage/651/CorruptImage:
+18:42:58 0:0.115017  0.060u 7 dib.c/ReadDIBImage/651/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614286  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115043  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614400  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115070  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614494  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115098  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614590  0.320u 13 dib.c/ReadDIBImage/651/CorruptImage:
+18:42:58 0:0.115126  0.060u 7 dib.c/ReadDIBImage/651/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614661  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115152  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614755  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115179  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614840  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115204  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.614922  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115229  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.615020  0.320u 13 dpx.c/ReadDPXImage/1658/CorruptImage:
+18:42:58 0:0.115257  0.060u 7 dpx.c/ReadDPXImage/1658/CorruptImage:
   Ignored: Improper image header ()
-14:39:09 0:0.615132  0.320u 13 rle.c/ReadRLEImage/605/CorruptImage:
+18:42:58 0:0.115295  0.060u 7 rle.c/ReadRLEImage/605/CorruptImage:
   Ignored: Unexpected end-of-file ()
-14:39:09 0:0.615161  0.320u 13 wpg.c/ExtractPostscript/871/CorruptImage:
+18:42:58 0:0.115305  0.060u 7 wpg.c/ExtractPostscript/871/CorruptImage:
   Ignored: Unable to read image header ()
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x627000003330 at pc 0x00000053301c bp 0x7ffe9a1752a0 sp 0x7ffe9a174a70
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x627000003330 at pc 0x00000053301c bp 0x7fff6b0048c0 sp 0x7fff6b004090
 WRITE of size 12792 at 0x627000003330 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x53301b in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -369,7 +369,7 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #8 0x42e1a2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #9 0x433a4c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #10 0x45cf82 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #11 0x75c2a61d5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #11 0x736ccc54e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #12 0x42436d in _start (/out/enhance_fuzzer+0x42436d)
 
 DEDUP_TOKEN: __asan_memcpy--ReadBlob--ReadWPGImage
@@ -387,7 +387,7 @@ allocated by thread T0 here:
     #9 0x42e1a2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #10 0x433a4c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #11 0x45cf82 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #12 0x75c2a61d5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #12 0x736ccc54e082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_realloc--_MagickReallocateResourceLimitedMemory--_MagickAllocateResourceLimitedMemory
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
@@ -405,7 +405,7 @@ Shadow bytes around the buggy address:
   0x0c4e7fff86b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -422,4 +422,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

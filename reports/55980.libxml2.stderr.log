@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3295808979
-INFO: Loaded 1 modules   (52503 inline 8-bit counters): 52503 [0xae08b0, 0xaed5c7),
-INFO: Loaded 1 PC tables (52503 PCs): 52503 [0x969bb0,0xa36d20),
+INFO: Seed: 4257886915
+INFO: Loaded 1 modules   (52503 inline 8-bit counters): 52503 [0xae08b0, 0xaed5c7), 
+INFO: Loaded 1 PC tables (52503 PCs): 52503 [0x969bb0,0xa36d20), 
 /out/xml: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000009d00 at pc 0x0000005e4eb9 bp 0x7ffdc5191410 sp 0x7ffdc5191408
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000009d00 at pc 0x0000005e4eb9 bp 0x7ffda842b4f0 sp 0x7ffda842b4e8
 READ of size 1 at 0x621000009d00 thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x5e4eb8 in xmlParseTryOrFinish /src/libxml2/parser.c:12080:25
@@ -15,7 +15,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #4 0x429652 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #5 0x42eefc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #6 0x458432 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x7a8b50643082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #7 0x74664e7b5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
     #8 0x41f81d in _start (/out/xml+0x41f81d)
 
 DEDUP_TOKEN: xmlParseTryOrFinish--xmlParseChunk--LLVMFuzzerTestOneInput
@@ -34,7 +34,7 @@ allocated by thread T0 here:
     #10 0x429652 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #11 0x42eefc in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #12 0x458432 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #13 0x7a8b50643082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
+    #13 0x74664e7b5082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 87b331c034a6458c64ce09c03939e947212e18ce)
 
 DEDUP_TOKEN: __interceptor_malloc--xmlBufCreate--xmlSwitchInputEncodingInt
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libxml2/parser.c:12080:25 in xmlParseTryOrFinish
@@ -52,7 +52,7 @@ Shadow bytes around the buggy address:
   0x0c427fff93f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -69,4 +69,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

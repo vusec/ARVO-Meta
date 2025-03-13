@@ -1,5 +1,14 @@
+======================= INFO =========================
+This binary is built for afl++.
+To run the target function on individual input(s) execute this:
+  /out/ffmpeg_AV_CODEC_ID_PBM_fuzzer INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] -- /out/ffmpeg_AV_CODEC_ID_PBM_fuzzer [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: 1000)
+======================================================
+Reading 1025 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6110000002bb at pc 0x0000005e251b bp 0x7fff31892490 sp 0x7fff31892488
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6110000002bb at pc 0x0000005e251b bp 0x7ffd1e59c290 sp 0x7ffd1e59c288
 READ of size 1 at 0x6110000002bb thread T0
 SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #0 0x5e251a in ff_combine_frame /src/ffmpeg/libavcodec/parser.c:304:42
@@ -8,7 +17,7 @@ SCARINESS: 12 (1-byte-read-heap-buffer-overflow)
     #3 0x515197 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:320:27
     #4 0x1539b43 in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:184:7
     #5 0x1539b43 in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:236:12
-    #6 0x7ad6131d383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #6 0x78112de7683f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #7 0x460c38 in _start (/out/ffmpeg_AV_CODEC_ID_PBM_fuzzer+0x460c38)
 
 DEDUP_TOKEN: ff_combine_frame--pnm_parse--av_parser_parse2
@@ -40,7 +49,7 @@ Shadow bytes around the buggy address:
   0x0c227fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -58,4 +67,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

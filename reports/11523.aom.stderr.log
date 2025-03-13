@@ -1,11 +1,11 @@
-INFO: Seed: 3269119090
-INFO: Loaded 1 modules   (27617 inline 8-bit counters): 27617 [0x100b168, 0x1011d49),
-INFO: Loaded 1 PC tables (27617 PCs): 27617 [0x1011d50,0x107db60),
+INFO: Seed: 3224909317
+INFO: Loaded 1 modules   (27617 inline 8-bit counters): 27617 [0x100b168, 0x1011d49), 
+INFO: Loaded 1 PC tables (27617 PCs): 27617 [0x1011d50,0x107db60), 
 /out/av1_dec_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7d815fdd20a7 at pc 0x0000004f14cd bp 0x7ffd3285b690 sp 0x7ffd3285ae40
-READ of size 21264 at 0x7d815fdd20a7 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x78b1d29a30a7 at pc 0x0000004f14cd bp 0x7ffd184744f0 sp 0x7ffd18473ca0
+READ of size 21264 at 0x78b1d29a30a7 thread T0
 SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #0 0x4f14cc in __asan_memcpy /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23
     #1 0x5db326 in show_existing_frame_reset /src/aom/av1/decoder/decodeframe.c:4758:63
@@ -24,11 +24,11 @@ SCARINESS: 26 (multi-byte-read-heap-buffer-overflow)
     #14 0x537dbd in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #15 0x543606 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #16 0x53743c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #17 0x7d815fe4f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #17 0x78b1d55a983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #18 0x423b48 in _start (/out/av1_dec_fuzzer+0x423b48)
 
 DEDUP_TOKEN: __asan_memcpy--show_existing_frame_reset--read_uncompressed_header
-0x7d815fdd20a7 is located 0 bytes to the right of 477351-byte region [0x7d815fd5d800,0x7d815fdd20a7)
+0x78b1d29a30a7 is located 0 bytes to the right of 477351-byte region [0x78b1d292e800,0x78b1d29a30a7)
 allocated by thread T0 here:
     #0 0x4f289f in malloc /src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:146
     #1 0x5c6520 in aom_memalign /src/aom/aom_mem/aom_mem.c:55:22
@@ -41,25 +41,25 @@ allocated by thread T0 here:
     #8 0x537dbd in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #9 0x543606 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #10 0x53743c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #11 0x7d815fe4f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x78b1d55a983f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--aom_memalign--av1_decoder_create
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:23 in __asan_memcpy
 Shadow bytes around the buggy address:
-  0x0fb0abfb23c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fb0abfb23d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fb0abfb23e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fb0abfb23f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fb0abfb2400: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fb0abfb2410: 00 00 00 00[07]fa fa fa fa fa fa fa fa fa fa fa
-  0x0fb0abfb2420: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fb0abfb2430: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fb0abfb2440: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fb0abfb2450: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fb0abfb2460: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f16ba52c5c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f16ba52c5d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f16ba52c5e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f16ba52c5f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f16ba52c600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0f16ba52c610: 00 00 00 00[07]fa fa fa fa fa fa fa fa fa fa fa
+  0x0f16ba52c620: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f16ba52c630: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f16ba52c640: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f16ba52c650: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0f16ba52c660: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -77,4 +77,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

@@ -1,0 +1,31 @@
+INFO: Seed: 9816195
+INFO: Loaded 1 modules   (5200 inline 8-bit counters): 5200 [0x83152cc, 0x831671c), 
+INFO: Loaded 1 PC tables (5200 PCs): 5200 [0x831671c,0x832099c), 
+/out/fuzzer_encoder: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==7==ERROR: AddressSanitizer: SEGV on unknown address 0x75ffb7f0 (pc 0x080fc418 bp 0xff86ad08 sp 0xff86a880 T0)
+==7==The signal is caused by a WRITE memory access.
+SCARINESS: 30 (wild-addr-write)
+    #0 0x80fc418 in atomic_compare_exchange_strong<__sanitizer::atomic_uint8_t> /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_atomic_clang.h:80:10
+    #1 0x80fc418 in AtomicallySetQuarantineFlagIfAllocated /src/llvm-project/compiler-rt/lib/asan/asan_allocator.cpp:570:10
+    #2 0x80fc418 in __asan::Allocator::Deallocate(void*, unsigned long, unsigned long, __sanitizer::BufferedStackTrace*, __asan::AllocType) /src/llvm-project/compiler-rt/lib/asan/asan_allocator.cpp:647:10
+    #3 0x80fc3be in __asan::asan_free(void*, __sanitizer::BufferedStackTrace*, __asan::AllocType) /src/llvm-project/compiler-rt/lib/asan/asan_allocator.cpp:883:12
+    #4 0x8172932 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:128:3
+    #5 0x81dfb14 in FLAC__bitwriter_free /src/flac/src/libFLAC/bitwriter.c:181:3
+    #6 0x81c1313 in free_ /src/flac/src/libFLAC/stream_encoder.c:2451:2
+    #7 0x81b59f2 in FLAC__stream_encoder_finish /src/flac/src/libFLAC/stream_encoder.c:1529:2
+    #8 0x81b4096 in FLAC::Encoder::Stream::finish() /src/flac/src/libFLAC++/stream_encoder.cpp:358:29
+    #9 0x81a9d7e in LLVMFuzzerTestOneInput /src/flac-fuzzers/fuzzer_encoder.cpp:150:34
+    #10 0x80ac516 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:556:15
+    #11 0x80989c3 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:292:6
+    #12 0x809e0c8 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:774:9
+    #13 0x80c2ed7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:19:10
+    #14 0xf3349646 in __libc_start_main (/lib32/libc.so.6+0x18646)
+    #15 0x8073998 in _start (/out/fuzzer_encoder+0x8073998)
+
+DEDUP_TOKEN: atomic_compare_exchange_strong<__sanitizer::atomic_uint8_t>--AtomicallySetQuarantineFlagIfAllocated--__asan::Allocator::Deallocate(void*, unsigned long, unsigned long, __sanitizer::BufferedStackTrace*, __asan::AllocType)
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /src/llvm-project/compiler-rt/lib/asan/../sanitizer_common/sanitizer_atomic_clang.h:80:10 in atomic_compare_exchange_strong<__sanitizer::atomic_uint8_t>
+==7==ABORTING

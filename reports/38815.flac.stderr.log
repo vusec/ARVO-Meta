@@ -1,0 +1,62 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 65865749
+INFO: Loaded 1 modules   (2703 inline 8-bit counters): 2703 [0x627a88, 0x628517), 
+INFO: Loaded 1 PC tables (2703 PCs): 2703 [0x628518,0x632e08), 
+/out/fuzzer_decoder: Running 1 inputs 1 time(s) each.
+Running: /tmp/poc
+Uninitialized bytes in __msan_check_mem_is_initialized at offset 512 inside [0x718000000010, 1000)
+==7==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x52a572 in memory_test_msan /usr/include/fuzzing/memory.hpp:37:5
+    #1 0x52a572 in memory_test /usr/include/fuzzing/memory.hpp:44:5
+    #2 0x52a572 in FLAC::Decoder::FuzzerStream::write_callback(FLAC__Frame const*, int const* const*) /src/flac-fuzzers/fuzzer_decoder.cpp:79:29
+    #3 0x52d43a in FLAC::Decoder::Stream::write_callback_(FLAC__StreamDecoder const*, FLAC__Frame const*, int const* const*, void*) /src/flac/src/libFLAC++/stream_decoder.cpp:312:21
+    #4 0x550f76 in write_audio_frame_to_client_ /src/flac/src/libFLAC/stream_decoder.c
+    #5 0x543b5e in read_frame_ /src/flac/src/libFLAC/stream_decoder.c:2153:6
+    #6 0x5451dc in FLAC__stream_decoder_process_until_end_of_stream /src/flac/src/libFLAC/stream_decoder.c:1089:9
+    #7 0x52dcc6 in FLAC::Decoder::Stream::process_until_end_of_stream() /src/flac/src/libFLAC++/stream_decoder.cpp:218:29
+    #8 0x529029 in LLVMFuzzerTestOneInput /src/flac-fuzzers/fuzzer_decoder.cpp:269:50
+    #9 0x455773 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) cxa_noexception.cpp
+    #10 0x442412 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x447e3b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
+    #12 0x46dce2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x76089f08c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #14 0x41f52d in _start (/out/fuzzer_decoder+0x41f52d)
+
+DEDUP_TOKEN: memory_test_msan--memory_test--FLAC::Decoder::FuzzerStream::write_callback(FLAC__Frame const*, int const* const*)
+  Uninitialized value was stored to memory at
+    #0 0x4caee9 in __msan_memcpy /src/llvm-project/compiler-rt/lib/msan/msan_interceptors.cpp:1577:3
+    #1 0x5611b4 in memcpy /usr/include/x86_64-linux-gnu/bits/string_fortified.h:34:10
+    #2 0x5611b4 in FLAC__fixed_restore_signal /src/flac/src/libFLAC/fixed.c:374:4
+    #3 0x53f04f in read_subframe_fixed_ /src/flac/src/libFLAC/stream_decoder.c:2625:3
+    #4 0x53f04f in read_subframe_ /src/flac/src/libFLAC/stream_decoder.c:2518:7
+    #5 0x53f04f in read_frame_ /src/flac/src/libFLAC/stream_decoder.c:2068:7
+    #6 0x5451dc in FLAC__stream_decoder_process_until_end_of_stream /src/flac/src/libFLAC/stream_decoder.c:1089:9
+    #7 0x52dcc6 in FLAC::Decoder::Stream::process_until_end_of_stream() /src/flac/src/libFLAC++/stream_decoder.cpp:218:29
+    #8 0x529029 in LLVMFuzzerTestOneInput /src/flac-fuzzers/fuzzer_decoder.cpp:269:50
+    #9 0x455773 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) cxa_noexception.cpp
+    #10 0x442412 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #11 0x447e3b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
+    #12 0x46dce2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #13 0x76089f08c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+
+DEDUP_TOKEN: __msan_memcpy--memcpy--FLAC__fixed_restore_signal
+  Uninitialized value was created by a heap allocation
+    #0 0x4d1b1d in __interceptor_malloc /src/llvm-project/compiler-rt/lib/msan/msan_interceptors.cpp:904:3
+    #1 0x58299a in safe_malloc_ /src/flac/src/libFLAC/../../include/share/alloc.h:74:9
+    #2 0x58299a in safe_malloc_add_2op_ /src/flac/src/libFLAC/../../include/share/alloc.h:91:9
+    #3 0x58299a in FLAC__memory_alloc_aligned /src/flac/src/libFLAC/memory.c:54:6
+    #4 0x58299a in FLAC__memory_alloc_aligned_int32_array /src/flac/src/libFLAC/memory.c:79:7
+    #5 0x53bf13 in allocate_output_ /src/flac/src/libFLAC/stream_decoder.c:1298:7
+    #6 0x53bf13 in read_frame_ /src/flac/src/libFLAC/stream_decoder.c:2036:6
+    #7 0x5451dc in FLAC__stream_decoder_process_until_end_of_stream /src/flac/src/libFLAC/stream_decoder.c:1089:9
+    #8 0x52dcc6 in FLAC::Decoder::Stream::process_until_end_of_stream() /src/flac/src/libFLAC++/stream_decoder.cpp:218:29
+    #9 0x529029 in LLVMFuzzerTestOneInput /src/flac-fuzzers/fuzzer_decoder.cpp:269:50
+    #10 0x455773 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) cxa_noexception.cpp
+    #11 0x442412 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #12 0x447e3b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
+    #13 0x46dce2 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #14 0x76089f08c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+
+DEDUP_TOKEN: __interceptor_malloc--safe_malloc_--safe_malloc_add_2op_
+SUMMARY: MemorySanitizer: use-of-uninitialized-value /usr/include/fuzzing/memory.hpp:37:5 in memory_test_msan
+Exiting

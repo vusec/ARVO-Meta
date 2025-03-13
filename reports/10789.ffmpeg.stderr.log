@@ -1,10 +1,10 @@
-INFO: Seed: 3272696118
-INFO: Loaded 1 modules   (35521 inline 8-bit counters): 35521 [0xf4efe8, 0xf57aa9),
-INFO: Loaded 1 PC tables (35521 PCs): 35521 [0xbb6dc0,0xc419d0),
+INFO: Seed: 139626720
+INFO: Loaded 1 modules   (35521 inline 8-bit counters): 35521 [0xf4efe8, 0xf57aa9), 
+INFO: Loaded 1 PC tables (35521 PCs): 35521 [0xbb6dc0,0xc419d0), 
 /out/ffmpeg_AV_CODEC_ID_ILBC_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000aa3f9e at pc 0x00000054f1ca bp 0x7ffc66c4c750 sp 0x7ffc66c4c748
+==7==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000000aa3f9e at pc 0x00000054f1ca bp 0x7ffdd9a9f1d0 sp 0x7ffdd9a9f1c8
 READ of size 2 at 0x000000aa3f9e thread T0
 SCARINESS: 14 (2-byte-read-global-buffer-overflow)
     #0 0x54f1c9 in gain_dequantization /src/ffmpeg/libavcodec/ilbcdec.c:604:22
@@ -21,7 +21,7 @@ SCARINESS: 14 (2-byte-read-global-buffer-overflow)
     #11 0x988a1d in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/libfuzzer/FuzzerDriver.cpp:280:6
     #12 0x994293 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/libfuzzer/FuzzerDriver.cpp:713:9
     #13 0x98809c in main /src/libfuzzer/FuzzerMain.cpp:20:10
-    #14 0x75484f8ac83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #14 0x77563a34f83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #15 0x41d8a8 in _start (/out/ffmpeg_AV_CODEC_ID_ILBC_fuzzer+0x41d8a8)
 
 DEDUP_TOKEN: gain_dequantization--construct_vector--decode_residual
@@ -42,7 +42,7 @@ Shadow bytes around the buggy address:
   0x00008014c840: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -60,4 +60,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==13==ABORTING
+==7==ABORTING

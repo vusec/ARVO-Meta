@@ -1,5 +1,6 @@
+Reading 1165 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000000880 at pc 0x0000009225f7 bp 0x7ffe5ef1fac0 sp 0x7ffe5ef1fab8
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000000880 at pc 0x0000009225f7 bp 0x7ffdb5f75fc0 sp 0x7ffdb5f75fb8
 WRITE of size 1 at 0x61d000000880 thread T0
 SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #0 0x9225f6 in idctSparseColPut_int16_8bit /src/ffmpeg/libavcodec/simple_idct_template.c:285:13
@@ -15,7 +16,7 @@ SCARINESS: 31 (1-byte-write-heap-buffer-overflow)
     #10 0x500a25 in LLVMFuzzerTestOneInput /src/ffmpeg/tools/target_dec_fuzzer.c:482:25
     #11 0xdb35aa in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #12 0xdb337d in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #13 0x781029383082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #13 0x73399050c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #14 0x444b9d in _start (/out/ffmpeg_AV_CODEC_ID_SPEEDHQ_fuzzer+0x444b9d)
 
 DEDUP_TOKEN: idctSparseColPut_int16_8bit--ff_simple_idct_put_int16_8bit--decode_dct_block
@@ -51,7 +52,7 @@ Shadow bytes around the buggy address:
   0x0c3a7fff8160: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -68,4 +69,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

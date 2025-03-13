@@ -1,12 +1,12 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3962171817
+INFO: Seed: 57573793
 INFO: Loaded 1 modules   (51634 inline 8-bit counters): 51634 [0x8735f90, 0x8742942), 
 INFO: Loaded 1 PC tables (51634 PCs): 51634 [0x8628b9c,0x868d92c), 
 /out/xml: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xf5a004fc at pc 0x082a0d55 bp 0xffac37b8 sp 0xffac37b0
-READ of size 4 at 0xf5a004fc thread T0
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0xf58004fc at pc 0x082a0d55 bp 0xffd066d8 sp 0xffd066d0
+READ of size 4 at 0xf58004fc thread T0
 SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #0 0x82a0d54 in xmlStaticCopyNode /src/libxml2/tree.c:4204:39
     #1 0x82a38ab in xmlDocCopyNode /src/libxml2/tree.c:4377:11
@@ -22,11 +22,11 @@ SCARINESS: 45 (4-byte-read-heap-use-after-free)
     #11 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #12 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #13 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #14 0xf79b4ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #14 0xf77afed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
     #15 0x8077a55 in _start (/out/xml+0x8077a55)
 
 DEDUP_TOKEN: xmlStaticCopyNode--xmlDocCopyNode--xmlParseReference
-0xf5a004fc is located 12 bytes inside of 24-byte region [0xf5a004f0,0xf5a00508)
+0xf58004fc is located 12 bytes inside of 24-byte region [0xf58004f0,0xf5800508)
 freed by thread T0 here:
     #0 0x8191116 in free /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:52:3
     #1 0x828c9a6 in xmlFreeNs /src/libxml2/tree.c:821:5
@@ -38,7 +38,7 @@ freed by thread T0 here:
     #7 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #8 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #9 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0xf79b4ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #10 0xf77afed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: free--xmlFreeNs--xmlFreeNsList
 previously allocated by thread T0 here:
@@ -57,22 +57,22 @@ previously allocated by thread T0 here:
     #12 0x808090e in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned int) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #13 0x8086510 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned int)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
     #14 0x80b00f7 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #15 0xf79b4ed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
+    #15 0xf77afed4 in __libc_start_main (/lib/i386-linux-gnu/libc.so.6+0x1aed4) (BuildId: f0e9c9950026d7f234a4a1d03670a7ed59ceb726)
 
 DEDUP_TOKEN: __interceptor_malloc--xmlFuzzMalloc--xmlNewNs
 SUMMARY: AddressSanitizer: heap-use-after-free /src/libxml2/tree.c:4204:39 in xmlStaticCopyNode
 Shadow bytes around the buggy address:
-  0x3eb40040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3eb40050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3eb40060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x3eb40070: fa fa fa fa fa fa fa fa fa fa fd fd fd fa fa fa
-  0x3eb40080: fd fd fd fa fa fa 00 00 00 fa fa fa fd fd fd fa
-=>0x3eb40090: fa fa fd fd fd fa fa fa fd fd fd fd fa fa fd[fd]
-  0x3eb400a0: fd fa fa fa 00 00 00 fa fa fa 00 00 04 fa fa fa
-  0x3eb400b0: 00 00 04 fa fa fa 00 00 00 00 fa fa fd fd fd fa
-  0x3eb400c0: fa fa fd fd fd fa fa fa fd fd fd fa fa fa fd fd
-  0x3eb400d0: fd fa fa fa fd fd fd fa fa fa fd fd fd fa fa fa
-  0x3eb400e0: fd fd fd fa fa fa fd fd fd fd fa fa fd fd fd fa
+  0x3eb00040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3eb00050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3eb00060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x3eb00070: fa fa fa fa fa fa fa fa fa fa fd fd fd fa fa fa
+  0x3eb00080: fd fd fd fa fa fa 00 00 00 fa fa fa fd fd fd fa
+=>0x3eb00090: fa fa fd fd fd fa fa fa fd fd fd fd fa fa fd[fd]
+  0x3eb000a0: fd fa fa fa 00 00 00 fa fa fa 00 00 04 fa fa fa
+  0x3eb000b0: 00 00 04 fa fa fa 00 00 00 00 fa fa fd fd fd fa
+  0x3eb000c0: fa fa fd fd fd fa fa fa fd fd fd fa fa fa fd fd
+  0x3eb000d0: fd fa fa fa fd fd fd fa fa fa fd fd fd fa fa fa
+  0x3eb000e0: fd fd fd fa fa fa fd fd fd fd fa fa fd fd fd fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 

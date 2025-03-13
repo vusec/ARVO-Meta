@@ -1,0 +1,127 @@
+Unable to find image 'n132/arvo:54861-vul' locally
+54861-vul: Pulling from n132/arvo
+846c0b181fff: Already exists
+6f40dfa743ea: Already exists
+870d7d85d921: Already exists
+8cafa8deec23: Already exists
+b3c7713b77b4: Already exists
+671aa2736f7d: Already exists
+26a655f48331: Already exists
+5e53940b618d: Already exists
+3ab0e8346b9d: Already exists
+da63893d7e33: Already exists
+aeb614c05937: Already exists
+63eaf6e1861b: Already exists
+d7b23536322c: Already exists
+6ac262db61e1: Already exists
+3e82909c323e: Already exists
+58a52029f898: Already exists
+27d5aa940f40: Already exists
+aa8720e4745f: Already exists
+2811b888af37: Already exists
+fe41c9462537: Already exists
+5455e015fd20: Already exists
+3c7eb3a6d6b6: Already exists
+ea5ccad381d5: Already exists
+dc6f22c3a893: Already exists
+e936cc5046a5: Already exists
+713ce431cd5f: Already exists
+f7cd521ac62c: Pulling fs layer
+ff7d37906c8c: Pulling fs layer
+3e8339bcd215: Pulling fs layer
+6692349e2a66: Pulling fs layer
+e635a4ea9356: Pulling fs layer
+3fb9d211cdf1: Pulling fs layer
+65bd7fab44c8: Pulling fs layer
+a5df4676c692: Pulling fs layer
+954b54099ad2: Pulling fs layer
+2a4e27c5cd34: Pulling fs layer
+11bf1b971082: Pulling fs layer
+8b6bfc87104b: Pulling fs layer
+08b982937c66: Pulling fs layer
+a935736820b1: Pulling fs layer
+06dd01dd9eff: Pulling fs layer
+d6c1f9d61198: Pulling fs layer
+e4faa96e383e: Pulling fs layer
+812c3b2424f5: Pulling fs layer
+1dda24da312d: Pulling fs layer
+70d38b5365f0: Pulling fs layer
+6c8665e741bc: Pulling fs layer
+852314f04364: Pulling fs layer
+bdb5cf216fc9: Pulling fs layer
+686a6730d7c2: Pulling fs layer
+c8ee8c5f14cf: Pulling fs layer
+bdb5cf216fc9: Verifying Checksum
+bdb5cf216fc9: Download complete
+a935736820b1: Verifying Checksum
+a935736820b1: Download complete
+954b54099ad2: Download complete
+c8ee8c5f14cf: Verifying Checksum
+c8ee8c5f14cf: Download complete
+11bf1b971082: Verifying Checksum
+11bf1b971082: Download complete
+d6c1f9d61198: Verifying Checksum
+d6c1f9d61198: Download complete
+ff7d37906c8c: Verifying Checksum
+ff7d37906c8c: Download complete
+6692349e2a66: Verifying Checksum
+6692349e2a66: Download complete
+08b982937c66: Verifying Checksum
+08b982937c66: Download complete
+e4faa96e383e: Verifying Checksum
+2a4e27c5cd34: Verifying Checksum
+2a4e27c5cd34: Download complete
+852314f04364: Verifying Checksum
+852314f04364: Download complete
+65bd7fab44c8: Verifying Checksum
+65bd7fab44c8: Download complete
+1dda24da312d: Verifying Checksum
+1dda24da312d: Download complete
+3fb9d211cdf1: Verifying Checksum
+3fb9d211cdf1: Download complete
+8b6bfc87104b: Verifying Checksum
+8b6bfc87104b: Download complete
+70d38b5365f0: Verifying Checksum
+70d38b5365f0: Download complete
+a5df4676c692: Verifying Checksum
+a5df4676c692: Download complete
+6c8665e741bc: Verifying Checksum
+6c8665e741bc: Download complete
+812c3b2424f5: Verifying Checksum
+812c3b2424f5: Download complete
+06dd01dd9eff: Verifying Checksum
+06dd01dd9eff: Download complete
+e635a4ea9356: Verifying Checksum
+e635a4ea9356: Download complete
+3e8339bcd215: Verifying Checksum
+3e8339bcd215: Download complete
+f7cd521ac62c: Verifying Checksum
+f7cd521ac62c: Download complete
+f7cd521ac62c: Pull complete
+ff7d37906c8c: Pull complete
+3e8339bcd215: Pull complete
+6692349e2a66: Pull complete
+e635a4ea9356: Pull complete
+3fb9d211cdf1: Pull complete
+65bd7fab44c8: Pull complete
+a5df4676c692: Pull complete
+954b54099ad2: Pull complete
+2a4e27c5cd34: Pull complete
+11bf1b971082: Pull complete
+8b6bfc87104b: Pull complete
+08b982937c66: Pull complete
+a935736820b1: Pull complete
+06dd01dd9eff: Pull complete
+d6c1f9d61198: Pull complete
+e4faa96e383e: Pull complete
+812c3b2424f5: Pull complete
+1dda24da312d: Pull complete
+70d38b5365f0: Pull complete
+6c8665e741bc: Pull complete
+852314f04364: Pull complete
+bdb5cf216fc9: Pull complete
+686a6730d7c2: Download complete
+686a6730d7c2: Pull complete
+c8ee8c5f14cf: Pull complete
+Digest: sha256:61486c22e3d7f18853f4cd40b96fe600d4c65d55ea8f8f51a00358ea62f156d8
+Status: Downloaded newer image for n132/arvo:54861-vul

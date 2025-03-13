@@ -1,14 +1,14 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3288948430
-INFO: Loaded 1 modules   (238448 inline 8-bit counters): 238448 [0x3e14b90, 0x3e4ef00),
-INFO: Loaded 1 PC tables (238448 PCs): 238448 [0x3e4ef00,0x41f2600),
+INFO: Seed: 3759299936
+INFO: Loaded 1 modules   (238448 inline 8-bit counters): 238448 [0x3e14b90, 0x3e4ef00), 
+INFO: Loaded 1 PC tables (238448 PCs): 238448 [0x3e4ef00,0x41f2600), 
 /out/smartcrop_fuzzer: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60c000030a8c at pc 0x0000030db7b9 bp 0x75ffdfdf6080 sp 0x75ffdfdf6078
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60c000030a8c at pc 0x0000030e0809 bp 0x725753bf6080 sp 0x725753bf6078
 READ of size 4 at 0x60c000030a8c thread T3 (pool)
 SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
-    #0 0x30db7b8 in jxl::N_SSE4::BlendingStage::ProcessRow(std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, unsigned long, unsigned long, unsigned long, unsigned long, float*) const /src/libjxl/lib/jxl/render_pipeline/stage_blending.cc:141:41
+    #0 0x30e0808 in jxl::N_AVX2::BlendingStage::ProcessRow(std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, unsigned long, unsigned long, unsigned long, unsigned long, float*) const /src/libjxl/lib/jxl/render_pipeline/stage_blending.cc:141:41
     #1 0x30cd9dc in jxl::LowMemoryRenderPipeline::RenderRect(unsigned long, std::__1::vector<jxl::Plane<float>, std::__1::allocator<jxl::Plane<float> > >&, jxl::Rect, jxl::Rect) /src/libjxl/lib/jxl/render_pipeline/low_memory_render_pipeline.cc:635:19
     #2 0x30d264c in jxl::LowMemoryRenderPipeline::ProcessBuffers(unsigned long, unsigned long) /src/libjxl/lib/jxl/render_pipeline/low_memory_render_pipeline.cc:777:5
     #3 0x2d45680 in operator() /src/libjxl/lib/jxl/dec_modular.cc:621:3
@@ -254,10 +254,10 @@ SCARINESS: 27 (4-byte-read-heap-buffer-overflow-far-from-bounds)
     #243 0x682a4e in vips_thread_main_loop /src/libvips/build/../libvips/iofuncs/threadpool.c:284:2
     #244 0x34f9503 in g_thread_pool_thread_proxy gthreadpool.c.o
     #245 0x34f8c60 in g_thread_proxy (/out/smartcrop_fuzzer+0x34f8c60)
-    #246 0x75ffe410a608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
-    #247 0x75ffe4002352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)
+    #246 0x725757ec4608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
+    #247 0x725757dbc352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)
 
-DEDUP_TOKEN: jxl::N_SSE4::BlendingStage::ProcessRow(std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, unsigned long, unsigned long, unsigned long, unsigned long, float*) const--jxl::LowMemoryRenderPipeline::RenderRect(unsigned long, std::__1::vector<jxl::Plane<float>, std::__1::allocator<jxl::Plane<float> > >&, jxl::Rect, jxl::Rect)--jxl::LowMemoryRenderPipeline::ProcessBuffers(unsigned long, unsigned long)
+DEDUP_TOKEN: jxl::N_AVX2::BlendingStage::ProcessRow(std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, unsigned long, unsigned long, unsigned long, unsigned long, float*) const--jxl::LowMemoryRenderPipeline::RenderRect(unsigned long, std::__1::vector<jxl::Plane<float>, std::__1::allocator<jxl::Plane<float> > >&, jxl::Rect, jxl::Rect)--jxl::LowMemoryRenderPipeline::ProcessBuffers(unsigned long, unsigned long)
 0x60c000030a8c is located 20 bytes to the right of 120-byte region [0x60c000030a00,0x60c000030a78)
 allocated by thread T3 (pool) here:
     #0 0x560d3d in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:95:3
@@ -307,7 +307,7 @@ Thread T3 (pool) created by T0 here:
     #1 0x351cf9a in g_system_thread_new (/out/smartcrop_fuzzer+0x351cf9a)
 
 DEDUP_TOKEN: __interceptor_pthread_create--g_system_thread_new
-SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libjxl/lib/jxl/render_pipeline/stage_blending.cc:141:41 in jxl::N_SSE4::BlendingStage::ProcessRow(std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, unsigned long, unsigned long, unsigned long, unsigned long, float*) const
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/libjxl/lib/jxl/render_pipeline/stage_blending.cc:141:41 in jxl::N_AVX2::BlendingStage::ProcessRow(std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, std::__1::vector<std::__1::vector<float*, std::__1::allocator<float*> >, std::__1::allocator<std::__1::vector<float*, std::__1::allocator<float*> > > > const&, unsigned long, unsigned long, unsigned long, unsigned long, float*) const
 Shadow bytes around the buggy address:
   0x0c187fffe100: fd fd fd fd fd fd fd fd fa fa fa fa fa fa fa fa
   0x0c187fffe110: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
@@ -322,7 +322,7 @@ Shadow bytes around the buggy address:
   0x0c187fffe1a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -339,4 +339,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

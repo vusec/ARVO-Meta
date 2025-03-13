@@ -1,11 +1,11 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3284796488
-INFO: Loaded 1 modules   (12413 inline 8-bit counters): 12413 [0x832a60, 0x835add),
-INFO: Loaded 1 PC tables (12413 PCs): 12413 [0x835ae0,0x8662b0),
+INFO: Seed: 3468059199
+INFO: Loaded 1 modules   (12413 inline 8-bit counters): 12413 [0x832a60, 0x835add), 
+INFO: Loaded 1 PC tables (12413 PCs): 12413 [0x835ae0,0x8662b0), 
 /out/dav1d_fuzzer_mt: Running 1 inputs 1 time(s) each.
 Running: /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000011540 at pc 0x00000053e1da bp 0x72c3b64f9870 sp 0x72c3b64f9038
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000011540 at pc 0x00000053e1da bp 0x7b16018f9870 sp 0x7b16018f9038
 WRITE of size 768 at 0x625000011540 thread T4 (dav1d-worker)
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x53e1d9 in __asan_memcpy /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3
@@ -13,17 +13,17 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #2 0x775c1f in dav1d_cdef_brow_8bpc /work/build/../../src/dav1d/src/cdef_apply_tmpl.c:138:13
     #3 0x6484a4 in dav1d_filter_sbrow_cdef_8bpc /work/build/../../src/dav1d/src/recon_tmpl.c:2104:5
     #4 0x583372 in dav1d_worker_task /work/build/../../src/dav1d/src/thread_task.c:610:21
-    #5 0x72c3b9d85608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
-    #6 0x72c3b9c85352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)
+    #5 0x7b1605193608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
+    #6 0x7b1605093352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)
 
 DEDUP_TOKEN: __asan_memcpy--backup2lines--dav1d_cdef_brow_8bpc
 0x625000011540 is located 0 bytes to the right of 9280-byte region [0x62500000f100,0x625000011540)
-allocated by thread T2 (dav1d-worker) here:
+allocated by thread T3 (dav1d-worker) here:
     #0 0x53f7d7 in posix_memalign /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:210:3
     #1 0x594163 in dav1d_alloc_aligned /work/build/../../src/dav1d/src/mem.h:66:9
     #2 0x594163 in dav1d_decode_frame_init /work/build/../../src/dav1d/src/decode.c:3069:46
     #3 0x582f2c in dav1d_worker_task /work/build/../../src/dav1d/src/thread_task.c:469:23
-    #4 0x72c3b9d85608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
+    #4 0x7b1605193608 in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x8608)
 
 DEDUP_TOKEN: posix_memalign--dav1d_alloc_aligned--dav1d_decode_frame_init
 Thread T4 (dav1d-worker) created by T0 here:
@@ -34,10 +34,10 @@ Thread T4 (dav1d-worker) created by T0 here:
     #4 0x45c2b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #5 0x461d7a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #6 0x48ac62 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x72c3b9b8a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x7b1604f98082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: pthread_create--dav1d_open--LLVMFuzzerTestOneInput
-Thread T2 (dav1d-worker) created by T0 here:
+Thread T3 (dav1d-worker) created by T0 here:
     #0 0x5284ec in pthread_create /src/llvm-project/compiler-rt/lib/asan/asan_interceptors.cpp:207:3
     #1 0x41fb40 in dav1d_open /work/build/../../src/dav1d/src/lib.c:217:17
     #2 0x5787b6 in LLVMFuzzerTestOneInput /work/build/../../src/dav1d/tests/libfuzzer/dav1d_fuzzer.c:131:11
@@ -45,7 +45,7 @@ Thread T2 (dav1d-worker) created by T0 here:
     #4 0x45c2b2 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
     #5 0x461d7a in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) cxa_noexception.cpp
     #6 0x48ac62 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #7 0x72c3b9b8a082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x7b1604f98082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
 
 DEDUP_TOKEN: pthread_create--dav1d_open--LLVMFuzzerTestOneInput
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:22:3 in __asan_memcpy
@@ -63,7 +63,7 @@ Shadow bytes around the buggy address:
   0x0c4a7fffa2f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -80,4 +80,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

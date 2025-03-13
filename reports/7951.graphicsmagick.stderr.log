@@ -8,8 +8,9 @@ To fuzz with afl-fuzz execute this:
   afl-fuzz [afl-flags] /out/coder_DPX_fuzzer [-N]
 afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
+Reading 1416 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000176 at pc 0x00000074c270 bp 0x7ffe00d10b10 sp 0x7ffe00d10b08
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000176 at pc 0x00000074c270 bp 0x7ffcd4250df0 sp 0x7ffcd4250de8
 READ of size 2 at 0x602000000176 thread T0
 SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #0 0x74c26f in ReadDPXImage /src/graphicsmagick/coders/dpx.c:2791:37
@@ -19,7 +20,7 @@ SCARINESS: 14 (2-byte-read-heap-buffer-overflow)
     #4 0x5285c3 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #5 0x528ecf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:290:5
     #6 0x52946f in main /src/libfuzzer/afl/afl_driver.cpp:327:12
-    #7 0x7d469ff7183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x737a20b3d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41d638 in _start (/out/coder_DPX_fuzzer+0x41d638)
 
 DEDUP_TOKEN: ReadDPXImage--ReadImage--BlobToImage
@@ -34,7 +35,7 @@ allocated by thread T0 here:
     #6 0x5285c3 in LLVMFuzzerTestOneInput /src/graphicsmagick/fuzzing/coder_fuzzer.cc:20:15
     #7 0x528ecf in ExecuteFilesOnyByOne(int, char**) /src/libfuzzer/afl/afl_driver.cpp:290:5
     #8 0x52946f in main /src/libfuzzer/afl/afl_driver.cpp:327:12
-    #9 0x7d469ff7183f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #9 0x737a20b3d83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--AllocateThreadViewDataArray--ReadDPXImage
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/graphicsmagick/coders/dpx.c:2791:37 in ReadDPXImage
@@ -52,7 +53,7 @@ Shadow bytes around the buggy address:
   0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -69,4 +70,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

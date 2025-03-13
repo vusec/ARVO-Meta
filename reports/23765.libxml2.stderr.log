@@ -1,7 +1,7 @@
 Accepting input from '/tmp/poc'
 Usage for fuzzing: honggfuzz -P [flags] -- /out/html
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x621000005100 at pc 0x0000004d2979 bp 0x7ffee93256d0 sp 0x7ffee93256c8
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x621000005100 at pc 0x0000004d2979 bp 0x7ffe40a0bb90 sp 0x7ffe40a0bb88
 READ of size 1 at 0x621000005100 thread T0
 SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #0 0x4d2978 in xmlParserPrintFileContextInternal /src/libxml2/error.c:194:10
@@ -11,7 +11,7 @@ SCARINESS: 40 (1-byte-read-heap-use-after-free)
     #4 0x5b3a79 in htmlParseChunk /src/libxml2/HTMLparser.c
     #5 0x4c6fc2 in LLVMFuzzerTestOneInput /src/libxml2/fuzz/html.c:60:5
     #6 0x4c866d in main (/out/html+0x4c866d)
-    #7 0x716b3f50883f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #7 0x71e96d10383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #8 0x41c718 in _start (/out/html+0x41c718)
 
 DEDUP_TOKEN: xmlParserPrintFileContextInternal--xmlReportError--__xmlRaiseError

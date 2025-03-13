@@ -1,0 +1,73 @@
+Unable to find image 'n132/arvo:40449-vul' locally
+40449-vul: Pulling from n132/arvo
+7b1a6ab2e44d: Already exists
+4b2a75acc4da: Already exists
+b7f4cfd389f9: Already exists
+0c943eadb600: Already exists
+0ddf84861ff2: Already exists
+dd93097fdfd1: Already exists
+32f90bde0961: Already exists
+0f35a9a05252: Already exists
+e8a42e193f0a: Already exists
+95c70afe97c7: Already exists
+a38280a53b85: Already exists
+bfa6261b9c01: Already exists
+af7351d9eb81: Already exists
+a8f142164404: Already exists
+c9b45b1728f1: Already exists
+06f074c03407: Already exists
+8e1b2a8e4208: Already exists
+cfd99a2f6e56: Already exists
+e92130c1ed4c: Already exists
+ab54782c7715: Already exists
+f9b83619bb00: Pulling fs layer
+ffdd82cd8935: Pulling fs layer
+f734260df983: Pulling fs layer
+d36efd992ea7: Pulling fs layer
+c8b0a3fb55df: Pulling fs layer
+5f3bfe6f6558: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+42766cb015d3: Pulling fs layer
+3d9323bb49e5: Pulling fs layer
+de9a4b8bcdee: Pulling fs layer
+c8b0a3fb55df: Waiting
+4f4fb700ef54: Waiting
+3d9323bb49e5: Waiting
+42766cb015d3: Waiting
+de9a4b8bcdee: Waiting
+5f3bfe6f6558: Waiting
+f734260df983: Waiting
+d36efd992ea7: Waiting
+ffdd82cd8935: Waiting
+ffdd82cd8935: Verifying Checksum
+ffdd82cd8935: Download complete
+f734260df983: Verifying Checksum
+f734260df983: Download complete
+d36efd992ea7: Verifying Checksum
+d36efd992ea7: Download complete
+f9b83619bb00: Verifying Checksum
+f9b83619bb00: Download complete
+5f3bfe6f6558: Verifying Checksum
+5f3bfe6f6558: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+f9b83619bb00: Pull complete
+c8b0a3fb55df: Verifying Checksum
+c8b0a3fb55df: Download complete
+ffdd82cd8935: Pull complete
+f734260df983: Pull complete
+42766cb015d3: Verifying Checksum
+42766cb015d3: Download complete
+d36efd992ea7: Pull complete
+de9a4b8bcdee: Verifying Checksum
+de9a4b8bcdee: Download complete
+c8b0a3fb55df: Pull complete
+5f3bfe6f6558: Pull complete
+4f4fb700ef54: Pull complete
+42766cb015d3: Pull complete
+3d9323bb49e5: Verifying Checksum
+3d9323bb49e5: Download complete
+3d9323bb49e5: Pull complete
+de9a4b8bcdee: Pull complete
+Digest: sha256:6052888c2f2b8679e331d000c4fc51c2f28c1b6cbfb092e6d8682a440ecf41dc
+Status: Downloaded newer image for n132/arvo:40449-vul

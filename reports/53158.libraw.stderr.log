@@ -1,6 +1,7 @@
+Reading 6275 bytes from /tmp/poc
 =================================================================
-==13==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000003900 at pc 0x00000049d2a2 bp 0x7ffedd1e5060 sp 0x7ffedd1e4828
-WRITE of size 6167 at 0x621000003900 thread T0
+==7==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000002500 at pc 0x00000049d2a2 bp 0x7ffce4c4a9a0 sp 0x7ffce4c4a168
+WRITE of size 6167 at 0x621000002500 thread T0
 SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #0 0x49d2a1 in __asan_memmove /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3
     #1 0x536a28 in LibRaw_buffer_datastream::read(void*, unsigned long, unsigned long) /src/libraw/src/libraw_datastream.cpp:372:3
@@ -9,11 +10,11 @@ SCARINESS: 45 (multi-byte-write-heap-buffer-overflow)
     #4 0x4da87f in LLVMFuzzerTestOneInput /src/libraw_fuzzer.cc:66:20
     #5 0x4dce0a in ExecuteFilesOnyByOne /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:234:7
     #6 0x4dcbdd in main /src/aflplusplus/utils/aflpp_driver/aflpp_driver.c:318:12
-    #7 0x70aa48c1c082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
+    #7 0x7b204ed37082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082)
     #8 0x41e6bd in _start (/out/libraw_raf_fuzzer+0x41e6bd)
 
 DEDUP_TOKEN: __asan_memmove--LibRaw_buffer_datastream::read(void*, unsigned long, unsigned long)--LibRaw::uncompressed_fp_dng_load_raw()
-0x621000003900 is located 0 bytes to the right of 4096-byte region [0x621000002900,0x621000003900)
+0x621000002500 is located 0 bytes to the right of 4096-byte region [0x621000001500,0x621000002500)
 allocated by thread T0 here:
     #0 0x4d479d in operator new(unsigned long) /src/llvm-project/compiler-rt/lib/asan/asan_new_delete.cpp:95:3
     #1 0x73e3b9 in void* std::__1::__libcpp_operator_new<unsigned long>(unsigned long) /usr/local/bin/../include/c++/v1/new:245:10
@@ -30,20 +31,20 @@ allocated by thread T0 here:
 DEDUP_TOKEN: operator new(unsigned long)--void* std::__1::__libcpp_operator_new<unsigned long>(unsigned long)--std::__1::__libcpp_allocate(unsigned long, unsigned long)
 SUMMARY: AddressSanitizer: heap-buffer-overflow /src/llvm-project/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cpp:30:3 in __asan_memmove
 Shadow bytes around the buggy address:
-  0x0c427fff86d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c427fff86e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c427fff86f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c427fff8700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0c427fff8710: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0c427fff8720:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c427fff8730: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c427fff8740: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c427fff8750: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c427fff8760: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c427fff8770: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff8450: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8460: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8470: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8490: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c427fff84a0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
-  Partially addressable: 01 02 03 04 05 06 07
+  Partially addressable: 01 02 03 04 05 06 07 
   Heap left redzone:       fa
   Freed heap region:       fd
   Stack left redzone:      f1
@@ -60,4 +61,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==13==ABORTING
+==7==ABORTING

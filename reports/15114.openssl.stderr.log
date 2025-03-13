@@ -1,0 +1,74 @@
+======================= INFO =========================
+This binary is built for AFL-fuzz.
+To run the target function on individual input(s) execute this:
+  /out/client < INPUT_FILE
+or
+  /out/client INPUT_FILE1 [INPUT_FILE2 ... ]
+To fuzz with afl-fuzz execute this:
+  afl-fuzz [afl-flags] /out/client [-N]
+afl-fuzz will run N iterations before re-spawning the process (default: 1000)
+======================================================
+Reading 536 bytes from /tmp/poc
+=================================================================
+==7==ERROR: AddressSanitizer: stack-use-after-return on address 0x7c1487112e20 at pc 0x000000699b64 bp 0x7ffd18531650 sp 0x7ffd18531648
+READ of size 4 at 0x7c1487112e20 thread T0
+SCARINESS: 55 (4-byte-read-stack-use-after-return)
+    #0 0x699b63 in OSSL_PARAM_get_int32 /src/openssl/crypto/params.c:170:20
+    #1 0x8e9e69 in md5_sha1_set_params /src/openssl/providers/default/digests/md5_sha1.c:33:27
+    #2 0x595ede in ssl3_final_finish_mac /src/openssl/ssl/s3_enc.c:472:16
+    #3 0x56cb5f in tls_construct_finished /src/openssl/ssl/statem/statem_lib.c:553:21
+    #4 0x54ec86 in write_state_machine /src/openssl/ssl/statem/statem.c:843:37
+    #5 0x54cb87 in state_machine /src/openssl/ssl/statem/statem.c:443:21
+    #6 0x4e8dba in SSL_do_handshake /src/openssl/ssl/ssl_lib.c:3727:19
+    #7 0x4c92b0 in FuzzerTestOneInput /src/openssl/fuzz/client.c:84:9
+    #8 0x4c999a in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
+    #9 0x4c999a in main /src/libfuzzer/afl/afl_driver.cpp:253
+    #10 0x7c14860a383f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #11 0x41fc48 in _start (/out/client+0x41fc48)
+
+DEDUP_TOKEN: OSSL_PARAM_get_int32--md5_sha1_set_params--ssl3_final_finish_mac
+Address 0x7c1487112e20 is located in stack of thread T0 at offset 32 in frame
+    #0 0x595a5f in ssl3_digest_master_key_set_params /src/openssl/ssl/s3_enc.c:416
+
+DEDUP_TOKEN: ssl3_digest_master_key_set_params
+  This frame has 4 object(s):
+    [32, 36) 'cmd' (line 418) <== Memory access at offset 32 is inside this variable
+    [48, 88) 'tmp' (line 420)
+    [128, 168) 'tmp4' (line 422)
+    [208, 248) 'tmp8' (line 426)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-use-after-return /src/openssl/crypto/params.c:170:20 in OSSL_PARAM_get_int32
+Shadow bytes around the buggy address:
+  0x0f8310e1a570: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a580: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a590: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a5a0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a5b0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+=>0x0f8310e1a5c0: f5 f5 f5 f5[f5]f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a5d0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a5e0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a5f0: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0f8310e1a600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0f8310e1a610: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7==ABORTING

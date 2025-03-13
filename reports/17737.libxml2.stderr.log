@@ -10,7 +10,7 @@ afl-fuzz will run N iterations before re-spawning the process (default: 1000)
 ======================================================
 Reading 489 bytes from /tmp/poc
 =================================================================
-==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60d000000138 at pc 0x00000056eca6 bp 0x7ffd13946460 sp 0x7ffd13946458
+==7==ERROR: AddressSanitizer: heap-use-after-free on address 0x60d000000138 at pc 0x00000056eca6 bp 0x7ffc41fba120 sp 0x7ffc41fba118
 READ of size 8 at 0x60d000000138 thread T0
 SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #0 0x56eca5 in xmlTextReaderFreeNodeList /src/libxml2/xmlreader.c:371:32
@@ -19,7 +19,7 @@ SCARINESS: 51 (8-byte-read-heap-use-after-free)
     #3 0x4c8c94 in LLVMFuzzerTestOneInput /src/libxml2_xml_reader_for_file_fuzzer.cc:50:3
     #4 0x4cca1e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #5 0x4cca1e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #6 0x72ca802ce83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #6 0x7bbc1402e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
     #7 0x41e2d8 in _start (/out/libxml2_xml_reader_for_file_fuzzer+0x41e2d8)
 
 DEDUP_TOKEN: xmlTextReaderFreeNodeList--xmlTextReaderFreeDoc--xmlFreeTextReader
@@ -33,7 +33,7 @@ freed by thread T0 here:
     #5 0x4c8c94 in LLVMFuzzerTestOneInput /src/libxml2_xml_reader_for_file_fuzzer.cc:50:3
     #6 0x4cca1e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #7 0x4cca1e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #8 0x72ca802ce83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #8 0x7bbc1402e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: free--xmlHashFree--xmlFreeDtd
 previously allocated by thread T0 here:
@@ -52,7 +52,7 @@ previously allocated by thread T0 here:
     #12 0x4c8c57 in LLVMFuzzerTestOneInput /src/libxml2_xml_reader_for_file_fuzzer.cc:45:10
     #13 0x4cca1e in ExecuteFilesOnyByOne /src/libfuzzer/afl/afl_driver.cpp:216:5
     #14 0x4cca1e in main /src/libfuzzer/afl/afl_driver.cpp:253:12
-    #15 0x72ca802ce83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
+    #15 0x7bbc1402e83f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2083f)
 
 DEDUP_TOKEN: malloc--xmlCreateEntity--xmlAddEntity
 SUMMARY: AddressSanitizer: heap-use-after-free /src/libxml2/xmlreader.c:371:32 in xmlTextReaderFreeNodeList
